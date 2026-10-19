@@ -40,8 +40,7 @@ Chaque enregistrement doit inclure identifiant, nom officiel, jeu/version, sourc
 - [Lot 03 — Espèces, capacités et talents](./03-species-moves-abilities.md) : contrôle des inventaires source et des marqueurs techniques ; vérification ligne par ligne encore ouverte. Statut : **structure contrôlée, non certifié intégralement**.
 - [Lot 04 — Types, statistiques et interface](./04-types-stats-ui.md) : bornes structurelles 4G et écarts/risques repérés dans l'interface actuelle. Statut : **audit statique partiel, non certifié**.
 - [Lot 05 — Règles du générateur et CI](./05-generator-rules.md) : contrat fonctionnel et cas de tests pour composition, objets tenus et capacités illégales. Statut : **audit statique, non certifié**.
-- [Rapport de tests automatisés du 19/10/2026](./TEST-REPORT-2026-10-19.md) : 10 assertions statiques passées sur 10 ; ne remplace pas les tests navigateur ni la certification du moteur.
-- [Rapport de tests des gardes d'équipe](./TEST-REPORT-TEAM-GUARDS-2026-10-19.md) : 10 assertions statiques passées sur 10 après ajout de blocages de conformité ; tests navigateur encore requis.
+- [Rapport de tests automatisés du 19/10/2026](./TEST-REPORT-2026-10-19.md) : état le plus récent, 16/16 assertions statiques et 5/5 scénarios navigateur réussis dans GitHub Actions ; cela ne certifie pas les données ni le moteur stratégique.
 
 ## Anomalies fonctionnelles et suivi des corrections
 1. **Six objets tenus — corrigé dans l'interface** : la sélection autorise désormais jusqu'à six objets, le compteur affiche `/6`, et la validation bloque une équipe si six objets ne sont pas sélectionnés. La base d'objets elle-même reste à certifier.
@@ -49,7 +48,7 @@ Chaque enregistrement doit inclure identifiant, nom officiel, jeu/version, sourc
 3. **Résolution des réglages CI — garde ajoutée** : la validation vérifie l'initialisation des réglages automatiques et, lorsque les CI sont activées manuellement entre 25 et 99 %, exige que fréquence et incongruité aient été explicitement modifiées. À 100 %, les CI sont désactivées.
 4. **Moteur d'équipe — encore bloquant** : la composition reste un aperçu heuristique et non un moteur stratégique certifié.
 
-Les corrections de code ont été relues après écriture sur GitHub. Les tests navigateur automatisés et les tests de combat restent à effectuer ; ces changements ne certifient donc pas encore l'ensemble du générateur.
+Les corrections de code ont été relues après écriture sur GitHub. Les tests navigateur automatisés passent désormais dans GitHub Actions (5/5 scénarios sur le commit `eab9e66ccffaf6318bb6d717cbd46ed2ede06fc3`). Les tests de combat, l'exhaustivité des données et la validation Project PM restent à effectuer ; ces résultats ne certifient donc pas l'ensemble du générateur.
 
 ## Premier contrôle : baies
 La source secondaire Pokémon Trash liste les baies numérotées 1 à 64 et distingue les baies de résistance, les baies de statistiques, Micle/Chérim et les baies Jaboca/Pommo. Le tableau de travail précédemment sauvegardé contient des seuils et descriptions qui ne sont pas tous certifiés. La liste complète doit être reconstruite à partir des données/scripts de Platine et comparée ligne par ligne avant d'être utilisée par le moteur.
@@ -61,5 +60,5 @@ Source de recoupement : https://www.pokepedia.fr/Liste_des_Baies
 
 ## Journal
 - 2026-10-19 — `index.html` : ajout de gardes bloquantes si l'équipe est incomplète, si le nombre de légendaires/fabuleux demandé n'est pas respecté, si le trio imposé manque, ou si « évolution maximale » est activé sans métadonnées suffisantes. Assertions statiques : 10/10 réussies ; pas encore de test navigateur.
-- 2026-10-19 — `index.html` : suppression de l'exclusion globale des starters hors trio choisi dans le pool des trois places libres ; affectation des six objets aux six Pokémon par cibles distinctes. Tests automatisés/navigateur encore à exécuter.
+- 2026-10-19 — `index.html` : suppression de l'exclusion globale des starters hors trio choisi dans le pool des trois places libres ; affectation des six objets aux six Pokémon par cibles distinctes. Vérification finale : tests statiques 16/16 et tests navigateur 5/5 réussis sur GitHub Actions, commit `eab9e66ccffaf6318bb6d717cbd46ed2ede06fc3`.
 - 2026-10-19 — Création du plan de certification et de l'échelle de preuve. Aucun lot n'est déclaré certifié à cette date.
