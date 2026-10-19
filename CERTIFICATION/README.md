@@ -41,6 +41,7 @@ Chaque enregistrement doit inclure identifiant, nom officiel, jeu/version, sourc
 - [Lot 04 — Types, statistiques et interface](./04-types-stats-ui.md) : bornes structurelles 4G et écarts/risques repérés dans l'interface actuelle. Statut : **audit statique partiel, non certifié**.
 - [Lot 05 — Règles du générateur et CI](./05-generator-rules.md) : contrat fonctionnel et cas de tests pour composition, objets tenus et capacités illégales. Statut : **audit statique, non certifié**.
 - [Rapport de tests automatisés du 19/10/2026](./TEST-REPORT-2026-10-19.md) : 10 assertions statiques passées sur 10 ; ne remplace pas les tests navigateur ni la certification du moteur.
+- [Rapport de tests des gardes d'équipe](./TEST-REPORT-TEAM-GUARDS-2026-10-19.md) : 10 assertions statiques passées sur 10 après ajout de blocages de conformité ; tests navigateur encore requis.
 
 ## Anomalies fonctionnelles et suivi des corrections
 1. **Six objets tenus — corrigé dans l'interface** : la sélection autorise désormais jusqu'à six objets, le compteur affiche `/6`, et la validation bloque une équipe si six objets ne sont pas sélectionnés. La base d'objets elle-même reste à certifier.
@@ -59,5 +60,6 @@ Source de recoupement : https://www.pokepedia.fr/Liste_des_Baies
 - 2026-10-19 — Le libellé de la note CI dans `index.html` a été corrigé : la plage automatique affichée est désormais **0–24 % inclus**, en cohérence avec la condition déjà présente dans le code (`c < 25`). Ce correctif ne résout pas les autres anomalies du moteur et ne vaut pas certification fonctionnelle complète.
 
 ## Journal
+- 2026-10-19 — `index.html` : ajout de gardes bloquantes si l'équipe est incomplète, si le nombre de légendaires/fabuleux demandé n'est pas respecté, si le trio imposé manque, ou si « évolution maximale » est activé sans métadonnées suffisantes. Assertions statiques : 10/10 réussies ; pas encore de test navigateur.
 - 2026-10-19 — `index.html` : suppression de l'exclusion globale des starters hors trio choisi dans le pool des trois places libres ; affectation des six objets aux six Pokémon par cibles distinctes. Tests automatisés/navigateur encore à exécuter.
 - 2026-10-19 — Création du plan de certification et de l'échelle de preuve. Aucun lot n'est déclaré certifié à cette date.
