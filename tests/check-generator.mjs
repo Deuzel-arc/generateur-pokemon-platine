@@ -45,12 +45,22 @@ check("generation-block message uses real line breaks", () => {
 });
 check("imposed items are included in the six-item team assignment", () => {
   assert.match(html, /const chosenItems=\[\.\.\.state\.items\]/);
-  assert.match(html, /const itemTargets=chosenItems\.map/);
+  assert.match(html, /const itemTargets=bestAssignment\|\|chosenItems\.map/);
   assert.match(html, /Objets imposés : /);
 });
 check("held-item targets are unique", () => {
-  assert.match(html, /const assignedTargets=new Set\(\)/);
-  assert.match(html, /assignedTargets\.add\(target\.name\)/);
+  assert.match(html, /function searchItemAssignment\(index,used,assignment,total\)/);
+  assert.match(html, /if\(used\.has\(p\.name\)\)continue/);
+  assert.match(html, /used\.add\(p\.name\)/);
+  assert.match(html, /used\.delete\(p\.name\)/);
+});
+check("held-item assignment considers section 7 team parameters", () => {
+  assert.match(html, /const itemMainTags=state\.strategies\.map/);
+  assert.match(html, /const itemSecondaryTag=tagForSecondary\[state\.secondary\]/);
+  assert.match(html, /if\(state\.orientation==='offensive'\)/);
+  assert.match(html, /if\(state\.orientation==='defensive'\)/);
+  assert.match(html, /if\(state\.orientation==='balanced'\)/);
+  assert.match(html, /function itemFit\(item,p\)/);
 });
 check("free slots are not filtered by other starter trios", () => {
   assert.doesNotMatch(html, /pool=pool\.filter\(p=>state\.starter==='none'\|\|!starterNames\.includes\(p\.name\)\)/);
