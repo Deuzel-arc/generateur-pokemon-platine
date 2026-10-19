@@ -28,8 +28,10 @@ try {
     await itemChoices.nth(i).click();
   }
   assert.equal(await page.locator("#items .choice.selected").count(), 6);
+  assert.equal(await page.locator("#itemCount").innerText(), "6/6 objets sélectionnés");
+  assert.equal(await page.evaluate(() => state.items.length), 6, "l'état applicatif doit conserver les six objets cochés");
   await page.locator("#validate").click();
-  assert.doesNotMatch(await page.locator("#summary").innerText(), /six objets/i);
+  assert.doesNotMatch(await page.locator("#summary").innerText(), /Sélectionne exactement six objets tenus distincts/i);
 
   // The 100% competitive mode must disable CI and reset its sliders.
   await page.locator("#comp").fill("100");
