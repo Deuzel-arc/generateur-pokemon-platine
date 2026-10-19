@@ -1,8 +1,8 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "title": "Base de données des baies tactiques — Pokémon Platine / génération IV",
   "purpose": "Référence interne du générateur. Les effets sont stockés dans les données et ne doivent pas être affichés dans l’interface de la section 7 sauf demande explicite.",
-  "mechanics": "Effets de combat de génération IV, hors effet de Don Naturel. Statut audit : documentaire/en cours, pas certifié à 100 %.",
+  "mechanics": "Effets de combat de génération IV, hors Don Naturel. Audit documentaire en cours ; pas certifié intégralement contre code source et tests ROM.",
   "berries": [
     {
       "name": "Baie Sitrus",
