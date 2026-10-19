@@ -35,3 +35,14 @@ Ces tests sont des vérifications automatiques de présence/absence de motifs da
 - [ ] Tests des capacités et du moteur de synergie une fois les données connectées.
 
 **Décision :** les invariants statiques contrôlés passent. On peut considérer le lot de tests statiques comme exécuté, mais pas comme une certification fonctionnelle complète.
+
+
+## Exécution réelle dans GitHub Actions — correction d'une erreur de syntaxe
+
+Un test de compilation JavaScript a d'abord échoué : le gestionnaire du bouton de validation déclarait deux fois `const out` dans la même portée (`Identifier 'out' has already been declared`). Cette erreur empêchait l'exécution de tout le script dans le navigateur.
+
+**Correction :** suppression de la seconde déclaration et réutilisation de la variable déjà déclarée. Commit du correctif : `520bde8a6c4d502945403486ecfa403626217919`.
+
+**Nouvelle exécution GitHub Actions : 16/16 PASS**, dont la compilation du JavaScript inline. [Voir l'exécution](https://github.com/Deuzel-arc/generateur-pokemon-platine/actions/runs/39318763959).
+
+La première exécution a échoué sur cette erreur ; elle n'est pas effacée du suivi. Le résultat validé est celui de la seconde exécution. Ces assertions compilent le script et contrôlent des invariants textuels ; elles ne remplacent pas les tests d'interaction en navigateur.
