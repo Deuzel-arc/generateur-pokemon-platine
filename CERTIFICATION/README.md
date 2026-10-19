@@ -34,6 +34,9 @@ Deux cibles séparées : (A) Pokémon Platine original, génération IV ; (B) RO
 ## Critères de validation
 Chaque enregistrement doit inclure identifiant, nom officiel, jeu/version, source et emplacement précis, effet/valeurs, statut de preuve, test reproductible et notes d'exception. Le lot est « certifié » seulement lorsque toutes les lignes sont contrôlées, les différences documentées et les tests passent. Une compilation réussie ou une page wiki seule ne certifie pas l'exactitude du jeu.
 
+## Lots de travail enregistrés
+- [Lot 01 — Audit des baies](./01-berries.md) : effets repérés dans les scripts de Platine, niveaux de preuve et contrôles restant à effectuer. Statut : **partiel, non certifié intégralement**.
+
 ## Premier contrôle : baies
 La source secondaire Pokémon Trash liste les baies numérotées 1 à 64 et distingue les baies de résistance, les baies de statistiques, Micle/Chérim et les baies Jaboca/Pommo. Le tableau de travail précédemment sauvegardé contient des seuils et descriptions qui ne sont pas tous certifiés. La liste complète doit être reconstruite à partir des données/scripts de Platine et comparée ligne par ligne avant d'être utilisée par le moteur.
 Source de recoupement : https://www.pokemontrash.com/platine/liste-baies
