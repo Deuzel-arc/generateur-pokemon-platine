@@ -38,6 +38,7 @@ Chaque enregistrement doit inclure identifiant, nom officiel, jeu/version, sourc
 - [Lot 01 — Audit des baies](./01-berries.md) : effets repérés dans les scripts de Platine, niveaux de preuve et contrôles restant à effectuer. Statut : **partiel, non certifié intégralement**.
 - [Lot 02 — Inventaire des objets](./02-items.md) : comptage structurel des identifiants et schéma primaire des objets ; effets et noms restent à vérifier ligne par ligne. Statut : **inventaire établi, non certifié intégralement**.
 - [Lot 03 — Espèces, capacités et talents](./03-species-moves-abilities.md) : contrôle des inventaires source et des marqueurs techniques ; vérification ligne par ligne encore ouverte. Statut : **structure contrôlée, non certifié intégralement**.
+- [Lot 04 — Types, statistiques et interface](./04-types-stats-ui.md) : bornes structurelles 4G et écarts/risques repérés dans l'interface actuelle. Statut : **audit statique partiel, non certifié**.
 
 ## Premier contrôle : baies
 La source secondaire Pokémon Trash liste les baies numérotées 1 à 64 et distingue les baies de résistance, les baies de statistiques, Micle/Chérim et les baies Jaboca/Pommo. Le tableau de travail précédemment sauvegardé contient des seuils et descriptions qui ne sont pas tous certifiés. La liste complète doit être reconstruite à partir des données/scripts de Platine et comparée ligne par ligne avant d'être utilisée par le moteur.
