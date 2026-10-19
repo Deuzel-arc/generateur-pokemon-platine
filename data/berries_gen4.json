@@ -1,17 +1,9 @@
 {
-  "schema_version": 1,
-  "title": "Base de données des baies — Pokémon Platine / génération IV",
-  "purpose": "Référence interne du générateur. Ne pas afficher les descriptions d’effets dans l’interface de la section 7 sauf demande explicite.",
-  "mechanics": "Effets de combat de génération IV, hors effet de Don Naturel.",
+  "schema_version": 2,
+  "title": "Base de données des baies tactiques — Pokémon Platine / génération IV",
+  "purpose": "Référence interne du générateur. Les effets sont stockés dans les données et ne doivent pas être affichés dans l’interface de la section 7 sauf demande explicite.",
+  "mechanics": "Effets de combat de génération IV, hors effet de Don Naturel. Liste ciblée sur les baies tactiques tenues en combat, pas sur toutes les baies de culture.",
   "berries": [
-    {
-      "name": "Baie Prine",
-      "effect": "Soigne tous les problèmes de statut du Pokémon qui la consomme en combat.",
-      "category": "statut",
-      "generation": 4,
-      "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
-    },
     {
       "name": "Baie Sitrus",
       "effect": "Restaure 1/4 des PV max lorsque les PV tombent à 1/2 ou moins.",
@@ -21,23 +13,31 @@
       "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
     },
     {
-      "name": "Baie Wiki",
-      "effect": "Restaure 1/8 des PV max lorsque les PV tombent à 1/2 ou moins ; peut rendre confus selon la nature.",
-      "category": "soin_statut",
+      "name": "Baie Fraive",
+      "effect": "Soigne la brûlure du Pokémon qui la consomme en combat.",
+      "category": "statut",
+      "generation": 4,
+      "available_in_pokemon_platinum": true,
+      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+    },
+    {
+      "name": "Baie Kika",
+      "effect": "Soigne la confusion du Pokémon qui la consomme en combat.",
+      "category": "statut",
+      "generation": 4,
+      "available_in_pokemon_platinum": true,
+      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+    },
+    {
+      "name": "Baie Prine",
+      "effect": "Soigne tous les problèmes de statut du Pokémon qui la consomme en combat.",
+      "category": "statut",
       "generation": 4,
       "available_in_pokemon_platinum": true,
       "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
     },
     {
       "name": "Baie Figuy",
-      "effect": "Restaure 1/8 des PV max lorsque les PV tombent à 1/2 ou moins ; peut rendre confus selon la nature.",
-      "category": "soin_statut",
-      "generation": 4,
-      "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
-    },
-    {
-      "name": "Baie Mago",
       "effect": "Restaure 1/8 des PV max lorsque les PV tombent à 1/2 ou moins ; peut rendre confus selon la nature.",
       "category": "soin_statut",
       "generation": 4,
@@ -53,57 +53,17 @@
       "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
     },
     {
-      "name": "Baie Kika",
-      "effect": "Soigne la confusion du Pokémon qui la consomme en combat.",
-      "category": "statut",
+      "name": "Baie Mago",
+      "effect": "Restaure 1/8 des PV max lorsque les PV tombent à 1/2 ou moins ; peut rendre confus selon la nature.",
+      "category": "soin_statut",
       "generation": 4,
       "available_in_pokemon_platinum": true,
       "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
     },
     {
-      "name": "Baie Fraive",
-      "effect": "Soigne la brûlure du Pokémon qui la consomme en combat.",
-      "category": "statut",
-      "generation": 4,
-      "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
-    },
-    {
-      "name": "Baie Nanone",
-      "effect": "Réduit de moitié les dégâts d’une attaque Glace super efficace reçue, une seule fois.",
-      "category": "résistance",
-      "generation": 4,
-      "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
-    },
-    {
-      "name": "Baie Parma",
-      "effect": "Réduit de moitié les dégâts d’une attaque Électrik super efficace reçue, une seule fois.",
-      "category": "résistance",
-      "generation": 4,
-      "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
-    },
-    {
-      "name": "Baie Ratam",
-      "effect": "Réduit de moitié les dégâts d’une attaque Plante super efficace reçue, une seule fois.",
-      "category": "résistance",
-      "generation": 4,
-      "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
-    },
-    {
-      "name": "Baie Pomroz",
-      "effect": "Réduit de moitié les dégâts d’une attaque Combat super efficace reçue, une seule fois.",
-      "category": "résistance",
-      "generation": 4,
-      "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
-    },
-    {
-      "name": "Baie Cobaba",
-      "effect": "Réduit de moitié les dégâts d’une attaque Vol super efficace reçue, une seule fois.",
-      "category": "résistance",
+      "name": "Baie Wiki",
+      "effect": "Restaure 1/8 des PV max lorsque les PV tombent à 1/2 ou moins ; peut rendre confus selon la nature.",
+      "category": "soin_statut",
       "generation": 4,
       "available_in_pokemon_platinum": true,
       "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
@@ -133,12 +93,20 @@
       "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
     },
     {
-      "name": "Baie Pocpoc",
-      "effect": "Réduit de moitié les dégâts d’une attaque Eau super efficace reçue, une seule fois.",
+      "name": "Baie Cobaba",
+      "effect": "Réduit de moitié les dégâts d’une attaque Vol super efficace reçue, une seule fois.",
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
       "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+    },
+    {
+      "name": "Baie Fraigo",
+      "effect": "Réduit de moitié les dégâts d’une attaque Dragon super efficace reçue, une seule fois.",
+      "category": "résistance",
+      "generation": 4,
+      "available_in_pokemon_platinum": true,
+      "verification_status": "effet recoupé avec les guides de Pokémon Platine; détails techniques à tester en combat"
     },
     {
       "name": "Baie Jouca",
@@ -149,9 +117,97 @@
       "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
     },
     {
+      "name": "Baie Kébia",
+      "effect": "Réduit de moitié les dégâts d’une attaque Poison super efficace reçue, une seule fois.",
+      "category": "résistance",
+      "generation": 4,
+      "available_in_pokemon_platinum": true,
+      "verification_status": "effet recoupé avec les guides de Pokémon Platine; détails techniques à tester en combat"
+    },
+    {
+      "name": "Baie Lampou",
+      "effect": "Réduit de moitié les dégâts d’une attaque Ténèbres super efficace reçue, une seule fois.",
+      "category": "résistance",
+      "generation": 4,
+      "available_in_pokemon_platinum": true,
+      "verification_status": "effet recoupé avec les guides de Pokémon Platine; détails techniques à tester en combat"
+    },
+    {
+      "name": "Baie Nanone",
+      "effect": "Réduit de moitié les dégâts d’une attaque Glace super efficace reçue, une seule fois.",
+      "category": "résistance",
+      "generation": 4,
+      "available_in_pokemon_platinum": true,
+      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+    },
+    {
+      "name": "Baie Panga",
+      "effect": "Réduit de moitié les dégâts d’une attaque Insecte super efficace reçue, une seule fois.",
+      "category": "résistance",
+      "generation": 4,
+      "available_in_pokemon_platinum": true,
+      "verification_status": "effet recoupé avec les guides de Pokémon Platine; détails techniques à tester en combat"
+    },
+    {
+      "name": "Baie Parma",
+      "effect": "Réduit de moitié les dégâts d’une attaque Électrik super efficace reçue, une seule fois.",
+      "category": "résistance",
+      "generation": 4,
+      "available_in_pokemon_platinum": true,
+      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+    },
+    {
+      "name": "Baie Pocpoc",
+      "effect": "Réduit de moitié les dégâts d’une attaque Eau super efficace reçue, une seule fois.",
+      "category": "résistance",
+      "generation": 4,
+      "available_in_pokemon_platinum": true,
+      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+    },
+    {
+      "name": "Baie Pomroz",
+      "effect": "Réduit de moitié les dégâts d’une attaque Combat super efficace reçue, une seule fois.",
+      "category": "résistance",
+      "generation": 4,
+      "available_in_pokemon_platinum": true,
+      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+    },
+    {
+      "name": "Baie Ratam",
+      "effect": "Réduit de moitié les dégâts d’une attaque Plante super efficace reçue, une seule fois.",
+      "category": "résistance",
+      "generation": 4,
+      "available_in_pokemon_platinum": true,
+      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+    },
+    {
       "name": "Baie Sédra",
       "effect": "Réduit de moitié les dégâts d’une attaque Spectre super efficace reçue, une seule fois.",
       "category": "résistance",
+      "generation": 4,
+      "available_in_pokemon_platinum": true,
+      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+    },
+    {
+      "name": "Baie Yapap",
+      "effect": "Réduit de moitié les dégâts d’une attaque Psy super efficace reçue, une seule fois.",
+      "category": "résistance",
+      "generation": 4,
+      "available_in_pokemon_platinum": true,
+      "verification_status": "effet recoupé avec les guides de Pokémon Platine; détails techniques à tester en combat"
+    },
+    {
+      "name": "Baie Zalis",
+      "effect": "Réduit de moitié les dégâts d’une attaque de type Normal reçue, une seule fois.",
+      "category": "résistance",
+      "generation": 4,
+      "available_in_pokemon_platinum": true,
+      "verification_status": "effet recoupé avec le guide de Pokémon Platine; détails techniques à tester en combat"
+    },
+    {
+      "name": "Baie Abriko",
+      "effect": "Augmente la Défense Spéciale d’un niveau lorsque les PV tombent à 1/4 ou moins.",
+      "category": "statistique",
       "generation": 4,
       "available_in_pokemon_platinum": true,
       "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
@@ -173,14 +229,6 @@
       "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
     },
     {
-      "name": "Baie Sailak",
-      "effect": "Augmente la Vitesse d’un niveau lorsque les PV tombent à 1/4 ou moins.",
-      "category": "statistique",
-      "generation": 4,
-      "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
-    },
-    {
       "name": "Baie Pitaye",
       "effect": "Augmente l’Attaque Spéciale d’un niveau lorsque les PV tombent à 1/4 ou moins.",
       "category": "statistique",
@@ -189,8 +237,8 @@
       "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
     },
     {
-      "name": "Baie Abriko",
-      "effect": "Augmente la Défense Spéciale d’un niveau lorsque les PV tombent à 1/4 ou moins.",
+      "name": "Baie Sailak",
+      "effect": "Augmente la Vitesse d’un niveau lorsque les PV tombent à 1/4 ou moins.",
       "category": "statistique",
       "generation": 4,
       "available_in_pokemon_platinum": true,
