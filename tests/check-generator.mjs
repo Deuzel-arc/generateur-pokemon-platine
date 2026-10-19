@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 
 const html = readFileSync(new URL("../index.html", import.meta.url), "utf8");
+const berries = JSON.parse(readFileSync(new URL("../data/berries_gen4.json", import.meta.url), "utf8"));
 const checks = [];
 function check(name, fn) {
   try { fn(); checks.push({ name, status: "PASS" }); }
@@ -60,6 +61,24 @@ check("UI identifies the result as heuristic", () => {
 });
 check("berry effects are not exposed in item UI", () => {
   assert.doesNotMatch(html, /Baie Éka[^\n]{0,100}effet/i);
+});
+
+
+check("berry records have required fields and generation-IV scope", () => {
+  assert.ok(Array.isArray(berries.berries) && berries.berries.length > 0);
+  for (const berry of berries.berries) {
+    assert.ok(berry.name && berry.effect && berry.category && berry.verification_status, `incomplete berry record: ${berry.name ?? "(unnamed)"}`);
+    assert.equal(berry.generation, 4, `wrong generation: ${berry.name}`);
+    assert.equal(berry.available_in_pokemon_platinum, true, `availability not confirmed: ${berry.name}`);
+  }
+});
+check("berry names are unique", () => {
+  const names = berries.berries.map((berry) => berry.name);
+  assert.equal(new Set(names).size, names.length);
+});
+check("berry catalog does not claim all 64 berries are complete", () => {
+  assert.ok(berries.berries.length < 64, "update this guard only after all 64 berries have been audited");
+  assert.match(berries.mechanics, /Partiellement vérifié/);
 });
 
 for (const result of checks) {
