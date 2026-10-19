@@ -58,4 +58,5 @@ Source de recoupement : https://www.pokepedia.fr/Liste_des_Baies
 - 2026-10-19 — Le libellé de la note CI dans `index.html` a été corrigé : la plage automatique affichée est désormais **0–24 % inclus**, en cohérence avec la condition déjà présente dans le code (`c < 25`). Ce correctif ne résout pas les autres anomalies du moteur et ne vaut pas certification fonctionnelle complète.
 
 ## Journal
+- 2026-10-19 — `index.html` : suppression de l'exclusion globale des starters hors trio choisi dans le pool des trois places libres ; affectation des six objets aux six Pokémon par cibles distinctes. Tests automatisés/navigateur encore à exécuter.
 - 2026-10-19 — Création du plan de certification et de l'échelle de preuve. Aucun lot n'est déclaré certifié à cette date.
