@@ -184,7 +184,7 @@ document.getElementById('validate').addEventListener('click',()=>{
  if(actualLegendaries!==requestedLegendaries)failReasons.push('Le nombre de légendaires/fabuleux ne correspond pas au choix demandé.');
  if(missingStarters.length)failReasons.push('Le trio de starters choisi n’est pas entièrement présent.');
  if(state.evo)failReasons.push('Le mode « évolution maximale » ne peut pas encore être certifié : le catalogue actuel ne contient pas les métadonnées d’évolution nécessaires.');
- if(failReasons.length){out.textContent='GÉNÉRATION BLOQUÉE\\n'+failReasons.join('\\n')+'\\nAucune équipe ne sera présentée comme conforme tant que les données nécessaires ne sont pas disponibles.';out.classList.remove('hidden');out.scrollIntoView({behavior:'smooth',block:'nearest'});return;}
+ if(failReasons.length){out.textContent='GÉNÉRATION BLOQUÉE\n'+failReasons.join('\n')+'\nAucune équipe ne sera présentée comme conforme tant que les données nécessaires ne sont pas disponibles.';out.classList.remove('hidden');out.scrollIntoView({behavior:'smooth',block:'nearest'});return;}
  const names=team.map((p,i)=>`${i+1}. ${p.name} — ${p.types.join(' / ')}${p.legend?' · Légendaire/fabuleux possible':''}\n   Orientation indicative : ${p.off>=p.def+12?'offensive':p.def>=p.off+12?'défensive':'polyvalente'}`).join('\n');
  const assignedTargets=new Set();
  const chosenItems=[...state.items];
