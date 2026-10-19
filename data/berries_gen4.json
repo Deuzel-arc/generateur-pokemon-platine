@@ -1,16 +1,16 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "title": "Base de données des baies tactiques — Pokémon Platine / génération IV",
   "purpose": "Référence interne du générateur. Les effets sont stockés dans les données et ne doivent pas être affichés dans l’interface de la section 7 sauf demande explicite.",
-  "mechanics": "Effets de combat de génération IV, hors Don Naturel. Audit documentaire en cours ; pas certifié intégralement contre code source et tests ROM.",
+  "mechanics": "Partiellement vérifié contre la décompilation de Pokémon Platine (pret/pokeplatinum); statut Project PM non testé. Chaque entrée conserve son propre statut de preuve.",
   "berries": [
     {
       "name": "Baie Sitrus",
-      "effect": "Restaure 1/4 des PV max lorsque les PV passent sous 50 %.",
+      "effect": "Restaure 25 % des PV max lorsque les PV actuels sont inférieurs ou égaux à la moitié des PV max.",
       "category": "soin",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
+      "verification_status": "VÉRIFIÉ DANS LA DÉCOMPILATION DE POKÉMON PLATINE (pret/pokeplatinum) ; non testé dans ROM Project PM"
     },
     {
       "name": "Baie Fraive",
@@ -18,7 +18,7 @@
       "category": "statut",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
+      "verification_status": "VÉRIFIÉ DANS LA DÉCOMPILATION DE POKÉMON PLATINE (pret/pokeplatinum) ; non testé dans ROM Project PM"
     },
     {
       "name": "Baie Kika",
@@ -26,7 +26,7 @@
       "category": "statut",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
+      "verification_status": "VÉRIFIÉ DANS LA DÉCOMPILATION DE POKÉMON PLATINE (pret/pokeplatinum) ; non testé dans ROM Project PM"
     },
     {
       "name": "Baie Prine",
@@ -34,39 +34,39 @@
       "category": "statut",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
+      "verification_status": "VÉRIFIÉ DANS LA DÉCOMPILATION DE POKÉMON PLATINE (pret/pokeplatinum) ; non testé dans ROM Project PM"
     },
     {
       "name": "Baie Figuy",
-      "effect": "Restaure 1/8 des PV max lorsque les PV passent sous 1/4 des PV max ; peut provoquer la confusion selon la nature (saveur épicée).",
+      "effect": "Restaure 1/8 des PV max lorsque les PV actuels sont inférieurs ou égaux à la moitié des PV max ; peut provoquer la confusion selon la nature (saveur épicée).",
       "category": "soin_statut",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
+      "verification_status": "VÉRIFIÉ DANS LA DÉCOMPILATION DE POKÉMON PLATINE (pret/pokeplatinum) ; non testé dans ROM Project PM"
     },
     {
       "name": "Baie Gowav",
-      "effect": "Restaure 1/8 des PV max lorsque les PV passent sous 1/4 des PV max ; peut provoquer la confusion selon la nature (saveur amère).",
+      "effect": "Restaure 1/8 des PV max lorsque les PV actuels sont inférieurs ou égaux à la moitié des PV max ; peut provoquer la confusion selon la nature (saveur amère).",
       "category": "soin_statut",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
+      "verification_status": "VÉRIFIÉ DANS LA DÉCOMPILATION DE POKÉMON PLATINE (pret/pokeplatinum) ; non testé dans ROM Project PM"
     },
     {
       "name": "Baie Mago",
-      "effect": "Restaure 1/8 des PV max lorsque les PV passent sous 1/4 des PV max ; peut provoquer la confusion selon la nature (saveur sucrée).",
+      "effect": "Restaure 1/8 des PV max lorsque les PV actuels sont inférieurs ou égaux à la moitié des PV max ; peut provoquer la confusion selon la nature (saveur sucrée).",
       "category": "soin_statut",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
+      "verification_status": "VÉRIFIÉ DANS LA DÉCOMPILATION DE POKÉMON PLATINE (pret/pokeplatinum) ; non testé dans ROM Project PM"
     },
     {
       "name": "Baie Wiki",
-      "effect": "Restaure 1/8 des PV max lorsque les PV passent sous 1/4 des PV max ; peut provoquer la confusion selon la nature (saveur sèche).",
+      "effect": "Restaure 1/8 des PV max lorsque les PV actuels sont inférieurs ou égaux à la moitié des PV max ; peut provoquer la confusion selon la nature (saveur sèche).",
       "category": "soin_statut",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
+      "verification_status": "VÉRIFIÉ DANS LA DÉCOMPILATION DE POKÉMON PLATINE (pret/pokeplatinum) ; non testé dans ROM Project PM"
     },
     {
       "name": "Baie Babiri",
