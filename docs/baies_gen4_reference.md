@@ -26,7 +26,7 @@ Les noms français et les effets sont transcrits selon les références ci-dessu
 
 ## 2. Soin conditionnel et confusion liée à la saveur (5)
 
-En génération IV, ces baies restaurent 1/8 des PV max lorsque les PV passent sous 1/4 des PV max. Elles rendent confus un Pokémon dont la nature n'aime pas la saveur correspondante.
+En génération IV, ces baies restaurent 1/8 des PV max lorsque les PV passent sous le seuil de déclenchement de la baie (en 4G : PV à 1/2 ou moins selon le comportement du jeu ; ce seuil doit être confirmé contre le code source avant certification). Elles rendent confus un Pokémon dont la nature n'aime pas la saveur correspondante.
 
 - **Baie Figuy (#11)** — saveur épicée.
 - **Baie Wiki (#12)** — saveur sèche.
@@ -88,7 +88,7 @@ Réduit de moitié les dégâts d'une attaque du type correspondant qui serait s
 
 ## 6. Baies à déclenchement conditionnel ou effets spéciaux (8)
 
-- **Baie Lichii (#53)** — augmente l'Attaque d'un niveau lorsque les PV passent sous 1/4 des PV max.
+- **Baie Lichii (#53)** — augmente l'Attaque d'un niveau lorsque les PV passent sous 1/3 des PV max.
 - **Baie Lingan (#54)** — augmente la Défense d'un niveau lorsque les PV passent sous 1/4 des PV max.
 - **Baie Sailak (#55)** — augmente la Vitesse d'un niveau lorsque les PV passent sous 1/4 des PV max.
 - **Baie Pitaye (#56)** — augmente l'Attaque Spéciale d'un niveau lorsque les PV passent sous 1/4 des PV max.
@@ -99,8 +99,8 @@ Réduit de moitié les dégâts d'une attaque du type correspondant qui serait s
 
 ## 7. Baies ajoutées en 4G : précision, priorité et contrecoups (4)
 
-- **Baie Micle (#61)** — augmente la précision de la prochaine capacité.
-- **Baie Chérim (#62)** — permet au porteur d'agir en premier pendant un tour selon les conditions de priorité en vigueur ; ce n'est pas une hausse de Vitesse.
+- **Baie Micle (#61)** — lorsque les PV passent sous 1/3 des PV max, augmente la précision de la prochaine capacité ; le déclencheur exact doit être confirmé contre la source primaire.
+- **Baie Chérim (#62)** — augmente les chances de fuite lors d'un combat sauvage lorsque les PV sont bas ; ne donne pas de priorité en combat de Dresseurs.
 - **Baie Jaboca (#63)** — inflige des dégâts à l'attaquant qui touche le porteur avec une capacité physique.
 - **Baie Pommo (#64)** — inflige des dégâts à l'attaquant qui touche le porteur avec une capacité spéciale.
 
@@ -120,3 +120,11 @@ Réduit de moitié les dégâts d'une attaque du type correspondant qui serait s
 - Cette référence est documentaire ; ne pas afficher automatiquement les effets dans l'interface.
 - Le pool d'objets tenus doit être séparé de la liste exhaustive des baies du jeu.
 - Ne pas considérer les effets comme testés dans Project PM sans test spécifique de la ROM.
+
+
+## Corrections relevées pendant l'audit initial
+
+- La Baie Chérim ne donne pas de priorité : le guide Platine la décrit comme augmentant les chances de fuite lorsque les PV sont bas.
+- La Baie Micle est conditionnée par les PV bas ; elle ne doit pas être décrite comme un simple effet inconditionnel.
+- Les seuils et les niveaux exacts des baies Frista/Lichii/Lingan/Sailak/Pitaye/Abriko/Lansat/Micle doivent être comparés aux données/scripts du jeu avant le statut CERTIFIÉ.
+- Le tableau ci-dessus reste **documentaire, non certifié expérimentalement**. Les formulations qui nécessitent confirmation primaire sont explicitement signalées.
