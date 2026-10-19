@@ -19,14 +19,14 @@ Les noms français et les effets sont transcrits selon les références ci-dessu
 - **Baie Fraive (#04)** — soigne la brûlure.
 - **Baie Willia (#05)** — soigne le gel.
 - **Baie Mepo (#06)** — restaure 10 PP à une capacité.
-- **Baie Oran (#07)** — restaure 10 PV lorsque les PV passent sous 50 %.
+- **Baie Oran (#07)** — restaure 10 PV lorsqu'elle est consommée en combat ; l'effet se déclenche par le script de soin fixe, pas selon le seuil de Sitrus.
 - **Baie Kika (#08)** — soigne la confusion.
 - **Baie Prine (#09)** — soigne un problème de statut non-volatil ou la confusion.
-- **Baie Sitrus (#10)** — restaure 1/4 des PV max lorsque les PV passent sous 50 % (mécanique 4G).
+- **Baie Sitrus (#10)** — restaure 1/4 des PV max lorsque les PV actuels sont inférieurs ou égaux à la moitié des PV max (script Platine : `HOLD_EFFECT_HP_PCT_RESTORE`, paramètre 25).
 
 ## 2. Soin conditionnel et confusion liée à la saveur (5)
 
-En génération IV, ces baies restaurent 1/8 des PV max lorsque les PV passent sous le seuil de déclenchement de la baie (en 4G : PV à 1/2 ou moins selon le comportement du jeu ; ce seuil doit être confirmé contre le code source avant certification). Elles rendent confus un Pokémon dont la nature n'aime pas la saveur correspondante.
+Les données/scripts de Pokémon Platine (`src/battle/battle_lib.c`) déclenchent ces baies lorsque les PV actuels sont inférieurs ou égaux à la moitié des PV max. Elles restaurent 1/8 des PV max (paramètre d'objet 8). La confusion dépend de l'affinité de nature à la saveur correspondante. Elles rendent confus un Pokémon dont la nature n'aime pas la saveur correspondante.
 
 - **Baie Figuy (#11)** — saveur épicée.
 - **Baie Wiki (#12)** — saveur sèche.
@@ -88,7 +88,7 @@ Réduit de moitié les dégâts d'une attaque du type correspondant qui serait s
 
 ## 6. Baies à déclenchement conditionnel ou effets spéciaux (8)
 
-- **Baie Lichii (#53)** — augmente l'Attaque d'un niveau lorsque les PV passent sous 1/3 des PV max.
+- **Baie Lichii (#53)** — augmente l'Attaque d'un niveau lorsque les PV sont inférieurs ou égaux à 1/4 des PV max.
 - **Baie Lingan (#54)** — augmente la Défense d'un niveau lorsque les PV passent sous 1/4 des PV max.
 - **Baie Sailak (#55)** — augmente la Vitesse d'un niveau lorsque les PV passent sous 1/4 des PV max.
 - **Baie Pitaye (#56)** — augmente l'Attaque Spéciale d'un niveau lorsque les PV passent sous 1/4 des PV max.
@@ -99,8 +99,8 @@ Réduit de moitié les dégâts d'une attaque du type correspondant qui serait s
 
 ## 7. Baies ajoutées en 4G : précision, priorité et contrecoups (4)
 
-- **Baie Micle (#61)** — lorsque les PV passent sous 1/3 des PV max, augmente la précision de la prochaine capacité ; le déclencheur exact doit être confirmé contre la source primaire.
-- **Baie Chérim (#62)** — permet au porteur d'agir en premier pendant un tour lorsque ses PV passent sous 1/4 des PV max.
+- **Baie Micle (#61)** — lorsque les PV sont inférieurs ou égaux à 1/4 des PV max, augmente la précision de la prochaine capacité.
+- **Baie Chérim (#62)** — lorsque les PV sont inférieurs ou égaux à 1/4 des PV max, permet au porteur d'agir en premier une fois.
 - **Baie Jaboca (#63)** — inflige des dégâts à l'attaquant qui touche le porteur avec une capacité physique.
 - **Baie Pommo (#64)** — inflige des dégâts à l'attaquant qui touche le porteur avec une capacité spéciale.
 
@@ -128,3 +128,31 @@ Réduit de moitié les dégâts d'une attaque du type correspondant qui serait s
 - La Baie Micle est conditionnée par les PV bas ; elle ne doit pas être décrite comme un simple effet inconditionnel.
 - Les seuils et les niveaux exacts des baies Frista/Lichii/Lingan/Sailak/Pitaye/Abriko/Lansat/Micle doivent être comparés aux données/scripts du jeu avant le statut CERTIFIÉ.
 - Le tableau ci-dessus reste **documentaire, non certifié expérimentalement**. Les formulations qui nécessitent confirmation primaire sont explicitement signalées.
+
+
+## Preuve primaire vérifiée — source de décompilation
+
+Dépôt : https://github.com/pret/pokeplatinum
+Fichier analysé : `src/battle/battle_lib.c` (branche main, consulté le 2026-10-19), plus définitions d'objets dans `res/items/data/*_berry.json`.
+
+Constats confirmés dans les scripts/données du jeu :
+- Les baies de saveur `HOLD_EFFECT_HP_RESTORE_SPICY/DRY/SWEET/BITTER/SOUR` déclenchent à `curHP <= maxHP / 2`; `effectParam: 8` donne 1/8 des PV max et le script contrôle la saveur/nature.
+- La Baie Sitrus utilise `HOLD_EFFECT_HP_PCT_RESTORE`, `effectParam: 25`, déclenche à `curHP <= maxHP / 2` : soin d'un quart des PV max.
+- Les effets de seuil de type `HOLD_EFFECT_PINCH_*` utilisent `curHP <= maxHP / itemPower`; les baies avec paramètre 4 s'activent donc à 1/4 des PV max. Le talent Gloutonnerie modifie ce seuil dans le code.
+- Baie Frista : `HOLD_EFFECT_PINCH_RANDOM_UP`, paramètre 4 ; le code choisit une statistique au hasard et la monte de deux niveaux.
+- Baie Micle : `HOLD_EFFECT_PINCH_ACC_UP`, paramètre 4.
+- Baie Chérim : `HOLD_EFFECT_PINCH_PRIORITY`, paramètre 4.
+- Baie Enigma : `HOLD_EFFECT_HP_RESTORE_SE`, paramètre 4 ; restaure 1/4 des PV max après une attaque super efficace.
+- Baie Jaboca/Pommo : effets de contrecoup physique/spécial ; le code de combat les déclenche si l'attaque adverse touche.
+
+Liens de preuve directe :
+- https://github.com/pret/pokeplatinum/blob/main/src/battle/battle_lib.c
+- https://github.com/pret/pokeplatinum/blob/main/res/items/data/figy_berry.json
+- https://github.com/pret/pokeplatinum/blob/main/res/items/data/sitrus_berry.json
+- https://github.com/pret/pokeplatinum/blob/main/res/items/data/starf_berry.json
+- https://github.com/pret/pokeplatinum/blob/main/res/items/data/enigma_berry.json
+- https://github.com/pret/pokeplatinum/blob/main/res/items/data/micle_berry.json
+- https://github.com/pret/pokeplatinum/blob/main/res/items/data/custap_berry.json
+- https://github.com/pret/pokeplatinum/blob/main/res/items/data/rowap_berry.json
+
+Limite : cela certifie la logique lue dans la décompilation de Pokémon Platine pour ces effets, pas l'exécution dans une ROM binaire, ni les comportements du mod Project PM. Les effets des 64 baies ne sont pas encore tous certifiés individuellement.
