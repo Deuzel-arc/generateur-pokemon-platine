@@ -34,8 +34,15 @@ check("team size is checked before rendering", () => {
 check("evolution-max mode fails closed without metadata", () => {
   assert.match(html, /if\(state\.evo\)failReasons\.push/);
 });
-check("exactly six held items are required", () => {
-  assert.match(html, /if\(state\.items\.length!==6\)/);
+check("zero to two imposed held items are allowed", () => {
+  assert.match(html, /if\(state\.items\.length>2\)/);
+  assert.match(html, /state\.items\.length<2/);
+  assert.match(html, /0\/2 objets imposés sélectionnés/);
+});
+check("imposed items are included in the six-item team assignment", () => {
+  assert.match(html, /const chosenItems=\[\.\.\.state\.items\]/);
+  assert.match(html, /const itemTargets=chosenItems\.map/);
+  assert.match(html, /Objets imposés : /);
 });
 check("held-item targets are unique", () => {
   assert.match(html, /const assignedTargets=new Set\(\)/);
