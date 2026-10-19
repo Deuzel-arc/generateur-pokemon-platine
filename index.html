@@ -186,23 +186,47 @@ document.getElementById('validate').addEventListener('click',()=>{
  if(state.evo)failReasons.push('Le mode « évolution maximale » ne peut pas encore être certifié : le catalogue actuel ne contient pas les métadonnées d’évolution nécessaires.');
  if(failReasons.length){out.textContent='GÉNÉRATION BLOQUÉE\n'+failReasons.join('\n')+'\nAucune équipe ne sera présentée comme conforme tant que les données nécessaires ne sont pas disponibles.';out.classList.remove('hidden');out.scrollIntoView({behavior:'smooth',block:'nearest'});return;}
  const names=team.map((p,i)=>`${i+1}. ${p.name} — ${p.types.join(' / ')}${p.legend?' · Légendaire/fabuleux possible':''}\n   Orientation indicative : ${p.off>=p.def+12?'offensive':p.def>=p.off+12?'défensive':'polyvalente'}`).join('\n');
- const assignedTargets=new Set();
  const chosenItems=[...state.items];
  const remainingItems=[...new Set(itemPool)].filter(item=>!naturalGiftOnlyBerries.has(item)&&!chosenItems.includes(item));
  for(let i=remainingItems.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[remainingItems[i],remainingItems[j]]=[remainingItems[j],remainingItems[i]];}
  for(const item of remainingItems){if(chosenItems.length>=6)break;chosenItems.push(item);}
- const itemTargets=chosenItems.map(item=>{
-   const candidates=team.filter(p=>!assignedTargets.has(p.name)).map(p=>{
-     let bonus=0;
-     if(item==='Boue Noire')bonus=p.types.includes('Poison')?30:-20;
-     else if(['Mouchoir Choix','Bandeau Choix','Lunettes Choix','Orbe Vie'].includes(item))bonus=p.off>=85?15:p.off>=75?5:-5;
-     else if(['Restes','Baie Sitrus'].includes(item))bonus=p.def>=80?12:p.def>=70?4:0;
-     return {p,score:scorePokemon(p,state.orientation,[],null)+bonus};
-   }).sort((a,b)=>b.score-a.score);
-   const target=candidates[0]?.p||null;
-   if(target)assignedTargets.add(target.name);
-   return {item,target};
- });
+ // Assign the six distinct items to six different Pokémon by maximizing total fit.
+ // Section 7 imposed items stay in the candidate set and receive the same strategic fit evaluation.
+ const itemMainTags=state.strategies.map(s=>tagForStrategy[s]).filter(Boolean);
+ const itemSecondaryTag=tagForSecondary[state.secondary]||null;
+ function itemFit(item,p){
+   let score=0;
+   const offensive=['Orbe Vie','Mouchoir Choix','Bandeau Choix','Lunettes Choix','Ceinture Pro','Lentilscope'];
+   const defensive=['Restes','Baie Sitrus','Herbe Blanche','Poudreclaire','Baie Prine','Baie Wiki','Baie Figuy','Baie Mago','Baie Gowav'];
+   if(item==='Boue Noire')score+=p.types.includes('Poison')?55:-45;
+   if(offensive.includes(item))score+=p.off>=90?22:p.off>=80?14:p.off>=70?5:-8;
+   if(defensive.includes(item))score+=p.def>=90?22:p.def>=80?14:p.def>=70?6:0;
+   const typeBoosts={'Aimant':'Électrik','Charbon':'Feu','Eau Mystique':'Eau','Grain Miracle':'Plante','Ceinture Noire':'Combat','Crochet Venin':'Poison','Poudre Métal':'Acier','Encens Bizarre':'Psy','Encens Doux':'Psy','Encens Mer':'Eau','Encens Vague':'Eau','Encens Fleur':'Plante','Encens Roc':'Roche','Encens Plein':'Normal','Encens Pure':'Psy'};
+   if(typeBoosts[item])score+=p.types.includes(typeBoosts[item])?34:-8;
+   if(item.startsWith('Baie ')){
+     if(['Baie Nanone','Baie Parma','Baie Ratam','Baie Pomroz','Baie Kika','Baie Cobaba','Baie Babiri','Baie Charti','Baie Chocco','Baie Pocpoc','Baie Jouca','Baie Sédra','Baie Fraive'].includes(item))score+=p.def>=80?8:2;
+     else score+=p.def>=80?5:0;
+   }
+   for(const tag of itemMainTags)if(p.tags.includes(tag))score+=({meteo:item.startsWith('Baie ')?3:1,vitesse:offensive.includes(item)?4:0,terrain:defensive.includes(item)?4:0,usure:defensive.includes(item)?5:0,combo:offensive.includes(item)?3:0,surprise:offensive.includes(item)?2:0})[tag]||0;
+   if(itemSecondaryTag&&p.tags.includes(itemSecondaryTag))score+=defensive.includes(item)?3:1;
+   if(state.orientation==='offensive')score+=p.off*0.08;
+   if(state.orientation==='defensive')score+=p.def*0.08;
+   if(state.orientation==='balanced')score+=(p.off+p.def)*0.035;
+   return score;
+ }
+ let bestAssignment=null,bestScore=-Infinity;
+ function searchItemAssignment(index,used,assignment,total){
+   if(index===chosenItems.length){if(total>bestScore){bestScore=total;bestAssignment=[...assignment];}return;}
+   const item=chosenItems[index];
+   for(const p of team){
+     if(used.has(p.name))continue;
+     used.add(p.name);assignment.push({item,target:p});
+     searchItemAssignment(index+1,used,assignment,total+itemFit(item,p));
+     assignment.pop();used.delete(p.name);
+   }
+ }
+ searchItemAssignment(0,new Set(),[],0);
+ const itemTargets=bestAssignment||chosenItems.map(item=>({item,target:null}));
  const note='Aperçu de composition fondé sur un catalogue embarqué de candidats et des tags tactiques. Ce n’est pas encore le moteur stratégique complet ni une validation de movesets/objets légaux.';
  out.textContent='CONFIGURATION RETENUE\n'+JSON.stringify(data,null,2)+'\n\nAPERÇU DE L’ÉQUIPE (6 Pokémon)\n'+names+'\n\nObjets imposés : '+(state.items.join(', ')||'aucun')+'\nObjets attribués à l’équipe : '+chosenItems.join(', ')+itemTargets.map(x=>'\n'+x.item+' — cible suggérée : '+(x.target?x.target.name:'aucune')).join('')+'\n\n'+note;out.classList.remove('hidden');out.scrollIntoView({behavior:'smooth',block:'nearest'});
 });updateComp();
