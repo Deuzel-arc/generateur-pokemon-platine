@@ -163,8 +163,6 @@ function chooseTeam(){
  let pool=roster.filter(p=>!chosen.some(c=>c.name===p.name)&&p.legend===(chosen.filter(c=>c.legend).length<legCount));
  // Keep the requested legendary count exact, then fill all remaining slots with non-legendary species.
  pool=roster.filter(p=>!p.legend&&!chosen.some(c=>c.name===p.name));
- const starterNames=Object.values(starterGroups).flat();
- pool=pool.filter(p=>state.starter==='none'||!starterNames.includes(p.name));
  const typeCounts=()=>{const counts={};chosen.forEach(p=>p.types.forEach(t=>counts[t]=(counts[t]||0)+1));return counts};
  while(chosen.length<6){const counts=typeCounts();const ranked=pool.map(p=>({p,score:scorePokemon(p,state.orientation,mainTags,sec)-p.types.reduce((n,t)=>n+(counts[t]||0)*13,0)})).sort((a,b)=>b.score-a.score);if(!ranked.length)break;const pick=ranked[0].p;chosen.push(pick);pool=pool.filter(p=>p.name!==pick.name)}
  return chosen.slice(0,6);
@@ -177,7 +175,19 @@ document.getElementById('validate').addEventListener('click',()=>{
  if(!ciResolved){out.textContent='CONFIGURATION INCOMPLÈTE\nLes réglages de fréquence et d’incongruité des capacités illégales doivent être explicitement résolus avant la validation.';out.classList.remove('hidden');out.scrollIntoView({behavior:'smooth',block:'nearest'});return;}
  const data={competitivite:c,evolutionMax:state.evo,trio:state.starter,legendairesFabuleux:state.legendary,orientation:state.orientation||null,strategiesPrincipales:state.strategies,capacitesIllegales:state.illegal,modeCI:c<25?'automatic':(c===100||!state.illegal?'disabled':'manual'),frequenceCI:state.illegal&&c<100?+document.getElementById('freq').value:null,incongruite:state.illegal&&c<100?+document.getElementById('inc').value:null,frequenceCIManuellementModifiee:state.ciFrequencyAdjusted,incongruiteManuellementModifiee:state.incongruityAdjusted,ciSettingsResolved:ciResolved,objetsSelectionnes:[...state.items],strategieSecondaire:state.secondary,remarques:document.getElementById('remarks').value};
  const team=chooseTeam();const names=team.map((p,i)=>`${i+1}. ${p.name} — ${p.types.join(' / ')}${p.legend?' · Légendaire/fabuleux possible':''}\n   Orientation indicative : ${p.off>=p.def+12?'offensive':p.def>=p.off+12?'défensive':'polyvalente'}`).join('\n');
- const itemTargets=state.items.map(item=>({item,target:team.filter(p=>item==='Boue Noire'?p.types.includes('Poison'):['Mouchoir Choix','Orbe Vie','Bandeau Choix','Lunettes Choix'].includes(item)?p.off>=85:['Restes','Baie Sitrus'].includes(item)?p.def>=80:true).sort((a,b)=>scorePokemon(b,state.orientation,[],null)-scorePokemon(a,state.orientation,[],null))[0]}));
+ const assignedTargets=new Set();
+ const itemTargets=state.items.map(item=>{
+   const candidates=team.filter(p=>!assignedTargets.has(p.name)).map(p=>{
+     let bonus=0;
+     if(item==='Boue Noire')bonus=p.types.includes('Poison')?30:-20;
+     else if(['Mouchoir Choix','Bandeau Choix','Lunettes Choix','Orbe Vie'].includes(item))bonus=p.off>=85?15:p.off>=75?5:-5;
+     else if(['Restes','Baie Sitrus'].includes(item))bonus=p.def>=80?12:p.def>=70?4:0;
+     return {p,score:scorePokemon(p,state.orientation,[],null)+bonus};
+   }).sort((a,b)=>b.score-a.score);
+   const target=candidates[0]?.p||null;
+   if(target)assignedTargets.add(target.name);
+   return {item,target};
+ });
  const note='Aperçu de composition fondé sur un catalogue embarqué de candidats et des tags tactiques. Ce n’est pas encore le moteur stratégique complet ni une validation de movesets/objets légaux.';
  const out=document.getElementById('summary');out.textContent='CONFIGURATION RETENUE\n'+JSON.stringify(data,null,2)+'\n\nAPERÇU DE L’ÉQUIPE (6 Pokémon)\n'+names+'\n\nObjets sélectionnés : '+(state.items.join(', ')||'aucun')+itemTargets.map(x=>'\n'+x.item+' — cible suggérée : '+(x.target?x.target.name:'aucune')).join('')+'\n\n'+note;out.classList.remove('hidden');out.scrollIntoView({behavior:'smooth',block:'nearest'});
 });updateComp();
