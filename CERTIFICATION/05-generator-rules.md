@@ -34,11 +34,12 @@
 
 ## Constats statiques actuels (relecture du code après les correctifs d'interface)
 
-1. **Objets : correctif d'interface présent.** `index.html` propose désormais de sélectionner jusqu'à six objets tenus distincts et bloque la validation si le nombre sélectionné n'est pas exactement six. Cela corrige l'ancien plafond de trois objets. En revanche, le contrôle confirme seulement six choix distincts dans la liste : il ne prouve pas encore que chacun est un objet tenable certifié pour la version cible ni que le moteur affecte correctement un objet à chacun des six Pokémon.
-2. **CI : contrôle de résolution amélioré.** La validation calcule désormais un état `ciResolved` qui tient compte de l'initialisation automatique sous 25 %, ou des réglages manuels explicitement modifiés lorsque les CI sont activées à partir de 25 %. Ce contrôle doit encore être testé aux seuils 0, 24, 25, 99 et 100 et après chaque transition de mode.
-3. **Seuil CI : libellé corrigé.** La note de l'interface indique désormais la plage automatique de 0 à 24 % inclus, cohérente avec la condition `c < 25`.
-4. **Moteur d'équipe encore heuristique.** La fonction de composition utilise des scores/tags et une composante aléatoire ; elle ne constitue pas encore un score de synergie calculé à partir de learnsets certifiés, statistiques, talents et règles de combat double.
-5. **Résultat non certifié.** Le résumé reste un aperçu heuristique ; les capacités, objets et données d'équipe ne sont pas tous reliés à une base exhaustive validée. Le contrôle de l'interface ne remplace pas les tests du moteur ni les tests dans Project PM.
+1. **Objets : sélection et attribution améliorées.** `index.html` permet de sélectionner six objets distincts, bloque la validation si le compte n'est pas exactement six et attribue maintenant les objets de façon gloutonne à des Pokémon différents, en tenant compte de quelques critères simples de rôle/type. Cela évite que plusieurs objets soient proposés au même Pokémon. Cette attribution reste heuristique : elle ne prouve pas la légalité certifiée de chaque objet ni une optimisation stratégique complète.
+2. **Composition : sélection libre corrigée.** Lorsqu'un trio de starters est choisi, le pool des trois autres places n'exclut plus systématiquement les évolutions finales des autres trios. Elles restent disponibles si elles sont présentes dans le catalogue et ne sont pas déjà dans l'équipe, conformément à la règle « trois starters imposés, trois autres choix libres ».
+3. **CI : contrôle de résolution amélioré.** La validation calcule désormais un état `ciResolved` qui tient compte de l'initialisation automatique sous 25 %, ou des réglages manuels explicitement modifiés lorsque les CI sont activées à partir de 25 %. Ce contrôle doit encore être testé aux seuils 0, 24, 25, 99 et 100 et après chaque transition de mode.
+4. **Seuil CI : libellé corrigé.** La note de l'interface indique désormais la plage automatique de 0 à 24 % inclus, cohérente avec la condition `c < 25`.
+5. **Moteur d'équipe encore heuristique.** La fonction de composition utilise des scores/tags et une composante aléatoire ; elle ne constitue pas encore un score de synergie calculé à partir de learnsets certifiés, statistiques, talents et règles de combat double.
+6. **Résultat non certifié.** Le résumé reste un aperçu heuristique ; les capacités, objets et données d'équipe ne sont pas tous reliés à une base exhaustive validée. Le contrôle de l'interface ne remplace pas les tests du moteur ni les tests dans Project PM.
 
 ## Cas de tests obligatoires
 
