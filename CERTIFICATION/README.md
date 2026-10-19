@@ -40,6 +40,7 @@ Chaque enregistrement doit inclure identifiant, nom officiel, jeu/version, sourc
 - [Lot 03 — Espèces, capacités et talents](./03-species-moves-abilities.md) : contrôle des inventaires source et des marqueurs techniques ; vérification ligne par ligne encore ouverte. Statut : **structure contrôlée, non certifié intégralement**.
 - [Lot 04 — Types, statistiques et interface](./04-types-stats-ui.md) : bornes structurelles 4G et écarts/risques repérés dans l'interface actuelle. Statut : **audit statique partiel, non certifié**.
 - [Lot 05 — Règles du générateur et CI](./05-generator-rules.md) : contrat fonctionnel et cas de tests pour composition, objets tenus et capacités illégales. Statut : **audit statique, non certifié**.
+- [Rapport de tests automatisés du 19/10/2026](./TEST-REPORT-2026-10-19.md) : 10 assertions statiques passées sur 10 ; ne remplace pas les tests navigateur ni la certification du moteur.
 
 ## Anomalies fonctionnelles et suivi des corrections
 1. **Six objets tenus — corrigé dans l'interface** : la sélection autorise désormais jusqu'à six objets, le compteur affiche `/6`, et la validation bloque une équipe si six objets ne sont pas sélectionnés. La base d'objets elle-même reste à certifier.
