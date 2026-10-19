@@ -39,6 +39,7 @@ Chaque enregistrement doit inclure identifiant, nom officiel, jeu/version, sourc
 - [Lot 02 — Inventaire des objets](./02-items.md) : comptage structurel des identifiants et schéma primaire des objets ; effets et noms restent à vérifier ligne par ligne. Statut : **inventaire établi, non certifié intégralement**.
 - [Lot 03 — Espèces, capacités et talents](./03-species-moves-abilities.md) : contrôle des inventaires source et des marqueurs techniques ; vérification ligne par ligne encore ouverte. Statut : **structure contrôlée, non certifié intégralement**.
 - [Lot 04 — Types, statistiques et interface](./04-types-stats-ui.md) : bornes structurelles 4G et écarts/risques repérés dans l'interface actuelle. Statut : **audit statique partiel, non certifié**.
+- [Lot 05 — Règles du générateur et CI](./05-generator-rules.md) : contrat fonctionnel et cas de tests pour composition, objets tenus et capacités illégales. Statut : **audit statique, non certifié**.
 
 ## Anomalies fonctionnelles prioritaires
 1. **Six objets tenus** : l'interface permet actuellement de sélectionner 0 à 3 objets seulement ; elle ne satisfait pas la règle d'une équipe de six objets tenus distincts.
