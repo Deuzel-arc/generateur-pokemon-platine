@@ -174,7 +174,18 @@ document.getElementById('validate').addEventListener('click',()=>{
  const ciResolved=c<25?state.autoCIInitialized:(c===100||!state.illegal||(state.ciFrequencyAdjusted&&state.incongruityAdjusted));
  if(!ciResolved){out.textContent='CONFIGURATION INCOMPLÈTE\nLes réglages de fréquence et d’incongruité des capacités illégales doivent être explicitement résolus avant la validation.';out.classList.remove('hidden');out.scrollIntoView({behavior:'smooth',block:'nearest'});return;}
  const data={competitivite:c,evolutionMax:state.evo,trio:state.starter,legendairesFabuleux:state.legendary,orientation:state.orientation||null,strategiesPrincipales:state.strategies,capacitesIllegales:state.illegal,modeCI:c<25?'automatic':(c===100||!state.illegal?'disabled':'manual'),frequenceCI:state.illegal&&c<100?+document.getElementById('freq').value:null,incongruite:state.illegal&&c<100?+document.getElementById('inc').value:null,frequenceCIManuellementModifiee:state.ciFrequencyAdjusted,incongruiteManuellementModifiee:state.incongruityAdjusted,ciSettingsResolved:ciResolved,objetsSelectionnes:[...state.items],strategieSecondaire:state.secondary,remarques:document.getElementById('remarks').value};
- const team=chooseTeam();const names=team.map((p,i)=>`${i+1}. ${p.name} — ${p.types.join(' / ')}${p.legend?' · Légendaire/fabuleux possible':''}\n   Orientation indicative : ${p.off>=p.def+12?'offensive':p.def>=p.off+12?'défensive':'polyvalente'}`).join('\n');
+ const team=chooseTeam();
+ const requestedLegendaries={none:0,one:1,two:2,three:3}[state.legendary]??0;
+ const actualLegendaries=team.filter(p=>p.legend).length;
+ const starterNames=state.starter==='none'?[]:(starterGroups[state.starter]||[]);
+ const missingStarters=starterNames.filter(name=>!team.some(p=>p.name===name));
+ const failReasons=[];
+ if(team.length!==6)failReasons.push('Le catalogue actuel ne permet pas de composer exactement six Pokémon.');
+ if(actualLegendaries!==requestedLegendaries)failReasons.push('Le nombre de légendaires/fabuleux ne correspond pas au choix demandé.');
+ if(missingStarters.length)failReasons.push('Le trio de starters choisi n’est pas entièrement présent.');
+ if(state.evo)failReasons.push('Le mode « évolution maximale » ne peut pas encore être certifié : le catalogue actuel ne contient pas les métadonnées d’évolution nécessaires.');
+ if(failReasons.length){out.textContent='GÉNÉRATION BLOQUÉE\\n'+failReasons.join('\\n')+'\\nAucune équipe ne sera présentée comme conforme tant que les données nécessaires ne sont pas disponibles.';out.classList.remove('hidden');out.scrollIntoView({behavior:'smooth',block:'nearest'});return;}
+ const names=team.map((p,i)=>`${i+1}. ${p.name} — ${p.types.join(' / ')}${p.legend?' · Légendaire/fabuleux possible':''}\n   Orientation indicative : ${p.off>=p.def+12?'offensive':p.def>=p.off+12?'défensive':'polyvalente'}`).join('\n');
  const assignedTargets=new Set();
  const itemTargets=state.items.map(item=>{
    const candidates=team.filter(p=>!assignedTargets.has(p.name)).map(p=>{
