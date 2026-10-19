@@ -17,7 +17,7 @@ try {
   await page.locator("#validate").click();
   let summary = await page.locator("#summary").innerText();
   assert.match(summary, /Objets imposés : aucun/);
-  const assigned0 = summary.match(/Objets attribués à l’équipe : ([^\\n]+)/)?.[1].split(", ") ?? [];
+  const assigned0 = (summary.split("Objets attribués à l’équipe : ")[1]?.split("\n")[0] ?? "").split(", ").filter(Boolean);
   assert.equal(assigned0.length, 6, "six objets attribués sans contrainte");
   assert.equal(new Set(assigned0).size, 6, "objets attribués tous distincts");
 
@@ -29,7 +29,7 @@ try {
   await page.locator("#validate").click();
   summary = await page.locator("#summary").innerText();
   assert.match(summary, new RegExp("Objets imposés : " + one.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\\\$&")));
-  const assigned1 = summary.match(/Objets attribués à l’équipe : ([^\\n]+)/)?.[1].split(", ") ?? [];
+  const assigned1 = (summary.split("Objets attribués à l’équipe : ")[1]?.split("\n")[0] ?? "").split(", ").filter(Boolean);
   assert.equal(assigned1.length, 6);
   assert.ok(assigned1.includes(one), "l’objet imposé doit être attribué");
 
@@ -42,7 +42,7 @@ try {
   await page.locator("#validate").click();
   summary = await page.locator("#summary").innerText();
   assert.ok(imposed.every(item => summary.includes(item)), "les deux objets imposés figurent dans le résultat");
-  const assigned2 = summary.match(/Objets attribués à l’équipe : ([^\\n]+)/)?.[1].split(", ") ?? [];
+  const assigned2 = (summary.split("Objets attribués à l’équipe : ")[1]?.split("\n")[0] ?? "").split(", ").filter(Boolean);
   assert.equal(assigned2.length, 6);
   assert.equal(new Set(assigned2).size, 6);
   assert.ok(imposed.every(item => assigned2.includes(item)));
