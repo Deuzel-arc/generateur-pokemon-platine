@@ -1,8 +1,8 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "title": "Base de données des baies tactiques — Pokémon Platine / génération IV",
   "purpose": "Référence interne du générateur. Les effets sont stockés dans les données et ne doivent pas être affichés dans l’interface de la section 7 sauf demande explicite.",
-  "mechanics": "Effets de combat de génération IV, hors effet de Don Naturel. Sources recoupées : Poképédia Liste des Baies et Pokémon Trash guide Platine. Les effets Project PM ne sont pas certifiés sans test ROM.",
+  "mechanics": "Effets de combat de génération IV, hors effet de Don Naturel. Statut audit : documentaire/en cours, pas certifié à 100 %.",
   "berries": [
     {
       "name": "Baie Sitrus",
@@ -10,7 +10,7 @@
       "category": "soin",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Fraive",
@@ -18,7 +18,7 @@
       "category": "statut",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Kika",
@@ -26,7 +26,7 @@
       "category": "statut",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Prine",
@@ -34,7 +34,7 @@
       "category": "statut",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Figuy",
@@ -42,7 +42,7 @@
       "category": "soin_statut",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Gowav",
@@ -50,7 +50,7 @@
       "category": "soin_statut",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Mago",
@@ -58,7 +58,7 @@
       "category": "soin_statut",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Wiki",
@@ -66,7 +66,7 @@
       "category": "soin_statut",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Babiri",
@@ -74,7 +74,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Charti",
@@ -82,7 +82,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Chocco",
@@ -90,7 +90,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Cobaba",
@@ -98,7 +98,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Fraigo",
@@ -106,7 +106,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Jouca",
@@ -114,7 +114,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Kébia",
@@ -122,7 +122,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Lampou",
@@ -130,7 +130,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Nanone",
@@ -138,7 +138,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Panga",
@@ -146,7 +146,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Parma",
@@ -154,7 +154,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Pocpoc",
@@ -162,7 +162,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Pomroz",
@@ -170,7 +170,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Ratam",
@@ -178,7 +178,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Sédra",
@@ -186,7 +186,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Yapap",
@@ -194,63 +194,63 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Zalis",
-      "effect": "Réduit de moitié les dégâts de la première attaque de type Normal reçue, une seule fois.",
+      "effect": "Réduit les dégâts d’une attaque Normal ; détails exacts à confirmer dans les scripts de Platine.",
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Abriko",
-      "effect": "Augmente la Défense Spéciale d’un niveau lorsque les PV passent sous 1/4 des PV max.",
+      "effect": "Augmente la Défense Spéciale d’un niveau lorsque les PV tombent au seuil bas de déclenchement de la génération IV (à confirmer précisément dans les scripts).",
       "category": "statistique",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Lichii",
-      "effect": "Augmente l’Attaque d’un niveau lorsque les PV passent sous 1/4 des PV max.",
+      "effect": "Augmente l’Attaque d’un niveau lorsque les PV tombent au seuil bas de déclenchement de la génération IV (à confirmer précisément dans les scripts).",
       "category": "statistique",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Lingan",
-      "effect": "Augmente la Défense d’un niveau lorsque les PV passent sous 1/4 des PV max.",
+      "effect": "Augmente la Défense d’un niveau lorsque les PV tombent au seuil bas de déclenchement de la génération IV (à confirmer précisément dans les scripts).",
       "category": "statistique",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Pitaye",
-      "effect": "Augmente l’Attaque Spéciale d’un niveau lorsque les PV passent sous 1/4 des PV max.",
+      "effect": "Augmente l’Attaque Spéciale d’un niveau lorsque les PV tombent au seuil bas de déclenchement de la génération IV (à confirmer précisément dans les scripts).",
       "category": "statistique",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Sailak",
-      "effect": "Augmente la Vitesse d’un niveau lorsque les PV passent sous 1/4 des PV max.",
+      "effect": "Augmente la Vitesse d’un niveau lorsque les PV tombent au seuil bas de déclenchement de la génération IV (à confirmer précisément dans les scripts).",
       "category": "statistique",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     },
     {
       "name": "Baie Lansat",
-      "effect": "Augmente d’un niveau le taux de coups critiques lorsque les PV passent sous 1/4 des PV max.",
+      "effect": "Augmente le taux de coups critiques lorsque les PV tombent au seuil bas de déclenchement de la génération IV (à confirmer précisément dans les scripts).",
       "category": "critique",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
+      "verification_status": "AUDIT EN COURS : source secondaire recoupée ; seuil/effet non certifié par source primaire ou test reproductible"
     }
   ],
   "excluded": [
