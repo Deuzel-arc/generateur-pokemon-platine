@@ -46,3 +46,23 @@ Un test de compilation JavaScript a d'abord échoué : le gestionnaire du bouton
 **Nouvelle exécution GitHub Actions : 16/16 PASS**, dont la compilation du JavaScript inline. [Voir l'exécution](https://github.com/Deuzel-arc/generateur-pokemon-platine/actions/runs/39318763959).
 
 La première exécution a échoué sur cette erreur ; elle n'est pas effacée du suivi. Le résultat validé est celui de la seconde exécution. Ces assertions compilent le script et contrôlent des invariants textuels ; elles ne remplacent pas les tests d'interaction en navigateur.
+
+
+## Tests fonctionnels navigateur — résultat confirmé
+
+**Exécution GitHub Actions :** [39320049769](https://github.com/Deuzel-arc/generateur-pokemon-platine/actions/runs/39320049769)  
+**Conclusion :** `success` — tests statiques et navigateur terminés avec succès.
+
+- Assertions statiques : **16/16 PASS**.
+- Scénarios Playwright : **5/5 PASS**.
+- Aucune erreur JavaScript pendant les interactions testées.
+
+### Défauts trouvés dans le parcours de validation
+
+1. Le test navigateur a d'abord révélé que la validation continuait d'afficher le message demandant six objets après leur sélection. Le diagnostic renforcé a permis de mettre en évidence une affectation à une constante de résumé déjà déclarée.
+2. Le code a été corrigé pour réutiliser directement la variable existante, sans la réaffecter.
+3. Après correction, le parcours complet testé passe : sélection des six objets, validation, réglage à 100 % de compétitivité et contrôle du parcours manuel des CI à 25 %.
+
+### Portée et limites
+
+Ces résultats valident seulement les scénarios énumérés ci-dessus. Les parcours de composition de tous les trios, les comptes de légendaires, le mode évolution maximale, les distributions aléatoires de CI, la légalité réelle des données de combat et les essais avec la ROM Project PM restent à tester.
