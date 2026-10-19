@@ -31,7 +31,10 @@ try {
   assert.equal(await page.locator("#itemCount").innerText(), "6/6 objets sélectionnés");
   assert.equal(await page.evaluate(() => state.items.length), 6, "l'état applicatif doit conserver les six objets cochés");
   await page.locator("#validate").click();
-  assert.doesNotMatch(await page.locator("#summary").innerText(), /Sélectionne exactement six objets tenus distincts/i);
+  await page.waitForTimeout(50);
+  assert.deepEqual(errors, [], `erreur JavaScript après sélection des objets: ${errors.join("; ")}`);
+  const afterItemsValidation = await page.locator("#summary").innerText();
+  assert.doesNotMatch(afterItemsValidation, /Sélectionne exactement six objets tenus distincts/i, `le garde des objets reste actif malgré state.items=${await page.evaluate(() => state.items.length)} et compteur=${await page.locator("#itemCount").innerText()}: ${afterItemsValidation}`);
 
   // The 100% competitive mode must disable CI and reset its sliders.
   await page.locator("#comp").fill("100");
