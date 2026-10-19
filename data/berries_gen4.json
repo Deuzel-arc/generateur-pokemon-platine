@@ -1,72 +1,72 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "title": "Base de données des baies tactiques — Pokémon Platine / génération IV",
   "purpose": "Référence interne du générateur. Les effets sont stockés dans les données et ne doivent pas être affichés dans l’interface de la section 7 sauf demande explicite.",
-  "mechanics": "Effets de combat de génération IV, hors effet de Don Naturel. Liste ciblée sur les baies tactiques tenues en combat, pas sur toutes les baies de culture.",
+  "mechanics": "Effets de combat de génération IV, hors effet de Don Naturel. Sources recoupées : Poképédia Liste des Baies et Pokémon Trash guide Platine. Les effets Project PM ne sont pas certifiés sans test ROM.",
   "berries": [
     {
       "name": "Baie Sitrus",
-      "effect": "Restaure 1/4 des PV max lorsque les PV tombent à 1/2 ou moins.",
+      "effect": "Restaure 1/4 des PV max lorsque les PV passent sous 50 %.",
       "category": "soin",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Fraive",
-      "effect": "Soigne la brûlure du Pokémon qui la consomme en combat.",
+      "effect": "Soigne la brûlure.",
       "category": "statut",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Kika",
-      "effect": "Soigne la confusion du Pokémon qui la consomme en combat.",
+      "effect": "Soigne la confusion.",
       "category": "statut",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Prine",
-      "effect": "Soigne tous les problèmes de statut du Pokémon qui la consomme en combat.",
+      "effect": "Soigne un problème de statut non-volatil ou la confusion.",
       "category": "statut",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Figuy",
-      "effect": "Restaure 1/8 des PV max lorsque les PV tombent à 1/2 ou moins ; peut rendre confus selon la nature.",
+      "effect": "Restaure 1/8 des PV max lorsque les PV passent sous 1/4 des PV max ; peut provoquer la confusion selon la nature (saveur épicée).",
       "category": "soin_statut",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Gowav",
-      "effect": "Restaure 1/8 des PV max lorsque les PV tombent à 1/2 ou moins ; peut rendre confus selon la nature.",
+      "effect": "Restaure 1/8 des PV max lorsque les PV passent sous 1/4 des PV max ; peut provoquer la confusion selon la nature (saveur amère).",
       "category": "soin_statut",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Mago",
-      "effect": "Restaure 1/8 des PV max lorsque les PV tombent à 1/2 ou moins ; peut rendre confus selon la nature.",
+      "effect": "Restaure 1/8 des PV max lorsque les PV passent sous 1/4 des PV max ; peut provoquer la confusion selon la nature (saveur sucrée).",
       "category": "soin_statut",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Wiki",
-      "effect": "Restaure 1/8 des PV max lorsque les PV tombent à 1/2 ou moins ; peut rendre confus selon la nature.",
+      "effect": "Restaure 1/8 des PV max lorsque les PV passent sous 1/4 des PV max ; peut provoquer la confusion selon la nature (saveur sèche).",
       "category": "soin_statut",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Babiri",
@@ -74,7 +74,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Charti",
@@ -82,7 +82,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Chocco",
@@ -90,7 +90,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Cobaba",
@@ -98,7 +98,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Fraigo",
@@ -106,7 +106,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "effet recoupé avec les guides de Pokémon Platine; détails techniques à tester en combat"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Jouca",
@@ -114,7 +114,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Kébia",
@@ -122,7 +122,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "effet recoupé avec les guides de Pokémon Platine; détails techniques à tester en combat"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Lampou",
@@ -130,7 +130,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "effet recoupé avec les guides de Pokémon Platine; détails techniques à tester en combat"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Nanone",
@@ -138,7 +138,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Panga",
@@ -146,7 +146,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "effet recoupé avec les guides de Pokémon Platine; détails techniques à tester en combat"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Parma",
@@ -154,7 +154,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Pocpoc",
@@ -162,7 +162,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Pomroz",
@@ -170,7 +170,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Ratam",
@@ -178,7 +178,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Sédra",
@@ -186,7 +186,7 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Yapap",
@@ -194,63 +194,63 @@
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "effet recoupé avec les guides de Pokémon Platine; détails techniques à tester en combat"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Zalis",
-      "effect": "Réduit de moitié les dégâts d’une attaque de type Normal reçue, une seule fois.",
+      "effect": "Réduit de moitié les dégâts de la première attaque de type Normal reçue, une seule fois.",
       "category": "résistance",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "effet recoupé avec le guide de Pokémon Platine; détails techniques à tester en combat"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Abriko",
-      "effect": "Augmente la Défense Spéciale d’un niveau lorsque les PV tombent à 1/4 ou moins.",
+      "effect": "Augmente la Défense Spéciale d’un niveau lorsque les PV passent sous 1/4 des PV max.",
       "category": "statistique",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Lichii",
-      "effect": "Augmente l’Attaque d’un niveau lorsque les PV tombent à 1/4 ou moins.",
+      "effect": "Augmente l’Attaque d’un niveau lorsque les PV passent sous 1/4 des PV max.",
       "category": "statistique",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Lingan",
-      "effect": "Augmente la Défense d’un niveau lorsque les PV tombent à 1/4 ou moins.",
+      "effect": "Augmente la Défense d’un niveau lorsque les PV passent sous 1/4 des PV max.",
       "category": "statistique",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Pitaye",
-      "effect": "Augmente l’Attaque Spéciale d’un niveau lorsque les PV tombent à 1/4 ou moins.",
+      "effect": "Augmente l’Attaque Spéciale d’un niveau lorsque les PV passent sous 1/4 des PV max.",
       "category": "statistique",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Sailak",
-      "effect": "Augmente la Vitesse d’un niveau lorsque les PV tombent à 1/4 ou moins.",
+      "effect": "Augmente la Vitesse d’un niveau lorsque les PV passent sous 1/4 des PV max.",
       "category": "statistique",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     },
     {
       "name": "Baie Lansat",
-      "effect": "Augmente le taux de coups critiques de deux niveaux lorsque les PV tombent à 1/4 ou moins en génération IV.",
+      "effect": "Augmente d’un niveau le taux de coups critiques lorsque les PV passent sous 1/4 des PV max.",
       "category": "critique",
       "generation": 4,
       "available_in_pokemon_platinum": true,
-      "verification_status": "à valider finement, notamment les seuils et effets dépendant de la nature"
+      "verification_status": "recoupé avec Poképédia (Liste des Baies) et Pokémon Trash (guide Platine) ; pas encore testé dans Project PM"
     }
   ],
   "excluded": [
