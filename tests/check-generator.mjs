@@ -39,7 +39,11 @@ check("zero to two imposed held items are allowed", () => {
   assert.match(html, /state\.items\.length<2/);
   assert.match(html, /0\/2 objets imposés sélectionnés/);
 });
-check("generation-block message uses real line breaks", () => {\n  assert.match(html, /GÉNÉRATION BLOQUÉE\\\\n/);\n  assert.doesNotMatch(html, /GÉNÉRATION BLOQUÉE\\\\\\\\n/);\n});\ncheck("imposed items are included in the six-item team assignment", () => {
+check("generation-block message uses real line breaks", () => {
+  assert.match(html, /GÉNÉRATION BLOQUÉE\\n/);
+  assert.doesNotMatch(html, /GÉNÉRATION BLOQUÉE\\\\n/);
+});
+check("imposed items are included in the six-item team assignment", () => {
   assert.match(html, /const chosenItems=\[\.\.\.state\.items\]/);
   assert.match(html, /const itemTargets=chosenItems\.map/);
   assert.match(html, /Objets imposés : /);
