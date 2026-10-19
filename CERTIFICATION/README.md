@@ -53,5 +53,8 @@ La source secondaire Pokémon Trash liste les baies numérotées 1 à 64 et dist
 Source de recoupement : https://www.pokemontrash.com/platine/liste-baies
 Source de recoupement : https://www.pokepedia.fr/Liste_des_Baies
 
+## Correctif appliqué
+- 2026-10-19 — Le libellé de la note CI dans `index.html` a été corrigé : la plage automatique affichée est désormais **0–24 % inclus**, en cohérence avec la condition déjà présente dans le code (`c < 25`). Ce correctif ne résout pas les autres anomalies du moteur et ne vaut pas certification fonctionnelle complète.
+
 ## Journal
 - 2026-10-19 — Création du plan de certification et de l'échelle de preuve. Aucun lot n'est déclaré certifié à cette date.
