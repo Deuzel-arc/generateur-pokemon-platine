@@ -1,0 +1,1 @@
+# générateur Pokémon platine 
