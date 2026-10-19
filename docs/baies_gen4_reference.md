@@ -1,103 +1,122 @@
-# Référence des baies — Pokémon Platine / génération IV
+# Référence vérifiée des 64 baies — Pokémon Platine / génération IV
 
-> Document de travail sauvegardé à partir de la liste classée. Les effets décrits sont ceux visés pour les mécaniques de génération IV. Avant toute utilisation automatique dans le moteur, les noms, les 64 entrées et les conditions exactes doivent être vérifiés contre une source de données de référence. Ce document n'est pas le pool d'objets sélectionnés par le générateur.
+## Périmètre et fiabilité
 
-## 1. Soin et récupération (10)
+Référence compilée à partir de la liste française de Poképédia et du guide Pokémon Platine de Pokémon Trash. La 4G compte 64 baies : les 35 premières baies de la liste de la 3G, les 17 baies de résistance, puis les baies Lichii à Enigma renumérotées 53–60, et enfin Micle, Chérim, Jaboca et Pommo en 61–64. Les baies e-Reader de la 3G ne sont pas des baies distinctes dans Platine : elles deviennent des Baies Enigma au transfert.
 
-- **Baie Oran** — restaure 10 PV lorsqu'elle est consommée en combat.
-- **Baie Sitrus** — restaure 30 PV en 4G lorsque les PV du porteur sont à la moitié ou moins.
-- **Baie Mepo** — restaure 10 PP à une capacité qui n'a plus de PP.
-- **Baie Ceriz** — soigne la paralysie.
-- **Baie Maron** — soigne le sommeil.
-- **Baie Pêcha** — soigne l'empoisonnement.
-- **Baie Fraive** — soigne la brûlure.
-- **Baie Willia** — soigne le gel.
-- **Baie Kika** — soigne la confusion.
-- **Baie Prine** — soigne un problème de statut, y compris la confusion.
+Sources :
+- Poképédia, « Liste des Baies » : https://www.pokepedia.fr/Liste_des_Baies
+- Pokémon Trash, « Liste des Baies — Platine » : https://www.pokemontrash.com/platine/liste-baies
+- Bulbapedia, « Berry » : https://bulbapedia.bulbagarden.net/wiki/Berry
 
-## 2. Soin conditionnel et confusion possible (5)
+Les noms français et les effets sont transcrits selon les références ci-dessus. « Vérifiée par source » ne signifie pas que chaque effet a été exécuté dans une ROM. Les mécaniques exactes de Project PM devront être testées séparément.
 
-Ces baies restaurent 1/8 des PV max lorsque le porteur tombe à la moitié de ses PV ou moins. Selon la nature, elles peuvent provoquer la confusion.
+## 1. Soin des PV, des statuts et des PP (10)
 
-- **Baie Figuy** — saveur épicée.
-- **Baie Wiki** — saveur sèche.
-- **Baie Mago** — saveur sucrée.
-- **Baie Gowav** — saveur amère.
-- **Baie Papaya** — saveur acide.
+- **Baie Ceriz (#01)** — soigne la paralysie.
+- **Baie Maron (#02)** — soigne le sommeil.
+- **Baie Pêcha (#03)** — soigne l'empoisonnement.
+- **Baie Fraive (#04)** — soigne la brûlure.
+- **Baie Willia (#05)** — soigne le gel.
+- **Baie Mepo (#06)** — restaure 10 PP à une capacité.
+- **Baie Oran (#07)** — restaure 10 PV lorsque les PV passent sous 50 %.
+- **Baie Kika (#08)** — soigne la confusion.
+- **Baie Prine (#09)** — soigne un problème de statut non-volatil ou la confusion.
+- **Baie Sitrus (#10)** — restaure 1/4 des PV max lorsque les PV passent sous 50 % (mécanique 4G).
 
-## 3. Résistance aux attaques (17)
+## 2. Soin conditionnel et confusion liée à la saveur (5)
 
-Réduit de moitié les dégâts de la première attaque super efficace du type concerné. **Baie Zalis** est l'exception : elle réduit les dégâts d'une attaque Normal.
+En génération IV, ces baies restaurent 1/8 des PV max lorsque les PV passent sous 1/4 des PV max. Elles rendent confus un Pokémon dont la nature n'aime pas la saveur correspondante.
 
-- **Baie Chocco** — Feu.
-- **Baie Pocpoc** — Eau.
-- **Baie Parma** — Électrik.
-- **Baie Ratam** — Plante.
-- **Baie Nanone** — Glace.
-- **Baie Pomroz** — Combat.
-- **Baie Kébia** — Poison.
-- **Baie Jouca** — Sol.
-- **Baie Cobaba** — Vol.
-- **Baie Yapap** — Psy.
-- **Baie Panga** — Insecte.
-- **Baie Charti** — Roche.
-- **Baie Sédra** — Spectre.
-- **Baie Fraigo** — Dragon.
-- **Baie Lampou** — Ténèbres.
-- **Baie Babiri** — Acier.
-- **Baie Zalis** — Normal.
+- **Baie Figuy (#11)** — saveur épicée.
+- **Baie Wiki (#12)** — saveur sèche.
+- **Baie Mago (#13)** — saveur sucrée.
+- **Baie Gowav (#14)** — saveur amère.
+- **Baie Papaya (#15)** — saveur acide.
 
-## 4. Statistiques et effets conditionnels (9)
+## 3. Baies d'ingrédients pour Poffins et culture (14)
 
-- **Baie Lichii** — augmente l'Attaque d'un niveau lorsque les PV sont bas.
-- **Baie Lingan** — augmente la Défense d'un niveau lorsque les PV sont bas.
-- **Baie Sailak** — augmente la Vitesse d'un niveau lorsque les PV sont bas.
-- **Baie Pitaye** — augmente l'Attaque Spéciale d'un niveau lorsque les PV sont bas.
-- **Baie Abriko** — augmente la Défense Spéciale d'un niveau lorsque les PV sont bas.
-- **Baie Lansat** — augmente le taux de coups critiques lorsque les PV sont bas.
-- **Baie Frista** — augmente plusieurs statistiques lorsque les PV sont bas.
-- **Baie Micle** — augmente la précision de la prochaine capacité.
-- **Baie Chérim** — effet de fuite indiqué dans la liste de travail, à vérifier avant intégration.
+Ces baies servent principalement à la culture et à la préparation de Poffins. Elles n'ont pas d'effet tactique automatique standard lorsqu'elles sont tenues en combat.
 
-## 5. Réaction aux dégâts reçus (3)
+- **Baie Framby (#16)** — ingrédient de Poffins.
+- **Baie Remu (#17)** — ingrédient de Poffins.
+- **Baie Nanab (#18)** — ingrédient de Poffins.
+- **Baie Repoi (#19)** — ingrédient de Poffins.
+- **Baie Nanana (#20)** — ingrédient de Poffins.
+- **Baie Siam (#27)** — ingrédient de Poffins.
+- **Baie Mangou (#28)** — ingrédient de Poffins.
+- **Baie Rabuta (#29)** — ingrédient de Poffins.
+- **Baie Tronci (#30)** — ingrédient de Poffins.
+- **Baie Kiwan (#31)** — ingrédient de Poffins.
+- **Baie Palma (#32)** — ingrédient de Poffins.
+- **Baie Stekpa (#33)** — ingrédient de Poffins.
+- **Baie Durin (#34)** — ingrédient de Poffins.
+- **Baie Myrte (#35)** — ingrédient de Poffins.
 
-- **Baie Enigma** — restaure des PV lorsque le Pokémon est touché par une attaque super efficace.
-- **Baie Jaboca** — blesse l'adversaire qui touche le porteur avec une attaque physique.
-- **Baie Pommo** — blesse l'adversaire qui touche le porteur avec une attaque spéciale.
+## 4. Baies qui diminuent les EV (6)
 
-## 6. Réduction des EV (6)
+Chacune diminue de 10 les EV de la statistique indiquée, jusqu'à zéro si le total est inférieur à 10.
 
-Ces baies diminuent de 10 EV la statistique indiquée, jusqu'à zéro si le total est inférieur à 10.
+- **Baie Grena (#21)** — PV.
+- **Baie Alga (#22)** — Attaque.
+- **Baie Qualot (#23)** — Défense.
+- **Baie Lonme (#24)** — Attaque Spéciale.
+- **Baie Résin (#25)** — Défense Spéciale.
+- **Baie Tamato (#26)** — Vitesse.
 
-- **Baie Grena** — PV.
-- **Baie Alga** — Attaque.
-- **Baie Qualot** — Défense.
-- **Baie Lonme** — Attaque Spéciale.
-- **Baie Résin** — Défense Spéciale.
-- **Baie Tamato** — Vitesse.
+## 5. Baies de résistance aux attaques (17)
 
-## 7. Culture et Poffins (14)
+Réduit de moitié les dégâts d'une attaque du type correspondant qui serait super efficace contre le porteur. La baie est consommée à l'activation.
 
-Ces baies sont principalement utiles pour la culture et la préparation de Poffins ; elles ne sont pas destinées par défaut au pool d'objets tenus en combat.
+- **Baie Chocco (#36)** — Feu.
+- **Baie Pocpoc (#37)** — Eau.
+- **Baie Parma (#38)** — Électrik.
+- **Baie Ratam (#39)** — Plante.
+- **Baie Nanone (#40)** — Glace.
+- **Baie Pomroz (#41)** — Combat.
+- **Baie Kébia (#42)** — Poison.
+- **Baie Jouca (#43)** — Sol.
+- **Baie Cobaba (#44)** — Vol.
+- **Baie Yapap (#45)** — Psy.
+- **Baie Panga (#46)** — Insecte.
+- **Baie Charti (#47)** — Roche.
+- **Baie Sédra (#48)** — Spectre.
+- **Baie Fraigo (#49)** — Dragon.
+- **Baie Lampou (#50)** — Ténèbres.
+- **Baie Babiri (#51)** — Acier.
+- **Baie Zalis (#52)** — réduit de moitié les dégâts de la première attaque de type Normal reçue ; elle n'a pas besoin d'être super efficace.
 
-- **Baie Framby** — saveur épicée, culture et Poffins.
-- **Baie Remu** — saveur sèche, culture et Poffins.
-- **Baie Nanab** — saveur sucrée, culture et Poffins.
-- **Baie Repoi** — saveur amère, culture et Poffins.
-- **Baie Nanana** — saveur acide, culture et Poffins.
-- **Baie Siam** — culture et Poffins.
-- **Baie Mangou** — culture et Poffins.
-- **Baie Rabuta** — culture et Poffins.
-- **Baie Tronci** — culture et Poffins.
-- **Baie Kiwan** — culture et Poffins.
-- **Baie Palma** — culture et Poffins.
-- **Baie Stekpa** — culture et Poffins.
-- **Baie Durin** — culture et Poffins.
-- **Baie Myrte** — culture et Poffins.
+## 6. Baies à déclenchement conditionnel ou effets spéciaux (8)
 
-## Usage dans le générateur
+- **Baie Lichii (#53)** — augmente l'Attaque d'un niveau lorsque les PV passent sous 1/4 des PV max.
+- **Baie Lingan (#54)** — augmente la Défense d'un niveau lorsque les PV passent sous 1/4 des PV max.
+- **Baie Sailak (#55)** — augmente la Vitesse d'un niveau lorsque les PV passent sous 1/4 des PV max.
+- **Baie Pitaye (#56)** — augmente l'Attaque Spéciale d'un niveau lorsque les PV passent sous 1/4 des PV max.
+- **Baie Abriko (#57)** — augmente la Défense Spéciale d'un niveau lorsque les PV passent sous 1/4 des PV max.
+- **Baie Lansat (#58)** — augmente d'un niveau le taux de coups critiques lorsque les PV passent sous 1/4 des PV max.
+- **Baie Frista (#59)** — augmente de deux niveaux une statistique lorsque les PV passent sous 1/4 des PV max.
+- **Baie Enigma (#60)** — restaure 1/4 des PV max lorsque le porteur est touché par une attaque super efficace.
 
-- Cette référence ne doit pas afficher automatiquement les descriptions d'effets dans l'interface.
-- Le fichier `data/berries_gen4.json` reste le catalogue tactique séparé utilisé comme base de travail.
-- Ne pas intégrer automatiquement les baies de culture ou d'entraînement comme objets tenus sans validation.
-- Avant certification, vérifier le nom français officiel, la disponibilité dans Pokémon Platine, le déclencheur exact en génération IV et les éventuelles exceptions.
+## 7. Baies ajoutées en 4G : précision, priorité et contrecoups (4)
+
+- **Baie Micle (#61)** — augmente la précision de la prochaine capacité.
+- **Baie Chérim (#62)** — permet au porteur d'agir en premier pendant un tour selon les conditions de priorité en vigueur ; ce n'est pas une hausse de Vitesse.
+- **Baie Jaboca (#63)** — inflige des dégâts à l'attaquant qui touche le porteur avec une capacité physique.
+- **Baie Pommo (#64)** — inflige des dégâts à l'attaquant qui touche le porteur avec une capacité spéciale.
+
+## Contrôle des totaux
+
+- Soin/statut/PP : 10
+- Soin conditionnel : 5
+- Ingrédients Poffins/culture : 14
+- Réduction d'EV : 6
+- Résistance : 17
+- Effets conditionnels/spéciaux (#53–60) : 8
+- Effets ajoutés en 4G (#61–64) : 4
+- **Total : 64 baies uniques**
+
+## Règles pour le générateur
+
+- Cette référence est documentaire ; ne pas afficher automatiquement les effets dans l'interface.
+- Le pool d'objets tenus doit être séparé de la liste exhaustive des baies du jeu.
+- Ne pas considérer les effets comme testés dans Project PM sans test spécifique de la ROM.
