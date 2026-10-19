@@ -41,13 +41,13 @@ Chaque enregistrement doit inclure identifiant, nom officiel, jeu/version, sourc
 - [Lot 04 — Types, statistiques et interface](./04-types-stats-ui.md) : bornes structurelles 4G et écarts/risques repérés dans l'interface actuelle. Statut : **audit statique partiel, non certifié**.
 - [Lot 05 — Règles du générateur et CI](./05-generator-rules.md) : contrat fonctionnel et cas de tests pour composition, objets tenus et capacités illégales. Statut : **audit statique, non certifié**.
 
-## Anomalies fonctionnelles prioritaires
-1. **Six objets tenus** : l'interface permet actuellement de sélectionner 0 à 3 objets seulement ; elle ne satisfait pas la règle d'une équipe de six objets tenus distincts.
-2. **Seuil automatique CI** : un texte visible indique 0–20 %, alors que la règle spécifiée est 0–24 % inclus.
-3. **Résolution des réglages CI** : le drapeau `ciSettingsResolved` est dérivé seulement de la compétitivité (`c >= 25`) et ne vérifie pas que l'utilisateur a explicitement résolu les réglages.
-4. **Moteur d'équipe** : le code signale lui-même que la composition est un aperçu heuristique et non un moteur stratégique certifié.
+## Anomalies fonctionnelles et suivi des corrections
+1. **Six objets tenus — corrigé dans l'interface** : la sélection autorise désormais jusqu'à six objets, le compteur affiche `/6`, et la validation bloque une équipe si six objets ne sont pas sélectionnés. La base d'objets elle-même reste à certifier.
+2. **Seuil automatique CI — libellé corrigé** : le texte de l'interface indique désormais 0–24 % inclus, cohérent avec la condition `c < 25`.
+3. **Résolution des réglages CI — garde ajoutée** : la validation vérifie l'initialisation des réglages automatiques et, lorsque les CI sont activées manuellement entre 25 et 99 %, exige que fréquence et incongruité aient été explicitement modifiées. À 100 %, les CI sont désactivées.
+4. **Moteur d'équipe — encore bloquant** : la composition reste un aperçu heuristique et non un moteur stratégique certifié.
 
-Ces problèmes sont documentés avant correction pour conserver une trace de l'état actuel. Toute correction de l'interface doit être suivie de tests et d'une relecture de non-régression.
+Les corrections de code ont été relues après écriture sur GitHub. Les tests navigateur automatisés et les tests de combat restent à effectuer ; ces changements ne certifient donc pas encore l'ensemble du générateur.
 
 ## Premier contrôle : baies
 La source secondaire Pokémon Trash liste les baies numérotées 1 à 64 et distingue les baies de résistance, les baies de statistiques, Micle/Chérim et les baies Jaboca/Pommo. Le tableau de travail précédemment sauvegardé contient des seuils et descriptions qui ne sont pas tous certifiés. La liste complète doit être reconstruite à partir des données/scripts de Platine et comparée ligne par ligne avant d'être utilisée par le moteur.
