@@ -1,42 +1,53 @@
 import { chromium } from "playwright";
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 
 const browser = await chromium.launch({ headless: true });
 const page = await browser.newPage();
 const errors = [];
 page.on("pageerror", error => errors.push(error.message));
-await page.setContent(await (await import("node:fs/promises")).readFile(new URL("../index.html", import.meta.url), "utf8"));
-
-const clickChoice = async (group, value) => {
-  const button = page.locator(`[data-group="${group}"][data-value="${value}"]`);
-  await button.waitFor({ state: "visible" });
-  await button.click();
-};
-const itemChoices = page.locator("#items .choice");
+await page.setContent(await readFile(new URL("../index.html", import.meta.url), "utf8"));
 
 try {
-  await assert.doesNotReject(async () => {
-    assert.equal(await itemChoices.count(), 6, "le sélecteur doit proposer six objets");
-  });
+  const choices = page.locator("#items .choice");
+  assert.equal(await choices.count(), 6, "six objets proposés");
+  assert.equal(await page.locator("#itemCount").innerText(), "0/2 objets imposés sélectionnés");
 
+  // Zero imposed items is valid; the algorithm still assigns six distinct items.
   await page.locator("#validate").click();
-  assert.match(await page.locator("#summary").innerText(), /CONFIGURATION INCOMPLÈTE/);
-  assert.match(await page.locator("#summary").innerText(), /six objets/i);
+  let summary = await page.locator("#summary").innerText();
+  assert.match(summary, /Objets imposés : aucun/);
+  const assigned0 = summary.match(/Objets attribués à l’équipe : ([^\\n]+)/)?.[1].split(", ") ?? [];
+  assert.equal(assigned0.length, 6, "six objets attribués sans contrainte");
+  assert.equal(new Set(assigned0).size, 6, "objets attribués tous distincts");
 
-  // Six items can be selected and validation must then reach team generation.
-  for (let i = 0; i < await itemChoices.count(); i++) {
-    await itemChoices.nth(i).click();
-  }
-  assert.equal(await page.locator("#items .choice.selected").count(), 6);
-  assert.equal(await page.locator("#itemCount").innerText(), "6/6 objets sélectionnés");
-  assert.equal(await page.evaluate(() => state.items.length), 6, "l'état applicatif doit conserver les six objets cochés");
+  // One imposed item must be included in the resulting six-item set.
+  await choices.nth(0).click();
+  assert.equal(await page.locator("#items .choice.selected").count(), 1);
+  assert.equal(await page.locator("#itemCount").innerText(), "1/2 objets imposés sélectionnés");
+  const one = await page.locator("#items .choice.selected").first().getAttribute("data-value");
   await page.locator("#validate").click();
-  await page.waitForTimeout(50);
-  assert.deepEqual(errors, [], `erreur JavaScript après sélection des objets: ${errors.join("; ")}`);
-  const afterItemsValidation = await page.locator("#summary").innerText();
-  assert.doesNotMatch(afterItemsValidation, /Sélectionne exactement six objets tenus distincts/i, `le garde des objets reste actif malgré state.items=${await page.evaluate(() => state.items.length)} et compteur=${await page.locator("#itemCount").innerText()}: ${afterItemsValidation}`);
+  summary = await page.locator("#summary").innerText();
+  assert.match(summary, new RegExp("Objets imposés : " + one.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\\\$&")));
+  const assigned1 = summary.match(/Objets attribués à l’équipe : ([^\\n]+)/)?.[1].split(", ") ?? [];
+  assert.equal(assigned1.length, 6);
+  assert.ok(assigned1.includes(one), "l’objet imposé doit être attribué");
 
-  // The 100% competitive mode must disable CI and reset its sliders.
+  // Two imposed items must both be included, and a third cannot be selected.
+  await choices.nth(1).click();
+  await choices.nth(2).click();
+  assert.equal(await page.locator("#items .choice.selected").count(), 2, "maximum deux objets imposés");
+  assert.equal(await page.locator("#itemCount").innerText(), "2/2 objets imposés sélectionnés");
+  const imposed = await page.locator("#items .choice.selected").evaluateAll(nodes => nodes.map(n => n.dataset.value));
+  await page.locator("#validate").click();
+  summary = await page.locator("#summary").innerText();
+  assert.ok(imposed.every(item => summary.includes(item)), "les deux objets imposés figurent dans le résultat");
+  const assigned2 = summary.match(/Objets attribués à l’équipe : ([^\\n]+)/)?.[1].split(", ") ?? [];
+  assert.equal(assigned2.length, 6);
+  assert.equal(new Set(assigned2).size, 6);
+  assert.ok(imposed.every(item => assigned2.includes(item)));
+
+  // Competitiveness at 100% disables and resets CI controls.
   await page.locator("#comp").fill("100");
   assert.equal(await page.locator("#illegalToggle").isVisible(), false);
   assert.equal(await page.locator("#freq").isDisabled(), true);
@@ -44,26 +55,22 @@ try {
   assert.equal(await page.locator("#freq").inputValue(), "0");
   assert.equal(await page.locator("#inc").inputValue(), "0");
 
-  // At 25%, manual CI settings must not be treated as resolved until both sliders are moved.
+  // At 25%, manual CI settings require explicit adjustment of both sliders.
   await page.locator("#comp").fill("25");
-  await clickChoice("starter", "none");
-  await clickChoice("legendary", "none");
-  const toggle = page.locator("#illegalToggle");
-  if (await toggle.isVisible()) {
-    await toggle.click();
-    await page.locator("#validate").click();
-    assert.match(await page.locator("#summary").innerText(), /CONFIGURATION INCOMPLÈTE/);
-    await page.locator("#freq").fill("10");
-    await page.locator("#inc").fill("5");
-    await page.locator("#validate").click();
-    assert.doesNotMatch(await page.locator("#summary").innerText(), /réglages de fréquence et d’incongruité.*doivent être explicitement résolus/i);
-  }
+  await page.locator("#illegalToggle").click();
+  await page.locator("#validate").click();
+  assert.match(await page.locator("#summary").innerText(), /CONFIGURATION INCOMPLÈTE/);
+  await page.locator("#freq").fill("10");
+  await page.locator("#inc").fill("5");
+  await page.locator("#validate").click();
+  assert.doesNotMatch(await page.locator("#summary").innerText(), /réglages de fréquence et d’incongruité.*doivent être explicitement résolus/i);
 
-  assert.deepEqual(errors, [], "aucune erreur JavaScript ne doit survenir pendant les interactions");
-  console.log("[PASS] six objets affichés et validation bloquée avant sélection complète");
-  console.log("[PASS] sélection des six objets et passage à la validation suivante");
+  assert.deepEqual(errors, [], "aucune erreur JavaScript pendant les interactions");
+  console.log("[PASS] zéro objet imposé accepté et six objets attribués automatiquement");
+  console.log("[PASS] un objet imposé est conservé dans l'équipe");
+  console.log("[PASS] deux objets imposés sont conservés et un troisième est bloqué");
   console.log("[PASS] compétitivité 100 % désactive et réinitialise les curseurs CI");
-  console.log("[PASS] parcours de réglages CI manuels à 25 % contrôlé");
+  console.log("[PASS] réglages CI manuels à 25 % contrôlés");
   console.log("[PASS] aucune erreur JavaScript pendant les interactions");
 } finally {
   await browser.close();
