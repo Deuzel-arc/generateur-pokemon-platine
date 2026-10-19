@@ -200,6 +200,6 @@ document.getElementById('validate').addEventListener('click',()=>{
    return {item,target};
  });
  const note='Aperçu de composition fondé sur un catalogue embarqué de candidats et des tags tactiques. Ce n’est pas encore le moteur stratégique complet ni une validation de movesets/objets légaux.';
- const out=document.getElementById('summary');out.textContent='CONFIGURATION RETENUE\n'+JSON.stringify(data,null,2)+'\n\nAPERÇU DE L’ÉQUIPE (6 Pokémon)\n'+names+'\n\nObjets sélectionnés : '+(state.items.join(', ')||'aucun')+itemTargets.map(x=>'\n'+x.item+' — cible suggérée : '+(x.target?x.target.name:'aucune')).join('')+'\n\n'+note;out.classList.remove('hidden');out.scrollIntoView({behavior:'smooth',block:'nearest'});
+ out=document.getElementById('summary');out.textContent='CONFIGURATION RETENUE\n'+JSON.stringify(data,null,2)+'\n\nAPERÇU DE L’ÉQUIPE (6 Pokémon)\n'+names+'\n\nObjets sélectionnés : '+(state.items.join(', ')||'aucun')+itemTargets.map(x=>'\n'+x.item+' — cible suggérée : '+(x.target?x.target.name:'aucune')).join('')+'\n\n'+note;out.classList.remove('hidden');out.scrollIntoView({behavior:'smooth',block:'nearest'});
 });updateComp();
 </script></body></html>
