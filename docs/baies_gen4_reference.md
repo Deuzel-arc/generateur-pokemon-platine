@@ -100,7 +100,7 @@ Réduit de moitié les dégâts d'une attaque du type correspondant qui serait s
 ## 7. Baies ajoutées en 4G : précision, priorité et contrecoups (4)
 
 - **Baie Micle (#61)** — lorsque les PV passent sous 1/3 des PV max, augmente la précision de la prochaine capacité ; le déclencheur exact doit être confirmé contre la source primaire.
-- **Baie Chérim (#62)** — augmente les chances de fuite lors d'un combat sauvage lorsque les PV sont bas ; ne donne pas de priorité en combat de Dresseurs.
+- **Baie Chérim (#62)** — permet au porteur d'agir en premier pendant un tour lorsque ses PV passent sous 1/4 des PV max.
 - **Baie Jaboca (#63)** — inflige des dégâts à l'attaquant qui touche le porteur avec une capacité physique.
 - **Baie Pommo (#64)** — inflige des dégâts à l'attaquant qui touche le porteur avec une capacité spéciale.
 
@@ -124,7 +124,7 @@ Réduit de moitié les dégâts d'une attaque du type correspondant qui serait s
 
 ## Corrections relevées pendant l'audit initial
 
-- La Baie Chérim ne donne pas de priorité : le guide Platine la décrit comme augmentant les chances de fuite lorsque les PV sont bas.
+- Correction après recoupement : la Baie Chérim donne bien la priorité lorsque les PV passent sous 1/4 ; elle ne doit pas être décrite comme une baie de fuite.
 - La Baie Micle est conditionnée par les PV bas ; elle ne doit pas être décrite comme un simple effet inconditionnel.
 - Les seuils et les niveaux exacts des baies Frista/Lichii/Lingan/Sailak/Pitaye/Abriko/Lansat/Micle doivent être comparés aux données/scripts du jeu avant le statut CERTIFIÉ.
 - Le tableau ci-dessus reste **documentaire, non certifié expérimentalement**. Les formulations qui nécessitent confirmation primaire sont explicitement signalées.
