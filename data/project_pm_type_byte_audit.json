@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "title": "Audit des octets de types — extraction ROM actuelle",
-  "status": "saved_extraction_raw_byte_recheck_user_mapping_applied_only_as_candidate",
+  "status": "direct_rom_type_bytes_verified_project_pm_fairy_label_user_confirmed",
   "source": {
     "databaseLibraryFile": "rom_battle_database.json",
     "databaseSha256": "eba0d4f71b26d3d190d53c0e3da8b11d7c18f08089a712e381d1087261a14e78",
@@ -18,9 +18,11 @@
       "commit": "06c6e9a0348da283be8d9225d0bec03c349ff5c2",
       "typeId16": "TYPE_DRAGON",
       "typeId9": "TYPE_MYSTERY"
-    }
+    },
+    "directRomBinaryRecheck": true
   },
   "method": [
+    "Les types ont été relus indépendamment dans les archives NARC extraites directement des deux ROM .nds, avec le script versionné scripts/audit-rom-type-bytes.mjs; les SHA-256 des binaires ont été recalculés avant lecture.",
     "Relecture des champs bruts hexadécimaux déjà enregistrés dans la base d'extraction; ce rapport ne prétend pas recalculer les SHA-256 des ROM depuis leurs binaires.",
     "Pour les fiches espèces, les IDs de types sont relus aux offsets 6 et 7 de chaque enregistrement brut.",
     "Pour les capacités, l'ID de type est relu à l'offset 4 de chaque enregistrement brut.",
@@ -30,15 +32,58 @@
     "platinum": {
       "speciesEntriesContainingId": [],
       "speciesSlotOccurrences": 0,
-      "moveEntriesContainingId": [174],
+      "moveEntriesContainingId": [
+        174
+      ],
       "moveSlotOccurrences": 1,
       "decodedLabelInExport": "Inconnu",
       "interpretation": "Conserver le type Mystère canonique de Platine; ne jamais appliquer la surcharge Fée de Project PM à ce profil."
     },
     "project_pm": {
-      "speciesEntriesContainingId": [35, 36, 39, 40, 122, 154, 173, 175, 176, 183, 184, 200, 209, 210, 280, 281, 282, 303, 314, 333, 334, 350, 359, 370, 429, 439, 467, 468, 480, 481, 482],
+      "speciesEntriesContainingId": [
+        35,
+        36,
+        39,
+        40,
+        122,
+        154,
+        173,
+        175,
+        176,
+        183,
+        184,
+        200,
+        209,
+        210,
+        280,
+        281,
+        282,
+        303,
+        314,
+        333,
+        334,
+        350,
+        359,
+        370,
+        429,
+        439,
+        467,
+        468,
+        480,
+        481,
+        482
+      ],
       "speciesSlotOccurrences": 37,
-      "moveEntriesContainingId": [66, 140, 186, 204, 236, 295, 296, 461],
+      "moveEntriesContainingId": [
+        66,
+        140,
+        186,
+        204,
+        236,
+        295,
+        296,
+        461
+      ],
       "moveSlotOccurrences": 8,
       "decodedLabelInExport": "Inconnu",
       "confirmedProjectPmLabel": "Fée",
@@ -50,12 +95,24 @@
     "canonicalSymbolCandidate": "SPECIES_CHARIZARD",
     "identityStatus": "candidate_by_shared_numeric_id_not_name_table_verified",
     "platinum": {
-      "rawTypeIds": [10, 2],
-      "decodedTypes": ["Feu", "Vol"]
+      "rawTypeIds": [
+        10,
+        2
+      ],
+      "decodedTypes": [
+        "Feu",
+        "Vol"
+      ]
     },
     "project_pm": {
-      "rawTypeIds": [10, 16],
-      "decodedTypes": ["Feu", "Dragon"],
+      "rawTypeIds": [
+        10,
+        16
+      ],
+      "decodedTypes": [
+        "Feu",
+        "Dragon"
+      ],
       "rawRecordPrefixHex": "4e544e646e550a102dd1",
       "secondaryTypeId": 16,
       "canonicalSecondaryTypeSymbol": "TYPE_DRAGON"
@@ -75,5 +132,95 @@
     "doNotActivateNameBasedOverridesWithoutNameTableConfirmation": true,
     "doNotTransferOverridesAcrossRomHashes": true,
     "runtimeIntegration": "This audit records evidence and guards only. It does not itself rewrite the runtime roster or certify every Project PM type mapping."
+  },
+  "directRomVerification": {
+    "scriptPath": "scripts/audit-rom-type-bytes.mjs",
+    "nitroFsFileCount": {
+      "platinum": 340,
+      "project_pm": 340
+    },
+    "personalArchive": {
+      "path": "poketool/personal/pl_personal.narc",
+      "recordSizeBytes": 44,
+      "typeOffsets": [
+        6,
+        7
+      ],
+      "entries": {
+        "platinum": 508,
+        "project_pm": 509
+      }
+    },
+    "moveArchive": {
+      "path": "poketool/waza/pl_waza_tbl.narc",
+      "recordSizeBytes": 16,
+      "typeOffset": 4,
+      "entries": {
+        "platinum": 471,
+        "project_pm": 472
+      }
+    },
+    "platinum": {
+      "speciesTypeId9SlotCount": 0,
+      "speciesEntriesContainingTypeId9": [],
+      "movesContainingTypeId9": [
+        174
+      ],
+      "internalSpeciesId6RawTypeIds": [
+        10,
+        2
+      ]
+    },
+    "project_pm": {
+      "speciesTypeId9SlotCount": 37,
+      "speciesEntriesContainingTypeId9": [
+        35,
+        36,
+        39,
+        40,
+        122,
+        154,
+        173,
+        175,
+        176,
+        183,
+        184,
+        200,
+        209,
+        210,
+        280,
+        281,
+        282,
+        303,
+        314,
+        333,
+        334,
+        350,
+        359,
+        370,
+        429,
+        439,
+        467,
+        468,
+        480,
+        481,
+        482
+      ],
+      "movesContainingTypeId9": [
+        66,
+        140,
+        186,
+        204,
+        236,
+        295,
+        296,
+        461
+      ],
+      "internalSpeciesId6RawTypeIds": [
+        10,
+        16
+      ],
+      "internalSpeciesId6RawPrefixHex": "4e544e646e550a102dd1"
+    }
   }
 }
