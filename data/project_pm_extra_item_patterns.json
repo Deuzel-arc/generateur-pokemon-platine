@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditDate": "2026-10-20",
+  "source": {
+    "profile": "project_pm",
+    "gameCode": "CPUE",
+    "archive": "itemtool/itemdata/pl_item_data.narc",
+    "archiveSha256": "435b0288238f01f21eeeef7b5de6de3e3c9c3a9b70ea3b18d71b31ba282ae4e1",
+    "recordSizeBytes": 34
+  },
+  "method": "Inspection des 24 enregistrements supplémentaires CPUE (34 octets chacun), sans attribuer de noms ni d'effets.",
+  "totalEntries": 24,
+  "contiguousVariantGroup": {
+    "firstArchiveIndex": 448,
+    "lastArchiveIndex": 465,
+    "count": 18,
+    "commonPrice": 2000,
+    "varyingByteOffset": 3,
+    "observedByteValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+    "otherBytesIdenticalWithinGroup": true,
+    "interpretation": "Groupe brut de 18 entrées partageant le même patron et ne variant qu'à l'octet 3. La signification fonctionnelle de cette variation n'est pas établie."
+  },
+  "otherEntries": [
+    {"archiveIndex": 446, "price": 200, "classification": "distinct_raw_pattern"},
+    {"archiveIndex": 447, "price": 1000, "classification": "distinct_raw_pattern"},
+    {"archiveIndex": 466, "price": 4800, "classification": "distinct_raw_pattern"},
+    {"archiveIndex": 467, "price": 0, "classification": "mostly_zero_raw_pattern"},
+    {"archiveIndex": 468, "price": 2100, "classification": "distinct_raw_pattern"},
+    {"archiveIndex": 469, "price": 1000, "classification": "distinct_raw_pattern"}
+  ],
+  "policy": "Cette classification décrit seulement des patrons binaires et prix bruts; elle ne prouve ni le nom, ni l'effet, ni la disponibilité en jeu des entrées supplémentaires."
+}
