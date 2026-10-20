@@ -16,6 +16,31 @@ const speciesNameBankAudit = readJson("data/rom_species_name_bank_audit.json");
 const speciesCoreDeltaAudit = readJson("data/rom_species_core_delta_audit.json");
 const extendedNameBankAudit = readJson("data/rom_extended_name_banks_audit.json");
 const itemReference = readJson("data/gen4_item_id_reference.json");
+const romRosterProfiles = readJson("data/rom_roster_profiles.json");
+const rosterCoverageAudit = readJson("data/rom_roster_coverage_audit.json");
+
+assert.equal(rosterCoverageAudit.source.platinumSha256, catalog.profiles.platinum.sha256, "roster coverage audit must match CPUF hash");
+assert.equal(rosterCoverageAudit.source.projectPmSha256, catalog.profiles.project_pm.sha256, "roster coverage audit must match CPUE hash");
+assert.equal(rosterCoverageAudit.counts.canonicalSpecies, canonical.species.length, "roster coverage must count the full canonical Gen IV species range");
+assert.equal(rosterCoverageAudit.counts.profilesInData, romRosterProfiles.base.length, "roster coverage profile count must match the source profiles");
+assert.equal(rosterCoverageAudit.counts.uniqueProfileIds, new Set(romRosterProfiles.base.map(row => row[1])).size, "roster coverage unique-ID count must match source profiles");
+assert.equal(rosterCoverageAudit.counts.canonicalIdsCovered, 71, "current audited roster coverage must remain 71 until a validated expansion is integrated");
+assert.equal(rosterCoverageAudit.counts.canonicalIdsMissing, 422, "current uncovered canonical species count must remain explicit");
+assert.deepEqual(rosterCoverageAudit.counts.profileIdsOutsideCanonicalRange, [], "roster profiles must not silently include IDs outside canonical 1–493");
+assert.deepEqual(rosterCoverageAudit.counts.duplicateProfileIds, [], "roster profiles must not duplicate species IDs");
+const rosterProfileIds = new Set(romRosterProfiles.base.map(row => row[1]));
+assert.deepEqual(
+  rosterCoverageAudit.covered,
+  romRosterProfiles.base.map(row => ({ id: row[1], name: row[0], canonicalSymbol: canonical.species.find(species => species.id === row[1])?.symbol ?? null })).sort((a, b) => a.id - b.id),
+  "roster coverage entries must match the current profiles and canonical symbols",
+);
+assert.deepEqual(
+  rosterCoverageAudit.missing,
+  canonical.species.filter(species => !rosterProfileIds.has(species.id)).map(species => ({ id: species.id, canonicalSymbol: species.symbol })),
+  "roster coverage missing IDs must be the exact complement of the current profiles",
+);
+assert.equal(rosterCoverageAudit.scope.noRuntimeChanges, true, "coverage audit must not claim runtime expansion");
+assert.equal(rosterCoverageAudit.scope.coverageIsNotSemanticCertification, true, "coverage must not be confused with semantic validation");
 
 const itemArchiveDiff = readJson("data/project_pm_item_archive_diff.json");
 assert.equal(itemArchiveDiff.source.platinum.gameCode, "CPUF", "item archive diff must identify original Platinum");
