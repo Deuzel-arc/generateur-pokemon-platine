@@ -1,0 +1,134 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Comparaison différentielle brute des données extraites des ROM",
+  "generatedFrom": "rom_battle_database.json conservé dans la bibliothèque ChatGPT, version 1",
+  "source": {
+    "platinum": {
+      "gameCode": "CPUF",
+      "sha256": "1cfd024519116c1c6285d6af2dbdfcec778e9d74c7c18585e22032e81aaa7eb8"
+    },
+    "project_pm": {
+      "gameCode": "CPUE",
+      "sha256": "435b0288238f01f21eeeef7b5de6de3e3c9c3a9b70ea3b18d71b31ba282ae4e1"
+    }
+  },
+  "method": "Comparaison des enregistrements décodés conservés dans les deux profils, par identifiant d'entrée lorsque le schéma expose un identifiant. Les écarts décrivent les données extraites, pas leur signification en jeu.",
+  "tables": {
+    "species": {
+      "platinumEntries": 508,
+      "projectPmEntries": 509,
+      "commonIds": 508,
+      "changedRecords": 500,
+      "projectPmOnlyEntries": 1,
+      "fieldDifferences": {
+        "baseStats": 197,
+        "types": 65,
+        "abilities": 318,
+        "evYield": 1,
+        "baseFriendship": 3,
+        "genderRatio": 1,
+        "tmHmFlagsRaw": 478,
+        "tmHmBitIndexes": 478
+      },
+      "notes": [
+        "Les 65 différences de types incluent des valeurs Inconnu issues d'un mapping non certifié.",
+        "Les différences de bits CT/CS peuvent être de vraies modifications du mod; elles ne sont pas encore normalisées en noms de capacités CT/CS."
+      ]
+    },
+    "moves": {
+      "platinumEntries": 471,
+      "projectPmEntries": 472,
+      "commonIds": 471,
+      "changedRecords": 101,
+      "projectPmOnlyEntries": 1,
+      "fieldDifferences": {
+        "power": 76,
+        "accuracy": 39,
+        "typeId": 18,
+        "effectId": 22,
+        "pp": 21,
+        "targetId": 19,
+        "effectChance": 12,
+        "priority": 2,
+        "flags": 4,
+        "category": 6,
+        "categoryId": 6
+      },
+      "notes": [
+        "Les différences sont brutes par identifiant de capacité; noms et effets de combat doivent être confirmés avec la référence Gen IV et la version exacte du mod.",
+        "Un type de capacité inconnu ne doit pas être converti automatiquement en type canonique."
+      ]
+    },
+    "levelUpLearnsets": {
+      "platinumEntries": 508,
+      "projectPmEntries": 509,
+      "commonIds": 508,
+      "changedRecords": 497,
+      "projectPmOnlyEntries": 1,
+      "notes": [
+        "Les listes décodées diffèrent pour 497 entrées communes. Légalité et sémantique restent à contrôler après résolution des noms et identifiants."
+      ]
+    },
+    "evolutions": {
+      "platinumEntries": 508,
+      "projectPmEntries": 509,
+      "commonIds": 508,
+      "changedRecords": 33,
+      "projectPmOnlyEntries": 1,
+      "notes": [
+        "Les méthodes sont encore des identifiants bruts; paramètres et méthodes doivent être interprétés selon la structure Gen IV."
+      ]
+    },
+    "items": {
+      "platinumEntries": 446,
+      "projectPmEntries": 470,
+      "commonIds": 446,
+      "changedRecords": 165,
+      "projectPmOnlyEntries": 24,
+      "notes": [
+        "Les octets/champs bruts ne permettent pas encore de certifier le nom ni l'effet des objets."
+      ]
+    },
+    "berries": {
+      "platinumEntries": 64,
+      "projectPmEntries": 64,
+      "commonIds": 64,
+      "changedRecords": 64,
+      "projectPmOnlyEntries": 0,
+      "notes": [
+        "Toutes les entrées brutes diffèrent au moins sur un champ; ne pas interpréter cela comme 64 effets modifiés sans décodage du schéma et de la provenance des octets."
+      ]
+    },
+    "encounters": {
+      "platinumEntries": 183,
+      "projectPmEntries": 187,
+      "commonIds": 183,
+      "changedRecords": 75,
+      "projectPmOnlyEntries": 4,
+      "notes": [
+        "Comparaison des archives par index; les zones, créneaux et espèces ne sont pas encore normalisés."
+      ]
+    },
+    "trainers": {
+      "platinumEntries": 928,
+      "projectPmEntries": 973,
+      "notes": [
+        "Les longueurs diffèrent; les entrées ne doivent pas être appariées sémantiquement par simple index avant décodage de la structure."
+      ]
+    },
+    "trainerPokemon": {
+      "platinumEntries": 928,
+      "projectPmEntries": 1945,
+      "notes": [
+        "Les longueurs diffèrent fortement; les Pokémon de chaque équipe doivent être décodés et rattachés à leurs dresseurs avant toute comparaison par équipe."
+      ]
+    }
+  },
+  "blockingConflicts": [
+    "Les empreintes de ces exports ne correspondent pas à celles d'un audit antérieur; conserver les deux séries séparées jusqu'à identification des fichiers exacts.",
+    "Le mapping des types Project PM n'est pas certifié. Le type secondaire de Dracaufeu reste contradictoire.",
+    "La table des objets, rencontres et dresseurs n'est pas encore sémantiquement décodée."
+  ],
+  "certificationStatus": "partial_unverified_differences",
+  "generatorIntegration": "Le catalogue complet n'est pas encore chargé dynamiquement par index.html."
+}
