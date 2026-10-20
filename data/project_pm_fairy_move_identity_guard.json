@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "title": "Garde-fou d'identité pour les huit entrées de capacité au type brut 9 dans Project PM",
-  "status": "identity_unresolved_do_not_join_by_index",
+  "status": "names_decoded_effect_semantics_pending",
   "source": {
     "platinumGameCode": "CPUF",
     "projectPmGameCode": "CPUE",
@@ -11,9 +11,9 @@
     "projectPmTypeName": "Fée"
   },
   "policy": {
-    "canonicalSymbolMeaning": "Référence de l'entrée canonique au même index uniquement; ne constitue pas une identité vérifiée de la capacité Project PM.",
-    "allowRuntimeNameJoinByIndex": false,
-    "requireDecodedProjectPmMoveName": true,
+    "canonicalSymbolMeaning": "Référence de l'entrée canonique au même index uniquement; la chaîne de nom Project PM est maintenant vérifiée contre l'audit de la banque de noms ROM.",
+    "allowRuntimeNameJoinByIndex": true,
+    "requireDecodedProjectPmMoveName": false,
     "requireSemanticEffectValidation": true
   },
   "entries": [
@@ -46,7 +46,10 @@
           0,
           10
         ]
-      }
+      },
+      "nameBankText": "Câlinerie",
+      "nameEvidence": "decoded_project_pm_bank_change_audit",
+      "nameStatus": "verified_name_only"
     },
     {
       "id": 140,
@@ -85,7 +88,10 @@
           7,
           5
         ]
-      }
+      },
+      "nameBankText": "Vampibaiser",
+      "nameEvidence": "decoded_project_pm_bank_change_audit",
+      "nameStatus": "verified_name_only"
     },
     {
       "id": 186,
@@ -96,7 +102,10 @@
           0,
           9
         ]
-      }
+      },
+      "nameBankText": "Doux Baiser",
+      "nameEvidence": "unchanged_name_between_rom_banks_crosschecked",
+      "nameStatus": "verified_name_only"
     },
     {
       "id": 204,
@@ -107,7 +116,10 @@
           0,
           9
         ]
-      }
+      },
+      "nameBankText": "Charme",
+      "nameEvidence": "unchanged_name_between_rom_banks_crosschecked",
+      "nameStatus": "verified_name_only"
     },
     {
       "id": 236,
@@ -118,7 +130,10 @@
           0,
           9
         ]
-      }
+      },
+      "nameBankText": "Rayon Lune",
+      "nameEvidence": "unchanged_name_between_rom_banks_crosschecked",
+      "nameStatus": "verified_name_only"
     },
     {
       "id": 295,
@@ -157,7 +172,10 @@
           22,
           5
         ]
-      }
+      },
+      "nameBankText": "Éclat Magique",
+      "nameEvidence": "decoded_project_pm_bank_change_audit",
+      "nameStatus": "verified_name_only"
     },
     {
       "id": 296,
@@ -200,7 +218,10 @@
           22,
           5
         ]
-      }
+      },
+      "nameBankText": "Voix Enjôleuse",
+      "nameEvidence": "decoded_project_pm_bank_change_audit",
+      "nameStatus": "verified_name_only"
     },
     {
       "id": 461,
@@ -247,9 +268,12 @@
           8,
           5
         ]
-      }
+      },
+      "nameBankText": "Pouvoir Lunaire",
+      "nameEvidence": "decoded_project_pm_bank_change_audit",
+      "nameStatus": "verified_name_only"
     }
   ],
-  "interpretation": "Les symboles canoniques ne sont que des repères d'index. Cinq entrées ont plusieurs changements de champs; trois ne diffèrent que par le type. Ne pas attribuer de nom ou d'effet de capacité Project PM avant décodage de la banque de noms et validation sémantique.",
+  "interpretation": "Les huit noms sont maintenant résolus via l'audit de la banque de noms Project PM : cinq chaînes sont des changements de nom explicitement décodés, trois sont inchangées entre les banques et concordent avec les symboles canoniques français. Cela ne certifie pas encore l'effet de combat des entrées modifiées. Ne pas réutiliser automatiquement les effets de la capacité canonique aux mêmes IDs.",
   "runtimeChanges": false
 }
