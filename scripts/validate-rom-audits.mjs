@@ -166,6 +166,20 @@ assert.equal(extendedNameBankAudit.banks.abilities.projectPmEntryCount, 127, "Pr
 assert.deepEqual(extendedNameBankAudit.banks.abilities.projectPmOnlyEntries, [[124,"Sans Limite"],[125,"Farceur"],[126,"Baigne Sable"]], "extra Project PM ability names must remain explicit");
 assert.equal(extendedNameBankAudit.banks.moves.projectPmEntryCount, 472, "Project PM move-name bank must contain 472 entries");
 assert.deepEqual(extendedNameBankAudit.banks.moves.projectPmOnlyEntries, [[468,"Piétinement"],[469,"Cavalerie Lourde"],[470,"Triple Axel"],[471,"Psycho-Croc"]], "extra Project PM move names must remain explicit");
+const addedMoveDataAudit = readJson("data/project_pm_added_move_data_audit.json");
+assert.equal(addedMoveDataAudit.source.platinumSha256, catalog.profiles.platinum.sha256, "added-move data audit must match CPUF hash");
+assert.equal(addedMoveDataAudit.source.projectPmSha256, catalog.profiles.project_pm.sha256, "added-move data audit must match CPUE hash");
+assert.deepEqual(addedMoveDataAudit.records.map((row) => [row.id, row.nameBankText]), extendedNameBankAudit.banks.moves.projectPmOnlyEntries, "added-move data names must match the decoded Project PM name bank");
+assert.deepEqual(addedMoveDataAudit.records.map((row) => [row.id, row.effectId, row.category, row.power, row.type, row.accuracy, row.pp, row.raw]), [
+  [468, 70, "physical", 60, "Sol", 100, 20, "4600003c046414640800003212040000"],
+  [469, 0, "physical", 95, "Sol", 95, 10, "0000005f045f0a000000003311040000"],
+  [470, 104, "physical", 20, "Glace", 90, 10, "680000140f5a0a000000007307000000"],
+  [471, 186, "physical", 75, "Psy", 100, 25, "ba00004b0e6419000000003305030000"]
+], "added-move data audit must preserve decoded raw move records");
+assert.equal(addedMoveDataAudit.validation.runtimeEffectSemanticsVerified, false, "added move effects must not be treated as semantically certified");
+assert.equal(addedMoveDataAudit.validation.canonicalGenerationCompatibilityVerified, false, "added moves must not be treated as Gen IV-compatible without validation");
+assert.ok(addedMoveDataAudit.records.every((row) => /^[0-9a-f]{32}$/.test(row.raw)), "every added move must preserve a 16-byte raw record");
+
 assert.equal(extendedNameBankAudit.banks.moves.commonNamesChanged, 10, "common move-name changes must remain audited");
 assert.equal(extendedNameBankAudit.banks.items.commonNamesChanged, 16, "common item-name changes must remain audited");
 
