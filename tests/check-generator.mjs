@@ -6,11 +6,28 @@ const berries = JSON.parse(readFileSync(new URL("../data/berries_gen4.json", imp
 const romCatalog = JSON.parse(readFileSync(new URL("../data/rom_catalog.json", import.meta.url), "utf8"));
 const romOverrides = JSON.parse(readFileSync(new URL("../data/rom_overrides.json", import.meta.url), "utf8"));
 const romRosterProfiles = JSON.parse(readFileSync(new URL("../data/rom_roster_profiles.json", import.meta.url), "utf8"));
+const romDeltaAudit = JSON.parse(readFileSync(new URL("../data/rom_delta_audit.json", import.meta.url), "utf8"));
 const checks = [];
 function check(name, fn) {
   try { fn(); checks.push({ name, status: "PASS" }); }
   catch (error) { checks.push({ name, status: "FAIL", message: error.message }); }
 }
+
+check("ROM delta audit preserves provenance and labels raw differences as uncertified", () => {
+  assert.equal(romDeltaAudit.schemaVersion, "1.0.0");
+  assert.equal(romDeltaAudit.source.platinum.gameCode, romCatalog.profiles.platinum.gameCode);
+  assert.equal(romDeltaAudit.source.project_pm.gameCode, romCatalog.profiles.project_pm.gameCode);
+  assert.equal(romDeltaAudit.source.platinum.sha256, romCatalog.profiles.platinum.sha256);
+  assert.equal(romDeltaAudit.source.project_pm.sha256, romCatalog.profiles.project_pm.sha256);
+  assert.equal(romDeltaAudit.tables.species.platinumEntries, 508);
+  assert.equal(romDeltaAudit.tables.species.projectPmEntries, 509);
+  assert.equal(romDeltaAudit.tables.moves.platinumEntries, 471);
+  assert.equal(romDeltaAudit.tables.moves.projectPmEntries, 472);
+  assert.equal(romDeltaAudit.tables.berriesRaw.bytePositionsWithDifferences["4"], 64);
+  assert.equal(romDeltaAudit.certificationStatus, "partial_unverified_differences");
+  assert.ok(romDeltaAudit.blockingConflicts.some(item => item.includes("empreintes")));
+  assert.ok(romDeltaAudit.tables.items.notes.some(item => item.includes("pas encore certifier")));
+});
 
 check("ROM catalogue manifest has separate original and Project PM profiles", () => {
   assert.equal(romCatalog.schemaVersion, "1.0.0");
