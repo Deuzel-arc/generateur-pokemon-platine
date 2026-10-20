@@ -13,6 +13,7 @@ const projectPmTypes = readJson("data/project_pm_type_mapping.json");
 const typeByteAudit = readJson("data/project_pm_type_byte_audit.json");
 const evolutionMethodAudit = readJson("data/project_pm_evolution_method_audit.json");
 const speciesNameBankAudit = readJson("data/rom_species_name_bank_audit.json");
+const speciesCoreDeltaAudit = readJson("data/rom_species_core_delta_audit.json");
 const itemReference = readJson("data/gen4_item_id_reference.json");
 
 const itemArchiveDiff = readJson("data/project_pm_item_archive_diff.json");
@@ -142,6 +143,16 @@ assert.equal(speciesNameBankAudit.results.bothRomBanksIdentical, true, "species 
 assert.deepEqual(speciesNameBankAudit.results.anchors, {"1":"BULBIZARRE","6":"DRACAUFEU","35":"MELOFEE","122":"M. MIME","223":"REMORAID","458":"BABIMANTA","467":"MAGANON","468":"TOGEKISS","493":"ARCEUS"}, "species name-bank anchor crosswalk must remain stable");
 assert.deepEqual(speciesNameBankAudit.results.sharedFormIdsWithoutDedicatedNames, [496,497,498,499,500,501,502,503,504,505,506,507], "unmapped form IDs must remain explicit");
 assert.equal(speciesNameBankAudit.results.projectPmExtraSpeciesIdWithoutDedicatedName, 508, "Project PM extra species ID must remain explicitly unmapped by this name bank");
+
+assert.equal(speciesCoreDeltaAudit.source.platinumSha256, catalog.profiles.platinum.sha256, "species delta audit must match CPUF hash");
+assert.equal(speciesCoreDeltaAudit.source.projectPmSha256, catalog.profiles.project_pm.sha256, "species delta audit must match CPUE hash");
+assert.equal(speciesCoreDeltaAudit.counts.standardSpeciesCompared, 493, "species delta audit must compare all standard IDs 1-493");
+assert.equal(speciesCoreDeltaAudit.counts.fullPersonalRecordChanged, 488, "species delta audit must preserve full-record change count");
+assert.equal(speciesCoreDeltaAudit.counts.fullPersonalRecordUnchanged, 5, "species delta audit must preserve unchanged-record count");
+assert.equal(speciesCoreDeltaAudit.counts.baseStatsChanged, 197, "species delta audit must preserve stat-change count");
+assert.equal(speciesCoreDeltaAudit.counts.typePairChanged, 60, "species delta audit must preserve type-change count");
+assert.equal(speciesCoreDeltaAudit.counts.speciesWithBothStatsAndTypesChanged, 42, "species delta audit must preserve overlapping stat/type changes");
+assert.deepEqual(speciesCoreDeltaAudit.source.standardSpeciesIds, [1, 493], "species delta audit must keep the standard species range explicit");
 
 assert.equal(typeByteAudit.typeId9ProjectPmNameCrosswalk.length, 31, "Project PM type ID 9 must be cross-referenced to all 31 name-bank entries");
 assert.deepEqual(typeByteAudit.typeId9ProjectPmNameCrosswalk.find(([id]) => id === 467), [467, "MAGANON"], "type ID 9 crosswalk must preserve the mod-specific Maganon entry");
