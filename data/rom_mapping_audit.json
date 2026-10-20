@@ -1,0 +1,188 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Audit structurel des mappings ROM — périmètre stratégique",
+  "status": "structural_comparison_not_full_semantic_certification",
+  "source": {
+    "database": "/Audit_ROM_Pokemon_Platine/rom_battle_database.json",
+    "platinum": {
+      "gameCode": "CPUF",
+      "sha256": "1cfd024519116c1c6285d6af2dbdfcec778e9d74c7c18585e22032e81aaa7eb8"
+    },
+    "project_pm": {
+      "gameCode": "CPUE",
+      "sha256": "435b0288238f01f21eeeef7b5de6de3e3c9c3a9b70ea3b18d71b31ba282ae4e1"
+    },
+    "canonicalReference": {
+      "repository": "pret/pokeplatinum",
+      "commit": "06c6e9a0348da283be8d9225d0bec03c349ff5c2"
+    }
+  },
+  "structuralChecks": {
+    "platinum": {
+      "species": {
+        "entries": 508,
+        "idsSequentialFromZeroTo": 507
+      },
+      "moves": {
+        "entries": 471,
+        "idsSequentialFromZeroTo": 470
+      },
+      "levelUpLearnsets": {
+        "entries": 508,
+        "idsSequentialFromZeroTo": 507
+      },
+      "evolutions": {
+        "entries": 508,
+        "idsSequentialFromZeroTo": 507
+      },
+      "items": {
+        "entries": 446,
+        "idsSequentialFromZeroTo": 445
+      }
+    },
+    "project_pm": {
+      "species": {
+        "entries": 509,
+        "idsSequentialFromZeroTo": 508
+      },
+      "moves": {
+        "entries": 472,
+        "idsSequentialFromZeroTo": 471
+      },
+      "levelUpLearnsets": {
+        "entries": 509,
+        "idsSequentialFromZeroTo": 508
+      },
+      "evolutions": {
+        "entries": 509,
+        "idsSequentialFromZeroTo": 508
+      },
+      "items": {
+        "entries": 470,
+        "idsSequentialFromZeroTo": 469
+      }
+    },
+    "interpretation": "Les IDs séquentiels confirment l'indexation interne des exports; ils ne certifient pas à eux seuls que l'ID interne correspond à un numéro National Pokédex ou que les tables des deux ROM doivent être jointes par index."
+  },
+  "crossRomDifferences": {
+    "method": "Comparaison des enregistrements extraits par identifiant partagé, sans inférer que toute différence brute implique une différence de gameplay.",
+    "species": {
+      "commonIds": 508,
+      "recordsDifferent": 500,
+      "recordsEqual": 8
+    },
+    "moves": {
+      "commonIds": 471,
+      "recordsDifferent": 101,
+      "recordsEqual": 370,
+      "fieldDifferences": {
+        "effectId": 20,
+        "categoryId": 3,
+        "power": 73,
+        "type": 15,
+        "accuracy": 37,
+        "pp": 20,
+        "effectChance": 11,
+        "targetId": 18,
+        "priority": 2,
+        "flags": 4,
+        "contestType": 9,
+        "contestEffect": 8
+      }
+    },
+    "levelUpLearnsets": {
+      "commonIds": 508,
+      "recordsDifferent": 497,
+      "recordsEqual": 11
+    },
+    "evolutions": {
+      "commonIds": 508,
+      "recordsDifferent": 33,
+      "recordsEqual": 475
+    },
+    "items": {
+      "commonIds": 446,
+      "recordsDifferent": 165,
+      "recordsEqual": 281
+    },
+    "berries": {
+      "platinumEntries": 64,
+      "projectPmEntries": 64,
+      "rawEntriesDifferent": 64,
+      "entriesWithByte4Different": 64,
+      "byte4ReferenceMeaning": "stageDuration dans la structure de référence Platine; le sens Project PM doit être confirmé séparément"
+    }
+  },
+  "moveIdsBeyondCanonicalRange": {
+    "canonicalLastMoveId": 467,
+    "platinum": {
+      "extraRecordIds": [
+        468,
+        469,
+        470
+      ],
+      "levelUpReferencesToIds468Plus": 0,
+      "observedPattern": "Les trois enregistrements ont effectId=0, type Normal, puissance 100, précision 100, PP 10 et categoryId=1; leurs champs de concours diffèrent.",
+      "interpretation": "Profil uniforme pouvant correspondre à des entrées de remplissage, mais leur rôle exact n'est pas certifié."
+    },
+    "project_pm": {
+      "extraRecordIds": [
+        468,
+        469,
+        470,
+        471
+      ],
+      "levelUpReferencesToIds468Plus": 56,
+      "referencesById": {
+        "468": 38,
+        "469": 10,
+        "470": 5,
+        "471": 3
+      },
+      "distinctSpeciesReferencingExtraIds": 56,
+      "observedFields": [
+        {
+          "id": 468,
+          "type": "Sol",
+          "power": 60,
+          "accuracy": 100,
+          "pp": 20,
+          "effectId": 70
+        },
+        {
+          "id": 469,
+          "type": "Sol",
+          "power": 95,
+          "accuracy": 95,
+          "pp": 10,
+          "effectId": 0
+        },
+        {
+          "id": 470,
+          "type": "Glace",
+          "power": 20,
+          "accuracy": 90,
+          "pp": 10,
+          "effectId": 104
+        },
+        {
+          "id": 471,
+          "type": "Psy",
+          "power": 75,
+          "accuracy": 100,
+          "pp": 25,
+          "effectId": 186
+        }
+      ],
+      "interpretation": "Les entrées ont des champs de combat distincts et sont référencées par les apprentissages Project PM. Les noms, la nature exacte des effets et le mapping vers les symboles restent inconnus."
+    },
+    "status": "usage_confirmed_names_unmapped"
+  },
+  "guardrails": [
+    "Les symboles canoniques sont une référence et ne certifient pas automatiquement les IDs internes de chaque ROM.",
+    "Ne pas joindre les ROM par index seul en cas de doute ou d'extension de table.",
+    "Ne pas afficher ni intégrer les capacités 468+ comme des capacités nommées avant identification.",
+    "Les différences brutes des tables ne doivent pas être présentées comme des changements de gameplay certifiés.",
+    "Les tables de dresseurs, rencontres, routes et dialogues restent hors périmètre immédiat; les archives sont conservées."
+  ]
+}
