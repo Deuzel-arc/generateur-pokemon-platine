@@ -134,6 +134,20 @@ assert.deepEqual(evolutionMethodAudit.projectPmNonCanonicalMethodIds[0].entries,
 assert.equal(evolutionMethodAudit.projectPmNonCanonicalMethodIds[0].status, "custom_method_candidate_semantics_unverified", "custom evolution method semantics must remain unverified");
 assert.equal(evolutionMethodAudit.policies.doNotRenameCustomMethodWithoutCodeEvidence, true, "custom method names must require implementation evidence");
 
+assert.equal(evolutionMethodAudit.directRomVerification.scriptPath, "scripts/audit-evolution-roms.mjs", "evolution audit must identify its reproducible binary parser");
+assert.deepEqual(evolutionMethodAudit.directRomVerification.nitroFsFileCount, { platinum: 340, project_pm: 340 }, "direct ROM audit must preserve validated NitroFS file counts");
+assert.equal(evolutionMethodAudit.directRomVerification.archivePath, "poketool/personal/evo.narc", "direct ROM audit must identify the evolution archive path");
+assert.deepEqual(evolutionMethodAudit.directRomVerification.archiveEntryCount, { platinum: 508, project_pm: 509 }, "direct ROM audit must preserve archive entry counts");
+assert.equal(evolutionMethodAudit.directRomVerification.recordSizeBytes, 44, "direct ROM evolution records must remain 44 bytes");
+assert.deepEqual(evolutionMethodAudit.directRomVerification.selectedRawEntries.platinum.sourceSpeciesId458, [{ slot: 0, methodId: 21, parameter: 223, targetSpeciesId: 226 }], "original Mantyke-candidate entry must preserve its canonical method 21 record");
+assert.deepEqual(evolutionMethodAudit.directRomVerification.selectedRawEntries.project_pm.sourceSpeciesId223, [
+  { slot: 0, methodId: 4, parameter: 35, targetSpeciesId: 224 },
+  { slot: 1, methodId: 27, parameter: 458, targetSpeciesId: 224 }
+], "Project PM source ID 223 must preserve both raw evolution slots");
+assert.deepEqual(evolutionMethodAudit.directRomVerification.selectedRawEntries.project_pm.sourceSpeciesId458, [{ slot: 0, methodId: 27, parameter: 223, targetSpeciesId: 226 }], "Project PM source ID 458 must preserve method 27 and reciprocal parameter");
+assert.match(evolutionMethodAudit.directRomVerification.observations.join(" "), /remplace la méthode 21 par la méthode 27/, "audit must retain the observed method-21 to method-27 change");
+assert.match(evolutionMethodAudit.directRomVerification.limitations.join(" "), /ne prouve pas que 27 a la même implémentation/, "audit must not assume custom method semantics");
+
 
 const itemFieldDiff = readJson("data/project_pm_item_field_diff_summary.json");
 assert.equal(itemFieldDiff.validation.bothArchivesRecordSize34, true, "field-level item report must confirm 34-byte records");
