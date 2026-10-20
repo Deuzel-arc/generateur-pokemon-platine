@@ -1,0 +1,146 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Audit des écarts prioritaires pour l'optimisation complète du générateur",
+  "status": "priorities_synthesized_from_existing_rom_audits_not_runtime_verified",
+  "source": {
+    "repository": "Deuzel-arc/generateur-pokemon-platine",
+    "romCatalog": "data/rom_catalog.json",
+    "romMappingAudit": "data/rom_mapping_audit.json",
+    "typeByteAudit": "data/project_pm_type_byte_audit.json",
+    "fairyMoveSemanticsAudit": "data/project_pm_fairy_move_semantics_audit.json",
+    "levelUpUsageAudit": "data/project_pm_levelup_move_usage_audit.json",
+    "rosterCoverageAudit": "data/rom_roster_coverage_audit.json",
+    "candidateRoster": "data/rom_roster_profiles_candidate_493.json",
+    "specialEntriesAudit": "data/rom_special_entry_audit.json"
+  },
+  "currentVerifiedBaseline": {
+    "speciesCanonicalGen4": 493,
+    "runtimeRosterProfiles": 71,
+    "canonicalSpeciesCovered": 71,
+    "canonicalSpeciesMissing": 422,
+    "runtimeCoveragePercent": 14.4,
+    "candidateProfilesAvailable": 493,
+    "candidateProfilesRuntimeIntegrated": false,
+    "cpuFSpeciesEntries": 508,
+    "cpueSpeciesEntries": 509,
+    "cpuFMoves": 471,
+    "cpueMoves": 472,
+    "cpuFItems": 446,
+    "cpueItems": 470,
+    "cpuFAbilities": 124,
+    "cpueAbilities": 127,
+    "cpuFLevelUpEntries": 6598,
+    "cpueLevelUpEntries": 8590,
+    "cpuFInvalidLevelUpReferences": 0,
+    "cpueInvalidLevelUpReferences": 0,
+    "cpuFTypeId9SpeciesSlots": 0,
+    "cpueTypeId9SpeciesSlots": 37,
+    "cpueTypeId9MoveRecords": 8
+  },
+  "priorities": [
+    {
+      "rank": 1,
+      "area": "Runtime roster integration",
+      "severity": "critical",
+      "currentEvidence": "71/493 canonical species covered; 422 absent from runtime roster.",
+      "nextActions": [
+        "Review candidate profile names/IDs/types/stats and exceptions against ROM-specific raw records.",
+        "Integrate in batches with assertions preventing CPUF/CPUE data mixing.",
+        "Test every supported species in the team builder and the 6-Pokémon team constraints."
+      ],
+      "exitCriteria": "493 standard species covered or exclusions explicitly documented; zero duplicate IDs, missing profiles, invalid stats, or cross-ROM leakage."
+    },
+    {
+      "rank": 2,
+      "area": "Move identity and mechanics",
+      "severity": "critical",
+      "currentEvidence": "471 shared move IDs, 101 raw records differ; 8 CPUE moves use raw type ID 9; effects remain uncertified.",
+      "nextActions": [
+        "Decode the CPUF and CPUE name tables independently for every move ID.",
+        "Cross-reference type/category/power/accuracy/PP/effect/target/priority/flags.",
+        "Trace CPUE battle handlers or obtain runtime evidence for changed effect IDs; keep unknown effects blocked."
+      ],
+      "exitCriteria": "Each selectable move has ROM-specific identity and fields; changed CPUE effects certified or explicitly unavailable."
+    },
+    {
+      "rank": 3,
+      "area": "Learnsets and move legality",
+      "severity": "high",
+      "currentEvidence": "493 standard species rows audited per ROM; 6598 CPUF and 8590 CPUE level-up entries; matching numeric IDs are not semantic identity proof.",
+      "nextActions": [
+        "Resolve move names per ROM before using learnset counts.",
+        "Compare level-up, TM/HM, tutor/egg sources if exported; label missing sources instead of assuming legality.",
+        "Separate competitive PKHeX custom moves from in-ROM learnset legality."
+      ],
+      "exitCriteria": "Move source and ROM-specific identity documented for each proposed legal moveset."
+    },
+    {
+      "rank": 4,
+      "area": "Items and held-item effects",
+      "severity": "high",
+      "currentEvidence": "446 CPUF item entries versus 470 CPUE entries; 165 shared-index item records differ and 24 CPUE-only entries.",
+      "nextActions": [
+        "Decode names independently for each ROM.",
+        "Audit held effect, parameters, availability and Gen IV compatibility separately.",
+        "Block unknown/post-Gen-IV or mod-only items from default Gen IV recommendations."
+      ],
+      "exitCriteria": "Items are whitelisted by ROM, effect evidence and user's Gen IV restrictions; no index-only assumptions."
+    },
+    {
+      "rank": 5,
+      "area": "Abilities and ability effects",
+      "severity": "high",
+      "currentEvidence": "124 CPUF ability names versus 127 CPUE; candidate roster does not certify ability names/effects.",
+      "nextActions": [
+        "Decode ability names per ROM and map species ability slots.",
+        "Check Project PM runtime implementation of new/changed abilities.",
+        "Mark unverified ability effects and exclude from strategy scoring until confirmed."
+      ],
+      "exitCriteria": "Ability names, slots and effects have ROM-specific provenance or explicit unknown status."
+    },
+    {
+      "rank": 6,
+      "area": "Evolution and special species",
+      "severity": "medium",
+      "currentEvidence": "Evolution tables differ (508 vs 509 entries); special entries and extra CPUE species require identity/semantics checks.",
+      "nextActions": [
+        "Decode evolution method IDs/parameters against correct ROM rules.",
+        "Verify special species/forms and CPUE-only entry 508 without assuming national Pokédex identity.",
+        "Keep incomplete methods out of user-facing recommendations."
+      ],
+      "exitCriteria": "Evolution requirements and special IDs are resolved or explicitly excluded."
+    },
+    {
+      "rank": 7,
+      "area": "Battle strategy scoring and UI",
+      "severity": "high",
+      "currentEvidence": "Candidate data is not full runtime integration; unknown semantics would distort synergy scores and recommendations.",
+      "nextActions": [
+        "Make scoring consume only validated ROM-specific profiles and mechanics.",
+        "Add unit tests for double-battle synergy, duplicate types, starter trio, legendary count and alternate team mode.",
+        "Expose confidence/source markers for candidate or custom PKHeX movesets."
+      ],
+      "exitCriteria": "Deterministic tests cover constraints, synergy and invalid/unknown data handling."
+    },
+    {
+      "rank": 8,
+      "area": "Build and CI verification",
+      "severity": "critical",
+      "currentEvidence": "Recent GitHub API checks returned no status checks/workflow runs; syntax was inspected but scripts were not executed in a Node runtime.",
+      "nextActions": [
+        "Run npm/test scripts in a real Node environment.",
+        "Add/verify GitHub Actions workflow for audit validation and UI tests.",
+        "Record exact command, environment, commit and output."
+      ],
+      "exitCriteria": "Automated tests pass on the exact commit; no claims of success without logs."
+    }
+  ],
+  "policies": [
+    "Do not merge CPUF and CPUE records by numeric index without independent identity checks.",
+    "Type ID 9 means Fairy only for the exact Project PM CPUE ROM hash confirmed by the user; in CPUF it must retain canonical Gen IV semantics.",
+    "Candidate 493-species data is not runtime-integrated until validated.",
+    "Canonical effect symbols are hypotheses only until CPUE battle semantics are verified.",
+    "Do not treat PKHeX custom moves as in-ROM learnset legality.",
+    "All counts and conclusions are tied to the exact ROM hashes recorded in the source audits."
+  ]
+}
