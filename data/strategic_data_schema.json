@@ -1,0 +1,144 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Schéma minimal des données stratégiques du générateur",
+  "status": "specification_only_not_runtime_data",
+  "purpose": "Définir les champs nécessaires au générateur d'équipes sans intégrer automatiquement les archives ROM brutes.",
+  "sourceProfiles": [
+    "platinum",
+    "project_pm"
+  ],
+  "provenanceRequired": [
+    "profile",
+    "romSha256",
+    "sourceTable",
+    "sourceRecordId",
+    "decodingStatus"
+  ],
+  "decodingStatuses": [
+    "raw_extracted",
+    "structurally_decoded",
+    "semantically_verified",
+    "unresolved_conflict"
+  ],
+  "joinPolicy": {
+    "requireStableIdentifiers": true,
+    "allowIndexOnlyCrossRomJoin": false,
+    "allowUnverifiedOverridesInRuntime": false,
+    "keepCanonicalReferenceAndProjectPmSeparate": true,
+    "note": "Les identifiants supplémentaires ou les valeurs dont la table de référence diffère doivent rester non mappés jusqu'à vérification."
+  },
+  "entities": {
+    "species": {
+      "required": [
+        "speciesId",
+        "name",
+        "types",
+        "baseStats",
+        "provenance"
+      ],
+      "fields": {
+        "speciesId": "Identifiant ROM propre au profil, plus mapping National Pokédex s'il est vérifié",
+        "name": "Nom localisé vérifié",
+        "types": "Deux emplacements de type avec mapping vérifié pour le profil",
+        "baseStats": "PV, Attaque, Défense, Vitesse, Attaque Spéciale, Défense Spéciale",
+        "abilities": "IDs et noms de talents vérifiés",
+        "learnsetRefs": "Références explicites vers les capacités vérifiées"
+      }
+    },
+    "move": {
+      "required": [
+        "moveId",
+        "name",
+        "type",
+        "category",
+        "provenance"
+      ],
+      "fields": {
+        "moveId": "Identifiant dans la ROM de ce profil",
+        "name": "Nom vérifié; peut être absent si l'ID reste non mappé",
+        "type": "Type vérifié dans la table du profil",
+        "category": "Physique, spéciale ou statut selon les mécaniques Gen IV applicables",
+        "power": "Puissance si définie",
+        "accuracy": "Précision si définie",
+        "pp": "PP de base",
+        "priority": "Priorité",
+        "effectId": "Identifiant brut de l'effet, distinct de son interprétation",
+        "effectStatus": "Statut de vérification de l'effet"
+      }
+    },
+    "levelUpLearnset": {
+      "required": [
+        "speciesId",
+        "moveId",
+        "level",
+        "provenance"
+      ],
+      "fields": {
+        "speciesId": "Référence d'espèce réconciliée dans le même profil",
+        "moveId": "Référence de capacité du même profil, y compris IDs non mappés explicitement",
+        "level": "Niveau brut validé",
+        "ordering": "Ordre source conservé lorsque pertinent"
+      }
+    },
+    "evolution": {
+      "required": [
+        "speciesId",
+        "methodId",
+        "targetSpeciesId",
+        "provenance"
+      ],
+      "fields": {
+        "methodId": "ID brut; interprétation séparée et certifiée",
+        "parameter": "Paramètre brut conservé",
+        "targetSpeciesId": "Cible réconciliée dans le même profil"
+      }
+    },
+    "heldItem": {
+      "required": [
+        "itemId",
+        "name",
+        "availability",
+        "provenance"
+      ],
+      "fields": {
+        "itemId": "Identifiant dans la ROM de ce profil",
+        "name": "Nom vérifié",
+        "availability": "Disponibilité dans le jeu/profil si confirmée",
+        "battleEffect": "Effet de combat normalisé uniquement si sémantiquement vérifié",
+        "effectStatus": "Statut de vérification de l'effet"
+      }
+    },
+    "typeChart": {
+      "required": [
+        "attackingType",
+        "defendingType",
+        "multiplier",
+        "provenance"
+      ],
+      "fields": {
+        "attackingType": "Type d'attaque réconcilié pour le profil",
+        "defendingType": "Type défenseur réconcilié pour le profil",
+        "multiplier": "Multiplicateur Gen IV ou modification Project PM vérifiée"
+      }
+    },
+    "ability": {
+      "required": [
+        "abilityId",
+        "name",
+        "provenance"
+      ],
+      "fields": {
+        "abilityId": "Identifiant de talent du profil",
+        "name": "Nom vérifié",
+        "battleEffect": "Effet normalisé seulement après validation"
+      }
+    }
+  },
+  "runtimeAcceptanceRules": [
+    "N'intégrer que les enregistrements dont les identifiants, les noms nécessaires et la sémantique utilisée par le calcul sont vérifiés.",
+    "Conserver les valeurs brutes et leur provenance séparément des valeurs normalisées.",
+    "Les IDs supplémentaires de capacités peuvent être conservés comme références non mappées mais ne doivent pas recevoir de noms ou d'effets inventés.",
+    "Les données de dresseurs, routes, rencontres et dialogues sont hors périmètre immédiat.",
+    "Une donnée absente ou conflictuelle ne doit pas être transformée en valeur par défaut silencieuse."
+  ]
+}
