@@ -1025,8 +1025,8 @@
     ],
     "Dracaufeu": [
       [
-        "Dragon",
-        "Feu"
+        "Feu",
+        "Dragon"
       ],
       [
         78,
@@ -1054,7 +1054,7 @@
     "Méganium": [
       [
         "Plante",
-        "Inconnu"
+        "Fée"
       ],
       [
         80,
@@ -1166,7 +1166,7 @@
     "Milobellus": [
       [
         "Eau",
-        "Inconnu"
+        "Fée"
       ],
       [
         95,
@@ -1390,7 +1390,7 @@
     "Créhelf": [
       [
         "Psy",
-        "Inconnu"
+        "Fée"
       ],
       [
         95,
@@ -1404,7 +1404,7 @@
     "Créfollet": [
       [
         "Psy",
-        "Inconnu"
+        "Fée"
       ],
       [
         80,
@@ -1418,7 +1418,7 @@
     "Créfadet": [
       [
         "Psy",
-        "Inconnu"
+        "Fée"
       ],
       [
         75,
