@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This repository is a static Pokémon team generator with ROM-derived data. The goal of this tooling is to make each batch reproducible, detect regressions early, and prevent unverified mappings from silently becoming runtime facts.
+This repository is a static Pokémon team generator with ROM-derived data. The goal of this tooling is to make each batch auditable and repeatable, detect regressions early, and prevent unverified mappings from silently becoming runtime facts.
 
 ## Automated checks
 
@@ -11,6 +11,9 @@ The `Quality checks` GitHub Actions workflow runs on pushes to `main`, pull requ
 - `test:static`: generator and data invariants.
 - `test:rom-audits`: ROM audit schema and integrity assertions.
 - `test:browser`: browser interaction regression tests.
+- `test:tooling`: verifies required audit inputs, npm test wiring, CI triggers, and the Pages deployment gate.
+
+The repository currently has no committed npm lockfile, so dependency resolution is not fully locked; workflows intentionally do not use setup-node's lockfile-dependent npm cache. Add and verify a generated lockfile when a trusted npm install environment is available.
 
 A red check means the batch is not validated. Do not label a batch complete or update progress as verified until the workflow passes.
 
