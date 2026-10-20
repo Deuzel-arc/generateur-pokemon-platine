@@ -43,14 +43,42 @@
     "hashMismatchWithEarlierAudit": true,
     "rosterProfilesEmbedded": true,
     "rosterEntriesIntegrated": 71,
-    "fullCatalogLoadedByGenerator": false
+    "fullCatalogLoadedByGenerator": false,
+    "scopePolicy": {
+      "inScope": [
+        "species",
+        "baseStats",
+        "types",
+        "abilities",
+        "moves",
+        "levelUpLearnsets",
+        "evolutions",
+        "verifiedHeldItemEffects",
+        "typeChart"
+      ],
+      "deferred": [
+        "trainerDataRaw",
+        "trainerPokemonRaw",
+        "encountersRaw",
+        "routes",
+        "dialogues",
+        "storyScripts",
+        "graphics",
+        "music"
+      ],
+      "archivesPreserved": true,
+      "unknownIdsMustRemainUnmapped": true,
+      "crossRomIndexOnlyJoinsForbidden": true
+    }
   },
   "nextSteps": [
-    "Reconcile ROM hashes",
-    "Validate ID mappings against Gen IV reference structures",
-    "Import normalized catalogue into repository",
-    "Connect selected profile to generator",
-    "Run static and browser regression tests"
+    "Validate the minimal strategic schema and provenance rules with automated checks",
+    "Reconcile species, type, ability and move identifiers against the pinned Gen IV reference and the exact ROM hashes",
+    "Expand the strategic roster beyond the 71 embedded profiles in verified batches",
+    "Integrate canonical move names and learnsets only where IDs are reconciled; keep Project PM extra IDs explicitly unmapped",
+    "Normalize evolution and held-item battle effects only after semantic verification",
+    "Keep trainer, route, encounter and dialogue tables out of the current runtime scope",
+    "Run static and browser regression tests and verify GitHub Pages deployment after each batch"
   ],
   "strategicSchema": {
     "path": "data/strategic_data_schema.json",
