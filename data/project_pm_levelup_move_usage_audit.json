@@ -2297,10 +2297,7 @@
         473
       ],
       "speciesIdsRemovedAtSameNumericId": [],
-      "numericIdIdentityWarning": true,
-      "platinumNameFrFromNameBank": null,
-      "platinumNameEvidence": "decoded_platinum_move_name_bank_crosschecked_against_project_pm_name_bank",
-      "platinumSemanticIdentityWarning": true
+      "numericIdIdentityWarning": true
     },
     {
       "moveId": 469,
@@ -2399,10 +2396,7 @@
         473
       ],
       "speciesIdsRemovedAtSameNumericId": [],
-      "numericIdIdentityWarning": true,
-      "platinumNameFrFromNameBank": null,
-      "platinumNameEvidence": "decoded_platinum_move_name_bank_crosschecked_against_project_pm_name_bank",
-      "platinumSemanticIdentityWarning": true
+      "numericIdIdentityWarning": true
     },
     {
       "moveId": 470,
@@ -2461,10 +2455,7 @@
         461
       ],
       "speciesIdsRemovedAtSameNumericId": [],
-      "numericIdIdentityWarning": true,
-      "platinumNameFrFromNameBank": null,
-      "platinumNameEvidence": "decoded_platinum_move_name_bank_crosschecked_against_project_pm_name_bank",
-      "platinumSemanticIdentityWarning": true
+      "numericIdIdentityWarning": true
     },
     {
       "moveId": 471,
@@ -2507,10 +2498,7 @@
         405
       ],
       "speciesIdsRemovedAtSameNumericId": [],
-      "numericIdIdentityWarning": true,
-      "platinumNameFrFromNameBank": null,
-      "platinumNameEvidence": "decoded_platinum_move_name_bank_crosschecked_against_project_pm_name_bank",
-      "platinumSemanticIdentityWarning": true
+      "numericIdIdentityWarning": true
     }
   ],
   "platinumNameCrosscheck": {
