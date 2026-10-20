@@ -23,6 +23,22 @@ Le contrôle a été effectué sur les fichiers source bruts du dépôt de déco
 
 Le comptage porte sur les fichiers source à l'URL ci-dessus et peut évoluer si la branche amont change. Il ne constitue pas une comparaison directe avec une extraction binaire d'une ROM commerciale.
 
+## Réconciliation des IDs canoniques avec les archives extraites — 2026-10-20
+
+Le nouveau fichier versionné [`data/gen4_item_id_reference.json`](../data/gen4_item_id_reference.json) conserve les symboles canoniques d'objets et les symboles d'effets tenus depuis la référence épinglée `pret/pokeplatinum` au commit `06c6e9a0348da283be8d9225d0bec03c349ff5c2`.
+
+Constats structurels :
+
+- La liste canonique contient 468 IDs logiques, de 0 à 467, puis le marqueur `MAX_ITEMS` à l'ID sentinelle 468.
+- Les 22 slots réservés sont précisément les IDs 113–134 (`ITEM_UNUSED_113` à `ITEM_UNUSED_134`).
+- Il reste donc 446 IDs canoniques non réservés, ce qui correspond au nombre de membres de `pl_item_data.narc` extrait pour Platine original.
+- Le profil Project PM contient 470 entrées dans cette archive, soit 24 entrées de plus que le compte canonique non réservé.
+- L'archive distincte `item_data.narc` contient 442 entrées dans les deux exports. Elle ne doit pas être confondue avec `pl_item_data.narc`.
+
+**Limite bloquante :** l'égalité entre 446 IDs non réservés et 446 membres d'archive est une concordance de compte, pas une preuve d'ordre. La décompilation utilise `sItemArchiveIDs[item].dataID` pour convertir l'ID logique en index d'archive. Tant que cette table de correspondance n'est pas reconstruite ou vérifiée pour la ROM exacte, aucune entrée extraite ne doit être associée à un nom par simple position. Les 24 entrées supplémentaires de Project PM restent non identifiées et ne sont pas transférées vers Platine original.
+
+Le validateur `scripts/validate-rom-audits.mjs` vérifie désormais les bornes et le nombre de slots inutilisés, ainsi que l'interdiction de traiter cette concordance de compte comme une preuve de mapping.
+
 ## Champs à vérifier pour chaque objet
 
 Le schéma de données de la décompilation sépare explicitement les propriétés suivantes. L'audit du générateur devra les comparer individuellement, sans déduire une propriété à partir du nom ou de la description :
