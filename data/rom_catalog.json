@@ -113,15 +113,11 @@
     "status": "structural_comparison_not_full_semantic_certification",
     "purpose": "Enregistre les différences structurées et les limites de correspondance entre les deux profils ROM.",
     "lastAuditUpdate": {
-      "commit": "37ec01563ccc551d3825bb5e9d707e5003e42ab2",
+      "commit": "1acd0510e96919ab22bedc51c79cfb3998d97000",
       "additions": [
-        "species field difference counts",
-        "level-up learnset difference counts",
-        "evolution difference counts",
-        "item raw field difference counts",
-        "five-entry type-variant pattern for species IDs 503–507"
+        "Verified exact internal IDs whose species stats, types, abilities, EV yield, gender ratio, friendship, move power, type, accuracy, PP, effect IDs and other exported fields differ across ROM profiles."
       ],
-      "caution": "Observed differences are structural; the exact identities and gameplay semantics of Project PM-specific changes are not inferred from index alone."
+      "caution": "These are structural differences keyed by shared internal table ID. They do not independently certify National Pokédex identity or gameplay semantics."
     }
   }
 }
