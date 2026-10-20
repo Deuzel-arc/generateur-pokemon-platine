@@ -1,0 +1,4229 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Priorisation des différences ROM avec symboles canoniques candidats",
+  "source": {
+    "auditPath": "data/rom_mapping_audit.json",
+    "auditSha": "ded62711a09189c7d3054726304184425905af09",
+    "referencePath": "data/gen4_id_reference.json",
+    "referenceCommit": "06c6e9a0348da283be8d9225d0bec03c349ff5c2",
+    "platinumSha": "1cfd024519116c1c6285d6af2dbdfcec778e9d74c7c18585e22032e81aaa7eb8",
+    "projectPmSha": "435b0288238f01f21eeeef7b5de6de3e3c9c3a9b70ea3b18d71b31ba282ae4e1"
+  },
+  "rules": [
+    "Les symboles canoniques sont ajoutés comme candidats par ID numérique, pas comme preuve définitive de correspondance avec la ROM extraite.",
+    "Les noms doivent être confirmés avec les tables de noms de la ROM exacte avant affichage dans le générateur.",
+    "Les IDs hors de la plage canonique restent sans nom attribué.",
+    "Ce fichier sert à prioriser le décryptage et n'est pas chargé par le runtime."
+  ],
+  "species": [
+    {
+      "id": 1,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_BULBASAUR",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 2,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_IVYSAUR",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 3,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_VENUSAUR",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 4,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CHARMANDER",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 5,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CHARMELEON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 6,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CHARIZARD",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 7,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SQUIRTLE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 8,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_WARTORTLE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 9,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_BLASTOISE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 10,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CATERPIE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 11,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_METAPOD",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 12,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_BUTTERFREE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 13,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_WEEDLE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 14,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_KAKUNA",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 15,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_BEEDRILL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 16,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_PIDGEY",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 17,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_PIDGEOTTO",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 18,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_PIDGEOT",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 19,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_RATTATA",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 20,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_RATICATE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 21,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SPEAROW",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 22,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_FEAROW",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 24,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ARBOK",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 25,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_PIKACHU",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 26,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_RAICHU",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 27,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SANDSHREW",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 28,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SANDSLASH",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 31,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_NIDOQUEEN",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 34,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_NIDOKING",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 35,
+      "changedFields": [
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CLEFAIRY",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 36,
+      "changedFields": [
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CLEFABLE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 37,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_VULPIX",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 38,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_NINETALES",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 39,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_JIGGLYPUFF",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 40,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_WIGGLYTUFF",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 43,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ODDISH",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 44,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_GLOOM",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 45,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_VILEPLUME",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 47,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_PARASECT",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 48,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_VENONAT",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 49,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_VENOMOTH",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 52,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MEOWTH",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 53,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_PERSIAN",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 54,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_PSYDUCK",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 55,
+      "changedFields": [
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_GOLDUCK",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 57,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_PRIMEAPE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 63,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ABRA",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 64,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_KADABRA",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 65,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ALAKAZAM",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 69,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_BELLSPROUT",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 70,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_WEEPINBELL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 71,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_VICTREEBEL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 77,
+      "changedFields": [
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_PONYTA",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 78,
+      "changedFields": [
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_RAPIDASH",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 81,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MAGNEMITE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 82,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MAGNETON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 83,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_FARFETCHD",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 84,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_DODUO",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 85,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_DODRIO",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 87,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_DEWGONG",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 88,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_GRIMER",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 89,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MUK",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 90,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SHELLDER",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 91,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CLOYSTER",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 94,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_GENGAR",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 95,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ONIX",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 96,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_DROWZEE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 97,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_HYPNO",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 99,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_KINGLER",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 100,
+      "changedFields": [
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_VOLTORB",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 101,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ELECTRODE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 103,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_EXEGGUTOR",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 104,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CUBONE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 105,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MAROWAK",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 106,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_HITMONLEE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 107,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_HITMONCHAN",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 109,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_KOFFING",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 110,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_WEEZING",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 111,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_RHYHORN",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 112,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_RHYDON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 113,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CHANSEY",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 115,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_KANGASKHAN",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 118,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_GOLDEEN",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 119,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SEAKING",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 121,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_STARMIE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 122,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MR_MIME",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 123,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SCYTHER",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 124,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_JYNX",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 125,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ELECTABUZZ",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 126,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MAGMAR",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 127,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_PINSIR",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 128,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_TAUROS",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 132,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_DITTO",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 134,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_VAPOREON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 135,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_JOLTEON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 136,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_FLAREON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 139,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_OMASTAR",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 141,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_KABUTOPS",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 143,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SNORLAX",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 144,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ARTICUNO",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 145,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ZAPDOS",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 146,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MOLTRES",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 147,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_DRATINI",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 148,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_DRAGONAIR",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 149,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_DRAGONITE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 152,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CHIKORITA",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 153,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_BAYLEEF",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 154,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MEGANIUM",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 155,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CYNDAQUIL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 156,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_QUILAVA",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 157,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_TYPHLOSION",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 158,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_TOTODILE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 159,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CROCONAW",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 160,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_FERALIGATR",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 161,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SENTRET",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 162,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_FURRET",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 163,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_HOOTHOOT",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 164,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_NOCTOWL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 165,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_LEDYBA",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 166,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_LEDIAN",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 167,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SPINARAK",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 168,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ARIADOS",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 170,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CHINCHOU",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 171,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_LANTURN",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 172,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_PICHU",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 173,
+      "changedFields": [
+        "types",
+        "baseFriendship"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CLEFFA",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 174,
+      "changedFields": [
+        "abilities",
+        "baseFriendship"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_IGGLYBUFF",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 175,
+      "changedFields": [
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_TOGEPI",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 176,
+      "changedFields": [
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_TOGETIC",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 177,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_NATU",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 178,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_XATU",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 179,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MAREEP",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 180,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_FLAAFFY",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 181,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_AMPHAROS",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 182,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_BELLOSSOM",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 183,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MARILL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 184,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_AZUMARILL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 185,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SUDOWOODO",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 186,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_POLITOED",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 187,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_HOPPIP",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 188,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SKIPLOOM",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 189,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_JUMPLUFF",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 190,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_AIPOM",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 192,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SUNFLORA",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 194,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_WOOPER",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 195,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_QUAGSIRE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 196,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ESPEON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 197,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_UMBREON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 198,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MURKROW",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 200,
+      "changedFields": [
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MISDREAVUS",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 201,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_UNOWN",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 203,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_GIRAFARIG",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 205,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_FORRETRESS",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 206,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_DUNSPARCE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 207,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_GLIGAR",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 208,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_STEELIX",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 209,
+      "changedFields": [
+        "types"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SNUBBULL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 210,
+      "changedFields": [
+        "baseStats",
+        "types"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_GRANBULL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 211,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_QWILFISH",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 212,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SCIZOR",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 213,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SHUCKLE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 214,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_HERACROSS",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 215,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SNEASEL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 217,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_URSARING",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 218,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SLUGMA",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 219,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MAGCARGO",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 220,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SWINUB",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 221,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_PILOSWINE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 222,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CORSOLA",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 224,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_OCTILLERY",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 225,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_DELIBIRD",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 226,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MANTINE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 227,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SKARMORY",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 228,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_HOUNDOUR",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 229,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_HOUNDOOM",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 231,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_PHANPY",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 232,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_DONPHAN",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 234,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_STANTLER",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 235,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SMEARGLE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 236,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_TYROGUE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 237,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_HITMONTOP",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 238,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SMOOCHUM",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 239,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ELEKID",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 240,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MAGBY",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 242,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_BLISSEY",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 243,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_RAIKOU",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 244,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ENTEI",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 245,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SUICUNE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 252,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_TREECKO",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 253,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_GROVYLE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 254,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SCEPTILE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 255,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_TORCHIC",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 256,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_COMBUSKEN",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 257,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_BLAZIKEN",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 258,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MUDKIP",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 259,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MARSHTOMP",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 260,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SWAMPERT",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 261,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_POOCHYENA",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 262,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MIGHTYENA",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 263,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ZIGZAGOON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 264,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_LINOONE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 265,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_WURMPLE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 266,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SILCOON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 267,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_BEAUTIFLY",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 268,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CASCOON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 269,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_DUSTOX",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 275,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SHIFTRY",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 276,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_TAILLOW",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 277,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SWELLOW",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 278,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_WINGULL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 279,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_PELIPPER",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 280,
+      "changedFields": [
+        "baseStats",
+        "types"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_RALTS",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 281,
+      "changedFields": [
+        "baseStats",
+        "types"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_KIRLIA",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 282,
+      "changedFields": [
+        "types"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_GARDEVOIR",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 283,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SURSKIT",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 284,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MASQUERAIN",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 285,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SHROOMISH",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 286,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_BRELOOM",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 293,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_WHISMUR",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 294,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_LOUDRED",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 295,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_EXPLOUD",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 298,
+      "changedFields": [
+        "baseStats",
+        "abilities",
+        "baseFriendship"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_AZURILL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 299,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_NOSEPASS",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 300,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SKITTY",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 301,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_DELCATTY",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 302,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SABLEYE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 303,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MAWILE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 304,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ARON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 305,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_LAIRON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 306,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_AGGRON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 307,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MEDITITE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 308,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MEDICHAM",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 311,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_PLUSLE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 312,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MINUN",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 313,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_VOLBEAT",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 314,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ILLUMISE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 315,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ROSELIA",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 318,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CARVANHA",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 319,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SHARPEDO",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 322,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_NUMEL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 323,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CAMERUPT",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 324,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_TORKOAL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 327,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SPINDA",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 328,
+      "changedFields": [
+        "baseStats",
+        "types"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_TRAPINCH",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 329,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_VIBRAVA",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 330,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_FLYGON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 331,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CACNEA",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 332,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CACTURNE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 333,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SWABLU",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 334,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ALTARIA",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 335,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ZANGOOSE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 336,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SEVIPER",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 337,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_LUNATONE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 338,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SOLROCK",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 339,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_BARBOACH",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 340,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_WHISCASH",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 341,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CORPHISH",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 342,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CRAWDAUNT",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 344,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CLAYDOL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 345,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_LILEEP",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 346,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CRADILY",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 347,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ANORITH",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 348,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ARMALDO",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 349,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_FEEBAS",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 350,
+      "changedFields": [
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MILOTIC",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 351,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CASTFORM",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 352,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_KECLEON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 354,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_BANETTE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 355,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_DUSKULL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 356,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_DUSCLOPS",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 357,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_TROPIUS",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 358,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CHIMECHO",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 359,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ABSOL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 362,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_GLALIE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 366,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CLAMPERL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 367,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_HUNTAIL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 368,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_GOREBYSS",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 369,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_RELICANTH",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 370,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_LUVDISC",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 374,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_BELDUM",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 375,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_METANG",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 376,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_METAGROSS",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 377,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_REGIROCK",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 378,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_REGICE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 379,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_REGISTEEL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 387,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_TURTWIG",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 388,
+      "changedFields": [
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_GROTLE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 389,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_TORTERRA",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 390,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CHIMCHAR",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 391,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MONFERNO",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 392,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_INFERNAPE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 393,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_PIPLUP",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 394,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_PRINPLUP",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 395,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_EMPOLEON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 396,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_STARLY",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 397,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_STARAVIA",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 398,
+      "changedFields": [
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_STARAPTOR",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 400,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_BIBAREL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 401,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_KRICKETOT",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 402,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_KRICKETUNE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 403,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SHINX",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 404,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_LUXIO",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 405,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_LUXRAY",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 406,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_BUDEW",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 407,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ROSERADE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 408,
+      "changedFields": [
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CRANIDOS",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 409,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_RAMPARDOS",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 410,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SHIELDON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 411,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_BASTIODON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 412,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_BURMY",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 413,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_WORMADAM",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 414,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MOTHIM",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 415,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_COMBEE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 416,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_VESPIQUEN",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 417,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_PACHIRISU",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 418,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_BUIZEL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 419,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_FLOATZEL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 421,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CHERRIM",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 422,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SHELLOS",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 423,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_GASTRODON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 425,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_DRIFLOON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 426,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_DRIFBLIM",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 427,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_BUNEARY",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 428,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_LOPUNNY",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 429,
+      "changedFields": [
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MISMAGIUS",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 430,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_HONCHKROW",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 431,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_GLAMEOW",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 432,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_PURUGLY",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 433,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CHINGLING",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 434,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_STUNKY",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 435,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SKUNTANK",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 437,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_BRONZONG",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 438,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_BONSLY",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 439,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MIME_JR",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 440,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_HAPPINY",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 441,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CHATOT",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 442,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SPIRITOMB",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 443,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_GIBLE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 444,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_GABITE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 445,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_GARCHOMP",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 446,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MUNCHLAX",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 448,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_LUCARIO",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 451,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SKORUPI",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 452,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_DRAPION",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 453,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CROAGUNK",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 454,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_TOXICROAK",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 455,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_CARNIVINE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 456,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_FINNEON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 457,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_LUMINEON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 459,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_SNOVER",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 460,
+      "changedFields": [
+        "baseStats",
+        "abilities",
+        "evYield"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ABOMASNOW",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 461,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_WEAVILE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 462,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MAGNEZONE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 463,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_LICKILICKY",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 464,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_RHYPERIOR",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 465,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_TANGROWTH",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 466,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ELECTIVIRE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 467,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MAGMORTAR",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 468,
+      "changedFields": [
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_TOGEKISS",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 469,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_YANMEGA",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 470,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_LEAFEON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 471,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_GLACEON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 472,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_GLISCOR",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 473,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MAMOSWINE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 474,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_PORYGON_Z",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 475,
+      "changedFields": [
+        "baseStats",
+        "abilities",
+        "genderRatio"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_GALLADE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 476,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_PROBOPASS",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 477,
+      "changedFields": [
+        "baseStats",
+        "types",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_DUSKNOIR",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 478,
+      "changedFields": [
+        "baseStats",
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_FROSLASS",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 479,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_ROTOM",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 480,
+      "changedFields": [
+        "baseStats",
+        "types"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_UXIE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 481,
+      "changedFields": [
+        "baseStats",
+        "types"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_MESPRIT",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 482,
+      "changedFields": [
+        "baseStats",
+        "types"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_AZELF",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 485,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_HEATRAN",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 486,
+      "changedFields": [
+        "abilities"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_REGIGIGAS",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 489,
+      "changedFields": [
+        "baseStats"
+      ],
+      "canonicalSymbolCandidate": "SPECIES_PHIONE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 503,
+      "changedFields": [
+        "types"
+      ],
+      "canonicalSymbolCandidate": null,
+      "mappingStatus": "unmapped_outside_canonical_reference"
+    },
+    {
+      "id": 504,
+      "changedFields": [
+        "types"
+      ],
+      "canonicalSymbolCandidate": null,
+      "mappingStatus": "unmapped_outside_canonical_reference"
+    },
+    {
+      "id": 505,
+      "changedFields": [
+        "types"
+      ],
+      "canonicalSymbolCandidate": null,
+      "mappingStatus": "unmapped_outside_canonical_reference"
+    },
+    {
+      "id": 506,
+      "changedFields": [
+        "types"
+      ],
+      "canonicalSymbolCandidate": null,
+      "mappingStatus": "unmapped_outside_canonical_reference"
+    },
+    {
+      "id": 507,
+      "changedFields": [
+        "types"
+      ],
+      "canonicalSymbolCandidate": null,
+      "mappingStatus": "unmapped_outside_canonical_reference"
+    }
+  ],
+  "moves": [
+    {
+      "id": 2,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_KARATE_CHOP",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 3,
+      "changedFields": [
+        "power",
+        "accuracy"
+      ],
+      "canonicalSymbolCandidate": "MOVE_DOUBLE_SLAP",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 4,
+      "changedFields": [
+        "power",
+        "accuracy"
+      ],
+      "canonicalSymbolCandidate": "MOVE_COMET_PUNCH",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 11,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_VICE_GRIP",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 15,
+      "changedFields": [
+        "effectId",
+        "power",
+        "type",
+        "accuracy",
+        "pp"
+      ],
+      "canonicalSymbolCandidate": "MOVE_CUT",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 18,
+      "changedFields": [
+        "targetId"
+      ],
+      "canonicalSymbolCandidate": "MOVE_WHIRLWIND",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 19,
+      "changedFields": [
+        "power",
+        "accuracy"
+      ],
+      "canonicalSymbolCandidate": "MOVE_FLY",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 20,
+      "changedFields": [
+        "power",
+        "accuracy"
+      ],
+      "canonicalSymbolCandidate": "MOVE_BIND",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 21,
+      "changedFields": [
+        "power",
+        "accuracy"
+      ],
+      "canonicalSymbolCandidate": "MOVE_SLAM",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 23,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_STOMP",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 31,
+      "changedFields": [
+        "power",
+        "accuracy"
+      ],
+      "canonicalSymbolCandidate": "MOVE_FURY_ATTACK",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 32,
+      "changedFields": [
+        "effectId",
+        "power",
+        "type",
+        "accuracy",
+        "pp",
+        "contestType",
+        "contestEffect"
+      ],
+      "canonicalSymbolCandidate": "MOVE_HORN_DRILL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 35,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_WRAP",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 37,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_THRASH",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 40,
+      "changedFields": [
+        "power",
+        "effectChance"
+      ],
+      "canonicalSymbolCandidate": "MOVE_POISON_STING",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 41,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_TWINEEDLE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 42,
+      "changedFields": [
+        "power",
+        "accuracy"
+      ],
+      "canonicalSymbolCandidate": "MOVE_PIN_MISSILE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 46,
+      "changedFields": [
+        "targetId"
+      ],
+      "canonicalSymbolCandidate": "MOVE_ROAR",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 47,
+      "changedFields": [
+        "accuracy",
+        "targetId"
+      ],
+      "canonicalSymbolCandidate": "MOVE_SING",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 48,
+      "changedFields": [
+        "targetId"
+      ],
+      "canonicalSymbolCandidate": "MOVE_SUPERSONIC",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 54,
+      "changedFields": [
+        "effectId",
+        "targetId",
+        "contestType"
+      ],
+      "canonicalSymbolCandidate": "MOVE_MIST",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 61,
+      "changedFields": [
+        "power",
+        "pp"
+      ],
+      "canonicalSymbolCandidate": "MOVE_BUBBLE_BEAM",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 62,
+      "changedFields": [
+        "power",
+        "pp"
+      ],
+      "canonicalSymbolCandidate": "MOVE_AURORA_BEAM",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 64,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_PECK",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 66,
+      "changedFields": [
+        "effectId",
+        "power",
+        "type",
+        "accuracy",
+        "pp",
+        "effectChance"
+      ],
+      "canonicalSymbolCandidate": "MOVE_SUBMISSION",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 70,
+      "changedFields": [
+        "effectId",
+        "power",
+        "effectChance"
+      ],
+      "canonicalSymbolCandidate": "MOVE_STRENGTH",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 71,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_ABSORB",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 72,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_MEGA_DRAIN",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 80,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_PETAL_DANCE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 83,
+      "changedFields": [
+        "power",
+        "accuracy"
+      ],
+      "canonicalSymbolCandidate": "MOVE_FIRE_SPIN",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 86,
+      "changedFields": [
+        "accuracy"
+      ],
+      "canonicalSymbolCandidate": "MOVE_THUNDER_WAVE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 112,
+      "changedFields": [
+        "effectId",
+        "targetId",
+        "priority"
+      ],
+      "canonicalSymbolCandidate": "MOVE_BARRIER",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 117,
+      "changedFields": [
+        "effectId",
+        "accuracy",
+        "targetId",
+        "flags",
+        "contestType"
+      ],
+      "canonicalSymbolCandidate": "MOVE_BIDE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 123,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_SMOG",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 124,
+      "changedFields": [
+        "power",
+        "pp"
+      ],
+      "canonicalSymbolCandidate": "MOVE_SLUDGE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 131,
+      "changedFields": [
+        "power",
+        "type",
+        "accuracy"
+      ],
+      "canonicalSymbolCandidate": "MOVE_SPIKE_CANNON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 132,
+      "changedFields": [
+        "effectId",
+        "power",
+        "type",
+        "accuracy",
+        "pp",
+        "effectChance",
+        "contestType",
+        "contestEffect"
+      ],
+      "canonicalSymbolCandidate": "MOVE_CONSTRICT",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 137,
+      "changedFields": [
+        "accuracy"
+      ],
+      "canonicalSymbolCandidate": "MOVE_GLARE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 139,
+      "changedFields": [
+        "targetId"
+      ],
+      "canonicalSymbolCandidate": "MOVE_POISON_GAS",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 140,
+      "changedFields": [
+        "effectId",
+        "categoryId",
+        "power",
+        "type",
+        "accuracy",
+        "pp",
+        "contestType",
+        "contestEffect"
+      ],
+      "canonicalSymbolCandidate": "MOVE_BARRAGE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 141,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_LEECH_LIFE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 143,
+      "changedFields": [
+        "effectId",
+        "power",
+        "accuracy",
+        "effectChance"
+      ],
+      "canonicalSymbolCandidate": "MOVE_SKY_ATTACK",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 145,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_BUBBLE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 148,
+      "changedFields": [
+        "targetId"
+      ],
+      "canonicalSymbolCandidate": "MOVE_FLASH",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 154,
+      "changedFields": [
+        "power",
+        "accuracy"
+      ],
+      "canonicalSymbolCandidate": "MOVE_FURY_SWIPES",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 161,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_TRI_ATTACK",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 167,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_TRIPLE_KICK",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 168,
+      "changedFields": [
+        "effectId",
+        "power",
+        "flags"
+      ],
+      "canonicalSymbolCandidate": "MOVE_THIEF",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 169,
+      "changedFields": [
+        "targetId"
+      ],
+      "canonicalSymbolCandidate": "MOVE_SPIDER_WEB",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 172,
+      "changedFields": [
+        "pp"
+      ],
+      "canonicalSymbolCandidate": "MOVE_FLAME_WHEEL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 174,
+      "changedFields": [
+        "type"
+      ],
+      "canonicalSymbolCandidate": "MOVE_CURSE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 186,
+      "changedFields": [
+        "type"
+      ],
+      "canonicalSymbolCandidate": "MOVE_SWEET_KISS",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 190,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_OCTAZOOKA",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 198,
+      "changedFields": [
+        "accuracy"
+      ],
+      "canonicalSymbolCandidate": "MOVE_BONE_RUSH",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 200,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_OUTRAGE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 202,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_GIGA_DRAIN",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 204,
+      "changedFields": [
+        "type"
+      ],
+      "canonicalSymbolCandidate": "MOVE_CHARM",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 205,
+      "changedFields": [
+        "effectId",
+        "power",
+        "accuracy"
+      ],
+      "canonicalSymbolCandidate": "MOVE_ROLLOUT",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 210,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_FURY_CUTTER",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 228,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_PURSUIT",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 232,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_METAL_CLAW",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 236,
+      "changedFields": [
+        "type"
+      ],
+      "canonicalSymbolCandidate": "MOVE_MOONLIGHT",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 239,
+      "changedFields": [
+        "effectId",
+        "power",
+        "type",
+        "accuracy",
+        "pp",
+        "effectChance",
+        "targetId"
+      ],
+      "canonicalSymbolCandidate": "MOVE_TWISTER",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 249,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_ROCK_SMASH",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 250,
+      "changedFields": [
+        "power",
+        "accuracy"
+      ],
+      "canonicalSymbolCandidate": "MOVE_WHIRLPOOL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 261,
+      "changedFields": [
+        "accuracy"
+      ],
+      "canonicalSymbolCandidate": "MOVE_WILL_O_WISP",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 262,
+      "changedFields": [
+        "targetId"
+      ],
+      "canonicalSymbolCandidate": "MOVE_MEMENTO",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 274,
+      "changedFields": [
+        "targetId",
+        "priority"
+      ],
+      "canonicalSymbolCandidate": "MOVE_ASSIST",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 282,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_KNOCK_OFF",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 292,
+      "changedFields": [
+        "power",
+        "accuracy"
+      ],
+      "canonicalSymbolCandidate": "MOVE_ARM_THRUST",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 295,
+      "changedFields": [
+        "effectId",
+        "power",
+        "type",
+        "pp",
+        "effectChance",
+        "targetId",
+        "contestType",
+        "contestEffect"
+      ],
+      "canonicalSymbolCandidate": "MOVE_LUSTER_PURGE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 296,
+      "changedFields": [
+        "effectId",
+        "power",
+        "type",
+        "accuracy",
+        "pp",
+        "effectChance",
+        "targetId",
+        "contestType",
+        "contestEffect"
+      ],
+      "canonicalSymbolCandidate": "MOVE_MIST_BALL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 299,
+      "changedFields": [
+        "power",
+        "accuracy"
+      ],
+      "canonicalSymbolCandidate": "MOVE_BLAZE_KICK",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 301,
+      "changedFields": [
+        "effectId",
+        "power",
+        "accuracy"
+      ],
+      "canonicalSymbolCandidate": "MOVE_ICE_BALL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 302,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_NEEDLE_ARM",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 305,
+      "changedFields": [
+        "power",
+        "accuracy"
+      ],
+      "canonicalSymbolCandidate": "MOVE_POISON_FANG",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 325,
+      "changedFields": [
+        "power",
+        "pp"
+      ],
+      "canonicalSymbolCandidate": "MOVE_SHADOW_PUNCH",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 328,
+      "changedFields": [
+        "power",
+        "accuracy"
+      ],
+      "canonicalSymbolCandidate": "MOVE_SAND_TOMB",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 331,
+      "changedFields": [
+        "power",
+        "accuracy"
+      ],
+      "canonicalSymbolCandidate": "MOVE_BULLET_SEED",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 333,
+      "changedFields": [
+        "power",
+        "accuracy"
+      ],
+      "canonicalSymbolCandidate": "MOVE_ICICLE_SPEAR",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 342,
+      "changedFields": [
+        "power",
+        "pp"
+      ],
+      "canonicalSymbolCandidate": "MOVE_POISON_TAIL",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 343,
+      "changedFields": [
+        "effectId",
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_COVET",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 344,
+      "changedFields": [
+        "effectId",
+        "power",
+        "effectChance",
+        "contestType",
+        "contestEffect"
+      ],
+      "canonicalSymbolCandidate": "MOVE_VOLT_TACKLE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 350,
+      "changedFields": [
+        "accuracy"
+      ],
+      "canonicalSymbolCandidate": "MOVE_ROCK_BLAST",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 362,
+      "changedFields": [
+        "effectId",
+        "power",
+        "pp",
+        "effectChance",
+        "contestEffect"
+      ],
+      "canonicalSymbolCandidate": "MOVE_BRINE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 382,
+      "changedFields": [
+        "flags"
+      ],
+      "canonicalSymbolCandidate": "MOVE_ME_FIRST",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 383,
+      "changedFields": [
+        "flags"
+      ],
+      "canonicalSymbolCandidate": "MOVE_COPYCAT",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 409,
+      "changedFields": [
+        "pp"
+      ],
+      "canonicalSymbolCandidate": "MOVE_DRAIN_PUNCH",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 421,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_SHADOW_CLAW",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 426,
+      "changedFields": [
+        "power",
+        "accuracy"
+      ],
+      "canonicalSymbolCandidate": "MOVE_MUD_BOMB",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 431,
+      "changedFields": [
+        "power",
+        "type",
+        "accuracy",
+        "pp"
+      ],
+      "canonicalSymbolCandidate": "MOVE_ROCK_CLIMB",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 439,
+      "changedFields": [
+        "power",
+        "targetId"
+      ],
+      "canonicalSymbolCandidate": "MOVE_ROCK_WRECKER",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 440,
+      "changedFields": [
+        "power",
+        "pp"
+      ],
+      "canonicalSymbolCandidate": "MOVE_CROSS_POISON",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 443,
+      "changedFields": [
+        "categoryId",
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_MAGNET_BOMB",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 448,
+      "changedFields": [
+        "power",
+        "pp"
+      ],
+      "canonicalSymbolCandidate": "MOVE_CHATTER",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 458,
+      "changedFields": [
+        "power"
+      ],
+      "canonicalSymbolCandidate": "MOVE_DOUBLE_HIT",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 459,
+      "changedFields": [
+        "power",
+        "targetId"
+      ],
+      "canonicalSymbolCandidate": "MOVE_ROAR_OF_TIME",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 461,
+      "changedFields": [
+        "effectId",
+        "categoryId",
+        "power",
+        "type",
+        "accuracy",
+        "pp",
+        "effectChance",
+        "targetId",
+        "contestType",
+        "contestEffect"
+      ],
+      "canonicalSymbolCandidate": "MOVE_LUNAR_DANCE",
+      "mappingStatus": "candidate_by_shared_numeric_id_not_name_table_verified"
+    },
+    {
+      "id": 468,
+      "changedFields": [
+        "effectId",
+        "categoryId",
+        "power",
+        "type",
+        "pp",
+        "effectChance",
+        "targetId",
+        "contestEffect"
+      ],
+      "canonicalSymbolCandidate": null,
+      "mappingStatus": "unmapped_outside_canonical_reference"
+    },
+    {
+      "id": 469,
+      "changedFields": [
+        "categoryId",
+        "power",
+        "type",
+        "accuracy",
+        "contestType"
+      ],
+      "canonicalSymbolCandidate": null,
+      "mappingStatus": "unmapped_outside_canonical_reference"
+    },
+    {
+      "id": 470,
+      "changedFields": [
+        "effectId",
+        "categoryId",
+        "power",
+        "type",
+        "accuracy",
+        "contestType",
+        "contestEffect"
+      ],
+      "canonicalSymbolCandidate": null,
+      "mappingStatus": "unmapped_outside_canonical_reference"
+    }
+  ],
+  "summary": {
+    "speciesWithFieldChanges": 6,
+    "speciesIdsAffected": 381,
+    "speciesIdsWithCanonicalCandidate": 376,
+    "moveFieldsCompared": 12,
+    "moveIdsAffected": 101,
+    "moveIdsWithCanonicalCandidate": 98
+  }
+}
