@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "title": "Manifeste du catalogue ROM — état d'intégration",
   "status": "manifest_only_data_not_embedded",
-  "warning": "Les profils statistiques/types des 70 espèces présentes dans le roster sont maintenant intégrés dans index.html à partir des tables décodées de ces ROM précises. Le catalogue complet des attaques, apprentissages, objets, rencontres et dresseurs n'est pas encore chargé dynamiquement. Les champs de type 'Inconnu' restent non certifiés et ne sont pas appliqués comme types.",
+  "warning": "Manifeste : les profils statistiques/types des 71 espèces présentes dans le roster sont maintenant intégrés dans index.html à partir des tables décodées de ces ROM précises. Le catalogue complet des attaques, apprentissages, objets, rencontres et dresseurs n'est pas encore chargé dynamiquement. Les champs de type 'Inconnu' restent non certifiés et ne sont pas appliqués comme types.",
   "profiles": {
     "platinum": {
       "name": "Pokémon Platine original (FR)",
@@ -42,7 +42,7 @@
     "trainersSemanticallyDecoded": false,
     "hashMismatchWithEarlierAudit": true,
     "rosterProfilesEmbedded": true,
-    "rosterEntriesIntegrated": 70,
+    "rosterEntriesIntegrated": 71,
     "fullCatalogLoadedByGenerator": false
   },
   "nextSteps": [
