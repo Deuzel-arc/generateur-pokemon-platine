@@ -14,6 +14,18 @@ function check(name, fn) {
   catch (error) { checks.push({ name, status: "FAIL", message: error.message }); }
 }
 
+check("Strategic data schema explicitly separates raw extraction from verified runtime data", () => {
+  const schema = JSON.parse(readFileSync(new URL("../data/strategic_data_schema.json", import.meta.url), "utf8"));
+  assert.equal(schema.schemaVersion, "1.0.0");
+  assert.equal(schema.status, "specification_only_not_runtime_data");
+  assert.equal(schema.joinPolicy.allowIndexOnlyCrossRomJoin, false);
+  assert.equal(schema.joinPolicy.allowUnverifiedOverridesInRuntime, false);
+  assert.ok(schema.entities.species.required.includes("provenance"));
+  assert.ok(schema.entities.move.required.includes("provenance"));
+  assert.ok(schema.runtimeAcceptanceRules.some(rule => rule.includes("noms ou d'effets inventés")));
+  assert.ok(schema.runtimeAcceptanceRules.some(rule => rule.includes("hors périmètre immédiat")));
+});
+
 check("Gen IV move reference boundary is explicit and extra ROM IDs remain unmapped", () => {
   const boundary = gen4ReferenceStatus.moveTableBoundary;
   assert.equal(gen4ReferenceStatus.reference.commit, "06c6e9a0348da283be8d9225d0bec03c349ff5c2");
