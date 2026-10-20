@@ -47,3 +47,14 @@ Do not average percentages from different workstreams unless a documented weight
 ## Deployment
 
 GitHub Pages deployment is configured separately in `.github/workflows/pages.yml`. This quality workflow is a required practical preflight, but repository branch protection is an account-level setting and is not enabled by this file. Configure a required status check in GitHub branch protection if direct pushes must also be prevented.
+
+### Direct binary audits (local only)
+
+The original ROM binaries are intentionally not committed to this repository. With the exact CPUF and CPUE `.nds` files available locally, run:
+
+```sh
+node scripts/audit-rom-type-bytes.mjs "/path/to/CPUF.nds" "/path/to/CPUE.nds"
+node scripts/audit-evolution-roms.mjs "/path/to/CPUF.nds" "/path/to/CPUE.nds"
+```
+
+Both commands verify the game code and exact SHA-256 before parsing NitroFS/NARC records. They fail closed if a different ROM revision is supplied. Their output is a raw-byte audit, not a claim that custom Project PM mechanics or every internal ID's display name has been semantically decoded. The CI suite validates the checked-in audit summaries and guardrails; it does not need or redistribute the ROM binaries.
