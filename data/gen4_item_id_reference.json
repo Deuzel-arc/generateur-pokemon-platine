@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "title": "Référence canonique des IDs d'objets et effets tenus — Platine Gen IV",
-  "status": "canonical_symbol_reference_count_reconciled_archive_index_mapping_unresolved",
+  "status": "canonical_symbols_and_candidate_archive_mapping_anchor_checked",
   "source": {
     "repository": "pret/pokeplatinum",
     "commit": "06c6e9a0348da283be8d9225d0bec03c349ff5c2",
@@ -26,2342 +26,3278 @@
     {
       "id": 0,
       "symbol": "ITEM_NONE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 0,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 1,
       "symbol": "ITEM_MASTER_BALL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 1,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 2,
       "symbol": "ITEM_ULTRA_BALL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 2,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 3,
       "symbol": "ITEM_GREAT_BALL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 3,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 4,
       "symbol": "ITEM_POKE_BALL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 4,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 5,
       "symbol": "ITEM_SAFARI_BALL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 5,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 6,
       "symbol": "ITEM_NET_BALL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 6,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 7,
       "symbol": "ITEM_DIVE_BALL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 7,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 8,
       "symbol": "ITEM_NEST_BALL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 8,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 9,
       "symbol": "ITEM_REPEAT_BALL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 9,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 10,
       "symbol": "ITEM_TIMER_BALL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 10,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 11,
       "symbol": "ITEM_LUXURY_BALL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 11,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 12,
       "symbol": "ITEM_PREMIER_BALL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 12,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 13,
       "symbol": "ITEM_DUSK_BALL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 13,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 14,
       "symbol": "ITEM_HEAL_BALL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 14,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 15,
       "symbol": "ITEM_QUICK_BALL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 15,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 16,
       "symbol": "ITEM_CHERISH_BALL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 16,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 17,
       "symbol": "ITEM_POTION",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 17,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 18,
       "symbol": "ITEM_ANTIDOTE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 18,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 19,
       "symbol": "ITEM_BURN_HEAL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 19,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 20,
       "symbol": "ITEM_ICE_HEAL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 20,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 21,
       "symbol": "ITEM_AWAKENING",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 21,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 22,
       "symbol": "ITEM_PARLYZ_HEAL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 22,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 23,
       "symbol": "ITEM_FULL_RESTORE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 23,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 24,
       "symbol": "ITEM_MAX_POTION",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 24,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 25,
       "symbol": "ITEM_HYPER_POTION",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 25,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 26,
       "symbol": "ITEM_SUPER_POTION",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 26,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 27,
       "symbol": "ITEM_FULL_HEAL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 27,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 28,
       "symbol": "ITEM_REVIVE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 28,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 29,
       "symbol": "ITEM_MAX_REVIVE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 29,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 30,
       "symbol": "ITEM_FRESH_WATER",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 30,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 31,
       "symbol": "ITEM_SODA_POP",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 31,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 32,
       "symbol": "ITEM_LEMONADE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 32,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 33,
       "symbol": "ITEM_MOOMOO_MILK",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 33,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 34,
       "symbol": "ITEM_ENERGYPOWDER",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 34,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 35,
       "symbol": "ITEM_ENERGY_ROOT",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 35,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 36,
       "symbol": "ITEM_HEAL_POWDER",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 36,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 37,
       "symbol": "ITEM_REVIVAL_HERB",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 37,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 38,
       "symbol": "ITEM_ETHER",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 38,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 39,
       "symbol": "ITEM_MAX_ETHER",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 39,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 40,
       "symbol": "ITEM_ELIXIR",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 40,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 41,
       "symbol": "ITEM_MAX_ELIXIR",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 41,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 42,
       "symbol": "ITEM_LAVA_COOKIE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 42,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 43,
       "symbol": "ITEM_BERRY_JUICE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 43,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 44,
       "symbol": "ITEM_SACRED_ASH",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 44,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 45,
       "symbol": "ITEM_HP_UP",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 45,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 46,
       "symbol": "ITEM_PROTEIN",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 46,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 47,
       "symbol": "ITEM_IRON",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 47,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 48,
       "symbol": "ITEM_CARBOS",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 48,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 49,
       "symbol": "ITEM_CALCIUM",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 49,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 50,
       "symbol": "ITEM_RARE_CANDY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 50,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 51,
       "symbol": "ITEM_PP_UP",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 51,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 52,
       "symbol": "ITEM_ZINC",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 52,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 53,
       "symbol": "ITEM_PP_MAX",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 53,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 54,
       "symbol": "ITEM_OLD_GATEAU",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 54,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 55,
       "symbol": "ITEM_GUARD_SPEC",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 55,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 56,
       "symbol": "ITEM_DIRE_HIT",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 56,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 57,
       "symbol": "ITEM_X_ATTACK",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 57,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 58,
       "symbol": "ITEM_X_DEFENSE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 58,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 59,
       "symbol": "ITEM_X_SPEED",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 59,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 60,
       "symbol": "ITEM_X_ACCURACY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 60,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 61,
       "symbol": "ITEM_X_SPECIAL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 61,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 62,
       "symbol": "ITEM_X_SP_DEF",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 62,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 63,
       "symbol": "ITEM_POKE_DOLL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 63,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 64,
       "symbol": "ITEM_FLUFFY_TAIL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 64,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 65,
       "symbol": "ITEM_BLUE_FLUTE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 65,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 66,
       "symbol": "ITEM_YELLOW_FLUTE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 66,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 67,
       "symbol": "ITEM_RED_FLUTE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 67,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 68,
       "symbol": "ITEM_BLACK_FLUTE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 68,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 69,
       "symbol": "ITEM_WHITE_FLUTE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 69,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 70,
       "symbol": "ITEM_SHOAL_SALT",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 70,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 71,
       "symbol": "ITEM_SHOAL_SHELL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 71,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 72,
       "symbol": "ITEM_RED_SHARD",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 72,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 73,
       "symbol": "ITEM_BLUE_SHARD",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 73,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 74,
       "symbol": "ITEM_YELLOW_SHARD",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 74,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 75,
       "symbol": "ITEM_GREEN_SHARD",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 75,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 76,
       "symbol": "ITEM_SUPER_REPEL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 76,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 77,
       "symbol": "ITEM_MAX_REPEL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 77,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 78,
       "symbol": "ITEM_ESCAPE_ROPE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 78,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 79,
       "symbol": "ITEM_REPEL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 79,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 80,
       "symbol": "ITEM_SUN_STONE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 80,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 81,
       "symbol": "ITEM_MOON_STONE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 81,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 82,
       "symbol": "ITEM_FIRE_STONE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 82,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 83,
       "symbol": "ITEM_THUNDERSTONE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 83,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 84,
       "symbol": "ITEM_WATER_STONE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 84,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 85,
       "symbol": "ITEM_LEAF_STONE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 85,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 86,
       "symbol": "ITEM_TINYMUSHROOM",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 86,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 87,
       "symbol": "ITEM_BIG_MUSHROOM",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 87,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 88,
       "symbol": "ITEM_PEARL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 88,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 89,
       "symbol": "ITEM_BIG_PEARL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 89,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 90,
       "symbol": "ITEM_STARDUST",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 90,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 91,
       "symbol": "ITEM_STAR_PIECE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 91,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 92,
       "symbol": "ITEM_NUGGET",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 92,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 93,
       "symbol": "ITEM_HEART_SCALE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 93,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 94,
       "symbol": "ITEM_HONEY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 94,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 95,
       "symbol": "ITEM_GROWTH_MULCH",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 95,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 96,
       "symbol": "ITEM_DAMP_MULCH",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 96,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 97,
       "symbol": "ITEM_STABLE_MULCH",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 97,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 98,
       "symbol": "ITEM_GOOEY_MULCH",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 98,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 99,
       "symbol": "ITEM_ROOT_FOSSIL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 99,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 100,
       "symbol": "ITEM_CLAW_FOSSIL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 100,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 101,
       "symbol": "ITEM_HELIX_FOSSIL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 101,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 102,
       "symbol": "ITEM_DOME_FOSSIL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 102,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 103,
       "symbol": "ITEM_OLD_AMBER",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 103,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 104,
       "symbol": "ITEM_ARMOR_FOSSIL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 104,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 105,
       "symbol": "ITEM_SKULL_FOSSIL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 105,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 106,
       "symbol": "ITEM_RARE_BONE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 106,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 107,
       "symbol": "ITEM_SHINY_STONE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 107,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 108,
       "symbol": "ITEM_DUSK_STONE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 108,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 109,
       "symbol": "ITEM_DAWN_STONE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 109,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 110,
       "symbol": "ITEM_OVAL_STONE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 110,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 111,
       "symbol": "ITEM_ODD_KEYSTONE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 111,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 112,
       "symbol": "ITEM_GRISEOUS_ORB",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 112,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 113,
       "symbol": "ITEM_UNUSED_113",
-      "status": "reserved_unused_slot"
+      "status": "reserved_unused_slot",
+      "archiveIndex": null,
+      "mappingStatus": "reserved_no_archive_entry_expected"
     },
     {
       "id": 114,
       "symbol": "ITEM_UNUSED_114",
-      "status": "reserved_unused_slot"
+      "status": "reserved_unused_slot",
+      "archiveIndex": null,
+      "mappingStatus": "reserved_no_archive_entry_expected"
     },
     {
       "id": 115,
       "symbol": "ITEM_UNUSED_115",
-      "status": "reserved_unused_slot"
+      "status": "reserved_unused_slot",
+      "archiveIndex": null,
+      "mappingStatus": "reserved_no_archive_entry_expected"
     },
     {
       "id": 116,
       "symbol": "ITEM_UNUSED_116",
-      "status": "reserved_unused_slot"
+      "status": "reserved_unused_slot",
+      "archiveIndex": null,
+      "mappingStatus": "reserved_no_archive_entry_expected"
     },
     {
       "id": 117,
       "symbol": "ITEM_UNUSED_117",
-      "status": "reserved_unused_slot"
+      "status": "reserved_unused_slot",
+      "archiveIndex": null,
+      "mappingStatus": "reserved_no_archive_entry_expected"
     },
     {
       "id": 118,
       "symbol": "ITEM_UNUSED_118",
-      "status": "reserved_unused_slot"
+      "status": "reserved_unused_slot",
+      "archiveIndex": null,
+      "mappingStatus": "reserved_no_archive_entry_expected"
     },
     {
       "id": 119,
       "symbol": "ITEM_UNUSED_119",
-      "status": "reserved_unused_slot"
+      "status": "reserved_unused_slot",
+      "archiveIndex": null,
+      "mappingStatus": "reserved_no_archive_entry_expected"
     },
     {
       "id": 120,
       "symbol": "ITEM_UNUSED_120",
-      "status": "reserved_unused_slot"
+      "status": "reserved_unused_slot",
+      "archiveIndex": null,
+      "mappingStatus": "reserved_no_archive_entry_expected"
     },
     {
       "id": 121,
       "symbol": "ITEM_UNUSED_121",
-      "status": "reserved_unused_slot"
+      "status": "reserved_unused_slot",
+      "archiveIndex": null,
+      "mappingStatus": "reserved_no_archive_entry_expected"
     },
     {
       "id": 122,
       "symbol": "ITEM_UNUSED_122",
-      "status": "reserved_unused_slot"
+      "status": "reserved_unused_slot",
+      "archiveIndex": null,
+      "mappingStatus": "reserved_no_archive_entry_expected"
     },
     {
       "id": 123,
       "symbol": "ITEM_UNUSED_123",
-      "status": "reserved_unused_slot"
+      "status": "reserved_unused_slot",
+      "archiveIndex": null,
+      "mappingStatus": "reserved_no_archive_entry_expected"
     },
     {
       "id": 124,
       "symbol": "ITEM_UNUSED_124",
-      "status": "reserved_unused_slot"
+      "status": "reserved_unused_slot",
+      "archiveIndex": null,
+      "mappingStatus": "reserved_no_archive_entry_expected"
     },
     {
       "id": 125,
       "symbol": "ITEM_UNUSED_125",
-      "status": "reserved_unused_slot"
+      "status": "reserved_unused_slot",
+      "archiveIndex": null,
+      "mappingStatus": "reserved_no_archive_entry_expected"
     },
     {
       "id": 126,
       "symbol": "ITEM_UNUSED_126",
-      "status": "reserved_unused_slot"
+      "status": "reserved_unused_slot",
+      "archiveIndex": null,
+      "mappingStatus": "reserved_no_archive_entry_expected"
     },
     {
       "id": 127,
       "symbol": "ITEM_UNUSED_127",
-      "status": "reserved_unused_slot"
+      "status": "reserved_unused_slot",
+      "archiveIndex": null,
+      "mappingStatus": "reserved_no_archive_entry_expected"
     },
     {
       "id": 128,
       "symbol": "ITEM_UNUSED_128",
-      "status": "reserved_unused_slot"
+      "status": "reserved_unused_slot",
+      "archiveIndex": null,
+      "mappingStatus": "reserved_no_archive_entry_expected"
     },
     {
       "id": 129,
       "symbol": "ITEM_UNUSED_129",
-      "status": "reserved_unused_slot"
+      "status": "reserved_unused_slot",
+      "archiveIndex": null,
+      "mappingStatus": "reserved_no_archive_entry_expected"
     },
     {
       "id": 130,
       "symbol": "ITEM_UNUSED_130",
-      "status": "reserved_unused_slot"
+      "status": "reserved_unused_slot",
+      "archiveIndex": null,
+      "mappingStatus": "reserved_no_archive_entry_expected"
     },
     {
       "id": 131,
       "symbol": "ITEM_UNUSED_131",
-      "status": "reserved_unused_slot"
+      "status": "reserved_unused_slot",
+      "archiveIndex": null,
+      "mappingStatus": "reserved_no_archive_entry_expected"
     },
     {
       "id": 132,
       "symbol": "ITEM_UNUSED_132",
-      "status": "reserved_unused_slot"
+      "status": "reserved_unused_slot",
+      "archiveIndex": null,
+      "mappingStatus": "reserved_no_archive_entry_expected"
     },
     {
       "id": 133,
       "symbol": "ITEM_UNUSED_133",
-      "status": "reserved_unused_slot"
+      "status": "reserved_unused_slot",
+      "archiveIndex": null,
+      "mappingStatus": "reserved_no_archive_entry_expected"
     },
     {
       "id": 134,
       "symbol": "ITEM_UNUSED_134",
-      "status": "reserved_unused_slot"
+      "status": "reserved_unused_slot",
+      "archiveIndex": null,
+      "mappingStatus": "reserved_no_archive_entry_expected"
     },
     {
       "id": 135,
       "symbol": "ITEM_ADAMANT_ORB",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 113,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 136,
       "symbol": "ITEM_LUSTROUS_ORB",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 114,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 137,
       "symbol": "ITEM_GRASS_MAIL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 115,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 138,
       "symbol": "ITEM_FLAME_MAIL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 116,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 139,
       "symbol": "ITEM_BUBBLE_MAIL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 117,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 140,
       "symbol": "ITEM_BLOOM_MAIL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 118,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 141,
       "symbol": "ITEM_TUNNEL_MAIL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 119,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 142,
       "symbol": "ITEM_STEEL_MAIL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 120,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 143,
       "symbol": "ITEM_HEART_MAIL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 121,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 144,
       "symbol": "ITEM_SNOW_MAIL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 122,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 145,
       "symbol": "ITEM_SPACE_MAIL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 123,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 146,
       "symbol": "ITEM_AIR_MAIL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 124,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 147,
       "symbol": "ITEM_MOSAIC_MAIL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 125,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 148,
       "symbol": "ITEM_BRICK_MAIL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 126,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 149,
       "symbol": "ITEM_CHERI_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 127,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 150,
       "symbol": "ITEM_CHESTO_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 128,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 151,
       "symbol": "ITEM_PECHA_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 129,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 152,
       "symbol": "ITEM_RAWST_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 130,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 153,
       "symbol": "ITEM_ASPEAR_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 131,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 154,
       "symbol": "ITEM_LEPPA_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 132,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 155,
       "symbol": "ITEM_ORAN_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 133,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 156,
       "symbol": "ITEM_PERSIM_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 134,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 157,
       "symbol": "ITEM_LUM_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 135,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 158,
       "symbol": "ITEM_SITRUS_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 136,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 159,
       "symbol": "ITEM_FIGY_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 137,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 160,
       "symbol": "ITEM_WIKI_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 138,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 161,
       "symbol": "ITEM_MAGO_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 139,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 162,
       "symbol": "ITEM_AGUAV_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 140,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 163,
       "symbol": "ITEM_IAPAPA_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 141,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 164,
       "symbol": "ITEM_RAZZ_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 142,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 165,
       "symbol": "ITEM_BLUK_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 143,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 166,
       "symbol": "ITEM_NANAB_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 144,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 167,
       "symbol": "ITEM_WEPEAR_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 145,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 168,
       "symbol": "ITEM_PINAP_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 146,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 169,
       "symbol": "ITEM_POMEG_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 147,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 170,
       "symbol": "ITEM_KELPSY_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 148,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 171,
       "symbol": "ITEM_QUALOT_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 149,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 172,
       "symbol": "ITEM_HONDEW_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 150,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 173,
       "symbol": "ITEM_GREPA_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 151,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 174,
       "symbol": "ITEM_TAMATO_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 152,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 175,
       "symbol": "ITEM_CORNN_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 153,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 176,
       "symbol": "ITEM_MAGOST_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 154,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 177,
       "symbol": "ITEM_RABUTA_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 155,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 178,
       "symbol": "ITEM_NOMEL_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 156,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 179,
       "symbol": "ITEM_SPELON_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 157,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 180,
       "symbol": "ITEM_PAMTRE_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 158,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 181,
       "symbol": "ITEM_WATMEL_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 159,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 182,
       "symbol": "ITEM_DURIN_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 160,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 183,
       "symbol": "ITEM_BELUE_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 161,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 184,
       "symbol": "ITEM_OCCA_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 162,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 185,
       "symbol": "ITEM_PASSHO_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 163,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 186,
       "symbol": "ITEM_WACAN_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 164,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 187,
       "symbol": "ITEM_RINDO_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 165,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 188,
       "symbol": "ITEM_YACHE_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 166,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 189,
       "symbol": "ITEM_CHOPLE_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 167,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 190,
       "symbol": "ITEM_KEBIA_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 168,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 191,
       "symbol": "ITEM_SHUCA_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 169,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 192,
       "symbol": "ITEM_COBA_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 170,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 193,
       "symbol": "ITEM_PAYAPA_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 171,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 194,
       "symbol": "ITEM_TANGA_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 172,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 195,
       "symbol": "ITEM_CHARTI_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 173,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 196,
       "symbol": "ITEM_KASIB_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 174,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 197,
       "symbol": "ITEM_HABAN_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 175,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 198,
       "symbol": "ITEM_COLBUR_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 176,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 199,
       "symbol": "ITEM_BABIRI_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 177,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 200,
       "symbol": "ITEM_CHILAN_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 178,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 201,
       "symbol": "ITEM_LIECHI_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 179,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 202,
       "symbol": "ITEM_GANLON_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 180,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 203,
       "symbol": "ITEM_SALAC_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 181,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 204,
       "symbol": "ITEM_PETAYA_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 182,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 205,
       "symbol": "ITEM_APICOT_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 183,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 206,
       "symbol": "ITEM_LANSAT_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 184,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 207,
       "symbol": "ITEM_STARF_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 185,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 208,
       "symbol": "ITEM_ENIGMA_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 186,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 209,
       "symbol": "ITEM_MICLE_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 187,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 210,
       "symbol": "ITEM_CUSTAP_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 188,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 211,
       "symbol": "ITEM_JABOCA_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 189,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 212,
       "symbol": "ITEM_ROWAP_BERRY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 190,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 213,
       "symbol": "ITEM_BRIGHTPOWDER",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 191,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 214,
       "symbol": "ITEM_WHITE_HERB",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 192,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 215,
       "symbol": "ITEM_MACHO_BRACE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 193,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 216,
       "symbol": "ITEM_EXP_SHARE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 194,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 217,
       "symbol": "ITEM_QUICK_CLAW",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 195,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 218,
       "symbol": "ITEM_SOOTHE_BELL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 196,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 219,
       "symbol": "ITEM_MENTAL_HERB",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 197,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 220,
       "symbol": "ITEM_CHOICE_BAND",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 198,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 221,
       "symbol": "ITEM_KINGS_ROCK",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 199,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 222,
       "symbol": "ITEM_SILVERPOWDER",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 200,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 223,
       "symbol": "ITEM_AMULET_COIN",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 201,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 224,
       "symbol": "ITEM_CLEANSE_TAG",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 202,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 225,
       "symbol": "ITEM_SOUL_DEW",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 203,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 226,
       "symbol": "ITEM_DEEPSEATOOTH",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 204,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 227,
       "symbol": "ITEM_DEEPSEASCALE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 205,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 228,
       "symbol": "ITEM_SMOKE_BALL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 206,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 229,
       "symbol": "ITEM_EVERSTONE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 207,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 230,
       "symbol": "ITEM_FOCUS_BAND",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 208,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 231,
       "symbol": "ITEM_LUCKY_EGG",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 209,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 232,
       "symbol": "ITEM_SCOPE_LENS",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 210,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 233,
       "symbol": "ITEM_METAL_COAT",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 211,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 234,
       "symbol": "ITEM_LEFTOVERS",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 212,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 235,
       "symbol": "ITEM_DRAGON_SCALE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 213,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 236,
       "symbol": "ITEM_LIGHT_BALL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 214,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 237,
       "symbol": "ITEM_SOFT_SAND",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 215,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 238,
       "symbol": "ITEM_HARD_STONE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 216,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 239,
       "symbol": "ITEM_MIRACLE_SEED",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 217,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 240,
       "symbol": "ITEM_BLACKGLASSES",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 218,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 241,
       "symbol": "ITEM_BLACK_BELT",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 219,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 242,
       "symbol": "ITEM_MAGNET",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 220,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 243,
       "symbol": "ITEM_MYSTIC_WATER",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 221,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 244,
       "symbol": "ITEM_SHARP_BEAK",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 222,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 245,
       "symbol": "ITEM_POISON_BARB",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 223,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 246,
       "symbol": "ITEM_NEVERMELTICE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 224,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 247,
       "symbol": "ITEM_SPELL_TAG",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 225,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 248,
       "symbol": "ITEM_TWISTEDSPOON",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 226,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 249,
       "symbol": "ITEM_CHARCOAL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 227,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 250,
       "symbol": "ITEM_DRAGON_FANG",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 228,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 251,
       "symbol": "ITEM_SILK_SCARF",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 229,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 252,
       "symbol": "ITEM_UPGRADE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 230,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 253,
       "symbol": "ITEM_SHELL_BELL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 231,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 254,
       "symbol": "ITEM_SEA_INCENSE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 232,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 255,
       "symbol": "ITEM_LAX_INCENSE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 233,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 256,
       "symbol": "ITEM_LUCKY_PUNCH",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 234,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 257,
       "symbol": "ITEM_METAL_POWDER",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 235,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 258,
       "symbol": "ITEM_THICK_CLUB",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 236,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 259,
       "symbol": "ITEM_STICK",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 237,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 260,
       "symbol": "ITEM_RED_SCARF",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 238,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 261,
       "symbol": "ITEM_BLUE_SCARF",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 239,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 262,
       "symbol": "ITEM_PINK_SCARF",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 240,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 263,
       "symbol": "ITEM_GREEN_SCARF",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 241,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 264,
       "symbol": "ITEM_YELLOW_SCARF",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 242,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 265,
       "symbol": "ITEM_WIDE_LENS",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 243,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 266,
       "symbol": "ITEM_MUSCLE_BAND",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 244,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 267,
       "symbol": "ITEM_WISE_GLASSES",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 245,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 268,
       "symbol": "ITEM_EXPERT_BELT",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 246,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 269,
       "symbol": "ITEM_LIGHT_CLAY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 247,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 270,
       "symbol": "ITEM_LIFE_ORB",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 248,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 271,
       "symbol": "ITEM_POWER_HERB",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 249,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 272,
       "symbol": "ITEM_TOXIC_ORB",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 250,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 273,
       "symbol": "ITEM_FLAME_ORB",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 251,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 274,
       "symbol": "ITEM_QUICK_POWDER",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 252,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 275,
       "symbol": "ITEM_FOCUS_SASH",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 253,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 276,
       "symbol": "ITEM_ZOOM_LENS",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 254,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 277,
       "symbol": "ITEM_METRONOME",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 255,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 278,
       "symbol": "ITEM_IRON_BALL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 256,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 279,
       "symbol": "ITEM_LAGGING_TAIL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 257,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 280,
       "symbol": "ITEM_DESTINY_KNOT",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 258,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 281,
       "symbol": "ITEM_BLACK_SLUDGE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 259,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 282,
       "symbol": "ITEM_ICY_ROCK",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 260,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 283,
       "symbol": "ITEM_SMOOTH_ROCK",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 261,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 284,
       "symbol": "ITEM_HEAT_ROCK",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 262,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 285,
       "symbol": "ITEM_DAMP_ROCK",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 263,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 286,
       "symbol": "ITEM_GRIP_CLAW",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 264,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 287,
       "symbol": "ITEM_CHOICE_SCARF",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 265,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 288,
       "symbol": "ITEM_STICKY_BARB",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 266,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 289,
       "symbol": "ITEM_POWER_BRACER",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 267,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 290,
       "symbol": "ITEM_POWER_BELT",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 268,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 291,
       "symbol": "ITEM_POWER_LENS",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 269,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 292,
       "symbol": "ITEM_POWER_BAND",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 270,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 293,
       "symbol": "ITEM_POWER_ANKLET",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 271,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 294,
       "symbol": "ITEM_POWER_WEIGHT",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 272,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 295,
       "symbol": "ITEM_SHED_SHELL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 273,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 296,
       "symbol": "ITEM_BIG_ROOT",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 274,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 297,
       "symbol": "ITEM_CHOICE_SPECS",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 275,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 298,
       "symbol": "ITEM_FLAME_PLATE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 276,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 299,
       "symbol": "ITEM_SPLASH_PLATE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 277,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 300,
       "symbol": "ITEM_ZAP_PLATE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 278,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 301,
       "symbol": "ITEM_MEADOW_PLATE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 279,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 302,
       "symbol": "ITEM_ICICLE_PLATE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 280,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 303,
       "symbol": "ITEM_FIST_PLATE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 281,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 304,
       "symbol": "ITEM_TOXIC_PLATE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 282,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 305,
       "symbol": "ITEM_EARTH_PLATE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 283,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 306,
       "symbol": "ITEM_SKY_PLATE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 284,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 307,
       "symbol": "ITEM_MIND_PLATE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 285,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 308,
       "symbol": "ITEM_INSECT_PLATE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 286,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 309,
       "symbol": "ITEM_STONE_PLATE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 287,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 310,
       "symbol": "ITEM_SPOOKY_PLATE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 288,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 311,
       "symbol": "ITEM_DRACO_PLATE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 289,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 312,
       "symbol": "ITEM_DREAD_PLATE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 290,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 313,
       "symbol": "ITEM_IRON_PLATE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 291,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 314,
       "symbol": "ITEM_ODD_INCENSE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 292,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 315,
       "symbol": "ITEM_ROCK_INCENSE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 293,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 316,
       "symbol": "ITEM_FULL_INCENSE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 294,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 317,
       "symbol": "ITEM_WAVE_INCENSE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 295,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 318,
       "symbol": "ITEM_ROSE_INCENSE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 296,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 319,
       "symbol": "ITEM_LUCK_INCENSE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 297,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 320,
       "symbol": "ITEM_PURE_INCENSE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 298,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 321,
       "symbol": "ITEM_PROTECTOR",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 299,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 322,
       "symbol": "ITEM_ELECTIRIZER",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 300,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 323,
       "symbol": "ITEM_MAGMARIZER",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 301,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 324,
       "symbol": "ITEM_DUBIOUS_DISC",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 302,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 325,
       "symbol": "ITEM_REAPER_CLOTH",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 303,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 326,
       "symbol": "ITEM_RAZOR_CLAW",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 304,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 327,
       "symbol": "ITEM_RAZOR_FANG",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 305,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 328,
       "symbol": "ITEM_TM01",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 306,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 329,
       "symbol": "ITEM_TM02",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 307,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 330,
       "symbol": "ITEM_TM03",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 308,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 331,
       "symbol": "ITEM_TM04",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 309,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 332,
       "symbol": "ITEM_TM05",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 310,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 333,
       "symbol": "ITEM_TM06",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 311,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 334,
       "symbol": "ITEM_TM07",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 312,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 335,
       "symbol": "ITEM_TM08",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 313,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 336,
       "symbol": "ITEM_TM09",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 314,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 337,
       "symbol": "ITEM_TM10",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 315,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 338,
       "symbol": "ITEM_TM11",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 316,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 339,
       "symbol": "ITEM_TM12",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 317,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 340,
       "symbol": "ITEM_TM13",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 318,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 341,
       "symbol": "ITEM_TM14",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 319,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 342,
       "symbol": "ITEM_TM15",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 320,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 343,
       "symbol": "ITEM_TM16",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 321,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 344,
       "symbol": "ITEM_TM17",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 322,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 345,
       "symbol": "ITEM_TM18",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 323,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 346,
       "symbol": "ITEM_TM19",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 324,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 347,
       "symbol": "ITEM_TM20",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 325,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 348,
       "symbol": "ITEM_TM21",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 326,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 349,
       "symbol": "ITEM_TM22",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 327,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 350,
       "symbol": "ITEM_TM23",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 328,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 351,
       "symbol": "ITEM_TM24",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 329,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 352,
       "symbol": "ITEM_TM25",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 330,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 353,
       "symbol": "ITEM_TM26",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 331,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 354,
       "symbol": "ITEM_TM27",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 332,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 355,
       "symbol": "ITEM_TM28",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 333,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 356,
       "symbol": "ITEM_TM29",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 334,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 357,
       "symbol": "ITEM_TM30",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 335,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 358,
       "symbol": "ITEM_TM31",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 336,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 359,
       "symbol": "ITEM_TM32",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 337,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 360,
       "symbol": "ITEM_TM33",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 338,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 361,
       "symbol": "ITEM_TM34",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 339,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 362,
       "symbol": "ITEM_TM35",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 340,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 363,
       "symbol": "ITEM_TM36",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 341,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 364,
       "symbol": "ITEM_TM37",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 342,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 365,
       "symbol": "ITEM_TM38",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 343,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 366,
       "symbol": "ITEM_TM39",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 344,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 367,
       "symbol": "ITEM_TM40",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 345,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 368,
       "symbol": "ITEM_TM41",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 346,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 369,
       "symbol": "ITEM_TM42",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 347,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 370,
       "symbol": "ITEM_TM43",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 348,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 371,
       "symbol": "ITEM_TM44",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 349,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 372,
       "symbol": "ITEM_TM45",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 350,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 373,
       "symbol": "ITEM_TM46",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 351,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 374,
       "symbol": "ITEM_TM47",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 352,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 375,
       "symbol": "ITEM_TM48",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 353,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 376,
       "symbol": "ITEM_TM49",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 354,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 377,
       "symbol": "ITEM_TM50",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 355,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 378,
       "symbol": "ITEM_TM51",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 356,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 379,
       "symbol": "ITEM_TM52",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 357,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 380,
       "symbol": "ITEM_TM53",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 358,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 381,
       "symbol": "ITEM_TM54",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 359,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 382,
       "symbol": "ITEM_TM55",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 360,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 383,
       "symbol": "ITEM_TM56",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 361,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 384,
       "symbol": "ITEM_TM57",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 362,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 385,
       "symbol": "ITEM_TM58",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 363,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 386,
       "symbol": "ITEM_TM59",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 364,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 387,
       "symbol": "ITEM_TM60",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 365,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 388,
       "symbol": "ITEM_TM61",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 366,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 389,
       "symbol": "ITEM_TM62",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 367,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 390,
       "symbol": "ITEM_TM63",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 368,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 391,
       "symbol": "ITEM_TM64",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 369,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 392,
       "symbol": "ITEM_TM65",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 370,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 393,
       "symbol": "ITEM_TM66",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 371,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 394,
       "symbol": "ITEM_TM67",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 372,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 395,
       "symbol": "ITEM_TM68",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 373,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 396,
       "symbol": "ITEM_TM69",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 374,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 397,
       "symbol": "ITEM_TM70",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 375,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 398,
       "symbol": "ITEM_TM71",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 376,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 399,
       "symbol": "ITEM_TM72",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 377,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 400,
       "symbol": "ITEM_TM73",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 378,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 401,
       "symbol": "ITEM_TM74",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 379,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 402,
       "symbol": "ITEM_TM75",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 380,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 403,
       "symbol": "ITEM_TM76",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 381,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 404,
       "symbol": "ITEM_TM77",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 382,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 405,
       "symbol": "ITEM_TM78",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 383,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 406,
       "symbol": "ITEM_TM79",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 384,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 407,
       "symbol": "ITEM_TM80",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 385,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 408,
       "symbol": "ITEM_TM81",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 386,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 409,
       "symbol": "ITEM_TM82",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 387,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 410,
       "symbol": "ITEM_TM83",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 388,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 411,
       "symbol": "ITEM_TM84",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 389,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 412,
       "symbol": "ITEM_TM85",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 390,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 413,
       "symbol": "ITEM_TM86",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 391,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 414,
       "symbol": "ITEM_TM87",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 392,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 415,
       "symbol": "ITEM_TM88",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 393,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 416,
       "symbol": "ITEM_TM89",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 394,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 417,
       "symbol": "ITEM_TM90",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 395,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 418,
       "symbol": "ITEM_TM91",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 396,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 419,
       "symbol": "ITEM_TM92",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 397,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 420,
       "symbol": "ITEM_HM01",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 398,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 421,
       "symbol": "ITEM_HM02",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 399,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 422,
       "symbol": "ITEM_HM03",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 400,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 423,
       "symbol": "ITEM_HM04",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 401,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 424,
       "symbol": "ITEM_HM05",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 402,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 425,
       "symbol": "ITEM_HM06",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 403,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 426,
       "symbol": "ITEM_HM07",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 404,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 427,
       "symbol": "ITEM_HM08",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 405,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 428,
       "symbol": "ITEM_EXPLORER_KIT",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 406,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 429,
       "symbol": "ITEM_LOOT_SACK",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 407,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 430,
       "symbol": "ITEM_RULE_BOOK",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 408,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 431,
       "symbol": "ITEM_POKE_RADAR",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 409,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 432,
       "symbol": "ITEM_POINT_CARD",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 410,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 433,
       "symbol": "ITEM_JOURNAL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 411,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 434,
       "symbol": "ITEM_SEAL_CASE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 412,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 435,
       "symbol": "ITEM_FASHION_CASE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 413,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 436,
       "symbol": "ITEM_SEAL_BAG",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 414,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 437,
       "symbol": "ITEM_PAL_PAD",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 415,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 438,
       "symbol": "ITEM_WORKS_KEY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 416,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 439,
       "symbol": "ITEM_OLD_CHARM",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 417,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 440,
       "symbol": "ITEM_GALACTIC_KEY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 418,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 441,
       "symbol": "ITEM_RED_CHAIN",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 419,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 442,
       "symbol": "ITEM_TOWN_MAP",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 420,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 443,
       "symbol": "ITEM_VS_SEEKER",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 421,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 444,
       "symbol": "ITEM_COIN_CASE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 422,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 445,
       "symbol": "ITEM_OLD_ROD",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 423,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 446,
       "symbol": "ITEM_GOOD_ROD",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 424,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 447,
       "symbol": "ITEM_SUPER_ROD",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 425,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 448,
       "symbol": "ITEM_SPRAYDUCK",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 426,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 449,
       "symbol": "ITEM_POFFIN_CASE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 427,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 450,
       "symbol": "ITEM_BICYCLE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 428,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 451,
       "symbol": "ITEM_SUITE_KEY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 429,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 452,
       "symbol": "ITEM_OAKS_LETTER",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 430,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 453,
       "symbol": "ITEM_LUNAR_WING",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 431,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 454,
       "symbol": "ITEM_MEMBER_CARD",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 432,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 455,
       "symbol": "ITEM_AZURE_FLUTE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 433,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 456,
       "symbol": "ITEM_S_S_TICKET",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 434,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 457,
       "symbol": "ITEM_CONTEST_PASS",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 435,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 458,
       "symbol": "ITEM_MAGMA_STONE",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 436,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 459,
       "symbol": "ITEM_PARCEL",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 437,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 460,
       "symbol": "ITEM_COUPON_1",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 438,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 461,
       "symbol": "ITEM_COUPON_2",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 439,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 462,
       "symbol": "ITEM_COUPON_3",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 440,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 463,
       "symbol": "ITEM_STORAGE_KEY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 441,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 464,
       "symbol": "ITEM_SECRETPOTION",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 442,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 465,
       "symbol": "ITEM_VS_RECORDER",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 443,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 466,
       "symbol": "ITEM_GRACIDEA",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 444,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     },
     {
       "id": 467,
       "symbol": "ITEM_SECRET_KEY",
-      "status": "canonical_symbol"
+      "status": "canonical_symbol",
+      "archiveIndex": 445,
+      "mappingStatus": "inferred_from_canonical_order_and_reserved_id_gaps"
     }
   ],
   "holdEffects": [
@@ -2988,13 +3924,45 @@
     "projectPmPlItemDataArchiveEntries": 470,
     "platinumItemDataArchiveEntries": 442,
     "projectPmItemDataArchiveEntries": 442,
-    "status": "count_match_mapping_not_proven",
-    "interpretation": "La référence canonique compte 468 IDs (0–467), dont 22 slots ITEM_UNUSED_113 à ITEM_UNUSED_134. Les 446 IDs canoniques non réservés correspondent en nombre aux 446 entrées de pl_item_data.narc extraites de Platine original. Cette égalité de compte est un contrôle structurel, pas une preuve que les entrées NARC sont dans le même ordre que les IDs d'objets. La décompilation utilise sItemArchiveIDs[item].dataID pour traduire l'ID logique en index d'archive. Il faut récupérer/reconstruire ce mapping avant toute jointure par position. Project PM expose 470 entrées pl_item_data, dont 24 de plus que le compte canonique non réservé; leurs identités restent à décoder séparément. Le NARC item_data.narc distinct contient 442 entrées dans les deux exports et ne doit pas être confondu avec pl_item_data.narc."
+    "status": "candidate_mapping_anchor_checked_full_ROM_semantic_validation_pending",
+    "interpretation": "Le mapping candidat est construit en conservant l'ordre des IDs logiques canoniques et en retirant les 22 slots réservés 113–134. Contrôles d'ancrage sur l'extraction CPUF : ITEM_MASTER_BALL ID 1 → archive 1, prix 0; ITEM_ULTRA_BALL ID 2 → archive 2, prix 1200; ITEM_ADAMANT_ORB ID 135 → archive 113, prix 10000; ITEM_LUSTROUS_ORB ID 136 → archive 114, prix 10000. Ces ancres sont cohérentes avec le contenu brut extrait et valident la règle de décalage aux points contrôlés, mais ne remplacent pas encore une comparaison exhaustive des 446 entrées ni une reconstruction indépendante de sItemArchiveIDs pour chaque ROM. Le mapping est donc un candidat étayé, pas encore une certification sémantique complète. Les 24 entrées supplémentaires de Project PM restent hors mapping jusqu'à leur identification.",
+    "mappingRule": "archiveIndex = logicalItemId - numberOfReservedUnusedIdsLessThanLogicalItemId; reserved IDs 113–134 map to null",
+    "verifiedAnchors": [
+      {
+        "logicalItemId": 1,
+        "symbol": "ITEM_MASTER_BALL",
+        "archiveIndex": 1,
+        "observedPrice": 0,
+        "validation": "raw CPUF item data entry"
+      },
+      {
+        "logicalItemId": 2,
+        "symbol": "ITEM_ULTRA_BALL",
+        "archiveIndex": 2,
+        "observedPrice": 1200,
+        "validation": "raw CPUF item data entry"
+      },
+      {
+        "logicalItemId": 135,
+        "symbol": "ITEM_ADAMANT_ORB",
+        "archiveIndex": 113,
+        "observedPrice": 10000,
+        "validation": "raw CPUF item data entry"
+      },
+      {
+        "logicalItemId": 136,
+        "symbol": "ITEM_LUSTROUS_ORB",
+        "archiveIndex": 114,
+        "observedPrice": 10000,
+        "validation": "raw CPUF item data entry"
+      }
+    ]
   },
   "policies": [
     "Conserver les symboles canoniques par ID logique, y compris les 22 slots réservés.",
     "Ne jamais joindre les entrées pl_item_data.narc aux IDs logiques par position sur la seule base de l'égalité des comptes.",
     "Décoder les effets des objets uniquement après récupération du mapping ID logique → dataID d'archive et validation de la structure de chaque enregistrement.",
-    "Ne pas transférer les 24 entrées Project PM supplémentaires vers Platine original ni leur attribuer des noms sans preuve."
+    "Ne pas transférer les 24 entrées Project PM supplémentaires vers Platine original ni leur attribuer des noms sans preuve.",
+    "Le mapping archiveIndex est candidat et validé sur les quatre ancres consignées; ne pas considérer la base entière comme sémantiquement certifiée avant contrôle exhaustif et comparaison des deux profils ROM."
   ]
 }
