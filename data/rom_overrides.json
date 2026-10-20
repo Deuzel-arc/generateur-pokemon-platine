@@ -1,18 +1,20 @@
 {
   "schemaVersion": "1.0.0",
   "title": "Overrides vérifiés entre Pokémon Platine français et Pokémon Platine multijoueur (Project PM)",
-  "status": "partial_verified_subset",
-  "warning": "Ce fichier contient uniquement les différences décodées et vérifiées consignées à ce stade. Il ne constitue pas le catalogue exhaustif des données des ROMs.",
+  "status": "historical_audit_unreconciled",
+  "warning": "Ce fichier provient d'un audit antérieur dont les empreintes SHA-256 ne correspondent pas aux ROM actuellement extraites. Il est conservé à titre historique et NE DOIT PAS être appliqué comme override actif aux profils présents dans rom_roster_profiles.json. Les différences qu'il contient sont vérifiées uniquement par rapport aux empreintes qu'il cite.",
   "profiles": {
     "platinum": {
       "name": "Pokémon Platine original",
       "gameCode": "CPUF",
-      "sha256": "c589cc9c80edc7d735500650104ceb229ed37b24e041d2156bb2a0645a93562a"
+      "sha256": "c589cc9c80edc7d735500650104ceb229ed37b24e041d2156bb2a0645a93562a",
+      "auditScope": "Empreinte d'un audit antérieur, non réconciliée avec le fichier ROM extrait actuellement."
     },
     "project_pm": {
       "name": "Pokémon Platine multijoueur (Project PM)",
       "gameCode": "CPUE",
-      "sha256": "78b95905031e0524942ac079afe2d444a6bcfb47aae7a07106800c5591d970f7"
+      "sha256": "78b95905031e0524942ac079afe2d444a6bcfb47aae7a07106800c5591d970f7",
+      "auditScope": "Empreinte d'un audit antérieur, non réconciliée avec le fichier ROM extrait actuellement."
     }
   },
   "pokemon": [
