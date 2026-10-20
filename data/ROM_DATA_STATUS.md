@@ -75,3 +75,12 @@ Ces chiffres ne représentent pas la proportion de toutes les ressources interne
 - Les overrides de Gardevoir (Psy/Fée) et Togekiss (Fée/Vol) sont explicités dans le profil Project PM selon les règles établies pour ce hack.
 - Les tests statiques contrôlent maintenant la couverture de 71 profils, la structure des lignes statistiques et ces deux types. Les tests GitHub Actions de ce dernier lot doivent encore finir avant certification.
 - Travail simultané en cours : validation des données espèce/type, raccordement du calcul de score, garde-fous de provenance et tests de régression. Les tables complètes d'attaques, d'apprentissage, objets, rencontres et dresseurs restent à intégrer.
+
+## Vérification différentielle approfondie — 2026-10-20
+
+- Ajout du rapport structuré `data/rom_delta_audit.json`, associé aux empreintes CPUF/CPUE actuellement retenues. Il consigne les comptes par table et distingue les différences binaires des différences dont la sémantique est certifiée.
+- Comparaison reproductible du JSON d'extraction conservé dans la bibliothèque : 500 entrées d'espèces modifiées sur 508 identifiants communs; 101 entrées de capacités modifiées sur 471; 497 listes d'apprentissage modifiées; 33 enregistrements d'évolution modifiés; 165 objets modifiés; 75 archives de rencontres modifiées. Ces chiffres sont des différences de champs extraits, pas une certification des conséquences en jeu.
+- Les 64 entrées de baies diffèrent toutes sur l'octet d'index 4. La structure `BerryData` du dépôt de référence `pret/pokeplatinum` (commit `06c6e9a0348da283be8d9225d0bec03c349ff5c2`, `include/berry_data.h`) identifie ce champ comme `stageDuration`. Cette interprétation est confirmée pour la structure Platine de référence; elle ne suppose pas que Project PM conserve tous les aspects du format inchangés.
+- Un test automatisé vérifie la provenance du rapport, les empreintes et les comptes clés, et empêche de traiter le catalogue brut comme certifié. La réussite des tests sur le commit courant doit être vérifiée dans GitHub Actions avant de valider le lot.
+- Les équipes de dresseurs, les noms et effets d'objets, les rencontres normalisées, le mapping global des types Project PM et la réconciliation des empreintes de l'audit historique restent non certifiés.
+
