@@ -222,3 +222,10 @@ L'audit sert à circonscrire et contrôler la correction, pas encore à charger 
 - Les 496 entrées décodées sont identiques dans les deux ROM. Les IDs 1 à 493 ont une entrée de nom, suivis des entrées spéciales 494 « Oeuf » et 495 « Mauv. Oeuf ». Les IDs internes 496–507 (formes) et l'ID Project PM 508 n'ont pas d'entrée dédiée dans cette banque; ils restent à résoudre séparément.
 - Le nom en jeu est stocké en majuscules et souvent sans accents. Il confirme les noms associés aux IDs standard, mais ne constitue pas à lui seul une couche de noms français éditorialement corrigés pour le générateur.
 - La liste des entrées Project PM dont le type brut est 9 peut maintenant être reliée à la banque de noms. Elle inclut des changements de type propres au mod, pas seulement les Pokémon qui ont officiellement gagné le type Fée dans les générations ultérieures. Il faut conserver ces valeurs CPUE distinctes de CPUF plutôt que « corriger » automatiquement les écarts.
+
+## Corrections du roster à partir des octets directs — 2026-10-20
+
+- La table des noms a permis de relier les types bruts ID 9 aux entrées d'espèces concernées. Dans les profils Project PM déjà intégrés au générateur, les types « Inconnu » de Méganium, Milobellus, Créhelf, Créfollet et Créfadet ont été corrigés en Fée, conformément au mapping utilisateur et aux octets CPUE. Le profil Togekiss/Gardevoir reste également en Fée.
+- Le profil Dracaufeu a été corrigé pour respecter l'ordre des octets de type CPUE : `[Feu, Dragon]`, et non `[Dragon, Feu]`. Les statistiques d'attaque et de défense étaient déjà conformes à l'entrée brute actuelle.
+- Les données mises à jour dans `data/rom_roster_profiles.json` et la copie embarquée dans `index.html` doivent rester synchronisées. Les tests couvrent maintenant ces valeurs et l'absence d'héritage vers CPUF.
+- Limite restante : le générateur embarque encore 71 espèces. Les 31 espèces de la table de type Fée sont désormais nommées par le crosswalk, mais celles qui ne font pas partie des 71 profils ne sont pas encore toutes disponibles dans le générateur.
