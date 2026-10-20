@@ -1,0 +1,593 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Audit différentiel des archives de messages ROM",
+  "status": "archive_level_diff_verified_text_semantics_not_decoded",
+  "scope": "Comparaison des entrées NARC des deux fichiers .nds extraits et vérifiés. Cet audit ne décode pas le format interne des messages et n'identifie pas encore les noms d'espèces ou de capacités.",
+  "source": {
+    "platinum": {
+      "gameCode": "CPUF",
+      "sha256": "1cfd024519116c1c6285d6af2dbdfcec778e9d74c7c18585e22032e81aaa7eb8"
+    },
+    "project_pm": {
+      "gameCode": "CPUE",
+      "sha256": "435b0288238f01f21eeeef7b5de6de3e3c9c3a9b70ea3b18d71b31ba282ae4e1"
+    },
+    "method": [
+      "Relecture des deux ROMs extraites; empreintes SHA-256 recalculées et concordantes avec le manifeste.",
+      "Parcours NitroFS, extraction des archives NARC msgdata/msg.narc et msgdata/pl_msg.narc.",
+      "Comparaison octet par octet des entrées de même index; l'index commun est un repère d'audit et ne certifie pas le rôle sémantique de l'entrée."
+    ],
+    "limitation": "Le contenu de ces archives est encodé dans le format de texte Pokémon DS. Les IDs d'entrées et leurs différences binaires ne suffisent pas à identifier les noms ni leur fonction."
+  },
+  "archives": {
+    "msgdata/msg.narc": {
+      "platinum": {
+        "entryCount": 624,
+        "archiveBytes": 2719348,
+        "sha256": "0266555d1318e052f93e9fe8d3f6c2b39106b0bc6be8d01069acf64795a50a66"
+      },
+      "project_pm": {
+        "entryCount": 624,
+        "archiveBytes": 2721152,
+        "sha256": "1841dbe69528a16cb6b90834fa3d931533b36c4dace1b6c8e4f4007ba199c764"
+      },
+      "commonEntries": 624,
+      "changedCommonEntryCount": 10,
+      "unchangedCommonEntryCount": 614,
+      "changedEntryIds": [
+        0,
+        344,
+        346,
+        347,
+        552,
+        553,
+        554,
+        587,
+        588,
+        589
+      ],
+      "changedEntryLengthDeltas": [
+        {
+          "id": 0,
+          "platinumBytes": 93400,
+          "projectPmBytes": 94390,
+          "delta": 990
+        },
+        {
+          "id": 344,
+          "platinumBytes": 12694,
+          "projectPmBytes": 12734,
+          "delta": 40
+        },
+        {
+          "id": 346,
+          "platinumBytes": 19746,
+          "projectPmBytes": 19786,
+          "delta": 40
+        },
+        {
+          "id": 347,
+          "platinumBytes": 12690,
+          "projectPmBytes": 12766,
+          "delta": 76
+        },
+        {
+          "id": 552,
+          "platinumBytes": 3546,
+          "projectPmBytes": 3636,
+          "delta": 90
+        },
+        {
+          "id": 553,
+          "platinumBytes": 3546,
+          "projectPmBytes": 3636,
+          "delta": 90
+        },
+        {
+          "id": 554,
+          "platinumBytes": 11908,
+          "projectPmBytes": 12210,
+          "delta": 302
+        },
+        {
+          "id": 587,
+          "platinumBytes": 81902,
+          "projectPmBytes": 81722,
+          "delta": -180
+        },
+        {
+          "id": 588,
+          "platinumBytes": 13386,
+          "projectPmBytes": 13564,
+          "delta": 178
+        },
+        {
+          "id": 589,
+          "platinumBytes": 13386,
+          "projectPmBytes": 13564,
+          "delta": 178
+        }
+      ]
+    },
+    "msgdata/pl_msg.narc": {
+      "platinum": {
+        "entryCount": 724,
+        "archiveBytes": 4509360,
+        "sha256": "8bdb570034fe5b15596266ab6dfee160d0b332092c485411417686a247135cd9"
+      },
+      "project_pm": {
+        "entryCount": 724,
+        "archiveBytes": 4570820,
+        "sha256": "483ba494a561a950f16cb32bf9ebc30c7c52ecc093ac8fa9043a8e4d8cfdd9d9"
+      },
+      "commonEntries": 724,
+      "changedCommonEntryCount": 66,
+      "unchangedCommonEntryCount": 658,
+      "changedEntryIds": [
+        0,
+        7,
+        23,
+        26,
+        56,
+        62,
+        65,
+        67,
+        74,
+        87,
+        97,
+        108,
+        109,
+        120,
+        133,
+        143,
+        144,
+        147,
+        156,
+        164,
+        165,
+        178,
+        180,
+        213,
+        220,
+        221,
+        223,
+        227,
+        228,
+        249,
+        253,
+        294,
+        332,
+        359,
+        361,
+        368,
+        389,
+        391,
+        392,
+        393,
+        394,
+        433,
+        455,
+        470,
+        477,
+        485,
+        496,
+        503,
+        504,
+        554,
+        558,
+        572,
+        574,
+        610,
+        611,
+        612,
+        617,
+        618,
+        619,
+        620,
+        624,
+        643,
+        646,
+        647,
+        648,
+        697
+      ],
+      "changedEntryLengthDeltas": [
+        {
+          "id": 0,
+          "platinumBytes": 96190,
+          "projectPmBytes": 97204,
+          "delta": 1014
+        },
+        {
+          "id": 7,
+          "platinumBytes": 4588,
+          "projectPmBytes": 4716,
+          "delta": 128
+        },
+        {
+          "id": 23,
+          "platinumBytes": 28398,
+          "projectPmBytes": 28830,
+          "delta": 432
+        },
+        {
+          "id": 26,
+          "platinumBytes": 3260,
+          "projectPmBytes": 3884,
+          "delta": 624
+        },
+        {
+          "id": 56,
+          "platinumBytes": 3418,
+          "projectPmBytes": 4098,
+          "delta": 680
+        },
+        {
+          "id": 62,
+          "platinumBytes": 1296,
+          "projectPmBytes": 2572,
+          "delta": 1276
+        },
+        {
+          "id": 65,
+          "platinumBytes": 6194,
+          "projectPmBytes": 6296,
+          "delta": 102
+        },
+        {
+          "id": 67,
+          "platinumBytes": 4260,
+          "projectPmBytes": 4948,
+          "delta": 688
+        },
+        {
+          "id": 74,
+          "platinumBytes": 1552,
+          "projectPmBytes": 1542,
+          "delta": -10
+        },
+        {
+          "id": 87,
+          "platinumBytes": 5250,
+          "projectPmBytes": 5938,
+          "delta": 688
+        },
+        {
+          "id": 97,
+          "platinumBytes": 3288,
+          "projectPmBytes": 3162,
+          "delta": -126
+        },
+        {
+          "id": 108,
+          "platinumBytes": 4440,
+          "projectPmBytes": 4878,
+          "delta": 438
+        },
+        {
+          "id": 109,
+          "platinumBytes": 2436,
+          "projectPmBytes": 2688,
+          "delta": 252
+        },
+        {
+          "id": 120,
+          "platinumBytes": 498,
+          "projectPmBytes": 1984,
+          "delta": 1486
+        },
+        {
+          "id": 133,
+          "platinumBytes": 3442,
+          "projectPmBytes": 4120,
+          "delta": 678
+        },
+        {
+          "id": 143,
+          "platinumBytes": 18714,
+          "projectPmBytes": 18948,
+          "delta": 234
+        },
+        {
+          "id": 144,
+          "platinumBytes": 3828,
+          "projectPmBytes": 4512,
+          "delta": 684
+        },
+        {
+          "id": 147,
+          "platinumBytes": 6898,
+          "projectPmBytes": 8710,
+          "delta": 1812
+        },
+        {
+          "id": 156,
+          "platinumBytes": 2582,
+          "projectPmBytes": 3292,
+          "delta": 710
+        },
+        {
+          "id": 164,
+          "platinumBytes": 1856,
+          "projectPmBytes": 2298,
+          "delta": 442
+        },
+        {
+          "id": 165,
+          "platinumBytes": 2616,
+          "projectPmBytes": 2868,
+          "delta": 252
+        },
+        {
+          "id": 178,
+          "platinumBytes": 3336,
+          "projectPmBytes": 4022,
+          "delta": 686
+        },
+        {
+          "id": 180,
+          "platinumBytes": 1268,
+          "projectPmBytes": 1190,
+          "delta": -78
+        },
+        {
+          "id": 213,
+          "platinumBytes": 18408,
+          "projectPmBytes": 25294,
+          "delta": 6886
+        },
+        {
+          "id": 220,
+          "platinumBytes": 1826,
+          "projectPmBytes": 6554,
+          "delta": 4728
+        },
+        {
+          "id": 221,
+          "platinumBytes": 13584,
+          "projectPmBytes": 13718,
+          "delta": 134
+        },
+        {
+          "id": 223,
+          "platinumBytes": 982,
+          "projectPmBytes": 1786,
+          "delta": 804
+        },
+        {
+          "id": 227,
+          "platinumBytes": 3590,
+          "projectPmBytes": 6630,
+          "delta": 3040
+        },
+        {
+          "id": 228,
+          "platinumBytes": 96,
+          "projectPmBytes": 206,
+          "delta": 110
+        },
+        {
+          "id": 249,
+          "platinumBytes": 144,
+          "projectPmBytes": 2052,
+          "delta": 1908
+        },
+        {
+          "id": 253,
+          "platinumBytes": 6944,
+          "projectPmBytes": 7414,
+          "delta": 470
+        },
+        {
+          "id": 294,
+          "platinumBytes": 1062,
+          "projectPmBytes": 1148,
+          "delta": 86
+        },
+        {
+          "id": 332,
+          "platinumBytes": 3524,
+          "projectPmBytes": 3526,
+          "delta": 2
+        },
+        {
+          "id": 359,
+          "platinumBytes": 24,
+          "projectPmBytes": 82,
+          "delta": 58
+        },
+        {
+          "id": 361,
+          "platinumBytes": 9000,
+          "projectPmBytes": 14090,
+          "delta": 5090
+        },
+        {
+          "id": 368,
+          "platinumBytes": 105400,
+          "projectPmBytes": 108386,
+          "delta": 2986
+        },
+        {
+          "id": 389,
+          "platinumBytes": 6170,
+          "projectPmBytes": 6418,
+          "delta": 248
+        },
+        {
+          "id": 391,
+          "platinumBytes": 81092,
+          "projectPmBytes": 84588,
+          "delta": 3496
+        },
+        {
+          "id": 392,
+          "platinumBytes": 12800,
+          "projectPmBytes": 13590,
+          "delta": 790
+        },
+        {
+          "id": 393,
+          "platinumBytes": 19916,
+          "projectPmBytes": 21090,
+          "delta": 1174
+        },
+        {
+          "id": 394,
+          "platinumBytes": 12796,
+          "projectPmBytes": 13670,
+          "delta": 874
+        },
+        {
+          "id": 433,
+          "platinumBytes": 4242,
+          "projectPmBytes": 4394,
+          "delta": 152
+        },
+        {
+          "id": 455,
+          "platinumBytes": 10334,
+          "projectPmBytes": 11044,
+          "delta": 710
+        },
+        {
+          "id": 470,
+          "platinumBytes": 1484,
+          "projectPmBytes": 1706,
+          "delta": 222
+        },
+        {
+          "id": 477,
+          "platinumBytes": 4472,
+          "projectPmBytes": 4830,
+          "delta": 358
+        },
+        {
+          "id": 485,
+          "platinumBytes": 556,
+          "projectPmBytes": 576,
+          "delta": 20
+        },
+        {
+          "id": 496,
+          "platinumBytes": 932,
+          "projectPmBytes": 3312,
+          "delta": 2380
+        },
+        {
+          "id": 503,
+          "platinumBytes": 784,
+          "projectPmBytes": 1282,
+          "delta": 498
+        },
+        {
+          "id": 504,
+          "platinumBytes": 1548,
+          "projectPmBytes": 2574,
+          "delta": 1026
+        },
+        {
+          "id": 554,
+          "platinumBytes": 2606,
+          "projectPmBytes": 3268,
+          "delta": 662
+        },
+        {
+          "id": 558,
+          "platinumBytes": 1948,
+          "projectPmBytes": 3074,
+          "delta": 1126
+        },
+        {
+          "id": 572,
+          "platinumBytes": 2142,
+          "projectPmBytes": 2240,
+          "delta": 98
+        },
+        {
+          "id": 574,
+          "platinumBytes": 1464,
+          "projectPmBytes": 1478,
+          "delta": 14
+        },
+        {
+          "id": 610,
+          "platinumBytes": 3546,
+          "projectPmBytes": 3636,
+          "delta": 90
+        },
+        {
+          "id": 611,
+          "platinumBytes": 3544,
+          "projectPmBytes": 3634,
+          "delta": 90
+        },
+        {
+          "id": 612,
+          "platinumBytes": 11914,
+          "projectPmBytes": 12216,
+          "delta": 302
+        },
+        {
+          "id": 617,
+          "platinumBytes": 340574,
+          "projectPmBytes": 346484,
+          "delta": 5910
+        },
+        {
+          "id": 618,
+          "platinumBytes": 18124,
+          "projectPmBytes": 19014,
+          "delta": 890
+        },
+        {
+          "id": 619,
+          "platinumBytes": 2822,
+          "projectPmBytes": 3186,
+          "delta": 364
+        },
+        {
+          "id": 620,
+          "platinumBytes": 2822,
+          "projectPmBytes": 3258,
+          "delta": 436
+        },
+        {
+          "id": 643,
+          "platinumBytes": 3138,
+          "projectPmBytes": 3060,
+          "delta": -78
+        },
+        {
+          "id": 646,
+          "platinumBytes": 82026,
+          "projectPmBytes": 81854,
+          "delta": -172
+        },
+        {
+          "id": 647,
+          "platinumBytes": 13386,
+          "projectPmBytes": 13564,
+          "delta": 178
+        },
+        {
+          "id": 648,
+          "platinumBytes": 13386,
+          "projectPmBytes": 13564,
+          "delta": 178
+        },
+        {
+          "id": 697,
+          "platinumBytes": 3538,
+          "projectPmBytes": 3546,
+          "delta": 8
+        }
+      ]
+    }
+  },
+  "conclusions": [
+    "Les deux archives conservent les mêmes nombres d'entrées entre profils, mais un sous-ensemble d'entrées diffère octet par octet.",
+    "Les différences observées ne permettent pas encore d'affirmer que les entrées modifiées contiennent des noms d'espèces ou de capacités.",
+    "Prochaine étape : implémenter et tester le décodage du conteneur de messages et du codage de caractères, puis confronter les noms obtenus aux identifiants d'espèces/capacités et à la référence Gen IV."
+  ]
+}
