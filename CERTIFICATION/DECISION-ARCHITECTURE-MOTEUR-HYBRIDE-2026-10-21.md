@@ -24,21 +24,22 @@ Branche de travail : `feature/moteur-hybride-simulation-apprentissage`
 
 ### Présent mais limité
 
-- Le générateur actuel est décrit par la certification du dépôt comme un aperçu heuristique fondé sur des scores/tags et de l’aléatoire, et non comme un moteur stratégique certifié de combats doubles.
-- Les tests existants contrôlent des contraintes d’interface et l’intégrité de certains audits ; ils ne démontrent pas la fidélité d’une simulation de combat.
-- Les documents spécifient déjà les paliers de synergie, les preuves, les statuts d’incertitude et les besoins d’optimisation, mais une spécification n’est pas une implémentation.
-- Les données candidates peuvent guider l’analyse exploratoire ; elles ne doivent pas alimenter sans garde-fou les recommandations présentées comme certifiées.
+- Le générateur runtime existant reste un aperçu heuristique fondé sur des scores/tags et de l’aléatoire ; il n’est pas encore relié au nouveau module de recherche.
+- Un module expérimental `src/strategy/hybrid-engine.mjs` existe désormais : filtres de contraintes dures, score décomposé, traitement explicite des entrées non certifiées, recherche combinatoire reproductible et optimisation de poids avec garde-fou de validation. Il accepte les synergies et matrices de types comme preuves injectées ; il ne les invente pas et ne simule pas les combats.
+- Un module `src/strategy/experience-store.mjs` permet de persister des expériences via un adaptateur `getItem/setItem`, de dédupliquer les exécutions identiques et de conserver les résultats contradictoires, défaites et combats incomplets. Il n’est pas encore connecté à l’interface ni à un simulateur.
+- Un schéma versionné et des tests de contrat couvrent ces interfaces. Les tests unitaires sont ajoutés à `npm test`; la validation complète CI reste nécessaire.
+- Les données candidates restent séparées des recommandations runtime certifiées.
 
 ### À construire
 
 1. Inventaire unifié des faits exploitables avec provenance par ROM, champ, statut et dépendances.
-2. Recherche hybride de candidats, d’abord avec filtres durs, puis scores explicables et recherche hiérarchique.
+2. Connexion du moteur hybride à une source de profils dont les champs stratégiques sont effectivement certifiés, puis à l’interface sans promouvoir les profils candidats.
 3. Moteur de règles de combat Gen IV et adaptateurs spécifiques à Project PM, séparés par profils de règles.
 4. Simulateur déterministe/reproductible avec graine, journaux d’événements, limite de tours et statut explicite des mécaniques non supportées.
 5. Tests différentiels sur cas de référence pour les statistiques, dégâts, précision, priorités, effets, cibles et interactions doubles.
-6. Registre d’expériences persistantes, déduplication sémantique contrôlée et analyse des résultats positifs/négatifs.
-7. Optimiseur de paramètres à garde-fous, évalué sur des équipes/adversaires de validation distincts des données d’optimisation.
-8. Explications de synergies et stratégies issues de preuves et de résultats simulés.
+6. Connexion du registre d’expériences au simulateur et à la recherche, avec identifiants de données et de versions.
+7. Optimiseur de paramètres évalué sur des équipes/adversaires de validation distincts des données d’optimisation.
+8. Découverte et explication des synergies et stratégies issues de preuves et, plus tard, de résultats simulés.
 9. Tableau de couverture indiquant les mécaniques certifiées, partiellement simulées, inconnues ou bloquantes.
 
 ## Ordre de réalisation
@@ -92,4 +93,4 @@ Branche de travail : `feature/moteur-hybride-simulation-apprentissage`
 
 ## État de cette modification
 
-Cette branche ajoute les contrats d’architecture et le schéma de mémoire comme fondations non runtime. Elle ne prétend pas ajouter un simulateur complet ni un apprentissage adaptatif opérationnel. Les données ROM existantes ne sont pas modifiées.
+Cette branche ajoute les contrats d’architecture, un premier moteur de recherche/scoring expérimental, un registre d’expériences par adaptateur et leurs tests. Elle ne prétend pas ajouter un simulateur complet, une intégration runtime au générateur ou un apprentissage adaptatif opérationnel. Les données ROM existantes ne sont pas modifiées. La CI doit réussir avant toute intégration.
