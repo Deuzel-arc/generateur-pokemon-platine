@@ -24,7 +24,7 @@ check("ROM mapping audit records cross-profile differences without certifying ga
   assert.equal(audit.crossRomDifferences.species.fieldDifferences.baseStats, 197);
   assert.equal(audit.crossRomDifferences.species.changedIdsByField.baseStats.length, 197);
   assert.equal(audit.crossRomDifferences.species.changedIdsByField.types.length, 65);
-  assert.equal(audit.crossRomDifferences.species.changedIdsByField.abilities.length, 80);
+  assert.equal(audit.crossRomDifferences.species.changedIdsByField.abilities.length, 318);
   assert.equal(audit.crossRomDifferences.moves.changedIdsByField.power.length, 76);
   assert.equal(audit.crossRomDifferences.moves.changedIdsByField.effectId.length, 22);
   assert.equal(audit.auditExtension.status, "triage_lists_added");
