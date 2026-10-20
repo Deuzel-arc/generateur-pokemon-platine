@@ -237,7 +237,7 @@ check("selected reference drives team candidate roster and scoring", () => {
   assert.match(html, /p\.off=Math\.max\(stats\.attack,stats\.specialAttack\)/);
   assert.equal(romRosterProfiles.base.length, 71);
   assert.ok(romRosterProfiles.project_pm_overrides.Dracaufeu);
-  assert.deepEqual(romRosterProfiles.project_pm_overrides.Dracaufeu[0], ["Dragon", "Feu"]);
+  assert.deepEqual(romRosterProfiles.project_pm_overrides.Dracaufeu[0], ["Feu", "Dragon"]);
   assert.deepEqual(romRosterProfiles.project_pm_overrides.Gardevoir[0], ["Psy", "Fée"]);
   assert.deepEqual(romRosterProfiles.project_pm_overrides.Togekiss[0], ["Fée", "Vol"]);
   for (const row of romRosterProfiles.base) {
@@ -344,12 +344,12 @@ check("Project PM Fairy type mapping is scoped to the confirmed ROM profile", ()
   assert.match(fairy.scope, /Project PM uniquement/);
   assert.equal(projectPmTypeMapping.policy.noCrossRomInheritance, true);
   assert.equal(projectPmTypeMapping.policy.originalPlatinumTypeId9MustRemainUnchanged, true);
-  assert.match(fairy.caution, /pas encore vérifié indépendamment/);
+  assert.match(fairy.caution, /relues directement dans la ROM CPUE/);
 });
 
 
 check("Project PM Fairy occurrence audit preserves scope and raw IDs", () => {
-  assert.equal(projectPmFairyAudit.status, "user_confirmed_type_label_audited_names_unmapped");
+  assert.equal(projectPmFairyAudit.status, "user_confirmed_type_label_direct_rom_audited_names_crossreferenced_move_names_pending");
   assert.equal(projectPmFairyAudit.source.gameCode, "CPUE");
   assert.equal(projectPmFairyAudit.source.sha256, romRosterProfiles.sourceHashes.project_pm);
   assert.equal(projectPmFairyAudit.interpretation.rawTypeId, 9);
@@ -361,6 +361,12 @@ check("Project PM Fairy occurrence audit preserves scope and raw IDs", () => {
   assert.equal(projectPmFairyAudit.summary.originalPlatinumMoveEntriesWithType9, 1);
   assert.equal(projectPmFairyAudit.summary.originalPlatinumMappingApplied, false);
   assert.equal(projectPmFairyAudit.projectPmSpecies.length, 31);
+  assert.ok(projectPmFairyAudit.projectPmSpecies.every(entry => typeof entry.romName === "string" && entry.nameSource.includes("TEXT_BANK_SPECIES_NAME")));
+  assert.deepEqual(romRosterProfiles.project_pm_overrides["Méganium"][0], ["Plante", "Fée"]);
+  assert.deepEqual(romRosterProfiles.project_pm_overrides["Milobellus"][0], ["Eau", "Fée"]);
+  assert.deepEqual(romRosterProfiles.project_pm_overrides["Créhelf"][0], ["Psy", "Fée"]);
+  assert.deepEqual(romRosterProfiles.project_pm_overrides["Créfollet"][0], ["Psy", "Fée"]);
+  assert.deepEqual(romRosterProfiles.project_pm_overrides["Créfadet"][0], ["Psy", "Fée"]);
   assert.equal(projectPmFairyAudit.projectPmMoves.length, 8);
   assert.deepEqual(projectPmFairyAudit.originalPlatinum.rawTypeId9MoveIds, [174]);
   assert.ok(projectPmFairyAudit.rules.some(rule => rule.includes("CPUF")));
