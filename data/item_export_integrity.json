@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Contrôle d’intégrité croisée des exports d’objets CPUF/CPUE",
+  "auditDate": "2026-10-20",
+  "method": "Compare les chaînes hexadécimales brutes de pl_item_data.narc.json aux champs raw de items.json, puis vérifie id, longueur hexadécimale et longueurs des vues dérivées. Ce contrôle valide la cohérence interne des exports, pas la sémantique des champs ni la correspondance indépendante avec chaque JSON source du dépôt de référence.",
+  "profiles": {
+    "platinum": {
+      "archivePath": "itemtool/itemdata/pl_item_data.narc",
+      "archiveDeclaredCount": 446,
+      "parsedDeclaredCount": 446,
+      "rawEntries": 446,
+      "parsedEntries": 446,
+      "recordSizesBytes": {
+        "34": 446
+      },
+      "errors": 0,
+      "allChecksPass": true,
+      "rawArchiveSha256": "cd1633c253886a895093c8022339b20b8e7a5399b209dd6c45f336f20e468825"
+    },
+    "project_pm": {
+      "archivePath": "itemtool/itemdata/pl_item_data.narc",
+      "archiveDeclaredCount": 470,
+      "parsedDeclaredCount": 470,
+      "rawEntries": 470,
+      "parsedEntries": 470,
+      "recordSizesBytes": {
+        "34": 470
+      },
+      "errors": 0,
+      "allChecksPass": true,
+      "rawArchiveSha256": "5577adeea761eaea990c961601db0c5e6be39c7ff7fef80ea2fc9d05bd904876"
+    }
+  },
+  "policies": [
+    "Ne pas présenter ce contrôle comme certification sémantique.",
+    "Ne pas déduire de noms ou effets pour les entrées supplémentaires CPUE."
+  ]
+}
