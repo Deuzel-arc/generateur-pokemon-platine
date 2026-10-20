@@ -36,12 +36,14 @@ Pour chaque ROM : système de fichiers NitroFS parcouru, archives NARC reconnues
 
 ## Prochaines étapes
 
-1. Réconcilier les empreintes et les versions exactes des ROM.
-2. Valider les identifiants des types, talents et méthodes d'évolution contre les structures Gen IV.
-3. Décoder sémantiquement objets, baies, rencontres et équipes de dresseurs.
-4. Produire un catalogue espèce/attaque/objet normalisé pour le navigateur.
-5. Intégrer ce catalogue au générateur avec tests automatisés sur les deux profils.
-6. Vérifier l'interface et les tests statiques/navigateur après chaque changement.
+1. Réconcilier les empreintes et les versions exactes des ROM avant tout transfert d'override historique.
+2. Formaliser le schéma minimal des données stratégiques et les statuts de provenance/validation.
+3. Valider les identifiants des espèces, types, talents et capacités contre la référence Gen IV, en isolant les ajouts Project PM.
+4. Étendre le roster par lots vérifiés au-delà des 71 profils actuels.
+5. Intégrer progressivement les capacités et apprentissages, puis les évolutions et objets uniquement après décodage sémantique.
+6. Ajouter des tests de régression et vérifier les workflows de tests et de déploiement après chaque changement.
+
+Les tables de dresseurs, routes, rencontres et dialogues sont différées; voir « Périmètre stratégique du générateur ».
 
 ## Vérification automatisée — 2026-10-20
 
