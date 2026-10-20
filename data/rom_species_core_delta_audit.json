@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "direct_rom_personal_archive_core_delta_audited",
+  "source": {
+    "platinumSha256": "1cfd024519116c1c6285d6af2dbdfcec778e9d74c7c18585e22032e81aaa7eb8",
+    "projectPmSha256": "435b0288238f01f21eeeef7b5de6de3e3c9c3a9b70ea3b18d71b31ba282ae4e1",
+    "archivePath": "poketool/personal/pl_personal.narc",
+    "recordSizeBytes": 44,
+    "standardSpeciesIds": [1, 493],
+    "nameSource": "msgdata/pl_msg.narc / TEXT_BANK_SPECIES_NAME / bank 412"
+  },
+  "counts": {
+    "standardSpeciesCompared": 493,
+    "fullPersonalRecordChanged": 488,
+    "fullPersonalRecordUnchanged": 5,
+    "baseStatsChanged": 197,
+    "typePairChanged": 60,
+    "bytesAfterTypeFieldsChanged": 486,
+    "speciesWithBothStatsAndTypesChanged": 42
+  },
+  "interpretation": {
+    "rawStatsOrder": ["HP", "Attack", "Defense", "Speed", "Special Attack", "Special Defense"],
+    "rawTypeOffsets": [6, 7],
+    "typeIdsPreserved": true,
+    "projectPmTypeId9": "Fée, confirmed by the user for the exact CPUE hash",
+    "romNamesAreRawText": true,
+    "displayNamesNeedFrenchOrthographyPass": true,
+    "formsOutsideComparedRange": [496,497,498,499,500,501,502,503,504,505,506,507],
+    "projectPmExtraSpeciesId": 508
+  },
+  "policies": [
+    "Ne pas propager les types CPUE à CPUF.",
+    "Ne pas supposer que les changements de types ou de statistiques sont des erreurs.",
+    "Les noms bruts en majuscules ne sont pas des libellés français corrigés.",
+    "Les statistiques de chaque espèce Project PM doivent être extraites avant de déclarer un profil complet."
+  ]
+}
