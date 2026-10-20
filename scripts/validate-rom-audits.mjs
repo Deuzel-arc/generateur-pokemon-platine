@@ -38,19 +38,31 @@ assert.deepEqual(itemReference.itemIds.filter((row) => row.status === "reserved_
 assert.equal(itemReference.structuralReconciliation.canonicalDefinedItemIdCount, 446, "canonical non-reserved item count must be 446");
 assert.equal(itemReference.structuralReconciliation.platinumPlItemDataArchiveEntries, 446, "original Platinum pl_item_data archive count must match the recorded audit");
 assert.equal(itemReference.structuralReconciliation.projectPmPlItemDataArchiveEntries, catalog.profiles.project_pm.itemEntries, "Project PM pl_item_data count must match the ROM catalog");
-assert.match(itemReference.structuralReconciliation.status, /candidate_mapping_anchor_checked/, "candidate mapping must remain explicitly short of full ROM semantic certification");
+assert.match(itemReference.structuralReconciliation.status, /13_price_anchors_checked/, "candidate mapping must reflect expanded anchor checks and remain short of full certification");
 assert.match(itemReference.policies.join(" "), /jamais joindre.*par position/i, "item policy must prohibit unverified positional joins");
 assert.equal(itemReference.holdEffects.length, 147, "canonical hold-effect reference count must remain stable");
 assert.equal(itemReference.itemIds.filter((row) => row.archiveIndex !== null).length, 446, "candidate archive mapping must cover 446 non-reserved items");
 assert.equal(itemReference.itemIds.filter((row) => row.archiveIndex === null).length, 22, "reserved item IDs must not map to archive entries");
 assert.deepEqual(itemReference.itemIds.filter((row) => row.archiveIndex !== null).map((row) => row.archiveIndex), Array.from({ length: 446 }, (_, index) => index), "candidate archive indices must be sequential and gap-free");
 assert.deepEqual(itemReference.structuralReconciliation.verifiedAnchors.map((row) => [row.logicalItemId, row.symbol, row.archiveIndex, row.observedPrice]), [
-  [1, "ITEM_MASTER_BALL", 1, 0],
-  [2, "ITEM_ULTRA_BALL", 2, 1200],
+  [17, "ITEM_POTION", 17, 300],
+  [80, "ITEM_SUN_STONE", 80, 2100],
+  [100, "ITEM_CLAW_FOSSIL", 100, 1000],
+  [112, "ITEM_GRISEOUS_ORB", 112, 10000],
   [135, "ITEM_ADAMANT_ORB", 113, 10000],
-  [136, "ITEM_LUSTROUS_ORB", 114, 10000],
-], "candidate mapping anchor records must remain fixed");
-assert.match(itemReference.structuralReconciliation.status, /candidate_mapping_anchor_checked/, "candidate item mapping must not be described as fully certified");
+  [150, "ITEM_CHESTO_BERRY", 128, 20],
+  [200, "ITEM_CHILAN_BERRY", 178, 20],
+  [250, "ITEM_DRAGON_FANG", 228, 100],
+  [300, "ITEM_ZAP_PLATE", 278, 1000],
+  [350, "ITEM_TM23", 328, 3000],
+  [400, "ITEM_TM73", 378, 2000],
+  [445, "ITEM_OLD_ROD", 423, 0],
+  [467, "ITEM_SECRET_KEY", 445, 0],
+], "candidate mapping's 13 source/raw price anchors must remain fixed");
+assert.equal(itemReference.structuralReconciliation.verifiedAnchors.length, 13, "expected 13 independently checked source/raw item price anchors");
+assert.match(itemReference.structuralReconciliation.status, /13_price_anchors_checked/, "item reference status must reflect the expanded anchor audit");
+assert.ok(itemReference.structuralReconciliation.verifiedAnchors.every((row) => row.validation.includes("source JSON") && row.validation.includes("raw CPUF")), "each item anchor must record source and raw ROM agreement");
+assert.match(itemReference.structuralReconciliation.status, /full_field_validation_pending/, "candidate item mapping must not be described as fully certified");
 
 assert.equal(projectPmTypes.profile.gameCode, "CPUE", "Project PM type mapping must target CPUE only");
 assert.equal(projectPmTypes.profile.sha256, catalog.profiles.project_pm.sha256, "Project PM type mapping ROM hash must match the catalog");
