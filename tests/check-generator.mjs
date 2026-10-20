@@ -7,11 +7,25 @@ const romCatalog = JSON.parse(readFileSync(new URL("../data/rom_catalog.json", i
 const romOverrides = JSON.parse(readFileSync(new URL("../data/rom_overrides.json", import.meta.url), "utf8"));
 const romRosterProfiles = JSON.parse(readFileSync(new URL("../data/rom_roster_profiles.json", import.meta.url), "utf8"));
 const romDeltaAudit = JSON.parse(readFileSync(new URL("../data/rom_delta_audit.json", import.meta.url), "utf8"));
+const gen4ReferenceStatus = JSON.parse(readFileSync(new URL("../data/gen4_reference_status.json", import.meta.url), "utf8"));
 const checks = [];
 function check(name, fn) {
   try { fn(); checks.push({ name, status: "PASS" }); }
   catch (error) { checks.push({ name, status: "FAIL", message: error.message }); }
 }
+
+check("Gen IV move reference boundary is explicit and extra ROM IDs remain unmapped", () => {
+  const boundary = gen4ReferenceStatus.moveTableBoundary;
+  assert.equal(gen4ReferenceStatus.reference.commit, "06c6e9a0348da283be8d9225d0bec03c349ff5c2");
+  assert.equal(boundary.sourcePath, "generated/moves.txt");
+  assert.equal(boundary.sourceCommit, gen4ReferenceStatus.reference.commit);
+  assert.equal(boundary.canonicalLastMoveId, 467);
+  assert.equal(boundary.maxMovesSentinel, 468);
+  assert.deepEqual(boundary.platinumExtraRecordIds, [468, 469, 470]);
+  assert.deepEqual(boundary.projectPmExtraRecordIds, [468, 469, 470, 471]);
+  assert.equal(boundary.status, "boundary_confirmed_names_unmapped");
+  assert.ok(gen4ReferenceStatus.blockingRules.some(rule => rule.includes("IDs 0–467")));
+});
 
 check("ROM delta audit preserves provenance and labels raw differences as uncertified", () => {
   assert.equal(romDeltaAudit.schemaVersion, "1.0.0");
