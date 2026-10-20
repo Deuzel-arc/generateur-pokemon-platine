@@ -25,8 +25,12 @@ try {
   await page.locator("#validate").click();
   sourceSummary = await page.locator("#summary").innerText();
   assert.match(sourceSummary, /"referentielStrategique": "multiplayer"/);
-  assert.match(sourceSummary, /Dracaufeu — Feu \/ Vol/);
-  console.log("[PASS] le référentiel sélectionné applique uniquement les types Project PM confirmés et figure dans le récapitulatif");
+  assert.match(sourceSummary, /Dracaufeu — Feu \/ Dragon/);
+  await page.locator('#starters [data-value="hoenn"]').click();
+  await page.locator("#validate").click();
+  sourceSummary = await page.locator("#summary").innerText();
+  assert.match(sourceSummary, /Jungko — Plante \/ Dragon/);
+  console.log("[PASS] le référentiel sélectionné applique les types Project PM confirmés de Dracaufeu et Jungko et figure dans le récapitulatif");
 
   // Zero imposed items is valid; the algorithm still assigns six distinct items.
   await page.locator("#validate").click();
