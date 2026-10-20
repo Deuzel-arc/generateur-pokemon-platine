@@ -1,0 +1,2512 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Référence française des noms des 493 espèces Gen IV",
+  "status": "external_french_name_reference_candidate",
+  "source": {
+    "repository": "sindresorhus/pokemon",
+    "path": "data/fr.json",
+    "blobSha": "c88f3ae72d863240b6f5336b90e6ae6c7997ee36",
+    "branch": "main",
+    "url": "https://github.com/sindresorhus/pokemon/blob/main/data/fr.json",
+    "retrievedAt": "2026-10-21",
+    "note": "Liste de noms français dans l'ordre du Pokédex national; référence externe, pas une extraction directe des ROMs CPUF/CPUE."
+  },
+  "canonicalReference": {
+    "repository": "pret/pokeplatinum",
+    "commit": "06c6e9a0348da283be8d9225d0bec03c349ff5c2",
+    "path": "data/gen4_id_reference.json",
+    "speciesCount": 493
+  },
+  "scope": {
+    "speciesIds": "1–493",
+    "nameArrayIndex": "speciesId - 1",
+    "formsAndSpecialEntriesExcluded": true,
+    "notRuntimeData": true
+  },
+  "validation": {
+    "nameCountFirst493": 493,
+    "uniqueNamesFirst493": 493,
+    "existingRosterProfilesCompared": 71,
+    "exactNameMatches": 69,
+    "mismatchCount": 2,
+    "mismatches": [
+      {
+        "id": 479,
+        "profileName": "Rotom",
+        "referenceName": "Motisma"
+      },
+      {
+        "id": 169,
+        "profileName": "Crobat",
+        "referenceName": "Nostenfer"
+      }
+    ]
+  },
+  "species": [
+    {
+      "id": 1,
+      "canonicalSymbol": "SPECIES_BULBASAUR",
+      "nameFr": "Bulbizarre"
+    },
+    {
+      "id": 2,
+      "canonicalSymbol": "SPECIES_IVYSAUR",
+      "nameFr": "Herbizarre"
+    },
+    {
+      "id": 3,
+      "canonicalSymbol": "SPECIES_VENUSAUR",
+      "nameFr": "Florizarre"
+    },
+    {
+      "id": 4,
+      "canonicalSymbol": "SPECIES_CHARMANDER",
+      "nameFr": "Salamèche"
+    },
+    {
+      "id": 5,
+      "canonicalSymbol": "SPECIES_CHARMELEON",
+      "nameFr": "Reptincel"
+    },
+    {
+      "id": 6,
+      "canonicalSymbol": "SPECIES_CHARIZARD",
+      "nameFr": "Dracaufeu"
+    },
+    {
+      "id": 7,
+      "canonicalSymbol": "SPECIES_SQUIRTLE",
+      "nameFr": "Carapuce"
+    },
+    {
+      "id": 8,
+      "canonicalSymbol": "SPECIES_WARTORTLE",
+      "nameFr": "Carabaffe"
+    },
+    {
+      "id": 9,
+      "canonicalSymbol": "SPECIES_BLASTOISE",
+      "nameFr": "Tortank"
+    },
+    {
+      "id": 10,
+      "canonicalSymbol": "SPECIES_CATERPIE",
+      "nameFr": "Chenipan"
+    },
+    {
+      "id": 11,
+      "canonicalSymbol": "SPECIES_METAPOD",
+      "nameFr": "Chrysacier"
+    },
+    {
+      "id": 12,
+      "canonicalSymbol": "SPECIES_BUTTERFREE",
+      "nameFr": "Papilusion"
+    },
+    {
+      "id": 13,
+      "canonicalSymbol": "SPECIES_WEEDLE",
+      "nameFr": "Aspicot"
+    },
+    {
+      "id": 14,
+      "canonicalSymbol": "SPECIES_KAKUNA",
+      "nameFr": "Coconfort"
+    },
+    {
+      "id": 15,
+      "canonicalSymbol": "SPECIES_BEEDRILL",
+      "nameFr": "Dardargnan"
+    },
+    {
+      "id": 16,
+      "canonicalSymbol": "SPECIES_PIDGEY",
+      "nameFr": "Roucool"
+    },
+    {
+      "id": 17,
+      "canonicalSymbol": "SPECIES_PIDGEOTTO",
+      "nameFr": "Roucoups"
+    },
+    {
+      "id": 18,
+      "canonicalSymbol": "SPECIES_PIDGEOT",
+      "nameFr": "Roucarnage"
+    },
+    {
+      "id": 19,
+      "canonicalSymbol": "SPECIES_RATTATA",
+      "nameFr": "Rattata"
+    },
+    {
+      "id": 20,
+      "canonicalSymbol": "SPECIES_RATICATE",
+      "nameFr": "Rattatac"
+    },
+    {
+      "id": 21,
+      "canonicalSymbol": "SPECIES_SPEAROW",
+      "nameFr": "Piafabec"
+    },
+    {
+      "id": 22,
+      "canonicalSymbol": "SPECIES_FEAROW",
+      "nameFr": "Rapasdepic"
+    },
+    {
+      "id": 23,
+      "canonicalSymbol": "SPECIES_EKANS",
+      "nameFr": "Abo"
+    },
+    {
+      "id": 24,
+      "canonicalSymbol": "SPECIES_ARBOK",
+      "nameFr": "Arbok"
+    },
+    {
+      "id": 25,
+      "canonicalSymbol": "SPECIES_PIKACHU",
+      "nameFr": "Pikachu"
+    },
+    {
+      "id": 26,
+      "canonicalSymbol": "SPECIES_RAICHU",
+      "nameFr": "Raichu"
+    },
+    {
+      "id": 27,
+      "canonicalSymbol": "SPECIES_SANDSHREW",
+      "nameFr": "Sabelette"
+    },
+    {
+      "id": 28,
+      "canonicalSymbol": "SPECIES_SANDSLASH",
+      "nameFr": "Sablaireau"
+    },
+    {
+      "id": 29,
+      "canonicalSymbol": "SPECIES_NIDORAN_F",
+      "nameFr": "Nidoran♀"
+    },
+    {
+      "id": 30,
+      "canonicalSymbol": "SPECIES_NIDORINA",
+      "nameFr": "Nidorina"
+    },
+    {
+      "id": 31,
+      "canonicalSymbol": "SPECIES_NIDOQUEEN",
+      "nameFr": "Nidoqueen"
+    },
+    {
+      "id": 32,
+      "canonicalSymbol": "SPECIES_NIDORAN_M",
+      "nameFr": "Nidoran♂"
+    },
+    {
+      "id": 33,
+      "canonicalSymbol": "SPECIES_NIDORINO",
+      "nameFr": "Nidorino"
+    },
+    {
+      "id": 34,
+      "canonicalSymbol": "SPECIES_NIDOKING",
+      "nameFr": "Nidoking"
+    },
+    {
+      "id": 35,
+      "canonicalSymbol": "SPECIES_CLEFAIRY",
+      "nameFr": "Mélofée"
+    },
+    {
+      "id": 36,
+      "canonicalSymbol": "SPECIES_CLEFABLE",
+      "nameFr": "Mélodelfe"
+    },
+    {
+      "id": 37,
+      "canonicalSymbol": "SPECIES_VULPIX",
+      "nameFr": "Goupix"
+    },
+    {
+      "id": 38,
+      "canonicalSymbol": "SPECIES_NINETALES",
+      "nameFr": "Feunard"
+    },
+    {
+      "id": 39,
+      "canonicalSymbol": "SPECIES_JIGGLYPUFF",
+      "nameFr": "Rondoudou"
+    },
+    {
+      "id": 40,
+      "canonicalSymbol": "SPECIES_WIGGLYTUFF",
+      "nameFr": "Grodoudou"
+    },
+    {
+      "id": 41,
+      "canonicalSymbol": "SPECIES_ZUBAT",
+      "nameFr": "Nosferapti"
+    },
+    {
+      "id": 42,
+      "canonicalSymbol": "SPECIES_GOLBAT",
+      "nameFr": "Nosferalto"
+    },
+    {
+      "id": 43,
+      "canonicalSymbol": "SPECIES_ODDISH",
+      "nameFr": "Mystherbe"
+    },
+    {
+      "id": 44,
+      "canonicalSymbol": "SPECIES_GLOOM",
+      "nameFr": "Ortide"
+    },
+    {
+      "id": 45,
+      "canonicalSymbol": "SPECIES_VILEPLUME",
+      "nameFr": "Rafflesia"
+    },
+    {
+      "id": 46,
+      "canonicalSymbol": "SPECIES_PARAS",
+      "nameFr": "Paras"
+    },
+    {
+      "id": 47,
+      "canonicalSymbol": "SPECIES_PARASECT",
+      "nameFr": "Parasect"
+    },
+    {
+      "id": 48,
+      "canonicalSymbol": "SPECIES_VENONAT",
+      "nameFr": "Mimitoss"
+    },
+    {
+      "id": 49,
+      "canonicalSymbol": "SPECIES_VENOMOTH",
+      "nameFr": "Aéromite"
+    },
+    {
+      "id": 50,
+      "canonicalSymbol": "SPECIES_DIGLETT",
+      "nameFr": "Taupiqueur"
+    },
+    {
+      "id": 51,
+      "canonicalSymbol": "SPECIES_DUGTRIO",
+      "nameFr": "Triopikeur"
+    },
+    {
+      "id": 52,
+      "canonicalSymbol": "SPECIES_MEOWTH",
+      "nameFr": "Miaouss"
+    },
+    {
+      "id": 53,
+      "canonicalSymbol": "SPECIES_PERSIAN",
+      "nameFr": "Persian"
+    },
+    {
+      "id": 54,
+      "canonicalSymbol": "SPECIES_PSYDUCK",
+      "nameFr": "Psykokwak"
+    },
+    {
+      "id": 55,
+      "canonicalSymbol": "SPECIES_GOLDUCK",
+      "nameFr": "Akwakwak"
+    },
+    {
+      "id": 56,
+      "canonicalSymbol": "SPECIES_MANKEY",
+      "nameFr": "Férosinge"
+    },
+    {
+      "id": 57,
+      "canonicalSymbol": "SPECIES_PRIMEAPE",
+      "nameFr": "Colossinge"
+    },
+    {
+      "id": 58,
+      "canonicalSymbol": "SPECIES_GROWLITHE",
+      "nameFr": "Caninos"
+    },
+    {
+      "id": 59,
+      "canonicalSymbol": "SPECIES_ARCANINE",
+      "nameFr": "Arcanin"
+    },
+    {
+      "id": 60,
+      "canonicalSymbol": "SPECIES_POLIWAG",
+      "nameFr": "Ptitard"
+    },
+    {
+      "id": 61,
+      "canonicalSymbol": "SPECIES_POLIWHIRL",
+      "nameFr": "Têtarte"
+    },
+    {
+      "id": 62,
+      "canonicalSymbol": "SPECIES_POLIWRATH",
+      "nameFr": "Tartard"
+    },
+    {
+      "id": 63,
+      "canonicalSymbol": "SPECIES_ABRA",
+      "nameFr": "Abra"
+    },
+    {
+      "id": 64,
+      "canonicalSymbol": "SPECIES_KADABRA",
+      "nameFr": "Kadabra"
+    },
+    {
+      "id": 65,
+      "canonicalSymbol": "SPECIES_ALAKAZAM",
+      "nameFr": "Alakazam"
+    },
+    {
+      "id": 66,
+      "canonicalSymbol": "SPECIES_MACHOP",
+      "nameFr": "Machoc"
+    },
+    {
+      "id": 67,
+      "canonicalSymbol": "SPECIES_MACHOKE",
+      "nameFr": "Machopeur"
+    },
+    {
+      "id": 68,
+      "canonicalSymbol": "SPECIES_MACHAMP",
+      "nameFr": "Mackogneur"
+    },
+    {
+      "id": 69,
+      "canonicalSymbol": "SPECIES_BELLSPROUT",
+      "nameFr": "Chétiflor"
+    },
+    {
+      "id": 70,
+      "canonicalSymbol": "SPECIES_WEEPINBELL",
+      "nameFr": "Boustiflor"
+    },
+    {
+      "id": 71,
+      "canonicalSymbol": "SPECIES_VICTREEBEL",
+      "nameFr": "Empiflor"
+    },
+    {
+      "id": 72,
+      "canonicalSymbol": "SPECIES_TENTACOOL",
+      "nameFr": "Tentacool"
+    },
+    {
+      "id": 73,
+      "canonicalSymbol": "SPECIES_TENTACRUEL",
+      "nameFr": "Tentacruel"
+    },
+    {
+      "id": 74,
+      "canonicalSymbol": "SPECIES_GEODUDE",
+      "nameFr": "Racaillou"
+    },
+    {
+      "id": 75,
+      "canonicalSymbol": "SPECIES_GRAVELER",
+      "nameFr": "Gravalanch"
+    },
+    {
+      "id": 76,
+      "canonicalSymbol": "SPECIES_GOLEM",
+      "nameFr": "Grolem"
+    },
+    {
+      "id": 77,
+      "canonicalSymbol": "SPECIES_PONYTA",
+      "nameFr": "Ponyta"
+    },
+    {
+      "id": 78,
+      "canonicalSymbol": "SPECIES_RAPIDASH",
+      "nameFr": "Galopa"
+    },
+    {
+      "id": 79,
+      "canonicalSymbol": "SPECIES_SLOWPOKE",
+      "nameFr": "Ramoloss"
+    },
+    {
+      "id": 80,
+      "canonicalSymbol": "SPECIES_SLOWBRO",
+      "nameFr": "Flagadoss"
+    },
+    {
+      "id": 81,
+      "canonicalSymbol": "SPECIES_MAGNEMITE",
+      "nameFr": "Magnéti"
+    },
+    {
+      "id": 82,
+      "canonicalSymbol": "SPECIES_MAGNETON",
+      "nameFr": "Magnéton"
+    },
+    {
+      "id": 83,
+      "canonicalSymbol": "SPECIES_FARFETCHD",
+      "nameFr": "Canarticho"
+    },
+    {
+      "id": 84,
+      "canonicalSymbol": "SPECIES_DODUO",
+      "nameFr": "Doduo"
+    },
+    {
+      "id": 85,
+      "canonicalSymbol": "SPECIES_DODRIO",
+      "nameFr": "Dodrio"
+    },
+    {
+      "id": 86,
+      "canonicalSymbol": "SPECIES_SEEL",
+      "nameFr": "Otaria"
+    },
+    {
+      "id": 87,
+      "canonicalSymbol": "SPECIES_DEWGONG",
+      "nameFr": "Lamantine"
+    },
+    {
+      "id": 88,
+      "canonicalSymbol": "SPECIES_GRIMER",
+      "nameFr": "Tadmorv"
+    },
+    {
+      "id": 89,
+      "canonicalSymbol": "SPECIES_MUK",
+      "nameFr": "Grotadmorv"
+    },
+    {
+      "id": 90,
+      "canonicalSymbol": "SPECIES_SHELLDER",
+      "nameFr": "Kokiyas"
+    },
+    {
+      "id": 91,
+      "canonicalSymbol": "SPECIES_CLOYSTER",
+      "nameFr": "Crustabri"
+    },
+    {
+      "id": 92,
+      "canonicalSymbol": "SPECIES_GASTLY",
+      "nameFr": "Fantominus"
+    },
+    {
+      "id": 93,
+      "canonicalSymbol": "SPECIES_HAUNTER",
+      "nameFr": "Spectrum"
+    },
+    {
+      "id": 94,
+      "canonicalSymbol": "SPECIES_GENGAR",
+      "nameFr": "Ectoplasma"
+    },
+    {
+      "id": 95,
+      "canonicalSymbol": "SPECIES_ONIX",
+      "nameFr": "Onix"
+    },
+    {
+      "id": 96,
+      "canonicalSymbol": "SPECIES_DROWZEE",
+      "nameFr": "Soporifik"
+    },
+    {
+      "id": 97,
+      "canonicalSymbol": "SPECIES_HYPNO",
+      "nameFr": "Hypnomade"
+    },
+    {
+      "id": 98,
+      "canonicalSymbol": "SPECIES_KRABBY",
+      "nameFr": "Krabby"
+    },
+    {
+      "id": 99,
+      "canonicalSymbol": "SPECIES_KINGLER",
+      "nameFr": "Krabboss"
+    },
+    {
+      "id": 100,
+      "canonicalSymbol": "SPECIES_VOLTORB",
+      "nameFr": "Voltorbe"
+    },
+    {
+      "id": 101,
+      "canonicalSymbol": "SPECIES_ELECTRODE",
+      "nameFr": "Électrode"
+    },
+    {
+      "id": 102,
+      "canonicalSymbol": "SPECIES_EXEGGCUTE",
+      "nameFr": "Nœunœuf"
+    },
+    {
+      "id": 103,
+      "canonicalSymbol": "SPECIES_EXEGGUTOR",
+      "nameFr": "Noadkoko"
+    },
+    {
+      "id": 104,
+      "canonicalSymbol": "SPECIES_CUBONE",
+      "nameFr": "Osselait"
+    },
+    {
+      "id": 105,
+      "canonicalSymbol": "SPECIES_MAROWAK",
+      "nameFr": "Ossatueur"
+    },
+    {
+      "id": 106,
+      "canonicalSymbol": "SPECIES_HITMONLEE",
+      "nameFr": "Kicklee"
+    },
+    {
+      "id": 107,
+      "canonicalSymbol": "SPECIES_HITMONCHAN",
+      "nameFr": "Tygnon"
+    },
+    {
+      "id": 108,
+      "canonicalSymbol": "SPECIES_LICKITUNG",
+      "nameFr": "Excelangue"
+    },
+    {
+      "id": 109,
+      "canonicalSymbol": "SPECIES_KOFFING",
+      "nameFr": "Smogo"
+    },
+    {
+      "id": 110,
+      "canonicalSymbol": "SPECIES_WEEZING",
+      "nameFr": "Smogogo"
+    },
+    {
+      "id": 111,
+      "canonicalSymbol": "SPECIES_RHYHORN",
+      "nameFr": "Rhinocorne"
+    },
+    {
+      "id": 112,
+      "canonicalSymbol": "SPECIES_RHYDON",
+      "nameFr": "Rhinoféros"
+    },
+    {
+      "id": 113,
+      "canonicalSymbol": "SPECIES_CHANSEY",
+      "nameFr": "Leveinard"
+    },
+    {
+      "id": 114,
+      "canonicalSymbol": "SPECIES_TANGELA",
+      "nameFr": "Saquedeneu"
+    },
+    {
+      "id": 115,
+      "canonicalSymbol": "SPECIES_KANGASKHAN",
+      "nameFr": "Kangourex"
+    },
+    {
+      "id": 116,
+      "canonicalSymbol": "SPECIES_HORSEA",
+      "nameFr": "Hypotrempe"
+    },
+    {
+      "id": 117,
+      "canonicalSymbol": "SPECIES_SEADRA",
+      "nameFr": "Hypocéan"
+    },
+    {
+      "id": 118,
+      "canonicalSymbol": "SPECIES_GOLDEEN",
+      "nameFr": "Poissirène"
+    },
+    {
+      "id": 119,
+      "canonicalSymbol": "SPECIES_SEAKING",
+      "nameFr": "Poissoroy"
+    },
+    {
+      "id": 120,
+      "canonicalSymbol": "SPECIES_STARYU",
+      "nameFr": "Stari"
+    },
+    {
+      "id": 121,
+      "canonicalSymbol": "SPECIES_STARMIE",
+      "nameFr": "Staross"
+    },
+    {
+      "id": 122,
+      "canonicalSymbol": "SPECIES_MR_MIME",
+      "nameFr": "M. Mime"
+    },
+    {
+      "id": 123,
+      "canonicalSymbol": "SPECIES_SCYTHER",
+      "nameFr": "Insécateur"
+    },
+    {
+      "id": 124,
+      "canonicalSymbol": "SPECIES_JYNX",
+      "nameFr": "Lippoutou"
+    },
+    {
+      "id": 125,
+      "canonicalSymbol": "SPECIES_ELECTABUZZ",
+      "nameFr": "Élektek"
+    },
+    {
+      "id": 126,
+      "canonicalSymbol": "SPECIES_MAGMAR",
+      "nameFr": "Magmar"
+    },
+    {
+      "id": 127,
+      "canonicalSymbol": "SPECIES_PINSIR",
+      "nameFr": "Scarabrute"
+    },
+    {
+      "id": 128,
+      "canonicalSymbol": "SPECIES_TAUROS",
+      "nameFr": "Tauros"
+    },
+    {
+      "id": 129,
+      "canonicalSymbol": "SPECIES_MAGIKARP",
+      "nameFr": "Magicarpe"
+    },
+    {
+      "id": 130,
+      "canonicalSymbol": "SPECIES_GYARADOS",
+      "nameFr": "Léviator"
+    },
+    {
+      "id": 131,
+      "canonicalSymbol": "SPECIES_LAPRAS",
+      "nameFr": "Lokhlass"
+    },
+    {
+      "id": 132,
+      "canonicalSymbol": "SPECIES_DITTO",
+      "nameFr": "Métamorph"
+    },
+    {
+      "id": 133,
+      "canonicalSymbol": "SPECIES_EEVEE",
+      "nameFr": "Évoli"
+    },
+    {
+      "id": 134,
+      "canonicalSymbol": "SPECIES_VAPOREON",
+      "nameFr": "Aquali"
+    },
+    {
+      "id": 135,
+      "canonicalSymbol": "SPECIES_JOLTEON",
+      "nameFr": "Voltali"
+    },
+    {
+      "id": 136,
+      "canonicalSymbol": "SPECIES_FLAREON",
+      "nameFr": "Pyroli"
+    },
+    {
+      "id": 137,
+      "canonicalSymbol": "SPECIES_PORYGON",
+      "nameFr": "Porygon"
+    },
+    {
+      "id": 138,
+      "canonicalSymbol": "SPECIES_OMANYTE",
+      "nameFr": "Amonita"
+    },
+    {
+      "id": 139,
+      "canonicalSymbol": "SPECIES_OMASTAR",
+      "nameFr": "Amonistar"
+    },
+    {
+      "id": 140,
+      "canonicalSymbol": "SPECIES_KABUTO",
+      "nameFr": "Kabuto"
+    },
+    {
+      "id": 141,
+      "canonicalSymbol": "SPECIES_KABUTOPS",
+      "nameFr": "Kabutops"
+    },
+    {
+      "id": 142,
+      "canonicalSymbol": "SPECIES_AERODACTYL",
+      "nameFr": "Ptéra"
+    },
+    {
+      "id": 143,
+      "canonicalSymbol": "SPECIES_SNORLAX",
+      "nameFr": "Ronflex"
+    },
+    {
+      "id": 144,
+      "canonicalSymbol": "SPECIES_ARTICUNO",
+      "nameFr": "Artikodin"
+    },
+    {
+      "id": 145,
+      "canonicalSymbol": "SPECIES_ZAPDOS",
+      "nameFr": "Électhor"
+    },
+    {
+      "id": 146,
+      "canonicalSymbol": "SPECIES_MOLTRES",
+      "nameFr": "Sulfura"
+    },
+    {
+      "id": 147,
+      "canonicalSymbol": "SPECIES_DRATINI",
+      "nameFr": "Minidraco"
+    },
+    {
+      "id": 148,
+      "canonicalSymbol": "SPECIES_DRAGONAIR",
+      "nameFr": "Draco"
+    },
+    {
+      "id": 149,
+      "canonicalSymbol": "SPECIES_DRAGONITE",
+      "nameFr": "Dracolosse"
+    },
+    {
+      "id": 150,
+      "canonicalSymbol": "SPECIES_MEWTWO",
+      "nameFr": "Mewtwo"
+    },
+    {
+      "id": 151,
+      "canonicalSymbol": "SPECIES_MEW",
+      "nameFr": "Mew"
+    },
+    {
+      "id": 152,
+      "canonicalSymbol": "SPECIES_CHIKORITA",
+      "nameFr": "Germignon"
+    },
+    {
+      "id": 153,
+      "canonicalSymbol": "SPECIES_BAYLEEF",
+      "nameFr": "Macronium"
+    },
+    {
+      "id": 154,
+      "canonicalSymbol": "SPECIES_MEGANIUM",
+      "nameFr": "Méganium"
+    },
+    {
+      "id": 155,
+      "canonicalSymbol": "SPECIES_CYNDAQUIL",
+      "nameFr": "Héricendre"
+    },
+    {
+      "id": 156,
+      "canonicalSymbol": "SPECIES_QUILAVA",
+      "nameFr": "Feurisson"
+    },
+    {
+      "id": 157,
+      "canonicalSymbol": "SPECIES_TYPHLOSION",
+      "nameFr": "Typhlosion"
+    },
+    {
+      "id": 158,
+      "canonicalSymbol": "SPECIES_TOTODILE",
+      "nameFr": "Kaiminus"
+    },
+    {
+      "id": 159,
+      "canonicalSymbol": "SPECIES_CROCONAW",
+      "nameFr": "Crocrodil"
+    },
+    {
+      "id": 160,
+      "canonicalSymbol": "SPECIES_FERALIGATR",
+      "nameFr": "Aligatueur"
+    },
+    {
+      "id": 161,
+      "canonicalSymbol": "SPECIES_SENTRET",
+      "nameFr": "Fouinette"
+    },
+    {
+      "id": 162,
+      "canonicalSymbol": "SPECIES_FURRET",
+      "nameFr": "Fouinar"
+    },
+    {
+      "id": 163,
+      "canonicalSymbol": "SPECIES_HOOTHOOT",
+      "nameFr": "Hoothoot"
+    },
+    {
+      "id": 164,
+      "canonicalSymbol": "SPECIES_NOCTOWL",
+      "nameFr": "Noarfang"
+    },
+    {
+      "id": 165,
+      "canonicalSymbol": "SPECIES_LEDYBA",
+      "nameFr": "Coxy"
+    },
+    {
+      "id": 166,
+      "canonicalSymbol": "SPECIES_LEDIAN",
+      "nameFr": "Coxyclaque"
+    },
+    {
+      "id": 167,
+      "canonicalSymbol": "SPECIES_SPINARAK",
+      "nameFr": "Mimigal"
+    },
+    {
+      "id": 168,
+      "canonicalSymbol": "SPECIES_ARIADOS",
+      "nameFr": "Migalos"
+    },
+    {
+      "id": 169,
+      "canonicalSymbol": "SPECIES_CROBAT",
+      "nameFr": "Nostenfer"
+    },
+    {
+      "id": 170,
+      "canonicalSymbol": "SPECIES_CHINCHOU",
+      "nameFr": "Loupio"
+    },
+    {
+      "id": 171,
+      "canonicalSymbol": "SPECIES_LANTURN",
+      "nameFr": "Lanturn"
+    },
+    {
+      "id": 172,
+      "canonicalSymbol": "SPECIES_PICHU",
+      "nameFr": "Pichu"
+    },
+    {
+      "id": 173,
+      "canonicalSymbol": "SPECIES_CLEFFA",
+      "nameFr": "Mélo"
+    },
+    {
+      "id": 174,
+      "canonicalSymbol": "SPECIES_IGGLYBUFF",
+      "nameFr": "Toudoudou"
+    },
+    {
+      "id": 175,
+      "canonicalSymbol": "SPECIES_TOGEPI",
+      "nameFr": "Togepi"
+    },
+    {
+      "id": 176,
+      "canonicalSymbol": "SPECIES_TOGETIC",
+      "nameFr": "Togetic"
+    },
+    {
+      "id": 177,
+      "canonicalSymbol": "SPECIES_NATU",
+      "nameFr": "Natu"
+    },
+    {
+      "id": 178,
+      "canonicalSymbol": "SPECIES_XATU",
+      "nameFr": "Xatu"
+    },
+    {
+      "id": 179,
+      "canonicalSymbol": "SPECIES_MAREEP",
+      "nameFr": "Wattouat"
+    },
+    {
+      "id": 180,
+      "canonicalSymbol": "SPECIES_FLAAFFY",
+      "nameFr": "Lainergie"
+    },
+    {
+      "id": 181,
+      "canonicalSymbol": "SPECIES_AMPHAROS",
+      "nameFr": "Pharamp"
+    },
+    {
+      "id": 182,
+      "canonicalSymbol": "SPECIES_BELLOSSOM",
+      "nameFr": "Joliflor"
+    },
+    {
+      "id": 183,
+      "canonicalSymbol": "SPECIES_MARILL",
+      "nameFr": "Marill"
+    },
+    {
+      "id": 184,
+      "canonicalSymbol": "SPECIES_AZUMARILL",
+      "nameFr": "Azumarill"
+    },
+    {
+      "id": 185,
+      "canonicalSymbol": "SPECIES_SUDOWOODO",
+      "nameFr": "Simularbre"
+    },
+    {
+      "id": 186,
+      "canonicalSymbol": "SPECIES_POLITOED",
+      "nameFr": "Tarpaud"
+    },
+    {
+      "id": 187,
+      "canonicalSymbol": "SPECIES_HOPPIP",
+      "nameFr": "Granivol"
+    },
+    {
+      "id": 188,
+      "canonicalSymbol": "SPECIES_SKIPLOOM",
+      "nameFr": "Floravol"
+    },
+    {
+      "id": 189,
+      "canonicalSymbol": "SPECIES_JUMPLUFF",
+      "nameFr": "Cotovol"
+    },
+    {
+      "id": 190,
+      "canonicalSymbol": "SPECIES_AIPOM",
+      "nameFr": "Capumain"
+    },
+    {
+      "id": 191,
+      "canonicalSymbol": "SPECIES_SUNKERN",
+      "nameFr": "Tournegrin"
+    },
+    {
+      "id": 192,
+      "canonicalSymbol": "SPECIES_SUNFLORA",
+      "nameFr": "Héliatronc"
+    },
+    {
+      "id": 193,
+      "canonicalSymbol": "SPECIES_YANMA",
+      "nameFr": "Yanma"
+    },
+    {
+      "id": 194,
+      "canonicalSymbol": "SPECIES_WOOPER",
+      "nameFr": "Axoloto"
+    },
+    {
+      "id": 195,
+      "canonicalSymbol": "SPECIES_QUAGSIRE",
+      "nameFr": "Maraiste"
+    },
+    {
+      "id": 196,
+      "canonicalSymbol": "SPECIES_ESPEON",
+      "nameFr": "Mentali"
+    },
+    {
+      "id": 197,
+      "canonicalSymbol": "SPECIES_UMBREON",
+      "nameFr": "Noctali"
+    },
+    {
+      "id": 198,
+      "canonicalSymbol": "SPECIES_MURKROW",
+      "nameFr": "Cornèbre"
+    },
+    {
+      "id": 199,
+      "canonicalSymbol": "SPECIES_SLOWKING",
+      "nameFr": "Roigada"
+    },
+    {
+      "id": 200,
+      "canonicalSymbol": "SPECIES_MISDREAVUS",
+      "nameFr": "Feuforêve"
+    },
+    {
+      "id": 201,
+      "canonicalSymbol": "SPECIES_UNOWN",
+      "nameFr": "Zarbi"
+    },
+    {
+      "id": 202,
+      "canonicalSymbol": "SPECIES_WOBBUFFET",
+      "nameFr": "Qulbutoké"
+    },
+    {
+      "id": 203,
+      "canonicalSymbol": "SPECIES_GIRAFARIG",
+      "nameFr": "Girafarig"
+    },
+    {
+      "id": 204,
+      "canonicalSymbol": "SPECIES_PINECO",
+      "nameFr": "Pomdepic"
+    },
+    {
+      "id": 205,
+      "canonicalSymbol": "SPECIES_FORRETRESS",
+      "nameFr": "Foretress"
+    },
+    {
+      "id": 206,
+      "canonicalSymbol": "SPECIES_DUNSPARCE",
+      "nameFr": "Insolourdo"
+    },
+    {
+      "id": 207,
+      "canonicalSymbol": "SPECIES_GLIGAR",
+      "nameFr": "Scorplane"
+    },
+    {
+      "id": 208,
+      "canonicalSymbol": "SPECIES_STEELIX",
+      "nameFr": "Steelix"
+    },
+    {
+      "id": 209,
+      "canonicalSymbol": "SPECIES_SNUBBULL",
+      "nameFr": "Snubbull"
+    },
+    {
+      "id": 210,
+      "canonicalSymbol": "SPECIES_GRANBULL",
+      "nameFr": "Granbull"
+    },
+    {
+      "id": 211,
+      "canonicalSymbol": "SPECIES_QWILFISH",
+      "nameFr": "Qwilfish"
+    },
+    {
+      "id": 212,
+      "canonicalSymbol": "SPECIES_SCIZOR",
+      "nameFr": "Cizayox"
+    },
+    {
+      "id": 213,
+      "canonicalSymbol": "SPECIES_SHUCKLE",
+      "nameFr": "Caratroc"
+    },
+    {
+      "id": 214,
+      "canonicalSymbol": "SPECIES_HERACROSS",
+      "nameFr": "Scarhino"
+    },
+    {
+      "id": 215,
+      "canonicalSymbol": "SPECIES_SNEASEL",
+      "nameFr": "Farfuret"
+    },
+    {
+      "id": 216,
+      "canonicalSymbol": "SPECIES_TEDDIURSA",
+      "nameFr": "Teddiursa"
+    },
+    {
+      "id": 217,
+      "canonicalSymbol": "SPECIES_URSARING",
+      "nameFr": "Ursaring"
+    },
+    {
+      "id": 218,
+      "canonicalSymbol": "SPECIES_SLUGMA",
+      "nameFr": "Limagma"
+    },
+    {
+      "id": 219,
+      "canonicalSymbol": "SPECIES_MAGCARGO",
+      "nameFr": "Volcaropod"
+    },
+    {
+      "id": 220,
+      "canonicalSymbol": "SPECIES_SWINUB",
+      "nameFr": "Marcacrin"
+    },
+    {
+      "id": 221,
+      "canonicalSymbol": "SPECIES_PILOSWINE",
+      "nameFr": "Cochignon"
+    },
+    {
+      "id": 222,
+      "canonicalSymbol": "SPECIES_CORSOLA",
+      "nameFr": "Corayon"
+    },
+    {
+      "id": 223,
+      "canonicalSymbol": "SPECIES_REMORAID",
+      "nameFr": "Rémoraid"
+    },
+    {
+      "id": 224,
+      "canonicalSymbol": "SPECIES_OCTILLERY",
+      "nameFr": "Octillery"
+    },
+    {
+      "id": 225,
+      "canonicalSymbol": "SPECIES_DELIBIRD",
+      "nameFr": "Cadoizo"
+    },
+    {
+      "id": 226,
+      "canonicalSymbol": "SPECIES_MANTINE",
+      "nameFr": "Démanta"
+    },
+    {
+      "id": 227,
+      "canonicalSymbol": "SPECIES_SKARMORY",
+      "nameFr": "Airmure"
+    },
+    {
+      "id": 228,
+      "canonicalSymbol": "SPECIES_HOUNDOUR",
+      "nameFr": "Malosse"
+    },
+    {
+      "id": 229,
+      "canonicalSymbol": "SPECIES_HOUNDOOM",
+      "nameFr": "Démolosse"
+    },
+    {
+      "id": 230,
+      "canonicalSymbol": "SPECIES_KINGDRA",
+      "nameFr": "Hyporoi"
+    },
+    {
+      "id": 231,
+      "canonicalSymbol": "SPECIES_PHANPY",
+      "nameFr": "Phanpy"
+    },
+    {
+      "id": 232,
+      "canonicalSymbol": "SPECIES_DONPHAN",
+      "nameFr": "Donphan"
+    },
+    {
+      "id": 233,
+      "canonicalSymbol": "SPECIES_PORYGON2",
+      "nameFr": "Porygon2"
+    },
+    {
+      "id": 234,
+      "canonicalSymbol": "SPECIES_STANTLER",
+      "nameFr": "Cerfrousse"
+    },
+    {
+      "id": 235,
+      "canonicalSymbol": "SPECIES_SMEARGLE",
+      "nameFr": "Queulorior"
+    },
+    {
+      "id": 236,
+      "canonicalSymbol": "SPECIES_TYROGUE",
+      "nameFr": "Debugant"
+    },
+    {
+      "id": 237,
+      "canonicalSymbol": "SPECIES_HITMONTOP",
+      "nameFr": "Kapoera"
+    },
+    {
+      "id": 238,
+      "canonicalSymbol": "SPECIES_SMOOCHUM",
+      "nameFr": "Lippouti"
+    },
+    {
+      "id": 239,
+      "canonicalSymbol": "SPECIES_ELEKID",
+      "nameFr": "Élekid"
+    },
+    {
+      "id": 240,
+      "canonicalSymbol": "SPECIES_MAGBY",
+      "nameFr": "Magby"
+    },
+    {
+      "id": 241,
+      "canonicalSymbol": "SPECIES_MILTANK",
+      "nameFr": "Écrémeuh"
+    },
+    {
+      "id": 242,
+      "canonicalSymbol": "SPECIES_BLISSEY",
+      "nameFr": "Leuphorie"
+    },
+    {
+      "id": 243,
+      "canonicalSymbol": "SPECIES_RAIKOU",
+      "nameFr": "Raikou"
+    },
+    {
+      "id": 244,
+      "canonicalSymbol": "SPECIES_ENTEI",
+      "nameFr": "Entei"
+    },
+    {
+      "id": 245,
+      "canonicalSymbol": "SPECIES_SUICUNE",
+      "nameFr": "Suicune"
+    },
+    {
+      "id": 246,
+      "canonicalSymbol": "SPECIES_LARVITAR",
+      "nameFr": "Embrylex"
+    },
+    {
+      "id": 247,
+      "canonicalSymbol": "SPECIES_PUPITAR",
+      "nameFr": "Ymphect"
+    },
+    {
+      "id": 248,
+      "canonicalSymbol": "SPECIES_TYRANITAR",
+      "nameFr": "Tyranocif"
+    },
+    {
+      "id": 249,
+      "canonicalSymbol": "SPECIES_LUGIA",
+      "nameFr": "Lugia"
+    },
+    {
+      "id": 250,
+      "canonicalSymbol": "SPECIES_HO_OH",
+      "nameFr": "Ho-Oh"
+    },
+    {
+      "id": 251,
+      "canonicalSymbol": "SPECIES_CELEBI",
+      "nameFr": "Celebi"
+    },
+    {
+      "id": 252,
+      "canonicalSymbol": "SPECIES_TREECKO",
+      "nameFr": "Arcko"
+    },
+    {
+      "id": 253,
+      "canonicalSymbol": "SPECIES_GROVYLE",
+      "nameFr": "Massko"
+    },
+    {
+      "id": 254,
+      "canonicalSymbol": "SPECIES_SCEPTILE",
+      "nameFr": "Jungko"
+    },
+    {
+      "id": 255,
+      "canonicalSymbol": "SPECIES_TORCHIC",
+      "nameFr": "Poussifeu"
+    },
+    {
+      "id": 256,
+      "canonicalSymbol": "SPECIES_COMBUSKEN",
+      "nameFr": "Galifeu"
+    },
+    {
+      "id": 257,
+      "canonicalSymbol": "SPECIES_BLAZIKEN",
+      "nameFr": "Braségali"
+    },
+    {
+      "id": 258,
+      "canonicalSymbol": "SPECIES_MUDKIP",
+      "nameFr": "Gobou"
+    },
+    {
+      "id": 259,
+      "canonicalSymbol": "SPECIES_MARSHTOMP",
+      "nameFr": "Flobio"
+    },
+    {
+      "id": 260,
+      "canonicalSymbol": "SPECIES_SWAMPERT",
+      "nameFr": "Laggron"
+    },
+    {
+      "id": 261,
+      "canonicalSymbol": "SPECIES_POOCHYENA",
+      "nameFr": "Medhyèna"
+    },
+    {
+      "id": 262,
+      "canonicalSymbol": "SPECIES_MIGHTYENA",
+      "nameFr": "Grahyèna"
+    },
+    {
+      "id": 263,
+      "canonicalSymbol": "SPECIES_ZIGZAGOON",
+      "nameFr": "Zigzaton"
+    },
+    {
+      "id": 264,
+      "canonicalSymbol": "SPECIES_LINOONE",
+      "nameFr": "Linéon"
+    },
+    {
+      "id": 265,
+      "canonicalSymbol": "SPECIES_WURMPLE",
+      "nameFr": "Chenipotte"
+    },
+    {
+      "id": 266,
+      "canonicalSymbol": "SPECIES_SILCOON",
+      "nameFr": "Armulys"
+    },
+    {
+      "id": 267,
+      "canonicalSymbol": "SPECIES_BEAUTIFLY",
+      "nameFr": "Charmillon"
+    },
+    {
+      "id": 268,
+      "canonicalSymbol": "SPECIES_CASCOON",
+      "nameFr": "Blindalys"
+    },
+    {
+      "id": 269,
+      "canonicalSymbol": "SPECIES_DUSTOX",
+      "nameFr": "Papinox"
+    },
+    {
+      "id": 270,
+      "canonicalSymbol": "SPECIES_LOTAD",
+      "nameFr": "Nénupiot"
+    },
+    {
+      "id": 271,
+      "canonicalSymbol": "SPECIES_LOMBRE",
+      "nameFr": "Lombre"
+    },
+    {
+      "id": 272,
+      "canonicalSymbol": "SPECIES_LUDICOLO",
+      "nameFr": "Ludicolo"
+    },
+    {
+      "id": 273,
+      "canonicalSymbol": "SPECIES_SEEDOT",
+      "nameFr": "Grainipiot"
+    },
+    {
+      "id": 274,
+      "canonicalSymbol": "SPECIES_NUZLEAF",
+      "nameFr": "Pifeuil"
+    },
+    {
+      "id": 275,
+      "canonicalSymbol": "SPECIES_SHIFTRY",
+      "nameFr": "Tengalice"
+    },
+    {
+      "id": 276,
+      "canonicalSymbol": "SPECIES_TAILLOW",
+      "nameFr": "Nirondelle"
+    },
+    {
+      "id": 277,
+      "canonicalSymbol": "SPECIES_SWELLOW",
+      "nameFr": "Hélédelle"
+    },
+    {
+      "id": 278,
+      "canonicalSymbol": "SPECIES_WINGULL",
+      "nameFr": "Goélise"
+    },
+    {
+      "id": 279,
+      "canonicalSymbol": "SPECIES_PELIPPER",
+      "nameFr": "Bekipan"
+    },
+    {
+      "id": 280,
+      "canonicalSymbol": "SPECIES_RALTS",
+      "nameFr": "Tarsal"
+    },
+    {
+      "id": 281,
+      "canonicalSymbol": "SPECIES_KIRLIA",
+      "nameFr": "Kirlia"
+    },
+    {
+      "id": 282,
+      "canonicalSymbol": "SPECIES_GARDEVOIR",
+      "nameFr": "Gardevoir"
+    },
+    {
+      "id": 283,
+      "canonicalSymbol": "SPECIES_SURSKIT",
+      "nameFr": "Arakdo"
+    },
+    {
+      "id": 284,
+      "canonicalSymbol": "SPECIES_MASQUERAIN",
+      "nameFr": "Maskadra"
+    },
+    {
+      "id": 285,
+      "canonicalSymbol": "SPECIES_SHROOMISH",
+      "nameFr": "Balignon"
+    },
+    {
+      "id": 286,
+      "canonicalSymbol": "SPECIES_BRELOOM",
+      "nameFr": "Chapignon"
+    },
+    {
+      "id": 287,
+      "canonicalSymbol": "SPECIES_SLAKOTH",
+      "nameFr": "Parecool"
+    },
+    {
+      "id": 288,
+      "canonicalSymbol": "SPECIES_VIGOROTH",
+      "nameFr": "Vigoroth"
+    },
+    {
+      "id": 289,
+      "canonicalSymbol": "SPECIES_SLAKING",
+      "nameFr": "Monaflèmit"
+    },
+    {
+      "id": 290,
+      "canonicalSymbol": "SPECIES_NINCADA",
+      "nameFr": "Ningale"
+    },
+    {
+      "id": 291,
+      "canonicalSymbol": "SPECIES_NINJASK",
+      "nameFr": "Ninjask"
+    },
+    {
+      "id": 292,
+      "canonicalSymbol": "SPECIES_SHEDINJA",
+      "nameFr": "Munja"
+    },
+    {
+      "id": 293,
+      "canonicalSymbol": "SPECIES_WHISMUR",
+      "nameFr": "Chuchmur"
+    },
+    {
+      "id": 294,
+      "canonicalSymbol": "SPECIES_LOUDRED",
+      "nameFr": "Ramboum"
+    },
+    {
+      "id": 295,
+      "canonicalSymbol": "SPECIES_EXPLOUD",
+      "nameFr": "Brouhabam"
+    },
+    {
+      "id": 296,
+      "canonicalSymbol": "SPECIES_MAKUHITA",
+      "nameFr": "Makuhita"
+    },
+    {
+      "id": 297,
+      "canonicalSymbol": "SPECIES_HARIYAMA",
+      "nameFr": "Hariyama"
+    },
+    {
+      "id": 298,
+      "canonicalSymbol": "SPECIES_AZURILL",
+      "nameFr": "Azurill"
+    },
+    {
+      "id": 299,
+      "canonicalSymbol": "SPECIES_NOSEPASS",
+      "nameFr": "Tarinor"
+    },
+    {
+      "id": 300,
+      "canonicalSymbol": "SPECIES_SKITTY",
+      "nameFr": "Skitty"
+    },
+    {
+      "id": 301,
+      "canonicalSymbol": "SPECIES_DELCATTY",
+      "nameFr": "Delcatty"
+    },
+    {
+      "id": 302,
+      "canonicalSymbol": "SPECIES_SABLEYE",
+      "nameFr": "Ténéfix"
+    },
+    {
+      "id": 303,
+      "canonicalSymbol": "SPECIES_MAWILE",
+      "nameFr": "Mysdibule"
+    },
+    {
+      "id": 304,
+      "canonicalSymbol": "SPECIES_ARON",
+      "nameFr": "Galekid"
+    },
+    {
+      "id": 305,
+      "canonicalSymbol": "SPECIES_LAIRON",
+      "nameFr": "Galegon"
+    },
+    {
+      "id": 306,
+      "canonicalSymbol": "SPECIES_AGGRON",
+      "nameFr": "Galeking"
+    },
+    {
+      "id": 307,
+      "canonicalSymbol": "SPECIES_MEDITITE",
+      "nameFr": "Méditikka"
+    },
+    {
+      "id": 308,
+      "canonicalSymbol": "SPECIES_MEDICHAM",
+      "nameFr": "Charmina"
+    },
+    {
+      "id": 309,
+      "canonicalSymbol": "SPECIES_ELECTRIKE",
+      "nameFr": "Dynavolt"
+    },
+    {
+      "id": 310,
+      "canonicalSymbol": "SPECIES_MANECTRIC",
+      "nameFr": "Élecsprint"
+    },
+    {
+      "id": 311,
+      "canonicalSymbol": "SPECIES_PLUSLE",
+      "nameFr": "Posipi"
+    },
+    {
+      "id": 312,
+      "canonicalSymbol": "SPECIES_MINUN",
+      "nameFr": "Négapi"
+    },
+    {
+      "id": 313,
+      "canonicalSymbol": "SPECIES_VOLBEAT",
+      "nameFr": "Muciole"
+    },
+    {
+      "id": 314,
+      "canonicalSymbol": "SPECIES_ILLUMISE",
+      "nameFr": "Lumivole"
+    },
+    {
+      "id": 315,
+      "canonicalSymbol": "SPECIES_ROSELIA",
+      "nameFr": "Rosélia"
+    },
+    {
+      "id": 316,
+      "canonicalSymbol": "SPECIES_GULPIN",
+      "nameFr": "Gloupti"
+    },
+    {
+      "id": 317,
+      "canonicalSymbol": "SPECIES_SWALOT",
+      "nameFr": "Avaltout"
+    },
+    {
+      "id": 318,
+      "canonicalSymbol": "SPECIES_CARVANHA",
+      "nameFr": "Carvanha"
+    },
+    {
+      "id": 319,
+      "canonicalSymbol": "SPECIES_SHARPEDO",
+      "nameFr": "Sharpedo"
+    },
+    {
+      "id": 320,
+      "canonicalSymbol": "SPECIES_WAILMER",
+      "nameFr": "Wailmer"
+    },
+    {
+      "id": 321,
+      "canonicalSymbol": "SPECIES_WAILORD",
+      "nameFr": "Wailord"
+    },
+    {
+      "id": 322,
+      "canonicalSymbol": "SPECIES_NUMEL",
+      "nameFr": "Chamallot"
+    },
+    {
+      "id": 323,
+      "canonicalSymbol": "SPECIES_CAMERUPT",
+      "nameFr": "Camérupt"
+    },
+    {
+      "id": 324,
+      "canonicalSymbol": "SPECIES_TORKOAL",
+      "nameFr": "Chartor"
+    },
+    {
+      "id": 325,
+      "canonicalSymbol": "SPECIES_SPOINK",
+      "nameFr": "Spoink"
+    },
+    {
+      "id": 326,
+      "canonicalSymbol": "SPECIES_GRUMPIG",
+      "nameFr": "Groret"
+    },
+    {
+      "id": 327,
+      "canonicalSymbol": "SPECIES_SPINDA",
+      "nameFr": "Spinda"
+    },
+    {
+      "id": 328,
+      "canonicalSymbol": "SPECIES_TRAPINCH",
+      "nameFr": "Kraknoix"
+    },
+    {
+      "id": 329,
+      "canonicalSymbol": "SPECIES_VIBRAVA",
+      "nameFr": "Vibraninf"
+    },
+    {
+      "id": 330,
+      "canonicalSymbol": "SPECIES_FLYGON",
+      "nameFr": "Libégon"
+    },
+    {
+      "id": 331,
+      "canonicalSymbol": "SPECIES_CACNEA",
+      "nameFr": "Cacnea"
+    },
+    {
+      "id": 332,
+      "canonicalSymbol": "SPECIES_CACTURNE",
+      "nameFr": "Cacturne"
+    },
+    {
+      "id": 333,
+      "canonicalSymbol": "SPECIES_SWABLU",
+      "nameFr": "Tylton"
+    },
+    {
+      "id": 334,
+      "canonicalSymbol": "SPECIES_ALTARIA",
+      "nameFr": "Altaria"
+    },
+    {
+      "id": 335,
+      "canonicalSymbol": "SPECIES_ZANGOOSE",
+      "nameFr": "Mangriff"
+    },
+    {
+      "id": 336,
+      "canonicalSymbol": "SPECIES_SEVIPER",
+      "nameFr": "Séviper"
+    },
+    {
+      "id": 337,
+      "canonicalSymbol": "SPECIES_LUNATONE",
+      "nameFr": "Séléroc"
+    },
+    {
+      "id": 338,
+      "canonicalSymbol": "SPECIES_SOLROCK",
+      "nameFr": "Solaroc"
+    },
+    {
+      "id": 339,
+      "canonicalSymbol": "SPECIES_BARBOACH",
+      "nameFr": "Barloche"
+    },
+    {
+      "id": 340,
+      "canonicalSymbol": "SPECIES_WHISCASH",
+      "nameFr": "Barbicha"
+    },
+    {
+      "id": 341,
+      "canonicalSymbol": "SPECIES_CORPHISH",
+      "nameFr": "Écrapince"
+    },
+    {
+      "id": 342,
+      "canonicalSymbol": "SPECIES_CRAWDAUNT",
+      "nameFr": "Colhomard"
+    },
+    {
+      "id": 343,
+      "canonicalSymbol": "SPECIES_BALTOY",
+      "nameFr": "Balbuto"
+    },
+    {
+      "id": 344,
+      "canonicalSymbol": "SPECIES_CLAYDOL",
+      "nameFr": "Kaorine"
+    },
+    {
+      "id": 345,
+      "canonicalSymbol": "SPECIES_LILEEP",
+      "nameFr": "Lilia"
+    },
+    {
+      "id": 346,
+      "canonicalSymbol": "SPECIES_CRADILY",
+      "nameFr": "Vacilys"
+    },
+    {
+      "id": 347,
+      "canonicalSymbol": "SPECIES_ANORITH",
+      "nameFr": "Anorith"
+    },
+    {
+      "id": 348,
+      "canonicalSymbol": "SPECIES_ARMALDO",
+      "nameFr": "Armaldo"
+    },
+    {
+      "id": 349,
+      "canonicalSymbol": "SPECIES_FEEBAS",
+      "nameFr": "Barpau"
+    },
+    {
+      "id": 350,
+      "canonicalSymbol": "SPECIES_MILOTIC",
+      "nameFr": "Milobellus"
+    },
+    {
+      "id": 351,
+      "canonicalSymbol": "SPECIES_CASTFORM",
+      "nameFr": "Morphéo"
+    },
+    {
+      "id": 352,
+      "canonicalSymbol": "SPECIES_KECLEON",
+      "nameFr": "Kecleon"
+    },
+    {
+      "id": 353,
+      "canonicalSymbol": "SPECIES_SHUPPET",
+      "nameFr": "Polichombr"
+    },
+    {
+      "id": 354,
+      "canonicalSymbol": "SPECIES_BANETTE",
+      "nameFr": "Branette"
+    },
+    {
+      "id": 355,
+      "canonicalSymbol": "SPECIES_DUSKULL",
+      "nameFr": "Skelénox"
+    },
+    {
+      "id": 356,
+      "canonicalSymbol": "SPECIES_DUSCLOPS",
+      "nameFr": "Téraclope"
+    },
+    {
+      "id": 357,
+      "canonicalSymbol": "SPECIES_TROPIUS",
+      "nameFr": "Tropius"
+    },
+    {
+      "id": 358,
+      "canonicalSymbol": "SPECIES_CHIMECHO",
+      "nameFr": "Éoko"
+    },
+    {
+      "id": 359,
+      "canonicalSymbol": "SPECIES_ABSOL",
+      "nameFr": "Absol"
+    },
+    {
+      "id": 360,
+      "canonicalSymbol": "SPECIES_WYNAUT",
+      "nameFr": "Okéoké"
+    },
+    {
+      "id": 361,
+      "canonicalSymbol": "SPECIES_SNORUNT",
+      "nameFr": "Stalgamin"
+    },
+    {
+      "id": 362,
+      "canonicalSymbol": "SPECIES_GLALIE",
+      "nameFr": "Oniglali"
+    },
+    {
+      "id": 363,
+      "canonicalSymbol": "SPECIES_SPHEAL",
+      "nameFr": "Obalie"
+    },
+    {
+      "id": 364,
+      "canonicalSymbol": "SPECIES_SEALEO",
+      "nameFr": "Phogleur"
+    },
+    {
+      "id": 365,
+      "canonicalSymbol": "SPECIES_WALREIN",
+      "nameFr": "Kaimorse"
+    },
+    {
+      "id": 366,
+      "canonicalSymbol": "SPECIES_CLAMPERL",
+      "nameFr": "Coquiperl"
+    },
+    {
+      "id": 367,
+      "canonicalSymbol": "SPECIES_HUNTAIL",
+      "nameFr": "Serpang"
+    },
+    {
+      "id": 368,
+      "canonicalSymbol": "SPECIES_GOREBYSS",
+      "nameFr": "Rosabyss"
+    },
+    {
+      "id": 369,
+      "canonicalSymbol": "SPECIES_RELICANTH",
+      "nameFr": "Relicanth"
+    },
+    {
+      "id": 370,
+      "canonicalSymbol": "SPECIES_LUVDISC",
+      "nameFr": "Lovdisc"
+    },
+    {
+      "id": 371,
+      "canonicalSymbol": "SPECIES_BAGON",
+      "nameFr": "Draby"
+    },
+    {
+      "id": 372,
+      "canonicalSymbol": "SPECIES_SHELGON",
+      "nameFr": "Drackhaus"
+    },
+    {
+      "id": 373,
+      "canonicalSymbol": "SPECIES_SALAMENCE",
+      "nameFr": "Drattak"
+    },
+    {
+      "id": 374,
+      "canonicalSymbol": "SPECIES_BELDUM",
+      "nameFr": "Terhal"
+    },
+    {
+      "id": 375,
+      "canonicalSymbol": "SPECIES_METANG",
+      "nameFr": "Métang"
+    },
+    {
+      "id": 376,
+      "canonicalSymbol": "SPECIES_METAGROSS",
+      "nameFr": "Métalosse"
+    },
+    {
+      "id": 377,
+      "canonicalSymbol": "SPECIES_REGIROCK",
+      "nameFr": "Regirock"
+    },
+    {
+      "id": 378,
+      "canonicalSymbol": "SPECIES_REGICE",
+      "nameFr": "Regice"
+    },
+    {
+      "id": 379,
+      "canonicalSymbol": "SPECIES_REGISTEEL",
+      "nameFr": "Registeel"
+    },
+    {
+      "id": 380,
+      "canonicalSymbol": "SPECIES_LATIAS",
+      "nameFr": "Latias"
+    },
+    {
+      "id": 381,
+      "canonicalSymbol": "SPECIES_LATIOS",
+      "nameFr": "Latios"
+    },
+    {
+      "id": 382,
+      "canonicalSymbol": "SPECIES_KYOGRE",
+      "nameFr": "Kyogre"
+    },
+    {
+      "id": 383,
+      "canonicalSymbol": "SPECIES_GROUDON",
+      "nameFr": "Groudon"
+    },
+    {
+      "id": 384,
+      "canonicalSymbol": "SPECIES_RAYQUAZA",
+      "nameFr": "Rayquaza"
+    },
+    {
+      "id": 385,
+      "canonicalSymbol": "SPECIES_JIRACHI",
+      "nameFr": "Jirachi"
+    },
+    {
+      "id": 386,
+      "canonicalSymbol": "SPECIES_DEOXYS",
+      "nameFr": "Deoxys"
+    },
+    {
+      "id": 387,
+      "canonicalSymbol": "SPECIES_TURTWIG",
+      "nameFr": "Tortipouss"
+    },
+    {
+      "id": 388,
+      "canonicalSymbol": "SPECIES_GROTLE",
+      "nameFr": "Boskara"
+    },
+    {
+      "id": 389,
+      "canonicalSymbol": "SPECIES_TORTERRA",
+      "nameFr": "Torterra"
+    },
+    {
+      "id": 390,
+      "canonicalSymbol": "SPECIES_CHIMCHAR",
+      "nameFr": "Ouisticram"
+    },
+    {
+      "id": 391,
+      "canonicalSymbol": "SPECIES_MONFERNO",
+      "nameFr": "Chimpenfeu"
+    },
+    {
+      "id": 392,
+      "canonicalSymbol": "SPECIES_INFERNAPE",
+      "nameFr": "Simiabraz"
+    },
+    {
+      "id": 393,
+      "canonicalSymbol": "SPECIES_PIPLUP",
+      "nameFr": "Tiplouf"
+    },
+    {
+      "id": 394,
+      "canonicalSymbol": "SPECIES_PRINPLUP",
+      "nameFr": "Prinplouf"
+    },
+    {
+      "id": 395,
+      "canonicalSymbol": "SPECIES_EMPOLEON",
+      "nameFr": "Pingoléon"
+    },
+    {
+      "id": 396,
+      "canonicalSymbol": "SPECIES_STARLY",
+      "nameFr": "Étourmi"
+    },
+    {
+      "id": 397,
+      "canonicalSymbol": "SPECIES_STARAVIA",
+      "nameFr": "Étourvol"
+    },
+    {
+      "id": 398,
+      "canonicalSymbol": "SPECIES_STARAPTOR",
+      "nameFr": "Étouraptor"
+    },
+    {
+      "id": 399,
+      "canonicalSymbol": "SPECIES_BIDOOF",
+      "nameFr": "Keunotor"
+    },
+    {
+      "id": 400,
+      "canonicalSymbol": "SPECIES_BIBAREL",
+      "nameFr": "Castorno"
+    },
+    {
+      "id": 401,
+      "canonicalSymbol": "SPECIES_KRICKETOT",
+      "nameFr": "Crikzik"
+    },
+    {
+      "id": 402,
+      "canonicalSymbol": "SPECIES_KRICKETUNE",
+      "nameFr": "Mélokrik"
+    },
+    {
+      "id": 403,
+      "canonicalSymbol": "SPECIES_SHINX",
+      "nameFr": "Lixy"
+    },
+    {
+      "id": 404,
+      "canonicalSymbol": "SPECIES_LUXIO",
+      "nameFr": "Luxio"
+    },
+    {
+      "id": 405,
+      "canonicalSymbol": "SPECIES_LUXRAY",
+      "nameFr": "Luxray"
+    },
+    {
+      "id": 406,
+      "canonicalSymbol": "SPECIES_BUDEW",
+      "nameFr": "Rozbouton"
+    },
+    {
+      "id": 407,
+      "canonicalSymbol": "SPECIES_ROSERADE",
+      "nameFr": "Roserade"
+    },
+    {
+      "id": 408,
+      "canonicalSymbol": "SPECIES_CRANIDOS",
+      "nameFr": "Kranidos"
+    },
+    {
+      "id": 409,
+      "canonicalSymbol": "SPECIES_RAMPARDOS",
+      "nameFr": "Charkos"
+    },
+    {
+      "id": 410,
+      "canonicalSymbol": "SPECIES_SHIELDON",
+      "nameFr": "Dinoclier"
+    },
+    {
+      "id": 411,
+      "canonicalSymbol": "SPECIES_BASTIODON",
+      "nameFr": "Bastiodon"
+    },
+    {
+      "id": 412,
+      "canonicalSymbol": "SPECIES_BURMY",
+      "nameFr": "Cheniti"
+    },
+    {
+      "id": 413,
+      "canonicalSymbol": "SPECIES_WORMADAM",
+      "nameFr": "Cheniselle"
+    },
+    {
+      "id": 414,
+      "canonicalSymbol": "SPECIES_MOTHIM",
+      "nameFr": "Papilord"
+    },
+    {
+      "id": 415,
+      "canonicalSymbol": "SPECIES_COMBEE",
+      "nameFr": "Apitrini"
+    },
+    {
+      "id": 416,
+      "canonicalSymbol": "SPECIES_VESPIQUEN",
+      "nameFr": "Apireine"
+    },
+    {
+      "id": 417,
+      "canonicalSymbol": "SPECIES_PACHIRISU",
+      "nameFr": "Pachirisu"
+    },
+    {
+      "id": 418,
+      "canonicalSymbol": "SPECIES_BUIZEL",
+      "nameFr": "Mustébouée"
+    },
+    {
+      "id": 419,
+      "canonicalSymbol": "SPECIES_FLOATZEL",
+      "nameFr": "Mustéflott"
+    },
+    {
+      "id": 420,
+      "canonicalSymbol": "SPECIES_CHERUBI",
+      "nameFr": "Ceribou"
+    },
+    {
+      "id": 421,
+      "canonicalSymbol": "SPECIES_CHERRIM",
+      "nameFr": "Ceriflor"
+    },
+    {
+      "id": 422,
+      "canonicalSymbol": "SPECIES_SHELLOS",
+      "nameFr": "Sancoki"
+    },
+    {
+      "id": 423,
+      "canonicalSymbol": "SPECIES_GASTRODON",
+      "nameFr": "Tritosor"
+    },
+    {
+      "id": 424,
+      "canonicalSymbol": "SPECIES_AMBIPOM",
+      "nameFr": "Capidextre"
+    },
+    {
+      "id": 425,
+      "canonicalSymbol": "SPECIES_DRIFLOON",
+      "nameFr": "Baudrive"
+    },
+    {
+      "id": 426,
+      "canonicalSymbol": "SPECIES_DRIFBLIM",
+      "nameFr": "Grodrive"
+    },
+    {
+      "id": 427,
+      "canonicalSymbol": "SPECIES_BUNEARY",
+      "nameFr": "Laporeille"
+    },
+    {
+      "id": 428,
+      "canonicalSymbol": "SPECIES_LOPUNNY",
+      "nameFr": "Lockpin"
+    },
+    {
+      "id": 429,
+      "canonicalSymbol": "SPECIES_MISMAGIUS",
+      "nameFr": "Magirêve"
+    },
+    {
+      "id": 430,
+      "canonicalSymbol": "SPECIES_HONCHKROW",
+      "nameFr": "Corboss"
+    },
+    {
+      "id": 431,
+      "canonicalSymbol": "SPECIES_GLAMEOW",
+      "nameFr": "Chaglam"
+    },
+    {
+      "id": 432,
+      "canonicalSymbol": "SPECIES_PURUGLY",
+      "nameFr": "Chaffreux"
+    },
+    {
+      "id": 433,
+      "canonicalSymbol": "SPECIES_CHINGLING",
+      "nameFr": "Korillon"
+    },
+    {
+      "id": 434,
+      "canonicalSymbol": "SPECIES_STUNKY",
+      "nameFr": "Moufouette"
+    },
+    {
+      "id": 435,
+      "canonicalSymbol": "SPECIES_SKUNTANK",
+      "nameFr": "Moufflair"
+    },
+    {
+      "id": 436,
+      "canonicalSymbol": "SPECIES_BRONZOR",
+      "nameFr": "Archéomire"
+    },
+    {
+      "id": 437,
+      "canonicalSymbol": "SPECIES_BRONZONG",
+      "nameFr": "Archéodong"
+    },
+    {
+      "id": 438,
+      "canonicalSymbol": "SPECIES_BONSLY",
+      "nameFr": "Manzaï"
+    },
+    {
+      "id": 439,
+      "canonicalSymbol": "SPECIES_MIME_JR",
+      "nameFr": "Mime Jr."
+    },
+    {
+      "id": 440,
+      "canonicalSymbol": "SPECIES_HAPPINY",
+      "nameFr": "Ptiravi"
+    },
+    {
+      "id": 441,
+      "canonicalSymbol": "SPECIES_CHATOT",
+      "nameFr": "Pijako"
+    },
+    {
+      "id": 442,
+      "canonicalSymbol": "SPECIES_SPIRITOMB",
+      "nameFr": "Spiritomb"
+    },
+    {
+      "id": 443,
+      "canonicalSymbol": "SPECIES_GIBLE",
+      "nameFr": "Griknot"
+    },
+    {
+      "id": 444,
+      "canonicalSymbol": "SPECIES_GABITE",
+      "nameFr": "Carmache"
+    },
+    {
+      "id": 445,
+      "canonicalSymbol": "SPECIES_GARCHOMP",
+      "nameFr": "Carchacrok"
+    },
+    {
+      "id": 446,
+      "canonicalSymbol": "SPECIES_MUNCHLAX",
+      "nameFr": "Goinfrex"
+    },
+    {
+      "id": 447,
+      "canonicalSymbol": "SPECIES_RIOLU",
+      "nameFr": "Riolu"
+    },
+    {
+      "id": 448,
+      "canonicalSymbol": "SPECIES_LUCARIO",
+      "nameFr": "Lucario"
+    },
+    {
+      "id": 449,
+      "canonicalSymbol": "SPECIES_HIPPOPOTAS",
+      "nameFr": "Hippopotas"
+    },
+    {
+      "id": 450,
+      "canonicalSymbol": "SPECIES_HIPPOWDON",
+      "nameFr": "Hippodocus"
+    },
+    {
+      "id": 451,
+      "canonicalSymbol": "SPECIES_SKORUPI",
+      "nameFr": "Rapion"
+    },
+    {
+      "id": 452,
+      "canonicalSymbol": "SPECIES_DRAPION",
+      "nameFr": "Drascore"
+    },
+    {
+      "id": 453,
+      "canonicalSymbol": "SPECIES_CROAGUNK",
+      "nameFr": "Cradopaud"
+    },
+    {
+      "id": 454,
+      "canonicalSymbol": "SPECIES_TOXICROAK",
+      "nameFr": "Coatox"
+    },
+    {
+      "id": 455,
+      "canonicalSymbol": "SPECIES_CARNIVINE",
+      "nameFr": "Vortente"
+    },
+    {
+      "id": 456,
+      "canonicalSymbol": "SPECIES_FINNEON",
+      "nameFr": "Écayon"
+    },
+    {
+      "id": 457,
+      "canonicalSymbol": "SPECIES_LUMINEON",
+      "nameFr": "Luminéon"
+    },
+    {
+      "id": 458,
+      "canonicalSymbol": "SPECIES_MANTYKE",
+      "nameFr": "Babimanta"
+    },
+    {
+      "id": 459,
+      "canonicalSymbol": "SPECIES_SNOVER",
+      "nameFr": "Blizzi"
+    },
+    {
+      "id": 460,
+      "canonicalSymbol": "SPECIES_ABOMASNOW",
+      "nameFr": "Blizzaroi"
+    },
+    {
+      "id": 461,
+      "canonicalSymbol": "SPECIES_WEAVILE",
+      "nameFr": "Dimoret"
+    },
+    {
+      "id": 462,
+      "canonicalSymbol": "SPECIES_MAGNEZONE",
+      "nameFr": "Magnézone"
+    },
+    {
+      "id": 463,
+      "canonicalSymbol": "SPECIES_LICKILICKY",
+      "nameFr": "Coudlangue"
+    },
+    {
+      "id": 464,
+      "canonicalSymbol": "SPECIES_RHYPERIOR",
+      "nameFr": "Rhinastoc"
+    },
+    {
+      "id": 465,
+      "canonicalSymbol": "SPECIES_TANGROWTH",
+      "nameFr": "Bouldeneu"
+    },
+    {
+      "id": 466,
+      "canonicalSymbol": "SPECIES_ELECTIVIRE",
+      "nameFr": "Élekable"
+    },
+    {
+      "id": 467,
+      "canonicalSymbol": "SPECIES_MAGMORTAR",
+      "nameFr": "Maganon"
+    },
+    {
+      "id": 468,
+      "canonicalSymbol": "SPECIES_TOGEKISS",
+      "nameFr": "Togekiss"
+    },
+    {
+      "id": 469,
+      "canonicalSymbol": "SPECIES_YANMEGA",
+      "nameFr": "Yanméga"
+    },
+    {
+      "id": 470,
+      "canonicalSymbol": "SPECIES_LEAFEON",
+      "nameFr": "Phyllali"
+    },
+    {
+      "id": 471,
+      "canonicalSymbol": "SPECIES_GLACEON",
+      "nameFr": "Givrali"
+    },
+    {
+      "id": 472,
+      "canonicalSymbol": "SPECIES_GLISCOR",
+      "nameFr": "Scorvol"
+    },
+    {
+      "id": 473,
+      "canonicalSymbol": "SPECIES_MAMOSWINE",
+      "nameFr": "Mammochon"
+    },
+    {
+      "id": 474,
+      "canonicalSymbol": "SPECIES_PORYGON_Z",
+      "nameFr": "Porygon-Z"
+    },
+    {
+      "id": 475,
+      "canonicalSymbol": "SPECIES_GALLADE",
+      "nameFr": "Gallame"
+    },
+    {
+      "id": 476,
+      "canonicalSymbol": "SPECIES_PROBOPASS",
+      "nameFr": "Tarinorme"
+    },
+    {
+      "id": 477,
+      "canonicalSymbol": "SPECIES_DUSKNOIR",
+      "nameFr": "Noctunoir"
+    },
+    {
+      "id": 478,
+      "canonicalSymbol": "SPECIES_FROSLASS",
+      "nameFr": "Momartik"
+    },
+    {
+      "id": 479,
+      "canonicalSymbol": "SPECIES_ROTOM",
+      "nameFr": "Motisma"
+    },
+    {
+      "id": 480,
+      "canonicalSymbol": "SPECIES_UXIE",
+      "nameFr": "Créhelf"
+    },
+    {
+      "id": 481,
+      "canonicalSymbol": "SPECIES_MESPRIT",
+      "nameFr": "Créfollet"
+    },
+    {
+      "id": 482,
+      "canonicalSymbol": "SPECIES_AZELF",
+      "nameFr": "Créfadet"
+    },
+    {
+      "id": 483,
+      "canonicalSymbol": "SPECIES_DIALGA",
+      "nameFr": "Dialga"
+    },
+    {
+      "id": 484,
+      "canonicalSymbol": "SPECIES_PALKIA",
+      "nameFr": "Palkia"
+    },
+    {
+      "id": 485,
+      "canonicalSymbol": "SPECIES_HEATRAN",
+      "nameFr": "Heatran"
+    },
+    {
+      "id": 486,
+      "canonicalSymbol": "SPECIES_REGIGIGAS",
+      "nameFr": "Regigigas"
+    },
+    {
+      "id": 487,
+      "canonicalSymbol": "SPECIES_GIRATINA",
+      "nameFr": "Giratina"
+    },
+    {
+      "id": 488,
+      "canonicalSymbol": "SPECIES_CRESSELIA",
+      "nameFr": "Cresselia"
+    },
+    {
+      "id": 489,
+      "canonicalSymbol": "SPECIES_PHIONE",
+      "nameFr": "Phione"
+    },
+    {
+      "id": 490,
+      "canonicalSymbol": "SPECIES_MANAPHY",
+      "nameFr": "Manaphy"
+    },
+    {
+      "id": 491,
+      "canonicalSymbol": "SPECIES_DARKRAI",
+      "nameFr": "Darkrai"
+    },
+    {
+      "id": 492,
+      "canonicalSymbol": "SPECIES_SHAYMIN",
+      "nameFr": "Shaymin"
+    },
+    {
+      "id": 493,
+      "canonicalSymbol": "SPECIES_ARCEUS",
+      "nameFr": "Arceus"
+    }
+  ]
+}
