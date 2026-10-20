@@ -209,8 +209,31 @@
       "La correspondance réciproque des paramètres 223 et 458 est une preuve structurelle d'une mécanique liée à ces deux entrées, mais la sémantique exacte de la méthode 27 nécessite l'inspection du code de la ROM."
     ],
     "limitations": [
-      "Les IDs 223, 458, 224 et 226 restent des IDs internes dans ce rapport; l'association des noms s'appuie sur une correspondance numérique candidate, pas sur une table de noms extraite et certifiée.",
-      "La table de méthodes canonique prouve que 21 signifie EVO_LEVEL_SPECIES_IN_PARTY dans Platine original; elle ne prouve pas que 27 a la même implémentation dans Project PM."
-    ]
+      "The species names for IDs 223, 458, 224 and 226 are now verified against the decoded name bank; only the gameplay semantics of Project PM method 27 remain unverified.",
+      "The canonical method table proves that 21 means EVO_LEVEL_SPECIES_IN_PARTY in original Platinum; it does not prove that 27 has the same implementation in Project PM."
+    ],
+    "speciesNameCrosswalk": {
+      "status": "direct_rom_name_bank_decoded",
+      "sourceAuditPath": "data/rom_species_name_bank_audit.json",
+      "anchors": {
+        "223": {
+          "name": "REMORAID",
+          "displayName": "Remoraid"
+        },
+        "224": {
+          "name": "OCTILLERY",
+          "displayName": "Octillery"
+        },
+        "226": {
+          "name": "DEMANTA",
+          "displayName": "Démanta"
+        },
+        "458": {
+          "name": "BABIMANTA",
+          "displayName": "Babimanta"
+        }
+      },
+      "note": "Names are decoded from the exact CPUF/CPUE species-name bank and cross-checked against the audit's stable anchors. This resolves the species-name uncertainty for these four IDs; it does not establish the custom method 27 semantics."
+    }
   }
 }
