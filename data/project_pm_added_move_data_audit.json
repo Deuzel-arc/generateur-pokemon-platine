@@ -25,7 +25,11 @@
       "priority": 0,
       "flags": 0,
       "raw": "4600003c046414640800003212040000",
-      "interpretation": "Raw values verified; effectId 70 and targetId 8 have not been semantically certified for Project PM."
+      "interpretation": "Raw values verified; effectId 70 and targetId 8 have not been semantically certified for Project PM.",
+      "canonicalEffectSymbolCandidate": "BATTLE_EFFECT_LOWER_SPEED_HIT",
+      "identityCandidate": "BULLDOZE",
+      "identityConfidence": "plausible_candidate",
+      "candidateReason": "Type Sol, 60 puissance, 100 précision, 20 PP et effet de baisse de Vitesse à chaque touche; correspond au profil connu de Bulldoze, mais le nom doit être confirmé dans Project PM."
     },
     {
       "id": 469,
@@ -43,7 +47,11 @@
       "priority": 0,
       "flags": 0,
       "raw": "0000005f045f0a000000003311040000",
-      "interpretation": "Raw values verified; effectId 0 does not prove the modern weight-based Heavy Slam mechanic."
+      "interpretation": "Raw values verified; effectId 0 does not prove the modern weight-based Heavy Slam mechanic.",
+      "canonicalEffectSymbolCandidate": "BATTLE_EFFECT_HIT",
+      "identityCandidate": "HIGH_HORSEPOWER",
+      "identityConfidence": "plausible_candidate",
+      "candidateReason": "Profil Sol physique 95/95/10 sans effet spécial, compatible avec le profil connu de High Horsepower; le nom doit être confirmé dans Project PM."
     },
     {
       "id": 470,
@@ -61,7 +69,11 @@
       "priority": 0,
       "flags": 0,
       "raw": "680000140f5a0a000000007307000000",
-      "interpretation": "The base record is consistent with a low-power multi-hit move candidate, but exact per-hit scaling and runtime implementation remain unverified."
+      "interpretation": "The base record is consistent with a low-power multi-hit move candidate, but exact per-hit scaling and runtime implementation remain unverified.",
+      "canonicalEffectSymbolCandidate": "BATTLE_EFFECT_HIT_THREE_TIMES",
+      "identityCandidate": null,
+      "identityConfidence": "unresolved",
+      "candidateReason": "L'effet canonique indique une frappe triple, mais puissance/type/précision/PP ne suffisent pas à identifier la capacité avec certitude."
     },
     {
       "id": 471,
@@ -79,7 +91,11 @@
       "priority": 0,
       "flags": 0,
       "raw": "ba00004b0e6419000000003305030000",
-      "interpretation": "Raw values verified; effectId 186 and the displayed name alone do not certify a bite move that removes screens or any other exact runtime effect."
+      "interpretation": "Raw values verified; effectId 186 and the displayed name alone do not certify a bite move that removes screens or any other exact runtime effect.",
+      "canonicalEffectSymbolCandidate": "BATTLE_EFFECT_REMOVE_SCREENS",
+      "identityCandidate": "PSYCHIC_FANGS",
+      "identityConfidence": "weak_candidate",
+      "candidateReason": "L'effet canonique enlève les écrans et le type est Psy physique, mais les valeurs diffèrent du profil connu de Psychic Fangs; garder comme piste seulement."
     }
   ],
   "validation": {
@@ -93,11 +109,16 @@
     ],
     "fieldsAreRawArchiveDecode": true,
     "runtimeEffectSemanticsVerified": false,
-    "canonicalGenerationCompatibilityVerified": false
+    "canonicalGenerationCompatibilityVerified": false,
+    "canonicalEffectSymbolCandidatesCrossReferenced": true,
+    "identityCandidatesAreHypothesesOnly": true,
+    "effectRuntimeSemanticsVerified": false
   },
   "policies": [
     "Do not use name similarity as proof of move mechanics.",
     "Do not treat effect IDs as human-readable effects without validating the Project PM battle code or a verified effect table.",
-    "Do not mark the added moves as Gen IV-compatible solely because their records exist in a Platinum-based ROM."
+    "Do not mark the added moves as Gen IV-compatible solely because their records exist in a Platinum-based ROM.",
+    "Canonical effect symbols are candidate mappings from the pinned reference table only; they do not prove Project PM runtime behavior or move identity.",
+    "Move identity candidates remain hypotheses; do not expose them as verified move names until the Project PM name bank or battle code confirms them."
   ]
 }
