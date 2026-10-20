@@ -110,3 +110,10 @@ Le rapport [data/project_pm_item_archive_diff.json](../data/project_pm_item_arch
 - Elle ne certifie toujours pas le nom canonique de chaque index partagé et ne suffit pas à reconstruire toute la table ID logique → index. La table item_data.narc (442 membres) reste une archive distincte.
 
 Le validateur automatisé contrôle les nombres, la liste des index modifiés, les 24 empreintes, et les règles interdisant l’attribution de noms par position ou l’héritage d’effets entre ROMs.
+
+
+## Vérification de l'algorithme de correspondance dans la source — 2026-10-20
+
+La lecture du fichier `tools/dataproc/src/itemproc.c` au commit épinglé `06c6e9a0348da283be8d9225d0bec03c349ff5c2` permet de préciser la règle de construction de `sItemArchiveIDs` : le programme parcourt les IDs dans l'ordre, exclut les noms `ITEM_UNUSED_*` via `has_data`, puis attribue un `dataID` séquentiel à chaque entrée dont le fichier de données est effectivement chargé. La fonction `add_idmap` enregistre séparément l'ID logique et cet index de données.
+
+Cela **confirme l'algorithme du mapping candidat dans le code source de référence** et explique le décalage de 22 positions après les IDs réservés. Cela ne prouve pas à lui seul que les 446 entrées binaires CPUF correspondent à tous les champs de cette source, et encore moins que les effets de Project PM sont identiques. Les 13 ancres de prix concordantes renforcent la cohérence du mapping; la comparaison exhaustive des 446 enregistrements reste nécessaire.
