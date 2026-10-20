@@ -26,6 +26,7 @@ const required = [
   "../data/rom_mapping_audit.json",
   "../data/project_pm_type_mapping.json",
   "../data/project_pm_fairy_type_audit.json",
+  "../data/project_pm_fairy_move_identity_guard.json",
   "../data/rom_roster_coverage_audit.json",
   "../docs/ACCELERATION_TOOLING.md",
   "../.github/dependabot.yml",
