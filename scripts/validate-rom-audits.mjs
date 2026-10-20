@@ -14,6 +14,7 @@ const typeByteAudit = readJson("data/project_pm_type_byte_audit.json");
 const evolutionMethodAudit = readJson("data/project_pm_evolution_method_audit.json");
 const speciesNameBankAudit = readJson("data/rom_species_name_bank_audit.json");
 const speciesCoreDeltaAudit = readJson("data/rom_species_core_delta_audit.json");
+const extendedNameBankAudit = readJson("data/rom_extended_name_banks_audit.json");
 const itemReference = readJson("data/gen4_item_id_reference.json");
 
 const itemArchiveDiff = readJson("data/project_pm_item_archive_diff.json");
@@ -153,6 +154,20 @@ assert.equal(speciesCoreDeltaAudit.counts.baseStatsChanged, 197, "species delta 
 assert.equal(speciesCoreDeltaAudit.counts.typePairChanged, 60, "species delta audit must preserve type-change count");
 assert.equal(speciesCoreDeltaAudit.counts.speciesWithBothStatsAndTypesChanged, 42, "species delta audit must preserve overlapping stat/type changes");
 assert.deepEqual(speciesCoreDeltaAudit.source.standardSpeciesIds, [1, 493], "species delta audit must keep the standard species range explicit");
+
+assert.equal(extendedNameBankAudit.source.platinumSha256, catalog.profiles.platinum.sha256, "extended name bank audit must match CPUF hash");
+assert.equal(extendedNameBankAudit.source.projectPmSha256, catalog.profiles.project_pm.sha256, "extended name bank audit must match CPUE hash");
+assert.equal(extendedNameBankAudit.banks.items.index, 392, "item name bank index must match pinned reference");
+assert.equal(extendedNameBankAudit.banks.items.platinumEntryCount, 468, "CPUF item-name count must remain recorded");
+assert.equal(extendedNameBankAudit.banks.items.projectPmEntryCount, 492, "CPUE item-name count must remain recorded");
+assert.equal(extendedNameBankAudit.banks.items.projectPmOnlyEntries.length, 24, "Project PM must retain 24 additional item names");
+assert.deepEqual(extendedNameBankAudit.banks.items.projectPmOnlyEntries.find(([id]) => id === 479), [479, "Joyau Fée"], "Fairy gem name must remain mapped to its raw item ID");
+assert.equal(extendedNameBankAudit.banks.abilities.projectPmEntryCount, 127, "Project PM ability-name bank must contain 127 entries");
+assert.deepEqual(extendedNameBankAudit.banks.abilities.projectPmOnlyEntries, [[124,"Sans Limite"],[125,"Farceur"],[126,"Baigne Sable"]], "extra Project PM ability names must remain explicit");
+assert.equal(extendedNameBankAudit.banks.moves.projectPmEntryCount, 472, "Project PM move-name bank must contain 472 entries");
+assert.deepEqual(extendedNameBankAudit.banks.moves.projectPmOnlyEntries, [[468,"Piétinement"],[469,"Cavalerie Lourde"],[470,"Triple Axel"],[471,"Psycho-Croc"]], "extra Project PM move names must remain explicit");
+assert.equal(extendedNameBankAudit.banks.moves.commonNamesChanged, 10, "common move-name changes must remain audited");
+assert.equal(extendedNameBankAudit.banks.items.commonNamesChanged, 16, "common item-name changes must remain audited");
 
 assert.equal(typeByteAudit.typeId9ProjectPmNameCrosswalk.length, 31, "Project PM type ID 9 must be cross-referenced to all 31 name-bank entries");
 assert.deepEqual(typeByteAudit.typeId9ProjectPmNameCrosswalk.find(([id]) => id === 467), [467, "MAGANON"], "type ID 9 crosswalk must preserve the mod-specific Maganon entry");
