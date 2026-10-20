@@ -12,7 +12,7 @@
       "sha256": "435b0288238f01f21eeeef7b5de6de3e3c9c3a9b70ea3b18d71b31ba282ae4e1"
     }
   },
-  "method": "Comparaison des enregistrements décodés conservés dans les deux profils, par identifiant d'entrée lorsque le schéma expose un identifiant. Les écarts décrivent les données extraites, pas leur signification en jeu.",
+  "method": "Comparaison par identifiant stable lorsque disponible; pour chaque table, un enregistrement est compté comme modifié si au moins un champ extrait diffère. Les archives brutes de rencontres et données de dresseurs sont comparées structurellement uniquement; les écarts ne prouvent pas à eux seuls un changement de gameplay.",
   "tables": {
     "species": {
       "platinumEntries": 508,
@@ -28,11 +28,13 @@
         "baseFriendship": 3,
         "genderRatio": 1,
         "tmHmFlagsRaw": 478,
-        "tmHmBitIndexes": 478
+        "tmHmBitIndexes": 478,
+        "raw": 500
       },
       "notes": [
         "Les 65 différences de types incluent des valeurs Inconnu issues d'un mapping non certifié.",
-        "Les différences de bits CT/CS peuvent être de vraies modifications du mod; elles ne sont pas encore normalisées en noms de capacités CT/CS."
+        "Les différences de bits CT/CS peuvent être de vraies modifications du mod; elles ne sont pas encore normalisées en noms de capacités CT/CS.",
+        "Contrôle ponctuel : l'entrée ID 6 (Dracaufeu) du profil Project PM est décodée Feu/Dragon avec Attaque Spéciale 110 et deux identifiants de talent non nuls. Cette lecture brute est un indice, pas une certification de la table de types ou de la version du mod."
       ]
     },
     "moves": {
@@ -112,15 +114,40 @@
     "trainers": {
       "platinumEntries": 928,
       "projectPmEntries": 973,
+      "commonIds": 928,
+      "changedRecords": 928,
+      "projectPmOnlyEntries": 45,
+      "fieldDifferences": {
+        "raw": 928
+      },
       "notes": [
-        "Les longueurs diffèrent; les entrées ne doivent pas être appariées sémantiquement par simple index avant décodage de la structure."
+        "La longueur des enregistrements diffère entre profils; les champs bruts ne sont pas décodés en classe, nom et paramètres du dresseur."
       ]
     },
     "trainerPokemon": {
       "platinumEntries": 928,
       "projectPmEntries": 1945,
+      "commonIds": 928,
+      "changedRecords": 927,
+      "projectPmOnlyEntries": 1017,
+      "fieldDifferences": {
+        "raw": 927
+      },
       "notes": [
-        "Les longueurs diffèrent fortement; les Pokémon de chaque équipe doivent être décodés et rattachés à leurs dresseurs avant toute comparaison par équipe."
+        "Les enregistrements ne sont pas encore associés aux dresseurs et aux espèces avec un décodage sémantique certifié; les différences par ID ne suffisent pas à établir des compositions d'équipe."
+      ]
+    },
+    "berriesRaw": {
+      "fieldDifferences": {
+        "raw": 64,
+        "bytes": 64
+      },
+      "bytePositionsWithDifferences": {
+        "4": 64
+      },
+      "notes": [
+        "Les 64 entrées diffèrent uniquement au niveau brut sur au moins un champ; la comparaison octet par octet indique que l'octet d'index 4 diffère dans les 64 entrées.",
+        "La signification de cet octet et l'effet de baie correspondant doivent être confirmés avant toute interprétation en jeu."
       ]
     }
   },
@@ -130,5 +157,12 @@
     "La table des objets, rencontres et dresseurs n'est pas encore sémantiquement décodée."
   ],
   "certificationStatus": "partial_unverified_differences",
-  "generatorIntegration": "Le catalogue complet n'est pas encore chargé dynamiquement par index.html."
+  "generatorIntegration": "Le catalogue complet n'est pas encore chargé dynamiquement par index.html.",
+  "nextValidation": [
+    "Comparer les champs binaires décodés avec la source de décompilation épinglée pour le profil CPUF.",
+    "Retrouver la table de types propre à CPUE avant de convertir les IDs de types inconnus.",
+    "Décoder et nommer les méthodes d'évolution et les apprentissages par identifiants vérifiés.",
+    "Décoder les champs des objets et baies avant d'utiliser leurs effets dans les sets.",
+    "Associer les données de dresseurs et leurs Pokémon à partir de la structure réelle, pas uniquement de l'index."
+  ]
 }
