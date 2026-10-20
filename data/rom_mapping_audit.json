@@ -70,7 +70,18 @@
       "commonIds": 508,
       "recordsDifferent": 500,
       "recordsEqual": 8,
-      "comparisonMethod": "Comparaison de tous les champs exportés des 508 IDs communs."
+      "comparisonMethod": "Comparaison de tous les champs exportés des 508 IDs communs.",
+      "fieldDifferences": {
+        "abilities": 318,
+        "baseFriendship": 3,
+        "baseStats": 197,
+        "evYield": 1,
+        "genderRatio": 1,
+        "raw": 500,
+        "tmHmBitIndexes": 478,
+        "tmHmFlagsRaw": 478,
+        "types": 65
+      }
     },
     "moves": {
       "commonIds": 471,
@@ -99,19 +110,32 @@
       "commonIds": 508,
       "recordsDifferent": 497,
       "recordsEqual": 11,
-      "comparisonMethod": "Comparaison des listes et champs exportés pour les 508 speciesId communs."
+      "comparisonMethod": "Comparaison des listes et champs exportés pour les 508 speciesId communs.",
+      "fieldDifferences": {
+        "levelUpMoves": 497,
+        "raw": 497
+      }
     },
     "evolutions": {
       "commonIds": 508,
       "recordsDifferent": 33,
       "recordsEqual": 475,
-      "comparisonMethod": "Comparaison des champs exportés pour les 508 speciesId communs."
+      "comparisonMethod": "Comparaison des champs exportés pour les 508 speciesId communs.",
+      "fieldDifferences": {
+        "evolutions": 33,
+        "raw": 33
+      }
     },
     "items": {
       "commonIds": 446,
       "recordsDifferent": 165,
       "recordsEqual": 281,
-      "comparisonMethod": "Comparaison des champs exportés pour les 446 IDs communs."
+      "comparisonMethod": "Comparaison des champs exportés pour les 446 IDs communs.",
+      "fieldDifferences": {
+        "fieldsU16": 165,
+        "fieldsU8": 165,
+        "raw": 165
+      }
     },
     "berries": {
       "platinumEntries": 64,
@@ -193,5 +217,24 @@
     "Ne pas afficher ni intégrer les capacités 468+ comme des capacités nommées avant identification.",
     "Les différences brutes des tables ne doivent pas être présentées comme des changements de gameplay certifiés.",
     "Les tables de dresseurs, rencontres, routes et dialogues restent hors périmètre immédiat; les archives sont conservées."
+  ],
+  "notableObservedPatterns": [
+    {
+      "profileIds": [
+        503,
+        504,
+        505,
+        506,
+        507
+      ],
+      "observation": "Les cinq enregistrements d'espèces ont des statistiques de base identiques entre les deux profils, mais leurs deux types diffèrent tous. Dans Platine, les types sont Électrik/Spectre pour les cinq; dans Project PM, ils sont respectivement Électrik/Feu, Électrik/Eau, Électrik/Glace, Électrik/Vol et Électrik/Plante.",
+      "interpretation": "Le motif correspond à cinq variantes partageant les mêmes statistiques et des types secondaires différents. L'identité exacte des formes doit être confirmée par la table des formes/espèces de la ROM; ne pas attribuer de noms uniquement sur la base de l'index.",
+      "status": "pattern_observed_identity_not_certified"
+    },
+    {
+      "observation": "Pour les IDs communs des espèces, les statistiques de base diffèrent dans 197 enregistrements et les types dans 65; les capacités de talent diffèrent dans 318.",
+      "interpretation": "Project PM ne doit pas être traité comme une simple copie de Platine. Les données stratégiques doivent être séparées par profil et les différences doivent être conservées, pas écrasées par la référence canonique.",
+      "status": "structural_counts_verified"
+    }
   ]
 }
