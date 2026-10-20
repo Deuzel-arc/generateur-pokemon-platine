@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "title": "Manifeste du catalogue ROM — état d'intégration",
   "status": "manifest_only_data_not_embedded",
-  "warning": "Ce fichier est un manifeste de couverture, pas le catalogue de données Pokémon. Les tables complètes extraites sont conservées dans /Audit_ROM_Pokemon_Platine/rom_battle_database.json et rom_decoded_core_tables.zip. Leur transfert vers le dépôt et leur intégration dynamique ne sont pas terminés.",
+  "warning": "Les profils statistiques/types des 70 espèces présentes dans le roster sont maintenant intégrés dans index.html à partir des tables décodées de ces ROM précises. Le catalogue complet des attaques, apprentissages, objets, rencontres et dresseurs n'est pas encore chargé dynamiquement. Les champs de type 'Inconnu' restent non certifiés et ne sont pas appliqués comme types.",
   "profiles": {
     "platinum": {
       "name": "Pokémon Platine original (FR)",
@@ -40,7 +40,10 @@
     "itemEffectsSemanticallyDecoded": false,
     "encountersSemanticallyDecoded": false,
     "trainersSemanticallyDecoded": false,
-    "hashMismatchWithEarlierAudit": true
+    "hashMismatchWithEarlierAudit": true,
+    "rosterProfilesEmbedded": true,
+    "rosterEntriesIntegrated": 70,
+    "fullCatalogLoadedByGenerator": false
   },
   "nextSteps": [
     "Reconcile ROM hashes",
