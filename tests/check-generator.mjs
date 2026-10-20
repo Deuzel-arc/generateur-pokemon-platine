@@ -27,6 +27,19 @@ check("Gen IV move reference boundary is explicit and extra ROM IDs remain unmap
   assert.ok(gen4ReferenceStatus.blockingRules.some(rule => rule.includes("IDs 0–467")));
 });
 
+check("Extra Project PM move IDs are confirmed in level-up learnsets without invented names", () => {
+  const usage = gen4ReferenceStatus.moveTableBoundary.learnsetUsage;
+  assert.equal(usage.sourceFile, "rom_battle_database.json");
+  assert.equal(usage.sourceSha256.platinum, romCatalog.profiles.platinum.sha256);
+  assert.equal(usage.sourceSha256.project_pm, romCatalog.profiles.project_pm.sha256);
+  assert.equal(usage.platinumLevelUpReferencesToIds468Plus, 0);
+  assert.equal(usage.projectPmLevelUpReferencesToIds468Plus, 56);
+  assert.deepEqual(usage.projectPmReferencesById, {"468": 38, "469": 10, "470": 5, "471": 3});
+  assert.equal(usage.distinctSpeciesReferencingExtraIds, 56);
+  assert.equal(usage.status, "usage_confirmed_names_unmapped");
+  assert.match(usage.interpretation, /ne doivent pas être inventés/);
+});
+ 
 check("ROM delta audit preserves provenance and labels raw differences as uncertified", () => {
   assert.equal(romDeltaAudit.schemaVersion, "1.0.0");
   assert.equal(romDeltaAudit.source.platinum.gameCode, romCatalog.profiles.platinum.gameCode);
