@@ -22,6 +22,7 @@ const frenchSpeciesNames = readJson("data/gen4_french_species_name_reference.jso
 const rosterCoverageAudit = readJson("data/rom_roster_coverage_audit.json");
 const fairyMoveIdentityGuard = readJson("data/project_pm_fairy_move_identity_guard.json");
 const fairyMoveSemanticsAudit = readJson("data/project_pm_fairy_move_semantics_audit.json");
+const levelUpMoveUsageAudit = readJson("data/project_pm_levelup_move_usage_audit.json");
 
 assert.equal(candidateRosterProfiles.status, "candidate_full_roster_493_needs_semantic_and_runtime_review", "493-species candidate must not be treated as integrated runtime data");
 assert.equal(candidateRosterProfiles.policy.runtimeIntegrated, false, "candidate roster must remain out of runtime until reviewed");
@@ -102,6 +103,16 @@ assert.deepEqual(fairyMoveSemanticsAudit.semanticHypotheses.map(row => row.canon
 assert.deepEqual(fairyMoveSemanticsAudit.records.map(row => [row.id, row.nameFrProjectPm]), [[66, "Câlinerie"], [140, "Vampibaiser"], [186, "Doux Baiser"], [204, "Charme"], [236, "Rayon Lune"], [295, "Éclat Magique"], [296, "Voix Enjôleuse"], [461, "Pouvoir Lunaire"]], "Fairy move names must match the decoded bank crosswalk");
 assert.ok(fairyMoveSemanticsAudit.records.every(row => row.projectPm.typeId === 9 && row.effectAssessment.runtimeEffectSemanticsVerified === false), "all Fairy move raw records must preserve unresolved effect semantics");
 
+assert.equal(levelUpMoveUsageAudit.status, "decoded_level_up_references_crosschecked_numeric_id_semantics_not_assumed", "learnset usage audit must not infer move identity from numeric ID");
+assert.equal(levelUpMoveUsageAudit.source.platinumSha256, catalog.profiles.platinum.sha256, "learnset usage audit must match CPUF hash");
+assert.equal(levelUpMoveUsageAudit.source.projectPmSha256, catalog.profiles.project_pm.sha256, "learnset usage audit must match CPUE hash");
+assert.deepEqual(levelUpMoveUsageAudit.counts, { standardSpeciesRowsPlatinum: 493, standardSpeciesRowsProjectPm: 493, platinumLearnsetEntries: 6598, projectPmLearnsetEntries: 8590, invalidMoveReferencesPlatinum: 0, invalidMoveReferencesProjectPm: 0, moveIdsCompared: 12 }, "learnset usage audit counts must remain cross-checked");
+assert.equal(levelUpMoveUsageAudit.moves.length, 12, "learnset usage audit must cover eight Fairy-type entries and four extra CPUE moves");
+assert.deepEqual(levelUpMoveUsageAudit.moves.map(row => row.moveId), [66, 140, 186, 204, 236, 295, 296, 461, 468, 469, 470, 471], "learnset usage audit move IDs must be complete and ordered");
+assert.equal(levelUpMoveUsageAudit.policies.noSemanticIdentityInferenceFromNumericId, true, "learnset comparisons must not infer semantic move identity by ID");
+assert.ok(levelUpMoveUsageAudit.moves.every(row => row.platinumSameNumericIdUsage.speciesCount === row.platinumSameNumericIdUsage.records.length && row.projectPmUsage.speciesCount === row.projectPmUsage.records.length), "learnset usage counts must match their detailed records");
+assert.ok(levelUpMoveUsageAudit.moves.every(row => row.numericIdIdentityWarning === true || row.platinumSameNumericIdNameChange === null), "renamed or extra moves must retain numeric-ID identity warnings");
+assert.ok(levelUpMoveUsageAudit.moves.every(row => row.projectPmUsage.records.every(record => Number.isInteger(record.speciesId) && record.speciesId >= 1 && record.speciesId <= 493 && record.levels.length > 0)), "CPUE learnset usage entries must remain in the standard species range");
 assert.equal(fairyMoveIdentityGuard.source.projectPmSha256, catalog.profiles.project_pm.sha256, "Fairy move identity guard must match the active CPUE hash");
 assert.equal(fairyMoveIdentityGuard.source.projectPmTypeId, 9, "Fairy move identity guard must retain raw type ID 9");
 assert.equal(fairyMoveIdentityGuard.status, "names_decoded_effect_semantics_pending", "Fairy move names must be decoded while effect semantics remain pending");
