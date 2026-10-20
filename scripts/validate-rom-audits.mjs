@@ -11,6 +11,14 @@ const special = readJson("data/rom_special_entry_audit.json");
 const canonical = readJson("data/gen4_id_reference.json");
 const projectPmTypes = readJson("data/project_pm_type_mapping.json");
 const typeByteAudit = readJson("data/project_pm_type_byte_audit.json");
+
+assert.equal(typeByteAudit.exhaustiveType9Conclusion.status, "raw_type_id_9_counts_reconciled_for_both_roms", "raw type ID 9 comparison must stay explicit");
+assert.equal(typeByteAudit.exhaustiveType9Conclusion.cpuF.speciesSlotOccurrences, 0, "CPUF must not inherit Project PM Fairy species mappings");
+assert.deepEqual(typeByteAudit.exhaustiveType9Conclusion.cpuF.moveEntriesContainingTypeId9, [174], "CPUF raw type ID 9 must retain its original Platinum interpretation");
+assert.equal(typeByteAudit.exhaustiveType9Conclusion.cpue.speciesSlotOccurrences, 37, "CPUE raw type ID 9 species slot count must remain 37");
+assert.deepEqual(typeByteAudit.exhaustiveType9Conclusion.cpue.moveEntriesContainingTypeId9, [66, 140, 186, 204, 236, 295, 296, 461], "CPUE Fairy move IDs must match the direct raw type-byte audit");
+assert.ok(typeByteAudit.exhaustiveType9Conclusion.limitations.includes("Project PM move effects remain unverified."), "CPUE move effects must remain flagged as unverified");
+
 const evolutionMethodAudit = readJson("data/project_pm_evolution_method_audit.json");
 const speciesNameBankAudit = readJson("data/rom_species_name_bank_audit.json");
 const speciesCoreDeltaAudit = readJson("data/rom_species_core_delta_audit.json");
