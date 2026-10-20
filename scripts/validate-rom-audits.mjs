@@ -26,11 +26,9 @@ assert.equal(frenchSpeciesNames.species.length, 493, "French name reference must
 assert.equal(frenchSpeciesNames.validation.uniqueNamesFirst493, 493, "French names must be unique in the standard 1–493 range");
 assert.deepEqual(frenchSpeciesNames.species.map((row, index) => row.id), Array.from({ length: 493 }, (_, i) => i + 1), "French names must map to canonical species IDs 1–493");
 assert.deepEqual(frenchSpeciesNames.species.map((row) => row.canonicalSymbol), canonical.species.map((row) => row.symbol), "French names must preserve canonical Gen IV species ordering");
-assert.deepEqual(frenchSpeciesNames.validation.mismatches, [
-  { id: 479, profileName: "Rotom", referenceName: "Motisma" },
-  { id: 169, profileName: "Crobat", referenceName: "Nostenfer" },
-], "known French-name mismatches in the current roster profile must remain visible until corrected");
-assert.equal(frenchSpeciesNames.validation.exactNameMatches + frenchSpeciesNames.validation.mismatchCount, romRosterProfiles.base.length, "French name reference audit must account for every existing profile");
+assert.deepEqual(frenchSpeciesNames.validation.mismatches, [], "corrected roster names must match the French reference");
+assert.equal(frenchSpeciesNames.validation.exactNameMatches, romRosterProfiles.base.length, "all existing roster names must match the French reference");
+assert.equal(frenchSpeciesNames.validation.mismatchCount, 0, "no current roster display name should remain mismatched");
 
 assert.equal(rosterCoverageAudit.source.platinumSha256, catalog.profiles.platinum.sha256, "roster coverage audit must match CPUF hash");
 assert.equal(rosterCoverageAudit.source.projectPmSha256, catalog.profiles.project_pm.sha256, "roster coverage audit must match CPUE hash");
