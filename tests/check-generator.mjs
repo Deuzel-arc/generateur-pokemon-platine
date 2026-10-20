@@ -3,12 +3,33 @@ import { readFileSync } from "node:fs";
 
 const html = readFileSync(new URL("../index.html", import.meta.url), "utf8");
 const berries = JSON.parse(readFileSync(new URL("../data/berries_gen4.json", import.meta.url), "utf8"));
+const romCatalog = JSON.parse(readFileSync(new URL("../data/rom_catalog.json", import.meta.url), "utf8"));
+const romOverrides = JSON.parse(readFileSync(new URL("../data/rom_overrides.json", import.meta.url), "utf8"));
 const checks = [];
 function check(name, fn) {
   try { fn(); checks.push({ name, status: "PASS" }); }
   catch (error) { checks.push({ name, status: "FAIL", message: error.message }); }
 }
 
+check("ROM catalogue manifest has separate original and Project PM profiles", () => {
+  assert.equal(romCatalog.schemaVersion, "1.0.0");
+  assert.ok(romCatalog.profiles.platinum.gameCode);
+  assert.ok(romCatalog.profiles.project_pm.gameCode);
+  assert.notEqual(romCatalog.profiles.platinum.sha256, romCatalog.profiles.project_pm.sha256);
+});
+check("ROM catalogue does not falsely claim complete generator integration", () => {
+  assert.equal(romCatalog.integration.loadedByGenerator, false);
+  assert.equal(romCatalog.integration.itemEffectsSemanticallyDecoded, false);
+  assert.equal(romCatalog.integration.encountersSemanticallyDecoded, false);
+  assert.match(romCatalog.warning, /manifest/i);
+});
+check("ROM overrides preserve source provenance and verified-only status", () => {
+  assert.equal(romOverrides.status, "partial_verified_subset");
+  assert.ok(romOverrides.profiles.platinum.sha256);
+  assert.ok(romOverrides.profiles.project_pm.sha256);
+  assert.ok(romOverrides.pokemon.every((entry) => entry.status === "decoded_verified"));
+  assert.ok(romOverrides.moves.every((entry) => entry.status === "decoded_verified"));
+});
 check("HTML document declares French language", () => {
   assert.match(html, /<html lang="fr">/);
 });
