@@ -5,6 +5,7 @@ const read = (path) => readFileSync(new URL(path, import.meta.url), "utf8");
 const pkg = JSON.parse(read("../package.json"));
 const quality = read("../.github/workflows/quality.yml");
 const pages = read("../.github/workflows/pages.yml");
+const dependabot = read("../.github/dependabot.yml");
 const required = [
   "../tests/check-generator.mjs",
   "../tests/browser-generator.test.mjs",
@@ -13,7 +14,8 @@ const required = [
   "../data/rom_mapping_audit.json",
   "../data/project_pm_type_mapping.json",
   "../data/project_pm_fairy_type_audit.json",
-  "../docs/ACCELERATION_TOOLING.md"
+  "../docs/ACCELERATION_TOOLING.md",
+  "../.github/dependabot.yml"
 ];
 
 for (const path of required) {
@@ -33,4 +35,6 @@ assert.match(quality, /npm test/, "quality workflow must run the full test suite
 assert.match(quality, /playwright install --with-deps chromium/, "quality workflow must install browser dependencies");
 assert.match(pages, /needs: test/, "Pages deployment must depend on the passing test job");
 assert.match(pages, /npm test/, "Pages workflow must run the full test suite before deploy");
+assert.equal((dependabot.match(/package-ecosystem:/g) ?? []).length, 2, "Dependabot must monitor npm and GitHub Actions");
+assert.equal((dependabot.match(/interval: "weekly"/g) ?? []).length, 2, "dependency update checks must run weekly");
 console.log(`[PASS] tooling contract: ${required.length} required files, four test groups, CI and Pages quality gates`);
