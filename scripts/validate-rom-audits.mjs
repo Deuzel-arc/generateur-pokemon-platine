@@ -143,6 +143,10 @@ assert.deepEqual(speciesNameBankAudit.results.anchors, {"1":"BULBIZARRE","6":"DR
 assert.deepEqual(speciesNameBankAudit.results.sharedFormIdsWithoutDedicatedNames, [496,497,498,499,500,501,502,503,504,505,506,507], "unmapped form IDs must remain explicit");
 assert.equal(speciesNameBankAudit.results.projectPmExtraSpeciesIdWithoutDedicatedName, 508, "Project PM extra species ID must remain explicitly unmapped by this name bank");
 
+assert.equal(typeByteAudit.typeId9ProjectPmNameCrosswalk.length, 31, "Project PM type ID 9 must be cross-referenced to all 31 name-bank entries");
+assert.deepEqual(typeByteAudit.typeId9ProjectPmNameCrosswalk.find(([id]) => id === 467), [467, "MAGANON"], "type ID 9 crosswalk must preserve the mod-specific Maganon entry");
+assert.deepEqual(typeByteAudit.typeId9ProjectPmNameCrosswalk.find(([id]) => id === 468), [468, "TOGEKISS"], "type ID 9 crosswalk must preserve the Togekiss entry");
+
 assert.equal(evolutionMethodAudit.source.databaseSha256, typeByteAudit.source.databaseSha256, "evolution audit must use the same identified extraction database");
 assert.equal(evolutionMethodAudit.source.platinum.sha256, catalog.profiles.platinum.sha256, "evolution audit must match current Platinum hash");
 assert.equal(evolutionMethodAudit.source.project_pm.sha256, catalog.profiles.project_pm.sha256, "evolution audit must match current Project PM hash");
