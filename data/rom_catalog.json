@@ -72,6 +72,7 @@
     }
   },
   "nextSteps": [
+    "Review structural ROM mapping audit and resolve species/move ID correspondence before expanding runtime data",
     "Validate the minimal strategic schema and provenance rules with automated checks",
     "Reconcile species, type, ability and move identifiers against the pinned Gen IV reference and the exact ROM hashes",
     "Expand the strategic roster beyond the 71 embedded profiles in verified batches",
@@ -106,5 +107,10 @@
     },
     "status": "reference_symbols_pinned_not_rom_mapping_certification",
     "note": "Cette table établit les symboles canoniques par ID; elle ne certifie pas à elle seule le mapping des IDs des ROM extraites ni les noms français."
+  },
+  "romMappingAudit": {
+    "path": "data/rom_mapping_audit.json",
+    "status": "structural_comparison_not_full_semantic_certification",
+    "purpose": "Enregistre les différences structurées et les limites de correspondance entre les deux profils ROM."
   }
 }
