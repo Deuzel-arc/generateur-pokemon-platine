@@ -769,5 +769,74 @@
       "verifiedForProjectPmRuntime": false,
       "verifiedForGen4Mechanics": false
     }
-  ]
+  ],
+  "crossRomConclusion": {
+    "status": "cpuF_raw_move_records_crosschecked_for_all_eight_cpue_fairy_ids",
+    "cpuFTypeId9OccurrencesAmongTheseIds": 0,
+    "sameDisplayNameIds": [
+      186,
+      204,
+      236
+    ],
+    "sameDisplayNameCpuFTypes": {
+      "186": {
+        "name": "Doux Baiser",
+        "typeId": 0,
+        "type": "Normal"
+      },
+      "204": {
+        "name": "Charme",
+        "typeId": 0,
+        "type": "Normal"
+      },
+      "236": {
+        "name": "Rayon Lune",
+        "typeId": 0,
+        "type": "Normal"
+      }
+    },
+    "differentDisplayNameIds": [
+      {
+        "id": 66,
+        "cpuFName": "Sacrifice",
+        "cpuFType": "Combat",
+        "projectPmName": "Câlinerie",
+        "projectPmTypeId": 9
+      },
+      {
+        "id": 140,
+        "cpuFName": "Pilonnage",
+        "cpuFType": "Normal",
+        "projectPmName": "Vampibaiser",
+        "projectPmTypeId": 9
+      },
+      {
+        "id": 295,
+        "cpuFName": "Lumi-Eclat",
+        "cpuFType": "Psy",
+        "projectPmName": "Éclat Magique",
+        "projectPmTypeId": 9
+      },
+      {
+        "id": 296,
+        "cpuFName": "Ball’Brume",
+        "cpuFType": "Psy",
+        "projectPmName": "Voix Enjôleuse",
+        "projectPmTypeId": 9
+      },
+      {
+        "id": 461,
+        "cpuFName": "Danse-Lune",
+        "cpuFType": "Psy",
+        "projectPmName": "Pouvoir Lunaire",
+        "projectPmTypeId": 9
+      }
+    ],
+    "interpretation": "Pour les huit identifiants examinés, aucun enregistrement CPUF n'a le type brut 9. Les trois noms identiques (186, 204, 236) sont de type Normal dans CPUF. Les cinq autres IDs portent un autre nom et un autre type dans CPUF. Cela confirme que ces huit entrées Fée sont propres aux données CPUE à ces identifiants, sans prouver qu'aucune autre capacité de la ROM originale pourrait être classée Fée par une autre mécanique.",
+    "limitations": [
+      "Le type brut 9 est identifié comme Fée pour CPUE uniquement.",
+      "Les effets de combat CPUE restent non certifiés.",
+      "Cette conclusion ne remplace pas une recherche exhaustive de toute la table des attaques CPUF pour tout type ID possible."
+    ]
+  }
 }
