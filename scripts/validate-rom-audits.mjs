@@ -64,6 +64,13 @@ assert.match(itemReference.structuralReconciliation.status, /13_price_anchors_ch
 assert.ok(itemReference.structuralReconciliation.verifiedAnchors.every((row) => row.validation.includes("source JSON") && row.validation.includes("raw CPUF")), "each item anchor must record source and raw ROM agreement");
 assert.match(itemReference.structuralReconciliation.status, /full_field_validation_pending/, "candidate item mapping must not be described as fully certified");
 
+assert.equal(itemReference.structuralReconciliation.mappingDerivation.sourceCommit, itemReference.source.commit, "item mapping derivation must use the pinned source commit");
+assert.equal(itemReference.structuralReconciliation.mappingDerivation.sourceFile, "tools/dataproc/src/itemproc.c", "item mapping derivation must identify the source algorithm");
+assert.match(itemReference.structuralReconciliation.mappingDerivation.derivedRule, /nombre de slots réservés précédents/, "item mapping derivation must state the reserved-slot rule");
+assert.match(itemReference.structuralReconciliation.mappingDerivation.confidence, /commercial_ROM_exhaustive_field_check_pending/, "source algorithm evidence must not be treated as exhaustive ROM field certification");
+assert.equal(itemReference.structuralReconciliation.mappingDerivation.limitations.length, 3, "mapping limitations must remain explicit");
+
+
 assert.equal(projectPmTypes.profile.gameCode, "CPUE", "Project PM type mapping must target CPUE only");
 assert.equal(projectPmTypes.profile.sha256, catalog.profiles.project_pm.sha256, "Project PM type mapping ROM hash must match the catalog");
 assert.equal(projectPmTypes.policy.noCrossRomInheritance, true, "Project PM type mappings must not inherit across ROM profiles");
