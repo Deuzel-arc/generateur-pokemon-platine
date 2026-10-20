@@ -143,3 +143,9 @@ Un contrôle local indépendant a été exécuté sur `rom_battle_database.json`
 - Portée limitée : ce mapping concerne uniquement l'ID brut 9 du profil Project PM. Il ne doit pas être appliqué à la ROM originale CPUF ni à d'autres versions de ROM.
 - Statut : `user_confirmed`. La confirmation utilisateur est retenue comme information de référence pour la suite; une vérification binaire indépendante de la table interne reste une tâche technique distincte.
 - Prochaine étape : ajouter un test automatisé pour garantir que le mapping Fée est appliqué uniquement au profil Project PM et n'altère pas les types du profil original, puis examiner les données stratégiques où ce type intervient.
+
+## Validation du mapping Fée Project PM — 2026-10-20
+
+- Le test automatisé qui contrôle le mapping `rawTypeId: 9 → Fée`, l'empreinte CPUE, le statut `user_confirmed` et l'interdiction d'hériter ce mapping dans Platine original a réussi dans le workflow Generator checks n° 139.
+- Le déploiement GitHub Pages n° 196 a également réussi sur le commit `c148a961419c26dc31067640cab529ff270de969`.
+- Le mapping est donc enregistré et couvert par un test de provenance et de périmètre. Il n'est pas encore appliqué globalement au roster runtime : les prochains changements devront remplacer les valeurs décodées `Inconnu` par `Fée` uniquement dans les données Project PM concernées, en préservant les valeurs originales.
