@@ -1,0 +1,2480 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Comparaison de l'utilisation des capacités dans les attaques apprises par niveau — CPUF et CPUE",
+  "status": "decoded_level_up_references_crosschecked_numeric_id_semantics_not_assumed",
+  "source": {
+    "databaseTitle": "Tables décodées de Pokémon Platine français et Project PM",
+    "databaseStatus": "decoded_core_tables_raw_plus_semantic",
+    "platinumSha256": "1cfd024519116c1c6285d6af2dbdfcec778e9d74c7c18585e22032e81aaa7eb8",
+    "projectPmSha256": "435b0288238f01f21eeeef7b5de6de3e3c9c3a9b70ea3b18d71b31ba282ae4e1",
+    "canonicalSpeciesNameReference": {
+      "path": "data/gen4_french_species_name_reference.json",
+      "status": "external_french_name_reference_candidate",
+      "warning": "Noms français externes; les listes d'usage sont indexées par ID de l'extraction ROM."
+    },
+    "projectPmMoveNameBank": {
+      "path": "data/rom_extended_name_banks_audit.json",
+      "index": 647,
+      "key": 63689
+    }
+  },
+  "scope": {
+    "speciesIds": "1–493",
+    "dataType": "attaques apprises par niveau seulement",
+    "technicalMachineAndTutorMovesIncluded": false,
+    "usageCountsAreNotProofOfMoveIdentity": true,
+    "comparisonAtSameNumericIdOnly": true
+  },
+  "counts": {
+    "standardSpeciesRowsPlatinum": 493,
+    "standardSpeciesRowsProjectPm": 493,
+    "platinumLearnsetEntries": 6598,
+    "projectPmLearnsetEntries": 8590,
+    "invalidMoveReferencesPlatinum": 0,
+    "invalidMoveReferencesProjectPm": 0,
+    "moveIdsCompared": 12
+  },
+  "policies": {
+    "noSemanticIdentityInferenceFromNumericId": true,
+    "keepRenamedMoveDistributionComparisonAsNumericSlotOnly": true,
+    "allLevelUpRecordsMustHaveTerminator": true,
+    "doesNotModifyRuntime": true
+  },
+  "moves": [
+    {
+      "moveId": 66,
+      "projectPmNameFr": "Câlinerie",
+      "nameEvidence": "decoded_project_pm_move_name_bank",
+      "platinumSameNumericIdNameChange": [
+        66,
+        "Sacrifice",
+        "Câlinerie"
+      ],
+      "platinumSameNumericIdUsage": {
+        "speciesCount": 5,
+        "records": [
+          {
+            "speciesId": 62,
+            "speciesNameCandidate": "Tartard",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 66,
+            "speciesNameCandidate": "Machoc",
+            "levels": [
+              31
+            ]
+          },
+          {
+            "speciesId": 67,
+            "speciesNameCandidate": "Machopeur",
+            "levels": [
+              32
+            ]
+          },
+          {
+            "speciesId": 68,
+            "speciesNameCandidate": "Mackogneur",
+            "levels": [
+              32
+            ]
+          },
+          {
+            "speciesId": 127,
+            "speciesNameCandidate": "Scarabrute",
+            "levels": [
+              42
+            ]
+          }
+        ]
+      },
+      "projectPmUsage": {
+        "speciesCount": 38,
+        "records": [
+          {
+            "speciesId": 40,
+            "speciesNameCandidate": "Grodoudou",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 52,
+            "speciesNameCandidate": "Miaouss",
+            "levels": [
+              39
+            ]
+          },
+          {
+            "speciesId": 53,
+            "speciesNameCandidate": "Persian",
+            "levels": [
+              42
+            ]
+          },
+          {
+            "speciesId": 58,
+            "speciesNameCandidate": "Caninos",
+            "levels": [
+              38
+            ]
+          },
+          {
+            "speciesId": 59,
+            "speciesNameCandidate": "Arcanin",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 126,
+            "speciesNameCandidate": "Magmar",
+            "levels": [
+              40
+            ]
+          },
+          {
+            "speciesId": 136,
+            "speciesNameCandidate": "Pyroli",
+            "levels": [
+              28
+            ]
+          },
+          {
+            "speciesId": 161,
+            "speciesNameCandidate": "Fouinette",
+            "levels": [
+              35
+            ]
+          },
+          {
+            "speciesId": 162,
+            "speciesNameCandidate": "Fouinar",
+            "levels": [
+              42
+            ]
+          },
+          {
+            "speciesId": 183,
+            "speciesNameCandidate": "Marill",
+            "levels": [
+              24
+            ]
+          },
+          {
+            "speciesId": 184,
+            "speciesNameCandidate": "Azumarill",
+            "levels": [
+              27
+            ]
+          },
+          {
+            "speciesId": 197,
+            "speciesNameCandidate": "Noctali",
+            "levels": [
+              28
+            ]
+          },
+          {
+            "speciesId": 209,
+            "speciesNameCandidate": "Snubbull",
+            "levels": [
+              25
+            ]
+          },
+          {
+            "speciesId": 210,
+            "speciesNameCandidate": "Granbull",
+            "levels": [
+              26
+            ]
+          },
+          {
+            "speciesId": 216,
+            "speciesNameCandidate": "Teddiursa",
+            "levels": [
+              45
+            ]
+          },
+          {
+            "speciesId": 217,
+            "speciesNameCandidate": "Ursaring",
+            "levels": [
+              51
+            ]
+          },
+          {
+            "speciesId": 231,
+            "speciesNameCandidate": "Phanpy",
+            "levels": [
+              43
+            ]
+          },
+          {
+            "speciesId": 232,
+            "speciesNameCandidate": "Donphan",
+            "levels": [
+              50
+            ]
+          },
+          {
+            "speciesId": 240,
+            "speciesNameCandidate": "Magby",
+            "levels": [
+              38
+            ]
+          },
+          {
+            "speciesId": 261,
+            "speciesNameCandidate": "Medhyèna",
+            "levels": [
+              40
+            ]
+          },
+          {
+            "speciesId": 262,
+            "speciesNameCandidate": "Grahyèna",
+            "levels": [
+              47
+            ]
+          },
+          {
+            "speciesId": 264,
+            "speciesNameCandidate": "Linéon",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 287,
+            "speciesNameCandidate": "Parecool",
+            "levels": [
+              47
+            ]
+          },
+          {
+            "speciesId": 288,
+            "speciesNameCandidate": "Vigoroth",
+            "levels": [
+              47
+            ]
+          },
+          {
+            "speciesId": 289,
+            "speciesNameCandidate": "Monaflèmit",
+            "levels": [
+              47
+            ]
+          },
+          {
+            "speciesId": 298,
+            "speciesNameCandidate": "Azurill",
+            "levels": [
+              23
+            ]
+          },
+          {
+            "speciesId": 300,
+            "speciesNameCandidate": "Skitty",
+            "levels": [
+              35
+            ]
+          },
+          {
+            "speciesId": 301,
+            "speciesNameCandidate": "Delcatty",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 303,
+            "speciesNameCandidate": "Mysdibule",
+            "levels": [
+              31
+            ]
+          },
+          {
+            "speciesId": 313,
+            "speciesNameCandidate": "Muciole",
+            "levels": [
+              42
+            ]
+          },
+          {
+            "speciesId": 314,
+            "speciesNameCandidate": "Lumivole",
+            "levels": [
+              42
+            ]
+          },
+          {
+            "speciesId": 334,
+            "speciesNameCandidate": "Altaria",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 359,
+            "speciesNameCandidate": "Absol",
+            "levels": [
+              46
+            ]
+          },
+          {
+            "speciesId": 431,
+            "speciesNameCandidate": "Chaglam",
+            "levels": [
+              37
+            ]
+          },
+          {
+            "speciesId": 432,
+            "speciesNameCandidate": "Chaffreux",
+            "levels": [
+              39
+            ]
+          },
+          {
+            "speciesId": 434,
+            "speciesNameCandidate": "Moufouette",
+            "levels": [
+              43
+            ]
+          },
+          {
+            "speciesId": 435,
+            "speciesNameCandidate": "Moufflair",
+            "levels": [
+              47
+            ]
+          },
+          {
+            "speciesId": 467,
+            "speciesNameCandidate": "Maganon",
+            "levels": [
+              40
+            ]
+          }
+        ]
+      },
+      "speciesIdsAddedAtSameNumericId": [
+        40,
+        52,
+        53,
+        58,
+        59,
+        126,
+        136,
+        161,
+        162,
+        183,
+        184,
+        197,
+        209,
+        210,
+        216,
+        217,
+        231,
+        232,
+        240,
+        261,
+        262,
+        264,
+        287,
+        288,
+        289,
+        298,
+        300,
+        301,
+        303,
+        313,
+        314,
+        334,
+        359,
+        431,
+        432,
+        434,
+        435,
+        467
+      ],
+      "speciesIdsRemovedAtSameNumericId": [
+        62,
+        66,
+        67,
+        68,
+        127
+      ],
+      "numericIdIdentityWarning": true
+    },
+    {
+      "moveId": 140,
+      "projectPmNameFr": "Vampibaiser",
+      "nameEvidence": "decoded_project_pm_move_name_bank",
+      "platinumSameNumericIdNameChange": [
+        140,
+        "Pilonnage",
+        "Vampibaiser"
+      ],
+      "platinumSameNumericIdUsage": {
+        "speciesCount": 2,
+        "records": [
+          {
+            "speciesId": 102,
+            "speciesNameCandidate": "Nœunœuf",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 103,
+            "speciesNameCandidate": "Noadkoko",
+            "levels": [
+              1
+            ]
+          }
+        ]
+      },
+      "projectPmUsage": {
+        "speciesCount": 21,
+        "records": [
+          {
+            "speciesId": 35,
+            "speciesNameCandidate": "Mélofée",
+            "levels": [
+              15
+            ]
+          },
+          {
+            "speciesId": 39,
+            "speciesNameCandidate": "Rondoudou",
+            "levels": [
+              15
+            ]
+          },
+          {
+            "speciesId": 124,
+            "speciesNameCandidate": "Lippoutou",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 126,
+            "speciesNameCandidate": "Magmar",
+            "levels": [
+              27
+            ]
+          },
+          {
+            "speciesId": 152,
+            "speciesNameCandidate": "Germignon",
+            "levels": [
+              20
+            ]
+          },
+          {
+            "speciesId": 153,
+            "speciesNameCandidate": "Macronium",
+            "levels": [
+              22
+            ]
+          },
+          {
+            "speciesId": 154,
+            "speciesNameCandidate": "Méganium",
+            "levels": [
+              22
+            ]
+          },
+          {
+            "speciesId": 173,
+            "speciesNameCandidate": "Mélo",
+            "levels": [
+              15
+            ]
+          },
+          {
+            "speciesId": 174,
+            "speciesNameCandidate": "Toudoudou",
+            "levels": [
+              15
+            ]
+          },
+          {
+            "speciesId": 175,
+            "speciesNameCandidate": "Togepi",
+            "levels": [
+              15
+            ]
+          },
+          {
+            "speciesId": 176,
+            "speciesNameCandidate": "Togetic",
+            "levels": [
+              15
+            ]
+          },
+          {
+            "speciesId": 200,
+            "speciesNameCandidate": "Feuforêve",
+            "levels": [
+              21
+            ]
+          },
+          {
+            "speciesId": 240,
+            "speciesNameCandidate": "Magby",
+            "levels": [
+              27
+            ]
+          },
+          {
+            "speciesId": 280,
+            "speciesNameCandidate": "Tarsal",
+            "levels": [
+              16
+            ]
+          },
+          {
+            "speciesId": 281,
+            "speciesNameCandidate": "Kirlia",
+            "levels": [
+              16
+            ]
+          },
+          {
+            "speciesId": 282,
+            "speciesNameCandidate": "Gardevoir",
+            "levels": [
+              16
+            ]
+          },
+          {
+            "speciesId": 314,
+            "speciesNameCandidate": "Lumivole",
+            "levels": [
+              18
+            ]
+          },
+          {
+            "speciesId": 368,
+            "speciesNameCandidate": "Rosabyss",
+            "levels": [
+              7
+            ]
+          },
+          {
+            "speciesId": 370,
+            "speciesNameCandidate": "Lovdisc",
+            "levels": [
+              19
+            ]
+          },
+          {
+            "speciesId": 467,
+            "speciesNameCandidate": "Maganon",
+            "levels": [
+              28
+            ]
+          },
+          {
+            "speciesId": 478,
+            "speciesNameCandidate": "Momartik",
+            "levels": [
+              18
+            ]
+          }
+        ]
+      },
+      "speciesIdsAddedAtSameNumericId": [
+        35,
+        39,
+        124,
+        126,
+        152,
+        153,
+        154,
+        173,
+        174,
+        175,
+        176,
+        200,
+        240,
+        280,
+        281,
+        282,
+        314,
+        368,
+        370,
+        467,
+        478
+      ],
+      "speciesIdsRemovedAtSameNumericId": [
+        102,
+        103
+      ],
+      "numericIdIdentityWarning": true
+    },
+    {
+      "moveId": 186,
+      "projectPmNameFr": "Doux Baiser",
+      "nameEvidence": "unchanged_name_crosschecked",
+      "platinumSameNumericIdNameChange": null,
+      "platinumSameNumericIdUsage": {
+        "speciesCount": 10,
+        "records": [
+          {
+            "speciesId": 172,
+            "speciesNameCandidate": "Pichu",
+            "levels": [
+              13
+            ]
+          },
+          {
+            "speciesId": 173,
+            "speciesNameCandidate": "Mélo",
+            "levels": [
+              10
+            ]
+          },
+          {
+            "speciesId": 174,
+            "speciesNameCandidate": "Toudoudou",
+            "levels": [
+              13
+            ]
+          },
+          {
+            "speciesId": 175,
+            "speciesNameCandidate": "Togepi",
+            "levels": [
+              10
+            ]
+          },
+          {
+            "speciesId": 176,
+            "speciesNameCandidate": "Togetic",
+            "levels": [
+              1,
+              10
+            ]
+          },
+          {
+            "speciesId": 238,
+            "speciesNameCandidate": "Lippouti",
+            "levels": [
+              8
+            ]
+          },
+          {
+            "speciesId": 370,
+            "speciesNameCandidate": "Lovdisc",
+            "levels": [
+              27
+            ]
+          },
+          {
+            "speciesId": 417,
+            "speciesNameCandidate": "Pachirisu",
+            "levels": [
+              25
+            ]
+          },
+          {
+            "speciesId": 440,
+            "speciesNameCandidate": "Ptiravi",
+            "levels": [
+              12
+            ]
+          },
+          {
+            "speciesId": 492,
+            "speciesNameCandidate": "Shaymin",
+            "levels": [
+              82
+            ]
+          }
+        ]
+      },
+      "projectPmUsage": {
+        "speciesCount": 10,
+        "records": [
+          {
+            "speciesId": 172,
+            "speciesNameCandidate": "Pichu",
+            "levels": [
+              7
+            ]
+          },
+          {
+            "speciesId": 173,
+            "speciesNameCandidate": "Mélo",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 174,
+            "speciesNameCandidate": "Toudoudou",
+            "levels": [
+              7
+            ]
+          },
+          {
+            "speciesId": 175,
+            "speciesNameCandidate": "Togepi",
+            "levels": [
+              8
+            ]
+          },
+          {
+            "speciesId": 176,
+            "speciesNameCandidate": "Togetic",
+            "levels": [
+              8
+            ]
+          },
+          {
+            "speciesId": 238,
+            "speciesNameCandidate": "Lippouti",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 370,
+            "speciesNameCandidate": "Lovdisc",
+            "levels": [
+              28
+            ]
+          },
+          {
+            "speciesId": 417,
+            "speciesNameCandidate": "Pachirisu",
+            "levels": [
+              29
+            ]
+          },
+          {
+            "speciesId": 440,
+            "speciesNameCandidate": "Ptiravi",
+            "levels": [
+              10
+            ]
+          },
+          {
+            "speciesId": 492,
+            "speciesNameCandidate": "Shaymin",
+            "levels": [
+              77
+            ]
+          }
+        ]
+      },
+      "speciesIdsAddedAtSameNumericId": [],
+      "speciesIdsRemovedAtSameNumericId": [],
+      "numericIdIdentityWarning": false
+    },
+    {
+      "moveId": 204,
+      "projectPmNameFr": "Charme",
+      "nameEvidence": "unchanged_name_crosschecked",
+      "platinumSameNumericIdNameChange": null,
+      "platinumSameNumericIdUsage": {
+        "speciesCount": 27,
+        "records": [
+          {
+            "speciesId": 172,
+            "speciesNameCandidate": "Pichu",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 173,
+            "speciesNameCandidate": "Mélo",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 174,
+            "speciesNameCandidate": "Toudoudou",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 175,
+            "speciesNameCandidate": "Togepi",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 176,
+            "speciesNameCandidate": "Togetic",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 209,
+            "speciesNameCandidate": "Snubbull",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 210,
+            "speciesNameCandidate": "Granbull",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 216,
+            "speciesNameCandidate": "Teddiursa",
+            "levels": [
+              36
+            ]
+          },
+          {
+            "speciesId": 231,
+            "speciesNameCandidate": "Phanpy",
+            "levels": [
+              33
+            ]
+          },
+          {
+            "speciesId": 280,
+            "speciesNameCandidate": "Tarsal",
+            "levels": [
+              39
+            ]
+          },
+          {
+            "speciesId": 281,
+            "speciesNameCandidate": "Kirlia",
+            "levels": [
+              45
+            ]
+          },
+          {
+            "speciesId": 298,
+            "speciesNameCandidate": "Azurill",
+            "levels": [
+              2
+            ]
+          },
+          {
+            "speciesId": 300,
+            "speciesNameCandidate": "Skitty",
+            "levels": [
+              25
+            ]
+          },
+          {
+            "speciesId": 312,
+            "speciesNameCandidate": "Négapi",
+            "levels": [
+              21
+            ]
+          },
+          {
+            "speciesId": 314,
+            "speciesNameCandidate": "Lumivole",
+            "levels": [
+              9
+            ]
+          },
+          {
+            "speciesId": 360,
+            "speciesNameCandidate": "Okéoké",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 370,
+            "speciesNameCandidate": "Lovdisc",
+            "levels": [
+              4
+            ]
+          },
+          {
+            "speciesId": 380,
+            "speciesNameCandidate": "Latias",
+            "levels": [
+              55
+            ]
+          },
+          {
+            "speciesId": 417,
+            "speciesNameCandidate": "Pachirisu",
+            "levels": [
+              9
+            ]
+          },
+          {
+            "speciesId": 427,
+            "speciesNameCandidate": "Laporeille",
+            "levels": [
+              43
+            ]
+          },
+          {
+            "speciesId": 428,
+            "speciesNameCandidate": "Lockpin",
+            "levels": [
+              43
+            ]
+          },
+          {
+            "speciesId": 431,
+            "speciesNameCandidate": "Chaglam",
+            "levels": [
+              25
+            ]
+          },
+          {
+            "speciesId": 432,
+            "speciesNameCandidate": "Chaffreux",
+            "levels": [
+              25
+            ]
+          },
+          {
+            "speciesId": 440,
+            "speciesNameCandidate": "Ptiravi",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 481,
+            "speciesNameCandidate": "Créfollet",
+            "levels": [
+              46
+            ]
+          },
+          {
+            "speciesId": 489,
+            "speciesNameCandidate": "Phione",
+            "levels": [
+              9
+            ]
+          },
+          {
+            "speciesId": 490,
+            "speciesNameCandidate": "Manaphy",
+            "levels": [
+              9
+            ]
+          }
+        ]
+      },
+      "projectPmUsage": {
+        "speciesCount": 32,
+        "records": [
+          {
+            "speciesId": 133,
+            "speciesNameCandidate": "Évoli",
+            "levels": [
+              31
+            ]
+          },
+          {
+            "speciesId": 172,
+            "speciesNameCandidate": "Pichu",
+            "levels": [
+              4
+            ]
+          },
+          {
+            "speciesId": 173,
+            "speciesNameCandidate": "Mélo",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 174,
+            "speciesNameCandidate": "Toudoudou",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 175,
+            "speciesNameCandidate": "Togepi",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 176,
+            "speciesNameCandidate": "Togetic",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 202,
+            "speciesNameCandidate": "Qulbutoké",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 209,
+            "speciesNameCandidate": "Snubbull",
+            "levels": [
+              7
+            ]
+          },
+          {
+            "speciesId": 210,
+            "speciesNameCandidate": "Granbull",
+            "levels": [
+              7
+            ]
+          },
+          {
+            "speciesId": 216,
+            "speciesNameCandidate": "Teddiursa",
+            "levels": [
+              21
+            ]
+          },
+          {
+            "speciesId": 231,
+            "speciesNameCandidate": "Phanpy",
+            "levels": [
+              31
+            ]
+          },
+          {
+            "speciesId": 280,
+            "speciesNameCandidate": "Tarsal",
+            "levels": [
+              37
+            ]
+          },
+          {
+            "speciesId": 281,
+            "speciesNameCandidate": "Kirlia",
+            "levels": [
+              43
+            ]
+          },
+          {
+            "speciesId": 285,
+            "speciesNameCandidate": "Balignon",
+            "levels": [
+              40
+            ]
+          },
+          {
+            "speciesId": 298,
+            "speciesNameCandidate": "Azurill",
+            "levels": [
+              8
+            ]
+          },
+          {
+            "speciesId": 300,
+            "speciesNameCandidate": "Skitty",
+            "levels": [
+              29
+            ]
+          },
+          {
+            "speciesId": 311,
+            "speciesNameCandidate": "Posipi",
+            "levels": [
+              31
+            ]
+          },
+          {
+            "speciesId": 314,
+            "speciesNameCandidate": "Lumivole",
+            "levels": [
+              9
+            ]
+          },
+          {
+            "speciesId": 360,
+            "speciesNameCandidate": "Okéoké",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 370,
+            "speciesNameCandidate": "Lovdisc",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 380,
+            "speciesNameCandidate": "Latias",
+            "levels": [
+              10
+            ]
+          },
+          {
+            "speciesId": 417,
+            "speciesNameCandidate": "Pachirisu",
+            "levels": [
+              9
+            ]
+          },
+          {
+            "speciesId": 427,
+            "speciesNameCandidate": "Laporeille",
+            "levels": [
+              34
+            ]
+          },
+          {
+            "speciesId": 428,
+            "speciesNameCandidate": "Lockpin",
+            "levels": [
+              34
+            ]
+          },
+          {
+            "speciesId": 431,
+            "speciesNameCandidate": "Chaglam",
+            "levels": [
+              19
+            ]
+          },
+          {
+            "speciesId": 432,
+            "speciesNameCandidate": "Chaffreux",
+            "levels": [
+              19
+            ]
+          },
+          {
+            "speciesId": 440,
+            "speciesNameCandidate": "Ptiravi",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 456,
+            "speciesNameCandidate": "Écayon",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 457,
+            "speciesNameCandidate": "Luminéon",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 481,
+            "speciesNameCandidate": "Créfollet",
+            "levels": [
+              42
+            ]
+          },
+          {
+            "speciesId": 489,
+            "speciesNameCandidate": "Phione",
+            "levels": [
+              6
+            ]
+          },
+          {
+            "speciesId": 490,
+            "speciesNameCandidate": "Manaphy",
+            "levels": [
+              6
+            ]
+          }
+        ]
+      },
+      "speciesIdsAddedAtSameNumericId": [
+        133,
+        202,
+        285,
+        311,
+        456,
+        457
+      ],
+      "speciesIdsRemovedAtSameNumericId": [
+        312
+      ],
+      "numericIdIdentityWarning": false
+    },
+    {
+      "moveId": 236,
+      "projectPmNameFr": "Rayon Lune",
+      "nameEvidence": "unchanged_name_crosschecked",
+      "platinumSameNumericIdNameChange": null,
+      "platinumSameNumericIdUsage": {
+        "speciesCount": 8,
+        "records": [
+          {
+            "speciesId": 35,
+            "speciesNameCandidate": "Mélofée",
+            "levels": [
+              37
+            ]
+          },
+          {
+            "speciesId": 43,
+            "speciesNameCandidate": "Mystherbe",
+            "levels": [
+              33
+            ]
+          },
+          {
+            "speciesId": 44,
+            "speciesNameCandidate": "Ortide",
+            "levels": [
+              41
+            ]
+          },
+          {
+            "speciesId": 197,
+            "speciesNameCandidate": "Noctali",
+            "levels": [
+              71
+            ]
+          },
+          {
+            "speciesId": 269,
+            "speciesNameCandidate": "Papinox",
+            "levels": [
+              20
+            ]
+          },
+          {
+            "speciesId": 313,
+            "speciesNameCandidate": "Muciole",
+            "levels": [
+              13
+            ]
+          },
+          {
+            "speciesId": 314,
+            "speciesNameCandidate": "Lumivole",
+            "levels": [
+              13
+            ]
+          },
+          {
+            "speciesId": 488,
+            "speciesNameCandidate": "Cresselia",
+            "levels": [
+              57
+            ]
+          }
+        ]
+      },
+      "projectPmUsage": {
+        "speciesCount": 8,
+        "records": [
+          {
+            "speciesId": 35,
+            "speciesNameCandidate": "Mélofée",
+            "levels": [
+              31
+            ]
+          },
+          {
+            "speciesId": 43,
+            "speciesNameCandidate": "Mystherbe",
+            "levels": [
+              22
+            ]
+          },
+          {
+            "speciesId": 44,
+            "speciesNameCandidate": "Ortide",
+            "levels": [
+              23
+            ]
+          },
+          {
+            "speciesId": 197,
+            "speciesNameCandidate": "Noctali",
+            "levels": [
+              31
+            ]
+          },
+          {
+            "speciesId": 269,
+            "speciesNameCandidate": "Papinox",
+            "levels": [
+              24
+            ]
+          },
+          {
+            "speciesId": 313,
+            "speciesNameCandidate": "Muciole",
+            "levels": [
+              21
+            ]
+          },
+          {
+            "speciesId": 314,
+            "speciesNameCandidate": "Lumivole",
+            "levels": [
+              21
+            ]
+          },
+          {
+            "speciesId": 488,
+            "speciesNameCandidate": "Cresselia",
+            "levels": [
+              38
+            ]
+          }
+        ]
+      },
+      "speciesIdsAddedAtSameNumericId": [],
+      "speciesIdsRemovedAtSameNumericId": [],
+      "numericIdIdentityWarning": false
+    },
+    {
+      "moveId": 295,
+      "projectPmNameFr": "Éclat Magique",
+      "nameEvidence": "decoded_project_pm_move_name_bank",
+      "platinumSameNumericIdNameChange": [
+        295,
+        "Lumi-Eclat",
+        "Éclat Magique"
+      ],
+      "platinumSameNumericIdUsage": {
+        "speciesCount": 1,
+        "records": [
+          {
+            "speciesId": 381,
+            "speciesNameCandidate": "Latios",
+            "levels": [
+              35
+            ]
+          }
+        ]
+      },
+      "projectPmUsage": {
+        "speciesCount": 13,
+        "records": [
+          {
+            "speciesId": 38,
+            "speciesNameCandidate": "Feunard",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 122,
+            "speciesNameCandidate": "M. Mime",
+            "levels": [
+              27
+            ]
+          },
+          {
+            "speciesId": 126,
+            "speciesNameCandidate": "Magmar",
+            "levels": [
+              51
+            ]
+          },
+          {
+            "speciesId": 181,
+            "speciesNameCandidate": "Pharamp",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 196,
+            "speciesNameCandidate": "Mentali",
+            "levels": [
+              50
+            ]
+          },
+          {
+            "speciesId": 240,
+            "speciesNameCandidate": "Magby",
+            "levels": [
+              45
+            ]
+          },
+          {
+            "speciesId": 282,
+            "speciesNameCandidate": "Gardevoir",
+            "levels": [
+              35
+            ]
+          },
+          {
+            "speciesId": 359,
+            "speciesNameCandidate": "Absol",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 407,
+            "speciesNameCandidate": "Roserade",
+            "levels": [
+              1,
+              40
+            ]
+          },
+          {
+            "speciesId": 429,
+            "speciesNameCandidate": "Magirêve",
+            "levels": [
+              36
+            ]
+          },
+          {
+            "speciesId": 439,
+            "speciesNameCandidate": "Mime Jr.",
+            "levels": [
+              27
+            ]
+          },
+          {
+            "speciesId": 467,
+            "speciesNameCandidate": "Maganon",
+            "levels": [
+              52
+            ]
+          },
+          {
+            "speciesId": 468,
+            "speciesNameCandidate": "Togekiss",
+            "levels": [
+              1
+            ]
+          }
+        ]
+      },
+      "speciesIdsAddedAtSameNumericId": [
+        38,
+        122,
+        126,
+        181,
+        196,
+        240,
+        282,
+        359,
+        407,
+        429,
+        439,
+        467,
+        468
+      ],
+      "speciesIdsRemovedAtSameNumericId": [
+        381
+      ],
+      "numericIdIdentityWarning": true
+    },
+    {
+      "moveId": 296,
+      "projectPmNameFr": "Voix Enjôleuse",
+      "nameEvidence": "decoded_project_pm_move_name_bank",
+      "platinumSameNumericIdNameChange": [
+        296,
+        "Ball’Brume",
+        "Voix Enjôleuse"
+      ],
+      "platinumSameNumericIdUsage": {
+        "speciesCount": 1,
+        "records": [
+          {
+            "speciesId": 380,
+            "speciesNameCandidate": "Latias",
+            "levels": [
+              35
+            ]
+          }
+        ]
+      },
+      "projectPmUsage": {
+        "speciesCount": 19,
+        "records": [
+          {
+            "speciesId": 35,
+            "speciesNameCandidate": "Mélofée",
+            "levels": [
+              9
+            ]
+          },
+          {
+            "speciesId": 39,
+            "speciesNameCandidate": "Rondoudou",
+            "levels": [
+              9
+            ]
+          },
+          {
+            "speciesId": 126,
+            "speciesNameCandidate": "Magmar",
+            "levels": [
+              5
+            ]
+          },
+          {
+            "speciesId": 172,
+            "speciesNameCandidate": "Pichu",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 173,
+            "speciesNameCandidate": "Mélo",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 174,
+            "speciesNameCandidate": "Toudoudou",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 175,
+            "speciesNameCandidate": "Togepi",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 176,
+            "speciesNameCandidate": "Togetic",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 200,
+            "speciesNameCandidate": "Feuforêve",
+            "levels": [
+              13
+            ]
+          },
+          {
+            "speciesId": 240,
+            "speciesNameCandidate": "Magby",
+            "levels": [
+              5
+            ]
+          },
+          {
+            "speciesId": 280,
+            "speciesNameCandidate": "Tarsal",
+            "levels": [
+              7
+            ]
+          },
+          {
+            "speciesId": 281,
+            "speciesNameCandidate": "Kirlia",
+            "levels": [
+              7
+            ]
+          },
+          {
+            "speciesId": 282,
+            "speciesNameCandidate": "Gardevoir",
+            "levels": [
+              7
+            ]
+          },
+          {
+            "speciesId": 293,
+            "speciesNameCandidate": "Chuchmur",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 300,
+            "speciesNameCandidate": "Skitty",
+            "levels": [
+              13
+            ]
+          },
+          {
+            "speciesId": 333,
+            "speciesNameCandidate": "Tylton",
+            "levels": [
+              11
+            ]
+          },
+          {
+            "speciesId": 334,
+            "speciesNameCandidate": "Altaria",
+            "levels": [
+              11
+            ]
+          },
+          {
+            "speciesId": 350,
+            "speciesNameCandidate": "Milobellus",
+            "levels": [
+              9
+            ]
+          },
+          {
+            "speciesId": 467,
+            "speciesNameCandidate": "Maganon",
+            "levels": [
+              5
+            ]
+          }
+        ]
+      },
+      "speciesIdsAddedAtSameNumericId": [
+        35,
+        39,
+        126,
+        172,
+        173,
+        174,
+        175,
+        176,
+        200,
+        240,
+        280,
+        281,
+        282,
+        293,
+        300,
+        333,
+        334,
+        350,
+        467
+      ],
+      "speciesIdsRemovedAtSameNumericId": [
+        380
+      ],
+      "numericIdIdentityWarning": true
+    },
+    {
+      "moveId": 461,
+      "projectPmNameFr": "Pouvoir Lunaire",
+      "nameEvidence": "decoded_project_pm_move_name_bank",
+      "platinumSameNumericIdNameChange": [
+        461,
+        "Danse-Lune",
+        "Pouvoir Lunaire"
+      ],
+      "platinumSameNumericIdUsage": {
+        "speciesCount": 1,
+        "records": [
+          {
+            "speciesId": 488,
+            "speciesNameCandidate": "Cresselia",
+            "levels": [
+              84
+            ]
+          }
+        ]
+      },
+      "projectPmUsage": {
+        "speciesCount": 31,
+        "records": [
+          {
+            "speciesId": 35,
+            "speciesNameCandidate": "Mélofée",
+            "levels": [
+              29
+            ]
+          },
+          {
+            "speciesId": 36,
+            "speciesNameCandidate": "Mélodelfe",
+            "levels": [
+              37
+            ]
+          },
+          {
+            "speciesId": 39,
+            "speciesNameCandidate": "Rondoudou",
+            "levels": [
+              29
+            ]
+          },
+          {
+            "speciesId": 40,
+            "speciesNameCandidate": "Grodoudou",
+            "levels": [
+              43
+            ]
+          },
+          {
+            "speciesId": 43,
+            "speciesNameCandidate": "Mystherbe",
+            "levels": [
+              31
+            ]
+          },
+          {
+            "speciesId": 44,
+            "speciesNameCandidate": "Ortide",
+            "levels": [
+              35
+            ]
+          },
+          {
+            "speciesId": 45,
+            "speciesNameCandidate": "Rafflesia",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 89,
+            "speciesNameCandidate": "Grotadmorv",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 152,
+            "speciesNameCandidate": "Germignon",
+            "levels": [
+              32
+            ]
+          },
+          {
+            "speciesId": 153,
+            "speciesNameCandidate": "Macronium",
+            "levels": [
+              38
+            ]
+          },
+          {
+            "speciesId": 154,
+            "speciesNameCandidate": "Méganium",
+            "levels": [
+              40
+            ]
+          },
+          {
+            "speciesId": 163,
+            "speciesNameCandidate": "Hoothoot",
+            "levels": [
+              36
+            ]
+          },
+          {
+            "speciesId": 164,
+            "speciesNameCandidate": "Noarfang",
+            "levels": [
+              42
+            ]
+          },
+          {
+            "speciesId": 175,
+            "speciesNameCandidate": "Togepi",
+            "levels": [
+              29
+            ]
+          },
+          {
+            "speciesId": 176,
+            "speciesNameCandidate": "Togetic",
+            "levels": [
+              29
+            ]
+          },
+          {
+            "speciesId": 182,
+            "speciesNameCandidate": "Joliflor",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 200,
+            "speciesNameCandidate": "Feuforêve",
+            "levels": [
+              35
+            ]
+          },
+          {
+            "speciesId": 280,
+            "speciesNameCandidate": "Tarsal",
+            "levels": [
+              31
+            ]
+          },
+          {
+            "speciesId": 281,
+            "speciesNameCandidate": "Kirlia",
+            "levels": [
+              35
+            ]
+          },
+          {
+            "speciesId": 282,
+            "speciesNameCandidate": "Gardevoir",
+            "levels": [
+              43
+            ]
+          },
+          {
+            "speciesId": 314,
+            "speciesNameCandidate": "Lumivole",
+            "levels": [
+              33
+            ]
+          },
+          {
+            "speciesId": 333,
+            "speciesNameCandidate": "Tylton",
+            "levels": [
+              31
+            ]
+          },
+          {
+            "speciesId": 334,
+            "speciesNameCandidate": "Altaria",
+            "levels": [
+              31
+            ]
+          },
+          {
+            "speciesId": 337,
+            "speciesNameCandidate": "Séléroc",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 350,
+            "speciesNameCandidate": "Milobellus",
+            "levels": [
+              36
+            ]
+          },
+          {
+            "speciesId": 370,
+            "speciesNameCandidate": "Lovdisc",
+            "levels": [
+              37
+            ]
+          },
+          {
+            "speciesId": 429,
+            "speciesNameCandidate": "Magirêve",
+            "levels": [
+              43
+            ]
+          },
+          {
+            "speciesId": 480,
+            "speciesNameCandidate": "Créhelf",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 481,
+            "speciesNameCandidate": "Créfollet",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 482,
+            "speciesNameCandidate": "Créfadet",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 488,
+            "speciesNameCandidate": "Cresselia",
+            "levels": [
+              50
+            ]
+          }
+        ]
+      },
+      "speciesIdsAddedAtSameNumericId": [
+        35,
+        36,
+        39,
+        40,
+        43,
+        44,
+        45,
+        89,
+        152,
+        153,
+        154,
+        163,
+        164,
+        175,
+        176,
+        182,
+        200,
+        280,
+        281,
+        282,
+        314,
+        333,
+        334,
+        337,
+        350,
+        370,
+        429,
+        480,
+        481,
+        482
+      ],
+      "speciesIdsRemovedAtSameNumericId": [],
+      "numericIdIdentityWarning": true
+    },
+    {
+      "moveId": 468,
+      "projectPmNameFr": "Piétinement",
+      "nameEvidence": "decoded_project_pm_move_name_bank",
+      "platinumSameNumericIdNameChange": null,
+      "platinumSameNumericIdUsage": {
+        "speciesCount": 0,
+        "records": []
+      },
+      "projectPmUsage": {
+        "speciesCount": 38,
+        "records": [
+          {
+            "speciesId": 27,
+            "speciesNameCandidate": "Sabelette",
+            "levels": [
+              9
+            ]
+          },
+          {
+            "speciesId": 28,
+            "speciesNameCandidate": "Sablaireau",
+            "levels": [
+              9
+            ]
+          },
+          {
+            "speciesId": 50,
+            "speciesNameCandidate": "Taupiqueur",
+            "levels": [
+              10
+            ]
+          },
+          {
+            "speciesId": 51,
+            "speciesNameCandidate": "Triopikeur",
+            "levels": [
+              10
+            ]
+          },
+          {
+            "speciesId": 74,
+            "speciesNameCandidate": "Racaillou",
+            "levels": [
+              13
+            ]
+          },
+          {
+            "speciesId": 75,
+            "speciesNameCandidate": "Gravalanch",
+            "levels": [
+              13
+            ]
+          },
+          {
+            "speciesId": 76,
+            "speciesNameCandidate": "Grolem",
+            "levels": [
+              13
+            ]
+          },
+          {
+            "speciesId": 95,
+            "speciesNameCandidate": "Onix",
+            "levels": [
+              10
+            ]
+          },
+          {
+            "speciesId": 111,
+            "speciesNameCandidate": "Rhinocorne",
+            "levels": [
+              10
+            ]
+          },
+          {
+            "speciesId": 112,
+            "speciesNameCandidate": "Rhinoféros",
+            "levels": [
+              10
+            ]
+          },
+          {
+            "speciesId": 128,
+            "speciesNameCandidate": "Tauros",
+            "levels": [
+              19
+            ]
+          },
+          {
+            "speciesId": 207,
+            "speciesNameCandidate": "Scorplane",
+            "levels": [
+              16
+            ]
+          },
+          {
+            "speciesId": 208,
+            "speciesNameCandidate": "Steelix",
+            "levels": [
+              10
+            ]
+          },
+          {
+            "speciesId": 220,
+            "speciesNameCandidate": "Marcacrin",
+            "levels": [
+              16
+            ]
+          },
+          {
+            "speciesId": 221,
+            "speciesNameCandidate": "Cochignon",
+            "levels": [
+              16
+            ]
+          },
+          {
+            "speciesId": 231,
+            "speciesNameCandidate": "Phanpy",
+            "levels": [
+              13
+            ]
+          },
+          {
+            "speciesId": 232,
+            "speciesNameCandidate": "Donphan",
+            "levels": [
+              13
+            ]
+          },
+          {
+            "speciesId": 246,
+            "speciesNameCandidate": "Embrylex",
+            "levels": [
+              13
+            ]
+          },
+          {
+            "speciesId": 247,
+            "speciesNameCandidate": "Ymphect",
+            "levels": [
+              13
+            ]
+          },
+          {
+            "speciesId": 248,
+            "speciesNameCandidate": "Tyranocif",
+            "levels": [
+              13
+            ]
+          },
+          {
+            "speciesId": 259,
+            "speciesNameCandidate": "Flobio",
+            "levels": [
+              16
+            ]
+          },
+          {
+            "speciesId": 260,
+            "speciesNameCandidate": "Laggron",
+            "levels": [
+              16
+            ]
+          },
+          {
+            "speciesId": 328,
+            "speciesNameCandidate": "Kraknoix",
+            "levels": [
+              11
+            ]
+          },
+          {
+            "speciesId": 329,
+            "speciesNameCandidate": "Vibraninf",
+            "levels": [
+              11
+            ]
+          },
+          {
+            "speciesId": 330,
+            "speciesNameCandidate": "Libégon",
+            "levels": [
+              11
+            ]
+          },
+          {
+            "speciesId": 377,
+            "speciesNameCandidate": "Regirock",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 378,
+            "speciesNameCandidate": "Regice",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 379,
+            "speciesNameCandidate": "Registeel",
+            "levels": [
+              1
+            ]
+          },
+          {
+            "speciesId": 388,
+            "speciesNameCandidate": "Boskara",
+            "levels": [
+              18
+            ]
+          },
+          {
+            "speciesId": 389,
+            "speciesNameCandidate": "Torterra",
+            "levels": [
+              18
+            ]
+          },
+          {
+            "speciesId": 443,
+            "speciesNameCandidate": "Griknot",
+            "levels": [
+              10
+            ]
+          },
+          {
+            "speciesId": 444,
+            "speciesNameCandidate": "Carmache",
+            "levels": [
+              10
+            ]
+          },
+          {
+            "speciesId": 445,
+            "speciesNameCandidate": "Carchacrok",
+            "levels": [
+              10
+            ]
+          },
+          {
+            "speciesId": 449,
+            "speciesNameCandidate": "Hippopotas",
+            "levels": [
+              15
+            ]
+          },
+          {
+            "speciesId": 450,
+            "speciesNameCandidate": "Hippodocus",
+            "levels": [
+              15
+            ]
+          },
+          {
+            "speciesId": 464,
+            "speciesNameCandidate": "Rhinastoc",
+            "levels": [
+              10
+            ]
+          },
+          {
+            "speciesId": 472,
+            "speciesNameCandidate": "Scorvol",
+            "levels": [
+              16
+            ]
+          },
+          {
+            "speciesId": 473,
+            "speciesNameCandidate": "Mammochon",
+            "levels": [
+              16
+            ]
+          }
+        ]
+      },
+      "speciesIdsAddedAtSameNumericId": [
+        27,
+        28,
+        50,
+        51,
+        74,
+        75,
+        76,
+        95,
+        111,
+        112,
+        128,
+        207,
+        208,
+        220,
+        221,
+        231,
+        232,
+        246,
+        247,
+        248,
+        259,
+        260,
+        328,
+        329,
+        330,
+        377,
+        378,
+        379,
+        388,
+        389,
+        443,
+        444,
+        445,
+        449,
+        450,
+        464,
+        472,
+        473
+      ],
+      "speciesIdsRemovedAtSameNumericId": [],
+      "numericIdIdentityWarning": true
+    },
+    {
+      "moveId": 469,
+      "projectPmNameFr": "Cavalerie Lourde",
+      "nameEvidence": "decoded_project_pm_move_name_bank",
+      "platinumSameNumericIdNameChange": null,
+      "platinumSameNumericIdUsage": {
+        "speciesCount": 0,
+        "records": []
+      },
+      "projectPmUsage": {
+        "speciesCount": 10,
+        "records": [
+          {
+            "speciesId": 128,
+            "speciesNameCandidate": "Tauros",
+            "levels": [
+              37
+            ]
+          },
+          {
+            "speciesId": 208,
+            "speciesNameCandidate": "Steelix",
+            "levels": [
+              47
+            ]
+          },
+          {
+            "speciesId": 221,
+            "speciesNameCandidate": "Cochignon",
+            "levels": [
+              28
+            ]
+          },
+          {
+            "speciesId": 232,
+            "speciesNameCandidate": "Donphan",
+            "levels": [
+              48
+            ]
+          },
+          {
+            "speciesId": 260,
+            "speciesNameCandidate": "Laggron",
+            "levels": [
+              47
+            ]
+          },
+          {
+            "speciesId": 289,
+            "speciesNameCandidate": "Monaflèmit",
+            "levels": [
+              23
+            ]
+          },
+          {
+            "speciesId": 376,
+            "speciesNameCandidate": "Métalosse",
+            "levels": [
+              48
+            ]
+          },
+          {
+            "speciesId": 389,
+            "speciesNameCandidate": "Torterra",
+            "levels": [
+              47
+            ]
+          },
+          {
+            "speciesId": 450,
+            "speciesNameCandidate": "Hippodocus",
+            "levels": [
+              51
+            ]
+          },
+          {
+            "speciesId": 473,
+            "speciesNameCandidate": "Mammochon",
+            "levels": [
+              28
+            ]
+          }
+        ]
+      },
+      "speciesIdsAddedAtSameNumericId": [
+        128,
+        208,
+        221,
+        232,
+        260,
+        289,
+        376,
+        389,
+        450,
+        473
+      ],
+      "speciesIdsRemovedAtSameNumericId": [],
+      "numericIdIdentityWarning": true
+    },
+    {
+      "moveId": 470,
+      "projectPmNameFr": "Triple Axel",
+      "nameEvidence": "decoded_project_pm_move_name_bank",
+      "platinumSameNumericIdNameChange": null,
+      "platinumSameNumericIdUsage": {
+        "speciesCount": 0,
+        "records": []
+      },
+      "projectPmUsage": {
+        "speciesCount": 5,
+        "records": [
+          {
+            "speciesId": 86,
+            "speciesNameCandidate": "Otaria",
+            "levels": [
+              28
+            ]
+          },
+          {
+            "speciesId": 87,
+            "speciesNameCandidate": "Lamantine",
+            "levels": [
+              28
+            ]
+          },
+          {
+            "speciesId": 215,
+            "speciesNameCandidate": "Farfuret",
+            "levels": [
+              28
+            ]
+          },
+          {
+            "speciesId": 281,
+            "speciesNameCandidate": "Kirlia",
+            "levels": [
+              25
+            ]
+          },
+          {
+            "speciesId": 461,
+            "speciesNameCandidate": "Dimoret",
+            "levels": [
+              20
+            ]
+          }
+        ]
+      },
+      "speciesIdsAddedAtSameNumericId": [
+        86,
+        87,
+        215,
+        281,
+        461
+      ],
+      "speciesIdsRemovedAtSameNumericId": [],
+      "numericIdIdentityWarning": true
+    },
+    {
+      "moveId": 471,
+      "projectPmNameFr": "Psycho-Croc",
+      "nameEvidence": "decoded_project_pm_move_name_bank",
+      "platinumSameNumericIdNameChange": null,
+      "platinumSameNumericIdUsage": {
+        "speciesCount": 0,
+        "records": []
+      },
+      "projectPmUsage": {
+        "speciesCount": 3,
+        "records": [
+          {
+            "speciesId": 403,
+            "speciesNameCandidate": "Lixy",
+            "levels": [
+              23
+            ]
+          },
+          {
+            "speciesId": 404,
+            "speciesNameCandidate": "Luxio",
+            "levels": [
+              26
+            ]
+          },
+          {
+            "speciesId": 405,
+            "speciesNameCandidate": "Luxray",
+            "levels": [
+              26
+            ]
+          }
+        ]
+      },
+      "speciesIdsAddedAtSameNumericId": [
+        403,
+        404,
+        405
+      ],
+      "speciesIdsRemovedAtSameNumericId": [],
+      "numericIdIdentityWarning": true
+    }
+  ]
+}
