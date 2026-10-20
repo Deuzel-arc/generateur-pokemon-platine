@@ -1,0 +1,255 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Garde-fou d'identité pour les huit entrées de capacité au type brut 9 dans Project PM",
+  "status": "identity_unresolved_do_not_join_by_index",
+  "source": {
+    "platinumGameCode": "CPUF",
+    "projectPmGameCode": "CPUE",
+    "platinumSha256": "1cfd024519116c1c6285d6af2dbdfcec778e9d74c7c18585e22032e81aaa7eb8",
+    "projectPmSha256": "435b0288238f01f21eeeef7b5de6de3e3c9c3a9b70ea3b18d71b31ba282ae4e1",
+    "projectPmTypeId": 9,
+    "projectPmTypeName": "Fée"
+  },
+  "policy": {
+    "canonicalSymbolMeaning": "Référence de l'entrée canonique au même index uniquement; ne constitue pas une identité vérifiée de la capacité Project PM.",
+    "allowRuntimeNameJoinByIndex": false,
+    "requireDecodedProjectPmMoveName": true,
+    "requireSemanticEffectValidation": true
+  },
+  "entries": [
+    {
+      "id": 66,
+      "canonicalSymbolReferenceOnly": "MOVE_SUBMISSION",
+      "changeClass": "multiple_fields_changed",
+      "changedFields": {
+        "effectId": [
+          48,
+          68
+        ],
+        "power": [
+          80,
+          90
+        ],
+        "typeId": [
+          1,
+          9
+        ],
+        "accuracy": [
+          80,
+          90
+        ],
+        "pp": [
+          25,
+          10
+        ],
+        "effectChance": [
+          0,
+          10
+        ]
+      }
+    },
+    {
+      "id": 140,
+      "canonicalSymbolReferenceOnly": "MOVE_BARRAGE",
+      "changeClass": "multiple_fields_changed",
+      "changedFields": {
+        "effectId": [
+          29,
+          3
+        ],
+        "categoryId": [
+          0,
+          1
+        ],
+        "power": [
+          15,
+          75
+        ],
+        "typeId": [
+          0,
+          9
+        ],
+        "accuracy": [
+          85,
+          100
+        ],
+        "pp": [
+          20,
+          10
+        ],
+        "contestType": [
+          114,
+          115
+        ],
+        "contestEffect": [
+          7,
+          5
+        ]
+      }
+    },
+    {
+      "id": 186,
+      "canonicalSymbolReferenceOnly": "MOVE_SWEET_KISS",
+      "changeClass": "type_field_only_changed",
+      "changedFields": {
+        "typeId": [
+          0,
+          9
+        ]
+      }
+    },
+    {
+      "id": 204,
+      "canonicalSymbolReferenceOnly": "MOVE_CHARM",
+      "changeClass": "type_field_only_changed",
+      "changedFields": {
+        "typeId": [
+          0,
+          9
+        ]
+      }
+    },
+    {
+      "id": 236,
+      "canonicalSymbolReferenceOnly": "MOVE_MOONLIGHT",
+      "changeClass": "type_field_only_changed",
+      "changedFields": {
+        "typeId": [
+          0,
+          9
+        ]
+      }
+    },
+    {
+      "id": 295,
+      "canonicalSymbolReferenceOnly": "MOVE_LUSTER_PURGE",
+      "changeClass": "multiple_fields_changed",
+      "changedFields": {
+        "effectId": [
+          72,
+          0
+        ],
+        "power": [
+          70,
+          80
+        ],
+        "typeId": [
+          14,
+          9
+        ],
+        "pp": [
+          5,
+          10
+        ],
+        "effectChance": [
+          50,
+          0
+        ],
+        "targetId": [
+          0,
+          4
+        ],
+        "contestType": [
+          18,
+          50
+        ],
+        "contestEffect": [
+          22,
+          5
+        ]
+      }
+    },
+    {
+      "id": 296,
+      "canonicalSymbolReferenceOnly": "MOVE_MIST_BALL",
+      "changeClass": "multiple_fields_changed",
+      "changedFields": {
+        "effectId": [
+          71,
+          17
+        ],
+        "power": [
+          70,
+          50
+        ],
+        "typeId": [
+          14,
+          9
+        ],
+        "accuracy": [
+          100,
+          0
+        ],
+        "pp": [
+          5,
+          15
+        ],
+        "effectChance": [
+          50,
+          0
+        ],
+        "targetId": [
+          0,
+          4
+        ],
+        "contestType": [
+          146,
+          50
+        ],
+        "contestEffect": [
+          22,
+          5
+        ]
+      }
+    },
+    {
+      "id": 461,
+      "canonicalSymbolReferenceOnly": "MOVE_LUNAR_DANCE",
+      "changeClass": "multiple_fields_changed",
+      "changedFields": {
+        "effectId": [
+          270,
+          71
+        ],
+        "categoryId": [
+          2,
+          1
+        ],
+        "power": [
+          0,
+          95
+        ],
+        "typeId": [
+          14,
+          9
+        ],
+        "accuracy": [
+          0,
+          100
+        ],
+        "pp": [
+          10,
+          15
+        ],
+        "effectChance": [
+          0,
+          30
+        ],
+        "targetId": [
+          16,
+          0
+        ],
+        "contestType": [
+          128,
+          50
+        ],
+        "contestEffect": [
+          8,
+          5
+        ]
+      }
+    }
+  ],
+  "interpretation": "Les symboles canoniques ne sont que des repères d'index. Cinq entrées ont plusieurs changements de champs; trois ne diffèrent que par le type. Ne pas attribuer de nom ou d'effet de capacité Project PM avant décodage de la banque de noms et validation sémantique.",
+  "runtimeChanges": false
+}
