@@ -229,13 +229,13 @@ check("selected reference drives team candidate roster and scoring", () => {
   assert.match(html, /eligibleLeg=activeRoster\.filter/);
   assert.match(html, /pool=activeRoster\.filter/);
   assert.match(html, /const romRosterData =/);
-  assert.match(html, /verifiedProjectPmTypeOverrides=new Set\(\['Gardevoir','Togekiss'\]\)/);
+  assert.match(html, /verifiedProjectPmTypeOverrides=new Set\(\['Dracaufeu','Gardevoir','Jungko','Togekiss'\]\)/);
   assert.match(html, /verifiedProjectPmTypeOverrides\.has\(p\.name\)/);
   assert.match(html, /p\.baseStats=stats/);
   assert.match(html, /p\.off=Math\.max\(stats\.attack,stats\.specialAttack\)/);
   assert.equal(romRosterProfiles.base.length, 71);
   assert.ok(romRosterProfiles.project_pm_overrides.Dracaufeu);
-  assert.deepEqual(romRosterProfiles.project_pm_overrides.Dracaufeu[0], ["Feu", "Dragon"]);
+  assert.deepEqual(romRosterProfiles.project_pm_overrides.Dracaufeu[0], ["Dragon", "Feu"]);
   assert.deepEqual(romRosterProfiles.project_pm_overrides.Gardevoir[0], ["Psy", "Fée"]);
   assert.deepEqual(romRosterProfiles.project_pm_overrides.Togekiss[0], ["Fée", "Vol"]);
   for (const row of romRosterProfiles.base) {
