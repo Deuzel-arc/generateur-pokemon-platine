@@ -200,6 +200,13 @@ assert.deepEqual(evolutionMethodAudit.directRomVerification.selectedRawEntries.p
   { slot: 1, methodId: 27, parameter: 458, targetSpeciesId: 224 }
 ], "Project PM source ID 223 must preserve both raw evolution slots");
 assert.deepEqual(evolutionMethodAudit.directRomVerification.selectedRawEntries.project_pm.sourceSpeciesId458, [{ slot: 0, methodId: 27, parameter: 223, targetSpeciesId: 226 }], "Project PM source ID 458 must preserve method 27 and reciprocal parameter");
+assert.deepEqual(evolutionMethodAudit.directRomVerification.speciesNameCrosswalk.anchors, {
+  "223": { name: "REMORAID", displayName: "Remoraid" },
+  "224": { name: "OCTILLERY", displayName: "Octillery" },
+  "458": { name: "BABIMANTA", displayName: "Babimanta" },
+  "226": { name: "DEMANTA", displayName: "Démanta" }
+}, "evolution audit species names must match the decoded ROM name-bank anchors");
+assert.equal(evolutionMethodAudit.directRomVerification.speciesNameCrosswalk.status, "direct_rom_name_bank_decoded", "species names must be sourced from the decoded ROM name bank");
 assert.match(evolutionMethodAudit.directRomVerification.observations.join(" "), /remplace la méthode 21 par la méthode 27/, "audit must retain the observed method-21 to method-27 change");
 assert.match(evolutionMethodAudit.directRomVerification.limitations.join(" "), /ne prouve pas que 27 a la même implémentation/, "audit must not assume custom method semantics");
 
