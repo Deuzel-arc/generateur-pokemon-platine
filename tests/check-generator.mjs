@@ -5,6 +5,7 @@ const html = readFileSync(new URL("../index.html", import.meta.url), "utf8");
 const berries = JSON.parse(readFileSync(new URL("../data/berries_gen4.json", import.meta.url), "utf8"));
 const romCatalog = JSON.parse(readFileSync(new URL("../data/rom_catalog.json", import.meta.url), "utf8"));
 const romOverrides = JSON.parse(readFileSync(new URL("../data/rom_overrides.json", import.meta.url), "utf8"));
+const romRosterProfiles = JSON.parse(readFileSync(new URL("../data/rom_roster_profiles.json", import.meta.url), "utf8"));
 const checks = [];
 function check(name, fn) {
   try { fn(); checks.push({ name, status: "PASS" }); }
@@ -54,7 +55,12 @@ check("selected reference drives team candidate roster and scoring", () => {
   assert.match(html, /activeRoster\.find/);
   assert.match(html, /eligibleLeg=activeRoster\.filter/);
   assert.match(html, /pool=activeRoster\.filter/);
-  assert.match(html, /charizard\.types=\['Feu','Ténèbres'\]/);
+  assert.match(html, /const romRosterData =/);
+  assert.match(html, /p\.baseStats=stats/);
+  assert.match(html, /p\.off=Math\.max\(stats\.attack,stats\.specialAttack\)/);
+  assert.equal(romRosterProfiles.base.length, 70);
+  assert.ok(romRosterProfiles.project_pm_overrides.Dracaufeu);
+  assert.deepEqual(romRosterProfiles.project_pm_overrides.Dracaufeu[0], ["Feu", "Dragon"]);
   assert.doesNotMatch(html, /state\.dataSource==='multiplayer'&&p\.types\.includes\('Ténèbres'\)/);
 });
 check("selected reference is recorded in the generated summary", () => {
