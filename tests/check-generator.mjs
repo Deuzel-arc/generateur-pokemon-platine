@@ -33,7 +33,7 @@ check("selected reference drives team candidate roster and scoring", () => {
   assert.match(html, /activeRoster\.find/);
   assert.match(html, /eligibleLeg=activeRoster\.filter/);
   assert.match(html, /pool=activeRoster\.filter/);
-  assert.match(html, /state\.dataSource==='multiplayer'&&p\.types\.includes\('Ténèbres'\)/);
+  assert.match(html, /charizard\.types=\['Feu','Ténèbres'\]/);\n  assert.doesNotMatch(html, /state\.dataSource==='multiplayer'&&p\.types\.includes\('Ténèbres'\)/);
 });
 check("selected reference is recorded in the generated summary", () => {
   assert.match(html, /referentielStrategique:state\.dataSource/);
