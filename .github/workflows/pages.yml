@@ -37,6 +37,13 @@ jobs:
         run: npx playwright install --with-deps chromium
       - name: Run full test suite
         run: npm test
+      - name: Preserve generated lockfile for one-time bootstrap
+        uses: actions/upload-artifact@v4
+        with:
+          name: package-lock-bootstrap
+          path: package-lock.json
+          if-no-files-found: error
+          retention-days: 1
 
   deploy:
     needs: test
