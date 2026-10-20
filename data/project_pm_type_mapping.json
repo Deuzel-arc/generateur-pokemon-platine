@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Mapping des types de Pokémon Platine Project PM",
+  "profile": {
+    "gameCode": "CPUE",
+    "sha256": "435b0288238f01f21eeeef7b5de6de3e3c9c3a9b70ea3b18d71b31ba282ae4e1"
+  },
+  "mappings": [
+    {
+      "rawTypeId": 9,
+      "nameFr": "Fée",
+      "status": "user_confirmed",
+      "confirmationSource": "Information fournie par l'utilisateur le 2026-10-20 : le type affiché « Inconnu » dans l'extraction de la ROM multijoueur correspond au type Fée.",
+      "scope": "Project PM uniquement",
+      "appliesTo": "Valeurs de type brut ID 9 dans les tables d'espèces et d'attaques de cette ROM exacte.",
+      "caution": "Mapping confirmé par l'utilisateur, pas encore vérifié indépendamment en relisant la table interne de types de la ROM. Ne pas appliquer à la ROM Platine originale ni aux autres profils."
+    }
+  ],
+  "policy": {
+    "preserveRawIds": true,
+    "noCrossRomInheritance": true,
+    "originalPlatinumTypeId9MustRemainUnchanged": true,
+    "runtimeIntegration": "À appliquer seulement dans le décodeur Project PM après ajout d'un test qui vérifie que le mapping est limité au profil CPUE et à l'empreinte indiquée."
+  }
+}
