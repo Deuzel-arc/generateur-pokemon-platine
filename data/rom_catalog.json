@@ -93,5 +93,18 @@
       "dialogues",
       "storyScripts"
     ]
+  },
+  "canonicalIdReference": {
+    "path": "data/gen4_id_reference.json",
+    "sourceRepository": "pret/pokeplatinum",
+    "sourceCommit": "06c6e9a0348da283be8d9225d0bec03c349ff5c2",
+    "counts": {
+      "species": 493,
+      "moves": 467,
+      "abilities": 123,
+      "types": 18
+    },
+    "status": "reference_symbols_pinned_not_rom_mapping_certification",
+    "note": "Cette table établit les symboles canoniques par ID; elle ne certifie pas à elle seule le mapping des IDs des ROM extraites ni les noms français."
   }
 }
