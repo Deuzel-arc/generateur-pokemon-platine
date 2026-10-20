@@ -248,3 +248,11 @@ L'audit sert à circonscrire et contrôler la correction, pas encore à charger 
 - Le validateur `scripts/validate-rom-audits.mjs` compare les quatre lignes, les octets bruts et les noms décodés. `scripts/check-tooling.mjs` exige maintenant que ce rapport soit présent.
 - Prochaine étape : localiser la table/dispatch des effets de combat de CPUE et vérifier ces identifiants d'effet avant d'autoriser leur description stratégique dans le générateur.
 
+
+## Croisement prudent des effets candidats des capacités supplémentaires — 2026-10-20
+
+- Le rapport des capacités supplémentaires référence maintenant les symboles d'effet de la table de référence Gen IV épinglée, via l'audit spécial déjà présent dans le dépôt.
+- Candidats croisés : ID 468 → `BATTLE_EFFECT_LOWER_SPEED_HIT` (identité Bulldoze plausible); ID 469 → `BATTLE_EFFECT_HIT` (High Horsepower plausible); ID 470 → `BATTLE_EFFECT_HIT_THREE_TIMES` (identité non résolue); ID 471 → `BATTLE_EFFECT_REMOVE_SCREENS` (Psychic Fangs reste une hypothèse faible).
+- Ce croisement apporte une piste d'interprétation des IDs d'effet, mais ne prouve pas que Project PM exécute les scripts canoniques, ni que les noms candidats sont les noms voulus. Les candidats sont marqués explicitement comme non certifiés.
+- Le validateur vérifie désormais que les champs candidats correspondent à l'audit de référence et qu'ils ne sont pas présentés comme une sémantique runtime confirmée.
+- CI du lot précédent : succès complet (tests et déploiement GitHub Pages) sur le commit `ff9072c4f88038bf735d10db3c3df0492e3becb4`. Le nouveau croisement et ses assertions doivent encore passer leur propre exécution CI.
