@@ -23,6 +23,16 @@ assert.equal(itemReference.structuralReconciliation.projectPmPlItemDataArchiveEn
 assert.equal(itemReference.structuralReconciliation.status, "count_match_mapping_not_proven", "matching counts must not be treated as proof of archive ordering");
 assert.match(itemReference.policies.join(" "), /jamais joindre.*par position/i, "item policy must prohibit unverified positional joins");
 assert.equal(itemReference.holdEffects.length, 147, "canonical hold-effect reference count must remain stable");
+assert.equal(itemReference.itemIds.filter((row) => row.archiveIndex !== null).length, 446, "candidate archive mapping must cover 446 non-reserved items");
+assert.equal(itemReference.itemIds.filter((row) => row.archiveIndex === null).length, 22, "reserved item IDs must not map to archive entries");
+assert.deepEqual(itemReference.itemIds.filter((row) => row.archiveIndex !== null).map((row) => row.archiveIndex), Array.from({ length: 446 }, (_, index) => index), "candidate archive indices must be sequential and gap-free");
+assert.deepEqual(itemReference.structuralReconciliation.verifiedAnchors.map((row) => [row.logicalItemId, row.symbol, row.archiveIndex, row.observedPrice]), [
+  [1, "ITEM_MASTER_BALL", 1, 0],
+  [2, "ITEM_ULTRA_BALL", 2, 1200],
+  [135, "ITEM_ADAMANT_ORB", 113, 10000],
+  [136, "ITEM_LUSTROUS_ORB", 114, 10000],
+], "candidate mapping anchor records must remain fixed");
+assert.match(itemReference.structuralReconciliation.status, /candidate_mapping_anchor_checked/, "candidate item mapping must not be described as fully certified");
 
 assert.equal(projectPmTypes.profile.gameCode, "CPUE", "Project PM type mapping must target CPUE only");
 assert.equal(projectPmTypes.profile.sha256, catalog.profiles.project_pm.sha256, "Project PM type mapping ROM hash must match the catalog");
