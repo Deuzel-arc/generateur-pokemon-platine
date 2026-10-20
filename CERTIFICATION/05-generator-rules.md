@@ -1,6 +1,6 @@
 # Lot 05 — Règles du générateur et conformité du flux CI
 
-**État : audit statique du code actuel ; tests navigateur et moteur final non exécutés.**
+**État : audit statique relu le 2026-10-20 ; tests navigateur limités exécutés, moteur final non certifié.**
 
 ## Source examinée
 - [Interface actuelle — index.html](../index.html)
