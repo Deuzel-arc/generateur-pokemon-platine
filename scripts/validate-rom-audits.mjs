@@ -204,7 +204,7 @@ assert.deepEqual(evolutionMethodAudit.directRomVerification.speciesNameCrosswalk
   "223": { name: "REMORAID", displayName: "Remoraid" },
   "224": { name: "OCTILLERY", displayName: "Octillery" },
   "458": { name: "BABIMANTA", displayName: "Babimanta" },
-  "226": { name: "DEMANTA", displayName: "Démanta" }
+  "226": { name: "DEMANTA", displayName: "Demanta" }
 }, "evolution audit species names must match the decoded ROM name-bank anchors");
 assert.equal(evolutionMethodAudit.directRomVerification.speciesNameCrosswalk.status, "direct_rom_name_bank_decoded", "species names must be sourced from the decoded ROM name bank");
 assert.match(evolutionMethodAudit.directRomVerification.observations.join(" "), /remplace la méthode 21 par la méthode 27/, "audit must retain the observed method-21 to method-27 change");
