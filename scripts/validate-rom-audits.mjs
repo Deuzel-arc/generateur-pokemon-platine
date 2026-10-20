@@ -97,6 +97,25 @@ assert.equal(projectPmTypes.mappings[0].scope, "Project PM uniquement", "the Fai
 assert.equal(projectPmTypes.mappings[0].status, "user_confirmed", "do not silently upgrade user confirmation to independent ROM verification");
 assert.equal(projectPmTypes.mappings[0].appliesTo, "Valeurs de type brut ID 9 dans les tables d'espèces et d'attaques de cette ROM exacte.", "the mapping must stay limited to the declared raw tables");
 
+
+const itemFieldDiff = readJson("data/project_pm_item_field_diff_summary.json");
+assert.equal(itemFieldDiff.validation.bothArchivesRecordSize34, true, "field-level item report must confirm 34-byte records");
+assert.equal(itemFieldDiff.validation.platinumEntryCount, 446, "field-level item report must preserve CPUF entry count");
+assert.equal(itemFieldDiff.validation.projectPmEntryCount, 470, "field-level item report must preserve CPUE entry count");
+assert.equal(itemFieldDiff.validation.sharedIndicesCompared, 446, "field-level item report must compare all shared indices");
+assert.equal(itemFieldDiff.validation.identicalRawEntries, 281, "field-level item report must preserve identical-entry count");
+assert.equal(itemFieldDiff.validation.differentRawEntries, 165, "field-level item report must preserve differing-entry count");
+assert.equal(itemFieldDiff.validation.extraProjectPmEntries, 24, "field-level item report must preserve extra-entry count");
+assert.equal(itemFieldDiff.fieldDifferences.price_u16_le_bytes_0_1.changedEntries, 148, "field-level price diff count must match raw comparison");
+assert.equal(itemFieldDiff.fieldDifferences.holdEffect_byte_2.changedEntries, 0, "hold-effect byte must remain unchanged in the raw comparison");
+assert.equal(itemFieldDiff.fieldDifferences.effectParam_byte_3.changedEntries, 6, "effect parameter diff count must match raw comparison");
+assert.equal(itemFieldDiff.fieldDifferences.fieldUseFunc_byte_10.changedEntries, 11, "field-use function diff count must match raw comparison");
+assert.equal(itemFieldDiff.fieldDifferences.partyUse_byte_12.changedEntries, 11, "party-use diff count must match raw comparison");
+assert.equal(itemFieldDiff.fieldDifferences.union_bytes_14_33.changedEntries, 17, "union region diff count must match raw comparison");
+assert.equal(itemFieldDiff.policy.noNameInferenceFromPosition, true, "field-level item report must prohibit positional name inference");
+assert.equal(itemFieldDiff.policy.noCrossRomEffectInheritance, true, "field-level item report must prohibit cross-ROM effect inheritance");
+assert.match(itemFieldDiff.policy.fieldSemanticsForProjectPm, /provisional/, "Project PM field semantics must remain provisional");
+
 const platinumSha = catalog.profiles.platinum.sha256;
 const projectPmSha = catalog.profiles.project_pm.sha256;
 for (const [label, source] of [
