@@ -13,6 +13,8 @@ const required = [
   "../scripts/validate-rom-audits.mjs",
   "../scripts/audit-evolution-roms.mjs",
   "../scripts/audit-rom-type-bytes.mjs",
+  "../scripts/audit-rom-species-name-bank.mjs",
+  "../data/rom_species_name_bank_audit.json",
   "../data/project_pm_evolution_method_audit.json",
   "../data/project_pm_type_byte_audit.json",
   "../data/rom_catalog.json",
