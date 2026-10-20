@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "direct_rom_name_bank_decoded",
+  "source": {
+    "platinumSha256": "1cfd024519116c1c6285d6af2dbdfcec778e9d74c7c18585e22032e81aaa7eb8",
+    "projectPmSha256": "435b0288238f01f21eeeef7b5de6de3e3c9c3a9b70ea3b18d71b31ba282ae4e1",
+    "archivePath": "msgdata/pl_msg.narc",
+    "nameBankSymbol": "TEXT_BANK_SPECIES_NAME",
+    "nameBankIndex": 412,
+    "nameBankKey": 30764,
+    "nameBankEntryCount": 496,
+    "decoderScript": "scripts/audit-rom-species-name-bank.mjs",
+    "referenceCommit": "06c6e9a0348da283be8d9225d0bec03c349ff5c2"
+  },
+  "results": {
+    "bothRomBanksIdentical": true,
+    "verifiedStandardSpeciesIds": [1, 493],
+    "specialNameEntries": {"494": "Oeuf", "495": "Mauv. Oeuf"},
+    "sharedFormIdsWithoutDedicatedNames": [496,497,498,499,500,501,502,503,504,505,506,507],
+    "projectPmExtraSpeciesIdWithoutDedicatedName": 508,
+    "anchors": {"1":"BULBIZARRE","6":"DRACAUFEU","35":"MELOFEE","122":"M. MIME","223":"REMORAID","458":"BABIMANTA","467":"MAGANON","468":"TOGEKISS","493":"ARCEUS"}
+  },
+  "interpretationLimits": [
+    "The decoded names bank verifies IDs 1-493 and special entries 494-495; IDs 496-507 and Project PM ID 508 have no dedicated entry in this bank.",
+    "ROM name strings are preserved as stored, often unaccented uppercase; they are not polished display labels.",
+    "Project PM type ID 9 also occurs on species outside the official later Fairy-type additions. These remain mod-specific raw type changes under the user-confirmed Project PM mapping."
+  ]
+}
