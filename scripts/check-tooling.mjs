@@ -34,6 +34,9 @@ assert.equal(pkg.scripts["test:static"], "node tests/check-generator.mjs");
 assert.equal(pkg.scripts["test:rom-audits"], "node scripts/validate-rom-audits.mjs");
 assert.equal(pkg.scripts["test:browser"], "node tests/browser-generator.test.mjs");
 assert.equal(pkg.scripts["test:tooling"], "node scripts/check-tooling.mjs");
+assert.equal(pkg.scripts["audit:rom:types"], "node scripts/audit-rom-type-bytes.mjs");
+assert.equal(pkg.scripts["audit:rom:evolutions"], "node scripts/audit-evolution-roms.mjs");
+assert.equal(pkg.scripts["audit:rom:names"], "node scripts/audit-rom-species-name-bank.mjs");
 for (const name of ["test:static", "test:rom-audits", "test:browser", "test:tooling"]) {
   assert.ok(pkg.scripts.test.includes(`npm run ${name}`), `full test suite must include ${name}`);
 }
