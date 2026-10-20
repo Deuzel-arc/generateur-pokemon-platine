@@ -229,3 +229,5 @@ L'audit sert à circonscrire et contrôler la correction, pas encore à charger 
 - Le profil Dracaufeu a été corrigé pour respecter l'ordre des octets de type CPUE : `[Feu, Dragon]`, et non `[Dragon, Feu]`. Les statistiques d'attaque et de défense étaient déjà conformes à l'entrée brute actuelle.
 - Les données mises à jour dans `data/rom_roster_profiles.json` et la copie embarquée dans `index.html` doivent rester synchronisées. Les tests couvrent maintenant ces valeurs et l'absence d'héritage vers CPUF.
 - Limite restante : le générateur embarque encore 71 espèces. Les 31 espèces de la table de type Fée sont désormais nommées par le crosswalk, mais celles qui ne font pas partie des 71 profils ne sont pas encore toutes disponibles dans le générateur.
+
+- Un contrôle de synchronisation a aussi détecté que le fichier JSON décrivait Jungko comme `[Dragon, Plante]` alors que les octets CPUE et le HTML indiquent `[Plante, Dragon]`. Le JSON a été corrigé et un test compare maintenant l'objet embarqué de `index.html` au fichier source pour éviter de nouvelles divergences.
