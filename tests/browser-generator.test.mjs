@@ -13,6 +13,23 @@ try {
   assert.equal(await choices.count(), 6, "six objets proposés");
   assert.equal(await page.locator("#itemCount").innerText(), "0/2 objets imposés sélectionnés");
 
+  // The reference selector must change the actual composition data, not only the UI.
+  await page.locator('#dataSources [data-value="platinum"]').click();
+  assert.match(await page.locator("#dataSourceStatus").innerText(), /Pokémon Platine original/);
+  await page.locator('#starters [data-value="kanto"]').click();
+  await page.locator("#validate").click();
+  let sourceSummary = await page.locator("#summary").innerText();
+  assert.match(sourceSummary, /"referentielStrategique": "platinum"/);
+  assert.match(sourceSummary, /Dracaufeu — Feu \/ Vol/);
+
+  await page.locator('#dataSources [data-value="multiplayer"]').click();
+  assert.match(await page.locator("#dataSourceStatus").innerText(), /Pokémon Platine multijoueur/);
+  await page.locator("#validate").click();
+  sourceSummary = await page.locator("#summary").innerText();
+  assert.match(sourceSummary, /"referentielStrategique": "multiplayer"/);
+  assert.match(sourceSummary, /Dracaufeu — Feu \/ Ténèbres/);
+  console.log("[PASS] le référentiel sélectionné modifie les types de l’équipe et figure dans le récapitulatif");
+
   // Zero imposed items is valid; the algorithm still assigns six distinct items.
   await page.locator("#validate").click();
   let summary = await page.locator("#summary").innerText();
