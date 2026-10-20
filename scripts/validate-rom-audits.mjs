@@ -179,6 +179,14 @@ assert.deepEqual(addedMoveDataAudit.records.map((row) => [row.id, row.effectId, 
 assert.equal(addedMoveDataAudit.validation.runtimeEffectSemanticsVerified, false, "added move effects must not be treated as semantically certified");
 assert.equal(addedMoveDataAudit.validation.canonicalGenerationCompatibilityVerified, false, "added moves must not be treated as Gen IV-compatible without validation");
 assert.ok(addedMoveDataAudit.records.every((row) => /^[0-9a-f]{32}$/.test(row.raw)), "every added move must preserve a 16-byte raw record");
+assert.equal(addedMoveDataAudit.validation.canonicalEffectSymbolCandidatesCrossReferenced, true, "added move audit must cross-reference candidate canonical effect symbols");
+assert.equal(addedMoveDataAudit.validation.identityCandidatesAreHypothesesOnly, true, "added move identity candidates must remain hypotheses");
+assert.equal(addedMoveDataAudit.validation.effectRuntimeSemanticsVerified, false, "candidate effect symbols must not certify Project PM runtime semantics");
+assert.deepEqual(
+  addedMoveDataAudit.records.map((row) => [row.id, row.canonicalEffectSymbolCandidate, row.identityCandidate, row.identityConfidence]),
+  special.extraMoves.map((row) => [row.id, row.canonicalEffectSymbol, row.identityCandidate, row.identityConfidence]),
+  "added move candidate mappings must stay synchronized with the special-entry audit",
+);
 
 assert.equal(extendedNameBankAudit.banks.moves.commonNamesChanged, 10, "common move-name changes must remain audited");
 assert.equal(extendedNameBankAudit.banks.items.commonNamesChanged, 16, "common item-name changes must remain audited");
