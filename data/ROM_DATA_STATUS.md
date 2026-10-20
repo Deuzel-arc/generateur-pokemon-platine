@@ -109,3 +109,11 @@ Dresseurs et leurs équipes, routes/cartes, rencontres sauvages, dialogues, scri
 - Ne pas inventer les noms ou effets des IDs supplémentaires; conserver les données brutes et indiquer explicitement ce qui reste inconnu.
 - Le catalogue de référence et les données propres à Project PM doivent rester séparés et sourcés.
 - Étendre le roster au-delà des 71 profils actuels seulement après validation des identifiants, types et statistiques correspondants.
+
+## Vérification CI — 2026-10-20, reprise suivante
+
+- Le workflow `Generator checks` a réussi sur le commit `381570728d74e431e67914459c92b8267bf670fd` (run 133) : configuration Node, cache Playwright, installation des dépendances, installation Chromium et tests statiques/ROM/navigateur terminés avec succès.
+- Le déploiement GitHub Pages associé a également réussi (run 190).
+- La cause du run 132 en échec était la configuration `setup-node` demandant un cache npm fondé sur `package-lock.json`, absent du dépôt. Le workflow a été corrigé en supprimant ce cache npm et en utilisant `npm install`; le cache Playwright reste activé avec une clé fondée sur `package.json`.
+- Cette correction rétablit la vérification automatisée, mais ne certifie pas de nouveaux mappings ROM. Les empreintes différentes de l'audit historique et les noms d'IDs spéciaux/attaques supplémentaires restent à résoudre avant intégration runtime.
+- Avancement estimatif inchangé à cette vérification : décryptage ROM 25 %, validation/enrichissement des bases 32 %, intégration générateur 14 %. Ces valeurs sont des estimations de travail, pas des mesures automatiques.
