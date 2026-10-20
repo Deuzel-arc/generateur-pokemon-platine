@@ -26,7 +26,7 @@ check("ROM delta audit preserves provenance and labels raw differences as uncert
   assert.equal(romDeltaAudit.tables.berriesRaw.bytePositionsWithDifferences["4"], 64);
   assert.equal(romDeltaAudit.certificationStatus, "partial_unverified_differences");
   assert.ok(romDeltaAudit.blockingConflicts.some(item => item.includes("empreintes")));
-  assert.ok(romDeltaAudit.tables.items.notes.some(item => item.includes("pas encore certifier")));
+  assert.ok(romDeltaAudit.tables.items.notes.some(item => item.includes("pas encore de certifier")));
 });
 
 check("ROM catalogue manifest has separate original and Project PM profiles", () => {
