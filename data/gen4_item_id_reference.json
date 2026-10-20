@@ -4019,7 +4019,25 @@
         "observedPrice": 0,
         "validation": "source JSON at pinned pret/pokeplatinum commit and raw CPUF item data price match"
       }
-    ]
+    ],
+    "mappingDerivation": {
+      "sourceRepository": "pret/pokeplatinum",
+      "sourceCommit": "06c6e9a0348da283be8d9225d0bec03c349ff5c2",
+      "sourceFile": "tools/dataproc/src/itemproc.c",
+      "relevantLogic": [
+        "La boucle parcourt les membres de l'énumération des objets dans l'ordre.",
+        "Le filtre has_data exclut explicitement les noms ITEM_UNUSED_*.",
+        "Pour chaque entrée qui possède un fichier de données, proc_item est appelé puis add_idmap reçoit iter_data++, ce qui incrémente l'index de données uniquement pour les entrées réellement empaquetées.",
+        "add_idmap écrit l'ID logique i et le dataID séquentiel dans sItemArchiveIDs."
+      ],
+      "derivedRule": "dataID = nombre d'entrées ITEM_* précédentes possédant des données, en excluant les ITEM_UNUSED_*; pour la liste canonique où seuls les IDs 113–134 sont réservés, cela correspond au mapping candidat index = ID logique - nombre de slots réservés précédents.",
+      "confidence": "source_algorithm_verified_candidate_mapping; commercial_ROM_exhaustive_field_check_pending",
+      "limitations": [
+        "La source prouve l'algorithme de construction dans le dépôt de référence épinglé, pas que chaque champ de la ROM extraite correspond à la référence.",
+        "Les 13 contrôles de prix CPUF sont des ancres de cohérence; il reste à comparer les 446 enregistrements et tous les champs.",
+        "Project PM doit être validé séparément, car 165 entrées partagées diffèrent et 24 entrées supplémentaires existent."
+      ]
+    }
   },
   "policies": [
     "Conserver les symboles canoniques par ID logique, y compris les 22 slots réservés.",
