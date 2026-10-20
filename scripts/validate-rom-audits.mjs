@@ -116,6 +116,17 @@ assert.equal(itemFieldDiff.policy.noNameInferenceFromPosition, true, "field-leve
 assert.equal(itemFieldDiff.policy.noCrossRomEffectInheritance, true, "field-level item report must prohibit cross-ROM effect inheritance");
 assert.match(itemFieldDiff.policy.fieldSemanticsForProjectPm, /provisional/, "Project PM field semantics must remain provisional");
 
+
+const extraItemPatterns = readJson("data/project_pm_extra_item_patterns.json");
+assert.equal(extraItemPatterns.source.gameCode, "CPUE", "extra item pattern report must target Project PM");
+assert.equal(extraItemPatterns.source.recordSizeBytes, 34, "extra item records must remain 34 bytes");
+assert.equal(extraItemPatterns.totalEntries, 24, "extra item pattern report must cover all 24 extra entries");
+assert.deepEqual([extraItemPatterns.contiguousVariantGroup.firstArchiveIndex, extraItemPatterns.contiguousVariantGroup.lastArchiveIndex, extraItemPatterns.contiguousVariantGroup.count], [448, 465, 18], "extra item variant group boundaries must remain fixed");
+assert.deepEqual(extraItemPatterns.contiguousVariantGroup.observedByteValues, Array.from({ length: 18 }, (_, index) => index), "extra item variant byte values must remain sequential 0–17");
+assert.equal(extraItemPatterns.contiguousVariantGroup.otherBytesIdenticalWithinGroup, true, "extra item variant group must explicitly record all other bytes identical");
+assert.equal(extraItemPatterns.otherEntries.length, 6, "six extra entries outside the contiguous variant group must remain separately classified");
+assert.match(extraItemPatterns.policy, /ne prouve ni le nom/i, "extra item patterns must not be treated as semantic names or effects");
+
 const platinumSha = catalog.profiles.platinum.sha256;
 const projectPmSha = catalog.profiles.project_pm.sha256;
 for (const [label, source] of [
