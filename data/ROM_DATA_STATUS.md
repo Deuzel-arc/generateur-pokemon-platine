@@ -231,3 +231,10 @@ L'audit sert à circonscrire et contrôler la correction, pas encore à charger 
 - Limite restante : le générateur embarque encore 71 espèces. Les 31 espèces de la table de type Fée sont désormais nommées par le crosswalk, mais celles qui ne font pas partie des 71 profils ne sont pas encore toutes disponibles dans le générateur.
 
 - Un contrôle de synchronisation a aussi détecté que le fichier JSON décrivait Jungko comme `[Dragon, Plante]` alors que les octets CPUE et le HTML indiquent `[Plante, Dragon]`. Le JSON a été corrigé et un test compare maintenant l'objet embarqué de `index.html` au fichier source pour éviter de nouvelles divergences.
+
+## Comparaison complète des espèces standard — 2026-10-20
+
+- L'audit direct des 493 IDs standard (1–493) dans `poketool/personal/pl_personal.narc` montre que 488 enregistrements complets diffèrent entre CPUF et CPUE; seulement 5 sont identiques.
+- Les six statistiques de base diffèrent pour 197 espèces; la paire de types diffère pour 60 espèces; 42 espèces ont à la fois des changements de statistiques et de types. Les octets après les champs de type diffèrent aussi dans 486 fiches, ce qui indique que la comparaison des seules statistiques/types ne suffit pas à décrire toute la personnalisation.
+- Les chiffres sont enregistrés dans `data/rom_species_core_delta_audit.json` et vérifiés par le validateur. Il ne faut pas traiter les différences comme des erreurs par défaut : elles sont des modifications de la ROM Project PM.
+- Conséquence pour le générateur : le roster intégré de 71 espèces ne représente qu'un sous-ensemble des données. L'étape suivante est d'étendre les profils depuis les données brutes vérifiées, sans extrapoler les valeurs de Platine original vers CPUE.
