@@ -29,6 +29,7 @@ assert.equal(pkg.scripts["test:tooling"], "node scripts/check-tooling.mjs");
 for (const name of ["test:static", "test:rom-audits", "test:browser", "test:tooling"]) {
   assert.ok(pkg.scripts.test.includes(`npm run ${name}`), `full test suite must include ${name}`);
 }
+assert.ok(!existsSync(new URL("../.github/workflows/generator-checks.yml", import.meta.url)), "duplicate generator-checks workflow must remain removed");
 assert.match(quality, /pull_request:/, "quality workflow must validate pull requests");
 assert.ok(!quality.includes("cache: npm") || existsSync(new URL("../package-lock.json", import.meta.url)), "npm cache requires a committed package-lock.json");
 assert.match(quality, /npm test/, "quality workflow must run the full test suite");
