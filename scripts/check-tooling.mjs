@@ -34,8 +34,8 @@ assert.match(quality, /pull_request:/, "quality workflow must validate pull requ
 assert.ok(!quality.includes("cache: npm") || existsSync(new URL("../package-lock.json", import.meta.url)), "npm cache requires a committed package-lock.json");
 assert.match(quality, /npm test/, "quality workflow must run the full test suite");
 assert.match(quality, /playwright install --with-deps chromium/, "quality workflow must install browser dependencies");
-assert.match(quality, /actions\/cache@v4[\s\S]*?path: ~\/\.cache\/ms-playwright/, "quality workflow must cache the Playwright browser");
-assert.match(pages, /actions\/cache@v4[\s\S]*?path: ~\/\.cache\/ms-playwright/, "Pages workflow must cache the Playwright browser");
+assert.match(quality, /actions\/cache@v\\d+[\s\S]*?path: ~\/\.cache\/ms-playwright/, "quality workflow must cache the Playwright browser");
+assert.match(pages, /actions\/cache@v\\d+[\s\S]*?path: ~\/\.cache\/ms-playwright/, "Pages workflow must cache the Playwright browser");
 assert.match(pages, /needs: test/, "Pages deployment must depend on the passing test job");
 assert.match(pages, /npm test/, "Pages workflow must run the full test suite before deploy");
 assert.match(pages, /permissions:\n  contents: read\n/, "Pages workflow must use read-only top-level permissions");
