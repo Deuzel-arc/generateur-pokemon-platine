@@ -61,8 +61,8 @@ Ces chiffres ne représentent pas la proportion de toutes les ressources interne
 
 ## Intégration partielle des profils d'espèces — 2026-10-20
 
-- Ajout de `data/rom_roster_profiles.json` : statistiques de base et types décodés pour les 70 espèces du roster actuel, avec overrides Project PM séparés.
-- Les 70 profils sont intégrés au calcul du roster dans `index.html` : les types et les statistiques d'attaque/défense alimentent désormais le score selon le profil choisi.
+- Ajout de `data/rom_roster_profiles.json` : statistiques de base et types décodés pour les 71 espèces du roster actuel, avec overrides Project PM séparés.
+- Les 71 profils sont intégrés au calcul du roster dans `index.html` : les types et les statistiques d'attaque/défense alimentent désormais le score selon le profil choisi.
 - Le mapping des types de valeur 9 dans Project PM n'est pas certifié de façon globale. Les espèces dont le type décodé reste `Inconnu` gardent leur type de référence original, sauf Gardevoir et Togekiss dont le type Fée est confirmé par le contexte du hack. À ne pas présenter comme une table de types complètement validée.
 - Empreintes des ROM actuellement utilisées par les exports : original `1cfd024519116c1c6285d6af2dbdfcec778e9d74c7c18585e22032e81aaa7eb8`; Project PM `435b0288238f01f21eeeef7b5de6de3e3c9c3a9b70ea3b18d71b31ba282ae4e1`. Elles diffèrent des empreintes de l'ancien fichier d'overrides, qui doit être considéré comme un audit antérieur distinct jusqu'à réconciliation.
 - Le catalogue complet des attaques et apprentissages n'est pas encore intégré au générateur; cette étape porte sur les profils de base du roster uniquement.
