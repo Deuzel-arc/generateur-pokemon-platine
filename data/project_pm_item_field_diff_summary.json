@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Comparaison des champs de l'archive d'objets CPUF et CPUE",
+  "auditDate": "2026-10-20",
+  "sources": {
+    "platinum": "itemtool/itemdata/pl_item_data.narc, 446 entrées",
+    "projectPm": "itemtool/itemdata/pl_item_data.narc, 470 entrées",
+    "referenceCommit": "06c6e9a0348da283be8d9225d0bec03c349ff5c2",
+    "recordSizeBytes": 34,
+    "structure": "include/item.h dans le dépôt de référence pokeplatinum"
+  },
+  "method": "Comparaison octet par octet des 446 index communs, puis regroupement des différences selon les champs de la structure ItemData de référence. Les intitulés de champs décrivent la structure de référence et ne prouvent pas que Project PM conserve exactement les mêmes sémantiques.",
+  "validation": {
+    "bothArchivesRecordSize34": true,
+    "platinumEntryCount": 446,
+    "projectPmEntryCount": 470,
+    "sharedIndicesCompared": 446,
+    "identicalRawEntries": 281,
+    "differentRawEntries": 165,
+    "extraProjectPmEntries": 24,
+    "differentCountConsistent": true
+  },
+  "fieldDifferences": {
+    "price_u16_le_bytes_0_1": {
+      "changedEntries": 148,
+      "sample": [
+        {"archiveIndex": 2, "platinumHex": "b004", "projectPmHex": "2c01", "platinumValue": 1200, "projectPmValue": 300},
+        {"archiveIndex": 3, "platinumHex": "5802", "projectPmHex": "9600", "platinumValue": 600, "projectPmValue": 150},
+        {"archiveIndex": 4, "platinumHex": "c800", "projectPmHex": "3200", "platinumValue": 200, "projectPmValue": 50}
+      ]
+    },
+    "holdEffect_byte_2": {"changedEntries": 0},
+    "effectParam_byte_3": {
+      "changedEntries": 6,
+      "sample": [{"archiveIndex": 137, "platinumHex": "08", "projectPmHex": "02"}, {"archiveIndex": 138, "platinumHex": "08", "projectPmHex": "02"}, {"archiveIndex": 139, "platinumHex": "08", "projectPmHex": "02"}]
+    },
+    "pluckEffect_byte_4": {"changedEntries": 0},
+    "flingEffect_byte_5": {"changedEntries": 0},
+    "flingPower_byte_6": {"changedEntries": 0},
+    "naturalGiftPower_byte_7": {"changedEntries": 0},
+    "packed_flags_bytes_8_9": {"changedEntries": 0},
+    "fieldUseFunc_byte_10": {
+      "changedEntries": 11,
+      "sample": [{"archiveIndex": 199, "platinumHex": "00", "projectPmHex": "14"}, {"archiveIndex": 204, "platinumHex": "00", "projectPmHex": "14"}, {"archiveIndex": 205, "platinumHex": "00", "projectPmHex": "14"}]
+    },
+    "battleUseCategory_byte_11": {"changedEntries": 0},
+    "partyUse_byte_12": {
+      "changedEntries": 11,
+      "sample": [{"archiveIndex": 199, "platinumHex": "00", "projectPmHex": "01"}, {"archiveIndex": 204, "platinumHex": "00", "projectPmHex": "01"}, {"archiveIndex": 205, "platinumHex": "00", "projectPmHex": "01"}]
+    },
+    "padding_byte_13": {"changedEntries": 0},
+    "union_bytes_14_33": {
+      "changedEntries": 17,
+      "sample": [
+        {"archiveIndex": 45, "platinumHex": "0000000000080e0a000000000000000503020000", "projectPmHex": "0000000000080e1e000000000000000503020000"},
+        {"archiveIndex": 46, "platinumHex": "0000000000100e000a0000000000000503020000", "projectPmHex": "0000000000100e001e0000000000000503020000"},
+        {"archiveIndex": 47, "platinumHex": "0000000000200e00000a00000000000503020000", "projectPmHex": "0000000000200e00001e00000000000503020000"}
+      ]
+    }
+  },
+  "interpretation": [
+    "Les prix sont la principale différence observée dans les champs regroupés : 148 entrées communes changent de prix.",
+    "Aucun changement n'a été observé aux octets de référence holdEffect, pluckEffect, flingEffect, flingPower, naturalGiftPower, aux octets de drapeaux compactés 8–9, à battleUseCategory ou au padding.",
+    "Les différences de paramètres d'effet, de fonction de terrain, d'usage en équipe et de données union doivent être investiguées avant d'utiliser les valeurs pour le générateur.",
+    "Les catégories se chevauchent : une entrée peut différer dans plusieurs champs.",
+    "Les 24 entrées supplémentaires de CPUE restent non identifiées sémantiquement. Aucune déduction de nom ou d'effet n'est faite à partir de leur seul index."
+  ],
+  "policy": {
+    "noNameInferenceFromPosition": true,
+    "noCrossRomEffectInheritance": true,
+    "fieldSemanticsForProjectPm": "provisional_pending_mod_source_or_runtime_validation",
+    "mappingStatus": "raw_field_comparison_verified_semantic_mapping_pending"
+  }
+}
