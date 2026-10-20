@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "direct_rom_extended_name_banks_decoded",
+  "source": {
+    "platinumSha256": "1cfd024519116c1c6285d6af2dbdfcec778e9d74c7c18585e22032e81aaa7eb8",
+    "projectPmSha256": "435b0288238f01f21eeeef7b5de6de3e3c9c3a9b70ea3b18d71b31ba282ae4e1",
+    "archivePath": "msgdata/pl_msg.narc",
+    "canonicalReferenceCommit": "06c6e9a0348da283be8d9225d0bec03c349ff5c2"
+  },
+  "banks": {
+    "items": {
+      "index": 392,
+      "key": 51885,
+      "platinumEntryCount": 468,
+      "projectPmEntryCount": 492,
+      "commonNamesChanged": 16,
+      "projectPmOnlyEntries": [
+        [468,"Ballon"],[469,"Évoluroc"],[470,"Joyau Normal"],[471,"Joyau Combat"],
+        [472,"Joyau Vol"],[473,"Joyau Poison"],[474,"Joyau Sol"],[475,"Joyau Roche"],
+        [476,"Joyau Insec."],[477,"Joyau Spect."],[478,"Joyau Acier"],[479,"Joyau Fée"],
+        [480,"Joyau Feu"],[481,"Joyau Eau"],[482,"Joyau Plante"],[483,"Joyau Élec"],
+        [484,"Joyau Psy"],[485,"Joyau Glace"],[486,"Joyau Dragon"],[487,"Joyau Ténèbr"],
+        [488,"S. Bonbon Inf."],[489,"Co-op Sauvage"],[490,"Pierre Glace"],[491,"Plume Fée"]
+      ],
+      "commonNameChanges": [
+        [80,"Pierresoleil","Pierre Soleil"],[83,"Pierrefoudre","Pierre Foudre"],
+        [85,"Pierreplante","Pierre Plante"],[90,"Pouss.Etoile","Pouss. Étoile"],
+        [214,"Herbeblanche","Herbe Blanche"],[236,"Ballelumière","Balle Lumière"],
+        [239,"Grain Miracl","Graine Miracle"],[240,"Lunet.Noires","Lunet. Noires"],
+        [241,"Ceint.Noire","Ceint. Noire"],[296,"Grosseracine","Grosse Racine"],
+        [307,"Plaquesprit","Plaque Esprit"],[325,"Tissu Fauche","Tissu Faucheur"],
+        [326,"Grif. Rasoir","Griffe Rasoir"],[437,"Registre Ami","Jeu Sans Fil"],
+        [457,"Passeconcour","Passe Concours"],[464,"Potionsecret","Potion Secrète"]
+      ]
+    },
+    "abilities": {
+      "index": 610,
+      "key": 7280,
+      "platinumEntryCount": 124,
+      "projectPmEntryCount": 127,
+      "commonNamesChanged": 0,
+      "projectPmOnlyEntries": [[124,"Sans Limite"],[125,"Farceur"],[126,"Baigne Sable"]]
+    },
+    "moves": {
+      "index": 647,
+      "key": 63689,
+      "platinumEntryCount": 468,
+      "projectPmEntryCount": 472,
+      "commonNamesChanged": 10,
+      "projectPmOnlyEntries": [[468,"Piétinement"],[469,"Cavalerie Lourde"],[470,"Triple Axel"],[471,"Psycho-Croc"]],
+      "commonNameChanges": [
+        [32,"Empal’Korne","Tunnelier"],[66,"Sacrifice","Câlinerie"],
+        [132,"Constriction","Chute Glace"],[140,"Pilonnage","Vampibaiser"],
+        [239,"Ouragan","Vent Violent"],[295,"Lumi-Eclat","Éclat Magique"],
+        [296,"Ball’Brume","Voix Enjôleuse"],[344,"Electacle","Éclair Fou"],
+        [362,"Saumure","Ébullition"],[461,"Danse-Lune","Pouvoir Lunaire"]
+      ]
+    }
+  },
+  "interpretationLimits": [
+    "Les entrées ajoutées sont des noms décodés directement depuis les banques de texte CPUE; elles ne certifient pas à elles seules les effets ou la compatibilité Gen IV.",
+    "Les 24 noms d'objets ajoutés incluent des objets post-Gen IV ou propres au mod. Ils ne doivent pas être proposés comme objets tenus autorisés sans validation séparée.",
+    "Les 3 talents ajoutés sont nommés, mais leur implémentation et les Pokémon auxquels ils s'appliquent restent à auditer.",
+    "Les 4 capacités ajoutées sont nommées; leurs données d'effet et leurs mécaniques ne sont pas encore certifiées pour les règles de combat de la 4e génération."
+  ]
+}
