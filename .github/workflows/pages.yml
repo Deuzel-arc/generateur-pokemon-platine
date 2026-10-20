@@ -24,6 +24,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22"
+          cache: npm
       - name: Cache Playwright browser
         uses: actions/cache@v4
         with:
@@ -32,18 +33,11 @@ jobs:
           restore-keys: |
             playwright-${{ runner.os }}-
       - name: Install dependencies
-        run: npm install --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
       - name: Run full test suite
         run: npm test
-      - name: Preserve generated lockfile for one-time bootstrap
-        uses: actions/upload-artifact@v4
-        with:
-          name: package-lock-bootstrap
-          path: package-lock.json
-          if-no-files-found: error
-          retention-days: 1
 
   deploy:
     needs: test
