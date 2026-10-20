@@ -25,7 +25,7 @@ try {
   await page.locator("#validate").click();
   sourceSummary = await page.locator("#summary").innerText();
   assert.match(sourceSummary, /"referentielStrategique": "multiplayer"/);
-  assert.match(sourceSummary, /Dracaufeu — Feu \/ Ténèbres/);
+  assert.match(sourceSummary, /Dracaufeu — Feu \/ Dragon/);
   console.log("[PASS] le référentiel sélectionné modifie les types de l’équipe et figure dans le récapitulatif");
 
   // Zero imposed items is valid; the algorithm still assigns six distinct items.
