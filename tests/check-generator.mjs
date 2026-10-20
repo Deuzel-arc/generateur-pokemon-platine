@@ -28,6 +28,24 @@ check("ROM mapping audit records cross-profile differences without certifying ga
   assert.equal(audit.crossRomDifferences.moves.changedIdsByField.power.length, 76);
   assert.equal(audit.crossRomDifferences.moves.changedIdsByField.effectId.length, 22);
   assert.equal(audit.auditExtension.status, "triage_lists_verified_from_materialized_rom_database");
+  assert.deepEqual(
+    Object.fromEntries(Object.entries(audit.crossRomDifferences.species.changedIdsByField).map(([field, ids]) => [field, ids.length])),
+    { baseStats: 197, types: 65, abilities: 318, evYield: 1, genderRatio: 1, baseFriendship: 3 }
+  );
+  assert.deepEqual(
+    Object.fromEntries(Object.entries(audit.crossRomDifferences.moves.changedIdsByField).map(([field, ids]) => [field, ids.length])),
+    { effectId: 22, categoryId: 6, power: 76, type: 18, accuracy: 39, pp: 21, effectChance: 12, targetId: 19, priority: 2, flags: 4, contestType: 11, contestEffect: 10 }
+  );
+  for (const ids of Object.values(audit.crossRomDifferences.species.changedIdsByField)) {
+    assert.deepEqual(ids, [...ids].sort((left, right) => left - right));
+    assert.equal(new Set(ids).size, ids.length);
+    assert.ok(ids.every(id => Number.isInteger(id) && id >= 0 && id < 508));
+  }
+  for (const ids of Object.values(audit.crossRomDifferences.moves.changedIdsByField)) {
+    assert.deepEqual(ids, [...ids].sort((left, right) => left - right));
+    assert.equal(new Set(ids).size, ids.length);
+    assert.ok(ids.every(id => Number.isInteger(id) && id >= 0 && id < 471));
+  }
   assert.equal(audit.crossRomDifferences.species.fieldDifferences.types, 65);
   assert.equal(audit.crossRomDifferences.species.fieldDifferences.abilities, 318);
   assert.equal(audit.notableObservedPatterns[0].profileIds.length, 5);
