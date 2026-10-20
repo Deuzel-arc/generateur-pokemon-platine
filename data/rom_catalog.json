@@ -142,5 +142,14 @@
       ]
     },
     "note": "Candidate identities for Gen IV special entries/forms are evidence-based but require confirmation against the exact ROM name tables."
+  },
+  "romSpecialEntryAudit": {
+    "path": "data/rom_special_entry_audit.json",
+    "status": "raw_fields_verified_effect_symbols_candidate_identities_not_runtime",
+    "counts": {
+      "specialSpecies": 15,
+      "projectPmExtraMoves": 4
+    },
+    "note": "Stores raw ROM fields and canonical battle-effect symbols for investigation. Candidate move names remain unverified and are not used by runtime."
   }
 }
