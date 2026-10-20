@@ -159,6 +159,34 @@ check("berry catalog does not claim all 64 berries are complete", () => {
   assert.match(berries.mechanics, /Partiellement vérifié/);
 });
 
+check("roster species IDs, names, types and overrides are structurally consistent", () => {
+  assert.equal(romRosterProfiles.schemaVersion, "1.0.0");
+  assert.deepEqual(romRosterProfiles.statsOrder, ["hp", "attack", "defense", "speed", "specialAttack", "specialDefense"]);
+  const rows = romRosterProfiles.base;
+  assert.equal(rows.length, romCatalog.integration.rosterEntriesIntegrated);
+  assert.equal(new Set(rows.map(row => row[0])).size, rows.length, "duplicate species names");
+  assert.equal(new Set(rows.map(row => row[1])).size, rows.length, "duplicate National Pokédex IDs");
+  const allowedTypes = new Set(["Normal", "Feu", "Eau", "Électrik", "Plante", "Glace", "Combat", "Poison", "Sol", "Vol", "Psy", "Insecte", "Roche", "Spectre", "Dragon", "Ténèbres", "Acier", "Fée", "Inconnu"]);
+  for (const row of rows) {
+    assert.equal(row.length, 9, `invalid profile row: ${row[0]}`);
+    assert.ok(row[0].trim(), "empty species name");
+    assert.ok(Number.isInteger(row[1]) && row[1] >= 1 && row[1] <= 493, `invalid Pokédex ID: ${row[0]}`);
+    assert.ok(Array.isArray(row[2]) && row[2].length === 2, `invalid type pair: ${row[0]}`);
+    assert.ok(row[2].every(type => allowedTypes.has(type)), `unrecognized type: ${row[0]}`);
+    assert.ok(row.slice(3).every(stat => Number.isInteger(stat) && stat >= 1 && stat <= 255), `invalid base stat: ${row[0]}`);
+  }
+  for (const [name, override] of Object.entries(romRosterProfiles.project_pm_overrides)) {
+    assert.ok(rows.some(row => row[0] === name), `override species absent from roster: ${name}`);
+    assert.ok(Array.isArray(override) && override.length === 2, `invalid override shape: ${name}`);
+    assert.ok(Array.isArray(override[0]) && override[0].length === 2, `invalid override types: ${name}`);
+    assert.ok(override[0].every(type => allowedTypes.has(type)), `unrecognized override type: ${name}`);
+    assert.ok(Array.isArray(override[1]) && override[1].length === 6, `invalid override stats: ${name}`);
+    assert.ok(override[1].every(stat => Number.isInteger(stat) && stat >= 1 && stat <= 255), `invalid override stat: ${name}`);
+  }
+  assert.deepEqual(romRosterProfiles.project_pm_overrides.Gardevoir[0], ["Psy", "Fée"]);
+  assert.deepEqual(romRosterProfiles.project_pm_overrides.Togekiss[0], ["Fée", "Vol"]);
+});
+
 for (const result of checks) {
   console.log(`[${result.status}] ${result.name}`);
   if (result.message) console.error(`  ${result.message}`);
