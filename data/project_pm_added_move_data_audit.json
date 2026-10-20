@@ -6,7 +6,13 @@
     "projectPmSha256": "435b0288238f01f21eeeef7b5de6de3e3c9c3a9b70ea3b18d71b31ba282ae4e1",
     "extractedDatabase": "rom_battle_database.json",
     "nameBankAuditPath": "data/rom_extended_name_banks_audit.json",
-    "note": "The records below are copied from the decoded move table extracted from the exact ROM hashes above. Name strings are cross-referenced to the decoded Project PM move-name bank."
+    "note": "The records below are copied from the decoded move table extracted from the exact ROM hashes above. Name strings are cross-referenced to the decoded Project PM move-name bank.",
+    "effectReference": {
+      "repository": "pret/pokeplatinum",
+      "commit": "06c6e9a0348da283be8d9225d0bec03c349ff5c2",
+      "path": "generated/move_battle_effects.txt",
+      "indexing": "zero-based line index; verified against exact pinned file"
+    }
   },
   "records": [
     {
@@ -29,7 +35,8 @@
       "canonicalEffectSymbolCandidate": "BATTLE_EFFECT_LOWER_SPEED_HIT",
       "identityCandidate": "BULLDOZE",
       "identityConfidence": "plausible_candidate",
-      "candidateReason": "Type Sol, 60 puissance, 100 précision, 20 PP et effet de baisse de Vitesse à chaque touche; correspond au profil connu de Bulldoze, mais le nom doit être confirmé dans Project PM."
+      "candidateReason": "Type Sol, 60 puissance, 100 précision, 20 PP et effet de baisse de Vitesse à chaque touche; correspond au profil connu de Bulldoze, mais le nom doit être confirmé dans Project PM.",
+      "canonicalEffectIndex": 70
     },
     {
       "id": 469,
@@ -51,7 +58,8 @@
       "canonicalEffectSymbolCandidate": "BATTLE_EFFECT_HIT",
       "identityCandidate": "HIGH_HORSEPOWER",
       "identityConfidence": "plausible_candidate",
-      "candidateReason": "Profil Sol physique 95/95/10 sans effet spécial, compatible avec le profil connu de High Horsepower; le nom doit être confirmé dans Project PM."
+      "candidateReason": "Profil Sol physique 95/95/10 sans effet spécial, compatible avec le profil connu de High Horsepower; le nom doit être confirmé dans Project PM.",
+      "canonicalEffectIndex": 0
     },
     {
       "id": 470,
@@ -73,7 +81,8 @@
       "canonicalEffectSymbolCandidate": "BATTLE_EFFECT_HIT_THREE_TIMES",
       "identityCandidate": null,
       "identityConfidence": "unresolved",
-      "candidateReason": "L'effet canonique indique une frappe triple, mais puissance/type/précision/PP ne suffisent pas à identifier la capacité avec certitude."
+      "candidateReason": "L'effet canonique indique une frappe triple, mais puissance/type/précision/PP ne suffisent pas à identifier la capacité avec certitude.",
+      "canonicalEffectIndex": 104
     },
     {
       "id": 471,
@@ -95,7 +104,8 @@
       "canonicalEffectSymbolCandidate": "BATTLE_EFFECT_REMOVE_SCREENS",
       "identityCandidate": "PSYCHIC_FANGS",
       "identityConfidence": "weak_candidate",
-      "candidateReason": "L'effet canonique enlève les écrans et le type est Psy physique, mais les valeurs diffèrent du profil connu de Psychic Fangs; garder comme piste seulement."
+      "candidateReason": "L'effet canonique enlève les écrans et le type est Psy physique, mais les valeurs diffèrent du profil connu de Psychic Fangs; garder comme piste seulement.",
+      "canonicalEffectIndex": 186
     }
   ],
   "validation": {
@@ -112,7 +122,8 @@
     "canonicalGenerationCompatibilityVerified": false,
     "canonicalEffectSymbolCandidatesCrossReferenced": true,
     "identityCandidatesAreHypothesesOnly": true,
-    "effectRuntimeSemanticsVerified": false
+    "effectRuntimeSemanticsVerified": false,
+    "canonicalEffectIndicesCheckedAgainstPinnedReference": true
   },
   "policies": [
     "Do not use name similarity as proof of move mechanics.",
