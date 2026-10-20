@@ -42,13 +42,36 @@ Chaque enregistrement doit inclure identifiant, nom officiel, jeu/version, sourc
 - [Lot 05 — Règles du générateur et CI](./05-generator-rules.md) : contrat fonctionnel et cas de tests pour composition, objets tenus et capacités illégales. Statut : **audit statique, non certifié**.
 - [Rapport de tests automatisés du 19/10/2026](./TEST-REPORT-2026-10-19.md) : état le plus récent, 16/16 assertions statiques et 5/5 scénarios navigateur réussis dans GitHub Actions ; cela ne certifie pas les données ni le moteur stratégique.
 
-## Anomalies fonctionnelles et suivi des corrections
-1. **Six objets tenus — corrigé dans l'interface** : la sélection autorise désormais jusqu'à six objets, le compteur affiche `/6`, et la validation bloque une équipe si six objets ne sont pas sélectionnés. La base d'objets elle-même reste à certifier.
-2. **Seuil automatique CI — libellé corrigé** : le texte de l'interface indique désormais 0–24 % inclus, cohérent avec la condition `c < 25`.
-3. **Résolution des réglages CI — garde ajoutée** : la validation vérifie l'initialisation des réglages automatiques et, lorsque les CI sont activées manuellement entre 25 et 99 %, exige que fréquence et incongruité aient été explicitement modifiées. À 100 %, les CI sont désactivées.
-4. **Moteur d'équipe — encore bloquant** : la composition reste un aperçu heuristique et non un moteur stratégique certifié.
+## État actuel vérifié — 2026-10-20
 
-Les corrections de code ont été relues après écriture sur GitHub. Les tests navigateur automatisés passent désormais dans GitHub Actions (5/5 scénarios sur le commit `eab9e66ccffaf6318bb6d717cbd46ed2ede06fc3`). Les tests de combat, l'exhaustivité des données et la validation Project PM restent à effectuer ; ces résultats ne certifient donc pas l'ensemble du générateur.
+### Dernier contrôle automatisé connu
+Le workflow GitHub Actions du commit `a8f53a4aeabff0ccebbe5b6a6ebbb22d34e08742` a réussi :
+- **22/22 assertions statiques** ;
+- **6/6 scénarios navigateur** ;
+- audit npm : **0 vulnérabilité** ;
+- déploiement : réussi.
+
+Exécution de vérification : https://github.com/Deuzel-arc/generateur-pokemon-platine/actions/runs/39343839128
+Exécution de déploiement : https://github.com/Deuzel-arc/generateur-pokemon-platine/actions/runs/39343838918
+
+Ces résultats attestent uniquement les contrôles réellement présents dans les tests. Ils ne certifient ni l'exhaustivité des données, ni la légalité des capacités par espèce, ni la viabilité compétitive, ni la conformité de Project PM.
+
+### État fonctionnel confirmé dans le code
+1. **Neuf sections d'interface** : présentes dans `index.html`.
+2. **Contraintes de composition** : des gardes vérifient six Pokémon, le nombre de légendaires/fabuleux et le trio choisi. Le catalogue n'étant pas exhaustif, ces gardes ne suffisent pas à certifier toutes les compositions.
+3. **Évolution maximale** : génération volontairement bloquée tant que les métadonnées d'évolution ne sont pas disponibles.
+4. **Objets imposés** : 0 à 2 objets sélectionnables ; les tests navigateur contrôlent leur conservation et l'attribution de six objets distincts. Les effets et la légalité de l'ensemble du catalogue ne sont pas certifiés.
+5. **Capacités illégales (CI)** : tests d'interface pour la désactivation à 100 % et la résolution des curseurs manuels. Le catalogue des CI par espèce n'est pas exhaustif.
+6. **Moteur de composition** : aperçu heuristique, avec scores/tags et aléatoire ; non certifié comme moteur stratégique de combats doubles.
+
+### Anomalies et travaux bloquants
+- Catalogue d'espèces incomplet par rapport aux 493 espèces de la génération I à IV.
+- Absence d'un catalogue exhaustif des capacités, de leurs données de combat et de leurs méthodes d'apprentissage par espèce.
+- Absence de métadonnées d'évolution exhaustives ; le mode évolution maximale doit rester bloqué.
+- Objets et baies non tous certifiés ligne par ligne ; ne pas présenter un effet comme vérifié sans provenance.
+- Pas de calculateur complet de dégâts/mécaniques de combat double 4G validé contre des cas de référence.
+- Les données de Platine original et les différences de Project PM ne sont pas encore séparées et certifiées de bout en bout.
+- La documentation de certification doit être tenue à jour à chaque changement ; les anciens rapports ne remplacent pas le résultat du dernier workflow.
 
 ## Premier contrôle : baies
 La source secondaire Pokémon Trash liste les baies numérotées 1 à 64 et distingue les baies de résistance, les baies de statistiques, Micle/Chérim et les baies Jaboca/Pommo. Le tableau de travail précédemment sauvegardé contient des seuils et descriptions qui ne sont pas tous certifiés. La liste complète doit être reconstruite à partir des données/scripts de Platine et comparée ligne par ligne avant d'être utilisée par le moteur.
