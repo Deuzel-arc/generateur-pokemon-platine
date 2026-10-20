@@ -59,7 +59,7 @@ check("selected reference drives team candidate roster and scoring", () => {
   assert.match(html, /const romRosterData =/);
   assert.match(html, /p\.baseStats=stats/);
   assert.match(html, /p\.off=Math\.max\(stats\.attack,stats\.specialAttack\)/);
-  assert.equal(romRosterProfiles.base.length, 70);
+  assert.equal(romRosterProfiles.base.length, 71);
   assert.ok(romRosterProfiles.project_pm_overrides.Dracaufeu);
   assert.deepEqual(romRosterProfiles.project_pm_overrides.Dracaufeu[0], ["Feu", "Dragon"]);
   assert.doesNotMatch(html, /state\.dataSource==='multiplayer'&&p\.types\.includes\('Ténèbres'\)/);
