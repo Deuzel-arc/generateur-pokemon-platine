@@ -17,9 +17,33 @@ const speciesCoreDeltaAudit = readJson("data/rom_species_core_delta_audit.json")
 const extendedNameBankAudit = readJson("data/rom_extended_name_banks_audit.json");
 const itemReference = readJson("data/gen4_item_id_reference.json");
 const romRosterProfiles = readJson("data/rom_roster_profiles.json");
+const candidateRosterProfiles = readJson("data/rom_roster_profiles_candidate_493.json");
 const frenchSpeciesNames = readJson("data/gen4_french_species_name_reference.json");
 const rosterCoverageAudit = readJson("data/rom_roster_coverage_audit.json");
 const fairyMoveIdentityGuard = readJson("data/project_pm_fairy_move_identity_guard.json");
+
+assert.equal(candidateRosterProfiles.status, "candidate_full_roster_493_needs_semantic_and_runtime_review", "493-species candidate must not be treated as integrated runtime data");
+assert.equal(candidateRosterProfiles.policy.runtimeIntegrated, false, "candidate roster must remain out of runtime until reviewed");
+assert.equal(candidateRosterProfiles.source.platinumSha256, catalog.profiles.platinum.sha256, "candidate roster must match CPUF ROM hash");
+assert.equal(candidateRosterProfiles.source.projectPmSha256, catalog.profiles.project_pm.sha256, "candidate roster must match CPUE ROM hash");
+assert.equal(candidateRosterProfiles.base.length, 493, "candidate roster must cover all 493 standard species");
+assert.deepEqual(candidateRosterProfiles.base.map((row) => row[1]), Array.from({ length: 493 }, (_, i) => i + 1), "candidate roster IDs must be complete, unique, and ordered");
+assert.equal(new Set(candidateRosterProfiles.base.map((row) => row[0])).size, 493, "candidate roster French names must be unique");
+assert.deepEqual(candidateRosterProfiles.base.map((row) => row[0]), frenchSpeciesNames.species.map((row) => row.nameFr), "candidate roster names must match the French reference");
+assert.equal(candidateRosterProfiles.counts.projectPmOverrides, Object.keys(candidateRosterProfiles.project_pm_overrides).length, "candidate override count must match its records");
+assert.equal(candidateRosterProfiles.counts.statsChanged, 197, "candidate audit must retain the 197 CPUE stat changes");
+assert.equal(candidateRosterProfiles.counts.typesChanged, 60, "candidate audit must retain the 60 CPUE type-pair changes");
+assert.equal(candidateRosterProfiles.counts.bothStatsAndTypesChanged, 42, "candidate audit must retain the 42 species changing both stats and types");
+assert.equal(candidateRosterProfiles.counts.projectPmOverrides, 215, "candidate audit must retain all stat/type overrides");
+assert.ok(candidateRosterProfiles.base.every((row) => row.length === 9 && row[2].length === 2 && row.slice(3).every((stat) => Number.isInteger(stat) && stat > 0)), "candidate base rows must contain two types and six positive base stats");
+assert.ok(Object.values(candidateRosterProfiles.project_pm_overrides).every((row) => row.length === 2 && row[0].length === 2 && !row[0].includes("Inconnu") && row[1].length === 6 && row[1].every((stat) => Number.isInteger(stat) && stat > 0)), "candidate CPUE overrides must have resolved types and six positive stats");
+const candidateBaseById = new Map(candidateRosterProfiles.base.map((row) => [row[1], row]));
+for (const row of romRosterProfiles.base) {
+  assert.deepEqual(candidateBaseById.get(row[1]), row, `existing base profile ${row[0]} must match candidate CPUF profile`);
+}
+for (const [name, override] of Object.entries(romRosterProfiles.project_pm_overrides)) {
+  assert.deepEqual(candidateRosterProfiles.project_pm_overrides[name], override, `existing CPUE override ${name} must match candidate profile`);
+}
 
 assert.equal(frenchSpeciesNames.status, "external_french_name_reference_candidate", "French species names must remain clearly labeled as an external reference");
 assert.equal(frenchSpeciesNames.species.length, 493, "French name reference must cover all standard Gen IV species");
