@@ -13,13 +13,13 @@
       "confirmationSource": "Information fournie par l'utilisateur le 2026-10-20 : le type affiché « Inconnu » dans l'extraction de la ROM multijoueur correspond au type Fée.",
       "scope": "Project PM uniquement",
       "appliesTo": "Valeurs de type brut ID 9 dans les tables d'espèces et d'attaques de cette ROM exacte.",
-      "caution": "Mapping confirmé par l'utilisateur, pas encore vérifié indépendamment en relisant la table interne de types de la ROM. Ne pas appliquer à la ROM Platine originale ni aux autres profils."
+      "caution": "Type ID 9 est confirmé comme Fée par l'utilisateur et ses occurrences ont été relues directement dans la ROM CPUE à l'empreinte indiquée. Ne pas appliquer à CPUF ni à une autre révision. Le sens sémantique du type est confirmé par l'utilisateur, pas par un nom interne décodé dans la ROM."
     }
   ],
   "policy": {
     "preserveRawIds": true,
     "noCrossRomInheritance": true,
     "originalPlatinumTypeId9MustRemainUnchanged": true,
-    "runtimeIntegration": "À appliquer seulement dans le décodeur Project PM après ajout d'un test qui vérifie que le mapping est limité au profil CPUE et à l'empreinte indiquée."
+    "runtimeIntegration": "Appliqué aux profils d'espèces Project PM de l'empreinte CPUE confirmée, avec test anti-héritage CPUF. Les noms des entrées 1-493 sont croisés à la banque de noms ROM; les noms des capacités restent à décoder."
   }
 }
