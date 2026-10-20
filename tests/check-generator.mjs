@@ -20,9 +20,11 @@ check("ROM catalogue manifest has separate original and Project PM profiles", ()
 });
 check("ROM catalogue does not falsely claim complete generator integration", () => {
   assert.equal(romCatalog.integration.loadedByGenerator, false);
+  assert.equal(romCatalog.integration.rosterProfilesEmbedded, true);
+  assert.equal(romCatalog.integration.rosterEntriesIntegrated, 71);
   assert.equal(romCatalog.integration.itemEffectsSemanticallyDecoded, false);
   assert.equal(romCatalog.integration.encountersSemanticallyDecoded, false);
-  assert.match(romCatalog.warning, /manifest/i);
+  assert.match(romCatalog.warning, /Manifeste/i);
 });
 check("ROM overrides preserve source provenance and verified-only status", () => {
   assert.equal(romOverrides.status, "historical_audit_unreconciled");
@@ -62,6 +64,13 @@ check("selected reference drives team candidate roster and scoring", () => {
   assert.equal(romRosterProfiles.base.length, 71);
   assert.ok(romRosterProfiles.project_pm_overrides.Dracaufeu);
   assert.deepEqual(romRosterProfiles.project_pm_overrides.Dracaufeu[0], ["Feu", "Dragon"]);
+  assert.deepEqual(romRosterProfiles.project_pm_overrides.Gardevoir[0], ["Psy", "Fée"]);
+  assert.deepEqual(romRosterProfiles.project_pm_overrides.Togekiss[0], ["Fée", "Vol"]);
+  for (const row of romRosterProfiles.base) {
+    assert.equal(row.length, 9, `invalid base row: ${row[0]}`);
+    assert.ok(Number.isInteger(row[1]) && row[1] > 0, `invalid Pokédex ID: ${row[0]}`);
+    assert.ok(row.slice(3).every(v => Number.isInteger(v) && v >= 1 && v <= 255), `invalid stat: ${row[0]}`);
+  }
   assert.doesNotMatch(html, /state\.dataSource==='multiplayer'&&p\.types\.includes\('Ténèbres'\)/);
 });
 check("selected reference is recorded in the generated summary", () => {
