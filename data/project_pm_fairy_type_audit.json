@@ -1,0 +1,324 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Audit ciblé des occurrences du type brut 9 — Project PM",
+  "status": "user_confirmed_type_label_audited_names_unmapped",
+  "source": {
+    "database": "/Audit_ROM_Pokemon_Platine/rom_battle_database.json",
+    "gameCode": "CPUE",
+    "sha256": "435b0288238f01f21eeeef7b5de6de3e3c9c3a9b70ea3b18d71b31ba282ae4e1",
+    "mappingFile": "data/project_pm_type_mapping.json",
+    "mappingStatus": "user_confirmed"
+  },
+  "interpretation": {
+    "rawTypeId": 9,
+    "labelInExtractedDatabase": "Inconnu",
+    "confirmedFrenchType": "Fée",
+    "confirmationDate": "2026-10-20",
+    "scope": "Project PM uniquement",
+    "important": "Les identifiants de tables ci-dessous sont des IDs internes extraits. Aucun nom de Pokémon ou d'attaque n'est déduit de ces IDs dans cet audit."
+  },
+  "summary": {
+    "projectPmSpeciesEntriesWithType9": 31,
+    "projectPmSpeciesTypeSlotsWithType9": 37,
+    "projectPmMoveEntriesWithType9": 8,
+    "originalPlatinumSpeciesEntriesWithType9": 0,
+    "originalPlatinumMoveEntriesWithType9": 1,
+    "originalPlatinumMappingApplied": false
+  },
+  "projectPmSpecies": [
+    {
+      "id": 35,
+      "typeSlots": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 36,
+      "typeSlots": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 39,
+      "typeSlots": [
+        1
+      ]
+    },
+    {
+      "id": 40,
+      "typeSlots": [
+        1
+      ]
+    },
+    {
+      "id": 122,
+      "typeSlots": [
+        1
+      ]
+    },
+    {
+      "id": 154,
+      "typeSlots": [
+        1
+      ]
+    },
+    {
+      "id": 173,
+      "typeSlots": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 175,
+      "typeSlots": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 176,
+      "typeSlots": [
+        0
+      ]
+    },
+    {
+      "id": 183,
+      "typeSlots": [
+        1
+      ]
+    },
+    {
+      "id": 184,
+      "typeSlots": [
+        1
+      ]
+    },
+    {
+      "id": 200,
+      "typeSlots": [
+        1
+      ]
+    },
+    {
+      "id": 209,
+      "typeSlots": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 210,
+      "typeSlots": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 280,
+      "typeSlots": [
+        1
+      ]
+    },
+    {
+      "id": 281,
+      "typeSlots": [
+        1
+      ]
+    },
+    {
+      "id": 282,
+      "typeSlots": [
+        1
+      ]
+    },
+    {
+      "id": 303,
+      "typeSlots": [
+        1
+      ]
+    },
+    {
+      "id": 314,
+      "typeSlots": [
+        1
+      ]
+    },
+    {
+      "id": 333,
+      "typeSlots": [
+        0
+      ]
+    },
+    {
+      "id": 334,
+      "typeSlots": [
+        1
+      ]
+    },
+    {
+      "id": 350,
+      "typeSlots": [
+        1
+      ]
+    },
+    {
+      "id": 359,
+      "typeSlots": [
+        1
+      ]
+    },
+    {
+      "id": 370,
+      "typeSlots": [
+        1
+      ]
+    },
+    {
+      "id": 429,
+      "typeSlots": [
+        1
+      ]
+    },
+    {
+      "id": 439,
+      "typeSlots": [
+        1
+      ]
+    },
+    {
+      "id": 467,
+      "typeSlots": [
+        1
+      ]
+    },
+    {
+      "id": 468,
+      "typeSlots": [
+        0
+      ]
+    },
+    {
+      "id": 480,
+      "typeSlots": [
+        1
+      ]
+    },
+    {
+      "id": 481,
+      "typeSlots": [
+        1
+      ]
+    },
+    {
+      "id": 482,
+      "typeSlots": [
+        1
+      ]
+    }
+  ],
+  "projectPmMoves": [
+    {
+      "id": 66,
+      "power": 90,
+      "accuracy": 90,
+      "pp": 10,
+      "effectId": 68,
+      "category": "physical",
+      "targetId": 0,
+      "priority": 0,
+      "flags": 0
+    },
+    {
+      "id": 140,
+      "power": 75,
+      "accuracy": 100,
+      "pp": 10,
+      "effectId": 3,
+      "category": "special",
+      "targetId": 0,
+      "priority": 0,
+      "flags": 0
+    },
+    {
+      "id": 186,
+      "power": 0,
+      "accuracy": 75,
+      "pp": 10,
+      "effectId": 49,
+      "category": "status",
+      "targetId": 0,
+      "priority": 0,
+      "flags": 0
+    },
+    {
+      "id": 204,
+      "power": 0,
+      "accuracy": 100,
+      "pp": 20,
+      "effectId": 58,
+      "category": "status",
+      "targetId": 0,
+      "priority": 0,
+      "flags": 0
+    },
+    {
+      "id": 236,
+      "power": 0,
+      "accuracy": 0,
+      "pp": 5,
+      "effectId": 132,
+      "category": "status",
+      "targetId": 16,
+      "priority": 0,
+      "flags": 0
+    },
+    {
+      "id": 295,
+      "power": 80,
+      "accuracy": 100,
+      "pp": 10,
+      "effectId": 0,
+      "category": "special",
+      "targetId": 4,
+      "priority": 0,
+      "flags": 0
+    },
+    {
+      "id": 296,
+      "power": 50,
+      "accuracy": 0,
+      "pp": 15,
+      "effectId": 17,
+      "category": "special",
+      "targetId": 4,
+      "priority": 0,
+      "flags": 0
+    },
+    {
+      "id": 461,
+      "power": 95,
+      "accuracy": 100,
+      "pp": 15,
+      "effectId": 71,
+      "category": "special",
+      "targetId": 0,
+      "priority": 0,
+      "flags": 0
+    }
+  ],
+  "originalPlatinum": {
+    "rawTypeId9MoveIds": [
+      174
+    ],
+    "note": "L'occurrence ID 9 de la ROM originale n'est pas remappée : l'identité sémantique du type brut 9 dans CPUF n'est pas établie par la confirmation portant uniquement sur CPUE."
+  },
+  "rules": [
+    "Ne pas appliquer la traduction Fée aux données CPUF.",
+    "Ne pas déduire les noms de Pokémon/attaques à partir des IDs internes seuls.",
+    "Conserver les IDs bruts et les empreintes de ROM pour toute intégration ultérieure.",
+    "Les 31 entrées Project PM sont des occurrences de table, pas une validation indépendante de leurs noms canoniques."
+  ]
+}
