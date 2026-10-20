@@ -1,0 +1,682 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Audit des huit capacités de type Fée de Project PM — noms décodés, effets en attente",
+  "status": "names_verified_raw_move_data_crosschecked_effect_semantics_pending",
+  "source": {
+    "platinumGameCode": "CPUF",
+    "projectPmGameCode": "CPUE",
+    "platinumSha256": "1cfd024519116c1c6285d6af2dbdfcec778e9d74c7c18585e22032e81aaa7eb8",
+    "projectPmSha256": "435b0288238f01f21eeeef7b5de6de3e3c9c3a9b70ea3b18d71b31ba282ae4e1",
+    "decodedDatabase": "Library rom_battle_database.json",
+    "moveNameBank": {
+      "index": 647,
+      "key": 63689,
+      "platinumEntryCount": 468,
+      "projectPmEntryCount": 472,
+      "commonNamesChanged": 10
+    },
+    "canonicalReference": {
+      "repository": "pret/pokeplatinum",
+      "commit": "06c6e9a0348da283be8d9225d0bec03c349ff5c2",
+      "path": "data/gen4_id_reference.json"
+    }
+  },
+  "counts": {
+    "records": 8,
+    "typeId9": 8,
+    "namesVerified": 8,
+    "multiFieldChanges": 5,
+    "typeOnlyChanges": 3,
+    "effectIdChanged": 5
+  },
+  "policies": {
+    "nameEvidenceCanResolveDisplayName": true,
+    "nameEvidenceDoesNotCertifyBattleEffect": true,
+    "noInheritanceOfCanonicalEffectSemantics": true,
+    "noRuntimeActivationUntilEffectsVerified": true,
+    "typeId9MeansFairyForCpueOnly": true,
+    "rawRecordsPreserved": true
+  },
+  "records": [
+    {
+      "id": 66,
+      "nameFrProjectPm": "Câlinerie",
+      "nameEvidence": "decoded_project_pm_bank_change_audit",
+      "nameStatus": "verified_name_only",
+      "canonicalSymbolReferenceOnly": "MOVE_SUBMISSION",
+      "platinum": {
+        "id": 66,
+        "effectId": 48,
+        "categoryId": 0,
+        "category": "physical",
+        "power": 80,
+        "type": "Combat",
+        "typeId": 1,
+        "accuracy": 80,
+        "pp": 25,
+        "effectChance": 0,
+        "targetId": 0,
+        "priority": 0,
+        "flags": 0,
+        "contestType": 51,
+        "contestEffect": 5,
+        "raw": "30000050015019000000003305000000"
+      },
+      "projectPm": {
+        "id": 66,
+        "effectId": 68,
+        "categoryId": 0,
+        "category": "physical",
+        "power": 90,
+        "type": "Inconnu",
+        "typeId": 9,
+        "accuracy": 90,
+        "pp": 10,
+        "effectChance": 10,
+        "targetId": 0,
+        "priority": 0,
+        "flags": 0,
+        "contestType": 51,
+        "contestEffect": 5,
+        "raw": "4400005a095a0a0a0000003305020000"
+      },
+      "changedFields": {
+        "effectId": {
+          "platinum": 48,
+          "projectPm": 68
+        },
+        "power": {
+          "platinum": 80,
+          "projectPm": 90
+        },
+        "type": {
+          "platinum": "Combat",
+          "projectPm": "Inconnu"
+        },
+        "typeId": {
+          "platinum": 1,
+          "projectPm": 9
+        },
+        "accuracy": {
+          "platinum": 80,
+          "projectPm": 90
+        },
+        "pp": {
+          "platinum": 25,
+          "projectPm": 10
+        },
+        "effectChance": {
+          "platinum": 0,
+          "projectPm": 10
+        }
+      },
+      "changeClass": "multiple_fields_changed",
+      "effectAssessment": {
+        "platinumEffectId": 48,
+        "projectPmEffectId": 68,
+        "canonicalEffectMappingStatus": "not_certified_for_project_pm",
+        "runtimeEffectSemanticsVerified": false
+      },
+      "runtimeUse": "blocked_until_effect_semantics_and_generation_rules_are_verified"
+    },
+    {
+      "id": 140,
+      "nameFrProjectPm": "Vampibaiser",
+      "nameEvidence": "decoded_project_pm_bank_change_audit",
+      "nameStatus": "verified_name_only",
+      "canonicalSymbolReferenceOnly": "MOVE_BARRAGE",
+      "platinum": {
+        "id": 140,
+        "effectId": 29,
+        "categoryId": 0,
+        "category": "physical",
+        "power": 15,
+        "type": "Normal",
+        "typeId": 0,
+        "accuracy": 85,
+        "pp": 20,
+        "effectChance": 0,
+        "targetId": 0,
+        "priority": 0,
+        "flags": 0,
+        "contestType": 114,
+        "contestEffect": 7,
+        "raw": "1d00000f005514000000007207040000"
+      },
+      "projectPm": {
+        "id": 140,
+        "effectId": 3,
+        "categoryId": 1,
+        "category": "special",
+        "power": 75,
+        "type": "Inconnu",
+        "typeId": 9,
+        "accuracy": 100,
+        "pp": 10,
+        "effectChance": 0,
+        "targetId": 0,
+        "priority": 0,
+        "flags": 0,
+        "contestType": 115,
+        "contestEffect": 5,
+        "raw": "0300014b09640a000000007305020000"
+      },
+      "changedFields": {
+        "effectId": {
+          "platinum": 29,
+          "projectPm": 3
+        },
+        "categoryId": {
+          "platinum": 0,
+          "projectPm": 1
+        },
+        "category": {
+          "platinum": "physical",
+          "projectPm": "special"
+        },
+        "power": {
+          "platinum": 15,
+          "projectPm": 75
+        },
+        "type": {
+          "platinum": "Normal",
+          "projectPm": "Inconnu"
+        },
+        "typeId": {
+          "platinum": 0,
+          "projectPm": 9
+        },
+        "accuracy": {
+          "platinum": 85,
+          "projectPm": 100
+        },
+        "pp": {
+          "platinum": 20,
+          "projectPm": 10
+        },
+        "contestType": {
+          "platinum": 114,
+          "projectPm": 115
+        },
+        "contestEffect": {
+          "platinum": 7,
+          "projectPm": 5
+        }
+      },
+      "changeClass": "multiple_fields_changed",
+      "effectAssessment": {
+        "platinumEffectId": 29,
+        "projectPmEffectId": 3,
+        "canonicalEffectMappingStatus": "not_certified_for_project_pm",
+        "runtimeEffectSemanticsVerified": false
+      },
+      "runtimeUse": "blocked_until_effect_semantics_and_generation_rules_are_verified"
+    },
+    {
+      "id": 186,
+      "nameFrProjectPm": "Doux Baiser",
+      "nameEvidence": "unchanged_name_between_rom_banks_crosschecked",
+      "nameStatus": "verified_name_only",
+      "canonicalSymbolReferenceOnly": "MOVE_SWEET_KISS",
+      "platinum": {
+        "id": 186,
+        "effectId": 49,
+        "categoryId": 2,
+        "category": "status",
+        "power": 0,
+        "type": "Normal",
+        "typeId": 0,
+        "accuracy": 75,
+        "pp": 10,
+        "effectChance": 0,
+        "targetId": 0,
+        "priority": 0,
+        "flags": 0,
+        "contestType": 22,
+        "contestEffect": 19,
+        "raw": "31000200004b0a000000001613020000"
+      },
+      "projectPm": {
+        "id": 186,
+        "effectId": 49,
+        "categoryId": 2,
+        "category": "status",
+        "power": 0,
+        "type": "Inconnu",
+        "typeId": 9,
+        "accuracy": 75,
+        "pp": 10,
+        "effectChance": 0,
+        "targetId": 0,
+        "priority": 0,
+        "flags": 0,
+        "contestType": 22,
+        "contestEffect": 19,
+        "raw": "31000200094b0a000000001613020000"
+      },
+      "changedFields": {
+        "type": {
+          "platinum": "Normal",
+          "projectPm": "Inconnu"
+        },
+        "typeId": {
+          "platinum": 0,
+          "projectPm": 9
+        }
+      },
+      "changeClass": "type_field_only_changed",
+      "effectAssessment": {
+        "platinumEffectId": 49,
+        "projectPmEffectId": 49,
+        "canonicalEffectMappingStatus": "not_certified_for_project_pm",
+        "runtimeEffectSemanticsVerified": false
+      },
+      "runtimeUse": "blocked_until_effect_semantics_and_generation_rules_are_verified"
+    },
+    {
+      "id": 204,
+      "nameFrProjectPm": "Charme",
+      "nameEvidence": "unchanged_name_between_rom_banks_crosschecked",
+      "nameStatus": "verified_name_only",
+      "canonicalSymbolReferenceOnly": "MOVE_CHARM",
+      "platinum": {
+        "id": 204,
+        "effectId": 58,
+        "categoryId": 2,
+        "category": "status",
+        "power": 0,
+        "type": "Normal",
+        "typeId": 0,
+        "accuracy": 100,
+        "pp": 20,
+        "effectChance": 0,
+        "targetId": 0,
+        "priority": 0,
+        "flags": 0,
+        "contestType": 86,
+        "contestEffect": 19,
+        "raw": "3a000200006414000000005613020000"
+      },
+      "projectPm": {
+        "id": 204,
+        "effectId": 58,
+        "categoryId": 2,
+        "category": "status",
+        "power": 0,
+        "type": "Inconnu",
+        "typeId": 9,
+        "accuracy": 100,
+        "pp": 20,
+        "effectChance": 0,
+        "targetId": 0,
+        "priority": 0,
+        "flags": 0,
+        "contestType": 86,
+        "contestEffect": 19,
+        "raw": "3a000200096414000000005613020000"
+      },
+      "changedFields": {
+        "type": {
+          "platinum": "Normal",
+          "projectPm": "Inconnu"
+        },
+        "typeId": {
+          "platinum": 0,
+          "projectPm": 9
+        }
+      },
+      "changeClass": "type_field_only_changed",
+      "effectAssessment": {
+        "platinumEffectId": 58,
+        "projectPmEffectId": 58,
+        "canonicalEffectMappingStatus": "not_certified_for_project_pm",
+        "runtimeEffectSemanticsVerified": false
+      },
+      "runtimeUse": "blocked_until_effect_semantics_and_generation_rules_are_verified"
+    },
+    {
+      "id": 236,
+      "nameFrProjectPm": "Rayon Lune",
+      "nameEvidence": "unchanged_name_between_rom_banks_crosschecked",
+      "nameStatus": "verified_name_only",
+      "canonicalSymbolReferenceOnly": "MOVE_MOONLIGHT",
+      "platinum": {
+        "id": 236,
+        "effectId": 132,
+        "categoryId": 2,
+        "category": "status",
+        "power": 0,
+        "type": "Normal",
+        "typeId": 0,
+        "accuracy": 0,
+        "pp": 5,
+        "effectChance": 0,
+        "targetId": 16,
+        "priority": 0,
+        "flags": 0,
+        "contestType": 136,
+        "contestEffect": 8,
+        "raw": "84000200000005001000008808010000"
+      },
+      "projectPm": {
+        "id": 236,
+        "effectId": 132,
+        "categoryId": 2,
+        "category": "status",
+        "power": 0,
+        "type": "Inconnu",
+        "typeId": 9,
+        "accuracy": 0,
+        "pp": 5,
+        "effectChance": 0,
+        "targetId": 16,
+        "priority": 0,
+        "flags": 0,
+        "contestType": 136,
+        "contestEffect": 8,
+        "raw": "84000200090005001000008808010000"
+      },
+      "changedFields": {
+        "type": {
+          "platinum": "Normal",
+          "projectPm": "Inconnu"
+        },
+        "typeId": {
+          "platinum": 0,
+          "projectPm": 9
+        }
+      },
+      "changeClass": "type_field_only_changed",
+      "effectAssessment": {
+        "platinumEffectId": 132,
+        "projectPmEffectId": 132,
+        "canonicalEffectMappingStatus": "not_certified_for_project_pm",
+        "runtimeEffectSemanticsVerified": false
+      },
+      "runtimeUse": "blocked_until_effect_semantics_and_generation_rules_are_verified"
+    },
+    {
+      "id": 295,
+      "nameFrProjectPm": "Éclat Magique",
+      "nameEvidence": "decoded_project_pm_bank_change_audit",
+      "nameStatus": "verified_name_only",
+      "canonicalSymbolReferenceOnly": "MOVE_LUSTER_PURGE",
+      "platinum": {
+        "id": 295,
+        "effectId": 72,
+        "categoryId": 1,
+        "category": "special",
+        "power": 70,
+        "type": "Psy",
+        "typeId": 14,
+        "accuracy": 100,
+        "pp": 5,
+        "effectChance": 50,
+        "targetId": 0,
+        "priority": 0,
+        "flags": 0,
+        "contestType": 18,
+        "contestEffect": 22,
+        "raw": "480001460e6405320000001216030000"
+      },
+      "projectPm": {
+        "id": 295,
+        "effectId": 0,
+        "categoryId": 1,
+        "category": "special",
+        "power": 80,
+        "type": "Inconnu",
+        "typeId": 9,
+        "accuracy": 100,
+        "pp": 10,
+        "effectChance": 0,
+        "targetId": 4,
+        "priority": 0,
+        "flags": 0,
+        "contestType": 50,
+        "contestEffect": 5,
+        "raw": "0000015009640a000400003205010000"
+      },
+      "changedFields": {
+        "effectId": {
+          "platinum": 72,
+          "projectPm": 0
+        },
+        "power": {
+          "platinum": 70,
+          "projectPm": 80
+        },
+        "type": {
+          "platinum": "Psy",
+          "projectPm": "Inconnu"
+        },
+        "typeId": {
+          "platinum": 14,
+          "projectPm": 9
+        },
+        "pp": {
+          "platinum": 5,
+          "projectPm": 10
+        },
+        "effectChance": {
+          "platinum": 50,
+          "projectPm": 0
+        },
+        "targetId": {
+          "platinum": 0,
+          "projectPm": 4
+        },
+        "contestType": {
+          "platinum": 18,
+          "projectPm": 50
+        },
+        "contestEffect": {
+          "platinum": 22,
+          "projectPm": 5
+        }
+      },
+      "changeClass": "multiple_fields_changed",
+      "effectAssessment": {
+        "platinumEffectId": 72,
+        "projectPmEffectId": 0,
+        "canonicalEffectMappingStatus": "not_certified_for_project_pm",
+        "runtimeEffectSemanticsVerified": false
+      },
+      "runtimeUse": "blocked_until_effect_semantics_and_generation_rules_are_verified"
+    },
+    {
+      "id": 296,
+      "nameFrProjectPm": "Voix Enjôleuse",
+      "nameEvidence": "decoded_project_pm_bank_change_audit",
+      "nameStatus": "verified_name_only",
+      "canonicalSymbolReferenceOnly": "MOVE_MIST_BALL",
+      "platinum": {
+        "id": 296,
+        "effectId": 71,
+        "categoryId": 1,
+        "category": "special",
+        "power": 70,
+        "type": "Psy",
+        "typeId": 14,
+        "accuracy": 100,
+        "pp": 5,
+        "effectChance": 50,
+        "targetId": 0,
+        "priority": 0,
+        "flags": 0,
+        "contestType": 146,
+        "contestEffect": 22,
+        "raw": "470001460e6405320000009216030000"
+      },
+      "projectPm": {
+        "id": 296,
+        "effectId": 17,
+        "categoryId": 1,
+        "category": "special",
+        "power": 50,
+        "type": "Inconnu",
+        "typeId": 9,
+        "accuracy": 0,
+        "pp": 15,
+        "effectChance": 0,
+        "targetId": 4,
+        "priority": 0,
+        "flags": 0,
+        "contestType": 50,
+        "contestEffect": 5,
+        "raw": "1100013209000f000400003205020000"
+      },
+      "changedFields": {
+        "effectId": {
+          "platinum": 71,
+          "projectPm": 17
+        },
+        "power": {
+          "platinum": 70,
+          "projectPm": 50
+        },
+        "type": {
+          "platinum": "Psy",
+          "projectPm": "Inconnu"
+        },
+        "typeId": {
+          "platinum": 14,
+          "projectPm": 9
+        },
+        "accuracy": {
+          "platinum": 100,
+          "projectPm": 0
+        },
+        "pp": {
+          "platinum": 5,
+          "projectPm": 15
+        },
+        "effectChance": {
+          "platinum": 50,
+          "projectPm": 0
+        },
+        "targetId": {
+          "platinum": 0,
+          "projectPm": 4
+        },
+        "contestType": {
+          "platinum": 146,
+          "projectPm": 50
+        },
+        "contestEffect": {
+          "platinum": 22,
+          "projectPm": 5
+        }
+      },
+      "changeClass": "multiple_fields_changed",
+      "effectAssessment": {
+        "platinumEffectId": 71,
+        "projectPmEffectId": 17,
+        "canonicalEffectMappingStatus": "not_certified_for_project_pm",
+        "runtimeEffectSemanticsVerified": false
+      },
+      "runtimeUse": "blocked_until_effect_semantics_and_generation_rules_are_verified"
+    },
+    {
+      "id": 461,
+      "nameFrProjectPm": "Pouvoir Lunaire",
+      "nameEvidence": "decoded_project_pm_bank_change_audit",
+      "nameStatus": "verified_name_only",
+      "canonicalSymbolReferenceOnly": "MOVE_LUNAR_DANCE",
+      "platinum": {
+        "id": 461,
+        "effectId": 270,
+        "categoryId": 2,
+        "category": "status",
+        "power": 0,
+        "type": "Psy",
+        "typeId": 14,
+        "accuracy": 0,
+        "pp": 10,
+        "effectChance": 0,
+        "targetId": 16,
+        "priority": 0,
+        "flags": 0,
+        "contestType": 128,
+        "contestEffect": 8,
+        "raw": "0e0102000e000a001000008008010000"
+      },
+      "projectPm": {
+        "id": 461,
+        "effectId": 71,
+        "categoryId": 1,
+        "category": "special",
+        "power": 95,
+        "type": "Inconnu",
+        "typeId": 9,
+        "accuracy": 100,
+        "pp": 15,
+        "effectChance": 30,
+        "targetId": 0,
+        "priority": 0,
+        "flags": 0,
+        "contestType": 50,
+        "contestEffect": 5,
+        "raw": "4700015f09640f1e0000003205010000"
+      },
+      "changedFields": {
+        "effectId": {
+          "platinum": 270,
+          "projectPm": 71
+        },
+        "categoryId": {
+          "platinum": 2,
+          "projectPm": 1
+        },
+        "category": {
+          "platinum": "status",
+          "projectPm": "special"
+        },
+        "power": {
+          "platinum": 0,
+          "projectPm": 95
+        },
+        "type": {
+          "platinum": "Psy",
+          "projectPm": "Inconnu"
+        },
+        "typeId": {
+          "platinum": 14,
+          "projectPm": 9
+        },
+        "accuracy": {
+          "platinum": 0,
+          "projectPm": 100
+        },
+        "pp": {
+          "platinum": 10,
+          "projectPm": 15
+        },
+        "effectChance": {
+          "platinum": 0,
+          "projectPm": 30
+        },
+        "targetId": {
+          "platinum": 16,
+          "projectPm": 0
+        },
+        "contestType": {
+          "platinum": 128,
+          "projectPm": 50
+        },
+        "contestEffect": {
+          "platinum": 8,
+          "projectPm": 5
+        }
+      },
+      "changeClass": "multiple_fields_changed",
+      "effectAssessment": {
+        "platinumEffectId": 270,
+        "projectPmEffectId": 71,
+        "canonicalEffectMappingStatus": "not_certified_for_project_pm",
+        "runtimeEffectSemanticsVerified": false
+      },
+      "runtimeUse": "blocked_until_effect_semantics_and_generation_rules_are_verified"
+    }
+  ]
+}
