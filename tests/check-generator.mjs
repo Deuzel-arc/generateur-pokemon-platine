@@ -15,6 +15,19 @@ function check(name, fn) {
   catch (error) { checks.push({ name, status: "FAIL", message: error.message }); }
 }
 
+check("ROM delta triage preserves candidate-only mappings and source hashes", () => {
+  const triage = JSON.parse(readFileSync(new URL("../data/rom_delta_triage.json", import.meta.url), "utf8"));
+  assert.equal(triage.schemaVersion, "1.0.0");
+  assert.equal(triage.source.auditSha, "ded62711a09189c7d3054726304184425905af09");
+  assert.equal(triage.source.referenceCommit, gen4IdReference.source.commit);
+  assert.equal(triage.species.length, 381);
+  assert.equal(triage.moves.length, 101);
+  assert.ok(triage.species.every(record => record.mappingStatus === "candidate_by_shared_numeric_id_not_name_table_verified" || record.mappingStatus === "unmapped_outside_canonical_reference"));
+  assert.ok(triage.moves.every(record => record.mappingStatus === "candidate_by_shared_numeric_id_not_name_table_verified" || record.mappingStatus === "unmapped_outside_canonical_reference"));
+  assert.ok(triage.rules.some(rule => rule.includes("pas comme preuve définitive")));
+  assert.equal(triage.summary.speciesIdsAffected, 381);
+  assert.equal(triage.summary.moveIdsAffected, 101);
+});
 check("ROM mapping audit records cross-profile differences without certifying gameplay semantics", () => {
   const audit = JSON.parse(readFileSync(new URL("../data/rom_mapping_audit.json", import.meta.url), "utf8"));
   assert.equal(audit.schemaVersion, "1.0.0");
