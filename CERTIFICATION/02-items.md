@@ -146,3 +146,14 @@ Le rapport complémentaire [data/project_pm_item_field_diff_summary.json](../dat
 - Les autres champs listés dans le rapport n'ont pas de différences sur les 446 index communs.
 
 Les comptes de champs peuvent se chevaucher et ne s'additionnent donc pas pour obtenir le nombre d'entrées différentes. Le validateur vérifie maintenant également ce rapport et ses nombres-clés. Les noms et la sémantique des 24 entrées supplémentaires CPUE restent inconnus jusqu'à validation indépendante.
+
+
+## Profil brut des 24 entrées supplémentaires CPUE — 2026-10-20
+
+Le rapport [data/project_pm_extra_item_patterns.json](../data/project_pm_extra_item_patterns.json) décrit les patrons des 24 entrées appendues aux index 446–469, sans leur attribuer de noms.
+
+- Les index 448–465 forment un groupe de 18 enregistrements au prix brut de 2 000. Tous leurs octets sont identiques sauf l'octet 3, qui prend successivement les valeurs 0 à 17.
+- Les six autres entrées (446, 447, 466, 467, 468 et 469) ont des patrons bruts distincts, dont une entrée presque entièrement nulle à l'index 467.
+- Le calcul a été revérifié directement sur les 34 octets des enregistrements : taille, nombre d'entrées, valeurs séquentielles de l'octet 3 et égalité de tous les autres octets du groupe sont cohérents.
+
+C'est un **classement structurel seulement** : l'octet 3 n'est pas interprété comme un nom ou un effet sans code source ou test indépendant du mod. Le validateur automatise désormais les contrôles de ce rapport.
