@@ -51,6 +51,29 @@
   "blockingRules": [
     "Ne pas joindre les noms de capacités aux enregistrements extraits par simple position tant que les 3 entrées excédentaires ne sont pas expliquées.",
     "Ne pas interpréter un ID de type Project PM comme un type officiel sans vérifier la table de types de la ROM modifiée.",
-    "Ne pas présenter les méthodes d'évolution ou les effets d'objets comme certifiés sur la seule base de leurs champs bruts."
-  ]
+    "Ne pas présenter les méthodes d'évolution ou les effets d'objets comme certifiés sur la seule base de leurs champs bruts.",
+    "Les enregistrements de capacités extraits aux IDs 468 et plus dépassent la plage canonique Gen IV (IDs 0–467); conserver leurs données brutes sans leur attribuer de nom canonique."
+  ],
+  "moveTableBoundary": {
+    "sourcePath": "generated/moves.txt",
+    "sourceCommit": "06c6e9a0348da283be8d9225d0bec03c349ff5c2",
+    "sourceBlobSha": "2b7aaf0c92c02419d743a2bf06a1ba34a9cd9bc9",
+    "canonicalLastMoveId": 467,
+    "maxMovesSentinel": 468,
+    "platinumExtractedRecordCount": 471,
+    "projectPmExtractedRecordCount": 472,
+    "platinumExtraRecordIds": [
+      468,
+      469,
+      470
+    ],
+    "projectPmExtraRecordIds": [
+      468,
+      469,
+      470,
+      471
+    ],
+    "interpretation": "La table de référence contient MOVE_NONE à l’ID 0, les capacités canoniques aux IDs 1–467 et MAX_MOVES=468 comme sentinelle de compte. Les enregistrements extraits au-delà de l’ID 467 sont hors de la plage canonique. Leurs noms et leur sémantique ne sont pas certifiés; ne pas leur attribuer de noms de capacités par position.",
+    "status": "boundary_confirmed_names_unmapped"
+  }
 }
