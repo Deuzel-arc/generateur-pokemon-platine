@@ -6,6 +6,7 @@ const berries = JSON.parse(readFileSync(new URL("../data/berries_gen4.json", imp
 const romCatalog = JSON.parse(readFileSync(new URL("../data/rom_catalog.json", import.meta.url), "utf8"));
 const romOverrides = JSON.parse(readFileSync(new URL("../data/rom_overrides.json", import.meta.url), "utf8"));
 const romRosterProfiles = JSON.parse(readFileSync(new URL("../data/rom_roster_profiles.json", import.meta.url), "utf8"));
+const projectPmTypeMapping = JSON.parse(readFileSync(new URL("../data/project_pm_type_mapping.json", import.meta.url), "utf8"));
 const romDeltaAudit = JSON.parse(readFileSync(new URL("../data/rom_delta_audit.json", import.meta.url), "utf8"));
 const gen4ReferenceStatus = JSON.parse(readFileSync(new URL("../data/gen4_reference_status.json", import.meta.url), "utf8"));
 const gen4IdReference = JSON.parse(readFileSync(new URL("../data/gen4_id_reference.json", import.meta.url), "utf8"));
@@ -329,6 +330,20 @@ check("berry names are unique", () => {
 check("berry catalog does not claim all 64 berries are complete", () => {
   assert.ok(berries.berries.length < 64, "update this guard only after all 64 berries have been audited");
   assert.match(berries.mechanics, /Partiellement vérifié/);
+});
+
+check("Project PM Fairy type mapping is scoped to the confirmed ROM profile", () => {
+  assert.equal(projectPmTypeMapping.profile.gameCode, "CPUE");
+  assert.equal(projectPmTypeMapping.profile.sha256, romRosterProfiles.sourceHashes.project_pm);
+  assert.equal(projectPmTypeMapping.mappings.length, 1);
+  const fairy = projectPmTypeMapping.mappings[0];
+  assert.equal(fairy.rawTypeId, 9);
+  assert.equal(fairy.nameFr, "Fée");
+  assert.equal(fairy.status, "user_confirmed");
+  assert.match(fairy.scope, /Project PM uniquement/);
+  assert.equal(projectPmTypeMapping.policy.noCrossRomInheritance, true);
+  assert.equal(projectPmTypeMapping.policy.originalPlatinumTypeId9MustRemainUnchanged, true);
+  assert.match(fairy.caution, /pas encore vérifié indépendamment/);
 });
 
 check("roster species IDs, names, types and overrides are structurally consistent", () => {
