@@ -117,3 +117,17 @@ Le validateur automatisé contrôle les nombres, la liste des index modifiés, l
 La lecture du fichier `tools/dataproc/src/itemproc.c` au commit épinglé `06c6e9a0348da283be8d9225d0bec03c349ff5c2` permet de préciser la règle de construction de `sItemArchiveIDs` : le programme parcourt les IDs dans l'ordre, exclut les noms `ITEM_UNUSED_*` via `has_data`, puis attribue un `dataID` séquentiel à chaque entrée dont le fichier de données est effectivement chargé. La fonction `add_idmap` enregistre séparément l'ID logique et cet index de données.
 
 Cela **confirme l'algorithme du mapping candidat dans le code source de référence** et explique le décalage de 22 positions après les IDs réservés. Cela ne prouve pas à lui seul que les 446 entrées binaires CPUF correspondent à tous les champs de cette source, et encore moins que les effets de Project PM sont identiques. Les 13 ancres de prix concordantes renforcent la cohérence du mapping; la comparaison exhaustive des 446 enregistrements reste nécessaire.
+
+
+## Localisation des différences binaires dans les entrées d'objets — 2026-10-20
+
+Une analyse octet par octet des 446 index partagés CPUF/CPUE a été ajoutée dans `data/project_pm_item_archive_diff.json`, en utilisant comme référence de structure `include/item.h` au commit épinglé `06c6e9a0348da283be8d9225d0bec03c349ff5c2`.
+
+- Les 165 entrées déjà identifiées comme différentes ont été localisées précisément.
+- Les octets 0–1, qui correspondent au prix dans la structure de référence, diffèrent sur 148 entrées (octet faible) et 83 entrées (octet fort). Ces comptes se chevauchent; ils ne représentent pas 231 objets distincts.
+- L'octet 3 (`effectParam` dans la structure de référence) diffère sur 6 entrées.
+- L'octet 10 (`fieldUseFunc`) diffère sur 11 entrées; l'octet 12 (`partyUse`) et l'octet 15 du bloc union de paramètres diffèrent également sur ces 11 entrées.
+- D'autres différences touchent six octets du bloc union de paramètres, sur six entrées supplémentaires.
+- Aucun changement n'a été observé à l'octet 2, qui correspond à `holdEffect` dans la structure source épinglée.
+
+**Limite d'interprétation :** les offsets sont établis sur la structure de référence de Platine. Ils permettent de localiser les changements bruts, mais ne certifient pas que Project PM conserve exactement la même sémantique pour chaque champ. Le rapport et le validateur gardent cette réserve explicite.
