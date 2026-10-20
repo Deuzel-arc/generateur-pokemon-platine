@@ -1,0 +1,3000 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Référence canonique des IDs d'objets et effets tenus — Platine Gen IV",
+  "status": "canonical_symbol_reference_count_reconciled_archive_index_mapping_unresolved",
+  "source": {
+    "repository": "pret/pokeplatinum",
+    "commit": "06c6e9a0348da283be8d9225d0bec03c349ff5c2",
+    "files": {
+      "generated/items.txt": {
+        "blobSha": "8a1d867d1739c0ea9c0c8ab2e8ca0a73268fd791",
+        "lineCount": 469,
+        "sentinel": "MAX_ITEMS"
+      },
+      "generated/item_hold_effects.txt": {
+        "blobSha": "8b6edea9131836c0f7b301e509048b9e85b381ea",
+        "lineCount": 147
+      }
+    }
+  },
+  "scope": {
+    "profile": "platinum",
+    "gameCode": "CPUF",
+    "note": "Référence canonique des symboles et IDs; ne certifie pas les noms ni effets du profil Project PM."
+  },
+  "itemIds": [
+    {
+      "id": 0,
+      "symbol": "ITEM_NONE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 1,
+      "symbol": "ITEM_MASTER_BALL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 2,
+      "symbol": "ITEM_ULTRA_BALL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 3,
+      "symbol": "ITEM_GREAT_BALL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 4,
+      "symbol": "ITEM_POKE_BALL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 5,
+      "symbol": "ITEM_SAFARI_BALL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 6,
+      "symbol": "ITEM_NET_BALL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 7,
+      "symbol": "ITEM_DIVE_BALL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 8,
+      "symbol": "ITEM_NEST_BALL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 9,
+      "symbol": "ITEM_REPEAT_BALL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 10,
+      "symbol": "ITEM_TIMER_BALL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 11,
+      "symbol": "ITEM_LUXURY_BALL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 12,
+      "symbol": "ITEM_PREMIER_BALL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 13,
+      "symbol": "ITEM_DUSK_BALL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 14,
+      "symbol": "ITEM_HEAL_BALL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 15,
+      "symbol": "ITEM_QUICK_BALL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 16,
+      "symbol": "ITEM_CHERISH_BALL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 17,
+      "symbol": "ITEM_POTION",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 18,
+      "symbol": "ITEM_ANTIDOTE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 19,
+      "symbol": "ITEM_BURN_HEAL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 20,
+      "symbol": "ITEM_ICE_HEAL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 21,
+      "symbol": "ITEM_AWAKENING",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 22,
+      "symbol": "ITEM_PARLYZ_HEAL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 23,
+      "symbol": "ITEM_FULL_RESTORE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 24,
+      "symbol": "ITEM_MAX_POTION",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 25,
+      "symbol": "ITEM_HYPER_POTION",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 26,
+      "symbol": "ITEM_SUPER_POTION",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 27,
+      "symbol": "ITEM_FULL_HEAL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 28,
+      "symbol": "ITEM_REVIVE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 29,
+      "symbol": "ITEM_MAX_REVIVE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 30,
+      "symbol": "ITEM_FRESH_WATER",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 31,
+      "symbol": "ITEM_SODA_POP",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 32,
+      "symbol": "ITEM_LEMONADE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 33,
+      "symbol": "ITEM_MOOMOO_MILK",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 34,
+      "symbol": "ITEM_ENERGYPOWDER",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 35,
+      "symbol": "ITEM_ENERGY_ROOT",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 36,
+      "symbol": "ITEM_HEAL_POWDER",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 37,
+      "symbol": "ITEM_REVIVAL_HERB",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 38,
+      "symbol": "ITEM_ETHER",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 39,
+      "symbol": "ITEM_MAX_ETHER",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 40,
+      "symbol": "ITEM_ELIXIR",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 41,
+      "symbol": "ITEM_MAX_ELIXIR",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 42,
+      "symbol": "ITEM_LAVA_COOKIE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 43,
+      "symbol": "ITEM_BERRY_JUICE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 44,
+      "symbol": "ITEM_SACRED_ASH",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 45,
+      "symbol": "ITEM_HP_UP",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 46,
+      "symbol": "ITEM_PROTEIN",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 47,
+      "symbol": "ITEM_IRON",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 48,
+      "symbol": "ITEM_CARBOS",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 49,
+      "symbol": "ITEM_CALCIUM",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 50,
+      "symbol": "ITEM_RARE_CANDY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 51,
+      "symbol": "ITEM_PP_UP",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 52,
+      "symbol": "ITEM_ZINC",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 53,
+      "symbol": "ITEM_PP_MAX",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 54,
+      "symbol": "ITEM_OLD_GATEAU",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 55,
+      "symbol": "ITEM_GUARD_SPEC",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 56,
+      "symbol": "ITEM_DIRE_HIT",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 57,
+      "symbol": "ITEM_X_ATTACK",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 58,
+      "symbol": "ITEM_X_DEFENSE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 59,
+      "symbol": "ITEM_X_SPEED",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 60,
+      "symbol": "ITEM_X_ACCURACY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 61,
+      "symbol": "ITEM_X_SPECIAL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 62,
+      "symbol": "ITEM_X_SP_DEF",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 63,
+      "symbol": "ITEM_POKE_DOLL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 64,
+      "symbol": "ITEM_FLUFFY_TAIL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 65,
+      "symbol": "ITEM_BLUE_FLUTE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 66,
+      "symbol": "ITEM_YELLOW_FLUTE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 67,
+      "symbol": "ITEM_RED_FLUTE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 68,
+      "symbol": "ITEM_BLACK_FLUTE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 69,
+      "symbol": "ITEM_WHITE_FLUTE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 70,
+      "symbol": "ITEM_SHOAL_SALT",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 71,
+      "symbol": "ITEM_SHOAL_SHELL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 72,
+      "symbol": "ITEM_RED_SHARD",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 73,
+      "symbol": "ITEM_BLUE_SHARD",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 74,
+      "symbol": "ITEM_YELLOW_SHARD",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 75,
+      "symbol": "ITEM_GREEN_SHARD",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 76,
+      "symbol": "ITEM_SUPER_REPEL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 77,
+      "symbol": "ITEM_MAX_REPEL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 78,
+      "symbol": "ITEM_ESCAPE_ROPE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 79,
+      "symbol": "ITEM_REPEL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 80,
+      "symbol": "ITEM_SUN_STONE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 81,
+      "symbol": "ITEM_MOON_STONE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 82,
+      "symbol": "ITEM_FIRE_STONE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 83,
+      "symbol": "ITEM_THUNDERSTONE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 84,
+      "symbol": "ITEM_WATER_STONE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 85,
+      "symbol": "ITEM_LEAF_STONE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 86,
+      "symbol": "ITEM_TINYMUSHROOM",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 87,
+      "symbol": "ITEM_BIG_MUSHROOM",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 88,
+      "symbol": "ITEM_PEARL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 89,
+      "symbol": "ITEM_BIG_PEARL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 90,
+      "symbol": "ITEM_STARDUST",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 91,
+      "symbol": "ITEM_STAR_PIECE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 92,
+      "symbol": "ITEM_NUGGET",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 93,
+      "symbol": "ITEM_HEART_SCALE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 94,
+      "symbol": "ITEM_HONEY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 95,
+      "symbol": "ITEM_GROWTH_MULCH",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 96,
+      "symbol": "ITEM_DAMP_MULCH",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 97,
+      "symbol": "ITEM_STABLE_MULCH",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 98,
+      "symbol": "ITEM_GOOEY_MULCH",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 99,
+      "symbol": "ITEM_ROOT_FOSSIL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 100,
+      "symbol": "ITEM_CLAW_FOSSIL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 101,
+      "symbol": "ITEM_HELIX_FOSSIL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 102,
+      "symbol": "ITEM_DOME_FOSSIL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 103,
+      "symbol": "ITEM_OLD_AMBER",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 104,
+      "symbol": "ITEM_ARMOR_FOSSIL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 105,
+      "symbol": "ITEM_SKULL_FOSSIL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 106,
+      "symbol": "ITEM_RARE_BONE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 107,
+      "symbol": "ITEM_SHINY_STONE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 108,
+      "symbol": "ITEM_DUSK_STONE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 109,
+      "symbol": "ITEM_DAWN_STONE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 110,
+      "symbol": "ITEM_OVAL_STONE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 111,
+      "symbol": "ITEM_ODD_KEYSTONE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 112,
+      "symbol": "ITEM_GRISEOUS_ORB",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 113,
+      "symbol": "ITEM_UNUSED_113",
+      "status": "reserved_unused_slot"
+    },
+    {
+      "id": 114,
+      "symbol": "ITEM_UNUSED_114",
+      "status": "reserved_unused_slot"
+    },
+    {
+      "id": 115,
+      "symbol": "ITEM_UNUSED_115",
+      "status": "reserved_unused_slot"
+    },
+    {
+      "id": 116,
+      "symbol": "ITEM_UNUSED_116",
+      "status": "reserved_unused_slot"
+    },
+    {
+      "id": 117,
+      "symbol": "ITEM_UNUSED_117",
+      "status": "reserved_unused_slot"
+    },
+    {
+      "id": 118,
+      "symbol": "ITEM_UNUSED_118",
+      "status": "reserved_unused_slot"
+    },
+    {
+      "id": 119,
+      "symbol": "ITEM_UNUSED_119",
+      "status": "reserved_unused_slot"
+    },
+    {
+      "id": 120,
+      "symbol": "ITEM_UNUSED_120",
+      "status": "reserved_unused_slot"
+    },
+    {
+      "id": 121,
+      "symbol": "ITEM_UNUSED_121",
+      "status": "reserved_unused_slot"
+    },
+    {
+      "id": 122,
+      "symbol": "ITEM_UNUSED_122",
+      "status": "reserved_unused_slot"
+    },
+    {
+      "id": 123,
+      "symbol": "ITEM_UNUSED_123",
+      "status": "reserved_unused_slot"
+    },
+    {
+      "id": 124,
+      "symbol": "ITEM_UNUSED_124",
+      "status": "reserved_unused_slot"
+    },
+    {
+      "id": 125,
+      "symbol": "ITEM_UNUSED_125",
+      "status": "reserved_unused_slot"
+    },
+    {
+      "id": 126,
+      "symbol": "ITEM_UNUSED_126",
+      "status": "reserved_unused_slot"
+    },
+    {
+      "id": 127,
+      "symbol": "ITEM_UNUSED_127",
+      "status": "reserved_unused_slot"
+    },
+    {
+      "id": 128,
+      "symbol": "ITEM_UNUSED_128",
+      "status": "reserved_unused_slot"
+    },
+    {
+      "id": 129,
+      "symbol": "ITEM_UNUSED_129",
+      "status": "reserved_unused_slot"
+    },
+    {
+      "id": 130,
+      "symbol": "ITEM_UNUSED_130",
+      "status": "reserved_unused_slot"
+    },
+    {
+      "id": 131,
+      "symbol": "ITEM_UNUSED_131",
+      "status": "reserved_unused_slot"
+    },
+    {
+      "id": 132,
+      "symbol": "ITEM_UNUSED_132",
+      "status": "reserved_unused_slot"
+    },
+    {
+      "id": 133,
+      "symbol": "ITEM_UNUSED_133",
+      "status": "reserved_unused_slot"
+    },
+    {
+      "id": 134,
+      "symbol": "ITEM_UNUSED_134",
+      "status": "reserved_unused_slot"
+    },
+    {
+      "id": 135,
+      "symbol": "ITEM_ADAMANT_ORB",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 136,
+      "symbol": "ITEM_LUSTROUS_ORB",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 137,
+      "symbol": "ITEM_GRASS_MAIL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 138,
+      "symbol": "ITEM_FLAME_MAIL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 139,
+      "symbol": "ITEM_BUBBLE_MAIL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 140,
+      "symbol": "ITEM_BLOOM_MAIL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 141,
+      "symbol": "ITEM_TUNNEL_MAIL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 142,
+      "symbol": "ITEM_STEEL_MAIL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 143,
+      "symbol": "ITEM_HEART_MAIL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 144,
+      "symbol": "ITEM_SNOW_MAIL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 145,
+      "symbol": "ITEM_SPACE_MAIL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 146,
+      "symbol": "ITEM_AIR_MAIL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 147,
+      "symbol": "ITEM_MOSAIC_MAIL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 148,
+      "symbol": "ITEM_BRICK_MAIL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 149,
+      "symbol": "ITEM_CHERI_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 150,
+      "symbol": "ITEM_CHESTO_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 151,
+      "symbol": "ITEM_PECHA_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 152,
+      "symbol": "ITEM_RAWST_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 153,
+      "symbol": "ITEM_ASPEAR_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 154,
+      "symbol": "ITEM_LEPPA_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 155,
+      "symbol": "ITEM_ORAN_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 156,
+      "symbol": "ITEM_PERSIM_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 157,
+      "symbol": "ITEM_LUM_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 158,
+      "symbol": "ITEM_SITRUS_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 159,
+      "symbol": "ITEM_FIGY_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 160,
+      "symbol": "ITEM_WIKI_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 161,
+      "symbol": "ITEM_MAGO_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 162,
+      "symbol": "ITEM_AGUAV_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 163,
+      "symbol": "ITEM_IAPAPA_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 164,
+      "symbol": "ITEM_RAZZ_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 165,
+      "symbol": "ITEM_BLUK_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 166,
+      "symbol": "ITEM_NANAB_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 167,
+      "symbol": "ITEM_WEPEAR_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 168,
+      "symbol": "ITEM_PINAP_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 169,
+      "symbol": "ITEM_POMEG_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 170,
+      "symbol": "ITEM_KELPSY_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 171,
+      "symbol": "ITEM_QUALOT_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 172,
+      "symbol": "ITEM_HONDEW_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 173,
+      "symbol": "ITEM_GREPA_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 174,
+      "symbol": "ITEM_TAMATO_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 175,
+      "symbol": "ITEM_CORNN_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 176,
+      "symbol": "ITEM_MAGOST_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 177,
+      "symbol": "ITEM_RABUTA_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 178,
+      "symbol": "ITEM_NOMEL_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 179,
+      "symbol": "ITEM_SPELON_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 180,
+      "symbol": "ITEM_PAMTRE_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 181,
+      "symbol": "ITEM_WATMEL_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 182,
+      "symbol": "ITEM_DURIN_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 183,
+      "symbol": "ITEM_BELUE_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 184,
+      "symbol": "ITEM_OCCA_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 185,
+      "symbol": "ITEM_PASSHO_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 186,
+      "symbol": "ITEM_WACAN_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 187,
+      "symbol": "ITEM_RINDO_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 188,
+      "symbol": "ITEM_YACHE_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 189,
+      "symbol": "ITEM_CHOPLE_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 190,
+      "symbol": "ITEM_KEBIA_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 191,
+      "symbol": "ITEM_SHUCA_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 192,
+      "symbol": "ITEM_COBA_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 193,
+      "symbol": "ITEM_PAYAPA_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 194,
+      "symbol": "ITEM_TANGA_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 195,
+      "symbol": "ITEM_CHARTI_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 196,
+      "symbol": "ITEM_KASIB_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 197,
+      "symbol": "ITEM_HABAN_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 198,
+      "symbol": "ITEM_COLBUR_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 199,
+      "symbol": "ITEM_BABIRI_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 200,
+      "symbol": "ITEM_CHILAN_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 201,
+      "symbol": "ITEM_LIECHI_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 202,
+      "symbol": "ITEM_GANLON_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 203,
+      "symbol": "ITEM_SALAC_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 204,
+      "symbol": "ITEM_PETAYA_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 205,
+      "symbol": "ITEM_APICOT_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 206,
+      "symbol": "ITEM_LANSAT_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 207,
+      "symbol": "ITEM_STARF_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 208,
+      "symbol": "ITEM_ENIGMA_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 209,
+      "symbol": "ITEM_MICLE_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 210,
+      "symbol": "ITEM_CUSTAP_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 211,
+      "symbol": "ITEM_JABOCA_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 212,
+      "symbol": "ITEM_ROWAP_BERRY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 213,
+      "symbol": "ITEM_BRIGHTPOWDER",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 214,
+      "symbol": "ITEM_WHITE_HERB",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 215,
+      "symbol": "ITEM_MACHO_BRACE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 216,
+      "symbol": "ITEM_EXP_SHARE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 217,
+      "symbol": "ITEM_QUICK_CLAW",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 218,
+      "symbol": "ITEM_SOOTHE_BELL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 219,
+      "symbol": "ITEM_MENTAL_HERB",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 220,
+      "symbol": "ITEM_CHOICE_BAND",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 221,
+      "symbol": "ITEM_KINGS_ROCK",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 222,
+      "symbol": "ITEM_SILVERPOWDER",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 223,
+      "symbol": "ITEM_AMULET_COIN",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 224,
+      "symbol": "ITEM_CLEANSE_TAG",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 225,
+      "symbol": "ITEM_SOUL_DEW",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 226,
+      "symbol": "ITEM_DEEPSEATOOTH",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 227,
+      "symbol": "ITEM_DEEPSEASCALE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 228,
+      "symbol": "ITEM_SMOKE_BALL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 229,
+      "symbol": "ITEM_EVERSTONE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 230,
+      "symbol": "ITEM_FOCUS_BAND",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 231,
+      "symbol": "ITEM_LUCKY_EGG",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 232,
+      "symbol": "ITEM_SCOPE_LENS",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 233,
+      "symbol": "ITEM_METAL_COAT",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 234,
+      "symbol": "ITEM_LEFTOVERS",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 235,
+      "symbol": "ITEM_DRAGON_SCALE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 236,
+      "symbol": "ITEM_LIGHT_BALL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 237,
+      "symbol": "ITEM_SOFT_SAND",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 238,
+      "symbol": "ITEM_HARD_STONE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 239,
+      "symbol": "ITEM_MIRACLE_SEED",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 240,
+      "symbol": "ITEM_BLACKGLASSES",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 241,
+      "symbol": "ITEM_BLACK_BELT",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 242,
+      "symbol": "ITEM_MAGNET",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 243,
+      "symbol": "ITEM_MYSTIC_WATER",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 244,
+      "symbol": "ITEM_SHARP_BEAK",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 245,
+      "symbol": "ITEM_POISON_BARB",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 246,
+      "symbol": "ITEM_NEVERMELTICE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 247,
+      "symbol": "ITEM_SPELL_TAG",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 248,
+      "symbol": "ITEM_TWISTEDSPOON",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 249,
+      "symbol": "ITEM_CHARCOAL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 250,
+      "symbol": "ITEM_DRAGON_FANG",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 251,
+      "symbol": "ITEM_SILK_SCARF",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 252,
+      "symbol": "ITEM_UPGRADE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 253,
+      "symbol": "ITEM_SHELL_BELL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 254,
+      "symbol": "ITEM_SEA_INCENSE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 255,
+      "symbol": "ITEM_LAX_INCENSE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 256,
+      "symbol": "ITEM_LUCKY_PUNCH",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 257,
+      "symbol": "ITEM_METAL_POWDER",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 258,
+      "symbol": "ITEM_THICK_CLUB",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 259,
+      "symbol": "ITEM_STICK",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 260,
+      "symbol": "ITEM_RED_SCARF",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 261,
+      "symbol": "ITEM_BLUE_SCARF",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 262,
+      "symbol": "ITEM_PINK_SCARF",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 263,
+      "symbol": "ITEM_GREEN_SCARF",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 264,
+      "symbol": "ITEM_YELLOW_SCARF",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 265,
+      "symbol": "ITEM_WIDE_LENS",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 266,
+      "symbol": "ITEM_MUSCLE_BAND",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 267,
+      "symbol": "ITEM_WISE_GLASSES",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 268,
+      "symbol": "ITEM_EXPERT_BELT",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 269,
+      "symbol": "ITEM_LIGHT_CLAY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 270,
+      "symbol": "ITEM_LIFE_ORB",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 271,
+      "symbol": "ITEM_POWER_HERB",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 272,
+      "symbol": "ITEM_TOXIC_ORB",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 273,
+      "symbol": "ITEM_FLAME_ORB",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 274,
+      "symbol": "ITEM_QUICK_POWDER",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 275,
+      "symbol": "ITEM_FOCUS_SASH",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 276,
+      "symbol": "ITEM_ZOOM_LENS",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 277,
+      "symbol": "ITEM_METRONOME",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 278,
+      "symbol": "ITEM_IRON_BALL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 279,
+      "symbol": "ITEM_LAGGING_TAIL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 280,
+      "symbol": "ITEM_DESTINY_KNOT",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 281,
+      "symbol": "ITEM_BLACK_SLUDGE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 282,
+      "symbol": "ITEM_ICY_ROCK",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 283,
+      "symbol": "ITEM_SMOOTH_ROCK",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 284,
+      "symbol": "ITEM_HEAT_ROCK",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 285,
+      "symbol": "ITEM_DAMP_ROCK",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 286,
+      "symbol": "ITEM_GRIP_CLAW",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 287,
+      "symbol": "ITEM_CHOICE_SCARF",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 288,
+      "symbol": "ITEM_STICKY_BARB",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 289,
+      "symbol": "ITEM_POWER_BRACER",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 290,
+      "symbol": "ITEM_POWER_BELT",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 291,
+      "symbol": "ITEM_POWER_LENS",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 292,
+      "symbol": "ITEM_POWER_BAND",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 293,
+      "symbol": "ITEM_POWER_ANKLET",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 294,
+      "symbol": "ITEM_POWER_WEIGHT",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 295,
+      "symbol": "ITEM_SHED_SHELL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 296,
+      "symbol": "ITEM_BIG_ROOT",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 297,
+      "symbol": "ITEM_CHOICE_SPECS",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 298,
+      "symbol": "ITEM_FLAME_PLATE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 299,
+      "symbol": "ITEM_SPLASH_PLATE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 300,
+      "symbol": "ITEM_ZAP_PLATE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 301,
+      "symbol": "ITEM_MEADOW_PLATE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 302,
+      "symbol": "ITEM_ICICLE_PLATE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 303,
+      "symbol": "ITEM_FIST_PLATE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 304,
+      "symbol": "ITEM_TOXIC_PLATE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 305,
+      "symbol": "ITEM_EARTH_PLATE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 306,
+      "symbol": "ITEM_SKY_PLATE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 307,
+      "symbol": "ITEM_MIND_PLATE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 308,
+      "symbol": "ITEM_INSECT_PLATE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 309,
+      "symbol": "ITEM_STONE_PLATE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 310,
+      "symbol": "ITEM_SPOOKY_PLATE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 311,
+      "symbol": "ITEM_DRACO_PLATE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 312,
+      "symbol": "ITEM_DREAD_PLATE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 313,
+      "symbol": "ITEM_IRON_PLATE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 314,
+      "symbol": "ITEM_ODD_INCENSE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 315,
+      "symbol": "ITEM_ROCK_INCENSE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 316,
+      "symbol": "ITEM_FULL_INCENSE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 317,
+      "symbol": "ITEM_WAVE_INCENSE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 318,
+      "symbol": "ITEM_ROSE_INCENSE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 319,
+      "symbol": "ITEM_LUCK_INCENSE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 320,
+      "symbol": "ITEM_PURE_INCENSE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 321,
+      "symbol": "ITEM_PROTECTOR",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 322,
+      "symbol": "ITEM_ELECTIRIZER",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 323,
+      "symbol": "ITEM_MAGMARIZER",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 324,
+      "symbol": "ITEM_DUBIOUS_DISC",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 325,
+      "symbol": "ITEM_REAPER_CLOTH",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 326,
+      "symbol": "ITEM_RAZOR_CLAW",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 327,
+      "symbol": "ITEM_RAZOR_FANG",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 328,
+      "symbol": "ITEM_TM01",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 329,
+      "symbol": "ITEM_TM02",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 330,
+      "symbol": "ITEM_TM03",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 331,
+      "symbol": "ITEM_TM04",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 332,
+      "symbol": "ITEM_TM05",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 333,
+      "symbol": "ITEM_TM06",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 334,
+      "symbol": "ITEM_TM07",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 335,
+      "symbol": "ITEM_TM08",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 336,
+      "symbol": "ITEM_TM09",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 337,
+      "symbol": "ITEM_TM10",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 338,
+      "symbol": "ITEM_TM11",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 339,
+      "symbol": "ITEM_TM12",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 340,
+      "symbol": "ITEM_TM13",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 341,
+      "symbol": "ITEM_TM14",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 342,
+      "symbol": "ITEM_TM15",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 343,
+      "symbol": "ITEM_TM16",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 344,
+      "symbol": "ITEM_TM17",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 345,
+      "symbol": "ITEM_TM18",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 346,
+      "symbol": "ITEM_TM19",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 347,
+      "symbol": "ITEM_TM20",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 348,
+      "symbol": "ITEM_TM21",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 349,
+      "symbol": "ITEM_TM22",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 350,
+      "symbol": "ITEM_TM23",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 351,
+      "symbol": "ITEM_TM24",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 352,
+      "symbol": "ITEM_TM25",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 353,
+      "symbol": "ITEM_TM26",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 354,
+      "symbol": "ITEM_TM27",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 355,
+      "symbol": "ITEM_TM28",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 356,
+      "symbol": "ITEM_TM29",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 357,
+      "symbol": "ITEM_TM30",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 358,
+      "symbol": "ITEM_TM31",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 359,
+      "symbol": "ITEM_TM32",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 360,
+      "symbol": "ITEM_TM33",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 361,
+      "symbol": "ITEM_TM34",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 362,
+      "symbol": "ITEM_TM35",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 363,
+      "symbol": "ITEM_TM36",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 364,
+      "symbol": "ITEM_TM37",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 365,
+      "symbol": "ITEM_TM38",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 366,
+      "symbol": "ITEM_TM39",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 367,
+      "symbol": "ITEM_TM40",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 368,
+      "symbol": "ITEM_TM41",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 369,
+      "symbol": "ITEM_TM42",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 370,
+      "symbol": "ITEM_TM43",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 371,
+      "symbol": "ITEM_TM44",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 372,
+      "symbol": "ITEM_TM45",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 373,
+      "symbol": "ITEM_TM46",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 374,
+      "symbol": "ITEM_TM47",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 375,
+      "symbol": "ITEM_TM48",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 376,
+      "symbol": "ITEM_TM49",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 377,
+      "symbol": "ITEM_TM50",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 378,
+      "symbol": "ITEM_TM51",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 379,
+      "symbol": "ITEM_TM52",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 380,
+      "symbol": "ITEM_TM53",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 381,
+      "symbol": "ITEM_TM54",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 382,
+      "symbol": "ITEM_TM55",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 383,
+      "symbol": "ITEM_TM56",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 384,
+      "symbol": "ITEM_TM57",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 385,
+      "symbol": "ITEM_TM58",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 386,
+      "symbol": "ITEM_TM59",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 387,
+      "symbol": "ITEM_TM60",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 388,
+      "symbol": "ITEM_TM61",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 389,
+      "symbol": "ITEM_TM62",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 390,
+      "symbol": "ITEM_TM63",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 391,
+      "symbol": "ITEM_TM64",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 392,
+      "symbol": "ITEM_TM65",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 393,
+      "symbol": "ITEM_TM66",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 394,
+      "symbol": "ITEM_TM67",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 395,
+      "symbol": "ITEM_TM68",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 396,
+      "symbol": "ITEM_TM69",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 397,
+      "symbol": "ITEM_TM70",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 398,
+      "symbol": "ITEM_TM71",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 399,
+      "symbol": "ITEM_TM72",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 400,
+      "symbol": "ITEM_TM73",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 401,
+      "symbol": "ITEM_TM74",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 402,
+      "symbol": "ITEM_TM75",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 403,
+      "symbol": "ITEM_TM76",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 404,
+      "symbol": "ITEM_TM77",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 405,
+      "symbol": "ITEM_TM78",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 406,
+      "symbol": "ITEM_TM79",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 407,
+      "symbol": "ITEM_TM80",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 408,
+      "symbol": "ITEM_TM81",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 409,
+      "symbol": "ITEM_TM82",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 410,
+      "symbol": "ITEM_TM83",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 411,
+      "symbol": "ITEM_TM84",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 412,
+      "symbol": "ITEM_TM85",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 413,
+      "symbol": "ITEM_TM86",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 414,
+      "symbol": "ITEM_TM87",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 415,
+      "symbol": "ITEM_TM88",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 416,
+      "symbol": "ITEM_TM89",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 417,
+      "symbol": "ITEM_TM90",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 418,
+      "symbol": "ITEM_TM91",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 419,
+      "symbol": "ITEM_TM92",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 420,
+      "symbol": "ITEM_HM01",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 421,
+      "symbol": "ITEM_HM02",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 422,
+      "symbol": "ITEM_HM03",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 423,
+      "symbol": "ITEM_HM04",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 424,
+      "symbol": "ITEM_HM05",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 425,
+      "symbol": "ITEM_HM06",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 426,
+      "symbol": "ITEM_HM07",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 427,
+      "symbol": "ITEM_HM08",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 428,
+      "symbol": "ITEM_EXPLORER_KIT",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 429,
+      "symbol": "ITEM_LOOT_SACK",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 430,
+      "symbol": "ITEM_RULE_BOOK",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 431,
+      "symbol": "ITEM_POKE_RADAR",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 432,
+      "symbol": "ITEM_POINT_CARD",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 433,
+      "symbol": "ITEM_JOURNAL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 434,
+      "symbol": "ITEM_SEAL_CASE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 435,
+      "symbol": "ITEM_FASHION_CASE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 436,
+      "symbol": "ITEM_SEAL_BAG",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 437,
+      "symbol": "ITEM_PAL_PAD",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 438,
+      "symbol": "ITEM_WORKS_KEY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 439,
+      "symbol": "ITEM_OLD_CHARM",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 440,
+      "symbol": "ITEM_GALACTIC_KEY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 441,
+      "symbol": "ITEM_RED_CHAIN",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 442,
+      "symbol": "ITEM_TOWN_MAP",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 443,
+      "symbol": "ITEM_VS_SEEKER",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 444,
+      "symbol": "ITEM_COIN_CASE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 445,
+      "symbol": "ITEM_OLD_ROD",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 446,
+      "symbol": "ITEM_GOOD_ROD",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 447,
+      "symbol": "ITEM_SUPER_ROD",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 448,
+      "symbol": "ITEM_SPRAYDUCK",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 449,
+      "symbol": "ITEM_POFFIN_CASE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 450,
+      "symbol": "ITEM_BICYCLE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 451,
+      "symbol": "ITEM_SUITE_KEY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 452,
+      "symbol": "ITEM_OAKS_LETTER",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 453,
+      "symbol": "ITEM_LUNAR_WING",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 454,
+      "symbol": "ITEM_MEMBER_CARD",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 455,
+      "symbol": "ITEM_AZURE_FLUTE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 456,
+      "symbol": "ITEM_S_S_TICKET",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 457,
+      "symbol": "ITEM_CONTEST_PASS",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 458,
+      "symbol": "ITEM_MAGMA_STONE",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 459,
+      "symbol": "ITEM_PARCEL",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 460,
+      "symbol": "ITEM_COUPON_1",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 461,
+      "symbol": "ITEM_COUPON_2",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 462,
+      "symbol": "ITEM_COUPON_3",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 463,
+      "symbol": "ITEM_STORAGE_KEY",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 464,
+      "symbol": "ITEM_SECRETPOTION",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 465,
+      "symbol": "ITEM_VS_RECORDER",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 466,
+      "symbol": "ITEM_GRACIDEA",
+      "status": "canonical_symbol"
+    },
+    {
+      "id": 467,
+      "symbol": "ITEM_SECRET_KEY",
+      "status": "canonical_symbol"
+    }
+  ],
+  "holdEffects": [
+    {
+      "id": 0,
+      "symbol": "HOLD_EFFECT_NONE"
+    },
+    {
+      "id": 1,
+      "symbol": "HOLD_EFFECT_HP_RESTORE"
+    },
+    {
+      "id": 2,
+      "symbol": "HOLD_EFFECT_GIRATINA_BOOST"
+    },
+    {
+      "id": 3,
+      "symbol": "HOLD_EFFECT_DIALGA_BOOST"
+    },
+    {
+      "id": 4,
+      "symbol": "HOLD_EFFECT_PALKIA_BOOST"
+    },
+    {
+      "id": 5,
+      "symbol": "HOLD_EFFECT_PRZ_RESTORE"
+    },
+    {
+      "id": 6,
+      "symbol": "HOLD_EFFECT_SLP_RESTORE"
+    },
+    {
+      "id": 7,
+      "symbol": "HOLD_EFFECT_PSN_RESTORE"
+    },
+    {
+      "id": 8,
+      "symbol": "HOLD_EFFECT_BRN_RESTORE"
+    },
+    {
+      "id": 9,
+      "symbol": "HOLD_EFFECT_FRZ_RESTORE"
+    },
+    {
+      "id": 10,
+      "symbol": "HOLD_EFFECT_PP_RESTORE"
+    },
+    {
+      "id": 11,
+      "symbol": "HOLD_EFFECT_CONFUSE_RESTORE"
+    },
+    {
+      "id": 12,
+      "symbol": "HOLD_EFFECT_STATUS_RESTORE"
+    },
+    {
+      "id": 13,
+      "symbol": "HOLD_EFFECT_HP_PCT_RESTORE"
+    },
+    {
+      "id": 14,
+      "symbol": "HOLD_EFFECT_HP_RESTORE_SPICY"
+    },
+    {
+      "id": 15,
+      "symbol": "HOLD_EFFECT_HP_RESTORE_DRY"
+    },
+    {
+      "id": 16,
+      "symbol": "HOLD_EFFECT_HP_RESTORE_SWEET"
+    },
+    {
+      "id": 17,
+      "symbol": "HOLD_EFFECT_HP_RESTORE_BITTER"
+    },
+    {
+      "id": 18,
+      "symbol": "HOLD_EFFECT_HP_RESTORE_SOUR"
+    },
+    {
+      "id": 19,
+      "symbol": "HOLD_EFFECT_WEAKEN_SE_FIRE"
+    },
+    {
+      "id": 20,
+      "symbol": "HOLD_EFFECT_WEAKEN_SE_WATER"
+    },
+    {
+      "id": 21,
+      "symbol": "HOLD_EFFECT_WEAKEN_SE_ELECTRIC"
+    },
+    {
+      "id": 22,
+      "symbol": "HOLD_EFFECT_WEAKEN_SE_GRASS"
+    },
+    {
+      "id": 23,
+      "symbol": "HOLD_EFFECT_WEAKEN_SE_ICE"
+    },
+    {
+      "id": 24,
+      "symbol": "HOLD_EFFECT_WEAKEN_SE_FIGHT"
+    },
+    {
+      "id": 25,
+      "symbol": "HOLD_EFFECT_WEAKEN_SE_POISON"
+    },
+    {
+      "id": 26,
+      "symbol": "HOLD_EFFECT_WEAKEN_SE_GROUND"
+    },
+    {
+      "id": 27,
+      "symbol": "HOLD_EFFECT_WEAKEN_SE_FLYING"
+    },
+    {
+      "id": 28,
+      "symbol": "HOLD_EFFECT_WEAKEN_SE_PSYCHIC"
+    },
+    {
+      "id": 29,
+      "symbol": "HOLD_EFFECT_WEAKEN_SE_BUG"
+    },
+    {
+      "id": 30,
+      "symbol": "HOLD_EFFECT_WEAKEN_SE_ROCK"
+    },
+    {
+      "id": 31,
+      "symbol": "HOLD_EFFECT_WEAKEN_SE_GHOST"
+    },
+    {
+      "id": 32,
+      "symbol": "HOLD_EFFECT_WEAKEN_SE_DRAGON"
+    },
+    {
+      "id": 33,
+      "symbol": "HOLD_EFFECT_WEAKEN_SE_DARK"
+    },
+    {
+      "id": 34,
+      "symbol": "HOLD_EFFECT_WEAKEN_SE_STEEL"
+    },
+    {
+      "id": 35,
+      "symbol": "HOLD_EFFECT_WEAKEN_NORMAL"
+    },
+    {
+      "id": 36,
+      "symbol": "HOLD_EFFECT_PINCH_ATK_UP"
+    },
+    {
+      "id": 37,
+      "symbol": "HOLD_EFFECT_PINCH_DEF_UP"
+    },
+    {
+      "id": 38,
+      "symbol": "HOLD_EFFECT_PINCH_SPEED_UP"
+    },
+    {
+      "id": 39,
+      "symbol": "HOLD_EFFECT_PINCH_SPATK_UP"
+    },
+    {
+      "id": 40,
+      "symbol": "HOLD_EFFECT_PINCH_SPDEF_UP"
+    },
+    {
+      "id": 41,
+      "symbol": "HOLD_EFFECT_PINCH_CRITRATE_UP"
+    },
+    {
+      "id": 42,
+      "symbol": "HOLD_EFFECT_PINCH_RANDOM_UP"
+    },
+    {
+      "id": 43,
+      "symbol": "HOLD_EFFECT_HP_RESTORE_SE"
+    },
+    {
+      "id": 44,
+      "symbol": "HOLD_EFFECT_PINCH_ACC_UP"
+    },
+    {
+      "id": 45,
+      "symbol": "HOLD_EFFECT_PINCH_PRIORITY"
+    },
+    {
+      "id": 46,
+      "symbol": "HOLD_EFFECT_RECOIL_PHYSICAL"
+    },
+    {
+      "id": 47,
+      "symbol": "HOLD_EFFECT_RECOIL_SPECIAL"
+    },
+    {
+      "id": 48,
+      "symbol": "HOLD_EFFECT_ACC_REDUCE"
+    },
+    {
+      "id": 49,
+      "symbol": "HOLD_EFFECT_STATDOWN_RESTORE"
+    },
+    {
+      "id": 50,
+      "symbol": "HOLD_EFFECT_EVS_UP_SPEED_DOWN"
+    },
+    {
+      "id": 51,
+      "symbol": "HOLD_EFFECT_EXP_SHARE"
+    },
+    {
+      "id": 52,
+      "symbol": "HOLD_EFFECT_SOMETIMES_PRIORITY"
+    },
+    {
+      "id": 53,
+      "symbol": "HOLD_EFFECT_FRIENDSHIP_UP"
+    },
+    {
+      "id": 54,
+      "symbol": "HOLD_EFFECT_HEAL_INFATUATION"
+    },
+    {
+      "id": 55,
+      "symbol": "HOLD_EFFECT_CHOICE_ATK"
+    },
+    {
+      "id": 56,
+      "symbol": "HOLD_EFFECT_SOMETIMES_FLINCH"
+    },
+    {
+      "id": 57,
+      "symbol": "HOLD_EFFECT_STRENGTHEN_BUG"
+    },
+    {
+      "id": 58,
+      "symbol": "HOLD_EFFECT_MONEY_UP"
+    },
+    {
+      "id": 59,
+      "symbol": "HOLD_EFFECT_ENCOUNTERS_DOWN"
+    },
+    {
+      "id": 60,
+      "symbol": "HOLD_EFFECT_LATI_SPECIAL"
+    },
+    {
+      "id": 61,
+      "symbol": "HOLD_EFFECT_CLAMPERL_SPATK"
+    },
+    {
+      "id": 62,
+      "symbol": "HOLD_EFFECT_CLAMPERL_SPDEF"
+    },
+    {
+      "id": 63,
+      "symbol": "HOLD_EFFECT_FLEE"
+    },
+    {
+      "id": 64,
+      "symbol": "HOLD_EFFECT_NO_EVOLVE"
+    },
+    {
+      "id": 65,
+      "symbol": "HOLD_EFFECT_MAYBE_ENDURE"
+    },
+    {
+      "id": 66,
+      "symbol": "HOLD_EFFECT_EXP_UP"
+    },
+    {
+      "id": 67,
+      "symbol": "HOLD_EFFECT_CRITRATE_UP"
+    },
+    {
+      "id": 68,
+      "symbol": "HOLD_EFFECT_STRENGTHEN_STEEL"
+    },
+    {
+      "id": 69,
+      "symbol": "HOLD_EFFECT_HP_RESTORE_GRADUAL"
+    },
+    {
+      "id": 70,
+      "symbol": "HOLD_EFFECT_EVOLVE_SEADRA"
+    },
+    {
+      "id": 71,
+      "symbol": "HOLD_EFFECT_PIKA_SPATK_UP"
+    },
+    {
+      "id": 72,
+      "symbol": "HOLD_EFFECT_STRENGTHEN_GROUND"
+    },
+    {
+      "id": 73,
+      "symbol": "HOLD_EFFECT_STRENGTHEN_ROCK"
+    },
+    {
+      "id": 74,
+      "symbol": "HOLD_EFFECT_STRENGTHEN_GRASS"
+    },
+    {
+      "id": 75,
+      "symbol": "HOLD_EFFECT_STRENGTHEN_DARK"
+    },
+    {
+      "id": 76,
+      "symbol": "HOLD_EFFECT_STRENGTHEN_FIGHT"
+    },
+    {
+      "id": 77,
+      "symbol": "HOLD_EFFECT_STRENGTHEN_ELECTRIC"
+    },
+    {
+      "id": 78,
+      "symbol": "HOLD_EFFECT_STRENGTHEN_WATER"
+    },
+    {
+      "id": 79,
+      "symbol": "HOLD_EFFECT_STRENGTHEN_FLYING"
+    },
+    {
+      "id": 80,
+      "symbol": "HOLD_EFFECT_STRENGTHEN_POISON"
+    },
+    {
+      "id": 81,
+      "symbol": "HOLD_EFFECT_STRENGTHEN_ICE"
+    },
+    {
+      "id": 82,
+      "symbol": "HOLD_EFFECT_STRENGTHEN_GHOST"
+    },
+    {
+      "id": 83,
+      "symbol": "HOLD_EFFECT_STRENGTHEN_PSYCHIC"
+    },
+    {
+      "id": 84,
+      "symbol": "HOLD_EFFECT_STRENGTHEN_FIRE"
+    },
+    {
+      "id": 85,
+      "symbol": "HOLD_EFFECT_STRENGTHEN_DRAGON"
+    },
+    {
+      "id": 86,
+      "symbol": "HOLD_EFFECT_STRENGTHEN_NORMAL"
+    },
+    {
+      "id": 87,
+      "symbol": "HOLD_EFFECT_EVOLVE_PORYGON"
+    },
+    {
+      "id": 88,
+      "symbol": "HOLD_EFFECT_HP_RESTORE_ON_DMG"
+    },
+    {
+      "id": 89,
+      "symbol": "HOLD_EFFECT_CHANSEY_CRITRATE_UP"
+    },
+    {
+      "id": 90,
+      "symbol": "HOLD_EFFECT_DITTO_DEF_UP"
+    },
+    {
+      "id": 91,
+      "symbol": "HOLD_EFFECT_CUBONE_ATK_UP"
+    },
+    {
+      "id": 92,
+      "symbol": "HOLD_EFFECT_FARFETCHD_CRITRATE_UP"
+    },
+    {
+      "id": 93,
+      "symbol": "HOLD_EFFECT_ACCURACY_UP"
+    },
+    {
+      "id": 94,
+      "symbol": "HOLD_EFFECT_POWER_UP_PHYS"
+    },
+    {
+      "id": 95,
+      "symbol": "HOLD_EFFECT_POWER_UP_SPEC"
+    },
+    {
+      "id": 96,
+      "symbol": "HOLD_EFFECT_POWER_UP_SE"
+    },
+    {
+      "id": 97,
+      "symbol": "HOLD_EFFECT_EXTEND_SCREENS"
+    },
+    {
+      "id": 98,
+      "symbol": "HOLD_EFFECT_HP_DRAIN_ON_ATK"
+    },
+    {
+      "id": 99,
+      "symbol": "HOLD_EFFECT_CHARGE_SKIP"
+    },
+    {
+      "id": 100,
+      "symbol": "HOLD_EFFECT_PSN_USER"
+    },
+    {
+      "id": 101,
+      "symbol": "HOLD_EFFECT_BRN_USER"
+    },
+    {
+      "id": 102,
+      "symbol": "HOLD_EFFECT_DITTO_SPEED_UP"
+    },
+    {
+      "id": 103,
+      "symbol": "HOLD_EFFECT_ENDURE"
+    },
+    {
+      "id": 104,
+      "symbol": "HOLD_EFFECT_ACCURACY_UP_SLOWER"
+    },
+    {
+      "id": 105,
+      "symbol": "HOLD_EFFECT_BOOST_REPEATED"
+    },
+    {
+      "id": 106,
+      "symbol": "HOLD_EFFECT_SPEED_DOWN_GROUNDED"
+    },
+    {
+      "id": 107,
+      "symbol": "HOLD_EFFECT_PRIORITY_DOWN"
+    },
+    {
+      "id": 108,
+      "symbol": "HOLD_EFFECT_RECIPROCATE_INFAT"
+    },
+    {
+      "id": 109,
+      "symbol": "HOLD_EFFECT_HP_RESTORE_PSN_TYPE"
+    },
+    {
+      "id": 110,
+      "symbol": "HOLD_EFFECT_EXTEND_HAIL"
+    },
+    {
+      "id": 111,
+      "symbol": "HOLD_EFFECT_EXTEND_SANDSTORM"
+    },
+    {
+      "id": 112,
+      "symbol": "HOLD_EFFECT_EXTEND_SUN"
+    },
+    {
+      "id": 113,
+      "symbol": "HOLD_EFFECT_EXTEND_RAIN"
+    },
+    {
+      "id": 114,
+      "symbol": "HOLD_EFFECT_EXTEND_TRAPPING"
+    },
+    {
+      "id": 115,
+      "symbol": "HOLD_EFFECT_CHOICE_SPEED"
+    },
+    {
+      "id": 116,
+      "symbol": "HOLD_EFFECT_DMG_USER_CONTACT_XFR"
+    },
+    {
+      "id": 117,
+      "symbol": "HOLD_EFFECT_LVLUP_ATK_EV_UP"
+    },
+    {
+      "id": 118,
+      "symbol": "HOLD_EFFECT_LVLUP_DEF_EV_UP"
+    },
+    {
+      "id": 119,
+      "symbol": "HOLD_EFFECT_LVLUP_SPATK_EV_UP"
+    },
+    {
+      "id": 120,
+      "symbol": "HOLD_EFFECT_LVLUP_SPDEF_EV_UP"
+    },
+    {
+      "id": 121,
+      "symbol": "HOLD_EFFECT_LVLUP_SPEED_EV_UP"
+    },
+    {
+      "id": 122,
+      "symbol": "HOLD_EFFECT_LVLUP_HP_EV_UP"
+    },
+    {
+      "id": 123,
+      "symbol": "HOLD_EFFECT_SWITCH"
+    },
+    {
+      "id": 124,
+      "symbol": "HOLD_EFFECT_LEECH_BOOST"
+    },
+    {
+      "id": 125,
+      "symbol": "HOLD_EFFECT_CHOICE_SPATK"
+    },
+    {
+      "id": 126,
+      "symbol": "HOLD_EFFECT_ARCEUS_FIRE"
+    },
+    {
+      "id": 127,
+      "symbol": "HOLD_EFFECT_ARCEUS_WATER"
+    },
+    {
+      "id": 128,
+      "symbol": "HOLD_EFFECT_ARCEUS_ELECTRIC"
+    },
+    {
+      "id": 129,
+      "symbol": "HOLD_EFFECT_ARCEUS_GRASS"
+    },
+    {
+      "id": 130,
+      "symbol": "HOLD_EFFECT_ARCEUS_ICE"
+    },
+    {
+      "id": 131,
+      "symbol": "HOLD_EFFECT_ARCEUS_FIGHTING"
+    },
+    {
+      "id": 132,
+      "symbol": "HOLD_EFFECT_ARCEUS_POISON"
+    },
+    {
+      "id": 133,
+      "symbol": "HOLD_EFFECT_ARCEUS_GROUND"
+    },
+    {
+      "id": 134,
+      "symbol": "HOLD_EFFECT_ARCEUS_FLYING"
+    },
+    {
+      "id": 135,
+      "symbol": "HOLD_EFFECT_ARCEUS_PSYCHIC"
+    },
+    {
+      "id": 136,
+      "symbol": "HOLD_EFFECT_ARCEUS_BUG"
+    },
+    {
+      "id": 137,
+      "symbol": "HOLD_EFFECT_ARCEUS_ROCK"
+    },
+    {
+      "id": 138,
+      "symbol": "HOLD_EFFECT_ARCEUS_GHOST"
+    },
+    {
+      "id": 139,
+      "symbol": "HOLD_EFFECT_ARCEUS_DRAGON"
+    },
+    {
+      "id": 140,
+      "symbol": "HOLD_EFFECT_ARCEUS_DARK"
+    },
+    {
+      "id": 141,
+      "symbol": "HOLD_EFFECT_ARCEUS_STEEL"
+    },
+    {
+      "id": 142,
+      "symbol": "HOLD_EFFECT_EVOLVE_RHYDON"
+    },
+    {
+      "id": 143,
+      "symbol": "HOLD_EFFECT_EVOLVE_ELECTABUZZ"
+    },
+    {
+      "id": 144,
+      "symbol": "HOLD_EFFECT_EVOLVE_MAGMAR"
+    },
+    {
+      "id": 145,
+      "symbol": "HOLD_EFFECT_EVOLVE_PORYGON2"
+    },
+    {
+      "id": 146,
+      "symbol": "HOLD_EFFECT_EVOLVE_DUSCLOPS"
+    }
+  ],
+  "structuralReconciliation": {
+    "canonicalItemIdCount": 468,
+    "firstItemId": 0,
+    "lastCanonicalItemId": 467,
+    "unusedSlots": [
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134
+    ],
+    "unusedSlotCount": 22,
+    "canonicalDefinedItemIdCount": 446,
+    "platinumPlItemDataArchiveEntries": 446,
+    "projectPmPlItemDataArchiveEntries": 470,
+    "platinumItemDataArchiveEntries": 442,
+    "projectPmItemDataArchiveEntries": 442,
+    "status": "count_match_mapping_not_proven",
+    "interpretation": "La référence canonique compte 468 IDs (0–467), dont 22 slots ITEM_UNUSED_113 à ITEM_UNUSED_134. Les 446 IDs canoniques non réservés correspondent en nombre aux 446 entrées de pl_item_data.narc extraites de Platine original. Cette égalité de compte est un contrôle structurel, pas une preuve que les entrées NARC sont dans le même ordre que les IDs d'objets. La décompilation utilise sItemArchiveIDs[item].dataID pour traduire l'ID logique en index d'archive. Il faut récupérer/reconstruire ce mapping avant toute jointure par position. Project PM expose 470 entrées pl_item_data, dont 24 de plus que le compte canonique non réservé; leurs identités restent à décoder séparément. Le NARC item_data.narc distinct contient 442 entrées dans les deux exports et ne doit pas être confondu avec pl_item_data.narc."
+  },
+  "policies": [
+    "Conserver les symboles canoniques par ID logique, y compris les 22 slots réservés.",
+    "Ne jamais joindre les entrées pl_item_data.narc aux IDs logiques par position sur la seule base de l'égalité des comptes.",
+    "Décoder les effets des objets uniquement après récupération du mapping ID logique → dataID d'archive et validation de la structure de chaque enregistrement.",
+    "Ne pas transférer les 24 entrées Project PM supplémentaires vers Platine original ni leur attribuer des noms sans preuve."
+  ]
+}
