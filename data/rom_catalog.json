@@ -51,5 +51,19 @@
     "Import normalized catalogue into repository",
     "Connect selected profile to generator",
     "Run static and browser regression tests"
-  ]
+  ],
+  "strategicSchema": {
+    "path": "data/strategic_data_schema.json",
+    "status": "specification_only_not_runtime_data",
+    "purpose": "Définit le schéma et les règles de provenance avant l'intégration du catalogue complet.",
+    "lastScopeDecision": "2026-10-20",
+    "deferredTables": [
+      "trainerDataRaw",
+      "trainerPokemonRaw",
+      "encountersRaw",
+      "routes",
+      "dialogues",
+      "storyScripts"
+    ]
+  }
 }
