@@ -25,8 +25,8 @@ try {
   await page.locator("#validate").click();
   sourceSummary = await page.locator("#summary").innerText();
   assert.match(sourceSummary, /"referentielStrategique": "multiplayer"/);
-  assert.match(sourceSummary, /Dracaufeu — Feu \/ Dragon/);
-  console.log("[PASS] le référentiel sélectionné applique les types Project PM confirmés de Dracaufeu et Jungko et figure dans le récapitulatif");
+  assert.match(sourceSummary, /Dracaufeu — Feu \/ Vol/);
+  console.log("[PASS] le référentiel sélectionné conserve les types non certifiés en repli et figure dans le récapitulatif");
 
   // Zero imposed items is valid; the algorithm still assigns six distinct items.
   await page.locator("#validate").click();
