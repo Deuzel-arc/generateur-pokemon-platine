@@ -32,6 +32,15 @@ const fairyMoveIdentityGuard = readJson("data/project_pm_fairy_move_identity_gua
 const fairyMoveSemanticsAudit = readJson("data/project_pm_fairy_move_semantics_audit.json");
 const levelUpMoveUsageAudit = readJson("data/project_pm_levelup_move_usage_audit.json");
 
+const optimizationGapAudit = readJson("data/generator_optimization_gap_audit.json");
+assert.equal(optimizationGapAudit.status, "priorities_synthesized_from_existing_rom_audits_not_runtime_verified", "optimization gap audit must remain a roadmap, not a runtime verification claim");
+assert.equal(optimizationGapAudit.currentVerifiedBaseline.runtimeRosterProfiles, 71, "optimization baseline must retain the measured runtime roster coverage");
+assert.equal(optimizationGapAudit.currentVerifiedBaseline.canonicalSpeciesMissing, 422, "optimization baseline must track missing runtime species");
+assert.equal(optimizationGapAudit.currentVerifiedBaseline.candidateProfilesRuntimeIntegrated, false, "candidate roster must not be described as runtime-integrated");
+assert.equal(optimizationGapAudit.priorities.length, 8, "optimization gap audit must preserve all prioritized workstreams");
+assert.ok(optimizationGapAudit.policies.includes("Do not merge CPUF and CPUE records by numeric index without independent identity checks."), "optimization plan must prevent unsafe cross-ROM index assumptions");
+
+
 assert.equal(fairyMoveSemanticsAudit.crossRomConclusion.status, "cpuF_raw_move_records_crosschecked_for_all_eight_cpue_fairy_ids", "CPUF/CPUE Fairy-ID cross-check must remain explicit");
 assert.equal(fairyMoveSemanticsAudit.crossRomConclusion.cpuFTypeId9OccurrencesAmongTheseIds, 0, "none of the eight corresponding CPUF records may be mislabelled as Project PM Fairy");
 assert.deepEqual(fairyMoveSemanticsAudit.crossRomConclusion.sameDisplayNameIds, [186, 204, 236], "only the three same-name IDs should be described as name-matched");
