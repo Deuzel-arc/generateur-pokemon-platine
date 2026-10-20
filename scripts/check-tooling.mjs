@@ -1,5 +1,7 @@
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
+import { mkdtempSync, writeFileSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
 import { fileURLToPath } from "node:url";
 import { existsSync, readFileSync } from "node:fs";
 
@@ -50,6 +52,28 @@ for (const [name, script] of [
   });
   assert.equal(result.status, 2, `${name}: missing ROM arguments must exit with usage status 2`);
   assert.match(result.stderr, /Usage: node scripts\/audit-rom-.*\.mjs <CPUF\.nds> <CPUE\.nds>/, `${name}: missing ROM arguments must print usage`);
+}
+
+
+const invalidRomDir = mkdtempSync(new URL(`file://${tmpdir()}/tooling-invalid-rom-`).pathname);
+const invalidRomPath = new URL(`file://${invalidRomDir}/invalid.nds`).pathname;
+try {
+  writeFileSync(invalidRomPath, Buffer.alloc(128, 0));
+  for (const [name, script] of [
+    ["audit:rom:types", "../scripts/audit-rom-type-bytes.mjs"],
+    ["audit:rom:evolutions", "../scripts/audit-evolution-roms.mjs"],
+    ["audit:rom:names", "../scripts/audit-rom-species-name-bank.mjs"],
+  ]) {
+    const result = spawnSync(process.execPath, [
+      fileURLToPath(new URL(script, import.meta.url)),
+      invalidRomPath,
+      invalidRomPath,
+    ], { encoding: "utf8", timeout: 5000 });
+    assert.notEqual(result.status, 0, `${name}: invalid ROM input must fail`);
+    assert.doesNotMatch(result.stdout, /"status":\s*"direct_rom_/, `${name}: invalid ROM must not produce a successful audit report`);
+  }
+} finally {
+  rmSync(invalidRomDir, { recursive: true, force: true });
 }
 
 for (const name of ["test:static", "test:rom-audits", "test:browser", "test:tooling"]) {
