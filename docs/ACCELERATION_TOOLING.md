@@ -59,3 +59,8 @@ npm run audit:rom:names -- "/path/to/CPUF.nds" "/path/to/CPUE.nds"
 ```
 
 All three commands verify the game code and exact SHA-256 before parsing NitroFS/NARC records. They fail closed if a different ROM revision is supplied. Their output is a raw-byte audit, not a claim that custom Project PM mechanics or every internal ID's display name has been semantically decoded. The CI suite validates the checked-in audit summaries and guardrails; it does not need or redistribute the ROM binaries.
+
+
+## Project PM Fairy-move semantic hypotheses
+
+`data/project_pm_fairy_move_semantics_audit.json` records the eight CPUE move IDs whose raw type byte is 9. The decoded move-name bank resolves their French display names, and the pinned canonical effect table is used only to create explicit hypotheses from matching effect IDs and parameters. Those symbols are not proof of CPUE battle-handler behavior. The audit and `scripts/validate-rom-audits.mjs` must keep every hypothesis marked unverified for Project PM runtime and Gen IV mechanics until direct handler evidence or controlled in-game tests are available. Do not activate these candidate effects in the generator.
