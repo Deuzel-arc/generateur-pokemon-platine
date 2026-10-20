@@ -11,6 +11,7 @@ const special = readJson("data/rom_special_entry_audit.json");
 const canonical = readJson("data/gen4_id_reference.json");
 const projectPmTypes = readJson("data/project_pm_type_mapping.json");
 const typeByteAudit = readJson("data/project_pm_type_byte_audit.json");
+const evolutionMethodAudit = readJson("data/project_pm_evolution_method_audit.json");
 const itemReference = readJson("data/gen4_item_id_reference.json");
 
 const itemArchiveDiff = readJson("data/project_pm_item_archive_diff.json");
@@ -116,6 +117,22 @@ assert.equal(typeByteAudit.charizardCandidate.project_pm.canonicalSecondaryTypeS
 assert.equal(typeByteAudit.charizardCandidate.historicalConflict.previousOverrideValue, "Ténèbres", "historical conflict must remain documented rather than silently erased");
 assert.equal(typeByteAudit.charizardCandidate.historicalConflict.previousProjectPmSha256, "78b95905031e0524942ac079afe2d444a6bcfb47aae7a07106800c5591d970f7", "historical override provenance hash must remain explicit");
 assert.equal(typeByteAudit.policies.doNotTransferOverridesAcrossRomHashes, true, "overrides must not be inherited across differing ROM hashes");
+
+assert.equal(evolutionMethodAudit.source.databaseSha256, typeByteAudit.source.databaseSha256, "evolution audit must use the same identified extraction database");
+assert.equal(evolutionMethodAudit.source.platinum.sha256, catalog.profiles.platinum.sha256, "evolution audit must match current Platinum hash");
+assert.equal(evolutionMethodAudit.source.project_pm.sha256, catalog.profiles.project_pm.sha256, "evolution audit must match current Project PM hash");
+assert.equal(evolutionMethodAudit.source.canonicalReference.commit, canonical.source.commit, "evolution method audit must use the pinned canonical reference");
+assert.deepEqual(evolutionMethodAudit.source.canonicalReference.canonicalMethodIds, Array.from({ length: 27 }, (_, id) => id), "canonical evolution methods must remain IDs 0 through 26");
+assert.equal(Object.values(evolutionMethodAudit.methodCounts.platinum).reduce((sum, count) => sum + count, 0), evolutionMethodAudit.source.platinum.evolutionRecordCount, "Platinum evolution method counts must sum to the audited record total");
+assert.equal(Object.values(evolutionMethodAudit.methodCounts.project_pm).reduce((sum, count) => sum + count, 0), evolutionMethodAudit.source.project_pm.evolutionRecordCount, "Project PM evolution method counts must sum to the audited record total");
+assert.deepEqual(evolutionMethodAudit.projectPmNonCanonicalMethodIds.map((row) => row.methodId), [27], "only method 27 should be classified as outside the canonical list");
+assert.equal(evolutionMethodAudit.projectPmNonCanonicalMethodIds[0].count, 2, "custom method 27 must cover both observed records");
+assert.deepEqual(evolutionMethodAudit.projectPmNonCanonicalMethodIds[0].entries, [
+  { sourceSpeciesId: 223, parameter: 458, targetSpeciesId: 224 },
+  { sourceSpeciesId: 458, parameter: 223, targetSpeciesId: 226 }
+], "custom method 27 source/parameter/target triples must remain unchanged");
+assert.equal(evolutionMethodAudit.projectPmNonCanonicalMethodIds[0].status, "custom_method_candidate_semantics_unverified", "custom evolution method semantics must remain unverified");
+assert.equal(evolutionMethodAudit.policies.doNotRenameCustomMethodWithoutCodeEvidence, true, "custom method names must require implementation evidence");
 
 
 const itemFieldDiff = readJson("data/project_pm_item_field_diff_summary.json");
