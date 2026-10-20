@@ -119,5 +119,16 @@
       ],
       "caution": "These are structural differences keyed by shared internal table ID. They do not independently certify National Pokédex identity or gameplay semantics."
     }
+  },
+  "romDeltaTriage": {
+    "path": "data/rom_delta_triage.json",
+    "status": "audit_only_candidate_mappings_not_runtime",
+    "summary": {
+      "speciesIdsAffected": 381,
+      "moveIdsAffected": 101,
+      "speciesWithCanonicalCandidate": 376,
+      "movesWithCanonicalCandidate": 98
+    },
+    "note": "Les symboles canoniques sont des candidats par ID partagé et ne doivent pas être utilisés comme noms certifiés avant vérification des tables de noms des ROM exactes."
   }
 }
