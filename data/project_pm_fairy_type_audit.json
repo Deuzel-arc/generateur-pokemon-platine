@@ -1,13 +1,17 @@
 {
   "schemaVersion": "1.0.0",
   "title": "Audit ciblé des occurrences du type brut 9 — Project PM",
-  "status": "user_confirmed_type_label_audited_names_unmapped",
+  "status": "user_confirmed_type_label_direct_rom_audited_names_crossreferenced_move_names_pending",
   "source": {
     "database": "/Audit_ROM_Pokemon_Platine/rom_battle_database.json",
     "gameCode": "CPUE",
     "sha256": "435b0288238f01f21eeeef7b5de6de3e3c9c3a9b70ea3b18d71b31ba282ae4e1",
     "mappingFile": "data/project_pm_type_mapping.json",
-    "mappingStatus": "user_confirmed"
+    "mappingStatus": "user_confirmed",
+    "nameBankPath": "msgdata/pl_msg.narc",
+    "nameBankIndex": 412,
+    "nameBankKey": 30764,
+    "nameBankHashesIdenticalAcrossProfiles": true
   },
   "interpretation": {
     "rawTypeId": 9,
@@ -31,192 +35,254 @@
       "typeSlots": [
         0,
         1
-      ]
+      ],
+      "romName": "MELOFEE",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 36,
       "typeSlots": [
         0,
         1
-      ]
+      ],
+      "romName": "MELODELFE",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 39,
       "typeSlots": [
         1
-      ]
+      ],
+      "romName": "RONDOUDOU",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 40,
       "typeSlots": [
         1
-      ]
+      ],
+      "romName": "GRODOUDOU",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 122,
       "typeSlots": [
         1
-      ]
+      ],
+      "romName": "M. MIME",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 154,
       "typeSlots": [
         1
-      ]
+      ],
+      "romName": "MEGANIUM",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 173,
       "typeSlots": [
         0,
         1
-      ]
+      ],
+      "romName": "MELO",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 175,
       "typeSlots": [
         0,
         1
-      ]
+      ],
+      "romName": "TOGEPI",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 176,
       "typeSlots": [
         0
-      ]
+      ],
+      "romName": "TOGETIC",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 183,
       "typeSlots": [
         1
-      ]
+      ],
+      "romName": "MARILL",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 184,
       "typeSlots": [
         1
-      ]
+      ],
+      "romName": "AZUMARILL",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 200,
       "typeSlots": [
         1
-      ]
+      ],
+      "romName": "FEUFOREVE",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 209,
       "typeSlots": [
         0,
         1
-      ]
+      ],
+      "romName": "SNUBBULL",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 210,
       "typeSlots": [
         0,
         1
-      ]
+      ],
+      "romName": "GRANBULL",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 280,
       "typeSlots": [
         1
-      ]
+      ],
+      "romName": "TARSAL",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 281,
       "typeSlots": [
         1
-      ]
+      ],
+      "romName": "KIRLIA",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 282,
       "typeSlots": [
         1
-      ]
+      ],
+      "romName": "GARDEVOIR",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 303,
       "typeSlots": [
         1
-      ]
+      ],
+      "romName": "MYSDIBULE",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 314,
       "typeSlots": [
         1
-      ]
+      ],
+      "romName": "LUMIVOLE",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 333,
       "typeSlots": [
         0
-      ]
+      ],
+      "romName": "TYLTON",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 334,
       "typeSlots": [
         1
-      ]
+      ],
+      "romName": "ALTARIA",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 350,
       "typeSlots": [
         1
-      ]
+      ],
+      "romName": "MILOBELLUS",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 359,
       "typeSlots": [
         1
-      ]
+      ],
+      "romName": "ABSOL",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 370,
       "typeSlots": [
         1
-      ]
+      ],
+      "romName": "LOVDISC",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 429,
       "typeSlots": [
         1
-      ]
+      ],
+      "romName": "MAGIREVE",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 439,
       "typeSlots": [
         1
-      ]
+      ],
+      "romName": "MIME JR.",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 467,
       "typeSlots": [
         1
-      ]
+      ],
+      "romName": "MAGANON",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 468,
       "typeSlots": [
         0
-      ]
+      ],
+      "romName": "TOGEKISS",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 480,
       "typeSlots": [
         1
-      ]
+      ],
+      "romName": "CREHELF",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 481,
       "typeSlots": [
         1
-      ]
+      ],
+      "romName": "CREFOLLET",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     },
     {
       "id": 482,
       "typeSlots": [
         1
-      ]
+      ],
+      "romName": "CREFADET",
+      "nameSource": "TEXT_BANK_SPECIES_NAME bank 412"
     }
   ],
   "projectPmMoves": [
@@ -317,8 +383,8 @@
   },
   "rules": [
     "Ne pas appliquer la traduction Fée aux données CPUF.",
-    "Ne pas déduire les noms de Pokémon/attaques à partir des IDs internes seuls.",
-    "Conserver les IDs bruts et les empreintes de ROM pour toute intégration ultérieure.",
-    "Les 31 entrées Project PM sont des occurrences de table, pas une validation indépendante de leurs noms canoniques."
+    "Les occurrences de type brut ID 9 ont été relues directement dans les octets CPUE à l'empreinte spécifiée.",
+    "Les 31 noms d'espèces sont croisés avec TEXT_BANK_SPECIES_NAME de la ROM exacte; les libellés restent en majuscules et souvent sans accents.",
+    "Les IDs de capacités contenant le type 9 sont identifiés, mais leurs noms ne sont pas encore décodés."
   ]
 }
