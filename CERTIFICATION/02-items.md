@@ -157,3 +157,32 @@ Le rapport [data/project_pm_extra_item_patterns.json](../data/project_pm_extra_i
 - Le calcul a été revérifié directement sur les 34 octets des enregistrements : taille, nombre d'entrées, valeurs séquentielles de l'octet 3 et égalité de tous les autres octets du groupe sont cohérents.
 
 C'est un **classement structurel seulement** : l'octet 3 n'est pas interprété comme un nom ou un effet sans code source ou test indépendant du mod. Le validateur automatise désormais les contrôles de ce rapport.
+
+
+## Décodage des champs binaires — référence source épinglée
+
+Une relecture ciblée de `include/item.h`, `docs/datafiles/items.md` et `tools/dataproc/src/itemproc.c` au commit source `06c6e9a0348da283be8d9225d0bec03c349ff5c2` confirme le schéma de référence des enregistrements `ItemData` de 34 octets :
+
+| Offset(s) | Champ de référence | Décodage / précaution |
+|---:|---|---|
+| 0–1 | `price` | entier non signé 16 bits, little-endian |
+| 2 | `holdEffect` | identifiant d'effet tenu; enum du code source épinglé |
+| 3 | `effectParam` | paramètre générique; sa signification dépend de l'objet |
+| 4 | `pluckEffect` | effet de Piqûre / Larcin selon les mécaniques Gen IV |
+| 5 | `flingEffect` | effet associé à Dégommage |
+| 6 | `flingPower` | puissance de Dégommage |
+| 7 | `naturalGiftPower` | puissance de Don Naturel |
+| 8–9 | champs compactés | type de Don Naturel et drapeaux/poche; bits à décoder, pas deux octets indépendants |
+| 10 | `fieldUseFunc` | fonction d'utilisation hors combat |
+| 11 | `battleUseCategory` | catégorie d'utilisation en combat |
+| 12 | `partyUse` | données/indicateurs d'utilisation sur l'équipe |
+| 13 | `padding_0D` | octet de remplissage dans la structure de référence |
+| 14–33 | union de paramètres | paramètres spécifiques; interprétation conditionnée par le champ d'utilisation |
+
+Ce tableau décrit **la structure de référence CPUF**, pas une garantie automatique que chaque champ CPUE conserve la même signification. Le constructeur source remplit les archives depuis les JSON individuels `res/items/data/*.json` et crée séparément la correspondance ID logique → index de données. Cette distinction confirme qu'une comparaison complète doit examiner les champs sérialisés et la table de correspondance, pas seulement les prix ni le nombre d'entrées.
+
+### Résultat de cette passe
+
+- Le schéma binaire de référence a été recoupé avec la documentation de format et le code du constructeur au commit épinglé.
+- Les treize ancres déjà enregistrées restent des contrôles de prix uniquement; elles ne sont pas requalifiées en validation de tous les champs.
+- La prochaine étape de certification reste une comparaison exhaustive CPUF contre les 446 sources JSON correspondantes, puis une analyse séparée CPUE. Aucune entrée supplémentaire Project PM n'est nommée à partir de sa position ou de son motif brut.
