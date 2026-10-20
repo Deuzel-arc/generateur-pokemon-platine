@@ -35,6 +35,8 @@ assert.match(quality, /npm test/, "quality workflow must run the full test suite
 assert.match(quality, /playwright install --with-deps chromium/, "quality workflow must install browser dependencies");
 assert.match(pages, /needs: test/, "Pages deployment must depend on the passing test job");
 assert.match(pages, /npm test/, "Pages workflow must run the full test suite before deploy");
+assert.match(pages, /permissions:\n  contents: read\n/, "Pages workflow must use read-only top-level permissions");
+assert.match(pages, /deploy:\n    needs: test\n    permissions:\n      contents: read\n      pages: write\n      id-token: write/, "only the deploy job may receive Pages write and OIDC permissions");
 assert.equal((dependabot.match(/package-ecosystem:/g) ?? []).length, 2, "Dependabot must monitor npm and GitHub Actions");
 assert.equal((dependabot.match(/interval: "weekly"/g) ?? []).length, 2, "dependency update checks must run weekly");
 console.log(`[PASS] tooling contract: ${required.length} required files, four test groups, CI and Pages quality gates`);
