@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "direct_rom_move_records_crosschecked_names_only_semantics_pending",
+  "source": {
+    "platinumSha256": "1cfd024519116c1c6285d6af2dbdfcec778e9d74c7c18585e22032e81aaa7eb8",
+    "projectPmSha256": "435b0288238f01f21eeeef7b5de6de3e3c9c3a9b70ea3b18d71b31ba282ae4e1",
+    "extractedDatabase": "rom_battle_database.json",
+    "nameBankAuditPath": "data/rom_extended_name_banks_audit.json",
+    "note": "The records below are copied from the decoded move table extracted from the exact ROM hashes above. Name strings are cross-referenced to the decoded Project PM move-name bank."
+  },
+  "records": [
+    {
+      "id": 468,
+      "nameBankText": "Piétinement",
+      "effectId": 70,
+      "categoryId": 0,
+      "category": "physical",
+      "power": 60,
+      "type": "Sol",
+      "typeId": 4,
+      "accuracy": 100,
+      "pp": 20,
+      "effectChance": 100,
+      "targetId": 8,
+      "priority": 0,
+      "flags": 0,
+      "raw": "4600003c046414640800003212040000",
+      "interpretation": "Raw values verified; effectId 70 and targetId 8 have not been semantically certified for Project PM."
+    },
+    {
+      "id": 469,
+      "nameBankText": "Cavalerie Lourde",
+      "effectId": 0,
+      "categoryId": 0,
+      "category": "physical",
+      "power": 95,
+      "type": "Sol",
+      "typeId": 4,
+      "accuracy": 95,
+      "pp": 10,
+      "effectChance": 0,
+      "targetId": 0,
+      "priority": 0,
+      "flags": 0,
+      "raw": "0000005f045f0a000000003311040000",
+      "interpretation": "Raw values verified; effectId 0 does not prove the modern weight-based Heavy Slam mechanic."
+    },
+    {
+      "id": 470,
+      "nameBankText": "Triple Axel",
+      "effectId": 104,
+      "categoryId": 0,
+      "category": "physical",
+      "power": 20,
+      "type": "Glace",
+      "typeId": 15,
+      "accuracy": 90,
+      "pp": 10,
+      "effectChance": 0,
+      "targetId": 0,
+      "priority": 0,
+      "flags": 0,
+      "raw": "680000140f5a0a000000007307000000",
+      "interpretation": "The base record is consistent with a low-power multi-hit move candidate, but exact per-hit scaling and runtime implementation remain unverified."
+    },
+    {
+      "id": 471,
+      "nameBankText": "Psycho-Croc",
+      "effectId": 186,
+      "categoryId": 0,
+      "category": "physical",
+      "power": 75,
+      "type": "Psy",
+      "typeId": 14,
+      "accuracy": 100,
+      "pp": 25,
+      "effectChance": 0,
+      "targetId": 0,
+      "priority": 0,
+      "flags": 0,
+      "raw": "ba00004b0e641900000000330503000000",
+      "interpretation": "Raw values verified; effectId 186 and the displayed name alone do not certify a bite move that removes screens or any other exact runtime effect."
+    }
+  ],
+  "validation": {
+    "projectPmMoveCount": 472,
+    "platinumMoveCount": 471,
+    "addedMoveIds": [
+      468,
+      469,
+      470,
+      471
+    ],
+    "fieldsAreRawArchiveDecode": true,
+    "runtimeEffectSemanticsVerified": false,
+    "canonicalGenerationCompatibilityVerified": false
+  },
+  "policies": [
+    "Do not use name similarity as proof of move mechanics.",
+    "Do not treat effect IDs as human-readable effects without validating the Project PM battle code or a verified effect table.",
+    "Do not mark the added moves as Gen IV-compatible solely because their records exist in a Platinum-based ROM."
+  ]
+}
