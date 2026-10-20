@@ -65,6 +65,26 @@ assert.equal(candidateRosterProfiles.counts.projectPmOverrides, 215, "candidate 
 assert.ok(candidateRosterProfiles.base.every((row) => row.length === 9 && row[2].length === 2 && row.slice(3).every((stat) => Number.isInteger(stat) && stat > 0)), "candidate base rows must contain two types and six positive base stats");
 assert.ok(Object.values(candidateRosterProfiles.project_pm_overrides).every((row) => row.length === 2 && row[0].length === 2 && !row[0].includes("Inconnu") && row[1].length === 6 && row[1].every((stat) => Number.isInteger(stat) && stat > 0)), "candidate CPUE overrides must have resolved types and six positive stats");
 const candidateBaseById = new Map(candidateRosterProfiles.base.map((row) => [row[1], row]));
+const candidateBaseByName = new Map(candidateRosterProfiles.base.map((row) => [row[0], row]));
+assert.equal(Object.keys(candidateRosterProfiles.project_pm_overrides).length, 215, "CPUE override keys must cover the audited 215 species");
+assert.ok(Object.keys(candidateRosterProfiles.project_pm_overrides).every((name) => candidateBaseByName.has(name)), "every CPUE override must resolve to a candidate species name");
+const candidateDeltaCounts = Object.entries(candidateRosterProfiles.project_pm_overrides).reduce((counts, [name, override]) => {
+  const baseRow = candidateBaseByName.get(name);
+  assert.ok(baseRow, `CPUE override ${name} must have a base species row`);
+  const typeChanged = JSON.stringify(baseRow[2]) !== JSON.stringify(override[0]);
+  const statsChanged = JSON.stringify(baseRow.slice(3)) !== JSON.stringify(override[1]);
+  if (typeChanged) counts.typesChanged++;
+  if (statsChanged) counts.statsChanged++;
+  if (typeChanged && statsChanged) counts.bothStatsAndTypesChanged++;
+  return counts;
+}, { typesChanged: 0, statsChanged: 0, bothStatsAndTypesChanged: 0 });
+assert.deepEqual(candidateDeltaCounts, {
+  typesChanged: candidateRosterProfiles.counts.typesChanged,
+  statsChanged: candidateRosterProfiles.counts.statsChanged,
+  bothStatsAndTypesChanged: candidateRosterProfiles.counts.bothStatsAndTypesChanged
+}, "candidate CPUE delta summary must be recomputed from base rows and override records");
+assert.ok(candidateRosterProfiles.base.every((row) => row.slice(3).every((stat) => stat <= 255)), "candidate base stats must fit unsigned ROM stat bytes");
+assert.ok(Object.values(candidateRosterProfiles.project_pm_overrides).every((row) => row[1].every((stat) => stat <= 255)), "candidate CPUE override stats must fit unsigned ROM stat bytes");
 for (const row of romRosterProfiles.base) {
   assert.deepEqual(candidateBaseById.get(row[1]), row, `existing base profile ${row[0]} must match candidate CPUF profile`);
 }
