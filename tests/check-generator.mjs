@@ -59,6 +59,8 @@ check("selected reference drives team candidate roster and scoring", () => {
   assert.match(html, /eligibleLeg=activeRoster\.filter/);
   assert.match(html, /pool=activeRoster\.filter/);
   assert.match(html, /const romRosterData =/);
+  assert.match(html, /verifiedProjectPmTypeOverrides=new Set\(\['Gardevoir','Togekiss'\]\)/);
+  assert.match(html, /verifiedProjectPmTypeOverrides\.has\(p\.name\)/);
   assert.match(html, /p\.baseStats=stats/);
   assert.match(html, /p\.off=Math\.max\(stats\.attack,stats\.specialAttack\)/);
   assert.equal(romRosterProfiles.base.length, 71);
