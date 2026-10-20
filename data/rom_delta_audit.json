@@ -140,14 +140,16 @@
     "berriesRaw": {
       "fieldDifferences": {
         "raw": 64,
-        "bytes": 64
+        "bytes": 64,
+        "stageDuration": 64
       },
       "bytePositionsWithDifferences": {
         "4": 64
       },
       "notes": [
-        "Les 64 entrées diffèrent uniquement au niveau brut sur au moins un champ; la comparaison octet par octet indique que l'octet d'index 4 diffère dans les 64 entrées.",
-        "La signification de cet octet et l'effet de baie correspondant doivent être confirmés avant toute interprétation en jeu."
+        "Comparaison octet par octet : l'octet d'index 4 diffère dans les 64 entrées.",
+        "Le layout de référence Gen IV dans pret/pokeplatinum/include/berry_data.h définit les champs BerryData comme size (u16, octets 0-1), firmness (2), baseYield (3), stageDuration (4), puis moistureDrainRate et les saveurs. L'écart observé correspond donc au champ stageDuration selon ce layout.",
+        "Cette lecture de structure est confirmée pour le format Platine de référence; elle ne certifie pas à elle seule que la structure Project PM n'a pas été modifiée, ni les conséquences exactes sur chaque temps de pousse."
       ]
     }
   },
@@ -164,5 +166,14 @@
     "Décoder et nommer les méthodes d'évolution et les apprentissages par identifiants vérifiés.",
     "Décoder les champs des objets et baies avant d'utiliser leurs effets dans les sets.",
     "Associer les données de dresseurs et leurs Pokémon à partir de la structure réelle, pas uniquement de l'index."
+  ],
+  "sources": [
+    {
+      "name": "pret/pokeplatinum BerryData layout",
+      "commit": "06c6e9a0348da283be8d9225d0bec03c349ff5c2",
+      "path": "include/berry_data.h",
+      "url": "https://github.com/pret/pokeplatinum/blob/06c6e9a0348da283be8d9225d0bec03c349ff5c2/include/berry_data.h",
+      "scope": "référence de structure pour Pokémon Platine original; non assimilée automatiquement au mod Project PM"
+    }
   ]
 }
