@@ -198,3 +198,12 @@ L'audit sert à circonscrire et contrôler la correction, pas encore à charger 
 - Dans Platine original CPUF, aucun emplacement de type des fiches espèces n'utilise l'ID 9, mais la capacité interne 174 l'utilise. Il faut conserver ce cas séparé : le type 9 canonique de Platine est `TYPE_MYSTERY`, et ne doit pas devenir Fée.
 - Pour l'entrée d'espèce interne ID 6 (candidat de correspondance Dracaufeu, identité par nom toujours à confirmer), les octets actuels sont `[10, 16]` dans CPUE : l'ID 16 correspond à `TYPE_DRAGON` dans la référence Gen IV épinglée. L'ancien override « Ténèbres » appartient à des empreintes différentes (`c589…` / `78b9…`) et reste historique/inactif; il n'est pas transféré aux ROM actuelles.
 - Le validateur `scripts/validate-rom-audits.mjs` contrôle maintenant les empreintes, les comptes, les IDs affectés, la séparation des profils et le conflit historique. L'audit documente les preuves sans déclarer l'intégralité des types Project PM certifiée et sans modifier automatiquement les autres overrides.
+
+## Audit des méthodes d'évolution — 2026-10-20
+
+- Ajout de `data/project_pm_evolution_method_audit.json` : les 246 enregistrements d'évolution CPUF et les 247 enregistrements CPUE de l'export sauvegardé sont comptés par méthode. Les comptes totalisent exactement les enregistrements observés.
+- La référence épinglée `pret/pokeplatinum/generated/evolution_methods.txt` définit les IDs canoniques 0 à 26. L'export Project PM contient deux enregistrements avec méthode 27, absente de cette liste :
+  - espèce source interne 223, paramètre 458, cible 224 ;
+  - espèce source interne 458, paramètre 223, cible 226.
+- Les paramètres se référencent mutuellement. C'est un indice de règle propre au mod, mais cela ne suffit pas à établir le déclencheur ni la sémantique exacte. Le nom de méthode reste volontairement inconnu tant que le code d'évolution de Project PM n'a pas été inspecté.
+- Le validateur d'audits contrôle maintenant les comptes par méthode, la référence canonique épinglée et les deux triples source/paramètre/cible. Aucun nom de méthode custom ni aucune règle d'évolution n'est injecté dans le générateur à ce stade.
