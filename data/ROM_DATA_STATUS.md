@@ -272,3 +272,12 @@ L'audit sert à circonscrire et contrôler la correction, pas encore à charger 
 - Pour les 71 espèces intégrées, cela couvre les 7 profils concernés par l'audit : Méganium, Milobellus, Gardevoir, Togekiss, Créhelf, Créfollet et Créfadet. Les types modifiés de Project PM qui ne sont pas couverts par cette confirmation restent provisoires et ne sont pas appliqués au score stratégique.
 - La base Platine originale n'est pas modifiée. Le test statique a été ajusté pour interdire le retour à une liste codée en dur limitée à Gardevoir et Togekiss.
 - Cette correction améliore l'application runtime d'une donnée déjà auditée; elle n'élargit pas la couverture au-delà des 71 espèces actuelles. Le workflow CI doit valider le nouveau changement avant certification.
+
+
+## Mesure explicite de la couverture du roster stratégique — 2026-10-20
+
+- Ajout de `data/rom_roster_coverage_audit.json`, croisé avec la référence canonique épinglée et les profils réellement utilisés par le générateur.
+- Couverture actuelle : **71 espèces sur 493** IDs canoniques (14,4 %), avec 71 IDs uniques, aucune collision d'ID et aucun profil hors plage. Les 71 entrées du roster actif correspondent aux 71 profils.
+- **422 espèces canoniques ne sont pas encore couvertes** par les profils stratégiques intégrés. L'audit liste précisément leurs IDs et symboles de référence pour guider les prochains lots.
+- Ce rapport mesure la couverture, pas la qualité des données ni la compatibilité Project PM. Il n'ajoute pas automatiquement les espèces manquantes au générateur : les noms français, types, statistiques et overrides doivent être validés avant chaque intégration.
+- Le validateur ROM compare les IDs couverts et manquants au complément exact de la référence canonique et vérifie les empreintes CPUF/CPUE. Le contrat d'outillage exige désormais la présence de cet audit.
