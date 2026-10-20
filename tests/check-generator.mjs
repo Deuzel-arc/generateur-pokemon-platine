@@ -237,7 +237,12 @@ check("selected reference drives team candidate roster and scoring", () => {
   assert.match(html, /p\.off=Math\.max\(stats\.attack,stats\.specialAttack\)/);
   assert.equal(romRosterProfiles.base.length, 71);
   assert.ok(romRosterProfiles.project_pm_overrides.Dracaufeu);
+
   assert.deepEqual(romRosterProfiles.project_pm_overrides.Dracaufeu[0], ["Feu", "Dragon"]);
+  assert.deepEqual(romRosterProfiles.project_pm_overrides.Jungko[0], ["Plante", "Dragon"]);
+  const embeddedRoster = html.match(/const romRosterData = (\{[\s\S]*?\});\s*const roster/);
+  assert.ok(embeddedRoster, "embedded ROM roster data block must be extractable");
+  assert.deepEqual(JSON.parse(embeddedRoster[1]), romRosterProfiles, "embedded index.html roster must exactly match the auditable JSON source");
   assert.deepEqual(romRosterProfiles.project_pm_overrides.Gardevoir[0], ["Psy", "Fée"]);
   assert.deepEqual(romRosterProfiles.project_pm_overrides.Togekiss[0], ["Fée", "Vol"]);
   for (const row of romRosterProfiles.base) {
