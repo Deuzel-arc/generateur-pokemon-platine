@@ -180,6 +180,17 @@ assert.equal(addedMoveDataAudit.validation.runtimeEffectSemanticsVerified, false
 assert.equal(addedMoveDataAudit.validation.canonicalGenerationCompatibilityVerified, false, "added moves must not be treated as Gen IV-compatible without validation");
 assert.ok(addedMoveDataAudit.records.every((row) => /^[0-9a-f]{32}$/.test(row.raw)), "every added move must preserve a 16-byte raw record");
 assert.equal(addedMoveDataAudit.validation.canonicalEffectSymbolCandidatesCrossReferenced, true, "added move audit must cross-reference candidate canonical effect symbols");
+assert.equal(addedMoveDataAudit.validation.canonicalEffectIndicesCheckedAgainstPinnedReference, true, "added move effect indices must be checked against the pinned canonical table");
+assert.deepEqual(
+  addedMoveDataAudit.records.map((row) => [row.id, row.effectId, row.canonicalEffectIndex, row.canonicalEffectSymbolCandidate]),
+  [
+    [468, 70, 70, "BATTLE_EFFECT_LOWER_SPEED_HIT"],
+    [469, 0, 0, "BATTLE_EFFECT_HIT"],
+    [470, 104, 104, "BATTLE_EFFECT_HIT_THREE_TIMES"],
+    [471, 186, 186, "BATTLE_EFFECT_REMOVE_SCREENS"],
+  ],
+  "added move effect IDs must match zero-based symbols in the pinned canonical reference",
+);
 assert.equal(addedMoveDataAudit.validation.identityCandidatesAreHypothesesOnly, true, "added move identity candidates must remain hypotheses");
 assert.equal(addedMoveDataAudit.validation.effectRuntimeSemanticsVerified, false, "candidate effect symbols must not certify Project PM runtime semantics");
 assert.deepEqual(
