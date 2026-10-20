@@ -162,3 +162,12 @@ L'information utilisateur a été appliquée strictement au type brut ID 9 de la
 - Test automatisé ajouté pour vérifier l'empreinte CPUE, les décomptes, la conservation de l'attaque CPUF et l'absence de transfert entre ROMs.
 
 L'audit sert à circonscrire et contrôler la correction, pas encore à charger automatiquement l'ensemble des données de la ROM dans le générateur. La correspondance complète espèces/attaques et les effets des attaques restent des tâches distinctes.
+
+
+## Vérification directe de l'audit Fée contre la base source — 2026-10-20
+
+- La base source conservée dans la bibliothèque a été matérialisée et relue directement, indépendamment des tests GitHub Actions : `rom_battle_database.json` (2 718 509 octets), avec les deux profils CPUF/CPUE et leurs empreintes attendues.
+- Les 31 IDs d'espèces et leurs positions de type listés dans `data/project_pm_fairy_type_audit.json` correspondent exactement aux entrées Project PM de la base source marquées par le libellé extrait `Inconnu` : 37 emplacements au total.
+- Les 8 IDs de capacités de l'audit correspondent exactement aux enregistrements dont `typeId = 9` dans le profil Project PM. Les champs puissance, précision, PP, effet, catégorie, cible, priorité et drapeaux correspondent tous à la source.
+- Le contrôle indépendant retrouve zéro espèce Project PM/Platine original portant le libellé extrait `Inconnu` dans CPUF, et exactement la capacité CPUF ID 174 avec `typeId = 9`. Cette capacité reste volontairement non remappée.
+- Résultat : **correspondance exacte audit ↔ base source pour les occurrences et champs consignés**. Cela confirme l'exactitude de l'inventaire, pas le nom canonique des espèces/capacités ni la sémantique des effets de combat. La portée de la traduction « Fée » reste CPUE uniquement.
