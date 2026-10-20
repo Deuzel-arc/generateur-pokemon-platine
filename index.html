@@ -200,7 +200,7 @@ document.getElementById('validate').addEventListener('click',()=>{
  const itemMainTags=state.strategies.map(s=>tagForStrategy[s]).filter(Boolean);
  const itemSecondaryTag=tagForSecondary[state.secondary]||null;
  function itemFit(item,p){
-   let score=0;if(state.dataSource==='multiplayer'&&p.types.includes('Ténèbres')){if(item==='Bandeau')score+=3;if(item==='Lunettes Sages')score+=3;}
+   let score=0;
    const offensive=['Orbe Vie','Mouchoir Choix','Bandeau Choix','Lunettes Choix','Ceinture Pro','Lentilscope'];
    const defensive=['Restes','Baie Sitrus','Herbe Blanche','Poudreclaire','Baie Prine','Baie Wiki','Baie Figuy','Baie Mago','Baie Gowav'];
    if(item==='Boue Noire')score+=p.types.includes('Poison')?55:-45;
