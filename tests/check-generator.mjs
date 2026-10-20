@@ -15,6 +15,22 @@ function check(name, fn) {
   catch (error) { checks.push({ name, status: "FAIL", message: error.message }); }
 }
 
+check("ROM mapping audit records cross-profile differences without certifying gameplay semantics", () => {
+  const audit = JSON.parse(readFileSync(new URL("../data/rom_mapping_audit.json", import.meta.url), "utf8"));
+  assert.equal(audit.schemaVersion, "1.0.0");
+  assert.equal(audit.source.platinum.sha256, romCatalog.profiles.platinum.sha256);
+  assert.equal(audit.source.project_pm.sha256, romCatalog.profiles.project_pm.sha256);
+  assert.equal(audit.crossRomDifferences.species.recordsDifferent, 500);
+  assert.equal(audit.crossRomDifferences.moves.recordsDifferent, 101);
+  assert.equal(audit.crossRomDifferences.levelUpLearnsets.recordsDifferent, 497);
+  assert.equal(audit.crossRomDifferences.evolutions.recordsDifferent, 33);
+  assert.equal(audit.crossRomDifferences.items.recordsDifferent, 165);
+  assert.equal(audit.moveIdsBeyondCanonicalRange.project_pm.levelUpReferencesToIds468Plus, 56);
+  assert.deepEqual(audit.moveIdsBeyondCanonicalRange.project_pm.referencesById, {"468": 38, "469": 10, "470": 5, "471": 3});
+  assert.equal(audit.moveIdsBeyondCanonicalRange.status, "usage_confirmed_names_unmapped");
+  assert.ok(audit.guardrails.some(rule => rule.includes("différences brutes")));
+});
+ 
 check("Canonical Gen IV identifier reference has exact bounded IDs and sentinels excluded", () => {
   assert.equal(gen4IdReference.source.commit, gen4ReferenceStatus.reference.commit);
   assert.equal(gen4IdReference.species.length, 493);
