@@ -53,8 +53,9 @@ GitHub Pages deployment is configured separately in `.github/workflows/pages.yml
 The original ROM binaries are intentionally not committed to this repository. With the exact CPUF and CPUE `.nds` files available locally, run:
 
 ```sh
-node scripts/audit-rom-type-bytes.mjs "/path/to/CPUF.nds" "/path/to/CPUE.nds"
-node scripts/audit-evolution-roms.mjs "/path/to/CPUF.nds" "/path/to/CPUE.nds"
+npm run audit:rom:types -- "/path/to/CPUF.nds" "/path/to/CPUE.nds"
+npm run audit:rom:evolutions -- "/path/to/CPUF.nds" "/path/to/CPUE.nds"
+npm run audit:rom:names -- "/path/to/CPUF.nds" "/path/to/CPUE.nds"
 ```
 
-Both commands verify the game code and exact SHA-256 before parsing NitroFS/NARC records. They fail closed if a different ROM revision is supplied. Their output is a raw-byte audit, not a claim that custom Project PM mechanics or every internal ID's display name has been semantically decoded. The CI suite validates the checked-in audit summaries and guardrails; it does not need or redistribute the ROM binaries.
+All three commands verify the game code and exact SHA-256 before parsing NitroFS/NARC records. They fail closed if a different ROM revision is supplied. Their output is a raw-byte audit, not a claim that custom Project PM mechanics or every internal ID's display name has been semantically decoded. The CI suite validates the checked-in audit summaries and guardrails; it does not need or redistribute the ROM binaries.
