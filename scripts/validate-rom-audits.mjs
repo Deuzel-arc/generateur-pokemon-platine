@@ -10,6 +10,7 @@ const hypotheses = readJson("data/rom_identity_hypotheses.json");
 const special = readJson("data/rom_special_entry_audit.json");
 const canonical = readJson("data/gen4_id_reference.json");
 const projectPmTypes = readJson("data/project_pm_type_mapping.json");
+const typeByteAudit = readJson("data/project_pm_type_byte_audit.json");
 const itemReference = readJson("data/gen4_item_id_reference.json");
 
 const itemArchiveDiff = readJson("data/project_pm_item_archive_diff.json");
@@ -96,6 +97,25 @@ assert.equal(projectPmTypes.mappings[0].nameFr, "Fée", "the confirmed Project P
 assert.equal(projectPmTypes.mappings[0].scope, "Project PM uniquement", "the Fairy mapping must remain Project PM-only");
 assert.equal(projectPmTypes.mappings[0].status, "user_confirmed", "do not silently upgrade user confirmation to independent ROM verification");
 assert.equal(projectPmTypes.mappings[0].appliesTo, "Valeurs de type brut ID 9 dans les tables d'espèces et d'attaques de cette ROM exacte.", "the mapping must stay limited to the declared raw tables");
+
+assert.equal(typeByteAudit.source.databaseSha256, "eba0d4f71b26d3d190d53c0e3da8b11d7c18f08089a712e381d1087261a14e78", "type-byte audit must identify the exact saved extraction");
+assert.equal(typeByteAudit.source.platinum.sha256, catalog.profiles.platinum.sha256, "type-byte audit must match current Platinum hash");
+assert.equal(typeByteAudit.source.project_pm.sha256, catalog.profiles.project_pm.sha256, "type-byte audit must match current Project PM hash");
+assert.equal(typeByteAudit.source.canonicalReference.commit, canonical.source.commit, "type-byte audit must use the pinned Gen IV type reference");
+assert.equal(typeByteAudit.source.canonicalReference.typeId16, "TYPE_DRAGON", "canonical type ID 16 must remain Dragon");
+assert.equal(typeByteAudit.source.canonicalReference.typeId9, "TYPE_MYSTERY", "canonical type ID 9 must remain Mystery outside Project PM");
+assert.deepEqual(typeByteAudit.typeId9.platinum.speciesEntriesContainingId, [], "original Platinum species must not receive the Project PM Fairy mapping");
+assert.deepEqual(typeByteAudit.typeId9.platinum.moveEntriesContainingId, [174], "original Platinum move type ID 9 must remain separately recorded");
+assert.equal(typeByteAudit.typeId9.project_pm.speciesEntriesContainingId.length, 31, "Project PM type ID 9 audit must cover all affected species records");
+assert.equal(typeByteAudit.typeId9.project_pm.speciesSlotOccurrences, 37, "Project PM type ID 9 species slots must retain exact count");
+assert.deepEqual(typeByteAudit.typeId9.project_pm.moveEntriesContainingId, [66, 140, 186, 204, 236, 295, 296, 461], "Project PM type ID 9 moves must remain fully enumerated");
+assert.equal(typeByteAudit.typeId9.project_pm.moveSlotOccurrences, 8, "Project PM type ID 9 move slots must retain exact count");
+assert.equal(typeByteAudit.typeId9.project_pm.confirmedProjectPmLabel, projectPmTypes.mappings[0].nameFr, "type-byte audit label must match the user-confirmed mapping");
+assert.deepEqual(typeByteAudit.charizardCandidate.project_pm.rawTypeIds, [10, 16], "current Project PM species ID 6 raw type bytes must remain intact");
+assert.equal(typeByteAudit.charizardCandidate.project_pm.canonicalSecondaryTypeSymbol, "TYPE_DRAGON", "current raw secondary type ID 16 must map to Dragon in the pinned reference");
+assert.equal(typeByteAudit.charizardCandidate.historicalConflict.previousOverrideValue, "Ténèbres", "historical conflict must remain documented rather than silently erased");
+assert.equal(typeByteAudit.charizardCandidate.historicalConflict.previousProjectPmSha256, "78b95905031e0524942ac079afe2d444a6bcfb47aae7a07106800c5591d970f7", "historical override provenance hash must remain explicit");
+assert.equal(typeByteAudit.policies.doNotTransferOverridesAcrossRomHashes, true, "overrides must not be inherited across differing ROM hashes");
 
 
 const itemFieldDiff = readJson("data/project_pm_item_field_diff_summary.json");
