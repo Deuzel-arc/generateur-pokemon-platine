@@ -89,3 +89,15 @@ Le schéma de données de la décompilation sépare explicitement les propriét�
 ## Conclusion
 
 **LOT NON CERTIFIÉ INTÉGRALEMENT.** La structure de référence et les identifiants sont accessibles et le contrôle structurel est effectué. Il reste à lier chaque objet à ses données exactes et à vérifier les effets et noms un par un avant d'autoriser la base à alimenter le générateur.
+
+
+## Comparaison binaire CPUF / CPUE — 2026-10-20
+
+Le rapport [data/project_pm_item_archive_diff.json](../data/project_pm_item_archive_diff.json) consigne une comparaison des membres bruts de pl_item_data.narc extraits des deux ROMs identifiées par leurs empreintes SHA-256.
+
+- Les deux archives partagent les index 0–445 : **281 entrées identiques octet par octet et 165 entrées différentes**.
+- Project PM possède **24 entrées supplémentaires aux index 446–469**. Le rapport conserve l’empreinte SHA-256 de chaque entrée supplémentaire sans lui inventer de nom.
+- Cette comparaison établit une différence binaire concrète entre les profils. Elle montre aussi qu’il serait incorrect d’hériter automatiquement les prix, paramètres ou effets de Platine original pour les index modifiés de Project PM.
+- Elle ne certifie toujours pas le nom canonique de chaque index partagé et ne suffit pas à reconstruire toute la table ID logique → index. La table item_data.narc (442 membres) reste une archive distincte.
+
+Le validateur automatisé contrôle les nombres, la liste des index modifiés, les 24 empreintes, et les règles interdisant l’attribution de noms par position ou l’héritage d’effets entre ROMs.
