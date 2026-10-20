@@ -127,3 +127,11 @@ Un contrôle local indépendant a été exécuté sur `rom_battle_database.json`
 - Toutes les cibles d'évolution référencées sont dans les limites de la table d'espèces du profil.
 - **Aucune anomalie structurelle détectée dans ces contrôles.** Cela ne certifie ni les noms, ni les effets de combat, ni l'identité nationale des entrées spéciales.
 - Le profil Project PM contient 31 entrées d'espèces avec au moins un type décodé comme `Inconnu`. Les octets bruts sont conservés; l'hypothèse que l'ID de type concerné représente Fée doit être confirmée par une table de types ou un contrôle de combat avant de remplacer ce statut.
+
+## Enquête ciblée sur l'identifiant de type 9 — 2026-10-20
+
+- Dans la table des espèces Project PM, la valeur brute d'ID de type 9 est actuellement affichée « Inconnu » par le décodeur. Elle apparaît dans 31 enregistrements d'espèces; dans la table des attaques, elle apparaît notamment sur les attaques 66, 140, 186, 204, 236, 295, 296 et 461.
+- L'hypothèse « type Fée » est plausible car plusieurs entrées correspondent à des espèces qui ont reçu le type Fée dans les générations suivantes (par ex. Mélofée, Rondoudou, M. Mime, Togepi, Marill, Snubbull, Tarsal, Mysdibule et Toudoudou).
+- **Cette hypothèse n'est pas encore certifiée** : d'autres entrées portant l'ID 9, comme Méganium (ID 154), ne correspondent pas à la liste canonique des espèces ayant gagné le type Fée. Cela peut indiquer des changements propres à Project PM, un mapping différent, ou une table de types qui doit être décodée directement. La seule fréquence des valeurs ne suffit pas à trancher.
+- Décision conservatrice : ne pas remplacer automatiquement « Inconnu » par « Fée » dans les données runtime. Garder l'ID brut 9, la liste des occurrences et l'hypothèse séparée jusqu'à ce que la table des types ou le calcul d'efficacité en combat soit contrôlé dans la ROM Project PM exacte.
+- Prochaine vérification technique : retrouver dans NitroFS les données de table d'efficacité des types et/ou le code/table qui relie les IDs internes aux noms, puis comparer au moins plusieurs cas discriminants. Les empreintes CPUF/CPUE actuelles doivent rester attachées à chaque résultat.
