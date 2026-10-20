@@ -135,3 +135,11 @@ Un contrôle local indépendant a été exécuté sur `rom_battle_database.json`
 - **Cette hypothèse n'est pas encore certifiée** : d'autres entrées portant l'ID 9, comme Méganium (ID 154), ne correspondent pas à la liste canonique des espèces ayant gagné le type Fée. Cela peut indiquer des changements propres à Project PM, un mapping différent, ou une table de types qui doit être décodée directement. La seule fréquence des valeurs ne suffit pas à trancher.
 - Décision conservatrice : ne pas remplacer automatiquement « Inconnu » par « Fée » dans les données runtime. Garder l'ID brut 9, la liste des occurrences et l'hypothèse séparée jusqu'à ce que la table des types ou le calcul d'efficacité en combat soit contrôlé dans la ROM Project PM exacte.
 - Prochaine vérification technique : retrouver dans NitroFS les données de table d'efficacité des types et/ou le code/table qui relie les IDs internes aux noms, puis comparer au moins plusieurs cas discriminants. Les empreintes CPUF/CPUE actuelles doivent rester attachées à chaque résultat.
+
+## Mapping de type fourni par l'utilisateur — 2026-10-20
+
+- L'utilisateur confirme que le type affiché « Inconnu » dans la ROM multijoueur Project PM correspond au type **Fée**.
+- Cette information est enregistrée dans `data/project_pm_type_mapping.json`, avec le profil CPUE et l'empreinte SHA-256 exacte de la ROM concernée.
+- Portée limitée : ce mapping concerne uniquement l'ID brut 9 du profil Project PM. Il ne doit pas être appliqué à la ROM originale CPUF ni à d'autres versions de ROM.
+- Statut : `user_confirmed`. La confirmation utilisateur est retenue comme information de référence pour la suite; une vérification binaire indépendante de la table interne reste une tâche technique distincte.
+- Prochaine étape : ajouter un test automatisé pour garantir que le mapping Fée est appliqué uniquement au profil Project PM et n'altère pas les types du profil original, puis examiner les données stratégiques où ce type intervient.
