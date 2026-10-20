@@ -366,6 +366,26 @@ check("Project PM Fairy occurrence audit preserves scope and raw IDs", () => {
   assert.ok(projectPmFairyAudit.rules.some(rule => rule.includes("CPUF")));
   assert.ok(projectPmFairyAudit.projectPmSpecies.every(entry => Number.isInteger(entry.id) && Array.isArray(entry.typeSlots)));
   assert.ok(projectPmFairyAudit.projectPmMoves.every(entry => Number.isInteger(entry.id) && Number.isInteger(entry.effectId)));
+  assert.deepEqual(projectPmFairyAudit.projectPmSpecies.map(entry => [entry.id, entry.typeSlots]), [
+    [35, [0, 1]], [36, [0, 1]], [39, [1]], [40, [1]], [122, [1]], [154, [1]],
+    [173, [0, 1]], [175, [0, 1]], [176, [0]], [183, [1]], [184, [1]], [200, [1]],
+    [209, [0, 1]], [210, [0, 1]], [280, [1]], [281, [1]], [282, [1]], [303, [1]],
+    [314, [1]], [333, [0]], [334, [1]], [350, [1]], [359, [1]], [370, [1]],
+    [429, [1]], [439, [1]], [467, [1]], [468, [0]], [480, [1]], [481, [1]], [482, [1]]
+  ]);
+  assert.deepEqual(projectPmFairyAudit.projectPmMoves.map(move => [
+    move.id, move.power, move.accuracy, move.pp, move.effectId, move.category,
+    move.targetId, move.priority, move.flags
+  ]), [
+    [66, 90, 90, 10, 68, "physical", 0, 0, 0],
+    [140, 75, 100, 10, 3, "special", 0, 0, 0],
+    [186, 0, 75, 10, 49, "status", 0, 0, 0],
+    [204, 0, 100, 20, 58, "status", 0, 0, 0],
+    [236, 0, 0, 5, 132, "status", 16, 0, 0],
+    [295, 80, 100, 10, 0, "special", 4, 0, 0],
+    [296, 50, 0, 15, 17, "special", 4, 0, 0],
+    [461, 95, 100, 15, 71, "special", 0, 0, 0]
+  ]);
 });
 
 check("roster species IDs, names, types and overrides are structurally consistent", () => {
