@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "État de réconciliation avec la référence Platine Gen IV",
+  "reference": {
+    "repository": "pret/pokeplatinum",
+    "commit": "06c6e9a0348da283be8d9225d0bec03c349ff5c2",
+    "commitUrl": "https://github.com/pret/pokeplatinum/commit/06c6e9a0348da283be8d9225d0bec03c349ff5c2",
+    "files": {
+      "generated/species.txt": {
+        "lineCount": 496,
+        "includes": [
+          "SPECIES_NONE",
+          "SPECIES_EGG",
+          "SPECIES_BAD_EGG"
+        ],
+        "interpretation": "493 species ordinaires plus trois entrées spéciales; la présence de formes ou de slots additionnels dans les tables ROM doit être réconciliée."
+      },
+      "generated/moves.txt": {
+        "lineCount": 469,
+        "includes": [
+          "MOVE_NONE",
+          "MAX_MOVES"
+        ],
+        "interpretation": "467 identifiants de capacités entre MOVE_NONE et MAX_MOVES. Les tables extraites contiennent 471 entrées pour Platine et 472 pour Project PM; ne pas supposer une correspondance directe par index avant d'expliquer l'écart."
+      },
+      "generated/abilities.txt": {
+        "lineCount": 124,
+        "includes": [
+          "ABILITY_NONE"
+        ],
+        "interpretation": "Référence d'identifiants de talents, à comparer aux valeurs brutes avant de produire des noms localisés."
+      },
+      "generated/pokemon_types.txt": {
+        "lineCount": 19,
+        "includes": [
+          "TYPE_MYSTERY",
+          "NUM_POKEMON_TYPES"
+        ],
+        "interpretation": "18 identifiants de types internes avant le marqueur final; Mystery est un identifiant Gen IV et ne doit pas être confondu avec Fée."
+      },
+      "generated/evolution_methods.txt": {
+        "lineCount": 27,
+        "includes": [
+          "EVO_NONE"
+        ],
+        "interpretation": "Référence des identifiants de méthodes d'évolution; les paramètres extraits restent à valider contre la structure binaire."
+      }
+    }
+  },
+  "status": "reference_pinned_not_yet_fully_reconciled",
+  "blockingRules": [
+    "Ne pas joindre les noms de capacités aux enregistrements extraits par simple position tant que les 3 entrées excédentaires ne sont pas expliquées.",
+    "Ne pas interpréter un ID de type Project PM comme un type officiel sans vérifier la table de types de la ROM modifiée.",
+    "Ne pas présenter les méthodes d'évolution ou les effets d'objets comme certifiés sur la seule base de leurs champs bruts."
+  ]
+}
