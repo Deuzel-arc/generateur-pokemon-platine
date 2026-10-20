@@ -28,6 +28,7 @@ const required = [
   "../data/project_pm_fairy_type_audit.json",
   "../data/project_pm_fairy_move_identity_guard.json",
   "../data/rom_roster_coverage_audit.json",
+  "../data/gen4_french_species_name_reference.json",
   "../docs/ACCELERATION_TOOLING.md",
   "../.github/dependabot.yml",
   "../package-lock.json"
