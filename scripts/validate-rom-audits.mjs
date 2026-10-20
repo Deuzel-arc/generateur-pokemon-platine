@@ -12,6 +12,24 @@ const canonical = readJson("data/gen4_id_reference.json");
 const projectPmTypes = readJson("data/project_pm_type_mapping.json");
 const itemReference = readJson("data/gen4_item_id_reference.json");
 
+const itemArchiveDiff = readJson("data/project_pm_item_archive_diff.json");
+assert.equal(itemArchiveDiff.source.platinum.gameCode, "CPUF", "item archive diff must identify original Platinum");
+assert.equal(itemArchiveDiff.source.projectPm.gameCode, "CPUE", "item archive diff must identify Project PM");
+assert.equal(itemArchiveDiff.source.platinum.entries, 446, "original Platinum item archive count must remain 446");
+assert.equal(itemArchiveDiff.source.projectPm.entries, 470, "Project PM item archive count must remain 470");
+assert.equal(itemArchiveDiff.results.sharedIndexRange.count, 446, "shared item archive index range must contain 446 entries");
+assert.equal(itemArchiveDiff.results.exactRawEntryMatches, 281, "exact raw item archive matches must remain audited");
+assert.equal(itemArchiveDiff.results.rawEntryDifferencesAtSharedIndices, 165, "shared-index raw differences must remain audited");
+assert.equal(itemArchiveDiff.results.differingArchiveIndices.length, 165, "differing archive index list must match its count");
+assert.deepEqual(itemArchiveDiff.results.extraEntries, { firstIndex: 446, lastIndex: 469, count: 24, status: "unidentified_project_pm_extra_entry" }, "Project PM extra items must remain separate and unnamed");
+assert.equal(itemArchiveDiff.results.extraEntrySha256.length, 24, "all 24 extra raw entries must have hashes");
+assert.equal(new Set(itemArchiveDiff.results.extraEntrySha256).size, 24, "extra raw entry hashes must be unique");
+assert.equal(itemArchiveDiff.policy.noNameInferenceFromPosition, true, "item audit must prohibit assigning names from position alone");
+assert.equal(itemArchiveDiff.policy.noCrossRomEffectInheritance, true, "item audit must prohibit inheriting effects across ROMs");
+assert.equal(itemArchiveDiff.policy.extraEntryNamingStatus, "unidentified_until_semantic_validation", "extra Project PM entries must remain unidentified until validation");
+assert.equal(itemArchiveDiff.policy.mappingStatus, "structural_diff_verified_semantic_mapping_pending", "structural differences must not be described as semantic certification");
+
+
 assert.equal(itemReference.source.commit, canonical.source.commit, "item reference must use the same pinned Gen IV source commit");
 assert.equal(itemReference.itemIds.length, 468, "canonical item reference must cover logical IDs 0–467");
 assert.deepEqual(itemReference.itemIds.map((row) => row.id), Array.from({ length: 468 }, (_, id) => id), "canonical item IDs must be sequential and explicit");
