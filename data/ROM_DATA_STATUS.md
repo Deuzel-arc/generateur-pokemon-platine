@@ -42,3 +42,18 @@ Pour chaque ROM : système de fichiers NitroFS parcouru, archives NARC reconnues
 4. Produire un catalogue espèce/attaque/objet normalisé pour le navigateur.
 5. Intégrer ce catalogue au générateur avec tests automatisés sur les deux profils.
 6. Vérifier l'interface et les tests statiques/navigateur après chaque changement.
+
+## Vérification automatisée — 2026-10-20
+
+- Le workflow `Generator checks` a réussi sur le commit `01006997e7e8ff83565f9f04c6b2e080479f0ef2`, après mise à jour des tests navigateur pour vérifier le profil à travers le résumé généré plutôt que via un élément d'interface supprimé.
+- Les tests de provenance du manifeste et des overrides vérifiés passent également dans le workflow de ce commit.
+- Les modifications ultérieures retirent un bonus de compatibilité d'objet fondé sur le type Ténèbres non réconcilié; le workflow correspondant a réussi pour le déploiement mais son job de tests a précédemment échoué sur l'ancien test navigateur. Le test navigateur a ensuite été corrigé et le workflow de commit `01006997e7e8ff83565f9f04c6b2e080479f0ef2` a passé les tests.
+- Le commit `4c44c0dcb86d98b35dfa2e12d2e339324b347957` contient la suppression du bonus restant; une nouvelle exécution de tests de bout en bout sur le HEAD actuel est nécessaire avant de certifier l'état final.
+
+## Avancement estimatif (non mesuré automatiquement)
+
+- Décodage sémantique des deux ROM : 25 %.
+- Enrichissement validé de la base : 28 %.
+- Intégration réelle au générateur : 14 %.
+
+Ces chiffres ne représentent pas la proportion de toutes les ressources internes décodées; ils expriment l'avancement du périmètre utile au générateur. Le catalogue reste partiellement décodé et n'est pas encore chargé dynamiquement par `index.html`.
