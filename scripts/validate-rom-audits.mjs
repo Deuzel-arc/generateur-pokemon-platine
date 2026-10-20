@@ -24,6 +24,14 @@ const fairyMoveIdentityGuard = readJson("data/project_pm_fairy_move_identity_gua
 const fairyMoveSemanticsAudit = readJson("data/project_pm_fairy_move_semantics_audit.json");
 const levelUpMoveUsageAudit = readJson("data/project_pm_levelup_move_usage_audit.json");
 
+assert.equal(fairyMoveSemanticsAudit.crossRomConclusion.status, "cpuF_raw_move_records_crosschecked_for_all_eight_cpue_fairy_ids", "CPUF/CPUE Fairy-ID cross-check must remain explicit");
+assert.equal(fairyMoveSemanticsAudit.crossRomConclusion.cpuFTypeId9OccurrencesAmongTheseIds, 0, "none of the eight corresponding CPUF records may be mislabelled as Project PM Fairy");
+assert.deepEqual(fairyMoveSemanticsAudit.crossRomConclusion.sameDisplayNameIds, [186, 204, 236], "only the three same-name IDs should be described as name-matched");
+assert.ok(fairyMoveSemanticsAudit.crossRomConclusion.limitations.includes("Les effets de combat CPUE restent non certifiés."), "CPUE move effects must remain marked unverified");
+assert.equal(levelUpMoveUsageAudit.platinumNameCrosscheck.status, "names_crosschecked_for_eight_project_pm_fairy_type_ids", "CPUF name cross-check must stay scoped to the eight IDs");
+assert.deepEqual(levelUpMoveUsageAudit.moves.filter((move) => move.platinumNameFrFromNameBank).map((move) => move.moveId), [66, 140, 186, 204, 236, 295, 296, 461], "CPUF name cross-check must cover exactly the eight CPUE Fairy IDs");
+
+
 assert.equal(candidateRosterProfiles.status, "candidate_full_roster_493_needs_semantic_and_runtime_review", "493-species candidate must not be treated as integrated runtime data");
 assert.equal(candidateRosterProfiles.policy.runtimeIntegrated, false, "candidate roster must remain out of runtime until reviewed");
 assert.equal(candidateRosterProfiles.source.platinumSha256, catalog.profiles.platinum.sha256, "candidate roster must match CPUF ROM hash");
