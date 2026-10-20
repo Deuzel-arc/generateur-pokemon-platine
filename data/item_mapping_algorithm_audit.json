@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Audit de l'algorithme canonique de mapping des objets — Pokémon Platine",
+  "status": "canonical_build_algorithm_verified_rom_field_mapping_not_exhaustively_certified",
+  "source": {
+    "repository": "pret/pokeplatinum",
+    "commit": "06c6e9a0348da283be8d9225d0bec03c349ff5c2",
+    "files": {
+      "tools/dataproc/src/itemproc.c": {
+        "blobSha": "728dcdb1ecc53cd540444e2898cebc65dd38c6f4",
+        "inspectedFunctions": [
+          "main",
+          "has_data",
+          "proc_item",
+          "add_idmap"
+        ],
+        "findings": [
+          "main initialise l'énumération Item avec le filtre has_data.",
+          "La boucle parcourt les IDs logiques dans l'ordre de l'énumération.",
+          "Pour chaque entrée avec données, proc_item charge le JSON res/items/data/<symbol sans ITEM_ en minuscules>.json et add_idmap reçoit iter_data++, puis l'index de données augmente d'une unité.",
+          "Pour ITEM_UNUSED_*, aucune entrée de données n'est ajoutée et add_idmap reçoit un index factice 0."
+        ]
+      },
+      "generated/items.txt": {
+        "blobSha": "8a1d867d1739c0ea9c0c8ab2e8ca0a73268fd791",
+        "lineCount": 469,
+        "findings": [
+          "La liste comprend 468 IDs d'objets 0–467 plus MAX_ITEMS; les IDs 113–134 sont les 22 symboles ITEM_UNUSED_."
+        ]
+      },
+      "include/item.h": {
+        "blobSha": "3ba58c984c91b270474a7b84b872784e2fcda08e",
+        "findings": [
+          "La structure ItemData de référence est déclarée avec price u16, holdEffect et effectParam u8, puis les champs d'effets/usage et une union de 20 octets; taille attendue 34 octets dans l'export étudié."
+        ]
+      }
+    }
+  },
+  "derivation": {
+    "logicalIdRange": [
+      0,
+      467
+    ],
+    "reservedIds": {
+      "from": 113,
+      "to": 134,
+      "count": 22
+    },
+    "nonReservedCount": 446,
+    "formula": "archiveIndex = logicalItemId - count of reserved ITEM_UNUSED IDs strictly below logicalItemId",
+    "sampleAnchors": [
+      {
+        "logicalId": 112,
+        "archiveIndex": 112
+      },
+      {
+        "logicalId": 135,
+        "archiveIndex": 113
+      },
+      {
+        "logicalId": 150,
+        "archiveIndex": 128
+      },
+      {
+        "logicalId": 467,
+        "archiveIndex": 445
+      }
+    ],
+    "meaning": "Cette formule est démontrée pour l'ordre de construction canonique pret/pokeplatinum à ce commit."
+  },
+  "romComparison": {
+    "CPUF": {
+      "archiveEntries": 446,
+      "rawRecordsValidated": 446,
+      "exportConsistencyErrors": 0,
+      "canonicalFullFieldComparison": "not yet performed"
+    },
+    "CPUE": {
+      "archiveEntries": 470,
+      "rawRecordsValidated": 470,
+      "exportConsistencyErrors": 0,
+      "canonicalFullFieldComparison": "not applicable without separate Project PM source/runtime specification"
+    },
+    "caveat": "La preuve de l'algorithme source ne prouve pas à elle seule que chaque entrée binaire de la ROM CPUF correspond octet pour octet au JSON canonique compilé. Les exports bruts et décodés sont cohérents entre eux; la comparaison exhaustive ROM-vers-source reste ouverte."
+  },
+  "nextSteps": [
+    "Comparer les 446 enregistrements CPUF avec les JSON canoniques res/items/data/*.json après conversion des énumérations et champs compactés en valeurs binaires.",
+    "Vérifier les champs de l'union et les paramètres dérivés pour éviter de comparer seulement les prix et les champs simples.",
+    "Conserver CPUE dans une piste séparée tant qu'aucune spécification indépendante de Project PM ne valide les 24 entrées supplémentaires."
+  ]
+}
