@@ -3924,37 +3924,100 @@
     "projectPmPlItemDataArchiveEntries": 470,
     "platinumItemDataArchiveEntries": 442,
     "projectPmItemDataArchiveEntries": 442,
-    "status": "candidate_mapping_anchor_checked_full_ROM_semantic_validation_pending",
-    "interpretation": "Le mapping candidat est construit en conservant l'ordre des IDs logiques canoniques et en retirant les 22 slots réservés 113–134. Contrôles d'ancrage sur l'extraction CPUF : ITEM_MASTER_BALL ID 1 → archive 1, prix 0; ITEM_ULTRA_BALL ID 2 → archive 2, prix 1200; ITEM_ADAMANT_ORB ID 135 → archive 113, prix 10000; ITEM_LUSTROUS_ORB ID 136 → archive 114, prix 10000. Ces ancres sont cohérentes avec le contenu brut extrait et valident la règle de décalage aux points contrôlés, mais ne remplacent pas encore une comparaison exhaustive des 446 entrées ni une reconstruction indépendante de sItemArchiveIDs pour chaque ROM. Le mapping est donc un candidat étayé, pas encore une certification sémantique complète. Les 24 entrées supplémentaires de Project PM restent hors mapping jusqu'à leur identification.",
+    "status": "candidate_mapping_13_price_anchors_checked_full_field_validation_pending",
+    "interpretation": "Le mapping candidat est construit en suivant l'ordre des IDs logiques canoniques et en sautant les 22 slots réservés 113–134. Treize ancres réparties sur l'ensemble de la table ont un prix concordant entre le JSON source épinglé et l'entrée brute CPUF à l'index candidat. Cela étaye la règle de décalage, mais ne remplace pas une comparaison exhaustive de tous les champs des 446 entrées ni une reconstruction indépendante de sItemArchiveIDs pour chaque ROM. Le mapping reste candidat, pas une certification sémantique complète. Les 24 entrées supplémentaires de Project PM restent hors mapping jusqu'à leur identification.",
     "mappingRule": "archiveIndex = logicalItemId - numberOfReservedUnusedIdsLessThanLogicalItemId; reserved IDs 113–134 map to null",
     "verifiedAnchors": [
       {
-        "logicalItemId": 1,
-        "symbol": "ITEM_MASTER_BALL",
-        "archiveIndex": 1,
-        "observedPrice": 0,
-        "validation": "raw CPUF item data entry"
+        "logicalItemId": 17,
+        "symbol": "ITEM_POTION",
+        "archiveIndex": 17,
+        "observedPrice": 300,
+        "validation": "source JSON at pinned pret/pokeplatinum commit and raw CPUF item data price match"
       },
       {
-        "logicalItemId": 2,
-        "symbol": "ITEM_ULTRA_BALL",
-        "archiveIndex": 2,
-        "observedPrice": 1200,
-        "validation": "raw CPUF item data entry"
+        "logicalItemId": 80,
+        "symbol": "ITEM_SUN_STONE",
+        "archiveIndex": 80,
+        "observedPrice": 2100,
+        "validation": "source JSON at pinned pret/pokeplatinum commit and raw CPUF item data price match"
+      },
+      {
+        "logicalItemId": 100,
+        "symbol": "ITEM_CLAW_FOSSIL",
+        "archiveIndex": 100,
+        "observedPrice": 1000,
+        "validation": "source JSON at pinned pret/pokeplatinum commit and raw CPUF item data price match"
+      },
+      {
+        "logicalItemId": 112,
+        "symbol": "ITEM_GRISEOUS_ORB",
+        "archiveIndex": 112,
+        "observedPrice": 10000,
+        "validation": "source JSON at pinned pret/pokeplatinum commit and raw CPUF item data price match"
       },
       {
         "logicalItemId": 135,
         "symbol": "ITEM_ADAMANT_ORB",
         "archiveIndex": 113,
         "observedPrice": 10000,
-        "validation": "raw CPUF item data entry"
+        "validation": "source JSON at pinned pret/pokeplatinum commit and raw CPUF item data price match"
       },
       {
-        "logicalItemId": 136,
-        "symbol": "ITEM_LUSTROUS_ORB",
-        "archiveIndex": 114,
-        "observedPrice": 10000,
-        "validation": "raw CPUF item data entry"
+        "logicalItemId": 150,
+        "symbol": "ITEM_CHESTO_BERRY",
+        "archiveIndex": 128,
+        "observedPrice": 20,
+        "validation": "source JSON at pinned pret/pokeplatinum commit and raw CPUF item data price match"
+      },
+      {
+        "logicalItemId": 200,
+        "symbol": "ITEM_CHILAN_BERRY",
+        "archiveIndex": 178,
+        "observedPrice": 20,
+        "validation": "source JSON at pinned pret/pokeplatinum commit and raw CPUF item data price match"
+      },
+      {
+        "logicalItemId": 250,
+        "symbol": "ITEM_DRAGON_FANG",
+        "archiveIndex": 228,
+        "observedPrice": 100,
+        "validation": "source JSON at pinned pret/pokeplatinum commit and raw CPUF item data price match"
+      },
+      {
+        "logicalItemId": 300,
+        "symbol": "ITEM_ZAP_PLATE",
+        "archiveIndex": 278,
+        "observedPrice": 1000,
+        "validation": "source JSON at pinned pret/pokeplatinum commit and raw CPUF item data price match"
+      },
+      {
+        "logicalItemId": 350,
+        "symbol": "ITEM_TM23",
+        "archiveIndex": 328,
+        "observedPrice": 3000,
+        "validation": "source JSON at pinned pret/pokeplatinum commit and raw CPUF item data price match"
+      },
+      {
+        "logicalItemId": 400,
+        "symbol": "ITEM_TM73",
+        "archiveIndex": 378,
+        "observedPrice": 2000,
+        "validation": "source JSON at pinned pret/pokeplatinum commit and raw CPUF item data price match"
+      },
+      {
+        "logicalItemId": 445,
+        "symbol": "ITEM_OLD_ROD",
+        "archiveIndex": 423,
+        "observedPrice": 0,
+        "validation": "source JSON at pinned pret/pokeplatinum commit and raw CPUF item data price match"
+      },
+      {
+        "logicalItemId": 467,
+        "symbol": "ITEM_SECRET_KEY",
+        "archiveIndex": 445,
+        "observedPrice": 0,
+        "validation": "source JSON at pinned pret/pokeplatinum commit and raw CPUF item data price match"
       }
     ]
   },
@@ -3963,6 +4026,7 @@
     "Ne jamais joindre les entrées pl_item_data.narc aux IDs logiques par position sur la seule base de l'égalité des comptes.",
     "Décoder les effets des objets uniquement après récupération du mapping ID logique → dataID d'archive et validation de la structure de chaque enregistrement.",
     "Ne pas transférer les 24 entrées Project PM supplémentaires vers Platine original ni leur attribuer des noms sans preuve.",
-    "Le mapping archiveIndex est candidat et validé sur les quatre ancres consignées; ne pas considérer la base entière comme sémantiquement certifiée avant contrôle exhaustif et comparaison des deux profils ROM."
+    "Le mapping archiveIndex est candidat et validé sur les quatre ancres consignées; ne pas considérer la base entière comme sémantiquement certifiée avant contrôle exhaustif et comparaison des deux profils ROM.",
+    "Le mapping archiveIndex est candidat et contrôlé sur treize ancres de prix source/CPUF; ne pas considérer la base entière comme sémantiquement certifiée avant comparaison exhaustive des champs et validation séparée des deux profils ROM."
   ]
 }
