@@ -131,3 +131,18 @@ Une analyse octet par octet des 446 index partagés CPUF/CPUE a été ajoutée d
 - Aucun changement n'a été observé à l'octet 2, qui correspond à `holdEffect` dans la structure source épinglée.
 
 **Limite d'interprétation :** les offsets sont établis sur la structure de référence de Platine. Ils permettent de localiser les changements bruts, mais ne certifient pas que Project PM conserve exactement la même sémantique pour chaque champ. Le rapport et le validateur gardent cette réserve explicite.
+
+
+## Synthèse décodée par champ CPUF / CPUE — 2026-10-20
+
+Le rapport complémentaire [data/project_pm_item_field_diff_summary.json](../data/project_pm_item_field_diff_summary.json) décode les 34 octets de chaque enregistrement avant de regrouper les différences par champs de la structure de référence. Cette étape évite de confondre les offsets en octets avec les caractères d'une représentation hexadécimale.
+
+- Prix (u16 little-endian, octets 0–1) : 148 entrées changent de valeur.
+- holdEffect (octet 2) : aucune différence brute observée.
+- effectParam (octet 3) : 6 entrées diffèrent.
+- fieldUseFunc (octet 10) : 11 entrées diffèrent.
+- partyUse (octet 12) : 11 entrées diffèrent.
+- Bloc union (octets 14–33) : 17 entrées diffèrent.
+- Les autres champs listés dans le rapport n'ont pas de différences sur les 446 index communs.
+
+Les comptes de champs peuvent se chevaucher et ne s'additionnent donc pas pour obtenir le nombre d'entrées différentes. Le validateur vérifie maintenant également ce rapport et ses nombres-clés. Les noms et la sémantique des 24 entrées supplémentaires CPUE restent inconnus jusqu'à validation indépendante.
