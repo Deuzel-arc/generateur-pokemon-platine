@@ -13,7 +13,7 @@ The `Quality checks` GitHub Actions workflow runs on pull requests targeting `ma
 - `test:browser`: browser interaction regression tests.
 - `test:tooling`: verifies required audit inputs, npm test wiring, CI triggers, and the Pages deployment gate.
 
-The repository currently has no committed npm lockfile, so dependency resolution is not fully locked; workflows intentionally do not use setup-node's lockfile-dependent npm cache. Add and verify a generated lockfile when a trusted npm install environment is available.
+The repository currently has no committed npm lockfile, so dependency resolution is not fully locked; workflows intentionally do not use setup-node's lockfile-dependent npm cache. Do not fabricate a lockfile: generate it with npm in a trusted network-enabled environment, commit it, and then switch CI installs to `npm ci`. Dependabot checks npm and GitHub Actions updates weekly; its pull requests are subject to the same quality gates.
 
 A red check means the batch is not validated. Do not label a batch complete or update progress as verified until the workflow passes.
 
