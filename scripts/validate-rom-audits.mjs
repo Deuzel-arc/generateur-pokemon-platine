@@ -21,6 +21,7 @@ const candidateRosterProfiles = readJson("data/rom_roster_profiles_candidate_493
 const frenchSpeciesNames = readJson("data/gen4_french_species_name_reference.json");
 const rosterCoverageAudit = readJson("data/rom_roster_coverage_audit.json");
 const fairyMoveIdentityGuard = readJson("data/project_pm_fairy_move_identity_guard.json");
+const fairyMoveSemanticsAudit = readJson("data/project_pm_fairy_move_semantics_audit.json");
 
 assert.equal(candidateRosterProfiles.status, "candidate_full_roster_493_needs_semantic_and_runtime_review", "493-species candidate must not be treated as integrated runtime data");
 assert.equal(candidateRosterProfiles.policy.runtimeIntegrated, false, "candidate roster must remain out of runtime until reviewed");
@@ -77,6 +78,21 @@ assert.deepEqual(
 assert.equal(rosterCoverageAudit.scope.noRuntimeChanges, true, "coverage audit must not claim runtime expansion");
 assert.equal(rosterCoverageAudit.scope.coverageIsNotSemanticCertification, true, "coverage must not be confused with semantic validation");
 
+
+assert.equal(fairyMoveSemanticsAudit.status, "names_verified_raw_move_data_crosschecked_effect_semantics_pending", "Fairy move audit must distinguish verified names from pending effect semantics");
+assert.equal(fairyMoveSemanticsAudit.source.platinumSha256, catalog.profiles.platinum.sha256, "Fairy move semantics audit must match CPUF hash");
+assert.equal(fairyMoveSemanticsAudit.source.projectPmSha256, catalog.profiles.project_pm.sha256, "Fairy move semantics audit must match CPUE hash");
+assert.equal(fairyMoveSemanticsAudit.counts.records, 8, "Fairy move semantics audit must cover eight entries");
+assert.equal(fairyMoveSemanticsAudit.counts.typeId9, 8, "all audited CPUE moves must retain raw type ID 9");
+assert.equal(fairyMoveSemanticsAudit.counts.namesVerified, 8, "all eight audited move display names must be verified");
+assert.equal(fairyMoveSemanticsAudit.counts.multiFieldChanges, 5, "five Fairy moves must retain multi-field changes");
+assert.equal(fairyMoveSemanticsAudit.counts.typeOnlyChanges, 3, "three Fairy moves must retain type-only changes");
+assert.equal(fairyMoveSemanticsAudit.counts.effectIdChanged, 5, "five Fairy moves must retain explicit effect-ID changes");
+assert.equal(fairyMoveSemanticsAudit.policies.nameEvidenceDoesNotCertifyBattleEffect, true, "decoded move names must not certify battle semantics");
+assert.equal(fairyMoveSemanticsAudit.policies.noInheritanceOfCanonicalEffectSemantics, true, "canonical move effects must not be inherited automatically");
+assert.equal(fairyMoveSemanticsAudit.policies.noRuntimeActivationUntilEffectsVerified, true, "unverified Fairy moves must remain out of runtime mechanics");
+assert.deepEqual(fairyMoveSemanticsAudit.records.map(row => [row.id, row.nameFrProjectPm]), [[66, "Câlinerie"], [140, "Vampibaiser"], [186, "Doux Baiser"], [204, "Charme"], [236, "Rayon Lune"], [295, "Éclat Magique"], [296, "Voix Enjôleuse"], [461, "Pouvoir Lunaire"]], "Fairy move names must match the decoded bank crosswalk");
+assert.ok(fairyMoveSemanticsAudit.records.every(row => row.projectPm.typeId === 9 && row.effectAssessment.runtimeEffectSemanticsVerified === false), "all Fairy move raw records must preserve unresolved effect semantics");
 
 assert.equal(fairyMoveIdentityGuard.source.projectPmSha256, catalog.profiles.project_pm.sha256, "Fairy move identity guard must match the active CPUE hash");
 assert.equal(fairyMoveIdentityGuard.source.projectPmTypeId, 9, "Fairy move identity guard must retain raw type ID 9");
