@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "title": "Audit des huit capacités de type Fée de Project PM — noms décodés, effets en attente",
-  "status": "names_verified_raw_move_data_crosschecked_effect_semantics_pending",
+  "status": "raw_fields_crosschecked_effect_hypotheses_recorded_not_certified",
   "source": {
     "platinumGameCode": "CPUF",
     "projectPmGameCode": "CPUE",
@@ -19,6 +19,12 @@
       "repository": "pret/pokeplatinum",
       "commit": "06c6e9a0348da283be8d9225d0bec03c349ff5c2",
       "path": "data/gen4_id_reference.json"
+    },
+    "canonicalEffectReference": {
+      "repository": "pret/pokeplatinum",
+      "commit": "06c6e9a0348da283be8d9225d0bec03c349ff5c2",
+      "path": "generated/move_battle_effects.txt",
+      "use": "symboles de référence indexés par effectId; candidats seulement pour CPUE, aucune certification du code de combat"
     }
   },
   "counts": {
@@ -35,7 +41,10 @@
     "noInheritanceOfCanonicalEffectSemantics": true,
     "noRuntimeActivationUntilEffectsVerified": true,
     "typeId9MeansFairyForCpueOnly": true,
-    "rawRecordsPreserved": true
+    "rawRecordsPreserved": true,
+    "canonicalEffectSymbolsAreHypothesesOnly": true,
+    "semanticHypothesesDoNotPermitRuntimeActivation": true,
+    "noGen4CompatibilityClaimWithoutBattleHandlerEvidence": true
   },
   "records": [
     {
@@ -677,6 +686,88 @@
         "runtimeEffectSemanticsVerified": false
       },
       "runtimeUse": "blocked_until_effect_semantics_and_generation_rules_are_verified"
+    }
+  ],
+  "semanticHypotheses": [
+    {
+      "id": 66,
+      "effectId": 68,
+      "canonicalSymbolAtSameIndex": "BATTLE_EFFECT_LOWER_ATTACK_HIT",
+      "candidateInterpretation": "Câlinerie — baisse de l’Attaque à l’impact",
+      "confidence": "forte_hypothese",
+      "rationale": "Nom CPUE décodé, puissance 90, précision 90, 10 PP, chance d’effet 10 et effectId 68 dont le symbole canonique à cet index évoque une baisse d’Attaque. Cette concordance ne prouve pas que le gestionnaire CPUE a la même implémentation.",
+      "verifiedForProjectPmRuntime": false,
+      "verifiedForGen4Mechanics": false
+    },
+    {
+      "id": 140,
+      "effectId": 3,
+      "canonicalSymbolAtSameIndex": "BATTLE_EFFECT_RECOVER_HALF_DAMAGE_DEALT",
+      "candidateInterpretation": "Vampibaiser — récupération d’une partie des dégâts infligés",
+      "confidence": "forte_hypothese",
+      "rationale": "Nom CPUE décodé, catégorie spéciale, puissance 75 et effectId 3 dont le symbole canonique à cet index évoque une récupération de la moitié des dégâts. L’implémentation CPUE reste à vérifier.",
+      "verifiedForProjectPmRuntime": false,
+      "verifiedForGen4Mechanics": false
+    },
+    {
+      "id": 186,
+      "effectId": 49,
+      "canonicalSymbolAtSameIndex": "BATTLE_EFFECT_STATUS_CONFUSE",
+      "candidateInterpretation": "Doux Baiser — confusion",
+      "confidence": "hypothese tres forte par conservation des champs",
+      "rationale": "Seul le type change dans le comparatif CPUF/CPUE; effectId 49, catégorie, puissance, précision, PP et autres champs observés sont identiques. La correspondance du gestionnaire CPUE n’est pas vérifiée par le seul tableau.",
+      "verifiedForProjectPmRuntime": false,
+      "verifiedForGen4Mechanics": false
+    },
+    {
+      "id": 204,
+      "effectId": 58,
+      "canonicalSymbolAtSameIndex": "BATTLE_EFFECT_ATK_DOWN_2",
+      "candidateInterpretation": "Charme — baisse de deux niveaux d’Attaque",
+      "confidence": "hypothese tres forte par conservation des champs",
+      "rationale": "Seul le type change dans le comparatif CPUF/CPUE; effectId 58 et les autres champs observés restent identiques. La correspondance du gestionnaire CPUE n’est pas vérifiée par le seul tableau.",
+      "verifiedForProjectPmRuntime": false,
+      "verifiedForGen4Mechanics": false
+    },
+    {
+      "id": 236,
+      "effectId": 132,
+      "canonicalSymbolAtSameIndex": "BATTLE_EFFECT_HEAL_HALF_MORE_IN_SUN",
+      "candidateInterpretation": "Rayon Lune — soin dépendant de la météo, mécanique de quatrième génération candidate",
+      "confidence": "hypothese tres forte par conservation des champs",
+      "rationale": "Seul le type change dans le comparatif CPUF/CPUE; effectId 132 et les autres champs observés restent identiques. La mécanique exacte en combat CPUE doit être vérifiée avant toute activation.",
+      "verifiedForProjectPmRuntime": false,
+      "verifiedForGen4Mechanics": false
+    },
+    {
+      "id": 295,
+      "effectId": 0,
+      "canonicalSymbolAtSameIndex": "BATTLE_EFFECT_HIT",
+      "candidateInterpretation": "Éclat Magique — attaque spéciale directe sans effet secondaire",
+      "confidence": "forte_hypothese",
+      "rationale": "Nom CPUE décodé, puissance 80, précision 100, effet secondaire nul et effectId 0 dont le symbole canonique à cet index désigne une touche directe. La cible CPUE et le gestionnaire doivent être vérifiés.",
+      "verifiedForProjectPmRuntime": false,
+      "verifiedForGen4Mechanics": false
+    },
+    {
+      "id": 296,
+      "effectId": 17,
+      "canonicalSymbolAtSameIndex": "BATTLE_EFFECT_BYPASS_ACCURACY",
+      "candidateInterpretation": "Voix Enjôleuse — attaque spéciale qui ne manque pas",
+      "confidence": "forte_hypothese",
+      "rationale": "Nom CPUE décodé, puissance 50, précision brute 0 et effectId 17 dont le symbole canonique à cet index évoque le contournement de précision. La sémantique de la valeur de précision 0 et le gestionnaire CPUE restent à vérifier.",
+      "verifiedForProjectPmRuntime": false,
+      "verifiedForGen4Mechanics": false
+    },
+    {
+      "id": 461,
+      "effectId": 71,
+      "canonicalSymbolAtSameIndex": "BATTLE_EFFECT_LOWER_SP_ATK_HIT",
+      "candidateInterpretation": "Pouvoir Lunaire — baisse possible de l’Attaque Spéciale adverse",
+      "confidence": "forte_hypothese",
+      "rationale": "Nom CPUE décodé, puissance 95, précision 100, chance d’effet 30 et effectId 71 dont le symbole canonique à cet index évoque une baisse d’Attaque Spéciale. La concordance ne prouve pas le gestionnaire CPUE.",
+      "verifiedForProjectPmRuntime": false,
+      "verifiedForGen4Mechanics": false
     }
   ]
 }
