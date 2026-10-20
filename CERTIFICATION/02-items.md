@@ -43,16 +43,25 @@ Le validateur `scripts/validate-rom-audits.mjs` vérifie désormais les bornes e
 
 Quatre points d'ancrage issus des entrées brutes CPUF soutiennent la règle candidate « ID logique moins le nombre de slots réservés antérieurs » :
 
-| ID logique | Symbole canonique | Index archive candidat | Prix lu dans l'entrée brute |
+| ID logique | Symbole canonique | Index archive candidat | Prix source = prix brut |
 |---:|---|---:|---:|
-| 1 | `ITEM_MASTER_BALL` | 1 | 0 |
-| 2 | `ITEM_ULTRA_BALL` | 2 | 1 200 |
+| 17 | `ITEM_POTION` | 17 | 300 |
+| 80 | `ITEM_SUN_STONE` | 80 | 2 100 |
+| 100 | `ITEM_CLAW_FOSSIL` | 100 | 1 000 |
+| 112 | `ITEM_GRISEOUS_ORB` | 112 | 10 000 |
 | 135 | `ITEM_ADAMANT_ORB` | 113 | 10 000 |
-| 136 | `ITEM_LUSTROUS_ORB` | 114 | 10 000 |
+| 150 | `ITEM_CHESTO_BERRY` | 128 | 20 |
+| 200 | `ITEM_CHILAN_BERRY` | 178 | 20 |
+| 250 | `ITEM_DRAGON_FANG` | 228 | 100 |
+| 300 | `ITEM_ZAP_PLATE` | 278 | 1 000 |
+| 350 | `ITEM_TM23` | 328 | 3 000 |
+| 400 | `ITEM_TM73` | 378 | 2 000 |
+| 445 | `ITEM_OLD_ROD` | 423 | 0 |
+| 467 | `ITEM_SECRET_KEY` | 445 | 0 |
 
-Ces ancres traversent la plage des IDs réservés 113–134 et sont cohérentes avec la table candidate de `data/gen4_item_id_reference.json`. Les tests automatisés verrouillent les quatre ancres et la séquence sans trous des 446 index candidats.
+Ces treize ancres couvrent des zones éloignées de la table, y compris avant et après les slots réservés 113–134. Les tests automatisés verrouillent les treize correspondances et la séquence sans trous des 446 index candidats.
 
-**Statut maintenu : mapping candidat étayé, pas encore certification exhaustive.** Les ancres ne suffisent pas à prouver la correspondance de chaque entrée, ni à transférer ce mapping à Project PM. La vérification doit comparer les 446 entrées CPUF et identifier séparément les 24 entrées CPUE supplémentaires.
+**Statut maintenu : mapping candidat étayé, pas encore certification exhaustive.** Les ancres de prix ne suffisent pas à prouver la correspondance de chaque champ de chaque entrée, ni à transférer ce mapping à Project PM. La vérification doit comparer les 446 entrées CPUF et identifier séparément les 24 entrées CPUE supplémentaires.
 
 ## Champs à vérifier pour chaque objet
 
