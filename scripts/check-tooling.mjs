@@ -20,6 +20,7 @@ const required = [
   "../scripts/audit-rom-species-name-bank.mjs",
   "../data/rom_species_name_bank_audit.json",
   "../data/project_pm_evolution_method_audit.json",
+  "../data/project_pm_added_move_data_audit.json",
   "../data/project_pm_type_byte_audit.json",
   "../data/rom_catalog.json",
   "../data/rom_mapping_audit.json",
