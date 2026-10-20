@@ -1,6 +1,6 @@
 # Feuille de route complète — générateur d'équipes Pokémon Platine / Project PM
 
-**Référence de progression :** 13 étapes séquentielles, chacune avec critères d'acceptation vérifiables. Aucune étape ne commence avant validation explicite de l'utilisateur sur l'étape précédente. Une étape est terminée seulement lorsque ses livrables existent, ses tests passent et ses limites sont documentées.
+**Référence de progression :** 13 étapes suivies avec critères d'acceptation vérifiables. À la demande de l'utilisateur, les lots indépendants avancent en parallèle et le travail continue sans solliciter une validation entre chaque étape. Une étape n'est déclarée terminée que lorsque ses livrables existent, ses tests passent et ses limites sont documentées. En cas de conflit de données ou de test en échec, corriger et revérifier avant d'intégrer les données concernées ; ne demander une précision que si un blocage important ne peut pas être résolu sans l'utilisateur.
 
 ## Objectif final
 
@@ -21,7 +21,7 @@ Créer six Pokémon de niveau 100 pour les combats doubles 2 contre 2, selon les
 - Capacités illégales : à 0–24 % de compétitivité, les curseurs fréquence et incongruité sont réglés automatiquement mais restent manipulables ; à 25–99 %, elles sont désactivées par défaut et, si activées, les deux curseurs doivent être réglés explicitement ; à 100 %, elles sont désactivées et les curseurs verrouillés/réinitialisés. La fréquence est une probabilité par emplacement de capacité, avec 24 emplacements pour six Pokémon ; l'incongruité est une dimension distincte. Le nombre final peut donc varier aléatoirement. Si un candidat est rejeté par les filtres, le moteur doit retenter sans perdre silencieusement le quota prévu lorsque le mode exige un compte exact.
 - Le résultat final comprend : équipe vérifiée, rôle de chaque Pokémon, talent, objet, nature, EV/IV, quatre capacités avec type/catégorie/puissance/précision et explication, synergies individuelles et collectives, plan de jeu en quatre étapes maximum, duos complémentaires (jusqu'à quatre) et au plus deux alternatives au total (une alternative d'objet et une de capacité pour l'équipe).
 - Infographie finale : portrait 9:16 lisible sur téléphone, fond sobre, grille et texte lisibles, peu de pictogrammes, visuels variés ; panneau inférieur gauche avec jusqu'à quatre duos complémentaires et explications concises ; panneau inférieur droit pour les alternatives (maximum une alternative d'objet et une de capacité) ; remplacer le tableau récapitulatif des six Pokémon par un guide stratégique de quatre étapes maximum. Pour chaque capacité, afficher type, catégorie, puissance et précision. Inclure stratégie, synergie, talents, objets et recommandations EV/IV.
-- Toute modification de code doit être suivie de tests automatisés avant toute étape suivante. Chaque étape se termine par un rapport de preuves, un pourcentage recalculé à partir de critères documentés et une demande explicite d'autorisation pour passer à la suivante.
+- Toute modification de code doit être suivie de tests automatisés avant de considérer le changement comme validé. Les lots indépendants peuvent avancer simultanément, en préservant la provenance des données et en évitant les écritures concurrentes sur un même fichier. Communiquer le pourcentage de progression et les preuves à chaque point de contrôle ; ne pas interrompre le travail pour demander une autorisation à chaque étape.
 
 ## Les 13 étapes — portes de validation
 
@@ -109,6 +109,6 @@ Créer six Pokémon de niveau 100 pour les combats doubles 2 contre 2, selon les
 - Avant de changer de fichier, examiner la version courante et cibler le changement minimal.
 - Après chaque modification de code, lancer les tests automatisés avant tout autre changement. Si les tests échouent, rester dans l'étape active, diagnostiquer, corriger et relancer.
 - Ne jamais masquer un échec ni marquer une étape terminée sur la seule base d'un déploiement réussi.
-- À la fin de chaque étape : présenter les livrables, preuves, tests, limites et pourcentage calculé ; demander explicitement l'autorisation de passer à l'étape suivante.
+- À chaque point de contrôle : communiquer les livrables, preuves, résultats des tests, limites et pourcentage calculé. Continuer automatiquement sur les lots suivants ; signaler uniquement les blocages importants ou les questions nécessitant réellement une décision de l'utilisateur.
 - Le pourcentage global sera recalculé à partir des 13 portes d'acceptation : étape non validée = 0 crédit d'étape terminée ; étapes validées = crédit acquis. Un indicateur secondaire de progression interne peut être communiqué, mais séparé du taux d'étapes terminées.
 - Le travail continue jusqu'à la fin de l'étape active ; il s'arrête avant la suivante pour attendre l'accord explicite de l'utilisateur.
