@@ -1,0 +1,2087 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Audit de couverture du roster stratégique Gen IV",
+  "status": "coverage_measured_runtime_roster_partial",
+  "source": {
+    "canonicalReference": {
+      "repository": "pret/pokeplatinum",
+      "commit": "06c6e9a0348da283be8d9225d0bec03c349ff5c2",
+      "path": "data/gen4_id_reference.json",
+      "speciesCount": 493
+    },
+    "profileFile": "data/rom_roster_profiles.json",
+    "runtimeFile": "index.html",
+    "platinumSha256": "1cfd024519116c1c6285d6af2dbdfcec778e9d74c7c18585e22032e81aaa7eb8",
+    "projectPmSha256": "435b0288238f01f21eeeef7b5de6de3e3c9c3a9b70ea3b18d71b31ba282ae4e1"
+  },
+  "scope": {
+    "canonicalSpeciesIds": "1–493 (formes et entrées spéciales 494+ exclues)",
+    "noRuntimeChanges": true,
+    "coverageIsNotSemanticCertification": true
+  },
+  "counts": {
+    "canonicalSpecies": 493,
+    "profilesInData": 71,
+    "uniqueProfileIds": 71,
+    "runtimeRosterEntries": 71,
+    "runtimeRosterNamesMatchingProfile": 71,
+    "canonicalIdsCovered": 71,
+    "canonicalIdsMissing": 422,
+    "profileIdsOutsideCanonicalRange": [],
+    "duplicateProfileIds": [],
+    "runtimeNamesMissingProfile": [],
+    "profileNamesNotInRuntime": []
+  },
+  "covered": [
+    {
+      "id": 3,
+      "name": "Florizarre",
+      "canonicalSymbol": "SPECIES_VENUSAUR"
+    },
+    {
+      "id": 6,
+      "name": "Dracaufeu",
+      "canonicalSymbol": "SPECIES_CHARIZARD"
+    },
+    {
+      "id": 9,
+      "name": "Tortank",
+      "canonicalSymbol": "SPECIES_BLASTOISE"
+    },
+    {
+      "id": 65,
+      "name": "Alakazam",
+      "canonicalSymbol": "SPECIES_ALAKAZAM"
+    },
+    {
+      "id": 94,
+      "name": "Ectoplasma",
+      "canonicalSymbol": "SPECIES_GENGAR"
+    },
+    {
+      "id": 143,
+      "name": "Ronflex",
+      "canonicalSymbol": "SPECIES_SNORLAX"
+    },
+    {
+      "id": 144,
+      "name": "Artikodin",
+      "canonicalSymbol": "SPECIES_ARTICUNO"
+    },
+    {
+      "id": 145,
+      "name": "Électhor",
+      "canonicalSymbol": "SPECIES_ZAPDOS"
+    },
+    {
+      "id": 146,
+      "name": "Sulfura",
+      "canonicalSymbol": "SPECIES_MOLTRES"
+    },
+    {
+      "id": 150,
+      "name": "Mewtwo",
+      "canonicalSymbol": "SPECIES_MEWTWO"
+    },
+    {
+      "id": 151,
+      "name": "Mew",
+      "canonicalSymbol": "SPECIES_MEW"
+    },
+    {
+      "id": 154,
+      "name": "Méganium",
+      "canonicalSymbol": "SPECIES_MEGANIUM"
+    },
+    {
+      "id": 157,
+      "name": "Typhlosion",
+      "canonicalSymbol": "SPECIES_TYPHLOSION"
+    },
+    {
+      "id": 160,
+      "name": "Aligatueur",
+      "canonicalSymbol": "SPECIES_FERALIGATR"
+    },
+    {
+      "id": 169,
+      "name": "Crobat",
+      "canonicalSymbol": "SPECIES_CROBAT"
+    },
+    {
+      "id": 212,
+      "name": "Cizayox",
+      "canonicalSymbol": "SPECIES_SCIZOR"
+    },
+    {
+      "id": 214,
+      "name": "Scarhino",
+      "canonicalSymbol": "SPECIES_HERACROSS"
+    },
+    {
+      "id": 227,
+      "name": "Airmure",
+      "canonicalSymbol": "SPECIES_SKARMORY"
+    },
+    {
+      "id": 230,
+      "name": "Hyporoi",
+      "canonicalSymbol": "SPECIES_KINGDRA"
+    },
+    {
+      "id": 243,
+      "name": "Raikou",
+      "canonicalSymbol": "SPECIES_RAIKOU"
+    },
+    {
+      "id": 244,
+      "name": "Entei",
+      "canonicalSymbol": "SPECIES_ENTEI"
+    },
+    {
+      "id": 245,
+      "name": "Suicune",
+      "canonicalSymbol": "SPECIES_SUICUNE"
+    },
+    {
+      "id": 248,
+      "name": "Tyranocif",
+      "canonicalSymbol": "SPECIES_TYRANITAR"
+    },
+    {
+      "id": 249,
+      "name": "Lugia",
+      "canonicalSymbol": "SPECIES_LUGIA"
+    },
+    {
+      "id": 250,
+      "name": "Ho-Oh",
+      "canonicalSymbol": "SPECIES_HO_OH"
+    },
+    {
+      "id": 251,
+      "name": "Celebi",
+      "canonicalSymbol": "SPECIES_CELEBI"
+    },
+    {
+      "id": 254,
+      "name": "Jungko",
+      "canonicalSymbol": "SPECIES_SCEPTILE"
+    },
+    {
+      "id": 257,
+      "name": "Braségali",
+      "canonicalSymbol": "SPECIES_BLAZIKEN"
+    },
+    {
+      "id": 260,
+      "name": "Laggron",
+      "canonicalSymbol": "SPECIES_SWAMPERT"
+    },
+    {
+      "id": 282,
+      "name": "Gardevoir",
+      "canonicalSymbol": "SPECIES_GARDEVOIR"
+    },
+    {
+      "id": 286,
+      "name": "Chapignon",
+      "canonicalSymbol": "SPECIES_BRELOOM"
+    },
+    {
+      "id": 350,
+      "name": "Milobellus",
+      "canonicalSymbol": "SPECIES_MILOTIC"
+    },
+    {
+      "id": 373,
+      "name": "Drattak",
+      "canonicalSymbol": "SPECIES_SALAMENCE"
+    },
+    {
+      "id": 376,
+      "name": "Métalosse",
+      "canonicalSymbol": "SPECIES_METAGROSS"
+    },
+    {
+      "id": 377,
+      "name": "Regirock",
+      "canonicalSymbol": "SPECIES_REGIROCK"
+    },
+    {
+      "id": 378,
+      "name": "Regice",
+      "canonicalSymbol": "SPECIES_REGICE"
+    },
+    {
+      "id": 379,
+      "name": "Registeel",
+      "canonicalSymbol": "SPECIES_REGISTEEL"
+    },
+    {
+      "id": 380,
+      "name": "Latias",
+      "canonicalSymbol": "SPECIES_LATIAS"
+    },
+    {
+      "id": 381,
+      "name": "Latios",
+      "canonicalSymbol": "SPECIES_LATIOS"
+    },
+    {
+      "id": 382,
+      "name": "Kyogre",
+      "canonicalSymbol": "SPECIES_KYOGRE"
+    },
+    {
+      "id": 383,
+      "name": "Groudon",
+      "canonicalSymbol": "SPECIES_GROUDON"
+    },
+    {
+      "id": 384,
+      "name": "Rayquaza",
+      "canonicalSymbol": "SPECIES_RAYQUAZA"
+    },
+    {
+      "id": 385,
+      "name": "Jirachi",
+      "canonicalSymbol": "SPECIES_JIRACHI"
+    },
+    {
+      "id": 386,
+      "name": "Deoxys",
+      "canonicalSymbol": "SPECIES_DEOXYS"
+    },
+    {
+      "id": 389,
+      "name": "Torterra",
+      "canonicalSymbol": "SPECIES_TORTERRA"
+    },
+    {
+      "id": 392,
+      "name": "Simiabraz",
+      "canonicalSymbol": "SPECIES_INFERNAPE"
+    },
+    {
+      "id": 395,
+      "name": "Pingoléon",
+      "canonicalSymbol": "SPECIES_EMPOLEON"
+    },
+    {
+      "id": 407,
+      "name": "Roserade",
+      "canonicalSymbol": "SPECIES_ROSERADE"
+    },
+    {
+      "id": 448,
+      "name": "Lucario",
+      "canonicalSymbol": "SPECIES_LUCARIO"
+    },
+    {
+      "id": 461,
+      "name": "Dimoret",
+      "canonicalSymbol": "SPECIES_WEAVILE"
+    },
+    {
+      "id": 462,
+      "name": "Magnézone",
+      "canonicalSymbol": "SPECIES_MAGNEZONE"
+    },
+    {
+      "id": 468,
+      "name": "Togekiss",
+      "canonicalSymbol": "SPECIES_TOGEKISS"
+    },
+    {
+      "id": 472,
+      "name": "Scorvol",
+      "canonicalSymbol": "SPECIES_GLISCOR"
+    },
+    {
+      "id": 473,
+      "name": "Mammochon",
+      "canonicalSymbol": "SPECIES_MAMOSWINE"
+    },
+    {
+      "id": 474,
+      "name": "Porygon-Z",
+      "canonicalSymbol": "SPECIES_PORYGON_Z"
+    },
+    {
+      "id": 475,
+      "name": "Gallame",
+      "canonicalSymbol": "SPECIES_GALLADE"
+    },
+    {
+      "id": 479,
+      "name": "Rotom",
+      "canonicalSymbol": "SPECIES_ROTOM"
+    },
+    {
+      "id": 480,
+      "name": "Créhelf",
+      "canonicalSymbol": "SPECIES_UXIE"
+    },
+    {
+      "id": 481,
+      "name": "Créfollet",
+      "canonicalSymbol": "SPECIES_MESPRIT"
+    },
+    {
+      "id": 482,
+      "name": "Créfadet",
+      "canonicalSymbol": "SPECIES_AZELF"
+    },
+    {
+      "id": 483,
+      "name": "Dialga",
+      "canonicalSymbol": "SPECIES_DIALGA"
+    },
+    {
+      "id": 484,
+      "name": "Palkia",
+      "canonicalSymbol": "SPECIES_PALKIA"
+    },
+    {
+      "id": 485,
+      "name": "Heatran",
+      "canonicalSymbol": "SPECIES_HEATRAN"
+    },
+    {
+      "id": 486,
+      "name": "Regigigas",
+      "canonicalSymbol": "SPECIES_REGIGIGAS"
+    },
+    {
+      "id": 487,
+      "name": "Giratina",
+      "canonicalSymbol": "SPECIES_GIRATINA"
+    },
+    {
+      "id": 488,
+      "name": "Cresselia",
+      "canonicalSymbol": "SPECIES_CRESSELIA"
+    },
+    {
+      "id": 489,
+      "name": "Phione",
+      "canonicalSymbol": "SPECIES_PHIONE"
+    },
+    {
+      "id": 490,
+      "name": "Manaphy",
+      "canonicalSymbol": "SPECIES_MANAPHY"
+    },
+    {
+      "id": 491,
+      "name": "Darkrai",
+      "canonicalSymbol": "SPECIES_DARKRAI"
+    },
+    {
+      "id": 492,
+      "name": "Shaymin",
+      "canonicalSymbol": "SPECIES_SHAYMIN"
+    },
+    {
+      "id": 493,
+      "name": "Arceus",
+      "canonicalSymbol": "SPECIES_ARCEUS"
+    }
+  ],
+  "missing": [
+    {
+      "id": 1,
+      "canonicalSymbol": "SPECIES_BULBASAUR"
+    },
+    {
+      "id": 2,
+      "canonicalSymbol": "SPECIES_IVYSAUR"
+    },
+    {
+      "id": 4,
+      "canonicalSymbol": "SPECIES_CHARMANDER"
+    },
+    {
+      "id": 5,
+      "canonicalSymbol": "SPECIES_CHARMELEON"
+    },
+    {
+      "id": 7,
+      "canonicalSymbol": "SPECIES_SQUIRTLE"
+    },
+    {
+      "id": 8,
+      "canonicalSymbol": "SPECIES_WARTORTLE"
+    },
+    {
+      "id": 10,
+      "canonicalSymbol": "SPECIES_CATERPIE"
+    },
+    {
+      "id": 11,
+      "canonicalSymbol": "SPECIES_METAPOD"
+    },
+    {
+      "id": 12,
+      "canonicalSymbol": "SPECIES_BUTTERFREE"
+    },
+    {
+      "id": 13,
+      "canonicalSymbol": "SPECIES_WEEDLE"
+    },
+    {
+      "id": 14,
+      "canonicalSymbol": "SPECIES_KAKUNA"
+    },
+    {
+      "id": 15,
+      "canonicalSymbol": "SPECIES_BEEDRILL"
+    },
+    {
+      "id": 16,
+      "canonicalSymbol": "SPECIES_PIDGEY"
+    },
+    {
+      "id": 17,
+      "canonicalSymbol": "SPECIES_PIDGEOTTO"
+    },
+    {
+      "id": 18,
+      "canonicalSymbol": "SPECIES_PIDGEOT"
+    },
+    {
+      "id": 19,
+      "canonicalSymbol": "SPECIES_RATTATA"
+    },
+    {
+      "id": 20,
+      "canonicalSymbol": "SPECIES_RATICATE"
+    },
+    {
+      "id": 21,
+      "canonicalSymbol": "SPECIES_SPEAROW"
+    },
+    {
+      "id": 22,
+      "canonicalSymbol": "SPECIES_FEAROW"
+    },
+    {
+      "id": 23,
+      "canonicalSymbol": "SPECIES_EKANS"
+    },
+    {
+      "id": 24,
+      "canonicalSymbol": "SPECIES_ARBOK"
+    },
+    {
+      "id": 25,
+      "canonicalSymbol": "SPECIES_PIKACHU"
+    },
+    {
+      "id": 26,
+      "canonicalSymbol": "SPECIES_RAICHU"
+    },
+    {
+      "id": 27,
+      "canonicalSymbol": "SPECIES_SANDSHREW"
+    },
+    {
+      "id": 28,
+      "canonicalSymbol": "SPECIES_SANDSLASH"
+    },
+    {
+      "id": 29,
+      "canonicalSymbol": "SPECIES_NIDORAN_F"
+    },
+    {
+      "id": 30,
+      "canonicalSymbol": "SPECIES_NIDORINA"
+    },
+    {
+      "id": 31,
+      "canonicalSymbol": "SPECIES_NIDOQUEEN"
+    },
+    {
+      "id": 32,
+      "canonicalSymbol": "SPECIES_NIDORAN_M"
+    },
+    {
+      "id": 33,
+      "canonicalSymbol": "SPECIES_NIDORINO"
+    },
+    {
+      "id": 34,
+      "canonicalSymbol": "SPECIES_NIDOKING"
+    },
+    {
+      "id": 35,
+      "canonicalSymbol": "SPECIES_CLEFAIRY"
+    },
+    {
+      "id": 36,
+      "canonicalSymbol": "SPECIES_CLEFABLE"
+    },
+    {
+      "id": 37,
+      "canonicalSymbol": "SPECIES_VULPIX"
+    },
+    {
+      "id": 38,
+      "canonicalSymbol": "SPECIES_NINETALES"
+    },
+    {
+      "id": 39,
+      "canonicalSymbol": "SPECIES_JIGGLYPUFF"
+    },
+    {
+      "id": 40,
+      "canonicalSymbol": "SPECIES_WIGGLYTUFF"
+    },
+    {
+      "id": 41,
+      "canonicalSymbol": "SPECIES_ZUBAT"
+    },
+    {
+      "id": 42,
+      "canonicalSymbol": "SPECIES_GOLBAT"
+    },
+    {
+      "id": 43,
+      "canonicalSymbol": "SPECIES_ODDISH"
+    },
+    {
+      "id": 44,
+      "canonicalSymbol": "SPECIES_GLOOM"
+    },
+    {
+      "id": 45,
+      "canonicalSymbol": "SPECIES_VILEPLUME"
+    },
+    {
+      "id": 46,
+      "canonicalSymbol": "SPECIES_PARAS"
+    },
+    {
+      "id": 47,
+      "canonicalSymbol": "SPECIES_PARASECT"
+    },
+    {
+      "id": 48,
+      "canonicalSymbol": "SPECIES_VENONAT"
+    },
+    {
+      "id": 49,
+      "canonicalSymbol": "SPECIES_VENOMOTH"
+    },
+    {
+      "id": 50,
+      "canonicalSymbol": "SPECIES_DIGLETT"
+    },
+    {
+      "id": 51,
+      "canonicalSymbol": "SPECIES_DUGTRIO"
+    },
+    {
+      "id": 52,
+      "canonicalSymbol": "SPECIES_MEOWTH"
+    },
+    {
+      "id": 53,
+      "canonicalSymbol": "SPECIES_PERSIAN"
+    },
+    {
+      "id": 54,
+      "canonicalSymbol": "SPECIES_PSYDUCK"
+    },
+    {
+      "id": 55,
+      "canonicalSymbol": "SPECIES_GOLDUCK"
+    },
+    {
+      "id": 56,
+      "canonicalSymbol": "SPECIES_MANKEY"
+    },
+    {
+      "id": 57,
+      "canonicalSymbol": "SPECIES_PRIMEAPE"
+    },
+    {
+      "id": 58,
+      "canonicalSymbol": "SPECIES_GROWLITHE"
+    },
+    {
+      "id": 59,
+      "canonicalSymbol": "SPECIES_ARCANINE"
+    },
+    {
+      "id": 60,
+      "canonicalSymbol": "SPECIES_POLIWAG"
+    },
+    {
+      "id": 61,
+      "canonicalSymbol": "SPECIES_POLIWHIRL"
+    },
+    {
+      "id": 62,
+      "canonicalSymbol": "SPECIES_POLIWRATH"
+    },
+    {
+      "id": 63,
+      "canonicalSymbol": "SPECIES_ABRA"
+    },
+    {
+      "id": 64,
+      "canonicalSymbol": "SPECIES_KADABRA"
+    },
+    {
+      "id": 66,
+      "canonicalSymbol": "SPECIES_MACHOP"
+    },
+    {
+      "id": 67,
+      "canonicalSymbol": "SPECIES_MACHOKE"
+    },
+    {
+      "id": 68,
+      "canonicalSymbol": "SPECIES_MACHAMP"
+    },
+    {
+      "id": 69,
+      "canonicalSymbol": "SPECIES_BELLSPROUT"
+    },
+    {
+      "id": 70,
+      "canonicalSymbol": "SPECIES_WEEPINBELL"
+    },
+    {
+      "id": 71,
+      "canonicalSymbol": "SPECIES_VICTREEBEL"
+    },
+    {
+      "id": 72,
+      "canonicalSymbol": "SPECIES_TENTACOOL"
+    },
+    {
+      "id": 73,
+      "canonicalSymbol": "SPECIES_TENTACRUEL"
+    },
+    {
+      "id": 74,
+      "canonicalSymbol": "SPECIES_GEODUDE"
+    },
+    {
+      "id": 75,
+      "canonicalSymbol": "SPECIES_GRAVELER"
+    },
+    {
+      "id": 76,
+      "canonicalSymbol": "SPECIES_GOLEM"
+    },
+    {
+      "id": 77,
+      "canonicalSymbol": "SPECIES_PONYTA"
+    },
+    {
+      "id": 78,
+      "canonicalSymbol": "SPECIES_RAPIDASH"
+    },
+    {
+      "id": 79,
+      "canonicalSymbol": "SPECIES_SLOWPOKE"
+    },
+    {
+      "id": 80,
+      "canonicalSymbol": "SPECIES_SLOWBRO"
+    },
+    {
+      "id": 81,
+      "canonicalSymbol": "SPECIES_MAGNEMITE"
+    },
+    {
+      "id": 82,
+      "canonicalSymbol": "SPECIES_MAGNETON"
+    },
+    {
+      "id": 83,
+      "canonicalSymbol": "SPECIES_FARFETCHD"
+    },
+    {
+      "id": 84,
+      "canonicalSymbol": "SPECIES_DODUO"
+    },
+    {
+      "id": 85,
+      "canonicalSymbol": "SPECIES_DODRIO"
+    },
+    {
+      "id": 86,
+      "canonicalSymbol": "SPECIES_SEEL"
+    },
+    {
+      "id": 87,
+      "canonicalSymbol": "SPECIES_DEWGONG"
+    },
+    {
+      "id": 88,
+      "canonicalSymbol": "SPECIES_GRIMER"
+    },
+    {
+      "id": 89,
+      "canonicalSymbol": "SPECIES_MUK"
+    },
+    {
+      "id": 90,
+      "canonicalSymbol": "SPECIES_SHELLDER"
+    },
+    {
+      "id": 91,
+      "canonicalSymbol": "SPECIES_CLOYSTER"
+    },
+    {
+      "id": 92,
+      "canonicalSymbol": "SPECIES_GASTLY"
+    },
+    {
+      "id": 93,
+      "canonicalSymbol": "SPECIES_HAUNTER"
+    },
+    {
+      "id": 95,
+      "canonicalSymbol": "SPECIES_ONIX"
+    },
+    {
+      "id": 96,
+      "canonicalSymbol": "SPECIES_DROWZEE"
+    },
+    {
+      "id": 97,
+      "canonicalSymbol": "SPECIES_HYPNO"
+    },
+    {
+      "id": 98,
+      "canonicalSymbol": "SPECIES_KRABBY"
+    },
+    {
+      "id": 99,
+      "canonicalSymbol": "SPECIES_KINGLER"
+    },
+    {
+      "id": 100,
+      "canonicalSymbol": "SPECIES_VOLTORB"
+    },
+    {
+      "id": 101,
+      "canonicalSymbol": "SPECIES_ELECTRODE"
+    },
+    {
+      "id": 102,
+      "canonicalSymbol": "SPECIES_EXEGGCUTE"
+    },
+    {
+      "id": 103,
+      "canonicalSymbol": "SPECIES_EXEGGUTOR"
+    },
+    {
+      "id": 104,
+      "canonicalSymbol": "SPECIES_CUBONE"
+    },
+    {
+      "id": 105,
+      "canonicalSymbol": "SPECIES_MAROWAK"
+    },
+    {
+      "id": 106,
+      "canonicalSymbol": "SPECIES_HITMONLEE"
+    },
+    {
+      "id": 107,
+      "canonicalSymbol": "SPECIES_HITMONCHAN"
+    },
+    {
+      "id": 108,
+      "canonicalSymbol": "SPECIES_LICKITUNG"
+    },
+    {
+      "id": 109,
+      "canonicalSymbol": "SPECIES_KOFFING"
+    },
+    {
+      "id": 110,
+      "canonicalSymbol": "SPECIES_WEEZING"
+    },
+    {
+      "id": 111,
+      "canonicalSymbol": "SPECIES_RHYHORN"
+    },
+    {
+      "id": 112,
+      "canonicalSymbol": "SPECIES_RHYDON"
+    },
+    {
+      "id": 113,
+      "canonicalSymbol": "SPECIES_CHANSEY"
+    },
+    {
+      "id": 114,
+      "canonicalSymbol": "SPECIES_TANGELA"
+    },
+    {
+      "id": 115,
+      "canonicalSymbol": "SPECIES_KANGASKHAN"
+    },
+    {
+      "id": 116,
+      "canonicalSymbol": "SPECIES_HORSEA"
+    },
+    {
+      "id": 117,
+      "canonicalSymbol": "SPECIES_SEADRA"
+    },
+    {
+      "id": 118,
+      "canonicalSymbol": "SPECIES_GOLDEEN"
+    },
+    {
+      "id": 119,
+      "canonicalSymbol": "SPECIES_SEAKING"
+    },
+    {
+      "id": 120,
+      "canonicalSymbol": "SPECIES_STARYU"
+    },
+    {
+      "id": 121,
+      "canonicalSymbol": "SPECIES_STARMIE"
+    },
+    {
+      "id": 122,
+      "canonicalSymbol": "SPECIES_MR_MIME"
+    },
+    {
+      "id": 123,
+      "canonicalSymbol": "SPECIES_SCYTHER"
+    },
+    {
+      "id": 124,
+      "canonicalSymbol": "SPECIES_JYNX"
+    },
+    {
+      "id": 125,
+      "canonicalSymbol": "SPECIES_ELECTABUZZ"
+    },
+    {
+      "id": 126,
+      "canonicalSymbol": "SPECIES_MAGMAR"
+    },
+    {
+      "id": 127,
+      "canonicalSymbol": "SPECIES_PINSIR"
+    },
+    {
+      "id": 128,
+      "canonicalSymbol": "SPECIES_TAUROS"
+    },
+    {
+      "id": 129,
+      "canonicalSymbol": "SPECIES_MAGIKARP"
+    },
+    {
+      "id": 130,
+      "canonicalSymbol": "SPECIES_GYARADOS"
+    },
+    {
+      "id": 131,
+      "canonicalSymbol": "SPECIES_LAPRAS"
+    },
+    {
+      "id": 132,
+      "canonicalSymbol": "SPECIES_DITTO"
+    },
+    {
+      "id": 133,
+      "canonicalSymbol": "SPECIES_EEVEE"
+    },
+    {
+      "id": 134,
+      "canonicalSymbol": "SPECIES_VAPOREON"
+    },
+    {
+      "id": 135,
+      "canonicalSymbol": "SPECIES_JOLTEON"
+    },
+    {
+      "id": 136,
+      "canonicalSymbol": "SPECIES_FLAREON"
+    },
+    {
+      "id": 137,
+      "canonicalSymbol": "SPECIES_PORYGON"
+    },
+    {
+      "id": 138,
+      "canonicalSymbol": "SPECIES_OMANYTE"
+    },
+    {
+      "id": 139,
+      "canonicalSymbol": "SPECIES_OMASTAR"
+    },
+    {
+      "id": 140,
+      "canonicalSymbol": "SPECIES_KABUTO"
+    },
+    {
+      "id": 141,
+      "canonicalSymbol": "SPECIES_KABUTOPS"
+    },
+    {
+      "id": 142,
+      "canonicalSymbol": "SPECIES_AERODACTYL"
+    },
+    {
+      "id": 147,
+      "canonicalSymbol": "SPECIES_DRATINI"
+    },
+    {
+      "id": 148,
+      "canonicalSymbol": "SPECIES_DRAGONAIR"
+    },
+    {
+      "id": 149,
+      "canonicalSymbol": "SPECIES_DRAGONITE"
+    },
+    {
+      "id": 152,
+      "canonicalSymbol": "SPECIES_CHIKORITA"
+    },
+    {
+      "id": 153,
+      "canonicalSymbol": "SPECIES_BAYLEEF"
+    },
+    {
+      "id": 155,
+      "canonicalSymbol": "SPECIES_CYNDAQUIL"
+    },
+    {
+      "id": 156,
+      "canonicalSymbol": "SPECIES_QUILAVA"
+    },
+    {
+      "id": 158,
+      "canonicalSymbol": "SPECIES_TOTODILE"
+    },
+    {
+      "id": 159,
+      "canonicalSymbol": "SPECIES_CROCONAW"
+    },
+    {
+      "id": 161,
+      "canonicalSymbol": "SPECIES_SENTRET"
+    },
+    {
+      "id": 162,
+      "canonicalSymbol": "SPECIES_FURRET"
+    },
+    {
+      "id": 163,
+      "canonicalSymbol": "SPECIES_HOOTHOOT"
+    },
+    {
+      "id": 164,
+      "canonicalSymbol": "SPECIES_NOCTOWL"
+    },
+    {
+      "id": 165,
+      "canonicalSymbol": "SPECIES_LEDYBA"
+    },
+    {
+      "id": 166,
+      "canonicalSymbol": "SPECIES_LEDIAN"
+    },
+    {
+      "id": 167,
+      "canonicalSymbol": "SPECIES_SPINARAK"
+    },
+    {
+      "id": 168,
+      "canonicalSymbol": "SPECIES_ARIADOS"
+    },
+    {
+      "id": 170,
+      "canonicalSymbol": "SPECIES_CHINCHOU"
+    },
+    {
+      "id": 171,
+      "canonicalSymbol": "SPECIES_LANTURN"
+    },
+    {
+      "id": 172,
+      "canonicalSymbol": "SPECIES_PICHU"
+    },
+    {
+      "id": 173,
+      "canonicalSymbol": "SPECIES_CLEFFA"
+    },
+    {
+      "id": 174,
+      "canonicalSymbol": "SPECIES_IGGLYBUFF"
+    },
+    {
+      "id": 175,
+      "canonicalSymbol": "SPECIES_TOGEPI"
+    },
+    {
+      "id": 176,
+      "canonicalSymbol": "SPECIES_TOGETIC"
+    },
+    {
+      "id": 177,
+      "canonicalSymbol": "SPECIES_NATU"
+    },
+    {
+      "id": 178,
+      "canonicalSymbol": "SPECIES_XATU"
+    },
+    {
+      "id": 179,
+      "canonicalSymbol": "SPECIES_MAREEP"
+    },
+    {
+      "id": 180,
+      "canonicalSymbol": "SPECIES_FLAAFFY"
+    },
+    {
+      "id": 181,
+      "canonicalSymbol": "SPECIES_AMPHAROS"
+    },
+    {
+      "id": 182,
+      "canonicalSymbol": "SPECIES_BELLOSSOM"
+    },
+    {
+      "id": 183,
+      "canonicalSymbol": "SPECIES_MARILL"
+    },
+    {
+      "id": 184,
+      "canonicalSymbol": "SPECIES_AZUMARILL"
+    },
+    {
+      "id": 185,
+      "canonicalSymbol": "SPECIES_SUDOWOODO"
+    },
+    {
+      "id": 186,
+      "canonicalSymbol": "SPECIES_POLITOED"
+    },
+    {
+      "id": 187,
+      "canonicalSymbol": "SPECIES_HOPPIP"
+    },
+    {
+      "id": 188,
+      "canonicalSymbol": "SPECIES_SKIPLOOM"
+    },
+    {
+      "id": 189,
+      "canonicalSymbol": "SPECIES_JUMPLUFF"
+    },
+    {
+      "id": 190,
+      "canonicalSymbol": "SPECIES_AIPOM"
+    },
+    {
+      "id": 191,
+      "canonicalSymbol": "SPECIES_SUNKERN"
+    },
+    {
+      "id": 192,
+      "canonicalSymbol": "SPECIES_SUNFLORA"
+    },
+    {
+      "id": 193,
+      "canonicalSymbol": "SPECIES_YANMA"
+    },
+    {
+      "id": 194,
+      "canonicalSymbol": "SPECIES_WOOPER"
+    },
+    {
+      "id": 195,
+      "canonicalSymbol": "SPECIES_QUAGSIRE"
+    },
+    {
+      "id": 196,
+      "canonicalSymbol": "SPECIES_ESPEON"
+    },
+    {
+      "id": 197,
+      "canonicalSymbol": "SPECIES_UMBREON"
+    },
+    {
+      "id": 198,
+      "canonicalSymbol": "SPECIES_MURKROW"
+    },
+    {
+      "id": 199,
+      "canonicalSymbol": "SPECIES_SLOWKING"
+    },
+    {
+      "id": 200,
+      "canonicalSymbol": "SPECIES_MISDREAVUS"
+    },
+    {
+      "id": 201,
+      "canonicalSymbol": "SPECIES_UNOWN"
+    },
+    {
+      "id": 202,
+      "canonicalSymbol": "SPECIES_WOBBUFFET"
+    },
+    {
+      "id": 203,
+      "canonicalSymbol": "SPECIES_GIRAFARIG"
+    },
+    {
+      "id": 204,
+      "canonicalSymbol": "SPECIES_PINECO"
+    },
+    {
+      "id": 205,
+      "canonicalSymbol": "SPECIES_FORRETRESS"
+    },
+    {
+      "id": 206,
+      "canonicalSymbol": "SPECIES_DUNSPARCE"
+    },
+    {
+      "id": 207,
+      "canonicalSymbol": "SPECIES_GLIGAR"
+    },
+    {
+      "id": 208,
+      "canonicalSymbol": "SPECIES_STEELIX"
+    },
+    {
+      "id": 209,
+      "canonicalSymbol": "SPECIES_SNUBBULL"
+    },
+    {
+      "id": 210,
+      "canonicalSymbol": "SPECIES_GRANBULL"
+    },
+    {
+      "id": 211,
+      "canonicalSymbol": "SPECIES_QWILFISH"
+    },
+    {
+      "id": 213,
+      "canonicalSymbol": "SPECIES_SHUCKLE"
+    },
+    {
+      "id": 215,
+      "canonicalSymbol": "SPECIES_SNEASEL"
+    },
+    {
+      "id": 216,
+      "canonicalSymbol": "SPECIES_TEDDIURSA"
+    },
+    {
+      "id": 217,
+      "canonicalSymbol": "SPECIES_URSARING"
+    },
+    {
+      "id": 218,
+      "canonicalSymbol": "SPECIES_SLUGMA"
+    },
+    {
+      "id": 219,
+      "canonicalSymbol": "SPECIES_MAGCARGO"
+    },
+    {
+      "id": 220,
+      "canonicalSymbol": "SPECIES_SWINUB"
+    },
+    {
+      "id": 221,
+      "canonicalSymbol": "SPECIES_PILOSWINE"
+    },
+    {
+      "id": 222,
+      "canonicalSymbol": "SPECIES_CORSOLA"
+    },
+    {
+      "id": 223,
+      "canonicalSymbol": "SPECIES_REMORAID"
+    },
+    {
+      "id": 224,
+      "canonicalSymbol": "SPECIES_OCTILLERY"
+    },
+    {
+      "id": 225,
+      "canonicalSymbol": "SPECIES_DELIBIRD"
+    },
+    {
+      "id": 226,
+      "canonicalSymbol": "SPECIES_MANTINE"
+    },
+    {
+      "id": 228,
+      "canonicalSymbol": "SPECIES_HOUNDOUR"
+    },
+    {
+      "id": 229,
+      "canonicalSymbol": "SPECIES_HOUNDOOM"
+    },
+    {
+      "id": 231,
+      "canonicalSymbol": "SPECIES_PHANPY"
+    },
+    {
+      "id": 232,
+      "canonicalSymbol": "SPECIES_DONPHAN"
+    },
+    {
+      "id": 233,
+      "canonicalSymbol": "SPECIES_PORYGON2"
+    },
+    {
+      "id": 234,
+      "canonicalSymbol": "SPECIES_STANTLER"
+    },
+    {
+      "id": 235,
+      "canonicalSymbol": "SPECIES_SMEARGLE"
+    },
+    {
+      "id": 236,
+      "canonicalSymbol": "SPECIES_TYROGUE"
+    },
+    {
+      "id": 237,
+      "canonicalSymbol": "SPECIES_HITMONTOP"
+    },
+    {
+      "id": 238,
+      "canonicalSymbol": "SPECIES_SMOOCHUM"
+    },
+    {
+      "id": 239,
+      "canonicalSymbol": "SPECIES_ELEKID"
+    },
+    {
+      "id": 240,
+      "canonicalSymbol": "SPECIES_MAGBY"
+    },
+    {
+      "id": 241,
+      "canonicalSymbol": "SPECIES_MILTANK"
+    },
+    {
+      "id": 242,
+      "canonicalSymbol": "SPECIES_BLISSEY"
+    },
+    {
+      "id": 246,
+      "canonicalSymbol": "SPECIES_LARVITAR"
+    },
+    {
+      "id": 247,
+      "canonicalSymbol": "SPECIES_PUPITAR"
+    },
+    {
+      "id": 252,
+      "canonicalSymbol": "SPECIES_TREECKO"
+    },
+    {
+      "id": 253,
+      "canonicalSymbol": "SPECIES_GROVYLE"
+    },
+    {
+      "id": 255,
+      "canonicalSymbol": "SPECIES_TORCHIC"
+    },
+    {
+      "id": 256,
+      "canonicalSymbol": "SPECIES_COMBUSKEN"
+    },
+    {
+      "id": 258,
+      "canonicalSymbol": "SPECIES_MUDKIP"
+    },
+    {
+      "id": 259,
+      "canonicalSymbol": "SPECIES_MARSHTOMP"
+    },
+    {
+      "id": 261,
+      "canonicalSymbol": "SPECIES_POOCHYENA"
+    },
+    {
+      "id": 262,
+      "canonicalSymbol": "SPECIES_MIGHTYENA"
+    },
+    {
+      "id": 263,
+      "canonicalSymbol": "SPECIES_ZIGZAGOON"
+    },
+    {
+      "id": 264,
+      "canonicalSymbol": "SPECIES_LINOONE"
+    },
+    {
+      "id": 265,
+      "canonicalSymbol": "SPECIES_WURMPLE"
+    },
+    {
+      "id": 266,
+      "canonicalSymbol": "SPECIES_SILCOON"
+    },
+    {
+      "id": 267,
+      "canonicalSymbol": "SPECIES_BEAUTIFLY"
+    },
+    {
+      "id": 268,
+      "canonicalSymbol": "SPECIES_CASCOON"
+    },
+    {
+      "id": 269,
+      "canonicalSymbol": "SPECIES_DUSTOX"
+    },
+    {
+      "id": 270,
+      "canonicalSymbol": "SPECIES_LOTAD"
+    },
+    {
+      "id": 271,
+      "canonicalSymbol": "SPECIES_LOMBRE"
+    },
+    {
+      "id": 272,
+      "canonicalSymbol": "SPECIES_LUDICOLO"
+    },
+    {
+      "id": 273,
+      "canonicalSymbol": "SPECIES_SEEDOT"
+    },
+    {
+      "id": 274,
+      "canonicalSymbol": "SPECIES_NUZLEAF"
+    },
+    {
+      "id": 275,
+      "canonicalSymbol": "SPECIES_SHIFTRY"
+    },
+    {
+      "id": 276,
+      "canonicalSymbol": "SPECIES_TAILLOW"
+    },
+    {
+      "id": 277,
+      "canonicalSymbol": "SPECIES_SWELLOW"
+    },
+    {
+      "id": 278,
+      "canonicalSymbol": "SPECIES_WINGULL"
+    },
+    {
+      "id": 279,
+      "canonicalSymbol": "SPECIES_PELIPPER"
+    },
+    {
+      "id": 280,
+      "canonicalSymbol": "SPECIES_RALTS"
+    },
+    {
+      "id": 281,
+      "canonicalSymbol": "SPECIES_KIRLIA"
+    },
+    {
+      "id": 283,
+      "canonicalSymbol": "SPECIES_SURSKIT"
+    },
+    {
+      "id": 284,
+      "canonicalSymbol": "SPECIES_MASQUERAIN"
+    },
+    {
+      "id": 285,
+      "canonicalSymbol": "SPECIES_SHROOMISH"
+    },
+    {
+      "id": 287,
+      "canonicalSymbol": "SPECIES_SLAKOTH"
+    },
+    {
+      "id": 288,
+      "canonicalSymbol": "SPECIES_VIGOROTH"
+    },
+    {
+      "id": 289,
+      "canonicalSymbol": "SPECIES_SLAKING"
+    },
+    {
+      "id": 290,
+      "canonicalSymbol": "SPECIES_NINCADA"
+    },
+    {
+      "id": 291,
+      "canonicalSymbol": "SPECIES_NINJASK"
+    },
+    {
+      "id": 292,
+      "canonicalSymbol": "SPECIES_SHEDINJA"
+    },
+    {
+      "id": 293,
+      "canonicalSymbol": "SPECIES_WHISMUR"
+    },
+    {
+      "id": 294,
+      "canonicalSymbol": "SPECIES_LOUDRED"
+    },
+    {
+      "id": 295,
+      "canonicalSymbol": "SPECIES_EXPLOUD"
+    },
+    {
+      "id": 296,
+      "canonicalSymbol": "SPECIES_MAKUHITA"
+    },
+    {
+      "id": 297,
+      "canonicalSymbol": "SPECIES_HARIYAMA"
+    },
+    {
+      "id": 298,
+      "canonicalSymbol": "SPECIES_AZURILL"
+    },
+    {
+      "id": 299,
+      "canonicalSymbol": "SPECIES_NOSEPASS"
+    },
+    {
+      "id": 300,
+      "canonicalSymbol": "SPECIES_SKITTY"
+    },
+    {
+      "id": 301,
+      "canonicalSymbol": "SPECIES_DELCATTY"
+    },
+    {
+      "id": 302,
+      "canonicalSymbol": "SPECIES_SABLEYE"
+    },
+    {
+      "id": 303,
+      "canonicalSymbol": "SPECIES_MAWILE"
+    },
+    {
+      "id": 304,
+      "canonicalSymbol": "SPECIES_ARON"
+    },
+    {
+      "id": 305,
+      "canonicalSymbol": "SPECIES_LAIRON"
+    },
+    {
+      "id": 306,
+      "canonicalSymbol": "SPECIES_AGGRON"
+    },
+    {
+      "id": 307,
+      "canonicalSymbol": "SPECIES_MEDITITE"
+    },
+    {
+      "id": 308,
+      "canonicalSymbol": "SPECIES_MEDICHAM"
+    },
+    {
+      "id": 309,
+      "canonicalSymbol": "SPECIES_ELECTRIKE"
+    },
+    {
+      "id": 310,
+      "canonicalSymbol": "SPECIES_MANECTRIC"
+    },
+    {
+      "id": 311,
+      "canonicalSymbol": "SPECIES_PLUSLE"
+    },
+    {
+      "id": 312,
+      "canonicalSymbol": "SPECIES_MINUN"
+    },
+    {
+      "id": 313,
+      "canonicalSymbol": "SPECIES_VOLBEAT"
+    },
+    {
+      "id": 314,
+      "canonicalSymbol": "SPECIES_ILLUMISE"
+    },
+    {
+      "id": 315,
+      "canonicalSymbol": "SPECIES_ROSELIA"
+    },
+    {
+      "id": 316,
+      "canonicalSymbol": "SPECIES_GULPIN"
+    },
+    {
+      "id": 317,
+      "canonicalSymbol": "SPECIES_SWALOT"
+    },
+    {
+      "id": 318,
+      "canonicalSymbol": "SPECIES_CARVANHA"
+    },
+    {
+      "id": 319,
+      "canonicalSymbol": "SPECIES_SHARPEDO"
+    },
+    {
+      "id": 320,
+      "canonicalSymbol": "SPECIES_WAILMER"
+    },
+    {
+      "id": 321,
+      "canonicalSymbol": "SPECIES_WAILORD"
+    },
+    {
+      "id": 322,
+      "canonicalSymbol": "SPECIES_NUMEL"
+    },
+    {
+      "id": 323,
+      "canonicalSymbol": "SPECIES_CAMERUPT"
+    },
+    {
+      "id": 324,
+      "canonicalSymbol": "SPECIES_TORKOAL"
+    },
+    {
+      "id": 325,
+      "canonicalSymbol": "SPECIES_SPOINK"
+    },
+    {
+      "id": 326,
+      "canonicalSymbol": "SPECIES_GRUMPIG"
+    },
+    {
+      "id": 327,
+      "canonicalSymbol": "SPECIES_SPINDA"
+    },
+    {
+      "id": 328,
+      "canonicalSymbol": "SPECIES_TRAPINCH"
+    },
+    {
+      "id": 329,
+      "canonicalSymbol": "SPECIES_VIBRAVA"
+    },
+    {
+      "id": 330,
+      "canonicalSymbol": "SPECIES_FLYGON"
+    },
+    {
+      "id": 331,
+      "canonicalSymbol": "SPECIES_CACNEA"
+    },
+    {
+      "id": 332,
+      "canonicalSymbol": "SPECIES_CACTURNE"
+    },
+    {
+      "id": 333,
+      "canonicalSymbol": "SPECIES_SWABLU"
+    },
+    {
+      "id": 334,
+      "canonicalSymbol": "SPECIES_ALTARIA"
+    },
+    {
+      "id": 335,
+      "canonicalSymbol": "SPECIES_ZANGOOSE"
+    },
+    {
+      "id": 336,
+      "canonicalSymbol": "SPECIES_SEVIPER"
+    },
+    {
+      "id": 337,
+      "canonicalSymbol": "SPECIES_LUNATONE"
+    },
+    {
+      "id": 338,
+      "canonicalSymbol": "SPECIES_SOLROCK"
+    },
+    {
+      "id": 339,
+      "canonicalSymbol": "SPECIES_BARBOACH"
+    },
+    {
+      "id": 340,
+      "canonicalSymbol": "SPECIES_WHISCASH"
+    },
+    {
+      "id": 341,
+      "canonicalSymbol": "SPECIES_CORPHISH"
+    },
+    {
+      "id": 342,
+      "canonicalSymbol": "SPECIES_CRAWDAUNT"
+    },
+    {
+      "id": 343,
+      "canonicalSymbol": "SPECIES_BALTOY"
+    },
+    {
+      "id": 344,
+      "canonicalSymbol": "SPECIES_CLAYDOL"
+    },
+    {
+      "id": 345,
+      "canonicalSymbol": "SPECIES_LILEEP"
+    },
+    {
+      "id": 346,
+      "canonicalSymbol": "SPECIES_CRADILY"
+    },
+    {
+      "id": 347,
+      "canonicalSymbol": "SPECIES_ANORITH"
+    },
+    {
+      "id": 348,
+      "canonicalSymbol": "SPECIES_ARMALDO"
+    },
+    {
+      "id": 349,
+      "canonicalSymbol": "SPECIES_FEEBAS"
+    },
+    {
+      "id": 351,
+      "canonicalSymbol": "SPECIES_CASTFORM"
+    },
+    {
+      "id": 352,
+      "canonicalSymbol": "SPECIES_KECLEON"
+    },
+    {
+      "id": 353,
+      "canonicalSymbol": "SPECIES_SHUPPET"
+    },
+    {
+      "id": 354,
+      "canonicalSymbol": "SPECIES_BANETTE"
+    },
+    {
+      "id": 355,
+      "canonicalSymbol": "SPECIES_DUSKULL"
+    },
+    {
+      "id": 356,
+      "canonicalSymbol": "SPECIES_DUSCLOPS"
+    },
+    {
+      "id": 357,
+      "canonicalSymbol": "SPECIES_TROPIUS"
+    },
+    {
+      "id": 358,
+      "canonicalSymbol": "SPECIES_CHIMECHO"
+    },
+    {
+      "id": 359,
+      "canonicalSymbol": "SPECIES_ABSOL"
+    },
+    {
+      "id": 360,
+      "canonicalSymbol": "SPECIES_WYNAUT"
+    },
+    {
+      "id": 361,
+      "canonicalSymbol": "SPECIES_SNORUNT"
+    },
+    {
+      "id": 362,
+      "canonicalSymbol": "SPECIES_GLALIE"
+    },
+    {
+      "id": 363,
+      "canonicalSymbol": "SPECIES_SPHEAL"
+    },
+    {
+      "id": 364,
+      "canonicalSymbol": "SPECIES_SEALEO"
+    },
+    {
+      "id": 365,
+      "canonicalSymbol": "SPECIES_WALREIN"
+    },
+    {
+      "id": 366,
+      "canonicalSymbol": "SPECIES_CLAMPERL"
+    },
+    {
+      "id": 367,
+      "canonicalSymbol": "SPECIES_HUNTAIL"
+    },
+    {
+      "id": 368,
+      "canonicalSymbol": "SPECIES_GOREBYSS"
+    },
+    {
+      "id": 369,
+      "canonicalSymbol": "SPECIES_RELICANTH"
+    },
+    {
+      "id": 370,
+      "canonicalSymbol": "SPECIES_LUVDISC"
+    },
+    {
+      "id": 371,
+      "canonicalSymbol": "SPECIES_BAGON"
+    },
+    {
+      "id": 372,
+      "canonicalSymbol": "SPECIES_SHELGON"
+    },
+    {
+      "id": 374,
+      "canonicalSymbol": "SPECIES_BELDUM"
+    },
+    {
+      "id": 375,
+      "canonicalSymbol": "SPECIES_METANG"
+    },
+    {
+      "id": 387,
+      "canonicalSymbol": "SPECIES_TURTWIG"
+    },
+    {
+      "id": 388,
+      "canonicalSymbol": "SPECIES_GROTLE"
+    },
+    {
+      "id": 390,
+      "canonicalSymbol": "SPECIES_CHIMCHAR"
+    },
+    {
+      "id": 391,
+      "canonicalSymbol": "SPECIES_MONFERNO"
+    },
+    {
+      "id": 393,
+      "canonicalSymbol": "SPECIES_PIPLUP"
+    },
+    {
+      "id": 394,
+      "canonicalSymbol": "SPECIES_PRINPLUP"
+    },
+    {
+      "id": 396,
+      "canonicalSymbol": "SPECIES_STARLY"
+    },
+    {
+      "id": 397,
+      "canonicalSymbol": "SPECIES_STARAVIA"
+    },
+    {
+      "id": 398,
+      "canonicalSymbol": "SPECIES_STARAPTOR"
+    },
+    {
+      "id": 399,
+      "canonicalSymbol": "SPECIES_BIDOOF"
+    },
+    {
+      "id": 400,
+      "canonicalSymbol": "SPECIES_BIBAREL"
+    },
+    {
+      "id": 401,
+      "canonicalSymbol": "SPECIES_KRICKETOT"
+    },
+    {
+      "id": 402,
+      "canonicalSymbol": "SPECIES_KRICKETUNE"
+    },
+    {
+      "id": 403,
+      "canonicalSymbol": "SPECIES_SHINX"
+    },
+    {
+      "id": 404,
+      "canonicalSymbol": "SPECIES_LUXIO"
+    },
+    {
+      "id": 405,
+      "canonicalSymbol": "SPECIES_LUXRAY"
+    },
+    {
+      "id": 406,
+      "canonicalSymbol": "SPECIES_BUDEW"
+    },
+    {
+      "id": 408,
+      "canonicalSymbol": "SPECIES_CRANIDOS"
+    },
+    {
+      "id": 409,
+      "canonicalSymbol": "SPECIES_RAMPARDOS"
+    },
+    {
+      "id": 410,
+      "canonicalSymbol": "SPECIES_SHIELDON"
+    },
+    {
+      "id": 411,
+      "canonicalSymbol": "SPECIES_BASTIODON"
+    },
+    {
+      "id": 412,
+      "canonicalSymbol": "SPECIES_BURMY"
+    },
+    {
+      "id": 413,
+      "canonicalSymbol": "SPECIES_WORMADAM"
+    },
+    {
+      "id": 414,
+      "canonicalSymbol": "SPECIES_MOTHIM"
+    },
+    {
+      "id": 415,
+      "canonicalSymbol": "SPECIES_COMBEE"
+    },
+    {
+      "id": 416,
+      "canonicalSymbol": "SPECIES_VESPIQUEN"
+    },
+    {
+      "id": 417,
+      "canonicalSymbol": "SPECIES_PACHIRISU"
+    },
+    {
+      "id": 418,
+      "canonicalSymbol": "SPECIES_BUIZEL"
+    },
+    {
+      "id": 419,
+      "canonicalSymbol": "SPECIES_FLOATZEL"
+    },
+    {
+      "id": 420,
+      "canonicalSymbol": "SPECIES_CHERUBI"
+    },
+    {
+      "id": 421,
+      "canonicalSymbol": "SPECIES_CHERRIM"
+    },
+    {
+      "id": 422,
+      "canonicalSymbol": "SPECIES_SHELLOS"
+    },
+    {
+      "id": 423,
+      "canonicalSymbol": "SPECIES_GASTRODON"
+    },
+    {
+      "id": 424,
+      "canonicalSymbol": "SPECIES_AMBIPOM"
+    },
+    {
+      "id": 425,
+      "canonicalSymbol": "SPECIES_DRIFLOON"
+    },
+    {
+      "id": 426,
+      "canonicalSymbol": "SPECIES_DRIFBLIM"
+    },
+    {
+      "id": 427,
+      "canonicalSymbol": "SPECIES_BUNEARY"
+    },
+    {
+      "id": 428,
+      "canonicalSymbol": "SPECIES_LOPUNNY"
+    },
+    {
+      "id": 429,
+      "canonicalSymbol": "SPECIES_MISMAGIUS"
+    },
+    {
+      "id": 430,
+      "canonicalSymbol": "SPECIES_HONCHKROW"
+    },
+    {
+      "id": 431,
+      "canonicalSymbol": "SPECIES_GLAMEOW"
+    },
+    {
+      "id": 432,
+      "canonicalSymbol": "SPECIES_PURUGLY"
+    },
+    {
+      "id": 433,
+      "canonicalSymbol": "SPECIES_CHINGLING"
+    },
+    {
+      "id": 434,
+      "canonicalSymbol": "SPECIES_STUNKY"
+    },
+    {
+      "id": 435,
+      "canonicalSymbol": "SPECIES_SKUNTANK"
+    },
+    {
+      "id": 436,
+      "canonicalSymbol": "SPECIES_BRONZOR"
+    },
+    {
+      "id": 437,
+      "canonicalSymbol": "SPECIES_BRONZONG"
+    },
+    {
+      "id": 438,
+      "canonicalSymbol": "SPECIES_BONSLY"
+    },
+    {
+      "id": 439,
+      "canonicalSymbol": "SPECIES_MIME_JR"
+    },
+    {
+      "id": 440,
+      "canonicalSymbol": "SPECIES_HAPPINY"
+    },
+    {
+      "id": 441,
+      "canonicalSymbol": "SPECIES_CHATOT"
+    },
+    {
+      "id": 442,
+      "canonicalSymbol": "SPECIES_SPIRITOMB"
+    },
+    {
+      "id": 443,
+      "canonicalSymbol": "SPECIES_GIBLE"
+    },
+    {
+      "id": 444,
+      "canonicalSymbol": "SPECIES_GABITE"
+    },
+    {
+      "id": 445,
+      "canonicalSymbol": "SPECIES_GARCHOMP"
+    },
+    {
+      "id": 446,
+      "canonicalSymbol": "SPECIES_MUNCHLAX"
+    },
+    {
+      "id": 447,
+      "canonicalSymbol": "SPECIES_RIOLU"
+    },
+    {
+      "id": 449,
+      "canonicalSymbol": "SPECIES_HIPPOPOTAS"
+    },
+    {
+      "id": 450,
+      "canonicalSymbol": "SPECIES_HIPPOWDON"
+    },
+    {
+      "id": 451,
+      "canonicalSymbol": "SPECIES_SKORUPI"
+    },
+    {
+      "id": 452,
+      "canonicalSymbol": "SPECIES_DRAPION"
+    },
+    {
+      "id": 453,
+      "canonicalSymbol": "SPECIES_CROAGUNK"
+    },
+    {
+      "id": 454,
+      "canonicalSymbol": "SPECIES_TOXICROAK"
+    },
+    {
+      "id": 455,
+      "canonicalSymbol": "SPECIES_CARNIVINE"
+    },
+    {
+      "id": 456,
+      "canonicalSymbol": "SPECIES_FINNEON"
+    },
+    {
+      "id": 457,
+      "canonicalSymbol": "SPECIES_LUMINEON"
+    },
+    {
+      "id": 458,
+      "canonicalSymbol": "SPECIES_MANTYKE"
+    },
+    {
+      "id": 459,
+      "canonicalSymbol": "SPECIES_SNOVER"
+    },
+    {
+      "id": 460,
+      "canonicalSymbol": "SPECIES_ABOMASNOW"
+    },
+    {
+      "id": 463,
+      "canonicalSymbol": "SPECIES_LICKILICKY"
+    },
+    {
+      "id": 464,
+      "canonicalSymbol": "SPECIES_RHYPERIOR"
+    },
+    {
+      "id": 465,
+      "canonicalSymbol": "SPECIES_TANGROWTH"
+    },
+    {
+      "id": 466,
+      "canonicalSymbol": "SPECIES_ELECTIVIRE"
+    },
+    {
+      "id": 467,
+      "canonicalSymbol": "SPECIES_MAGMORTAR"
+    },
+    {
+      "id": 469,
+      "canonicalSymbol": "SPECIES_YANMEGA"
+    },
+    {
+      "id": 470,
+      "canonicalSymbol": "SPECIES_LEAFEON"
+    },
+    {
+      "id": 471,
+      "canonicalSymbol": "SPECIES_GLACEON"
+    },
+    {
+      "id": 476,
+      "canonicalSymbol": "SPECIES_PROBOPASS"
+    },
+    {
+      "id": 477,
+      "canonicalSymbol": "SPECIES_DUSKNOIR"
+    },
+    {
+      "id": 478,
+      "canonicalSymbol": "SPECIES_FROSLASS"
+    }
+  ],
+  "policies": [
+    "Do not infer French display names from canonical English symbols.",
+    "Do not expand runtime roster using this audit alone; species names, types, stats, and Project PM overrides need source validation.",
+    "Do not interpret IDs 494+ as standard species IDs without a separate forms/special-entry audit."
+  ]
+}
