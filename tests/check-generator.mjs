@@ -25,7 +25,8 @@ check("ROM catalogue does not falsely claim complete generator integration", () 
   assert.match(romCatalog.warning, /manifest/i);
 });
 check("ROM overrides preserve source provenance and verified-only status", () => {
-  assert.equal(romOverrides.status, "partial_verified_subset");
+  assert.equal(romOverrides.status, "historical_audit_unreconciled");
+  assert.match(romOverrides.warning, /NE DOIT PAS être appliqué/);
   assert.ok(romOverrides.profiles.platinum.sha256);
   assert.ok(romOverrides.profiles.project_pm.sha256);
   assert.ok(romOverrides.pokemon.every((entry) => entry.status === "decoded_verified"));
