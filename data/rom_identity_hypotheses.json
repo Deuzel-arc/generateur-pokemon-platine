@@ -1,0 +1,267 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Hypothèses de correspondance des IDs spéciaux et des formes Gen IV",
+  "status": "evidence_based_mapping_candidates_not_runtime_overrides",
+  "source": {
+    "database": "rom_battle_database.json",
+    "platinumSha256": "1cfd024519116c1c6285d6af2dbdfcec778e9d74c7c18585e22032e81aaa7eb8",
+    "projectPmSha256": "435b0288238f01f21eeeef7b5de6de3e3c9c3a9b70ea3b18d71b31ba282ae4e1",
+    "canonicalReference": {
+      "repository": "pret/pokeplatinum",
+      "commit": "06c6e9a0348da283be8d9225d0bec03c349ff5c2"
+    }
+  },
+  "rules": [
+    "Les correspondances ci-dessous sont des identifications par ordre des entrées spéciales/formes Gen IV et cohérence des statistiques/types; elles doivent être confirmées avec la table de noms de la ROM exacte avant utilisation runtime.",
+    "L'ID 508 de Project PM n'existe pas dans la table Platine extraite et reste sans nom.",
+    "Les noms de capacités supplémentaires ne sont pas déduits à partir de puissance/type seulement."
+  ],
+  "mappings": [
+    {
+      "id": 494,
+      "identityCandidate": "SPECIES_EGG",
+      "displayNameCandidate": "Œuf",
+      "profilePresence": [
+        "platinum",
+        "project_pm"
+      ],
+      "evidence": "Statistiques uniformes à 10, type Normal/Normal, capacités nulles; position connue d'entrée spéciale après Arceus.",
+      "confidence": "high",
+      "status": "candidate_needs_name_table_confirmation"
+    },
+    {
+      "id": 495,
+      "identityCandidate": "SPECIES_BAD_EGG",
+      "displayNameCandidate": "Œuf corrompu",
+      "profilePresence": [
+        "platinum",
+        "project_pm"
+      ],
+      "evidence": "Même profil de statistiques de remplissage que l'ID 494; position d'entrée spéciale suivante.",
+      "confidence": "high",
+      "status": "candidate_needs_name_table_confirmation"
+    },
+    {
+      "id": 496,
+      "identityCandidate": "DEOXYS_ATTACK",
+      "displayNameCandidate": "Deoxys Forme Attaque",
+      "profilePresence": [
+        "platinum",
+        "project_pm"
+      ],
+      "evidence": "Psy/Psy; statistiques 50/180/20/150/180/20 et talent ID 46.",
+      "confidence": "high",
+      "status": "candidate_needs_name_table_confirmation"
+    },
+    {
+      "id": 497,
+      "identityCandidate": "DEOXYS_DEFENSE",
+      "displayNameCandidate": "Deoxys Forme Défense",
+      "profilePresence": [
+        "platinum",
+        "project_pm"
+      ],
+      "evidence": "Psy/Psy; statistiques 50/70/160/90/70/160 et talent ID 46.",
+      "confidence": "high",
+      "status": "candidate_needs_name_table_confirmation"
+    },
+    {
+      "id": 498,
+      "identityCandidate": "DEOXYS_SPEED",
+      "displayNameCandidate": "Deoxys Forme Vitesse",
+      "profilePresence": [
+        "platinum",
+        "project_pm"
+      ],
+      "evidence": "Psy/Psy; statistiques 50/95/90/180/95/90 et talent ID 46.",
+      "confidence": "high",
+      "status": "candidate_needs_name_table_confirmation"
+    },
+    {
+      "id": 499,
+      "identityCandidate": "WORMADAM_SANDY",
+      "displayNameCandidate": "Cheniti / Cheniselle Cape Sable",
+      "profilePresence": [
+        "platinum",
+        "project_pm"
+      ],
+      "evidence": "Insecte/Sol; statistiques 60/79/105/36/59/85.",
+      "confidence": "high",
+      "status": "candidate_needs_name_table_confirmation"
+    },
+    {
+      "id": 500,
+      "identityCandidate": "WORMADAM_TRASH",
+      "displayNameCandidate": "Cheniti / Cheniselle Cape Déchet",
+      "profilePresence": [
+        "platinum",
+        "project_pm"
+      ],
+      "evidence": "Insecte/Acier; statistiques 60/69/95/36/69/95.",
+      "confidence": "high",
+      "status": "candidate_needs_name_table_confirmation"
+    },
+    {
+      "id": 501,
+      "identityCandidate": "GIRATINA_ORIGIN",
+      "displayNameCandidate": "Giratina Forme Originelle",
+      "profilePresence": [
+        "platinum",
+        "project_pm"
+      ],
+      "evidence": "Spectre/Dragon; statistiques 150/120/100/90/120/100.",
+      "confidence": "high",
+      "status": "candidate_needs_name_table_confirmation"
+    },
+    {
+      "id": 502,
+      "identityCandidate": "SHAYMIN_SKY",
+      "displayNameCandidate": "Shaymin Forme Céleste",
+      "profilePresence": [
+        "platinum",
+        "project_pm"
+      ],
+      "evidence": "Plante/Vol; statistiques 100/103/75/127/120/75.",
+      "confidence": "high",
+      "status": "candidate_needs_name_table_confirmation"
+    },
+    {
+      "id": 503,
+      "identityCandidate": "ROTOM_HEAT",
+      "displayNameCandidate": "Motisma Chaleur",
+      "profilePresence": [
+        "platinum",
+        "project_pm"
+      ],
+      "evidence": "Même profil de statistiques que les IDs 504–507; Électrik/Spectre dans Platine et Électrik/Feu dans Project PM.",
+      "confidence": "high",
+      "status": "candidate_needs_name_table_confirmation"
+    },
+    {
+      "id": 504,
+      "identityCandidate": "ROTOM_WASH",
+      "displayNameCandidate": "Motisma Lavage",
+      "profilePresence": [
+        "platinum",
+        "project_pm"
+      ],
+      "evidence": "Même profil de statistiques que les IDs 503 et 505–507; Électrik/Spectre dans Platine et Électrik/Eau dans Project PM.",
+      "confidence": "high",
+      "status": "candidate_needs_name_table_confirmation"
+    },
+    {
+      "id": 505,
+      "identityCandidate": "ROTOM_FROST",
+      "displayNameCandidate": "Motisma Froid",
+      "profilePresence": [
+        "platinum",
+        "project_pm"
+      ],
+      "evidence": "Même profil de statistiques que les IDs 503–504 et 506–507; Électrik/Spectre dans Platine et Électrik/Glace dans Project PM.",
+      "confidence": "high",
+      "status": "candidate_needs_name_table_confirmation"
+    },
+    {
+      "id": 506,
+      "identityCandidate": "ROTOM_FAN",
+      "displayNameCandidate": "Motisma Hélice",
+      "profilePresence": [
+        "platinum",
+        "project_pm"
+      ],
+      "evidence": "Même profil de statistiques que les IDs 503–505 et 507; Électrik/Spectre dans Platine et Électrik/Vol dans Project PM.",
+      "confidence": "high",
+      "status": "candidate_needs_name_table_confirmation"
+    },
+    {
+      "id": 507,
+      "identityCandidate": "ROTOM_MOW",
+      "displayNameCandidate": "Motisma Tonte",
+      "profilePresence": [
+        "platinum",
+        "project_pm"
+      ],
+      "evidence": "Même profil de statistiques que les IDs 503–506; Électrik/Spectre dans Platine et Électrik/Plante dans Project PM.",
+      "confidence": "high",
+      "status": "candidate_needs_name_table_confirmation"
+    },
+    {
+      "id": 508,
+      "identityCandidate": null,
+      "displayNameCandidate": null,
+      "profilePresence": [
+        "project_pm"
+      ],
+      "evidence": "Entrée supplémentaire uniquement dans Project PM; type Électrik/Électrik, statistiques 20/40/15/60/35/35, talent ID 9. Aucune correspondance canonique confirmée.",
+      "confidence": "unresolved",
+      "status": "unmapped"
+    }
+  ],
+  "extraMoves": [
+    {
+      "id": 468,
+      "profile": "project_pm",
+      "type": "Sol",
+      "category": "physical",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 20,
+      "effectId": 70,
+      "effectChance": 100,
+      "targetId": 8,
+      "learnsetReferences": 38,
+      "nameCandidate": null,
+      "status": "name_unmapped_effect_id_not_semantically_decoded"
+    },
+    {
+      "id": 469,
+      "profile": "project_pm",
+      "type": "Sol",
+      "category": "physical",
+      "power": 95,
+      "accuracy": 95,
+      "pp": 10,
+      "effectId": 0,
+      "effectChance": 0,
+      "targetId": 0,
+      "learnsetReferences": 10,
+      "nameCandidate": null,
+      "status": "name_unmapped"
+    },
+    {
+      "id": 470,
+      "profile": "project_pm",
+      "type": "Glace",
+      "category": "physical",
+      "power": 20,
+      "accuracy": 90,
+      "pp": 10,
+      "effectId": 104,
+      "effectChance": 0,
+      "targetId": 0,
+      "learnsetReferences": 5,
+      "nameCandidate": null,
+      "status": "name_unmapped_effect_id_not_semantically_decoded"
+    },
+    {
+      "id": 471,
+      "profile": "project_pm",
+      "type": "Psy",
+      "category": "physical",
+      "power": 75,
+      "accuracy": 100,
+      "pp": 25,
+      "effectId": 186,
+      "effectChance": 0,
+      "targetId": 0,
+      "learnsetReferences": 3,
+      "nameCandidate": null,
+      "status": "name_unmapped_effect_id_not_semantically_decoded"
+    }
+  ],
+  "nextInvestigation": [
+    "Lire la table des noms d'espèces de chaque ROM et confirmer les entrées 494–508.",
+    "Retrouver la table des noms de capacités et l'implémentation des effets dans Project PM.",
+    "Garder l'ID 508 et les capacités 468–471 hors du catalogue runtime jusqu'à confirmation."
+  ]
+}
