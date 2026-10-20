@@ -149,3 +149,16 @@ Un contrôle local indépendant a été exécuté sur `rom_battle_database.json`
 - Le test automatisé qui contrôle le mapping `rawTypeId: 9 → Fée`, l'empreinte CPUE, le statut `user_confirmed` et l'interdiction d'hériter ce mapping dans Platine original a réussi dans le workflow Generator checks n° 139.
 - Le déploiement GitHub Pages n° 196 a également réussi sur le commit `c148a961419c26dc31067640cab529ff270de969`.
 - Le mapping est donc enregistré et couvert par un test de provenance et de périmètre. Il n'est pas encore appliqué globalement au roster runtime : les prochains changements devront remplacer les valeurs décodées `Inconnu` par `Fée` uniquement dans les données Project PM concernées, en préservant les valeurs originales.
+
+
+## Audit ciblé du type Fée — 2026-10-20
+
+L'information utilisateur a été appliquée strictement au type brut ID 9 de la ROM Project PM (CPUE, SHA-256 `435b0288238f01f21eeeef7b5de6de3e3c9c3a9b70ea3b18d71b31ba282ae4e1`). Dans la base décodée, cette valeur était affichée comme `Inconnu`; le libellé confirmé est désormais documenté comme **Fée**, sans étendre cette confirmation aux autres données.
+
+- Audit ciblé ajouté : `data/project_pm_fairy_type_audit.json`.
+- Project PM : 31 entrées d'espèces contiennent au moins un emplacement de type ID 9 (37 emplacements au total) ; 8 entrées d'attaques portent ce type.
+- Platine original (CPUF) : aucune entrée d'espèce n'est étiquetée `Inconnu` par le décodeur, mais une attaque (ID interne 174) porte l'ID de type brut 9. Elle reste non remappée : la confirmation ne s'applique pas à CPUF.
+- Les IDs internes sont conservés ; cet audit ne prétend pas avoir identifié les noms canoniques des 31 espèces ou des 8 attaques.
+- Test automatisé ajouté pour vérifier l'empreinte CPUE, les décomptes, la conservation de l'attaque CPUF et l'absence de transfert entre ROMs.
+
+L'audit sert à circonscrire et contrôler la correction, pas encore à charger automatiquement l'ensemble des données de la ROM dans le générateur. La correspondance complète espèces/attaques et les effets des attaques restent des tâches distinctes.
