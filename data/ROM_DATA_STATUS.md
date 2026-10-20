@@ -238,3 +238,13 @@ L'audit sert à circonscrire et contrôler la correction, pas encore à charger 
 - Les six statistiques de base diffèrent pour 197 espèces; la paire de types diffère pour 60 espèces; 42 espèces ont à la fois des changements de statistiques et de types. Les octets après les champs de type diffèrent aussi dans 486 fiches, ce qui indique que la comparaison des seules statistiques/types ne suffit pas à décrire toute la personnalisation.
 - Les chiffres sont enregistrés dans `data/rom_species_core_delta_audit.json` et vérifiés par le validateur. Il ne faut pas traiter les différences comme des erreurs par défaut : elles sont des modifications de la ROM Project PM.
 - Conséquence pour le générateur : le roster intégré de 71 espèces ne représente qu'un sous-ensemble des données. L'étape suivante est d'étendre les profils depuis les données brutes vérifiées, sans extrapoler les valeurs de Platine original vers CPUE.
+
+## Audit brut des quatre capacités supplémentaires Project PM — 2026-10-20
+
+- Ajout de `data/project_pm_added_move_data_audit.json`, lié aux empreintes CPUF/CPUE du catalogue.
+- Les enregistrements bruts des IDs CPUE 468–471 sont désormais conservés et comparés automatiquement aux noms de la banque de texte : Piétinement, Cavalerie Lourde, Triple Axel et Psycho-Croc.
+- Les valeurs brutes décodées comprennent respectivement : Sol/physique/60/100/20 PP (effet 70), Sol/physique/95/95/10 PP (effet 0), Glace/physique/20/90/10 PP (effet 104), Psy/physique/75/100/25 PP (effet 186).
+- Ces champs décrivent les données de l'archive, pas nécessairement les effets de combat réellement exécutés. En particulier, un nom qui ressemble à une capacité d'une génération postérieure ne prouve ni son implémentation ni sa compatibilité avec les mécaniques de la 4e génération.
+- Le validateur `scripts/validate-rom-audits.mjs` compare les quatre lignes, les octets bruts et les noms décodés. `scripts/check-tooling.mjs` exige maintenant que ce rapport soit présent.
+- Prochaine étape : localiser la table/dispatch des effets de combat de CPUE et vérifier ces identifiants d'effet avant d'autoriser leur description stratégique dans le générateur.
+
