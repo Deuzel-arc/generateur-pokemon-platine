@@ -79,7 +79,7 @@ assert.equal(rosterCoverageAudit.scope.noRuntimeChanges, true, "coverage audit m
 assert.equal(rosterCoverageAudit.scope.coverageIsNotSemanticCertification, true, "coverage must not be confused with semantic validation");
 
 
-assert.equal(fairyMoveSemanticsAudit.status, "names_verified_raw_move_data_crosschecked_effect_semantics_pending", "Fairy move audit must distinguish verified names from pending effect semantics");
+assert.equal(fairyMoveSemanticsAudit.status, "raw_fields_crosschecked_effect_hypotheses_recorded_not_certified", "Fairy move audit must keep effect interpretations explicitly provisional");
 assert.equal(fairyMoveSemanticsAudit.source.platinumSha256, catalog.profiles.platinum.sha256, "Fairy move semantics audit must match CPUF hash");
 assert.equal(fairyMoveSemanticsAudit.source.projectPmSha256, catalog.profiles.project_pm.sha256, "Fairy move semantics audit must match CPUE hash");
 assert.equal(fairyMoveSemanticsAudit.counts.records, 8, "Fairy move semantics audit must cover eight entries");
@@ -91,6 +91,14 @@ assert.equal(fairyMoveSemanticsAudit.counts.effectIdChanged, 5, "five Fairy move
 assert.equal(fairyMoveSemanticsAudit.policies.nameEvidenceDoesNotCertifyBattleEffect, true, "decoded move names must not certify battle semantics");
 assert.equal(fairyMoveSemanticsAudit.policies.noInheritanceOfCanonicalEffectSemantics, true, "canonical move effects must not be inherited automatically");
 assert.equal(fairyMoveSemanticsAudit.policies.noRuntimeActivationUntilEffectsVerified, true, "unverified Fairy moves must remain out of runtime mechanics");
+assert.equal(fairyMoveSemanticsAudit.policies.canonicalEffectSymbolsAreHypothesesOnly, true, "canonical effect symbols must remain hypotheses for CPUE");
+assert.equal(fairyMoveSemanticsAudit.policies.semanticHypothesesDoNotPermitRuntimeActivation, true, "effect hypotheses must not permit runtime activation");
+assert.equal(fairyMoveSemanticsAudit.policies.noGen4CompatibilityClaimWithoutBattleHandlerEvidence, true, "Gen IV compatibility requires battle-handler evidence");
+assert.equal(fairyMoveSemanticsAudit.semanticHypotheses.length, 8, "all eight Fairy moves must have a recorded effect hypothesis");
+assert.deepEqual(fairyMoveSemanticsAudit.semanticHypotheses.map(row => row.id), [66, 140, 186, 204, 236, 295, 296, 461], "effect hypotheses must map to the eight audited move IDs");
+assert.ok(fairyMoveSemanticsAudit.semanticHypotheses.every(row => row.verifiedForProjectPmRuntime === false && row.verifiedForGen4Mechanics === false), "effect hypotheses must never be marked runtime- or Gen IV-verified");
+assert.deepEqual(fairyMoveSemanticsAudit.semanticHypotheses.map(row => row.canonicalSymbolAtSameIndex), ["BATTLE_EFFECT_LOWER_ATTACK_HIT", "BATTLE_EFFECT_RECOVER_HALF_DAMAGE_DEALT", "BATTLE_EFFECT_STATUS_CONFUSE", "BATTLE_EFFECT_ATK_DOWN_2", "BATTLE_EFFECT_HEAL_HALF_MORE_IN_SUN", "BATTLE_EFFECT_HIT", "BATTLE_EFFECT_BYPASS_ACCURACY", "BATTLE_EFFECT_LOWER_SP_ATK_HIT"], "canonical symbols at effect IDs must remain cross-checked candidates");
+
 assert.deepEqual(fairyMoveSemanticsAudit.records.map(row => [row.id, row.nameFrProjectPm]), [[66, "Câlinerie"], [140, "Vampibaiser"], [186, "Doux Baiser"], [204, "Charme"], [236, "Rayon Lune"], [295, "Éclat Magique"], [296, "Voix Enjôleuse"], [461, "Pouvoir Lunaire"]], "Fairy move names must match the decoded bank crosswalk");
 assert.ok(fairyMoveSemanticsAudit.records.every(row => row.projectPm.typeId === 9 && row.effectAssessment.runtimeEffectSemanticsVerified === false), "all Fairy move raw records must preserve unresolved effect semantics");
 
