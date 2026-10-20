@@ -64,7 +64,6 @@ check("selected reference drives team candidate roster and scoring", () => {
   assert.equal(romRosterProfiles.base.length, 71);
   assert.ok(romRosterProfiles.project_pm_overrides.Dracaufeu);
   assert.deepEqual(romRosterProfiles.project_pm_overrides.Dracaufeu[0], ["Feu", "Dragon"]);
-  assert.ok(rows.every(row => !row[2].includes("Fée")), "Fairy type must never leak into the original Platinum base profile");
   assert.deepEqual(romRosterProfiles.project_pm_overrides.Gardevoir[0], ["Psy", "Fée"]);
   assert.deepEqual(romRosterProfiles.project_pm_overrides.Togekiss[0], ["Fée", "Vol"]);
   for (const row of romRosterProfiles.base) {
@@ -164,6 +163,7 @@ check("roster species IDs, names, types and overrides are structurally consisten
   assert.equal(romRosterProfiles.schemaVersion, "1.0.0");
   assert.deepEqual(romRosterProfiles.statsOrder, ["hp", "attack", "defense", "speed", "specialAttack", "specialDefense"]);
   const rows = romRosterProfiles.base;
+  assert.ok(rows.every(row => !row[2].includes("Fée")), "Fairy type must never leak into the original Platinum base profile");
   assert.equal(rows.length, romCatalog.integration.rosterEntriesIntegrated);
   assert.equal(new Set(rows.map(row => row[0])).size, rows.length, "duplicate species names");
   assert.equal(new Set(rows.map(row => row[1])).size, rows.length, "duplicate National Pokédex IDs");
