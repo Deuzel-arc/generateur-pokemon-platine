@@ -1,6 +1,6 @@
 # Lot 04 — Matrice des types, statistiques et logique d'interface
 
-**État : audit statique partiel.** Le moteur de combat complet et la ROM Project PM n'ont pas été exécutés. Les défauts d'interface ci-dessous sont observables dans le fichier `index.html` actuel et doivent être traités comme des anomalies de conformité.
+**État : audit statique partiel — relu le 2026-10-20.** Le moteur de combat complet et la ROM Project PM n'ont pas été exécutés. Les défauts d'interface ci-dessous sont observables dans le fichier `index.html` actuel et doivent être traités comme des anomalies de conformité.
 
 ## Sources de référence
 
@@ -27,10 +27,10 @@ Source examinée : `index.html` sur la branche `main`.
 
 | ID | Constat dans le code actuel | Risque | Correction requise |
 |---|---|---|---|
-| UI-01 | La section objets dit « Sélectionne de 0 à 3 objets » et le gestionnaire refuse une sélection au-delà de 3. | Contradiction avec la règle de configuration de l'équipe qui exige six objets tenus distincts. | Le modèle doit produire six objets tenus uniques pour les six Pokémon, ou expliciter une étape d'affectation qui garantit ces six objets. |
+| UI-01 | La section objets permet d'imposer 0 à 2 objets et le moteur affecte six objets distincts au résultat. | Le scénario d'affectation est couvert par les tests navigateur ; la légalité et l'effet de chaque objet ne sont pas tous certifiés. | Conserver la règle d'affectation et compléter les preuves sur chaque objet, son effet 4G et sa compatibilité. |
 | UI-02 | Le catalogue d'objets est une liste codée en dur comprenant des objets dont la légalité, l'effet 4G ou le statut d'objet tenu n'est pas certifié dans le générateur. | Un objet incorrect ou non tenable peut être proposé à une équipe. | Ne proposer que des objets de la base canonique validée ; conserver un statut de preuve et une règle d'exclusion des candidats non vérifiés. |
-| UI-03 | La note des capacités illégales dit que les réglages automatiques se repositionnent lors des déplacements du curseur de compétitivité « entre 0 et 20 % ». | Incohérence avec la règle fonctionnelle convenue : zone automatique 0–24 %. | Remplacer le seuil codé en dur par une constante unique partagée entre logique, libellés et tests : 0–24 inclus. |
-| UI-04 | Le code de validation calcule le mode CI par `c < 25`, mais `ciSettingsResolved` vaut `c >= 25` sans vérifier que les réglages manuels ont réellement été explicitement résolus. | Une configuration peut être présentée comme résolue alors que la règle produit exige de bloquer la génération si les réglages automatiques/manuels ne le sont pas. | Implémenter un état explicite de résolution et bloquer la génération si la configuration n'est pas résolue. |
+| UI-03 | La note actuelle indique la zone automatique 0–24 %, cohérente avec la condition `c < 25`. | La plage a été corrigée ; les transitions complètes doivent encore être testées. | Garder une constante unique et couvrir les seuils 0, 24, 25, 99 et 100. |
+| UI-04 | La logique actuelle suit l'état de résolution des réglages CI et exige que les deux curseurs manuels aient été modifiés lorsque l'activation est manuelle entre 25 et 99 %. | Les tests navigateur couvrent le cas à 25 %, mais pas toutes les transitions et tous les seuils. | Étendre les tests aux seuils et aux transitions complètes. |
 | UI-05 | Le résumé de validation annonce un aperçu fondé sur un catalogue embarqué et précise qu'il ne s'agit pas du moteur stratégique complet. | L'aperçu peut être pris pour une équipe certifiée, alors que les movesets, objets et règles sont incomplets. | Garder cet avertissement visible jusqu'à la connexion du moteur certifié ; ne pas présenter l'aperçu comme résultat final. |
 | UI-06 | La fonction de sélection d'équipe choisit les espèces à partir de scores heuristiques et de tags embarqués, et ajoute un terme aléatoire. | La stratégie et la synergie sont approximatives, non calculées à partir des learnsets, rôles réels et interactions double combat. | Ne pas considérer cette sélection comme un générateur compétitif final. Brancher les données certifiées et un score de synergie vérifiable. |
 
