@@ -117,3 +117,13 @@ Dresseurs et leurs équipes, routes/cartes, rencontres sauvages, dialogues, scri
 - La cause du run 132 en échec était la configuration `setup-node` demandant un cache npm fondé sur `package-lock.json`, absent du dépôt. Le workflow a été corrigé en supprimant ce cache npm et en utilisant `npm install`; le cache Playwright reste activé avec une clé fondée sur `package.json`.
 - Cette correction rétablit la vérification automatisée, mais ne certifie pas de nouveaux mappings ROM. Les empreintes différentes de l'audit historique et les noms d'IDs spéciaux/attaques supplémentaires restent à résoudre avant intégration runtime.
 - Avancement estimatif inchangé à cette vérification : décryptage ROM 25 %, validation/enrichissement des bases 32 %, intégration générateur 14 %. Ces valeurs sont des estimations de travail, pas des mesures automatiques.
+
+## Contrôle structurel croisé des tables extraites — 2026-10-20
+
+Un contrôle local indépendant a été exécuté sur `rom_battle_database.json` pour les deux profils. Résultats :
+- Identifiants uniques et continus pour les espèces, capacités, apprentissages, évolutions et objets (508 espèces/471 capacités pour Platine; 509/472 pour Project PM).
+- Tous les enregistrements de statistiques ont les six champs attendus et des valeurs entières comprises entre 0 et 255; tous les champs puissance/précision/PP contrôlés sont dans leur plage binaire attendue.
+- Toutes les références de capacités des listes d'apprentissage pointent vers un ID présent dans la table des capacités du même profil; niveaux compris entre 1 et 100; marqueurs de fin trouvés dans toutes les listes.
+- Toutes les cibles d'évolution référencées sont dans les limites de la table d'espèces du profil.
+- **Aucune anomalie structurelle détectée dans ces contrôles.** Cela ne certifie ni les noms, ni les effets de combat, ni l'identité nationale des entrées spéciales.
+- Le profil Project PM contient 31 entrées d'espèces avec au moins un type décodé comme `Inconnu`. Les octets bruts sont conservés; l'hypothèse que l'ID de type concerné représente Fée doit être confirmée par une table de types ou un contrôle de combat avant de remplacer ce statut.
