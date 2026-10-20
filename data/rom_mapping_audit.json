@@ -69,48 +69,57 @@
     "species": {
       "commonIds": 508,
       "recordsDifferent": 500,
-      "recordsEqual": 8
+      "recordsEqual": 8,
+      "comparisonMethod": "Comparaison de tous les champs exportés des 508 IDs communs."
     },
     "moves": {
       "commonIds": 471,
       "recordsDifferent": 101,
       "recordsEqual": 370,
       "fieldDifferences": {
-        "effectId": 20,
-        "categoryId": 3,
-        "power": 73,
-        "type": 15,
-        "accuracy": 37,
-        "pp": 20,
-        "effectChance": 11,
-        "targetId": 18,
+        "effectId": 22,
+        "categoryId": 6,
+        "category": 6,
+        "power": 76,
+        "type": 18,
+        "typeId": 18,
+        "accuracy": 39,
+        "pp": 21,
+        "effectChance": 12,
+        "targetId": 19,
         "priority": 2,
         "flags": 4,
-        "contestType": 9,
-        "contestEffect": 8
-      }
+        "contestType": 11,
+        "contestEffect": 10,
+        "raw": 101
+      },
+      "comparisonMethod": "Recalculé à partir de rom_battle_database.json : comparaison champ par champ des 471 IDs communs; le champ raw est le blob hexadécimal complet et change pour chaque enregistrement déclaré différent."
     },
     "levelUpLearnsets": {
       "commonIds": 508,
       "recordsDifferent": 497,
-      "recordsEqual": 11
+      "recordsEqual": 11,
+      "comparisonMethod": "Comparaison des listes et champs exportés pour les 508 speciesId communs."
     },
     "evolutions": {
       "commonIds": 508,
       "recordsDifferent": 33,
-      "recordsEqual": 475
+      "recordsEqual": 475,
+      "comparisonMethod": "Comparaison des champs exportés pour les 508 speciesId communs."
     },
     "items": {
       "commonIds": 446,
       "recordsDifferent": 165,
-      "recordsEqual": 281
+      "recordsEqual": 281,
+      "comparisonMethod": "Comparaison des champs exportés pour les 446 IDs communs."
     },
     "berries": {
       "platinumEntries": 64,
       "projectPmEntries": 64,
       "rawEntriesDifferent": 64,
       "entriesWithByte4Different": 64,
-      "byte4ReferenceMeaning": "stageDuration dans la structure de référence Platine; le sens Project PM doit être confirmé séparément"
+      "byte4ReferenceMeaning": "stageDuration dans la structure de référence Platine; le sens Project PM doit être confirmé séparément",
+      "comparisonMethod": "Comparaison des enregistrements bruts des 64 IDs communs."
     }
   },
   "moveIdsBeyondCanonicalRange": {
