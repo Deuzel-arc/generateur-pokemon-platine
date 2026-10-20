@@ -51,7 +51,7 @@ for (const [name, script] of [
     timeout: 5000,
   });
   assert.equal(result.status, 2, `${name}: missing ROM arguments must exit with usage status 2`);
-  assert.match(result.stderr, /Usage: node scripts\/audit-rom-.*\.mjs <CPUF\.nds> <CPUE\.nds>/, `${name}: missing ROM arguments must print usage`);
+  assert.match(result.stderr, /Usage: node scripts\/(?:audit-rom-.*|audit-evolution-.*)\.mjs <CPUF\.nds> <CPUE\.nds>/, `${name}: missing ROM arguments must print usage`);
 }
 
 
