@@ -256,3 +256,11 @@ L'audit sert à circonscrire et contrôler la correction, pas encore à charger 
 - Ce croisement apporte une piste d'interprétation des IDs d'effet, mais ne prouve pas que Project PM exécute les scripts canoniques, ni que les noms candidats sont les noms voulus. Les candidats sont marqués explicitement comme non certifiés.
 - Le validateur vérifie désormais que les champs candidats correspondent à l'audit de référence et qu'ils ne sont pas présentés comme une sémantique runtime confirmée.
 - CI du lot précédent : succès complet (tests et déploiement GitHub Pages) sur le commit `ff9072c4f88038bf735d10db3c3df0492e3becb4`. Le nouveau croisement et ses assertions doivent encore passer leur propre exécution CI.
+
+## Vérification indépendante des indices d'effet canoniques — 2026-10-20
+
+- Relecture de `generated/move_battle_effects.txt` dans le dépôt `pret/pokeplatinum`, commit épinglé `06c6e9a0348da283be8d9225d0bec03c349ff5c2`.
+- Le fichier contient 277 symboles, indexés à partir de zéro. Vérification directe des quatre correspondances : 70 = `BATTLE_EFFECT_LOWER_SPEED_HIT`, 0 = `BATTLE_EFFECT_HIT`, 104 = `BATTLE_EFFECT_HIT_THREE_TIMES`, 186 = `BATTLE_EFFECT_REMOVE_SCREENS`.
+- Les IDs d'effet extraits de CPUE concordent donc avec les symboles de la référence canonique épinglée. Cela valide le **croisement de la table d'index**, pas le comportement réel de la ROM Project PM : celle-ci peut modifier le dispatch ou les scripts d'effets.
+- Le rapport des quatre capacités conserve maintenant les indices et la référence exacte; le validateur contient des assertions explicites pour éviter une erreur de décalage d'index.
+- Le workflow CI du commit précédent `02093373ed2686c3a6b9726dc875d33282d35593` a terminé avec succès, tests complets et déploiement. Le nouveau contrôle d'indices doit passer sa propre CI avant d'être considéré validé.
