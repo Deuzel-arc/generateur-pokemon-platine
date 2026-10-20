@@ -171,3 +171,14 @@ L'audit sert à circonscrire et contrôler la correction, pas encore à charger 
 - Les 8 IDs de capacités de l'audit correspondent exactement aux enregistrements dont `typeId = 9` dans le profil Project PM. Les champs puissance, précision, PP, effet, catégorie, cible, priorité et drapeaux correspondent tous à la source.
 - Le contrôle indépendant retrouve zéro espèce Project PM/Platine original portant le libellé extrait `Inconnu` dans CPUF, et exactement la capacité CPUF ID 174 avec `typeId = 9`. Cette capacité reste volontairement non remappée.
 - Résultat : **correspondance exacte audit ↔ base source pour les occurrences et champs consignés**. Cela confirme l'exactitude de l'inventaire, pas le nom canonique des espèces/capacités ni la sémantique des effets de combat. La portée de la traduction « Fée » reste CPUE uniquement.
+
+## Réconciliation structurelle des IDs d'objets — 2026-10-20
+
+- Ajout de `data/gen4_item_id_reference.json`, qui conserve les symboles d'objets canoniques et les symboles d'effets tenus de la référence `pret/pokeplatinum` épinglée au commit `06c6e9a0348da283be8d9225d0bec03c349ff5c2`.
+- Contrôle : 468 IDs logiques canoniques (0–467), dont 22 slots réservés `ITEM_UNUSED_113` à `ITEM_UNUSED_134`, soit 446 IDs non réservés.
+- Concordance de compte : `pl_item_data.narc` contient 446 entrées dans l'extraction CPUF et 470 dans CPUE. Cette concordance ne prouve pas l'ordre des membres d'archive.
+- La référence de décompilation utilise `sItemArchiveIDs[item].dataID` pour convertir un ID logique en index de membre. La table de correspondance n'est pas encore reconstruite pour les ROMs analysées : les noms et effets ne doivent donc pas être attribués par jointure positionnelle.
+- L'archive distincte `item_data.narc` contient 442 entrées dans les deux exports; elle ne doit pas être confondue avec `pl_item_data.narc`.
+- Le validateur `scripts/validate-rom-audits.mjs` contrôle désormais les bornes, les 22 slots réservés, les décomptes d'archive et l'interdiction de considérer une égalité de compte comme preuve de mapping. Le workflow Generator checks a réussi sur le commit `7a0210ef0b959946c8f5dce397378419b5cc5fb4`; le contrôle du commit de documentation suivant est en cours.
+- Prochaine étape : récupérer ou reconstruire la table ID logique → index d'archive pour CPUF, puis établir séparément les 24 entrées additionnelles de CPUE avant de certifier les effets d'objets.
+
