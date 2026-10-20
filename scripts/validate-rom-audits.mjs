@@ -118,6 +118,20 @@ assert.equal(typeByteAudit.charizardCandidate.historicalConflict.previousOverrid
 assert.equal(typeByteAudit.charizardCandidate.historicalConflict.previousProjectPmSha256, "78b95905031e0524942ac079afe2d444a6bcfb47aae7a07106800c5591d970f7", "historical override provenance hash must remain explicit");
 assert.equal(typeByteAudit.policies.doNotTransferOverridesAcrossRomHashes, true, "overrides must not be inherited across differing ROM hashes");
 
+assert.equal(typeByteAudit.source.directRomBinaryRecheck, true, "type-byte report must record direct ROM binary rechecking");
+assert.equal(typeByteAudit.directRomVerification.scriptPath, "scripts/audit-rom-type-bytes.mjs", "type-byte audit must identify its reproducible ROM parser");
+assert.deepEqual(typeByteAudit.directRomVerification.nitroFsFileCount, { platinum: 340, project_pm: 340 }, "direct type audit must preserve verified NitroFS counts");
+assert.deepEqual(typeByteAudit.directRomVerification.personalArchive.entries, { platinum: 508, project_pm: 509 }, "direct personal archive counts must remain verified");
+assert.deepEqual(typeByteAudit.directRomVerification.moveArchive.entries, { platinum: 471, project_pm: 472 }, "direct move archive counts must remain verified");
+assert.deepEqual(typeByteAudit.directRomVerification.platinum.speciesEntriesContainingTypeId9, [], "direct CPUF type audit must not map type ID 9 to Fairy");
+assert.equal(typeByteAudit.directRomVerification.platinum.speciesTypeId9SlotCount, 0, "direct CPUF species type ID 9 slot count must remain zero");
+assert.deepEqual(typeByteAudit.directRomVerification.platinum.movesContainingTypeId9, [174], "direct CPUF move type ID 9 must remain isolated");
+assert.equal(typeByteAudit.directRomVerification.project_pm.speciesEntriesContainingTypeId9.length, 31, "direct CPUE type ID 9 species list must contain 31 entries");
+assert.equal(typeByteAudit.directRomVerification.project_pm.speciesTypeId9SlotCount, 37, "direct CPUE type ID 9 must occur in 37 type slots");
+assert.deepEqual(typeByteAudit.directRomVerification.project_pm.movesContainingTypeId9, [66, 140, 186, 204, 236, 295, 296, 461], "direct CPUE type ID 9 move IDs must match the ROM bytes");
+assert.deepEqual(typeByteAudit.directRomVerification.project_pm.internalSpeciesId6RawTypeIds, [10, 16], "direct CPUE species ID 6 type bytes must match current ROM");
+assert.equal(typeByteAudit.directRomVerification.project_pm.internalSpeciesId6RawPrefixHex, "4e544e646e550a102dd1", "direct CPUE species ID 6 raw bytes must remain recorded");
+
 assert.equal(evolutionMethodAudit.source.databaseSha256, typeByteAudit.source.databaseSha256, "evolution audit must use the same identified extraction database");
 assert.equal(evolutionMethodAudit.source.platinum.sha256, catalog.profiles.platinum.sha256, "evolution audit must match current Platinum hash");
 assert.equal(evolutionMethodAudit.source.project_pm.sha256, catalog.profiles.project_pm.sha256, "evolution audit must match current Project PM hash");
