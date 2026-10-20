@@ -6,6 +6,7 @@ const pkg = JSON.parse(read("../package.json"));
 const quality = read("../.github/workflows/quality.yml");
 const pages = read("../.github/workflows/pages.yml");
 const dependabot = read("../.github/dependabot.yml");
+const lock = JSON.parse(read("../package-lock.json"));
 const required = [
   "../tests/check-generator.mjs",
   "../tests/browser-generator.test.mjs",
@@ -15,7 +16,8 @@ const required = [
   "../data/project_pm_type_mapping.json",
   "../data/project_pm_fairy_type_audit.json",
   "../docs/ACCELERATION_TOOLING.md",
-  "../.github/dependabot.yml"
+  "../.github/dependabot.yml",
+  "../package-lock.json"
 ];
 
 for (const path of required) {
@@ -31,7 +33,12 @@ for (const name of ["test:static", "test:rom-audits", "test:browser", "test:tool
 }
 assert.ok(!existsSync(new URL("../.github/workflows/generator-checks.yml", import.meta.url)), "duplicate generator-checks workflow must remain removed");
 assert.match(quality, /pull_request:/, "quality workflow must validate pull requests");
-assert.ok(!quality.includes("cache: npm") || existsSync(new URL("../package-lock.json", import.meta.url)), "npm cache requires a committed package-lock.json");
+assert.equal(lock.lockfileVersion, 3, "npm lockfile must use a supported v3 format");
+assert.equal(lock.packages[""].devDependencies.playwright, pkg.devDependencies.playwright, "lockfile must pin the declared Playwright version");
+assert.match(quality, /cache: npm/, "quality workflow must use the lockfile-aware npm cache");
+assert.match(pages, /cache: npm/, "Pages workflow must use the lockfile-aware npm cache");
+assert.match(quality, /npm ci --no-audit --no-fund/, "quality workflow must install from the lockfile");
+assert.match(pages, /npm ci --no-audit --no-fund/, "Pages workflow must install from the lockfile");
 assert.match(quality, /npm test/, "quality workflow must run the full test suite");
 assert.match(quality, /playwright install --with-deps chromium/, "quality workflow must install browser dependencies");
 assert.match(quality, /actions\/cache@v\d+[\s\S]*?path: ~\/\.cache\/ms-playwright/, "quality workflow must cache the Playwright browser");
