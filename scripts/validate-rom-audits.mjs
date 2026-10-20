@@ -20,7 +20,7 @@ assert.deepEqual(itemReference.itemIds.filter((row) => row.status === "reserved_
 assert.equal(itemReference.structuralReconciliation.canonicalDefinedItemIdCount, 446, "canonical non-reserved item count must be 446");
 assert.equal(itemReference.structuralReconciliation.platinumPlItemDataArchiveEntries, 446, "original Platinum pl_item_data archive count must match the recorded audit");
 assert.equal(itemReference.structuralReconciliation.projectPmPlItemDataArchiveEntries, catalog.profiles.project_pm.itemEntries, "Project PM pl_item_data count must match the ROM catalog");
-assert.equal(itemReference.structuralReconciliation.status, "count_match_mapping_not_proven", "matching counts must not be treated as proof of archive ordering");
+assert.match(itemReference.structuralReconciliation.status, /candidate_mapping_anchor_checked/, "candidate mapping must remain explicitly short of full ROM semantic certification");
 assert.match(itemReference.policies.join(" "), /jamais joindre.*par position/i, "item policy must prohibit unverified positional joins");
 assert.equal(itemReference.holdEffects.length, 147, "canonical hold-effect reference count must remain stable");
 assert.equal(itemReference.itemIds.filter((row) => row.archiveIndex !== null).length, 446, "candidate archive mapping must cover 446 non-reserved items");
