@@ -182,3 +182,11 @@ L'audit sert à circonscrire et contrôler la correction, pas encore à charger 
 - Le validateur `scripts/validate-rom-audits.mjs` contrôle désormais les bornes, les 22 slots réservés, les décomptes d'archive et l'interdiction de considérer une égalité de compte comme preuve de mapping. Le workflow Generator checks a réussi sur le commit `7a0210ef0b959946c8f5dce397378419b5cc5fb4`; le contrôle du commit de documentation suivant est en cours.
 - Mapping candidat étayé : `data/gen4_item_id_reference.json` contient le mapping des 446 IDs non réservés vers les index 0–445. Quatre ancres CPUF concordent avec les données brutes : Master Ball (ID 1 → index 1, prix 0), Ultra Ball (ID 2 → index 2, prix 1 200), Adamant Orb (ID 135 → index 113, prix 10 000) et Lustrous Orb (ID 136 → index 114, prix 10 000). Des tests verrouillent ces ancres et la séquence candidate. Le mapping n'est toujours pas déclaré exhaustivement certifié. Prochaine étape : comparer systématiquement les 446 entrées CPUF, puis identifier séparément les 24 entrées additionnelles CPUE avant de certifier les effets d'objets.
 
+
+
+## Différentiel brut des archives d'objets CPUF / CPUE — 2026-10-20
+
+- Ajout de data/project_pm_item_archive_diff.json après comparaison directe des entrées JSON extraites de pl_item_data.narc pour les empreintes CPUF/CPUE actuellement retenues.
+- Dans les 446 index partagés (0–445), 281 entrées sont identiques octet par octet et 165 diffèrent. Les 24 entrées CPUE supplémentaires sont appendues aux index 446–469; leurs empreintes sont conservées sans noms supposés.
+- Conclusion sûre : Project PM modifie des données d'objets existantes et ajoute 24 entrées. Les effets/paramètres de CPUF ne doivent pas être hérités automatiquement dans CPUE, et les noms ne doivent pas être attribués par simple position.
+- Le rapport et les assertions correspondantes sont maintenant intégrés au validateur ROM. La sémantique des entrées reste à certifier; ce lot est un audit différentiel brut, pas une validation des effets en jeu.
