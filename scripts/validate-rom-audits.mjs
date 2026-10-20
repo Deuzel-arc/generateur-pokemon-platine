@@ -26,6 +26,18 @@ const extendedNameBankAudit = readJson("data/rom_extended_name_banks_audit.json"
 const itemReference = readJson("data/gen4_item_id_reference.json");
 const romRosterProfiles = readJson("data/rom_roster_profiles.json");
 const candidateRosterProfiles = readJson("data/rom_roster_profiles_candidate_493.json");
+const missingSpeciesStaging = readJson("data/rom_roster_missing_species_staging.json");
+assert.equal(missingSpeciesStaging.status, "staging_generated_from_candidate_profiles_not_runtime_integrated", "missing-species staging must remain explicitly non-runtime");
+assert.equal(missingSpeciesStaging.counts.canonicalSpecies, 493, "staging must cover the canonical 493 species scope");
+assert.equal(missingSpeciesStaging.counts.currentRuntimeProfiles, 71, "staging baseline must reflect current runtime profile count");
+assert.equal(missingSpeciesStaging.counts.stagedMissingProfiles, 422, "staging must contain the 422 missing species");
+assert.equal(missingSpeciesStaging.stagedProfiles.length, 422, "staged profile rows must match the reported missing count");
+assert.equal(missingSpeciesStaging.counts.runtimeChanged, false, "staging must not claim runtime changes");
+assert.equal(missingSpeciesStaging.sourceHashes.platinum, catalog.profiles.platinum.sha256, "staging must match the audited Platinum ROM hash");
+assert.equal(missingSpeciesStaging.sourceHashes.project_pm, catalog.profiles.project_pm.sha256, "staging must match the audited Project PM ROM hash");
+assert.deepEqual(missingSpeciesStaging.stagedProfiles.map((row) => row.speciesId), Array.from({ length: 493 }, (_, i) => i + 1).filter((id) => !new Set(romRosterProfiles.base.map((row) => row[1])).has(id)), "staged species IDs must exactly equal runtime gaps in ascending order");
+assert.ok(missingSpeciesStaging.stagedProfiles.every((row) => row.integrationStatus === "staged_not_runtime_integrated" && row.strategyMetadata.status === "not_authored"), "staged profiles must not imply strategy metadata or runtime integration");
+assert.ok(missingSpeciesStaging.policy.includes("Ne pas créer automatiquement les tags de stratégie ni la classification légendaire à partir des statistiques."), "staging policy must prohibit guessed strategy tags and legendary labels");
 const frenchSpeciesNames = readJson("data/gen4_french_species_name_reference.json");
 const rosterCoverageAudit = readJson("data/rom_roster_coverage_audit.json");
 const fairyMoveIdentityGuard = readJson("data/project_pm_fairy_move_identity_guard.json");
