@@ -1,4 +1,6 @@
 import assert from "node:assert/strict";
+import { spawnSync } from "node:child_process";
+import { fileURLToPath } from "node:url";
 import { existsSync, readFileSync } from "node:fs";
 
 const read = (path) => readFileSync(new URL(path, import.meta.url), "utf8");
@@ -37,6 +39,19 @@ assert.equal(pkg.scripts["test:tooling"], "node scripts/check-tooling.mjs");
 assert.equal(pkg.scripts["audit:rom:types"], "node scripts/audit-rom-type-bytes.mjs");
 assert.equal(pkg.scripts["audit:rom:evolutions"], "node scripts/audit-evolution-roms.mjs");
 assert.equal(pkg.scripts["audit:rom:names"], "node scripts/audit-rom-species-name-bank.mjs");
+for (const [name, script] of [
+  ["audit:rom:types", "../scripts/audit-rom-type-bytes.mjs"],
+  ["audit:rom:evolutions", "../scripts/audit-evolution-roms.mjs"],
+  ["audit:rom:names", "../scripts/audit-rom-species-name-bank.mjs"],
+]) {
+  const result = spawnSync(process.execPath, [fileURLToPath(new URL(script, import.meta.url))], {
+    encoding: "utf8",
+    timeout: 5000,
+  });
+  assert.equal(result.status, 2, `${name}: missing ROM arguments must exit with usage status 2`);
+  assert.match(result.stderr, /Usage: node scripts\/audit-rom-.*\.mjs <CPUF\.nds> <CPUE\.nds>/, `${name}: missing ROM arguments must print usage`);
+}
+
 for (const name of ["test:static", "test:rom-audits", "test:browser", "test:tooling"]) {
   assert.ok(pkg.scripts.test.includes(`npm run ${name}`), `full test suite must include ${name}`);
 }
