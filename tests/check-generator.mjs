@@ -64,6 +64,7 @@ check("selected reference drives team candidate roster and scoring", () => {
   assert.equal(romRosterProfiles.base.length, 71);
   assert.ok(romRosterProfiles.project_pm_overrides.Dracaufeu);
   assert.deepEqual(romRosterProfiles.project_pm_overrides.Dracaufeu[0], ["Feu", "Dragon"]);
+  assert.ok(rows.every(row => !row[2].includes("Fée")), "Fairy type must never leak into the original Platinum base profile");
   assert.deepEqual(romRosterProfiles.project_pm_overrides.Gardevoir[0], ["Psy", "Fée"]);
   assert.deepEqual(romRosterProfiles.project_pm_overrides.Togekiss[0], ["Fée", "Vol"]);
   for (const row of romRosterProfiles.base) {
@@ -166,20 +167,21 @@ check("roster species IDs, names, types and overrides are structurally consisten
   assert.equal(rows.length, romCatalog.integration.rosterEntriesIntegrated);
   assert.equal(new Set(rows.map(row => row[0])).size, rows.length, "duplicate species names");
   assert.equal(new Set(rows.map(row => row[1])).size, rows.length, "duplicate National Pokédex IDs");
-  const allowedTypes = new Set(["Normal", "Feu", "Eau", "Électrik", "Plante", "Glace", "Combat", "Poison", "Sol", "Vol", "Psy", "Insecte", "Roche", "Spectre", "Dragon", "Ténèbres", "Acier", "Fée", "Inconnu"]);
+  const platinumTypes = new Set(["Normal", "Feu", "Eau", "Électrik", "Plante", "Glace", "Combat", "Poison", "Sol", "Vol", "Psy", "Insecte", "Roche", "Spectre", "Dragon", "Ténèbres", "Acier", "Inconnu"]);
+  const projectPmTypes = new Set([...platinumTypes, "Fée"]);
   for (const row of rows) {
     assert.equal(row.length, 9, `invalid profile row: ${row[0]}`);
     assert.ok(row[0].trim(), "empty species name");
     assert.ok(Number.isInteger(row[1]) && row[1] >= 1 && row[1] <= 493, `invalid Pokédex ID: ${row[0]}`);
     assert.ok(Array.isArray(row[2]) && row[2].length === 2, `invalid type pair: ${row[0]}`);
-    assert.ok(row[2].every(type => allowedTypes.has(type)), `unrecognized type: ${row[0]}`);
+    assert.ok(row[2].every(type => platinumTypes.has(type)), `unrecognized/non-Platinum base type: ${row[0]}`);
     assert.ok(row.slice(3).every(stat => Number.isInteger(stat) && stat >= 1 && stat <= 255), `invalid base stat: ${row[0]}`);
   }
   for (const [name, override] of Object.entries(romRosterProfiles.project_pm_overrides)) {
     assert.ok(rows.some(row => row[0] === name), `override species absent from roster: ${name}`);
     assert.ok(Array.isArray(override) && override.length === 2, `invalid override shape: ${name}`);
     assert.ok(Array.isArray(override[0]) && override[0].length === 2, `invalid override types: ${name}`);
-    assert.ok(override[0].every(type => allowedTypes.has(type)), `unrecognized override type: ${name}`);
+    assert.ok(override[0].every(type => projectPmTypes.has(type)), `unrecognized override type: ${name}`);
     assert.ok(Array.isArray(override[1]) && override[1].length === 6, `invalid override stats: ${name}`);
     assert.ok(override[1].every(stat => Number.isInteger(stat) && stat >= 1 && stat <= 255), `invalid override stat: ${name}`);
   }
