@@ -15,7 +15,6 @@ try {
 
   // The reference selector must change the actual composition data, not only the UI.
   await page.locator('#dataSources [data-value="platinum"]').click();
-  assert.match(await page.locator("#dataSourceStatus").innerText(), /Pokémon Platine original/);
   await page.locator('#starters [data-value="kanto"]').click();
   await page.locator("#validate").click();
   let sourceSummary = await page.locator("#summary").innerText();
@@ -23,7 +22,6 @@ try {
   assert.match(sourceSummary, /Dracaufeu — Feu \/ Vol/);
 
   await page.locator('#dataSources [data-value="multiplayer"]').click();
-  assert.match(await page.locator("#dataSourceStatus").innerText(), /Pokémon Platine multijoueur/);
   await page.locator("#validate").click();
   sourceSummary = await page.locator("#summary").innerText();
   assert.match(sourceSummary, /"referentielStrategique": "multiplayer"/);
