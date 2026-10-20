@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Audit des octets de types — extraction ROM actuelle",
+  "status": "saved_extraction_raw_byte_recheck_user_mapping_applied_only_as_candidate",
+  "source": {
+    "databaseLibraryFile": "rom_battle_database.json",
+    "databaseSha256": "eba0d4f71b26d3d190d53c0e3da8b11d7c18f08089a712e381d1087261a14e78",
+    "platinum": {
+      "gameCode": "CPUF",
+      "sha256": "1cfd024519116c1c6285d6af2dbdfcec778e9d74c7c18585e22032e81aaa7eb8"
+    },
+    "project_pm": {
+      "gameCode": "CPUE",
+      "sha256": "435b0288238f01f21eeeef7b5de6de3e3c9c3a9b70ea3b18d71b31ba282ae4e1"
+    },
+    "canonicalReference": {
+      "repository": "pret/pokeplatinum",
+      "commit": "06c6e9a0348da283be8d9225d0bec03c349ff5c2",
+      "typeId16": "TYPE_DRAGON",
+      "typeId9": "TYPE_MYSTERY"
+    }
+  },
+  "method": [
+    "Relecture des champs bruts hexadécimaux déjà enregistrés dans la base d'extraction; ce rapport ne prétend pas recalculer les SHA-256 des ROM depuis leurs binaires.",
+    "Pour les fiches espèces, les IDs de types sont relus aux offsets 6 et 7 de chaque enregistrement brut.",
+    "Pour les capacités, l'ID de type est relu à l'offset 4 de chaque enregistrement brut.",
+    "Les comptes et IDs sont des résultats de parsing reproductible de l'export identifié ci-dessus. L'identité par nom d'une entrée reste soumise à confirmation par la table de noms de la ROM exacte."
+  ],
+  "typeId9": {
+    "platinum": {
+      "speciesEntriesContainingId": [],
+      "speciesSlotOccurrences": 0,
+      "moveEntriesContainingId": [174],
+      "moveSlotOccurrences": 1,
+      "decodedLabelInExport": "Inconnu",
+      "interpretation": "Conserver le type Mystère canonique de Platine; ne jamais appliquer la surcharge Fée de Project PM à ce profil."
+    },
+    "project_pm": {
+      "speciesEntriesContainingId": [35, 36, 39, 40, 122, 154, 173, 175, 176, 183, 184, 200, 209, 210, 280, 281, 282, 303, 314, 333, 334, 350, 359, 370, 429, 439, 467, 468, 480, 481, 482],
+      "speciesSlotOccurrences": 37,
+      "moveEntriesContainingId": [66, 140, 186, 204, 236, 295, 296, 461],
+      "moveSlotOccurrences": 8,
+      "decodedLabelInExport": "Inconnu",
+      "confirmedProjectPmLabel": "Fée",
+      "interpretation": "Le mapping Fée est confirmé par l'utilisateur pour cette ROM et limité au code CPUE et au SHA-256 indiqué. L'export sémantique existant n'a pas encore propagé cette étiquette: ses valeurs Inconnu doivent être traitées comme un défaut du libellé décodé, pas comme une preuve d'absence de type Fée."
+    }
+  },
+  "charizardCandidate": {
+    "internalSpeciesId": 6,
+    "canonicalSymbolCandidate": "SPECIES_CHARIZARD",
+    "identityStatus": "candidate_by_shared_numeric_id_not_name_table_verified",
+    "platinum": {
+      "rawTypeIds": [10, 2],
+      "decodedTypes": ["Feu", "Vol"]
+    },
+    "project_pm": {
+      "rawTypeIds": [10, 16],
+      "decodedTypes": ["Feu", "Dragon"],
+      "rawRecordPrefixHex": "4e544e646e550a102dd1",
+      "secondaryTypeId": 16,
+      "canonicalSecondaryTypeSymbol": "TYPE_DRAGON"
+    },
+    "historicalConflict": {
+      "previousOverrideFile": "data/rom_overrides.json",
+      "previousOverrideValue": "Ténèbres",
+      "previousPlatinumSha256": "c589cc9c80edc7d735500650104ceb229ed37b24e041d2156bb2a0645a93562a",
+      "previousProjectPmSha256": "78b95905031e0524942ac079afe2d444a6bcfb47aae7a07106800c5591d970f7",
+      "resolution": "The historical Ténèbres override belongs to different, unreconciled ROM hashes. For the current CPUE extraction, raw type ID 16 maps to TYPE_DRAGON in the pinned Gen IV reference. Keep the old override inactive; do not transfer it to the current profile."
+    }
+  },
+  "policies": {
+    "preserveRawTypeIds": true,
+    "projectPmTypeId9Only": true,
+    "doNotModifyOriginalPlatinumTypeId9": true,
+    "doNotActivateNameBasedOverridesWithoutNameTableConfirmation": true,
+    "doNotTransferOverridesAcrossRomHashes": true,
+    "runtimeIntegration": "This audit records evidence and guards only. It does not itself rewrite the runtime roster or certify every Project PM type mapping."
+  }
+}
