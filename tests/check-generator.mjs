@@ -18,6 +18,9 @@ check("Strategic data schema explicitly separates raw extraction from verified r
   const schema = JSON.parse(readFileSync(new URL("../data/strategic_data_schema.json", import.meta.url), "utf8"));
   assert.equal(schema.schemaVersion, "1.0.0");
   assert.equal(schema.status, "specification_only_not_runtime_data");
+  assert.equal(romCatalog.strategicSchema.path, "data/strategic_data_schema.json");
+  assert.equal(romCatalog.strategicSchema.status, schema.status);
+  assert.ok(romCatalog.strategicSchema.deferredTables.includes("trainerDataRaw"));
   assert.equal(schema.joinPolicy.allowIndexOnlyCrossRomJoin, false);
   assert.equal(schema.joinPolicy.allowUnverifiedOverridesInRuntime, false);
   assert.ok(schema.entities.species.required.includes("provenance"));
