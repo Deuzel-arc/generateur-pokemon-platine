@@ -28,6 +28,7 @@ for (const name of ["test:static", "test:rom-audits", "test:browser", "test:tool
   assert.ok(pkg.scripts.test.includes(`npm run ${name}`), `full test suite must include ${name}`);
 }
 assert.match(quality, /pull_request:/, "quality workflow must validate pull requests");
+assert.ok(!quality.includes("cache: npm") || existsSync(new URL("../package-lock.json", import.meta.url)), "npm cache requires a committed package-lock.json");
 assert.match(quality, /npm test/, "quality workflow must run the full test suite");
 assert.match(quality, /playwright install --with-deps chromium/, "quality workflow must install browser dependencies");
 assert.match(pages, /needs: test/, "Pages deployment must depend on the passing test job");
