@@ -10,6 +10,19 @@ const hypotheses = readJson("data/rom_identity_hypotheses.json");
 const special = readJson("data/rom_special_entry_audit.json");
 const canonical = readJson("data/gen4_id_reference.json");
 const projectPmTypes = readJson("data/project_pm_type_mapping.json");
+const itemReference = readJson("data/gen4_item_id_reference.json");
+
+assert.equal(itemReference.source.commit, canonical.source.commit, "item reference must use the same pinned Gen IV source commit");
+assert.equal(itemReference.itemIds.length, 468, "canonical item reference must cover logical IDs 0–467");
+assert.deepEqual(itemReference.itemIds.map((row) => row.id), Array.from({ length: 468 }, (_, id) => id), "canonical item IDs must be sequential and explicit");
+assert.equal(itemReference.itemIds.filter((row) => row.status === "reserved_unused_slot").length, 22, "expected 22 reserved unused canonical item slots");
+assert.deepEqual(itemReference.itemIds.filter((row) => row.status === "reserved_unused_slot").map((row) => row.id), Array.from({ length: 22 }, (_, index) => index + 113), "unused item slots must remain IDs 113–134");
+assert.equal(itemReference.structuralReconciliation.canonicalDefinedItemIdCount, 446, "canonical non-reserved item count must be 446");
+assert.equal(itemReference.structuralReconciliation.platinumPlItemDataArchiveEntries, 446, "original Platinum pl_item_data archive count must match the recorded audit");
+assert.equal(itemReference.structuralReconciliation.projectPmPlItemDataArchiveEntries, catalog.profiles.project_pm.itemEntries, "Project PM pl_item_data count must match the ROM catalog");
+assert.equal(itemReference.structuralReconciliation.status, "count_match_mapping_not_proven", "matching counts must not be treated as proof of archive ordering");
+assert.match(itemReference.policies.join(" "), /jamais joindre.*par position/i, "item policy must prohibit unverified positional joins");
+assert.equal(itemReference.holdEffects.length, 147, "canonical hold-effect reference count must remain stable");
 
 assert.equal(projectPmTypes.profile.gameCode, "CPUE", "Project PM type mapping must target CPUE only");
 assert.equal(projectPmTypes.profile.sha256, catalog.profiles.project_pm.sha256, "Project PM type mapping ROM hash must match the catalog");
