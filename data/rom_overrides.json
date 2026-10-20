@@ -1,0 +1,233 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Overrides vérifiés entre Pokémon Platine français et Pokémon Platine multijoueur (Project PM)",
+  "status": "partial_verified_subset",
+  "warning": "Ce fichier contient uniquement les différences décodées et vérifiées consignées à ce stade. Il ne constitue pas le catalogue exhaustif des données des ROMs.",
+  "profiles": {
+    "platinum": {
+      "name": "Pokémon Platine original",
+      "gameCode": "CPUF",
+      "sha256": "c589cc9c80edc7d735500650104ceb229ed37b24e041d2156bb2a0645a93562a"
+    },
+    "project_pm": {
+      "name": "Pokémon Platine multijoueur (Project PM)",
+      "gameCode": "CPUE",
+      "sha256": "78b95905031e0524942ac079afe2d444a6bcfb47aae7a07106800c5591d970f7"
+    }
+  },
+  "pokemon": [
+    {
+      "species": "Florizarre",
+      "nationalDex": 3,
+      "field": "specialAttack",
+      "platinum": 100,
+      "project_pm": 110,
+      "source": "poketool/personal/pl_personal.narc",
+      "status": "decoded_verified"
+    },
+    {
+      "species": "Dracaufeu",
+      "nationalDex": 6,
+      "field": "secondaryType",
+      "platinum": "Vol",
+      "project_pm": "Ténèbres",
+      "source": "poketool/personal/pl_personal.narc",
+      "status": "decoded_verified"
+    },
+    {
+      "species": "Dracaufeu",
+      "nationalDex": 6,
+      "field": "specialAttack",
+      "platinum": 109,
+      "project_pm": 110,
+      "source": "poketool/personal/pl_personal.narc",
+      "status": "decoded_verified"
+    },
+    {
+      "species": "Tortank",
+      "nationalDex": 9,
+      "field": "specialAttack",
+      "platinum": 85,
+      "project_pm": 90,
+      "source": "poketool/personal/pl_personal.narc",
+      "status": "decoded_verified"
+    },
+    {
+      "species": "Papilusion",
+      "nationalDex": 12,
+      "field": "attack",
+      "platinum": 45,
+      "project_pm": 50,
+      "source": "poketool/personal/pl_personal.narc",
+      "status": "decoded_verified"
+    },
+    {
+      "species": "Papilusion",
+      "nationalDex": 12,
+      "field": "defense",
+      "platinum": 50,
+      "project_pm": 70,
+      "source": "poketool/personal/pl_personal.narc",
+      "status": "decoded_verified"
+    },
+    {
+      "species": "Papilusion",
+      "nationalDex": 12,
+      "field": "specialAttack",
+      "platinum": 80,
+      "project_pm": 110,
+      "source": "poketool/personal/pl_personal.narc",
+      "status": "decoded_verified"
+    },
+    {
+      "species": "Papilusion",
+      "nationalDex": 12,
+      "field": "specialDefense",
+      "platinum": 80,
+      "project_pm": 100,
+      "source": "poketool/personal/pl_personal.narc",
+      "status": "decoded_verified"
+    },
+    {
+      "species": "Pikachu",
+      "nationalDex": 25,
+      "field": "defense",
+      "platinum": 30,
+      "project_pm": 40,
+      "source": "poketool/personal/pl_personal.narc",
+      "status": "decoded_verified"
+    },
+    {
+      "species": "Pikachu",
+      "nationalDex": 25,
+      "field": "specialAttack",
+      "platinum": 50,
+      "project_pm": 55,
+      "source": "poketool/personal/pl_personal.narc",
+      "status": "decoded_verified"
+    },
+    {
+      "species": "Pikachu",
+      "nationalDex": 25,
+      "field": "specialDefense",
+      "platinum": 40,
+      "project_pm": 50,
+      "source": "poketool/personal/pl_personal.narc",
+      "status": "decoded_verified"
+    }
+  ],
+  "moves": [
+    {
+      "name": "Poing Karaté",
+      "platinum": {
+        "power": 50
+      },
+      "project_pm": {
+        "power": 55
+      },
+      "status": "decoded_verified"
+    },
+    {
+      "name": "Torgnoles",
+      "platinum": {
+        "power": 15,
+        "accuracy": 85
+      },
+      "project_pm": {
+        "power": 25,
+        "accuracy": 90
+      },
+      "status": "decoded_verified"
+    },
+    {
+      "name": "Poing Comète",
+      "platinum": {
+        "power": 18,
+        "accuracy": 85
+      },
+      "project_pm": {
+        "power": 25,
+        "accuracy": 90
+      },
+      "status": "decoded_verified"
+    },
+    {
+      "name": "Force Poigne",
+      "platinum": {
+        "power": 55
+      },
+      "project_pm": {
+        "power": 75
+      },
+      "status": "decoded_verified"
+    },
+    {
+      "name": "Vol",
+      "platinum": {
+        "power": 90,
+        "accuracy": 95
+      },
+      "project_pm": {
+        "power": 100,
+        "accuracy": 100
+      },
+      "status": "decoded_verified"
+    },
+    {
+      "name": "Étreinte",
+      "platinum": {
+        "power": 15,
+        "accuracy": 75
+      },
+      "project_pm": {
+        "power": 65,
+        "accuracy": 85
+      },
+      "status": "decoded_verified"
+    },
+    {
+      "name": "Souplesse",
+      "platinum": {
+        "power": 80,
+        "accuracy": 75
+      },
+      "project_pm": {
+        "power": 100,
+        "accuracy": 80
+      },
+      "status": "decoded_verified"
+    },
+    {
+      "name": "Écrasement",
+      "platinum": {
+        "power": 65
+      },
+      "project_pm": {
+        "power": 75
+      },
+      "status": "decoded_verified"
+    },
+    {
+      "name": "Furie",
+      "platinum": {
+        "power": 15,
+        "accuracy": 85
+      },
+      "project_pm": {
+        "power": 25,
+        "accuracy": 90
+      },
+      "status": "decoded_verified"
+    }
+  ],
+  "remainingAudit": {
+    "personalDataEntries": "509 vs 508; remaining fields/species not fully decoded",
+    "moveDataEntries": "472 vs 471; full move catalog not yet decoded",
+    "itemDataEntries": "470 vs 446; full item catalog not yet decoded",
+    "berriesEntries": "64 each; all 64 entries differ and require semantic decoding",
+    "encounterTables": "inventory/diffs exist; species and rates not yet fully decoded",
+    "learnsets": "not yet exhaustively decoded",
+    "evolutionTables": "not yet exhaustively decoded",
+    "trainerAndBattleData": "not yet exhaustively decoded"
+  }
+}
