@@ -17,8 +17,20 @@ const speciesCoreDeltaAudit = readJson("data/rom_species_core_delta_audit.json")
 const extendedNameBankAudit = readJson("data/rom_extended_name_banks_audit.json");
 const itemReference = readJson("data/gen4_item_id_reference.json");
 const romRosterProfiles = readJson("data/rom_roster_profiles.json");
+const frenchSpeciesNames = readJson("data/gen4_french_species_name_reference.json");
 const rosterCoverageAudit = readJson("data/rom_roster_coverage_audit.json");
 const fairyMoveIdentityGuard = readJson("data/project_pm_fairy_move_identity_guard.json");
+
+assert.equal(frenchSpeciesNames.status, "external_french_name_reference_candidate", "French species names must remain clearly labeled as an external reference");
+assert.equal(frenchSpeciesNames.species.length, 493, "French name reference must cover all standard Gen IV species");
+assert.equal(frenchSpeciesNames.validation.uniqueNamesFirst493, 493, "French names must be unique in the standard 1–493 range");
+assert.deepEqual(frenchSpeciesNames.species.map((row, index) => row.id), Array.from({ length: 493 }, (_, i) => i + 1), "French names must map to canonical species IDs 1–493");
+assert.deepEqual(frenchSpeciesNames.species.map((row) => row.canonicalSymbol), canonical.species.map((row) => row.symbol), "French names must preserve canonical Gen IV species ordering");
+assert.deepEqual(frenchSpeciesNames.validation.mismatches, [
+  { id: 479, profileName: "Rotom", referenceName: "Motisma" },
+  { id: 169, profileName: "Crobat", referenceName: "Nostenfer" },
+], "known French-name mismatches in the current roster profile must remain visible until corrected");
+assert.equal(frenchSpeciesNames.validation.exactNameMatches + frenchSpeciesNames.validation.mismatchCount, romRosterProfiles.base.length, "French name reference audit must account for every existing profile");
 
 assert.equal(rosterCoverageAudit.source.platinumSha256, catalog.profiles.platinum.sha256, "roster coverage audit must match CPUF hash");
 assert.equal(rosterCoverageAudit.source.projectPmSha256, catalog.profiles.project_pm.sha256, "roster coverage audit must match CPUE hash");
