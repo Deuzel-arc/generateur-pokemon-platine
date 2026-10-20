@@ -264,3 +264,11 @@ L'audit sert à circonscrire et contrôler la correction, pas encore à charger 
 - Les IDs d'effet extraits de CPUE concordent donc avec les symboles de la référence canonique épinglée. Cela valide le **croisement de la table d'index**, pas le comportement réel de la ROM Project PM : celle-ci peut modifier le dispatch ou les scripts d'effets.
 - Le rapport des quatre capacités conserve maintenant les indices et la référence exacte; le validateur contient des assertions explicites pour éviter une erreur de décalage d'index.
 - Le workflow CI du commit précédent `02093373ed2686c3a6b9726dc875d33282d35593` a terminé avec succès, tests complets et déploiement. Le nouveau contrôle d'indices doit passer sa propre CI avant d'être considéré validé.
+
+
+## Application runtime limitée des types Fée — 2026-10-20
+
+- Correction ciblée de `index.html` : en mode Project PM, le générateur applique maintenant les profils de type contenant « Fée » uniquement lorsqu'ils proviennent des overrides ROM déjà audités et associés à l'ID brut 9 confirmé par l'utilisateur.
+- Pour les 71 espèces intégrées, cela couvre les 7 profils concernés par l'audit : Méganium, Milobellus, Gardevoir, Togekiss, Créhelf, Créfollet et Créfadet. Les types modifiés de Project PM qui ne sont pas couverts par cette confirmation restent provisoires et ne sont pas appliqués au score stratégique.
+- La base Platine originale n'est pas modifiée. Le test statique a été ajusté pour interdire le retour à une liste codée en dur limitée à Gardevoir et Togekiss.
+- Cette correction améliore l'application runtime d'une donnée déjà auditée; elle n'élargit pas la couverture au-delà des 71 espèces actuelles. Le workflow CI doit valider le nouveau changement avant certification.
