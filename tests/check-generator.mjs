@@ -8,11 +8,30 @@ const romOverrides = JSON.parse(readFileSync(new URL("../data/rom_overrides.json
 const romRosterProfiles = JSON.parse(readFileSync(new URL("../data/rom_roster_profiles.json", import.meta.url), "utf8"));
 const romDeltaAudit = JSON.parse(readFileSync(new URL("../data/rom_delta_audit.json", import.meta.url), "utf8"));
 const gen4ReferenceStatus = JSON.parse(readFileSync(new URL("../data/gen4_reference_status.json", import.meta.url), "utf8"));
+const gen4IdReference = JSON.parse(readFileSync(new URL("../data/gen4_id_reference.json", import.meta.url), "utf8"));
 const checks = [];
 function check(name, fn) {
   try { fn(); checks.push({ name, status: "PASS" }); }
   catch (error) { checks.push({ name, status: "FAIL", message: error.message }); }
 }
+
+check("Canonical Gen IV identifier reference has exact bounded IDs and sentinels excluded", () => {
+  assert.equal(gen4IdReference.source.commit, gen4ReferenceStatus.reference.commit);
+  assert.equal(gen4IdReference.species.length, 493);
+  assert.equal(gen4IdReference.species[0].id, 1);
+  assert.equal(gen4IdReference.species[0].symbol, "SPECIES_BULBASAUR");
+  assert.equal(gen4IdReference.species[492].id, 493);
+  assert.equal(gen4IdReference.species[492].symbol, "SPECIES_ARCEUS");
+  assert.equal(gen4IdReference.moves.length, 467);
+  assert.equal(gen4IdReference.moves[0].id, 1);
+  assert.equal(gen4IdReference.moves[466].id, 467);
+  assert.equal(gen4IdReference.moves[466].symbol, "MOVE_SHADOW_FORCE");
+  assert.equal(gen4IdReference.abilities.length, 123);
+  assert.equal(gen4IdReference.types.length, 18);
+  assert.equal(gen4IdReference.types[9].symbol, "TYPE_MYSTERY");
+  assert.ok(gen4IdReference.warnings.some(rule => rule.includes("pas des noms français affichables")));
+  assert.ok(!gen4IdReference.moves.some(move => move.id >= 468));
+});
 
 check("Strategic data schema explicitly separates raw extraction from verified runtime data", () => {
   const schema = JSON.parse(readFileSync(new URL("../data/strategic_data_schema.json", import.meta.url), "utf8"));
