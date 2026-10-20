@@ -15,6 +15,19 @@ function check(name, fn) {
   catch (error) { checks.push({ name, status: "FAIL", message: error.message }); }
 }
 
+check("ROM special-entry audit preserves candidate status and raw effect mapping", () => {
+  const audit = JSON.parse(readFileSync(new URL("../data/rom_special_entry_audit.json", import.meta.url), "utf8"));
+  assert.equal(audit.status, "raw_rom_fields_verified_canonical_effect_symbols_candidate_only");
+  assert.equal(audit.specialSpecies.length, 15);
+  assert.equal(audit.specialSpecies.find(entry => entry.id === 508).status, "unmapped_project_pm_only");
+  assert.equal(audit.extraMoves.length, 4);
+  assert.equal(audit.extraMoves.find(move => move.id === 468).canonicalEffectSymbol, "BATTLE_EFFECT_LOWER_SPEED_HIT");
+  assert.equal(audit.extraMoves.find(move => move.id === 469).canonicalEffectSymbol, "BATTLE_EFFECT_HIT");
+  assert.equal(audit.extraMoves.find(move => move.id === 470).canonicalEffectSymbol, "BATTLE_EFFECT_HIT_THREE_TIMES");
+  assert.equal(audit.extraMoves.find(move => move.id === 471).canonicalEffectSymbol, "BATTLE_EFFECT_REMOVE_SCREENS");
+  assert.ok(audit.extraMoves.every(move => move.project_pm && move.identityCandidate !== undefined));
+  assert.ok(audit.warnings.some(rule => rule.includes("ne sont pas des noms certifiés")));
+});
 check("ROM identity hypotheses preserve unmapped Project PM entries", () => {
   const identities = JSON.parse(readFileSync(new URL("../data/rom_identity_hypotheses.json", import.meta.url), "utf8"));
   assert.equal(identities.mappings.length, 15);
