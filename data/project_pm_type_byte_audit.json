@@ -132,7 +132,7 @@
     "doNotModifyOriginalPlatinumTypeId9": true,
     "doNotActivateNameBasedOverridesWithoutNameTableConfirmation": true,
     "doNotTransferOverridesAcrossRomHashes": true,
-    "runtimeIntegration": "This audit records evidence and guards only. It does not itself rewrite the runtime roster or certify every Project PM type mapping."
+    "runtimeIntegration": "Le mapping Fée est appliqué aux six espèces de la roster actuelle qui utilisent l'ID 9 (Méganium, Milobellus, Créhelf, Créfollet, Créfadet et Togekiss; Gardevoir est aussi explicitement typé Fée dans le profil actuel). Les 31 occurrences brutes sont nommées dans le crosswalk, mais les autres espèces ne sont pas encore toutes intégrées au roster de 71 espèces."
   },
   "directRomVerification": {
     "scriptPath": "scripts/audit-rom-type-bytes.mjs",
