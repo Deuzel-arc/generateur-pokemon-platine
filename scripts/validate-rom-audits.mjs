@@ -12,6 +12,7 @@ const canonical = readJson("data/gen4_id_reference.json");
 const projectPmTypes = readJson("data/project_pm_type_mapping.json");
 const typeByteAudit = readJson("data/project_pm_type_byte_audit.json");
 const evolutionMethodAudit = readJson("data/project_pm_evolution_method_audit.json");
+const speciesNameBankAudit = readJson("data/rom_species_name_bank_audit.json");
 const itemReference = readJson("data/gen4_item_id_reference.json");
 
 const itemArchiveDiff = readJson("data/project_pm_item_archive_diff.json");
@@ -131,6 +132,16 @@ assert.equal(typeByteAudit.directRomVerification.project_pm.speciesTypeId9SlotCo
 assert.deepEqual(typeByteAudit.directRomVerification.project_pm.movesContainingTypeId9, [66, 140, 186, 204, 236, 295, 296, 461], "direct CPUE type ID 9 move IDs must match the ROM bytes");
 assert.deepEqual(typeByteAudit.directRomVerification.project_pm.internalSpeciesId6RawTypeIds, [10, 16], "direct CPUE species ID 6 type bytes must match current ROM");
 assert.equal(typeByteAudit.directRomVerification.project_pm.internalSpeciesId6RawPrefixHex, "4e544e646e550a102dd1", "direct CPUE species ID 6 raw bytes must remain recorded");
+
+assert.equal(speciesNameBankAudit.source.platinumSha256, catalog.profiles.platinum.sha256, "species name-bank audit must match CPUF hash");
+assert.equal(speciesNameBankAudit.source.projectPmSha256, catalog.profiles.project_pm.sha256, "species name-bank audit must match CPUE hash");
+assert.equal(speciesNameBankAudit.source.nameBankIndex, 412, "species name-bank index must remain tied to the pinned symbol table");
+assert.equal(speciesNameBankAudit.source.nameBankKey, 30764, "species name-bank encryption key must match the pinned reference");
+assert.equal(speciesNameBankAudit.source.nameBankEntryCount, 496, "species name bank must contain 496 decoded entries");
+assert.equal(speciesNameBankAudit.results.bothRomBanksIdentical, true, "species name banks must remain byte-decoded identically across the two ROM profiles");
+assert.deepEqual(speciesNameBankAudit.results.anchors, {"1":"BULBIZARRE","6":"DRACAUFEU","35":"MELOFEE","122":"M. MIME","223":"REMORAID","458":"BABIMANTA","467":"MAGANON","468":"TOGEKISS","493":"ARCEUS"}, "species name-bank anchor crosswalk must remain stable");
+assert.deepEqual(speciesNameBankAudit.results.sharedFormIdsWithoutDedicatedNames, [496,497,498,499,500,501,502,503,504,505,506,507], "unmapped form IDs must remain explicit");
+assert.equal(speciesNameBankAudit.results.projectPmExtraSpeciesIdWithoutDedicatedName, 508, "Project PM extra species ID must remain explicitly unmapped by this name bank");
 
 assert.equal(evolutionMethodAudit.source.databaseSha256, typeByteAudit.source.databaseSha256, "evolution audit must use the same identified extraction database");
 assert.equal(evolutionMethodAudit.source.platinum.sha256, catalog.profiles.platinum.sha256, "evolution audit must match current Platinum hash");
