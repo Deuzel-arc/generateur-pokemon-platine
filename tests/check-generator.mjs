@@ -24,6 +24,8 @@ check("ROM delta audit preserves provenance and labels raw differences as uncert
   assert.equal(romDeltaAudit.tables.moves.platinumEntries, 471);
   assert.equal(romDeltaAudit.tables.moves.projectPmEntries, 472);
   assert.equal(romDeltaAudit.tables.berriesRaw.bytePositionsWithDifferences["4"], 64);
+  assert.ok(romDeltaAudit.tables.berriesRaw.notes.some(item => item.includes("stageDuration")));
+  assert.ok(romDeltaAudit.sources.some(source => source.path === "include/berry_data.h" && source.commit === "06c6e9a0348da283be8d9225d0bec03c349ff5c2"));
   assert.equal(romDeltaAudit.certificationStatus, "partial_unverified_differences");
   assert.ok(romDeltaAudit.blockingConflicts.some(item => item.includes("empreintes")));
   assert.ok(romDeltaAudit.tables.items.notes.some(item => item.includes("pas encore de certifier")));
