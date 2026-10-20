@@ -7,6 +7,7 @@ const romCatalog = JSON.parse(readFileSync(new URL("../data/rom_catalog.json", i
 const romOverrides = JSON.parse(readFileSync(new URL("../data/rom_overrides.json", import.meta.url), "utf8"));
 const romRosterProfiles = JSON.parse(readFileSync(new URL("../data/rom_roster_profiles.json", import.meta.url), "utf8"));
 const projectPmTypeMapping = JSON.parse(readFileSync(new URL("../data/project_pm_type_mapping.json", import.meta.url), "utf8"));
+const projectPmFairyAudit = JSON.parse(readFileSync(new URL("../data/project_pm_fairy_type_audit.json", import.meta.url), "utf8"));
 const romDeltaAudit = JSON.parse(readFileSync(new URL("../data/rom_delta_audit.json", import.meta.url), "utf8"));
 const gen4ReferenceStatus = JSON.parse(readFileSync(new URL("../data/gen4_reference_status.json", import.meta.url), "utf8"));
 const gen4IdReference = JSON.parse(readFileSync(new URL("../data/gen4_id_reference.json", import.meta.url), "utf8"));
@@ -344,6 +345,27 @@ check("Project PM Fairy type mapping is scoped to the confirmed ROM profile", ()
   assert.equal(projectPmTypeMapping.policy.noCrossRomInheritance, true);
   assert.equal(projectPmTypeMapping.policy.originalPlatinumTypeId9MustRemainUnchanged, true);
   assert.match(fairy.caution, /pas encore vérifié indépendamment/);
+});
+
+
+check("Project PM Fairy occurrence audit preserves scope and raw IDs", () => {
+  assert.equal(projectPmFairyAudit.status, "user_confirmed_type_label_audited_names_unmapped");
+  assert.equal(projectPmFairyAudit.source.gameCode, "CPUE");
+  assert.equal(projectPmFairyAudit.source.sha256, romRosterProfiles.sourceHashes.project_pm);
+  assert.equal(projectPmFairyAudit.interpretation.rawTypeId, 9);
+  assert.equal(projectPmFairyAudit.interpretation.confirmedFrenchType, "Fée");
+  assert.equal(projectPmFairyAudit.summary.projectPmSpeciesEntriesWithType9, 31);
+  assert.equal(projectPmFairyAudit.summary.projectPmSpeciesTypeSlotsWithType9, 37);
+  assert.equal(projectPmFairyAudit.summary.projectPmMoveEntriesWithType9, 8);
+  assert.equal(projectPmFairyAudit.summary.originalPlatinumSpeciesEntriesWithType9, 0);
+  assert.equal(projectPmFairyAudit.summary.originalPlatinumMoveEntriesWithType9, 1);
+  assert.equal(projectPmFairyAudit.summary.originalPlatinumMappingApplied, false);
+  assert.equal(projectPmFairyAudit.projectPmSpecies.length, 31);
+  assert.equal(projectPmFairyAudit.projectPmMoves.length, 8);
+  assert.deepEqual(projectPmFairyAudit.originalPlatinum.rawTypeId9MoveIds, [174]);
+  assert.ok(projectPmFairyAudit.rules.some(rule => rule.includes("CPUF")));
+  assert.ok(projectPmFairyAudit.projectPmSpecies.every(entry => Number.isInteger(entry.id) && Array.isArray(entry.typeSlots)));
+  assert.ok(projectPmFairyAudit.projectPmMoves.every(entry => Number.isInteger(entry.id) && Number.isInteger(entry.effectId)));
 });
 
 check("roster species IDs, names, types and overrides are structurally consistent", () => {
