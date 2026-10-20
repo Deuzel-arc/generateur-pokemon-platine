@@ -27,20 +27,9 @@
     "nameCountFirst493": 493,
     "uniqueNamesFirst493": 493,
     "existingRosterProfilesCompared": 71,
-    "exactNameMatches": 69,
-    "mismatchCount": 2,
-    "mismatches": [
-      {
-        "id": 479,
-        "profileName": "Rotom",
-        "referenceName": "Motisma"
-      },
-      {
-        "id": 169,
-        "profileName": "Crobat",
-        "referenceName": "Nostenfer"
-      }
-    ]
+    "exactNameMatches": 71,
+    "mismatchCount": 0,
+    "mismatches": []
   },
   "species": [
     {
