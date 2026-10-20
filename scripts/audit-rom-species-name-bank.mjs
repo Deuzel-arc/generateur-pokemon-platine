@@ -67,10 +67,10 @@ for (const [code, value] of [[0x01a8,"$"],[0x01a9,"¡"],[0x01aa,"¿"],[0x01ab,"!
 function displayNameCandidate(raw) {
   return raw.toLocaleLowerCase("fr-FR").replace(/(^|[\s.-])(\p{L})/gu, (_, prefix, letter) => prefix + letter.toLocaleUpperCase("fr-FR"));
 }
-function decodeNameBank(bank, label) {
+function decodeNameBank(bank, label, expectedCount = NAME_BANK_COUNT, expectedKey = NAME_BANK_KEY) {
   const count = bank.readUInt16LE(0), key = bank.readUInt16LE(2);
-  assert.equal(count, NAME_BANK_COUNT, `${label}: species-name bank count changed`);
-  assert.equal(key, NAME_BANK_KEY, `${label}: species-name bank key changed`);
+  assert.equal(count, expectedCount, `${label}: name-bank count changed`);
+  assert.equal(key, expectedKey, `${label}: name-bank key changed`);
   let cursor = 4 + count * 8; assert.ok(cursor <= bank.length, `${label}: allocation table outside bank`);
   const entries = [];
   for (let i = 0; i < count; i++) {
