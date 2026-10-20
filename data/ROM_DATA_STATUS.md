@@ -84,3 +84,26 @@ Ces chiffres ne représentent pas la proportion de toutes les ressources interne
 - Un test automatisé vérifie la provenance du rapport, les empreintes et les comptes clés, et empêche de traiter le catalogue brut comme certifié. La réussite des tests sur le commit courant doit être vérifiée dans GitHub Actions avant de valider le lot.
 - Les équipes de dresseurs, les noms et effets d'objets, les rencontres normalisées, le mapping global des types Project PM et la réconciliation des empreintes de l'audit historique restent non certifiés.
 
+
+## Périmètre stratégique du générateur — décision du 2026-10-20
+
+Le périmètre d'intégration est limité aux données nécessaires à la construction et à l'évaluation d'équipes. Les archives extraites restent conservées pour audit; les tables hors périmètre ne doivent pas être supprimées ni intégrées automatiquement au runtime.
+
+### Priorité d'intégration
+1. Espèces et formes : identifiants réconciliés, noms, types, statistiques et talents.
+2. Capacités : identifiants, noms, type, catégorie, puissance, précision, priorité, PP et effets, avec provenance et statut de validation.
+3. Apprentissage par niveau et compatibilités de capacités, en distinguant les règles originales et Project PM.
+4. Évolutions et formes, après certification des méthodes et paramètres.
+5. Objets tenus et effets de combat, uniquement lorsque leur sémantique et leur disponibilité sont vérifiées.
+6. Table des types et règles de combat Gen IV, avec différences de Project PM documentées séparément.
+7. Tests de cohérence des données, des équipes doubles et de la provenance; CI et déploiement après chaque lot.
+
+### Hors périmètre immédiat
+Dresseurs et leurs équipes, routes/cartes, rencontres sauvages, dialogues, scripts narratifs, événements, graphismes, musiques et sons ne sont pas nécessaires au générateur actuel. Leur décodage est reporté, sans suppression des archives. Ils pourront être réévalués si un mode aventure, défi ou simulation de progression est ajouté.
+
+### Garde-fous
+- Une table extraite n'est pas réputée sémantiquement décodée par le seul fait qu'elle existe.
+- Ne pas apparier les entrées entre ROM uniquement par index lorsque la structure ou les empreintes sont en conflit.
+- Ne pas inventer les noms ou effets des IDs supplémentaires; conserver les données brutes et indiquer explicitement ce qui reste inconnu.
+- Le catalogue de référence et les données propres à Project PM doivent rester séparés et sourcés.
+- Étendre le roster au-delà des 71 profils actuels seulement après validation des identifiants, types et statistiques correspondants.
