@@ -408,7 +408,10 @@
         68,
         127
       ],
-      "numericIdIdentityWarning": true
+      "numericIdIdentityWarning": true,
+      "platinumNameFrFromNameBank": "Sacrifice",
+      "platinumNameEvidence": "decoded_platinum_move_name_bank_crosschecked_against_project_pm_name_bank",
+      "platinumSemanticIdentityWarning": true
     },
     {
       "moveId": 140,
@@ -617,7 +620,10 @@
         102,
         103
       ],
-      "numericIdIdentityWarning": true
+      "numericIdIdentityWarning": true,
+      "platinumNameFrFromNameBank": "Pilonnage",
+      "platinumNameEvidence": "decoded_platinum_move_name_bank_crosschecked_against_project_pm_name_bank",
+      "platinumSemanticIdentityWarning": true
     },
     {
       "moveId": 186,
@@ -777,7 +783,10 @@
       },
       "speciesIdsAddedAtSameNumericId": [],
       "speciesIdsRemovedAtSameNumericId": [],
-      "numericIdIdentityWarning": false
+      "numericIdIdentityWarning": false,
+      "platinumNameFrFromNameBank": "Doux Baiser",
+      "platinumNameEvidence": "decoded_platinum_move_name_bank_crosschecked_against_project_pm_name_bank",
+      "platinumSemanticIdentityWarning": false
     },
     {
       "moveId": 204,
@@ -1218,7 +1227,10 @@
       "speciesIdsRemovedAtSameNumericId": [
         312
       ],
-      "numericIdIdentityWarning": false
+      "numericIdIdentityWarning": false,
+      "platinumNameFrFromNameBank": "Charme",
+      "platinumNameEvidence": "decoded_platinum_move_name_bank_crosschecked_against_project_pm_name_bank",
+      "platinumSemanticIdentityWarning": false
     },
     {
       "moveId": 236,
@@ -1349,7 +1361,10 @@
       },
       "speciesIdsAddedAtSameNumericId": [],
       "speciesIdsRemovedAtSameNumericId": [],
-      "numericIdIdentityWarning": false
+      "numericIdIdentityWarning": false,
+      "platinumNameFrFromNameBank": "Rayon Lune",
+      "platinumNameEvidence": "decoded_platinum_move_name_bank_crosschecked_against_project_pm_name_bank",
+      "platinumSemanticIdentityWarning": false
     },
     {
       "moveId": 295,
@@ -1487,7 +1502,10 @@
       "speciesIdsRemovedAtSameNumericId": [
         381
       ],
-      "numericIdIdentityWarning": true
+      "numericIdIdentityWarning": true,
+      "platinumNameFrFromNameBank": "Lumi-Eclat",
+      "platinumNameEvidence": "decoded_platinum_move_name_bank_crosschecked_against_project_pm_name_bank",
+      "platinumSemanticIdentityWarning": true
     },
     {
       "moveId": 296,
@@ -1672,7 +1690,10 @@
       "speciesIdsRemovedAtSameNumericId": [
         380
       ],
-      "numericIdIdentityWarning": true
+      "numericIdIdentityWarning": true,
+      "platinumNameFrFromNameBank": "Ball’Brume",
+      "platinumNameEvidence": "decoded_platinum_move_name_bank_crosschecked_against_project_pm_name_bank",
+      "platinumSemanticIdentityWarning": true
     },
     {
       "moveId": 461,
@@ -1950,7 +1971,10 @@
         482
       ],
       "speciesIdsRemovedAtSameNumericId": [],
-      "numericIdIdentityWarning": true
+      "numericIdIdentityWarning": true,
+      "platinumNameFrFromNameBank": "Danse-Lune",
+      "platinumNameEvidence": "decoded_platinum_move_name_bank_crosschecked_against_project_pm_name_bank",
+      "platinumSemanticIdentityWarning": true
     },
     {
       "moveId": 468,
@@ -2273,7 +2297,10 @@
         473
       ],
       "speciesIdsRemovedAtSameNumericId": [],
-      "numericIdIdentityWarning": true
+      "numericIdIdentityWarning": true,
+      "platinumNameFrFromNameBank": null,
+      "platinumNameEvidence": "decoded_platinum_move_name_bank_crosschecked_against_project_pm_name_bank",
+      "platinumSemanticIdentityWarning": true
     },
     {
       "moveId": 469,
@@ -2372,7 +2399,10 @@
         473
       ],
       "speciesIdsRemovedAtSameNumericId": [],
-      "numericIdIdentityWarning": true
+      "numericIdIdentityWarning": true,
+      "platinumNameFrFromNameBank": null,
+      "platinumNameEvidence": "decoded_platinum_move_name_bank_crosschecked_against_project_pm_name_bank",
+      "platinumSemanticIdentityWarning": true
     },
     {
       "moveId": 470,
@@ -2431,7 +2461,10 @@
         461
       ],
       "speciesIdsRemovedAtSameNumericId": [],
-      "numericIdIdentityWarning": true
+      "numericIdIdentityWarning": true,
+      "platinumNameFrFromNameBank": null,
+      "platinumNameEvidence": "decoded_platinum_move_name_bank_crosschecked_against_project_pm_name_bank",
+      "platinumSemanticIdentityWarning": true
     },
     {
       "moveId": 471,
@@ -2474,7 +2507,15 @@
         405
       ],
       "speciesIdsRemovedAtSameNumericId": [],
-      "numericIdIdentityWarning": true
+      "numericIdIdentityWarning": true,
+      "platinumNameFrFromNameBank": null,
+      "platinumNameEvidence": "decoded_platinum_move_name_bank_crosschecked_against_project_pm_name_bank",
+      "platinumSemanticIdentityWarning": true
     }
-  ]
+  ],
+  "platinumNameCrosscheck": {
+    "status": "names_crosschecked_for_eight_project_pm_fairy_type_ids",
+    "conclusion": "The original Platinum CPUF name bank assigns different names to IDs 66, 140, 295, 296 and 461. Thus level-up usage counts at those IDs cannot be read as usage of the Project PM move names. For IDs 186, 204 and 236 the display names match, but name equality alone does not prove the original move type or battle semantics.",
+    "limitation": "This audit crosschecks move display names only. It does not certify CPUF move type/category/effect from raw battle records; that remains a separate verification step."
+  }
 }
