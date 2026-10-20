@@ -39,6 +39,21 @@ Constats structurels :
 
 Le validateur `scripts/validate-rom-audits.mjs` vérifie désormais les bornes et le nombre de slots inutilisés, ainsi que l'interdiction de traiter cette concordance de compte comme une preuve de mapping.
 
+## Mapping candidat des IDs vers l'archive — contrôle par ancres
+
+Quatre points d'ancrage issus des entrées brutes CPUF soutiennent la règle candidate « ID logique moins le nombre de slots réservés antérieurs » :
+
+| ID logique | Symbole canonique | Index archive candidat | Prix lu dans l'entrée brute |
+|---:|---|---:|---:|
+| 1 | `ITEM_MASTER_BALL` | 1 | 0 |
+| 2 | `ITEM_ULTRA_BALL` | 2 | 1 200 |
+| 135 | `ITEM_ADAMANT_ORB` | 113 | 10 000 |
+| 136 | `ITEM_LUSTROUS_ORB` | 114 | 10 000 |
+
+Ces ancres traversent la plage des IDs réservés 113–134 et sont cohérentes avec la table candidate de `data/gen4_item_id_reference.json`. Les tests automatisés verrouillent les quatre ancres et la séquence sans trous des 446 index candidats.
+
+**Statut maintenu : mapping candidat étayé, pas encore certification exhaustive.** Les ancres ne suffisent pas à prouver la correspondance de chaque entrée, ni à transférer ce mapping à Project PM. La vérification doit comparer les 446 entrées CPUF et identifier séparément les 24 entrées CPUE supplémentaires.
+
 ## Champs à vérifier pour chaque objet
 
 Le schéma de données de la décompilation sépare explicitement les propriétés suivantes. L'audit du générateur devra les comparer individuellement, sans déduire une propriété à partir du nom ou de la description :
