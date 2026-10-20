@@ -207,3 +207,11 @@ L'audit sert à circonscrire et contrôler la correction, pas encore à charger 
   - espèce source interne 458, paramètre 223, cible 226.
 - Les paramètres se référencent mutuellement. C'est un indice de règle propre au mod, mais cela ne suffit pas à établir le déclencheur ni la sémantique exacte. Le nom de méthode reste volontairement inconnu tant que le code d'évolution de Project PM n'a pas été inspecté.
 - Le validateur d'audits contrôle maintenant les comptes par méthode, la référence canonique épinglée et les deux triples source/paramètre/cible. Aucun nom de méthode custom ni aucune règle d'évolution n'est injecté dans le générateur à ce stade.
+
+## Vérification directe des octets ROM — 2026-10-20
+
+- Les deux archives ROM de la bibliothèque ont été rematérialisées et leurs fichiers `.nds` extraits localement. Les SHA-256 recalculés concordent exactement avec le manifeste actuel : CPUF `1cfd0245…aaa7eb8`, CPUE `435b0288…82ae4e1`; les deux fichiers font 134 217 728 octets et NitroFS contient 340 chemins dans chacun.
+- Le nouveau script `scripts/audit-rom-type-bytes.mjs` relit directement `poketool/personal/pl_personal.narc` et `poketool/waza/pl_waza_tbl.narc`, vérifie les tailles de records et énumère les types bruts. Les résultats concordent avec les valeurs documentées : 31 entrées d'espèces CPUE contenant l'ID 9 (37 slots), 8 capacités CPUE contenant l'ID 9, aucune espèce CPUF contenant cet ID et une capacité CPUF (ID 174).
+- Le script `scripts/audit-evolution-roms.mjs` relit directement `poketool/personal/evo.narc` et confirme les 508 entrées CPUF / 509 CPUE, 44 octets par fiche, 246 / 247 enregistrements d'évolution non vides, aucun ID de méthode non canonique CPUF et exactement deux slots de méthode 27 CPUE.
+- L'inspection directe confirme aussi que l'entrée interne 458 passe de méthode 21 (CPUF) à méthode 27 (CPUE), avec paramètre 223 et cible 226 conservés. L'entrée 223 passe du niveau 25 au niveau 35 pour la cible 224 et reçoit un slot supplémentaire de méthode 27, paramètre 458, même cible. Le lien réciproque est réel dans les octets ROM; le sens exact du code 27 n'est pas encore certifié.
+- Ces contrôles sont plus forts que la simple relecture de l'export JSON, mais ne remplacent pas encore l'inspection du code de combat/évolution et des tables de noms pour certifier les noms des IDs internes.
