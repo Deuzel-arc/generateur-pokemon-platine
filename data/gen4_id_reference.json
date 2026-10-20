@@ -1,0 +1,4431 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Référence canonique des identifiants Pokémon Platine — symboles Gen IV",
+  "source": {
+    "repository": "pret/pokeplatinum",
+    "commit": "06c6e9a0348da283be8d9225d0bec03c349ff5c2"
+  },
+  "scope": {
+    "species": "IDs 1–493 uniquement; les entrées spéciales et formes additionnelles restent à réconcilier séparément",
+    "moves": "IDs 1–467 uniquement; MOVE_NONE et MAX_MOVES sont exclus des capacités ordinaires",
+    "abilities": "IDs 1–123; ABILITY_NONE exclu",
+    "types": "IDs 0–17; NUM_POKEMON_TYPES exclu, TYPE_MYSTERY conservé distinct du type Fée"
+  },
+  "species": [
+    {
+      "id": 1,
+      "symbol": "SPECIES_BULBASAUR"
+    },
+    {
+      "id": 2,
+      "symbol": "SPECIES_IVYSAUR"
+    },
+    {
+      "id": 3,
+      "symbol": "SPECIES_VENUSAUR"
+    },
+    {
+      "id": 4,
+      "symbol": "SPECIES_CHARMANDER"
+    },
+    {
+      "id": 5,
+      "symbol": "SPECIES_CHARMELEON"
+    },
+    {
+      "id": 6,
+      "symbol": "SPECIES_CHARIZARD"
+    },
+    {
+      "id": 7,
+      "symbol": "SPECIES_SQUIRTLE"
+    },
+    {
+      "id": 8,
+      "symbol": "SPECIES_WARTORTLE"
+    },
+    {
+      "id": 9,
+      "symbol": "SPECIES_BLASTOISE"
+    },
+    {
+      "id": 10,
+      "symbol": "SPECIES_CATERPIE"
+    },
+    {
+      "id": 11,
+      "symbol": "SPECIES_METAPOD"
+    },
+    {
+      "id": 12,
+      "symbol": "SPECIES_BUTTERFREE"
+    },
+    {
+      "id": 13,
+      "symbol": "SPECIES_WEEDLE"
+    },
+    {
+      "id": 14,
+      "symbol": "SPECIES_KAKUNA"
+    },
+    {
+      "id": 15,
+      "symbol": "SPECIES_BEEDRILL"
+    },
+    {
+      "id": 16,
+      "symbol": "SPECIES_PIDGEY"
+    },
+    {
+      "id": 17,
+      "symbol": "SPECIES_PIDGEOTTO"
+    },
+    {
+      "id": 18,
+      "symbol": "SPECIES_PIDGEOT"
+    },
+    {
+      "id": 19,
+      "symbol": "SPECIES_RATTATA"
+    },
+    {
+      "id": 20,
+      "symbol": "SPECIES_RATICATE"
+    },
+    {
+      "id": 21,
+      "symbol": "SPECIES_SPEAROW"
+    },
+    {
+      "id": 22,
+      "symbol": "SPECIES_FEAROW"
+    },
+    {
+      "id": 23,
+      "symbol": "SPECIES_EKANS"
+    },
+    {
+      "id": 24,
+      "symbol": "SPECIES_ARBOK"
+    },
+    {
+      "id": 25,
+      "symbol": "SPECIES_PIKACHU"
+    },
+    {
+      "id": 26,
+      "symbol": "SPECIES_RAICHU"
+    },
+    {
+      "id": 27,
+      "symbol": "SPECIES_SANDSHREW"
+    },
+    {
+      "id": 28,
+      "symbol": "SPECIES_SANDSLASH"
+    },
+    {
+      "id": 29,
+      "symbol": "SPECIES_NIDORAN_F"
+    },
+    {
+      "id": 30,
+      "symbol": "SPECIES_NIDORINA"
+    },
+    {
+      "id": 31,
+      "symbol": "SPECIES_NIDOQUEEN"
+    },
+    {
+      "id": 32,
+      "symbol": "SPECIES_NIDORAN_M"
+    },
+    {
+      "id": 33,
+      "symbol": "SPECIES_NIDORINO"
+    },
+    {
+      "id": 34,
+      "symbol": "SPECIES_NIDOKING"
+    },
+    {
+      "id": 35,
+      "symbol": "SPECIES_CLEFAIRY"
+    },
+    {
+      "id": 36,
+      "symbol": "SPECIES_CLEFABLE"
+    },
+    {
+      "id": 37,
+      "symbol": "SPECIES_VULPIX"
+    },
+    {
+      "id": 38,
+      "symbol": "SPECIES_NINETALES"
+    },
+    {
+      "id": 39,
+      "symbol": "SPECIES_JIGGLYPUFF"
+    },
+    {
+      "id": 40,
+      "symbol": "SPECIES_WIGGLYTUFF"
+    },
+    {
+      "id": 41,
+      "symbol": "SPECIES_ZUBAT"
+    },
+    {
+      "id": 42,
+      "symbol": "SPECIES_GOLBAT"
+    },
+    {
+      "id": 43,
+      "symbol": "SPECIES_ODDISH"
+    },
+    {
+      "id": 44,
+      "symbol": "SPECIES_GLOOM"
+    },
+    {
+      "id": 45,
+      "symbol": "SPECIES_VILEPLUME"
+    },
+    {
+      "id": 46,
+      "symbol": "SPECIES_PARAS"
+    },
+    {
+      "id": 47,
+      "symbol": "SPECIES_PARASECT"
+    },
+    {
+      "id": 48,
+      "symbol": "SPECIES_VENONAT"
+    },
+    {
+      "id": 49,
+      "symbol": "SPECIES_VENOMOTH"
+    },
+    {
+      "id": 50,
+      "symbol": "SPECIES_DIGLETT"
+    },
+    {
+      "id": 51,
+      "symbol": "SPECIES_DUGTRIO"
+    },
+    {
+      "id": 52,
+      "symbol": "SPECIES_MEOWTH"
+    },
+    {
+      "id": 53,
+      "symbol": "SPECIES_PERSIAN"
+    },
+    {
+      "id": 54,
+      "symbol": "SPECIES_PSYDUCK"
+    },
+    {
+      "id": 55,
+      "symbol": "SPECIES_GOLDUCK"
+    },
+    {
+      "id": 56,
+      "symbol": "SPECIES_MANKEY"
+    },
+    {
+      "id": 57,
+      "symbol": "SPECIES_PRIMEAPE"
+    },
+    {
+      "id": 58,
+      "symbol": "SPECIES_GROWLITHE"
+    },
+    {
+      "id": 59,
+      "symbol": "SPECIES_ARCANINE"
+    },
+    {
+      "id": 60,
+      "symbol": "SPECIES_POLIWAG"
+    },
+    {
+      "id": 61,
+      "symbol": "SPECIES_POLIWHIRL"
+    },
+    {
+      "id": 62,
+      "symbol": "SPECIES_POLIWRATH"
+    },
+    {
+      "id": 63,
+      "symbol": "SPECIES_ABRA"
+    },
+    {
+      "id": 64,
+      "symbol": "SPECIES_KADABRA"
+    },
+    {
+      "id": 65,
+      "symbol": "SPECIES_ALAKAZAM"
+    },
+    {
+      "id": 66,
+      "symbol": "SPECIES_MACHOP"
+    },
+    {
+      "id": 67,
+      "symbol": "SPECIES_MACHOKE"
+    },
+    {
+      "id": 68,
+      "symbol": "SPECIES_MACHAMP"
+    },
+    {
+      "id": 69,
+      "symbol": "SPECIES_BELLSPROUT"
+    },
+    {
+      "id": 70,
+      "symbol": "SPECIES_WEEPINBELL"
+    },
+    {
+      "id": 71,
+      "symbol": "SPECIES_VICTREEBEL"
+    },
+    {
+      "id": 72,
+      "symbol": "SPECIES_TENTACOOL"
+    },
+    {
+      "id": 73,
+      "symbol": "SPECIES_TENTACRUEL"
+    },
+    {
+      "id": 74,
+      "symbol": "SPECIES_GEODUDE"
+    },
+    {
+      "id": 75,
+      "symbol": "SPECIES_GRAVELER"
+    },
+    {
+      "id": 76,
+      "symbol": "SPECIES_GOLEM"
+    },
+    {
+      "id": 77,
+      "symbol": "SPECIES_PONYTA"
+    },
+    {
+      "id": 78,
+      "symbol": "SPECIES_RAPIDASH"
+    },
+    {
+      "id": 79,
+      "symbol": "SPECIES_SLOWPOKE"
+    },
+    {
+      "id": 80,
+      "symbol": "SPECIES_SLOWBRO"
+    },
+    {
+      "id": 81,
+      "symbol": "SPECIES_MAGNEMITE"
+    },
+    {
+      "id": 82,
+      "symbol": "SPECIES_MAGNETON"
+    },
+    {
+      "id": 83,
+      "symbol": "SPECIES_FARFETCHD"
+    },
+    {
+      "id": 84,
+      "symbol": "SPECIES_DODUO"
+    },
+    {
+      "id": 85,
+      "symbol": "SPECIES_DODRIO"
+    },
+    {
+      "id": 86,
+      "symbol": "SPECIES_SEEL"
+    },
+    {
+      "id": 87,
+      "symbol": "SPECIES_DEWGONG"
+    },
+    {
+      "id": 88,
+      "symbol": "SPECIES_GRIMER"
+    },
+    {
+      "id": 89,
+      "symbol": "SPECIES_MUK"
+    },
+    {
+      "id": 90,
+      "symbol": "SPECIES_SHELLDER"
+    },
+    {
+      "id": 91,
+      "symbol": "SPECIES_CLOYSTER"
+    },
+    {
+      "id": 92,
+      "symbol": "SPECIES_GASTLY"
+    },
+    {
+      "id": 93,
+      "symbol": "SPECIES_HAUNTER"
+    },
+    {
+      "id": 94,
+      "symbol": "SPECIES_GENGAR"
+    },
+    {
+      "id": 95,
+      "symbol": "SPECIES_ONIX"
+    },
+    {
+      "id": 96,
+      "symbol": "SPECIES_DROWZEE"
+    },
+    {
+      "id": 97,
+      "symbol": "SPECIES_HYPNO"
+    },
+    {
+      "id": 98,
+      "symbol": "SPECIES_KRABBY"
+    },
+    {
+      "id": 99,
+      "symbol": "SPECIES_KINGLER"
+    },
+    {
+      "id": 100,
+      "symbol": "SPECIES_VOLTORB"
+    },
+    {
+      "id": 101,
+      "symbol": "SPECIES_ELECTRODE"
+    },
+    {
+      "id": 102,
+      "symbol": "SPECIES_EXEGGCUTE"
+    },
+    {
+      "id": 103,
+      "symbol": "SPECIES_EXEGGUTOR"
+    },
+    {
+      "id": 104,
+      "symbol": "SPECIES_CUBONE"
+    },
+    {
+      "id": 105,
+      "symbol": "SPECIES_MAROWAK"
+    },
+    {
+      "id": 106,
+      "symbol": "SPECIES_HITMONLEE"
+    },
+    {
+      "id": 107,
+      "symbol": "SPECIES_HITMONCHAN"
+    },
+    {
+      "id": 108,
+      "symbol": "SPECIES_LICKITUNG"
+    },
+    {
+      "id": 109,
+      "symbol": "SPECIES_KOFFING"
+    },
+    {
+      "id": 110,
+      "symbol": "SPECIES_WEEZING"
+    },
+    {
+      "id": 111,
+      "symbol": "SPECIES_RHYHORN"
+    },
+    {
+      "id": 112,
+      "symbol": "SPECIES_RHYDON"
+    },
+    {
+      "id": 113,
+      "symbol": "SPECIES_CHANSEY"
+    },
+    {
+      "id": 114,
+      "symbol": "SPECIES_TANGELA"
+    },
+    {
+      "id": 115,
+      "symbol": "SPECIES_KANGASKHAN"
+    },
+    {
+      "id": 116,
+      "symbol": "SPECIES_HORSEA"
+    },
+    {
+      "id": 117,
+      "symbol": "SPECIES_SEADRA"
+    },
+    {
+      "id": 118,
+      "symbol": "SPECIES_GOLDEEN"
+    },
+    {
+      "id": 119,
+      "symbol": "SPECIES_SEAKING"
+    },
+    {
+      "id": 120,
+      "symbol": "SPECIES_STARYU"
+    },
+    {
+      "id": 121,
+      "symbol": "SPECIES_STARMIE"
+    },
+    {
+      "id": 122,
+      "symbol": "SPECIES_MR_MIME"
+    },
+    {
+      "id": 123,
+      "symbol": "SPECIES_SCYTHER"
+    },
+    {
+      "id": 124,
+      "symbol": "SPECIES_JYNX"
+    },
+    {
+      "id": 125,
+      "symbol": "SPECIES_ELECTABUZZ"
+    },
+    {
+      "id": 126,
+      "symbol": "SPECIES_MAGMAR"
+    },
+    {
+      "id": 127,
+      "symbol": "SPECIES_PINSIR"
+    },
+    {
+      "id": 128,
+      "symbol": "SPECIES_TAUROS"
+    },
+    {
+      "id": 129,
+      "symbol": "SPECIES_MAGIKARP"
+    },
+    {
+      "id": 130,
+      "symbol": "SPECIES_GYARADOS"
+    },
+    {
+      "id": 131,
+      "symbol": "SPECIES_LAPRAS"
+    },
+    {
+      "id": 132,
+      "symbol": "SPECIES_DITTO"
+    },
+    {
+      "id": 133,
+      "symbol": "SPECIES_EEVEE"
+    },
+    {
+      "id": 134,
+      "symbol": "SPECIES_VAPOREON"
+    },
+    {
+      "id": 135,
+      "symbol": "SPECIES_JOLTEON"
+    },
+    {
+      "id": 136,
+      "symbol": "SPECIES_FLAREON"
+    },
+    {
+      "id": 137,
+      "symbol": "SPECIES_PORYGON"
+    },
+    {
+      "id": 138,
+      "symbol": "SPECIES_OMANYTE"
+    },
+    {
+      "id": 139,
+      "symbol": "SPECIES_OMASTAR"
+    },
+    {
+      "id": 140,
+      "symbol": "SPECIES_KABUTO"
+    },
+    {
+      "id": 141,
+      "symbol": "SPECIES_KABUTOPS"
+    },
+    {
+      "id": 142,
+      "symbol": "SPECIES_AERODACTYL"
+    },
+    {
+      "id": 143,
+      "symbol": "SPECIES_SNORLAX"
+    },
+    {
+      "id": 144,
+      "symbol": "SPECIES_ARTICUNO"
+    },
+    {
+      "id": 145,
+      "symbol": "SPECIES_ZAPDOS"
+    },
+    {
+      "id": 146,
+      "symbol": "SPECIES_MOLTRES"
+    },
+    {
+      "id": 147,
+      "symbol": "SPECIES_DRATINI"
+    },
+    {
+      "id": 148,
+      "symbol": "SPECIES_DRAGONAIR"
+    },
+    {
+      "id": 149,
+      "symbol": "SPECIES_DRAGONITE"
+    },
+    {
+      "id": 150,
+      "symbol": "SPECIES_MEWTWO"
+    },
+    {
+      "id": 151,
+      "symbol": "SPECIES_MEW"
+    },
+    {
+      "id": 152,
+      "symbol": "SPECIES_CHIKORITA"
+    },
+    {
+      "id": 153,
+      "symbol": "SPECIES_BAYLEEF"
+    },
+    {
+      "id": 154,
+      "symbol": "SPECIES_MEGANIUM"
+    },
+    {
+      "id": 155,
+      "symbol": "SPECIES_CYNDAQUIL"
+    },
+    {
+      "id": 156,
+      "symbol": "SPECIES_QUILAVA"
+    },
+    {
+      "id": 157,
+      "symbol": "SPECIES_TYPHLOSION"
+    },
+    {
+      "id": 158,
+      "symbol": "SPECIES_TOTODILE"
+    },
+    {
+      "id": 159,
+      "symbol": "SPECIES_CROCONAW"
+    },
+    {
+      "id": 160,
+      "symbol": "SPECIES_FERALIGATR"
+    },
+    {
+      "id": 161,
+      "symbol": "SPECIES_SENTRET"
+    },
+    {
+      "id": 162,
+      "symbol": "SPECIES_FURRET"
+    },
+    {
+      "id": 163,
+      "symbol": "SPECIES_HOOTHOOT"
+    },
+    {
+      "id": 164,
+      "symbol": "SPECIES_NOCTOWL"
+    },
+    {
+      "id": 165,
+      "symbol": "SPECIES_LEDYBA"
+    },
+    {
+      "id": 166,
+      "symbol": "SPECIES_LEDIAN"
+    },
+    {
+      "id": 167,
+      "symbol": "SPECIES_SPINARAK"
+    },
+    {
+      "id": 168,
+      "symbol": "SPECIES_ARIADOS"
+    },
+    {
+      "id": 169,
+      "symbol": "SPECIES_CROBAT"
+    },
+    {
+      "id": 170,
+      "symbol": "SPECIES_CHINCHOU"
+    },
+    {
+      "id": 171,
+      "symbol": "SPECIES_LANTURN"
+    },
+    {
+      "id": 172,
+      "symbol": "SPECIES_PICHU"
+    },
+    {
+      "id": 173,
+      "symbol": "SPECIES_CLEFFA"
+    },
+    {
+      "id": 174,
+      "symbol": "SPECIES_IGGLYBUFF"
+    },
+    {
+      "id": 175,
+      "symbol": "SPECIES_TOGEPI"
+    },
+    {
+      "id": 176,
+      "symbol": "SPECIES_TOGETIC"
+    },
+    {
+      "id": 177,
+      "symbol": "SPECIES_NATU"
+    },
+    {
+      "id": 178,
+      "symbol": "SPECIES_XATU"
+    },
+    {
+      "id": 179,
+      "symbol": "SPECIES_MAREEP"
+    },
+    {
+      "id": 180,
+      "symbol": "SPECIES_FLAAFFY"
+    },
+    {
+      "id": 181,
+      "symbol": "SPECIES_AMPHAROS"
+    },
+    {
+      "id": 182,
+      "symbol": "SPECIES_BELLOSSOM"
+    },
+    {
+      "id": 183,
+      "symbol": "SPECIES_MARILL"
+    },
+    {
+      "id": 184,
+      "symbol": "SPECIES_AZUMARILL"
+    },
+    {
+      "id": 185,
+      "symbol": "SPECIES_SUDOWOODO"
+    },
+    {
+      "id": 186,
+      "symbol": "SPECIES_POLITOED"
+    },
+    {
+      "id": 187,
+      "symbol": "SPECIES_HOPPIP"
+    },
+    {
+      "id": 188,
+      "symbol": "SPECIES_SKIPLOOM"
+    },
+    {
+      "id": 189,
+      "symbol": "SPECIES_JUMPLUFF"
+    },
+    {
+      "id": 190,
+      "symbol": "SPECIES_AIPOM"
+    },
+    {
+      "id": 191,
+      "symbol": "SPECIES_SUNKERN"
+    },
+    {
+      "id": 192,
+      "symbol": "SPECIES_SUNFLORA"
+    },
+    {
+      "id": 193,
+      "symbol": "SPECIES_YANMA"
+    },
+    {
+      "id": 194,
+      "symbol": "SPECIES_WOOPER"
+    },
+    {
+      "id": 195,
+      "symbol": "SPECIES_QUAGSIRE"
+    },
+    {
+      "id": 196,
+      "symbol": "SPECIES_ESPEON"
+    },
+    {
+      "id": 197,
+      "symbol": "SPECIES_UMBREON"
+    },
+    {
+      "id": 198,
+      "symbol": "SPECIES_MURKROW"
+    },
+    {
+      "id": 199,
+      "symbol": "SPECIES_SLOWKING"
+    },
+    {
+      "id": 200,
+      "symbol": "SPECIES_MISDREAVUS"
+    },
+    {
+      "id": 201,
+      "symbol": "SPECIES_UNOWN"
+    },
+    {
+      "id": 202,
+      "symbol": "SPECIES_WOBBUFFET"
+    },
+    {
+      "id": 203,
+      "symbol": "SPECIES_GIRAFARIG"
+    },
+    {
+      "id": 204,
+      "symbol": "SPECIES_PINECO"
+    },
+    {
+      "id": 205,
+      "symbol": "SPECIES_FORRETRESS"
+    },
+    {
+      "id": 206,
+      "symbol": "SPECIES_DUNSPARCE"
+    },
+    {
+      "id": 207,
+      "symbol": "SPECIES_GLIGAR"
+    },
+    {
+      "id": 208,
+      "symbol": "SPECIES_STEELIX"
+    },
+    {
+      "id": 209,
+      "symbol": "SPECIES_SNUBBULL"
+    },
+    {
+      "id": 210,
+      "symbol": "SPECIES_GRANBULL"
+    },
+    {
+      "id": 211,
+      "symbol": "SPECIES_QWILFISH"
+    },
+    {
+      "id": 212,
+      "symbol": "SPECIES_SCIZOR"
+    },
+    {
+      "id": 213,
+      "symbol": "SPECIES_SHUCKLE"
+    },
+    {
+      "id": 214,
+      "symbol": "SPECIES_HERACROSS"
+    },
+    {
+      "id": 215,
+      "symbol": "SPECIES_SNEASEL"
+    },
+    {
+      "id": 216,
+      "symbol": "SPECIES_TEDDIURSA"
+    },
+    {
+      "id": 217,
+      "symbol": "SPECIES_URSARING"
+    },
+    {
+      "id": 218,
+      "symbol": "SPECIES_SLUGMA"
+    },
+    {
+      "id": 219,
+      "symbol": "SPECIES_MAGCARGO"
+    },
+    {
+      "id": 220,
+      "symbol": "SPECIES_SWINUB"
+    },
+    {
+      "id": 221,
+      "symbol": "SPECIES_PILOSWINE"
+    },
+    {
+      "id": 222,
+      "symbol": "SPECIES_CORSOLA"
+    },
+    {
+      "id": 223,
+      "symbol": "SPECIES_REMORAID"
+    },
+    {
+      "id": 224,
+      "symbol": "SPECIES_OCTILLERY"
+    },
+    {
+      "id": 225,
+      "symbol": "SPECIES_DELIBIRD"
+    },
+    {
+      "id": 226,
+      "symbol": "SPECIES_MANTINE"
+    },
+    {
+      "id": 227,
+      "symbol": "SPECIES_SKARMORY"
+    },
+    {
+      "id": 228,
+      "symbol": "SPECIES_HOUNDOUR"
+    },
+    {
+      "id": 229,
+      "symbol": "SPECIES_HOUNDOOM"
+    },
+    {
+      "id": 230,
+      "symbol": "SPECIES_KINGDRA"
+    },
+    {
+      "id": 231,
+      "symbol": "SPECIES_PHANPY"
+    },
+    {
+      "id": 232,
+      "symbol": "SPECIES_DONPHAN"
+    },
+    {
+      "id": 233,
+      "symbol": "SPECIES_PORYGON2"
+    },
+    {
+      "id": 234,
+      "symbol": "SPECIES_STANTLER"
+    },
+    {
+      "id": 235,
+      "symbol": "SPECIES_SMEARGLE"
+    },
+    {
+      "id": 236,
+      "symbol": "SPECIES_TYROGUE"
+    },
+    {
+      "id": 237,
+      "symbol": "SPECIES_HITMONTOP"
+    },
+    {
+      "id": 238,
+      "symbol": "SPECIES_SMOOCHUM"
+    },
+    {
+      "id": 239,
+      "symbol": "SPECIES_ELEKID"
+    },
+    {
+      "id": 240,
+      "symbol": "SPECIES_MAGBY"
+    },
+    {
+      "id": 241,
+      "symbol": "SPECIES_MILTANK"
+    },
+    {
+      "id": 242,
+      "symbol": "SPECIES_BLISSEY"
+    },
+    {
+      "id": 243,
+      "symbol": "SPECIES_RAIKOU"
+    },
+    {
+      "id": 244,
+      "symbol": "SPECIES_ENTEI"
+    },
+    {
+      "id": 245,
+      "symbol": "SPECIES_SUICUNE"
+    },
+    {
+      "id": 246,
+      "symbol": "SPECIES_LARVITAR"
+    },
+    {
+      "id": 247,
+      "symbol": "SPECIES_PUPITAR"
+    },
+    {
+      "id": 248,
+      "symbol": "SPECIES_TYRANITAR"
+    },
+    {
+      "id": 249,
+      "symbol": "SPECIES_LUGIA"
+    },
+    {
+      "id": 250,
+      "symbol": "SPECIES_HO_OH"
+    },
+    {
+      "id": 251,
+      "symbol": "SPECIES_CELEBI"
+    },
+    {
+      "id": 252,
+      "symbol": "SPECIES_TREECKO"
+    },
+    {
+      "id": 253,
+      "symbol": "SPECIES_GROVYLE"
+    },
+    {
+      "id": 254,
+      "symbol": "SPECIES_SCEPTILE"
+    },
+    {
+      "id": 255,
+      "symbol": "SPECIES_TORCHIC"
+    },
+    {
+      "id": 256,
+      "symbol": "SPECIES_COMBUSKEN"
+    },
+    {
+      "id": 257,
+      "symbol": "SPECIES_BLAZIKEN"
+    },
+    {
+      "id": 258,
+      "symbol": "SPECIES_MUDKIP"
+    },
+    {
+      "id": 259,
+      "symbol": "SPECIES_MARSHTOMP"
+    },
+    {
+      "id": 260,
+      "symbol": "SPECIES_SWAMPERT"
+    },
+    {
+      "id": 261,
+      "symbol": "SPECIES_POOCHYENA"
+    },
+    {
+      "id": 262,
+      "symbol": "SPECIES_MIGHTYENA"
+    },
+    {
+      "id": 263,
+      "symbol": "SPECIES_ZIGZAGOON"
+    },
+    {
+      "id": 264,
+      "symbol": "SPECIES_LINOONE"
+    },
+    {
+      "id": 265,
+      "symbol": "SPECIES_WURMPLE"
+    },
+    {
+      "id": 266,
+      "symbol": "SPECIES_SILCOON"
+    },
+    {
+      "id": 267,
+      "symbol": "SPECIES_BEAUTIFLY"
+    },
+    {
+      "id": 268,
+      "symbol": "SPECIES_CASCOON"
+    },
+    {
+      "id": 269,
+      "symbol": "SPECIES_DUSTOX"
+    },
+    {
+      "id": 270,
+      "symbol": "SPECIES_LOTAD"
+    },
+    {
+      "id": 271,
+      "symbol": "SPECIES_LOMBRE"
+    },
+    {
+      "id": 272,
+      "symbol": "SPECIES_LUDICOLO"
+    },
+    {
+      "id": 273,
+      "symbol": "SPECIES_SEEDOT"
+    },
+    {
+      "id": 274,
+      "symbol": "SPECIES_NUZLEAF"
+    },
+    {
+      "id": 275,
+      "symbol": "SPECIES_SHIFTRY"
+    },
+    {
+      "id": 276,
+      "symbol": "SPECIES_TAILLOW"
+    },
+    {
+      "id": 277,
+      "symbol": "SPECIES_SWELLOW"
+    },
+    {
+      "id": 278,
+      "symbol": "SPECIES_WINGULL"
+    },
+    {
+      "id": 279,
+      "symbol": "SPECIES_PELIPPER"
+    },
+    {
+      "id": 280,
+      "symbol": "SPECIES_RALTS"
+    },
+    {
+      "id": 281,
+      "symbol": "SPECIES_KIRLIA"
+    },
+    {
+      "id": 282,
+      "symbol": "SPECIES_GARDEVOIR"
+    },
+    {
+      "id": 283,
+      "symbol": "SPECIES_SURSKIT"
+    },
+    {
+      "id": 284,
+      "symbol": "SPECIES_MASQUERAIN"
+    },
+    {
+      "id": 285,
+      "symbol": "SPECIES_SHROOMISH"
+    },
+    {
+      "id": 286,
+      "symbol": "SPECIES_BRELOOM"
+    },
+    {
+      "id": 287,
+      "symbol": "SPECIES_SLAKOTH"
+    },
+    {
+      "id": 288,
+      "symbol": "SPECIES_VIGOROTH"
+    },
+    {
+      "id": 289,
+      "symbol": "SPECIES_SLAKING"
+    },
+    {
+      "id": 290,
+      "symbol": "SPECIES_NINCADA"
+    },
+    {
+      "id": 291,
+      "symbol": "SPECIES_NINJASK"
+    },
+    {
+      "id": 292,
+      "symbol": "SPECIES_SHEDINJA"
+    },
+    {
+      "id": 293,
+      "symbol": "SPECIES_WHISMUR"
+    },
+    {
+      "id": 294,
+      "symbol": "SPECIES_LOUDRED"
+    },
+    {
+      "id": 295,
+      "symbol": "SPECIES_EXPLOUD"
+    },
+    {
+      "id": 296,
+      "symbol": "SPECIES_MAKUHITA"
+    },
+    {
+      "id": 297,
+      "symbol": "SPECIES_HARIYAMA"
+    },
+    {
+      "id": 298,
+      "symbol": "SPECIES_AZURILL"
+    },
+    {
+      "id": 299,
+      "symbol": "SPECIES_NOSEPASS"
+    },
+    {
+      "id": 300,
+      "symbol": "SPECIES_SKITTY"
+    },
+    {
+      "id": 301,
+      "symbol": "SPECIES_DELCATTY"
+    },
+    {
+      "id": 302,
+      "symbol": "SPECIES_SABLEYE"
+    },
+    {
+      "id": 303,
+      "symbol": "SPECIES_MAWILE"
+    },
+    {
+      "id": 304,
+      "symbol": "SPECIES_ARON"
+    },
+    {
+      "id": 305,
+      "symbol": "SPECIES_LAIRON"
+    },
+    {
+      "id": 306,
+      "symbol": "SPECIES_AGGRON"
+    },
+    {
+      "id": 307,
+      "symbol": "SPECIES_MEDITITE"
+    },
+    {
+      "id": 308,
+      "symbol": "SPECIES_MEDICHAM"
+    },
+    {
+      "id": 309,
+      "symbol": "SPECIES_ELECTRIKE"
+    },
+    {
+      "id": 310,
+      "symbol": "SPECIES_MANECTRIC"
+    },
+    {
+      "id": 311,
+      "symbol": "SPECIES_PLUSLE"
+    },
+    {
+      "id": 312,
+      "symbol": "SPECIES_MINUN"
+    },
+    {
+      "id": 313,
+      "symbol": "SPECIES_VOLBEAT"
+    },
+    {
+      "id": 314,
+      "symbol": "SPECIES_ILLUMISE"
+    },
+    {
+      "id": 315,
+      "symbol": "SPECIES_ROSELIA"
+    },
+    {
+      "id": 316,
+      "symbol": "SPECIES_GULPIN"
+    },
+    {
+      "id": 317,
+      "symbol": "SPECIES_SWALOT"
+    },
+    {
+      "id": 318,
+      "symbol": "SPECIES_CARVANHA"
+    },
+    {
+      "id": 319,
+      "symbol": "SPECIES_SHARPEDO"
+    },
+    {
+      "id": 320,
+      "symbol": "SPECIES_WAILMER"
+    },
+    {
+      "id": 321,
+      "symbol": "SPECIES_WAILORD"
+    },
+    {
+      "id": 322,
+      "symbol": "SPECIES_NUMEL"
+    },
+    {
+      "id": 323,
+      "symbol": "SPECIES_CAMERUPT"
+    },
+    {
+      "id": 324,
+      "symbol": "SPECIES_TORKOAL"
+    },
+    {
+      "id": 325,
+      "symbol": "SPECIES_SPOINK"
+    },
+    {
+      "id": 326,
+      "symbol": "SPECIES_GRUMPIG"
+    },
+    {
+      "id": 327,
+      "symbol": "SPECIES_SPINDA"
+    },
+    {
+      "id": 328,
+      "symbol": "SPECIES_TRAPINCH"
+    },
+    {
+      "id": 329,
+      "symbol": "SPECIES_VIBRAVA"
+    },
+    {
+      "id": 330,
+      "symbol": "SPECIES_FLYGON"
+    },
+    {
+      "id": 331,
+      "symbol": "SPECIES_CACNEA"
+    },
+    {
+      "id": 332,
+      "symbol": "SPECIES_CACTURNE"
+    },
+    {
+      "id": 333,
+      "symbol": "SPECIES_SWABLU"
+    },
+    {
+      "id": 334,
+      "symbol": "SPECIES_ALTARIA"
+    },
+    {
+      "id": 335,
+      "symbol": "SPECIES_ZANGOOSE"
+    },
+    {
+      "id": 336,
+      "symbol": "SPECIES_SEVIPER"
+    },
+    {
+      "id": 337,
+      "symbol": "SPECIES_LUNATONE"
+    },
+    {
+      "id": 338,
+      "symbol": "SPECIES_SOLROCK"
+    },
+    {
+      "id": 339,
+      "symbol": "SPECIES_BARBOACH"
+    },
+    {
+      "id": 340,
+      "symbol": "SPECIES_WHISCASH"
+    },
+    {
+      "id": 341,
+      "symbol": "SPECIES_CORPHISH"
+    },
+    {
+      "id": 342,
+      "symbol": "SPECIES_CRAWDAUNT"
+    },
+    {
+      "id": 343,
+      "symbol": "SPECIES_BALTOY"
+    },
+    {
+      "id": 344,
+      "symbol": "SPECIES_CLAYDOL"
+    },
+    {
+      "id": 345,
+      "symbol": "SPECIES_LILEEP"
+    },
+    {
+      "id": 346,
+      "symbol": "SPECIES_CRADILY"
+    },
+    {
+      "id": 347,
+      "symbol": "SPECIES_ANORITH"
+    },
+    {
+      "id": 348,
+      "symbol": "SPECIES_ARMALDO"
+    },
+    {
+      "id": 349,
+      "symbol": "SPECIES_FEEBAS"
+    },
+    {
+      "id": 350,
+      "symbol": "SPECIES_MILOTIC"
+    },
+    {
+      "id": 351,
+      "symbol": "SPECIES_CASTFORM"
+    },
+    {
+      "id": 352,
+      "symbol": "SPECIES_KECLEON"
+    },
+    {
+      "id": 353,
+      "symbol": "SPECIES_SHUPPET"
+    },
+    {
+      "id": 354,
+      "symbol": "SPECIES_BANETTE"
+    },
+    {
+      "id": 355,
+      "symbol": "SPECIES_DUSKULL"
+    },
+    {
+      "id": 356,
+      "symbol": "SPECIES_DUSCLOPS"
+    },
+    {
+      "id": 357,
+      "symbol": "SPECIES_TROPIUS"
+    },
+    {
+      "id": 358,
+      "symbol": "SPECIES_CHIMECHO"
+    },
+    {
+      "id": 359,
+      "symbol": "SPECIES_ABSOL"
+    },
+    {
+      "id": 360,
+      "symbol": "SPECIES_WYNAUT"
+    },
+    {
+      "id": 361,
+      "symbol": "SPECIES_SNORUNT"
+    },
+    {
+      "id": 362,
+      "symbol": "SPECIES_GLALIE"
+    },
+    {
+      "id": 363,
+      "symbol": "SPECIES_SPHEAL"
+    },
+    {
+      "id": 364,
+      "symbol": "SPECIES_SEALEO"
+    },
+    {
+      "id": 365,
+      "symbol": "SPECIES_WALREIN"
+    },
+    {
+      "id": 366,
+      "symbol": "SPECIES_CLAMPERL"
+    },
+    {
+      "id": 367,
+      "symbol": "SPECIES_HUNTAIL"
+    },
+    {
+      "id": 368,
+      "symbol": "SPECIES_GOREBYSS"
+    },
+    {
+      "id": 369,
+      "symbol": "SPECIES_RELICANTH"
+    },
+    {
+      "id": 370,
+      "symbol": "SPECIES_LUVDISC"
+    },
+    {
+      "id": 371,
+      "symbol": "SPECIES_BAGON"
+    },
+    {
+      "id": 372,
+      "symbol": "SPECIES_SHELGON"
+    },
+    {
+      "id": 373,
+      "symbol": "SPECIES_SALAMENCE"
+    },
+    {
+      "id": 374,
+      "symbol": "SPECIES_BELDUM"
+    },
+    {
+      "id": 375,
+      "symbol": "SPECIES_METANG"
+    },
+    {
+      "id": 376,
+      "symbol": "SPECIES_METAGROSS"
+    },
+    {
+      "id": 377,
+      "symbol": "SPECIES_REGIROCK"
+    },
+    {
+      "id": 378,
+      "symbol": "SPECIES_REGICE"
+    },
+    {
+      "id": 379,
+      "symbol": "SPECIES_REGISTEEL"
+    },
+    {
+      "id": 380,
+      "symbol": "SPECIES_LATIAS"
+    },
+    {
+      "id": 381,
+      "symbol": "SPECIES_LATIOS"
+    },
+    {
+      "id": 382,
+      "symbol": "SPECIES_KYOGRE"
+    },
+    {
+      "id": 383,
+      "symbol": "SPECIES_GROUDON"
+    },
+    {
+      "id": 384,
+      "symbol": "SPECIES_RAYQUAZA"
+    },
+    {
+      "id": 385,
+      "symbol": "SPECIES_JIRACHI"
+    },
+    {
+      "id": 386,
+      "symbol": "SPECIES_DEOXYS"
+    },
+    {
+      "id": 387,
+      "symbol": "SPECIES_TURTWIG"
+    },
+    {
+      "id": 388,
+      "symbol": "SPECIES_GROTLE"
+    },
+    {
+      "id": 389,
+      "symbol": "SPECIES_TORTERRA"
+    },
+    {
+      "id": 390,
+      "symbol": "SPECIES_CHIMCHAR"
+    },
+    {
+      "id": 391,
+      "symbol": "SPECIES_MONFERNO"
+    },
+    {
+      "id": 392,
+      "symbol": "SPECIES_INFERNAPE"
+    },
+    {
+      "id": 393,
+      "symbol": "SPECIES_PIPLUP"
+    },
+    {
+      "id": 394,
+      "symbol": "SPECIES_PRINPLUP"
+    },
+    {
+      "id": 395,
+      "symbol": "SPECIES_EMPOLEON"
+    },
+    {
+      "id": 396,
+      "symbol": "SPECIES_STARLY"
+    },
+    {
+      "id": 397,
+      "symbol": "SPECIES_STARAVIA"
+    },
+    {
+      "id": 398,
+      "symbol": "SPECIES_STARAPTOR"
+    },
+    {
+      "id": 399,
+      "symbol": "SPECIES_BIDOOF"
+    },
+    {
+      "id": 400,
+      "symbol": "SPECIES_BIBAREL"
+    },
+    {
+      "id": 401,
+      "symbol": "SPECIES_KRICKETOT"
+    },
+    {
+      "id": 402,
+      "symbol": "SPECIES_KRICKETUNE"
+    },
+    {
+      "id": 403,
+      "symbol": "SPECIES_SHINX"
+    },
+    {
+      "id": 404,
+      "symbol": "SPECIES_LUXIO"
+    },
+    {
+      "id": 405,
+      "symbol": "SPECIES_LUXRAY"
+    },
+    {
+      "id": 406,
+      "symbol": "SPECIES_BUDEW"
+    },
+    {
+      "id": 407,
+      "symbol": "SPECIES_ROSERADE"
+    },
+    {
+      "id": 408,
+      "symbol": "SPECIES_CRANIDOS"
+    },
+    {
+      "id": 409,
+      "symbol": "SPECIES_RAMPARDOS"
+    },
+    {
+      "id": 410,
+      "symbol": "SPECIES_SHIELDON"
+    },
+    {
+      "id": 411,
+      "symbol": "SPECIES_BASTIODON"
+    },
+    {
+      "id": 412,
+      "symbol": "SPECIES_BURMY"
+    },
+    {
+      "id": 413,
+      "symbol": "SPECIES_WORMADAM"
+    },
+    {
+      "id": 414,
+      "symbol": "SPECIES_MOTHIM"
+    },
+    {
+      "id": 415,
+      "symbol": "SPECIES_COMBEE"
+    },
+    {
+      "id": 416,
+      "symbol": "SPECIES_VESPIQUEN"
+    },
+    {
+      "id": 417,
+      "symbol": "SPECIES_PACHIRISU"
+    },
+    {
+      "id": 418,
+      "symbol": "SPECIES_BUIZEL"
+    },
+    {
+      "id": 419,
+      "symbol": "SPECIES_FLOATZEL"
+    },
+    {
+      "id": 420,
+      "symbol": "SPECIES_CHERUBI"
+    },
+    {
+      "id": 421,
+      "symbol": "SPECIES_CHERRIM"
+    },
+    {
+      "id": 422,
+      "symbol": "SPECIES_SHELLOS"
+    },
+    {
+      "id": 423,
+      "symbol": "SPECIES_GASTRODON"
+    },
+    {
+      "id": 424,
+      "symbol": "SPECIES_AMBIPOM"
+    },
+    {
+      "id": 425,
+      "symbol": "SPECIES_DRIFLOON"
+    },
+    {
+      "id": 426,
+      "symbol": "SPECIES_DRIFBLIM"
+    },
+    {
+      "id": 427,
+      "symbol": "SPECIES_BUNEARY"
+    },
+    {
+      "id": 428,
+      "symbol": "SPECIES_LOPUNNY"
+    },
+    {
+      "id": 429,
+      "symbol": "SPECIES_MISMAGIUS"
+    },
+    {
+      "id": 430,
+      "symbol": "SPECIES_HONCHKROW"
+    },
+    {
+      "id": 431,
+      "symbol": "SPECIES_GLAMEOW"
+    },
+    {
+      "id": 432,
+      "symbol": "SPECIES_PURUGLY"
+    },
+    {
+      "id": 433,
+      "symbol": "SPECIES_CHINGLING"
+    },
+    {
+      "id": 434,
+      "symbol": "SPECIES_STUNKY"
+    },
+    {
+      "id": 435,
+      "symbol": "SPECIES_SKUNTANK"
+    },
+    {
+      "id": 436,
+      "symbol": "SPECIES_BRONZOR"
+    },
+    {
+      "id": 437,
+      "symbol": "SPECIES_BRONZONG"
+    },
+    {
+      "id": 438,
+      "symbol": "SPECIES_BONSLY"
+    },
+    {
+      "id": 439,
+      "symbol": "SPECIES_MIME_JR"
+    },
+    {
+      "id": 440,
+      "symbol": "SPECIES_HAPPINY"
+    },
+    {
+      "id": 441,
+      "symbol": "SPECIES_CHATOT"
+    },
+    {
+      "id": 442,
+      "symbol": "SPECIES_SPIRITOMB"
+    },
+    {
+      "id": 443,
+      "symbol": "SPECIES_GIBLE"
+    },
+    {
+      "id": 444,
+      "symbol": "SPECIES_GABITE"
+    },
+    {
+      "id": 445,
+      "symbol": "SPECIES_GARCHOMP"
+    },
+    {
+      "id": 446,
+      "symbol": "SPECIES_MUNCHLAX"
+    },
+    {
+      "id": 447,
+      "symbol": "SPECIES_RIOLU"
+    },
+    {
+      "id": 448,
+      "symbol": "SPECIES_LUCARIO"
+    },
+    {
+      "id": 449,
+      "symbol": "SPECIES_HIPPOPOTAS"
+    },
+    {
+      "id": 450,
+      "symbol": "SPECIES_HIPPOWDON"
+    },
+    {
+      "id": 451,
+      "symbol": "SPECIES_SKORUPI"
+    },
+    {
+      "id": 452,
+      "symbol": "SPECIES_DRAPION"
+    },
+    {
+      "id": 453,
+      "symbol": "SPECIES_CROAGUNK"
+    },
+    {
+      "id": 454,
+      "symbol": "SPECIES_TOXICROAK"
+    },
+    {
+      "id": 455,
+      "symbol": "SPECIES_CARNIVINE"
+    },
+    {
+      "id": 456,
+      "symbol": "SPECIES_FINNEON"
+    },
+    {
+      "id": 457,
+      "symbol": "SPECIES_LUMINEON"
+    },
+    {
+      "id": 458,
+      "symbol": "SPECIES_MANTYKE"
+    },
+    {
+      "id": 459,
+      "symbol": "SPECIES_SNOVER"
+    },
+    {
+      "id": 460,
+      "symbol": "SPECIES_ABOMASNOW"
+    },
+    {
+      "id": 461,
+      "symbol": "SPECIES_WEAVILE"
+    },
+    {
+      "id": 462,
+      "symbol": "SPECIES_MAGNEZONE"
+    },
+    {
+      "id": 463,
+      "symbol": "SPECIES_LICKILICKY"
+    },
+    {
+      "id": 464,
+      "symbol": "SPECIES_RHYPERIOR"
+    },
+    {
+      "id": 465,
+      "symbol": "SPECIES_TANGROWTH"
+    },
+    {
+      "id": 466,
+      "symbol": "SPECIES_ELECTIVIRE"
+    },
+    {
+      "id": 467,
+      "symbol": "SPECIES_MAGMORTAR"
+    },
+    {
+      "id": 468,
+      "symbol": "SPECIES_TOGEKISS"
+    },
+    {
+      "id": 469,
+      "symbol": "SPECIES_YANMEGA"
+    },
+    {
+      "id": 470,
+      "symbol": "SPECIES_LEAFEON"
+    },
+    {
+      "id": 471,
+      "symbol": "SPECIES_GLACEON"
+    },
+    {
+      "id": 472,
+      "symbol": "SPECIES_GLISCOR"
+    },
+    {
+      "id": 473,
+      "symbol": "SPECIES_MAMOSWINE"
+    },
+    {
+      "id": 474,
+      "symbol": "SPECIES_PORYGON_Z"
+    },
+    {
+      "id": 475,
+      "symbol": "SPECIES_GALLADE"
+    },
+    {
+      "id": 476,
+      "symbol": "SPECIES_PROBOPASS"
+    },
+    {
+      "id": 477,
+      "symbol": "SPECIES_DUSKNOIR"
+    },
+    {
+      "id": 478,
+      "symbol": "SPECIES_FROSLASS"
+    },
+    {
+      "id": 479,
+      "symbol": "SPECIES_ROTOM"
+    },
+    {
+      "id": 480,
+      "symbol": "SPECIES_UXIE"
+    },
+    {
+      "id": 481,
+      "symbol": "SPECIES_MESPRIT"
+    },
+    {
+      "id": 482,
+      "symbol": "SPECIES_AZELF"
+    },
+    {
+      "id": 483,
+      "symbol": "SPECIES_DIALGA"
+    },
+    {
+      "id": 484,
+      "symbol": "SPECIES_PALKIA"
+    },
+    {
+      "id": 485,
+      "symbol": "SPECIES_HEATRAN"
+    },
+    {
+      "id": 486,
+      "symbol": "SPECIES_REGIGIGAS"
+    },
+    {
+      "id": 487,
+      "symbol": "SPECIES_GIRATINA"
+    },
+    {
+      "id": 488,
+      "symbol": "SPECIES_CRESSELIA"
+    },
+    {
+      "id": 489,
+      "symbol": "SPECIES_PHIONE"
+    },
+    {
+      "id": 490,
+      "symbol": "SPECIES_MANAPHY"
+    },
+    {
+      "id": 491,
+      "symbol": "SPECIES_DARKRAI"
+    },
+    {
+      "id": 492,
+      "symbol": "SPECIES_SHAYMIN"
+    },
+    {
+      "id": 493,
+      "symbol": "SPECIES_ARCEUS"
+    }
+  ],
+  "moves": [
+    {
+      "id": 1,
+      "symbol": "MOVE_POUND"
+    },
+    {
+      "id": 2,
+      "symbol": "MOVE_KARATE_CHOP"
+    },
+    {
+      "id": 3,
+      "symbol": "MOVE_DOUBLE_SLAP"
+    },
+    {
+      "id": 4,
+      "symbol": "MOVE_COMET_PUNCH"
+    },
+    {
+      "id": 5,
+      "symbol": "MOVE_MEGA_PUNCH"
+    },
+    {
+      "id": 6,
+      "symbol": "MOVE_PAY_DAY"
+    },
+    {
+      "id": 7,
+      "symbol": "MOVE_FIRE_PUNCH"
+    },
+    {
+      "id": 8,
+      "symbol": "MOVE_ICE_PUNCH"
+    },
+    {
+      "id": 9,
+      "symbol": "MOVE_THUNDER_PUNCH"
+    },
+    {
+      "id": 10,
+      "symbol": "MOVE_SCRATCH"
+    },
+    {
+      "id": 11,
+      "symbol": "MOVE_VICE_GRIP"
+    },
+    {
+      "id": 12,
+      "symbol": "MOVE_GUILLOTINE"
+    },
+    {
+      "id": 13,
+      "symbol": "MOVE_RAZOR_WIND"
+    },
+    {
+      "id": 14,
+      "symbol": "MOVE_SWORDS_DANCE"
+    },
+    {
+      "id": 15,
+      "symbol": "MOVE_CUT"
+    },
+    {
+      "id": 16,
+      "symbol": "MOVE_GUST"
+    },
+    {
+      "id": 17,
+      "symbol": "MOVE_WING_ATTACK"
+    },
+    {
+      "id": 18,
+      "symbol": "MOVE_WHIRLWIND"
+    },
+    {
+      "id": 19,
+      "symbol": "MOVE_FLY"
+    },
+    {
+      "id": 20,
+      "symbol": "MOVE_BIND"
+    },
+    {
+      "id": 21,
+      "symbol": "MOVE_SLAM"
+    },
+    {
+      "id": 22,
+      "symbol": "MOVE_VINE_WHIP"
+    },
+    {
+      "id": 23,
+      "symbol": "MOVE_STOMP"
+    },
+    {
+      "id": 24,
+      "symbol": "MOVE_DOUBLE_KICK"
+    },
+    {
+      "id": 25,
+      "symbol": "MOVE_MEGA_KICK"
+    },
+    {
+      "id": 26,
+      "symbol": "MOVE_JUMP_KICK"
+    },
+    {
+      "id": 27,
+      "symbol": "MOVE_ROLLING_KICK"
+    },
+    {
+      "id": 28,
+      "symbol": "MOVE_SAND_ATTACK"
+    },
+    {
+      "id": 29,
+      "symbol": "MOVE_HEADBUTT"
+    },
+    {
+      "id": 30,
+      "symbol": "MOVE_HORN_ATTACK"
+    },
+    {
+      "id": 31,
+      "symbol": "MOVE_FURY_ATTACK"
+    },
+    {
+      "id": 32,
+      "symbol": "MOVE_HORN_DRILL"
+    },
+    {
+      "id": 33,
+      "symbol": "MOVE_TACKLE"
+    },
+    {
+      "id": 34,
+      "symbol": "MOVE_BODY_SLAM"
+    },
+    {
+      "id": 35,
+      "symbol": "MOVE_WRAP"
+    },
+    {
+      "id": 36,
+      "symbol": "MOVE_TAKE_DOWN"
+    },
+    {
+      "id": 37,
+      "symbol": "MOVE_THRASH"
+    },
+    {
+      "id": 38,
+      "symbol": "MOVE_DOUBLE_EDGE"
+    },
+    {
+      "id": 39,
+      "symbol": "MOVE_TAIL_WHIP"
+    },
+    {
+      "id": 40,
+      "symbol": "MOVE_POISON_STING"
+    },
+    {
+      "id": 41,
+      "symbol": "MOVE_TWINEEDLE"
+    },
+    {
+      "id": 42,
+      "symbol": "MOVE_PIN_MISSILE"
+    },
+    {
+      "id": 43,
+      "symbol": "MOVE_LEER"
+    },
+    {
+      "id": 44,
+      "symbol": "MOVE_BITE"
+    },
+    {
+      "id": 45,
+      "symbol": "MOVE_GROWL"
+    },
+    {
+      "id": 46,
+      "symbol": "MOVE_ROAR"
+    },
+    {
+      "id": 47,
+      "symbol": "MOVE_SING"
+    },
+    {
+      "id": 48,
+      "symbol": "MOVE_SUPERSONIC"
+    },
+    {
+      "id": 49,
+      "symbol": "MOVE_SONIC_BOOM"
+    },
+    {
+      "id": 50,
+      "symbol": "MOVE_DISABLE"
+    },
+    {
+      "id": 51,
+      "symbol": "MOVE_ACID"
+    },
+    {
+      "id": 52,
+      "symbol": "MOVE_EMBER"
+    },
+    {
+      "id": 53,
+      "symbol": "MOVE_FLAMETHROWER"
+    },
+    {
+      "id": 54,
+      "symbol": "MOVE_MIST"
+    },
+    {
+      "id": 55,
+      "symbol": "MOVE_WATER_GUN"
+    },
+    {
+      "id": 56,
+      "symbol": "MOVE_HYDRO_PUMP"
+    },
+    {
+      "id": 57,
+      "symbol": "MOVE_SURF"
+    },
+    {
+      "id": 58,
+      "symbol": "MOVE_ICE_BEAM"
+    },
+    {
+      "id": 59,
+      "symbol": "MOVE_BLIZZARD"
+    },
+    {
+      "id": 60,
+      "symbol": "MOVE_PSYBEAM"
+    },
+    {
+      "id": 61,
+      "symbol": "MOVE_BUBBLE_BEAM"
+    },
+    {
+      "id": 62,
+      "symbol": "MOVE_AURORA_BEAM"
+    },
+    {
+      "id": 63,
+      "symbol": "MOVE_HYPER_BEAM"
+    },
+    {
+      "id": 64,
+      "symbol": "MOVE_PECK"
+    },
+    {
+      "id": 65,
+      "symbol": "MOVE_DRILL_PECK"
+    },
+    {
+      "id": 66,
+      "symbol": "MOVE_SUBMISSION"
+    },
+    {
+      "id": 67,
+      "symbol": "MOVE_LOW_KICK"
+    },
+    {
+      "id": 68,
+      "symbol": "MOVE_COUNTER"
+    },
+    {
+      "id": 69,
+      "symbol": "MOVE_SEISMIC_TOSS"
+    },
+    {
+      "id": 70,
+      "symbol": "MOVE_STRENGTH"
+    },
+    {
+      "id": 71,
+      "symbol": "MOVE_ABSORB"
+    },
+    {
+      "id": 72,
+      "symbol": "MOVE_MEGA_DRAIN"
+    },
+    {
+      "id": 73,
+      "symbol": "MOVE_LEECH_SEED"
+    },
+    {
+      "id": 74,
+      "symbol": "MOVE_GROWTH"
+    },
+    {
+      "id": 75,
+      "symbol": "MOVE_RAZOR_LEAF"
+    },
+    {
+      "id": 76,
+      "symbol": "MOVE_SOLAR_BEAM"
+    },
+    {
+      "id": 77,
+      "symbol": "MOVE_POISON_POWDER"
+    },
+    {
+      "id": 78,
+      "symbol": "MOVE_STUN_SPORE"
+    },
+    {
+      "id": 79,
+      "symbol": "MOVE_SLEEP_POWDER"
+    },
+    {
+      "id": 80,
+      "symbol": "MOVE_PETAL_DANCE"
+    },
+    {
+      "id": 81,
+      "symbol": "MOVE_STRING_SHOT"
+    },
+    {
+      "id": 82,
+      "symbol": "MOVE_DRAGON_RAGE"
+    },
+    {
+      "id": 83,
+      "symbol": "MOVE_FIRE_SPIN"
+    },
+    {
+      "id": 84,
+      "symbol": "MOVE_THUNDER_SHOCK"
+    },
+    {
+      "id": 85,
+      "symbol": "MOVE_THUNDERBOLT"
+    },
+    {
+      "id": 86,
+      "symbol": "MOVE_THUNDER_WAVE"
+    },
+    {
+      "id": 87,
+      "symbol": "MOVE_THUNDER"
+    },
+    {
+      "id": 88,
+      "symbol": "MOVE_ROCK_THROW"
+    },
+    {
+      "id": 89,
+      "symbol": "MOVE_EARTHQUAKE"
+    },
+    {
+      "id": 90,
+      "symbol": "MOVE_FISSURE"
+    },
+    {
+      "id": 91,
+      "symbol": "MOVE_DIG"
+    },
+    {
+      "id": 92,
+      "symbol": "MOVE_TOXIC"
+    },
+    {
+      "id": 93,
+      "symbol": "MOVE_CONFUSION"
+    },
+    {
+      "id": 94,
+      "symbol": "MOVE_PSYCHIC"
+    },
+    {
+      "id": 95,
+      "symbol": "MOVE_HYPNOSIS"
+    },
+    {
+      "id": 96,
+      "symbol": "MOVE_MEDITATE"
+    },
+    {
+      "id": 97,
+      "symbol": "MOVE_AGILITY"
+    },
+    {
+      "id": 98,
+      "symbol": "MOVE_QUICK_ATTACK"
+    },
+    {
+      "id": 99,
+      "symbol": "MOVE_RAGE"
+    },
+    {
+      "id": 100,
+      "symbol": "MOVE_TELEPORT"
+    },
+    {
+      "id": 101,
+      "symbol": "MOVE_NIGHT_SHADE"
+    },
+    {
+      "id": 102,
+      "symbol": "MOVE_MIMIC"
+    },
+    {
+      "id": 103,
+      "symbol": "MOVE_SCREECH"
+    },
+    {
+      "id": 104,
+      "symbol": "MOVE_DOUBLE_TEAM"
+    },
+    {
+      "id": 105,
+      "symbol": "MOVE_RECOVER"
+    },
+    {
+      "id": 106,
+      "symbol": "MOVE_HARDEN"
+    },
+    {
+      "id": 107,
+      "symbol": "MOVE_MINIMIZE"
+    },
+    {
+      "id": 108,
+      "symbol": "MOVE_SMOKE_SCREEN"
+    },
+    {
+      "id": 109,
+      "symbol": "MOVE_CONFUSE_RAY"
+    },
+    {
+      "id": 110,
+      "symbol": "MOVE_WITHDRAW"
+    },
+    {
+      "id": 111,
+      "symbol": "MOVE_DEFENSE_CURL"
+    },
+    {
+      "id": 112,
+      "symbol": "MOVE_BARRIER"
+    },
+    {
+      "id": 113,
+      "symbol": "MOVE_LIGHT_SCREEN"
+    },
+    {
+      "id": 114,
+      "symbol": "MOVE_HAZE"
+    },
+    {
+      "id": 115,
+      "symbol": "MOVE_REFLECT"
+    },
+    {
+      "id": 116,
+      "symbol": "MOVE_FOCUS_ENERGY"
+    },
+    {
+      "id": 117,
+      "symbol": "MOVE_BIDE"
+    },
+    {
+      "id": 118,
+      "symbol": "MOVE_METRONOME"
+    },
+    {
+      "id": 119,
+      "symbol": "MOVE_MIRROR_MOVE"
+    },
+    {
+      "id": 120,
+      "symbol": "MOVE_SELFDESTRUCT"
+    },
+    {
+      "id": 121,
+      "symbol": "MOVE_EGG_BOMB"
+    },
+    {
+      "id": 122,
+      "symbol": "MOVE_LICK"
+    },
+    {
+      "id": 123,
+      "symbol": "MOVE_SMOG"
+    },
+    {
+      "id": 124,
+      "symbol": "MOVE_SLUDGE"
+    },
+    {
+      "id": 125,
+      "symbol": "MOVE_BONE_CLUB"
+    },
+    {
+      "id": 126,
+      "symbol": "MOVE_FIRE_BLAST"
+    },
+    {
+      "id": 127,
+      "symbol": "MOVE_WATERFALL"
+    },
+    {
+      "id": 128,
+      "symbol": "MOVE_CLAMP"
+    },
+    {
+      "id": 129,
+      "symbol": "MOVE_SWIFT"
+    },
+    {
+      "id": 130,
+      "symbol": "MOVE_SKULL_BASH"
+    },
+    {
+      "id": 131,
+      "symbol": "MOVE_SPIKE_CANNON"
+    },
+    {
+      "id": 132,
+      "symbol": "MOVE_CONSTRICT"
+    },
+    {
+      "id": 133,
+      "symbol": "MOVE_AMNESIA"
+    },
+    {
+      "id": 134,
+      "symbol": "MOVE_KINESIS"
+    },
+    {
+      "id": 135,
+      "symbol": "MOVE_SOFTBOILED"
+    },
+    {
+      "id": 136,
+      "symbol": "MOVE_HI_JUMP_KICK"
+    },
+    {
+      "id": 137,
+      "symbol": "MOVE_GLARE"
+    },
+    {
+      "id": 138,
+      "symbol": "MOVE_DREAM_EATER"
+    },
+    {
+      "id": 139,
+      "symbol": "MOVE_POISON_GAS"
+    },
+    {
+      "id": 140,
+      "symbol": "MOVE_BARRAGE"
+    },
+    {
+      "id": 141,
+      "symbol": "MOVE_LEECH_LIFE"
+    },
+    {
+      "id": 142,
+      "symbol": "MOVE_LOVELY_KISS"
+    },
+    {
+      "id": 143,
+      "symbol": "MOVE_SKY_ATTACK"
+    },
+    {
+      "id": 144,
+      "symbol": "MOVE_TRANSFORM"
+    },
+    {
+      "id": 145,
+      "symbol": "MOVE_BUBBLE"
+    },
+    {
+      "id": 146,
+      "symbol": "MOVE_DIZZY_PUNCH"
+    },
+    {
+      "id": 147,
+      "symbol": "MOVE_SPORE"
+    },
+    {
+      "id": 148,
+      "symbol": "MOVE_FLASH"
+    },
+    {
+      "id": 149,
+      "symbol": "MOVE_PSYWAVE"
+    },
+    {
+      "id": 150,
+      "symbol": "MOVE_SPLASH"
+    },
+    {
+      "id": 151,
+      "symbol": "MOVE_ACID_ARMOR"
+    },
+    {
+      "id": 152,
+      "symbol": "MOVE_CRABHAMMER"
+    },
+    {
+      "id": 153,
+      "symbol": "MOVE_EXPLOSION"
+    },
+    {
+      "id": 154,
+      "symbol": "MOVE_FURY_SWIPES"
+    },
+    {
+      "id": 155,
+      "symbol": "MOVE_BONEMERANG"
+    },
+    {
+      "id": 156,
+      "symbol": "MOVE_REST"
+    },
+    {
+      "id": 157,
+      "symbol": "MOVE_ROCK_SLIDE"
+    },
+    {
+      "id": 158,
+      "symbol": "MOVE_HYPER_FANG"
+    },
+    {
+      "id": 159,
+      "symbol": "MOVE_SHARPEN"
+    },
+    {
+      "id": 160,
+      "symbol": "MOVE_CONVERSION"
+    },
+    {
+      "id": 161,
+      "symbol": "MOVE_TRI_ATTACK"
+    },
+    {
+      "id": 162,
+      "symbol": "MOVE_SUPER_FANG"
+    },
+    {
+      "id": 163,
+      "symbol": "MOVE_SLASH"
+    },
+    {
+      "id": 164,
+      "symbol": "MOVE_SUBSTITUTE"
+    },
+    {
+      "id": 165,
+      "symbol": "MOVE_STRUGGLE"
+    },
+    {
+      "id": 166,
+      "symbol": "MOVE_SKETCH"
+    },
+    {
+      "id": 167,
+      "symbol": "MOVE_TRIPLE_KICK"
+    },
+    {
+      "id": 168,
+      "symbol": "MOVE_THIEF"
+    },
+    {
+      "id": 169,
+      "symbol": "MOVE_SPIDER_WEB"
+    },
+    {
+      "id": 170,
+      "symbol": "MOVE_MIND_READER"
+    },
+    {
+      "id": 171,
+      "symbol": "MOVE_NIGHTMARE"
+    },
+    {
+      "id": 172,
+      "symbol": "MOVE_FLAME_WHEEL"
+    },
+    {
+      "id": 173,
+      "symbol": "MOVE_SNORE"
+    },
+    {
+      "id": 174,
+      "symbol": "MOVE_CURSE"
+    },
+    {
+      "id": 175,
+      "symbol": "MOVE_FLAIL"
+    },
+    {
+      "id": 176,
+      "symbol": "MOVE_CONVERSION_2"
+    },
+    {
+      "id": 177,
+      "symbol": "MOVE_AEROBLAST"
+    },
+    {
+      "id": 178,
+      "symbol": "MOVE_COTTON_SPORE"
+    },
+    {
+      "id": 179,
+      "symbol": "MOVE_REVERSAL"
+    },
+    {
+      "id": 180,
+      "symbol": "MOVE_SPITE"
+    },
+    {
+      "id": 181,
+      "symbol": "MOVE_POWDER_SNOW"
+    },
+    {
+      "id": 182,
+      "symbol": "MOVE_PROTECT"
+    },
+    {
+      "id": 183,
+      "symbol": "MOVE_MACH_PUNCH"
+    },
+    {
+      "id": 184,
+      "symbol": "MOVE_SCARY_FACE"
+    },
+    {
+      "id": 185,
+      "symbol": "MOVE_FAINT_ATTACK"
+    },
+    {
+      "id": 186,
+      "symbol": "MOVE_SWEET_KISS"
+    },
+    {
+      "id": 187,
+      "symbol": "MOVE_BELLY_DRUM"
+    },
+    {
+      "id": 188,
+      "symbol": "MOVE_SLUDGE_BOMB"
+    },
+    {
+      "id": 189,
+      "symbol": "MOVE_MUD_SLAP"
+    },
+    {
+      "id": 190,
+      "symbol": "MOVE_OCTAZOOKA"
+    },
+    {
+      "id": 191,
+      "symbol": "MOVE_SPIKES"
+    },
+    {
+      "id": 192,
+      "symbol": "MOVE_ZAP_CANNON"
+    },
+    {
+      "id": 193,
+      "symbol": "MOVE_FORESIGHT"
+    },
+    {
+      "id": 194,
+      "symbol": "MOVE_DESTINY_BOND"
+    },
+    {
+      "id": 195,
+      "symbol": "MOVE_PERISH_SONG"
+    },
+    {
+      "id": 196,
+      "symbol": "MOVE_ICY_WIND"
+    },
+    {
+      "id": 197,
+      "symbol": "MOVE_DETECT"
+    },
+    {
+      "id": 198,
+      "symbol": "MOVE_BONE_RUSH"
+    },
+    {
+      "id": 199,
+      "symbol": "MOVE_LOCK_ON"
+    },
+    {
+      "id": 200,
+      "symbol": "MOVE_OUTRAGE"
+    },
+    {
+      "id": 201,
+      "symbol": "MOVE_SANDSTORM"
+    },
+    {
+      "id": 202,
+      "symbol": "MOVE_GIGA_DRAIN"
+    },
+    {
+      "id": 203,
+      "symbol": "MOVE_ENDURE"
+    },
+    {
+      "id": 204,
+      "symbol": "MOVE_CHARM"
+    },
+    {
+      "id": 205,
+      "symbol": "MOVE_ROLLOUT"
+    },
+    {
+      "id": 206,
+      "symbol": "MOVE_FALSE_SWIPE"
+    },
+    {
+      "id": 207,
+      "symbol": "MOVE_SWAGGER"
+    },
+    {
+      "id": 208,
+      "symbol": "MOVE_MILK_DRINK"
+    },
+    {
+      "id": 209,
+      "symbol": "MOVE_SPARK"
+    },
+    {
+      "id": 210,
+      "symbol": "MOVE_FURY_CUTTER"
+    },
+    {
+      "id": 211,
+      "symbol": "MOVE_STEEL_WING"
+    },
+    {
+      "id": 212,
+      "symbol": "MOVE_MEAN_LOOK"
+    },
+    {
+      "id": 213,
+      "symbol": "MOVE_ATTRACT"
+    },
+    {
+      "id": 214,
+      "symbol": "MOVE_SLEEP_TALK"
+    },
+    {
+      "id": 215,
+      "symbol": "MOVE_HEAL_BELL"
+    },
+    {
+      "id": 216,
+      "symbol": "MOVE_RETURN"
+    },
+    {
+      "id": 217,
+      "symbol": "MOVE_PRESENT"
+    },
+    {
+      "id": 218,
+      "symbol": "MOVE_FRUSTRATION"
+    },
+    {
+      "id": 219,
+      "symbol": "MOVE_SAFEGUARD"
+    },
+    {
+      "id": 220,
+      "symbol": "MOVE_PAIN_SPLIT"
+    },
+    {
+      "id": 221,
+      "symbol": "MOVE_SACRED_FIRE"
+    },
+    {
+      "id": 222,
+      "symbol": "MOVE_MAGNITUDE"
+    },
+    {
+      "id": 223,
+      "symbol": "MOVE_DYNAMIC_PUNCH"
+    },
+    {
+      "id": 224,
+      "symbol": "MOVE_MEGAHORN"
+    },
+    {
+      "id": 225,
+      "symbol": "MOVE_DRAGON_BREATH"
+    },
+    {
+      "id": 226,
+      "symbol": "MOVE_BATON_PASS"
+    },
+    {
+      "id": 227,
+      "symbol": "MOVE_ENCORE"
+    },
+    {
+      "id": 228,
+      "symbol": "MOVE_PURSUIT"
+    },
+    {
+      "id": 229,
+      "symbol": "MOVE_RAPID_SPIN"
+    },
+    {
+      "id": 230,
+      "symbol": "MOVE_SWEET_SCENT"
+    },
+    {
+      "id": 231,
+      "symbol": "MOVE_IRON_TAIL"
+    },
+    {
+      "id": 232,
+      "symbol": "MOVE_METAL_CLAW"
+    },
+    {
+      "id": 233,
+      "symbol": "MOVE_VITAL_THROW"
+    },
+    {
+      "id": 234,
+      "symbol": "MOVE_MORNING_SUN"
+    },
+    {
+      "id": 235,
+      "symbol": "MOVE_SYNTHESIS"
+    },
+    {
+      "id": 236,
+      "symbol": "MOVE_MOONLIGHT"
+    },
+    {
+      "id": 237,
+      "symbol": "MOVE_HIDDEN_POWER"
+    },
+    {
+      "id": 238,
+      "symbol": "MOVE_CROSS_CHOP"
+    },
+    {
+      "id": 239,
+      "symbol": "MOVE_TWISTER"
+    },
+    {
+      "id": 240,
+      "symbol": "MOVE_RAIN_DANCE"
+    },
+    {
+      "id": 241,
+      "symbol": "MOVE_SUNNY_DAY"
+    },
+    {
+      "id": 242,
+      "symbol": "MOVE_CRUNCH"
+    },
+    {
+      "id": 243,
+      "symbol": "MOVE_MIRROR_COAT"
+    },
+    {
+      "id": 244,
+      "symbol": "MOVE_PSYCH_UP"
+    },
+    {
+      "id": 245,
+      "symbol": "MOVE_EXTREME_SPEED"
+    },
+    {
+      "id": 246,
+      "symbol": "MOVE_ANCIENT_POWER"
+    },
+    {
+      "id": 247,
+      "symbol": "MOVE_SHADOW_BALL"
+    },
+    {
+      "id": 248,
+      "symbol": "MOVE_FUTURE_SIGHT"
+    },
+    {
+      "id": 249,
+      "symbol": "MOVE_ROCK_SMASH"
+    },
+    {
+      "id": 250,
+      "symbol": "MOVE_WHIRLPOOL"
+    },
+    {
+      "id": 251,
+      "symbol": "MOVE_BEAT_UP"
+    },
+    {
+      "id": 252,
+      "symbol": "MOVE_FAKE_OUT"
+    },
+    {
+      "id": 253,
+      "symbol": "MOVE_UPROAR"
+    },
+    {
+      "id": 254,
+      "symbol": "MOVE_STOCKPILE"
+    },
+    {
+      "id": 255,
+      "symbol": "MOVE_SPIT_UP"
+    },
+    {
+      "id": 256,
+      "symbol": "MOVE_SWALLOW"
+    },
+    {
+      "id": 257,
+      "symbol": "MOVE_HEAT_WAVE"
+    },
+    {
+      "id": 258,
+      "symbol": "MOVE_HAIL"
+    },
+    {
+      "id": 259,
+      "symbol": "MOVE_TORMENT"
+    },
+    {
+      "id": 260,
+      "symbol": "MOVE_FLATTER"
+    },
+    {
+      "id": 261,
+      "symbol": "MOVE_WILL_O_WISP"
+    },
+    {
+      "id": 262,
+      "symbol": "MOVE_MEMENTO"
+    },
+    {
+      "id": 263,
+      "symbol": "MOVE_FACADE"
+    },
+    {
+      "id": 264,
+      "symbol": "MOVE_FOCUS_PUNCH"
+    },
+    {
+      "id": 265,
+      "symbol": "MOVE_SMELLING_SALT"
+    },
+    {
+      "id": 266,
+      "symbol": "MOVE_FOLLOW_ME"
+    },
+    {
+      "id": 267,
+      "symbol": "MOVE_NATURE_POWER"
+    },
+    {
+      "id": 268,
+      "symbol": "MOVE_CHARGE"
+    },
+    {
+      "id": 269,
+      "symbol": "MOVE_TAUNT"
+    },
+    {
+      "id": 270,
+      "symbol": "MOVE_HELPING_HAND"
+    },
+    {
+      "id": 271,
+      "symbol": "MOVE_TRICK"
+    },
+    {
+      "id": 272,
+      "symbol": "MOVE_ROLE_PLAY"
+    },
+    {
+      "id": 273,
+      "symbol": "MOVE_WISH"
+    },
+    {
+      "id": 274,
+      "symbol": "MOVE_ASSIST"
+    },
+    {
+      "id": 275,
+      "symbol": "MOVE_INGRAIN"
+    },
+    {
+      "id": 276,
+      "symbol": "MOVE_SUPERPOWER"
+    },
+    {
+      "id": 277,
+      "symbol": "MOVE_MAGIC_COAT"
+    },
+    {
+      "id": 278,
+      "symbol": "MOVE_RECYCLE"
+    },
+    {
+      "id": 279,
+      "symbol": "MOVE_REVENGE"
+    },
+    {
+      "id": 280,
+      "symbol": "MOVE_BRICK_BREAK"
+    },
+    {
+      "id": 281,
+      "symbol": "MOVE_YAWN"
+    },
+    {
+      "id": 282,
+      "symbol": "MOVE_KNOCK_OFF"
+    },
+    {
+      "id": 283,
+      "symbol": "MOVE_ENDEAVOR"
+    },
+    {
+      "id": 284,
+      "symbol": "MOVE_ERUPTION"
+    },
+    {
+      "id": 285,
+      "symbol": "MOVE_SKILL_SWAP"
+    },
+    {
+      "id": 286,
+      "symbol": "MOVE_IMPRISON"
+    },
+    {
+      "id": 287,
+      "symbol": "MOVE_REFRESH"
+    },
+    {
+      "id": 288,
+      "symbol": "MOVE_GRUDGE"
+    },
+    {
+      "id": 289,
+      "symbol": "MOVE_SNATCH"
+    },
+    {
+      "id": 290,
+      "symbol": "MOVE_SECRET_POWER"
+    },
+    {
+      "id": 291,
+      "symbol": "MOVE_DIVE"
+    },
+    {
+      "id": 292,
+      "symbol": "MOVE_ARM_THRUST"
+    },
+    {
+      "id": 293,
+      "symbol": "MOVE_CAMOUFLAGE"
+    },
+    {
+      "id": 294,
+      "symbol": "MOVE_TAIL_GLOW"
+    },
+    {
+      "id": 295,
+      "symbol": "MOVE_LUSTER_PURGE"
+    },
+    {
+      "id": 296,
+      "symbol": "MOVE_MIST_BALL"
+    },
+    {
+      "id": 297,
+      "symbol": "MOVE_FEATHER_DANCE"
+    },
+    {
+      "id": 298,
+      "symbol": "MOVE_TEETER_DANCE"
+    },
+    {
+      "id": 299,
+      "symbol": "MOVE_BLAZE_KICK"
+    },
+    {
+      "id": 300,
+      "symbol": "MOVE_MUD_SPORT"
+    },
+    {
+      "id": 301,
+      "symbol": "MOVE_ICE_BALL"
+    },
+    {
+      "id": 302,
+      "symbol": "MOVE_NEEDLE_ARM"
+    },
+    {
+      "id": 303,
+      "symbol": "MOVE_SLACK_OFF"
+    },
+    {
+      "id": 304,
+      "symbol": "MOVE_HYPER_VOICE"
+    },
+    {
+      "id": 305,
+      "symbol": "MOVE_POISON_FANG"
+    },
+    {
+      "id": 306,
+      "symbol": "MOVE_CRUSH_CLAW"
+    },
+    {
+      "id": 307,
+      "symbol": "MOVE_BLAST_BURN"
+    },
+    {
+      "id": 308,
+      "symbol": "MOVE_HYDRO_CANNON"
+    },
+    {
+      "id": 309,
+      "symbol": "MOVE_METEOR_MASH"
+    },
+    {
+      "id": 310,
+      "symbol": "MOVE_ASTONISH"
+    },
+    {
+      "id": 311,
+      "symbol": "MOVE_WEATHER_BALL"
+    },
+    {
+      "id": 312,
+      "symbol": "MOVE_AROMATHERAPY"
+    },
+    {
+      "id": 313,
+      "symbol": "MOVE_FAKE_TEARS"
+    },
+    {
+      "id": 314,
+      "symbol": "MOVE_AIR_CUTTER"
+    },
+    {
+      "id": 315,
+      "symbol": "MOVE_OVERHEAT"
+    },
+    {
+      "id": 316,
+      "symbol": "MOVE_ODOR_SLEUTH"
+    },
+    {
+      "id": 317,
+      "symbol": "MOVE_ROCK_TOMB"
+    },
+    {
+      "id": 318,
+      "symbol": "MOVE_SILVER_WIND"
+    },
+    {
+      "id": 319,
+      "symbol": "MOVE_METAL_SOUND"
+    },
+    {
+      "id": 320,
+      "symbol": "MOVE_GRASS_WHISTLE"
+    },
+    {
+      "id": 321,
+      "symbol": "MOVE_TICKLE"
+    },
+    {
+      "id": 322,
+      "symbol": "MOVE_COSMIC_POWER"
+    },
+    {
+      "id": 323,
+      "symbol": "MOVE_WATER_SPOUT"
+    },
+    {
+      "id": 324,
+      "symbol": "MOVE_SIGNAL_BEAM"
+    },
+    {
+      "id": 325,
+      "symbol": "MOVE_SHADOW_PUNCH"
+    },
+    {
+      "id": 326,
+      "symbol": "MOVE_EXTRASENSORY"
+    },
+    {
+      "id": 327,
+      "symbol": "MOVE_SKY_UPPERCUT"
+    },
+    {
+      "id": 328,
+      "symbol": "MOVE_SAND_TOMB"
+    },
+    {
+      "id": 329,
+      "symbol": "MOVE_SHEER_COLD"
+    },
+    {
+      "id": 330,
+      "symbol": "MOVE_MUDDY_WATER"
+    },
+    {
+      "id": 331,
+      "symbol": "MOVE_BULLET_SEED"
+    },
+    {
+      "id": 332,
+      "symbol": "MOVE_AERIAL_ACE"
+    },
+    {
+      "id": 333,
+      "symbol": "MOVE_ICICLE_SPEAR"
+    },
+    {
+      "id": 334,
+      "symbol": "MOVE_IRON_DEFENSE"
+    },
+    {
+      "id": 335,
+      "symbol": "MOVE_BLOCK"
+    },
+    {
+      "id": 336,
+      "symbol": "MOVE_HOWL"
+    },
+    {
+      "id": 337,
+      "symbol": "MOVE_DRAGON_CLAW"
+    },
+    {
+      "id": 338,
+      "symbol": "MOVE_FRENZY_PLANT"
+    },
+    {
+      "id": 339,
+      "symbol": "MOVE_BULK_UP"
+    },
+    {
+      "id": 340,
+      "symbol": "MOVE_BOUNCE"
+    },
+    {
+      "id": 341,
+      "symbol": "MOVE_MUD_SHOT"
+    },
+    {
+      "id": 342,
+      "symbol": "MOVE_POISON_TAIL"
+    },
+    {
+      "id": 343,
+      "symbol": "MOVE_COVET"
+    },
+    {
+      "id": 344,
+      "symbol": "MOVE_VOLT_TACKLE"
+    },
+    {
+      "id": 345,
+      "symbol": "MOVE_MAGICAL_LEAF"
+    },
+    {
+      "id": 346,
+      "symbol": "MOVE_WATER_SPORT"
+    },
+    {
+      "id": 347,
+      "symbol": "MOVE_CALM_MIND"
+    },
+    {
+      "id": 348,
+      "symbol": "MOVE_LEAF_BLADE"
+    },
+    {
+      "id": 349,
+      "symbol": "MOVE_DRAGON_DANCE"
+    },
+    {
+      "id": 350,
+      "symbol": "MOVE_ROCK_BLAST"
+    },
+    {
+      "id": 351,
+      "symbol": "MOVE_SHOCK_WAVE"
+    },
+    {
+      "id": 352,
+      "symbol": "MOVE_WATER_PULSE"
+    },
+    {
+      "id": 353,
+      "symbol": "MOVE_DOOM_DESIRE"
+    },
+    {
+      "id": 354,
+      "symbol": "MOVE_PSYCHO_BOOST"
+    },
+    {
+      "id": 355,
+      "symbol": "MOVE_ROOST"
+    },
+    {
+      "id": 356,
+      "symbol": "MOVE_GRAVITY"
+    },
+    {
+      "id": 357,
+      "symbol": "MOVE_MIRACLE_EYE"
+    },
+    {
+      "id": 358,
+      "symbol": "MOVE_WAKE_UP_SLAP"
+    },
+    {
+      "id": 359,
+      "symbol": "MOVE_HAMMER_ARM"
+    },
+    {
+      "id": 360,
+      "symbol": "MOVE_GYRO_BALL"
+    },
+    {
+      "id": 361,
+      "symbol": "MOVE_HEALING_WISH"
+    },
+    {
+      "id": 362,
+      "symbol": "MOVE_BRINE"
+    },
+    {
+      "id": 363,
+      "symbol": "MOVE_NATURAL_GIFT"
+    },
+    {
+      "id": 364,
+      "symbol": "MOVE_FEINT"
+    },
+    {
+      "id": 365,
+      "symbol": "MOVE_PLUCK"
+    },
+    {
+      "id": 366,
+      "symbol": "MOVE_TAILWIND"
+    },
+    {
+      "id": 367,
+      "symbol": "MOVE_ACUPRESSURE"
+    },
+    {
+      "id": 368,
+      "symbol": "MOVE_METAL_BURST"
+    },
+    {
+      "id": 369,
+      "symbol": "MOVE_U_TURN"
+    },
+    {
+      "id": 370,
+      "symbol": "MOVE_CLOSE_COMBAT"
+    },
+    {
+      "id": 371,
+      "symbol": "MOVE_PAYBACK"
+    },
+    {
+      "id": 372,
+      "symbol": "MOVE_ASSURANCE"
+    },
+    {
+      "id": 373,
+      "symbol": "MOVE_EMBARGO"
+    },
+    {
+      "id": 374,
+      "symbol": "MOVE_FLING"
+    },
+    {
+      "id": 375,
+      "symbol": "MOVE_PSYCHO_SHIFT"
+    },
+    {
+      "id": 376,
+      "symbol": "MOVE_TRUMP_CARD"
+    },
+    {
+      "id": 377,
+      "symbol": "MOVE_HEAL_BLOCK"
+    },
+    {
+      "id": 378,
+      "symbol": "MOVE_WRING_OUT"
+    },
+    {
+      "id": 379,
+      "symbol": "MOVE_POWER_TRICK"
+    },
+    {
+      "id": 380,
+      "symbol": "MOVE_GASTRO_ACID"
+    },
+    {
+      "id": 381,
+      "symbol": "MOVE_LUCKY_CHANT"
+    },
+    {
+      "id": 382,
+      "symbol": "MOVE_ME_FIRST"
+    },
+    {
+      "id": 383,
+      "symbol": "MOVE_COPYCAT"
+    },
+    {
+      "id": 384,
+      "symbol": "MOVE_POWER_SWAP"
+    },
+    {
+      "id": 385,
+      "symbol": "MOVE_GUARD_SWAP"
+    },
+    {
+      "id": 386,
+      "symbol": "MOVE_PUNISHMENT"
+    },
+    {
+      "id": 387,
+      "symbol": "MOVE_LAST_RESORT"
+    },
+    {
+      "id": 388,
+      "symbol": "MOVE_WORRY_SEED"
+    },
+    {
+      "id": 389,
+      "symbol": "MOVE_SUCKER_PUNCH"
+    },
+    {
+      "id": 390,
+      "symbol": "MOVE_TOXIC_SPIKES"
+    },
+    {
+      "id": 391,
+      "symbol": "MOVE_HEART_SWAP"
+    },
+    {
+      "id": 392,
+      "symbol": "MOVE_AQUA_RING"
+    },
+    {
+      "id": 393,
+      "symbol": "MOVE_MAGNET_RISE"
+    },
+    {
+      "id": 394,
+      "symbol": "MOVE_FLARE_BLITZ"
+    },
+    {
+      "id": 395,
+      "symbol": "MOVE_FORCE_PALM"
+    },
+    {
+      "id": 396,
+      "symbol": "MOVE_AURA_SPHERE"
+    },
+    {
+      "id": 397,
+      "symbol": "MOVE_ROCK_POLISH"
+    },
+    {
+      "id": 398,
+      "symbol": "MOVE_POISON_JAB"
+    },
+    {
+      "id": 399,
+      "symbol": "MOVE_DARK_PULSE"
+    },
+    {
+      "id": 400,
+      "symbol": "MOVE_NIGHT_SLASH"
+    },
+    {
+      "id": 401,
+      "symbol": "MOVE_AQUA_TAIL"
+    },
+    {
+      "id": 402,
+      "symbol": "MOVE_SEED_BOMB"
+    },
+    {
+      "id": 403,
+      "symbol": "MOVE_AIR_SLASH"
+    },
+    {
+      "id": 404,
+      "symbol": "MOVE_X_SCISSOR"
+    },
+    {
+      "id": 405,
+      "symbol": "MOVE_BUG_BUZZ"
+    },
+    {
+      "id": 406,
+      "symbol": "MOVE_DRAGON_PULSE"
+    },
+    {
+      "id": 407,
+      "symbol": "MOVE_DRAGON_RUSH"
+    },
+    {
+      "id": 408,
+      "symbol": "MOVE_POWER_GEM"
+    },
+    {
+      "id": 409,
+      "symbol": "MOVE_DRAIN_PUNCH"
+    },
+    {
+      "id": 410,
+      "symbol": "MOVE_VACUUM_WAVE"
+    },
+    {
+      "id": 411,
+      "symbol": "MOVE_FOCUS_BLAST"
+    },
+    {
+      "id": 412,
+      "symbol": "MOVE_ENERGY_BALL"
+    },
+    {
+      "id": 413,
+      "symbol": "MOVE_BRAVE_BIRD"
+    },
+    {
+      "id": 414,
+      "symbol": "MOVE_EARTH_POWER"
+    },
+    {
+      "id": 415,
+      "symbol": "MOVE_SWITCHEROO"
+    },
+    {
+      "id": 416,
+      "symbol": "MOVE_GIGA_IMPACT"
+    },
+    {
+      "id": 417,
+      "symbol": "MOVE_NASTY_PLOT"
+    },
+    {
+      "id": 418,
+      "symbol": "MOVE_BULLET_PUNCH"
+    },
+    {
+      "id": 419,
+      "symbol": "MOVE_AVALANCHE"
+    },
+    {
+      "id": 420,
+      "symbol": "MOVE_ICE_SHARD"
+    },
+    {
+      "id": 421,
+      "symbol": "MOVE_SHADOW_CLAW"
+    },
+    {
+      "id": 422,
+      "symbol": "MOVE_THUNDER_FANG"
+    },
+    {
+      "id": 423,
+      "symbol": "MOVE_ICE_FANG"
+    },
+    {
+      "id": 424,
+      "symbol": "MOVE_FIRE_FANG"
+    },
+    {
+      "id": 425,
+      "symbol": "MOVE_SHADOW_SNEAK"
+    },
+    {
+      "id": 426,
+      "symbol": "MOVE_MUD_BOMB"
+    },
+    {
+      "id": 427,
+      "symbol": "MOVE_PSYCHO_CUT"
+    },
+    {
+      "id": 428,
+      "symbol": "MOVE_ZEN_HEADBUTT"
+    },
+    {
+      "id": 429,
+      "symbol": "MOVE_MIRROR_SHOT"
+    },
+    {
+      "id": 430,
+      "symbol": "MOVE_FLASH_CANNON"
+    },
+    {
+      "id": 431,
+      "symbol": "MOVE_ROCK_CLIMB"
+    },
+    {
+      "id": 432,
+      "symbol": "MOVE_DEFOG"
+    },
+    {
+      "id": 433,
+      "symbol": "MOVE_TRICK_ROOM"
+    },
+    {
+      "id": 434,
+      "symbol": "MOVE_DRACO_METEOR"
+    },
+    {
+      "id": 435,
+      "symbol": "MOVE_DISCHARGE"
+    },
+    {
+      "id": 436,
+      "symbol": "MOVE_LAVA_PLUME"
+    },
+    {
+      "id": 437,
+      "symbol": "MOVE_LEAF_STORM"
+    },
+    {
+      "id": 438,
+      "symbol": "MOVE_POWER_WHIP"
+    },
+    {
+      "id": 439,
+      "symbol": "MOVE_ROCK_WRECKER"
+    },
+    {
+      "id": 440,
+      "symbol": "MOVE_CROSS_POISON"
+    },
+    {
+      "id": 441,
+      "symbol": "MOVE_GUNK_SHOT"
+    },
+    {
+      "id": 442,
+      "symbol": "MOVE_IRON_HEAD"
+    },
+    {
+      "id": 443,
+      "symbol": "MOVE_MAGNET_BOMB"
+    },
+    {
+      "id": 444,
+      "symbol": "MOVE_STONE_EDGE"
+    },
+    {
+      "id": 445,
+      "symbol": "MOVE_CAPTIVATE"
+    },
+    {
+      "id": 446,
+      "symbol": "MOVE_STEALTH_ROCK"
+    },
+    {
+      "id": 447,
+      "symbol": "MOVE_GRASS_KNOT"
+    },
+    {
+      "id": 448,
+      "symbol": "MOVE_CHATTER"
+    },
+    {
+      "id": 449,
+      "symbol": "MOVE_JUDGMENT"
+    },
+    {
+      "id": 450,
+      "symbol": "MOVE_BUG_BITE"
+    },
+    {
+      "id": 451,
+      "symbol": "MOVE_CHARGE_BEAM"
+    },
+    {
+      "id": 452,
+      "symbol": "MOVE_WOOD_HAMMER"
+    },
+    {
+      "id": 453,
+      "symbol": "MOVE_AQUA_JET"
+    },
+    {
+      "id": 454,
+      "symbol": "MOVE_ATTACK_ORDER"
+    },
+    {
+      "id": 455,
+      "symbol": "MOVE_DEFEND_ORDER"
+    },
+    {
+      "id": 456,
+      "symbol": "MOVE_HEAL_ORDER"
+    },
+    {
+      "id": 457,
+      "symbol": "MOVE_HEAD_SMASH"
+    },
+    {
+      "id": 458,
+      "symbol": "MOVE_DOUBLE_HIT"
+    },
+    {
+      "id": 459,
+      "symbol": "MOVE_ROAR_OF_TIME"
+    },
+    {
+      "id": 460,
+      "symbol": "MOVE_SPACIAL_REND"
+    },
+    {
+      "id": 461,
+      "symbol": "MOVE_LUNAR_DANCE"
+    },
+    {
+      "id": 462,
+      "symbol": "MOVE_CRUSH_GRIP"
+    },
+    {
+      "id": 463,
+      "symbol": "MOVE_MAGMA_STORM"
+    },
+    {
+      "id": 464,
+      "symbol": "MOVE_DARK_VOID"
+    },
+    {
+      "id": 465,
+      "symbol": "MOVE_SEED_FLARE"
+    },
+    {
+      "id": 466,
+      "symbol": "MOVE_OMINOUS_WIND"
+    },
+    {
+      "id": 467,
+      "symbol": "MOVE_SHADOW_FORCE"
+    }
+  ],
+  "abilities": [
+    {
+      "id": 1,
+      "symbol": "ABILITY_STENCH"
+    },
+    {
+      "id": 2,
+      "symbol": "ABILITY_DRIZZLE"
+    },
+    {
+      "id": 3,
+      "symbol": "ABILITY_SPEED_BOOST"
+    },
+    {
+      "id": 4,
+      "symbol": "ABILITY_BATTLE_ARMOR"
+    },
+    {
+      "id": 5,
+      "symbol": "ABILITY_STURDY"
+    },
+    {
+      "id": 6,
+      "symbol": "ABILITY_DAMP"
+    },
+    {
+      "id": 7,
+      "symbol": "ABILITY_LIMBER"
+    },
+    {
+      "id": 8,
+      "symbol": "ABILITY_SAND_VEIL"
+    },
+    {
+      "id": 9,
+      "symbol": "ABILITY_STATIC"
+    },
+    {
+      "id": 10,
+      "symbol": "ABILITY_VOLT_ABSORB"
+    },
+    {
+      "id": 11,
+      "symbol": "ABILITY_WATER_ABSORB"
+    },
+    {
+      "id": 12,
+      "symbol": "ABILITY_OBLIVIOUS"
+    },
+    {
+      "id": 13,
+      "symbol": "ABILITY_CLOUD_NINE"
+    },
+    {
+      "id": 14,
+      "symbol": "ABILITY_COMPOUND_EYES"
+    },
+    {
+      "id": 15,
+      "symbol": "ABILITY_INSOMNIA"
+    },
+    {
+      "id": 16,
+      "symbol": "ABILITY_COLOR_CHANGE"
+    },
+    {
+      "id": 17,
+      "symbol": "ABILITY_IMMUNITY"
+    },
+    {
+      "id": 18,
+      "symbol": "ABILITY_FLASH_FIRE"
+    },
+    {
+      "id": 19,
+      "symbol": "ABILITY_SHIELD_DUST"
+    },
+    {
+      "id": 20,
+      "symbol": "ABILITY_OWN_TEMPO"
+    },
+    {
+      "id": 21,
+      "symbol": "ABILITY_SUCTION_CUPS"
+    },
+    {
+      "id": 22,
+      "symbol": "ABILITY_INTIMIDATE"
+    },
+    {
+      "id": 23,
+      "symbol": "ABILITY_SHADOW_TAG"
+    },
+    {
+      "id": 24,
+      "symbol": "ABILITY_ROUGH_SKIN"
+    },
+    {
+      "id": 25,
+      "symbol": "ABILITY_WONDER_GUARD"
+    },
+    {
+      "id": 26,
+      "symbol": "ABILITY_LEVITATE"
+    },
+    {
+      "id": 27,
+      "symbol": "ABILITY_EFFECT_SPORE"
+    },
+    {
+      "id": 28,
+      "symbol": "ABILITY_SYNCHRONIZE"
+    },
+    {
+      "id": 29,
+      "symbol": "ABILITY_CLEAR_BODY"
+    },
+    {
+      "id": 30,
+      "symbol": "ABILITY_NATURAL_CURE"
+    },
+    {
+      "id": 31,
+      "symbol": "ABILITY_LIGHTNING_ROD"
+    },
+    {
+      "id": 32,
+      "symbol": "ABILITY_SERENE_GRACE"
+    },
+    {
+      "id": 33,
+      "symbol": "ABILITY_SWIFT_SWIM"
+    },
+    {
+      "id": 34,
+      "symbol": "ABILITY_CHLOROPHYLL"
+    },
+    {
+      "id": 35,
+      "symbol": "ABILITY_ILLUMINATE"
+    },
+    {
+      "id": 36,
+      "symbol": "ABILITY_TRACE"
+    },
+    {
+      "id": 37,
+      "symbol": "ABILITY_HUGE_POWER"
+    },
+    {
+      "id": 38,
+      "symbol": "ABILITY_POISON_POINT"
+    },
+    {
+      "id": 39,
+      "symbol": "ABILITY_INNER_FOCUS"
+    },
+    {
+      "id": 40,
+      "symbol": "ABILITY_MAGMA_ARMOR"
+    },
+    {
+      "id": 41,
+      "symbol": "ABILITY_WATER_VEIL"
+    },
+    {
+      "id": 42,
+      "symbol": "ABILITY_MAGNET_PULL"
+    },
+    {
+      "id": 43,
+      "symbol": "ABILITY_SOUNDPROOF"
+    },
+    {
+      "id": 44,
+      "symbol": "ABILITY_RAIN_DISH"
+    },
+    {
+      "id": 45,
+      "symbol": "ABILITY_SAND_STREAM"
+    },
+    {
+      "id": 46,
+      "symbol": "ABILITY_PRESSURE"
+    },
+    {
+      "id": 47,
+      "symbol": "ABILITY_THICK_FAT"
+    },
+    {
+      "id": 48,
+      "symbol": "ABILITY_EARLY_BIRD"
+    },
+    {
+      "id": 49,
+      "symbol": "ABILITY_FLAME_BODY"
+    },
+    {
+      "id": 50,
+      "symbol": "ABILITY_RUN_AWAY"
+    },
+    {
+      "id": 51,
+      "symbol": "ABILITY_KEEN_EYE"
+    },
+    {
+      "id": 52,
+      "symbol": "ABILITY_HYPER_CUTTER"
+    },
+    {
+      "id": 53,
+      "symbol": "ABILITY_PICKUP"
+    },
+    {
+      "id": 54,
+      "symbol": "ABILITY_TRUANT"
+    },
+    {
+      "id": 55,
+      "symbol": "ABILITY_HUSTLE"
+    },
+    {
+      "id": 56,
+      "symbol": "ABILITY_CUTE_CHARM"
+    },
+    {
+      "id": 57,
+      "symbol": "ABILITY_PLUS"
+    },
+    {
+      "id": 58,
+      "symbol": "ABILITY_MINUS"
+    },
+    {
+      "id": 59,
+      "symbol": "ABILITY_FORECAST"
+    },
+    {
+      "id": 60,
+      "symbol": "ABILITY_STICKY_HOLD"
+    },
+    {
+      "id": 61,
+      "symbol": "ABILITY_SHED_SKIN"
+    },
+    {
+      "id": 62,
+      "symbol": "ABILITY_GUTS"
+    },
+    {
+      "id": 63,
+      "symbol": "ABILITY_MARVEL_SCALE"
+    },
+    {
+      "id": 64,
+      "symbol": "ABILITY_LIQUID_OOZE"
+    },
+    {
+      "id": 65,
+      "symbol": "ABILITY_OVERGROW"
+    },
+    {
+      "id": 66,
+      "symbol": "ABILITY_BLAZE"
+    },
+    {
+      "id": 67,
+      "symbol": "ABILITY_TORRENT"
+    },
+    {
+      "id": 68,
+      "symbol": "ABILITY_SWARM"
+    },
+    {
+      "id": 69,
+      "symbol": "ABILITY_ROCK_HEAD"
+    },
+    {
+      "id": 70,
+      "symbol": "ABILITY_DROUGHT"
+    },
+    {
+      "id": 71,
+      "symbol": "ABILITY_ARENA_TRAP"
+    },
+    {
+      "id": 72,
+      "symbol": "ABILITY_VITAL_SPIRIT"
+    },
+    {
+      "id": 73,
+      "symbol": "ABILITY_WHITE_SMOKE"
+    },
+    {
+      "id": 74,
+      "symbol": "ABILITY_PURE_POWER"
+    },
+    {
+      "id": 75,
+      "symbol": "ABILITY_SHELL_ARMOR"
+    },
+    {
+      "id": 76,
+      "symbol": "ABILITY_AIR_LOCK"
+    },
+    {
+      "id": 77,
+      "symbol": "ABILITY_TANGLED_FEET"
+    },
+    {
+      "id": 78,
+      "symbol": "ABILITY_MOTOR_DRIVE"
+    },
+    {
+      "id": 79,
+      "symbol": "ABILITY_RIVALRY"
+    },
+    {
+      "id": 80,
+      "symbol": "ABILITY_STEADFAST"
+    },
+    {
+      "id": 81,
+      "symbol": "ABILITY_SNOW_CLOAK"
+    },
+    {
+      "id": 82,
+      "symbol": "ABILITY_GLUTTONY"
+    },
+    {
+      "id": 83,
+      "symbol": "ABILITY_ANGER_POINT"
+    },
+    {
+      "id": 84,
+      "symbol": "ABILITY_UNBURDEN"
+    },
+    {
+      "id": 85,
+      "symbol": "ABILITY_HEATPROOF"
+    },
+    {
+      "id": 86,
+      "symbol": "ABILITY_SIMPLE"
+    },
+    {
+      "id": 87,
+      "symbol": "ABILITY_DRY_SKIN"
+    },
+    {
+      "id": 88,
+      "symbol": "ABILITY_DOWNLOAD"
+    },
+    {
+      "id": 89,
+      "symbol": "ABILITY_IRON_FIST"
+    },
+    {
+      "id": 90,
+      "symbol": "ABILITY_POISON_HEAL"
+    },
+    {
+      "id": 91,
+      "symbol": "ABILITY_ADAPTABILITY"
+    },
+    {
+      "id": 92,
+      "symbol": "ABILITY_SKILL_LINK"
+    },
+    {
+      "id": 93,
+      "symbol": "ABILITY_HYDRATION"
+    },
+    {
+      "id": 94,
+      "symbol": "ABILITY_SOLAR_POWER"
+    },
+    {
+      "id": 95,
+      "symbol": "ABILITY_QUICK_FEET"
+    },
+    {
+      "id": 96,
+      "symbol": "ABILITY_NORMALIZE"
+    },
+    {
+      "id": 97,
+      "symbol": "ABILITY_SNIPER"
+    },
+    {
+      "id": 98,
+      "symbol": "ABILITY_MAGIC_GUARD"
+    },
+    {
+      "id": 99,
+      "symbol": "ABILITY_NO_GUARD"
+    },
+    {
+      "id": 100,
+      "symbol": "ABILITY_STALL"
+    },
+    {
+      "id": 101,
+      "symbol": "ABILITY_TECHNICIAN"
+    },
+    {
+      "id": 102,
+      "symbol": "ABILITY_LEAF_GUARD"
+    },
+    {
+      "id": 103,
+      "symbol": "ABILITY_KLUTZ"
+    },
+    {
+      "id": 104,
+      "symbol": "ABILITY_MOLD_BREAKER"
+    },
+    {
+      "id": 105,
+      "symbol": "ABILITY_SUPER_LUCK"
+    },
+    {
+      "id": 106,
+      "symbol": "ABILITY_AFTERMATH"
+    },
+    {
+      "id": 107,
+      "symbol": "ABILITY_ANTICIPATION"
+    },
+    {
+      "id": 108,
+      "symbol": "ABILITY_FOREWARN"
+    },
+    {
+      "id": 109,
+      "symbol": "ABILITY_UNAWARE"
+    },
+    {
+      "id": 110,
+      "symbol": "ABILITY_TINTED_LENS"
+    },
+    {
+      "id": 111,
+      "symbol": "ABILITY_FILTER"
+    },
+    {
+      "id": 112,
+      "symbol": "ABILITY_SLOW_START"
+    },
+    {
+      "id": 113,
+      "symbol": "ABILITY_SCRAPPY"
+    },
+    {
+      "id": 114,
+      "symbol": "ABILITY_STORM_DRAIN"
+    },
+    {
+      "id": 115,
+      "symbol": "ABILITY_ICE_BODY"
+    },
+    {
+      "id": 116,
+      "symbol": "ABILITY_SOLID_ROCK"
+    },
+    {
+      "id": 117,
+      "symbol": "ABILITY_SNOW_WARNING"
+    },
+    {
+      "id": 118,
+      "symbol": "ABILITY_HONEY_GATHER"
+    },
+    {
+      "id": 119,
+      "symbol": "ABILITY_FRISK"
+    },
+    {
+      "id": 120,
+      "symbol": "ABILITY_RECKLESS"
+    },
+    {
+      "id": 121,
+      "symbol": "ABILITY_MULTITYPE"
+    },
+    {
+      "id": 122,
+      "symbol": "ABILITY_FLOWER_GIFT"
+    },
+    {
+      "id": 123,
+      "symbol": "ABILITY_BAD_DREAMS"
+    }
+  ],
+  "types": [
+    {
+      "id": 0,
+      "symbol": "TYPE_NORMAL"
+    },
+    {
+      "id": 1,
+      "symbol": "TYPE_FIGHTING"
+    },
+    {
+      "id": 2,
+      "symbol": "TYPE_FLYING"
+    },
+    {
+      "id": 3,
+      "symbol": "TYPE_POISON"
+    },
+    {
+      "id": 4,
+      "symbol": "TYPE_GROUND"
+    },
+    {
+      "id": 5,
+      "symbol": "TYPE_ROCK"
+    },
+    {
+      "id": 6,
+      "symbol": "TYPE_BUG"
+    },
+    {
+      "id": 7,
+      "symbol": "TYPE_GHOST"
+    },
+    {
+      "id": 8,
+      "symbol": "TYPE_STEEL"
+    },
+    {
+      "id": 9,
+      "symbol": "TYPE_MYSTERY"
+    },
+    {
+      "id": 10,
+      "symbol": "TYPE_FIRE"
+    },
+    {
+      "id": 11,
+      "symbol": "TYPE_WATER"
+    },
+    {
+      "id": 12,
+      "symbol": "TYPE_GRASS"
+    },
+    {
+      "id": 13,
+      "symbol": "TYPE_ELECTRIC"
+    },
+    {
+      "id": 14,
+      "symbol": "TYPE_PSYCHIC"
+    },
+    {
+      "id": 15,
+      "symbol": "TYPE_ICE"
+    },
+    {
+      "id": 16,
+      "symbol": "TYPE_DRAGON"
+    },
+    {
+      "id": 17,
+      "symbol": "TYPE_DARK"
+    }
+  ],
+  "warnings": [
+    "Ces symboles sont des identifiants canoniques anglais de référence, pas des noms français affichables.",
+    "Ne pas joindre les tables Project PM par position sans vérifier l'ID de la ROM et le mapping exact.",
+    "Les capacités Project PM au-delà de l'ID 467 restent non mappées; cette référence ne leur attribue aucun nom."
+  ]
+}
