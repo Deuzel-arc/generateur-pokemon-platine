@@ -22,6 +22,10 @@ check("ROM mapping audit records cross-profile differences without certifying ga
   assert.equal(audit.source.project_pm.sha256, romCatalog.profiles.project_pm.sha256);
   assert.equal(audit.crossRomDifferences.species.recordsDifferent, 500);
   assert.equal(audit.crossRomDifferences.moves.recordsDifferent, 101);
+  assert.equal(audit.crossRomDifferences.moves.fieldDifferences.power, 76);
+  assert.equal(audit.crossRomDifferences.moves.fieldDifferences.effectId, 22);
+  assert.equal(audit.crossRomDifferences.moves.fieldDifferences.accuracy, 39);
+  assert.equal(audit.crossRomDifferences.moves.fieldDifferences.raw, 101);
   assert.equal(audit.crossRomDifferences.levelUpLearnsets.recordsDifferent, 497);
   assert.equal(audit.crossRomDifferences.evolutions.recordsDifferent, 33);
   assert.equal(audit.crossRomDifferences.items.recordsDifferent, 165);
