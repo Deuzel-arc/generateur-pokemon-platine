@@ -349,5 +349,39 @@
       482,
       "CREFADET"
     ]
-  ]
+  ],
+  "exhaustiveType9Conclusion": {
+    "status": "raw_type_id_9_counts_reconciled_for_both_roms",
+    "cpuF": {
+      "speciesEntriesContainingTypeId9": 0,
+      "speciesSlotOccurrences": 0,
+      "moveEntriesContainingTypeId9": [
+        174
+      ],
+      "moveSlotOccurrences": 1,
+      "semanticInterpretation": "In original CPUF Platinum, raw type ID 9 is the canonical Mystery type, not Fairy; the lone move entry at ID 174 must not be relabeled Fairy."
+    },
+    "cpue": {
+      "speciesEntriesContainingTypeId9": 31,
+      "speciesSlotOccurrences": 37,
+      "moveEntriesContainingTypeId9": [
+        66,
+        140,
+        186,
+        204,
+        236,
+        295,
+        296,
+        461
+      ],
+      "moveSlotOccurrences": 8,
+      "semanticInterpretation": "For the exact Project PM CPUE ROM hash, raw type ID 9 is mapped to Fairy based on the user's confirmation."
+    },
+    "conclusion": "The complete type-byte audit contains no species slot with raw type ID 9 in CPUF and only one move record with that raw type ID, whose canonical CPUF meaning is Mystery. Project PM has 37 species type-slot occurrences across 31 species entries and 8 move records at raw type ID 9. These counts support the ROM-specific distinction but do not prove that no other type IDs or custom mechanics could encode Fairy elsewhere.",
+    "limitations": [
+      "The audit addresses raw type ID 9 only; it is not a semantic search for all possible custom Fairy implementations.",
+      "Project PM move effects remain unverified.",
+      "The counts depend on the ROM hashes and extracted database recorded in this audit."
+    ]
+  }
 }
