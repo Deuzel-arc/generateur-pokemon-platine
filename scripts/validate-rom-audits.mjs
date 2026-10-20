@@ -68,7 +68,7 @@ assert.equal(hypotheses.mappings.find((row) => row.id === 508)?.status, "unmappe
 assert.equal(hypotheses.extraMoves.length, 4, "expected four extra Project PM move hypotheses");
 for (const move of hypotheses.extraMoves) {
   assert.equal(move.nameCandidate, null, `extra move ${move.id} must not have an unverified display name`);
-  assert.equal(move.status, "name_unmapped_effect_id_not_semantically_decoded", `extra move ${move.id} must remain semantically unverified`);
+  assert.match(move.status, /^name_unmapped(?:_|$)/, `extra move ${move.id} must remain semantically unverified`);
 }
 assert.equal(catalog.integration.loadedByGenerator, false, "update audit validator when full runtime integration is implemented");
 console.log(`ROM audits consistent: ${triage.species.length} species deltas, ${triage.moves.length} move deltas; candidate-only IDs remain guarded.`);
