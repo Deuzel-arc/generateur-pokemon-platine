@@ -21,6 +21,25 @@ check("inline JavaScript parses", () => {
   // Compile only; don't execute browser code in Node.
   new Function(match[1]);
 });
+check("strategic data-source selector offers both game references", () => {
+  assert.match(html, /id="dataSources"/);
+  assert.match(html, /data-value="platinum"[^>]*data-label="Pokémon Platine original"/);
+  assert.match(html, /data-value="multiplayer"[^>]*data-label="Pokémon Platine multijoueur"/);
+  assert.match(html, /const state=\{dataSource:"platinum"/);
+});
+check("selected reference drives team candidate roster and scoring", () => {
+  assert.match(html, /function getActiveRoster\(\)/);
+  assert.match(html, /const activeRoster=getActiveRoster\(\)/);
+  assert.match(html, /activeRoster\.find/);
+  assert.match(html, /eligibleLeg=activeRoster\.filter/);
+  assert.match(html, /pool=activeRoster\.filter/);
+  assert.match(html, /state\.dataSource==='multiplayer'&&p\.types\.includes\('Ténèbres'\)/);
+});
+check("selected reference is recorded in the generated summary", () => {
+  assert.match(html, /referentielStrategique:state\.dataSource/);
+  assert.match(html, /referentielStatut:/);
+  assert.match(html, /updateDataSourceStatus\(\)/);
+});
 check("requested legendary count has explicit mapping", () => {
   assert.match(html, /\{none:0,one:1,two:2,three:3\}\[state\.legendary\]/);
 });
