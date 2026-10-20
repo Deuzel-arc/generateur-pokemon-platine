@@ -66,3 +66,12 @@ Ces chiffres ne représentent pas la proportion de toutes les ressources interne
 - Le mapping des types de valeur 9 dans Project PM n'est pas certifié de façon globale. Les espèces dont le type décodé reste `Inconnu` gardent leur type de référence original, sauf Gardevoir et Togekiss dont le type Fée est confirmé par le contexte du hack. À ne pas présenter comme une table de types complètement validée.
 - Empreintes des ROM actuellement utilisées par les exports : original `1cfd024519116c1c6285d6af2dbdfcec778e9d74c7c18585e22032e81aaa7eb8`; Project PM `435b0288238f01f21eeeef7b5de6de3e3c9c3a9b70ea3b18d71b31ba282ae4e1`. Elles diffèrent des empreintes de l'ancien fichier d'overrides, qui doit être considéré comme un audit antérieur distinct jusqu'à réconciliation.
 - Le catalogue complet des attaques et apprentissages n'est pas encore intégré au générateur; cette étape porte sur les profils de base du roster uniquement.
+
+
+## Session de travail simultané — 2026-10-20
+
+- Les profils des 71 espèces continuent d'être intégrés au générateur, et le manifeste `data/rom_catalog.json` reflète désormais ce périmètre réel sans prétendre que toutes les tables sont intégrées.
+- Correction de robustesse : les types placeholder `Inconnu` ne sont jamais appliqués au roster actif.
+- Les overrides de Gardevoir (Psy/Fée) et Togekiss (Fée/Vol) sont explicités dans le profil Project PM selon les règles établies pour ce hack.
+- Les tests statiques contrôlent maintenant la couverture de 71 profils, la structure des lignes statistiques et ces deux types. Les tests GitHub Actions de ce dernier lot doivent encore finir avant certification.
+- Travail simultané en cours : validation des données espèce/type, raccordement du calcul de score, garde-fous de provenance et tests de régression. Les tables complètes d'attaques, d'apprentissage, objets, rencontres et dresseurs restent à intégrer.
