@@ -5,7 +5,8 @@
   "scripts": {
     "test:static": "node tests/check-generator.mjs",
     "test:browser": "node tests/browser-generator.test.mjs",
-    "test": "npm run test:static && npm run test:rom-audits && npm run test:browser && npm run test:tooling",
+    "test:strategy-schema": "node tests/strategy-experiment-schema.test.mjs",
+    "test": "npm run test:static && npm run test:rom-audits && npm run test:strategy-schema && npm run test:browser && npm run test:tooling",
     "test:rom-audits": "node scripts/validate-rom-audits.mjs",
     "test:tooling": "node scripts/check-tooling.mjs",
     "audit:rom:types": "node scripts/audit-rom-type-bytes.mjs",
