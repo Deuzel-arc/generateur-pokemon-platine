@@ -29,6 +29,21 @@ assert.equal(itemArchiveDiff.policy.noCrossRomEffectInheritance, true, "item aud
 assert.equal(itemArchiveDiff.policy.extraEntryNamingStatus, "unidentified_until_semantic_validation", "extra Project PM entries must remain unidentified until validation");
 assert.equal(itemArchiveDiff.policy.mappingStatus, "structural_diff_verified_semantic_mapping_pending", "structural differences must not be described as semantic certification");
 
+assert.equal(itemArchiveDiff.byteDiffAnalysis.changedEntryCount, 165, "byte-level item audit must account for all 165 differing shared entries");
+assert.equal(itemArchiveDiff.byteDiffAnalysis.recordSizeBytes, 34, "item archive entry size must remain 34 bytes");
+assert.equal(itemArchiveDiff.byteDiffAnalysis.changedBytePositions["0_price_low_byte"], 148, "price low-byte differences must remain counted");
+assert.equal(itemArchiveDiff.byteDiffAnalysis.changedBytePositions["1_price_high_byte"], 83, "price high-byte differences must remain counted");
+assert.equal(itemArchiveDiff.byteDiffAnalysis.changedBytePositions["3_effectParam"], 6, "effect parameter differences must remain counted");
+assert.equal(itemArchiveDiff.byteDiffAnalysis.changedBytePositions["10_fieldUseFunc"], 11, "field-use function differences must remain counted");
+assert.equal(itemArchiveDiff.byteDiffAnalysis.changedBytePositions["12_partyUse"], 11, "party-use flag differences must remain counted");
+assert.equal(itemArchiveDiff.byteDiffAnalysis.changedBytePositions["15_partyUseParam_union_byte"], 11, "union parameter byte differences must remain counted");
+assert.equal(itemArchiveDiff.byteDiffAnalysis.interpretation.holdEffectByteOffset2ChangedEntries, 0, "hold-effect byte offset differences must remain accurately recorded");
+for (const [offset, indices] of Object.entries(itemArchiveDiff.byteDiffAnalysis.indicesByChangedByte)) {
+  assert.equal(indices.length, itemArchiveDiff.byteDiffAnalysis.changedBytePositions[Object.keys(itemArchiveDiff.byteDiffAnalysis.changedBytePositions).find((key) => key.startsWith(offset + "_"))], `byte offset ${offset}: changed index list count differs`);
+}
+assert.match(itemArchiveDiff.byteDiffAnalysis.interpretation.caution, /provisional/, "byte offsets must not be overinterpreted as Project PM semantic certification");
+
+
 
 assert.equal(itemReference.source.commit, canonical.source.commit, "item reference must use the same pinned Gen IV source commit");
 assert.equal(itemReference.itemIds.length, 468, "canonical item reference must cover logical IDs 0–467");
