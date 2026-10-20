@@ -64,3 +64,8 @@ All three commands verify the game code and exact SHA-256 before parsing NitroFS
 ## Project PM Fairy-move semantic hypotheses
 
 `data/project_pm_fairy_move_semantics_audit.json` records the eight CPUE move IDs whose raw type byte is 9. The decoded move-name bank resolves their French display names, and the pinned canonical effect table is used only to create explicit hypotheses from matching effect IDs and parameters. Those symbols are not proof of CPUE battle-handler behavior. The audit and `scripts/validate-rom-audits.mjs` must keep every hypothesis marked unverified for Project PM runtime and Gen IV mechanics until direct handler evidence or controlled in-game tests are available. Do not activate these candidate effects in the generator.
+
+
+## Cross-ROM level-up move usage audit
+
+`data/project_pm_levelup_move_usage_audit.json` compares level-up references for the eight CPUE Fairy-type move entries and the four additional CPUE moves at IDs 468–471. It reports counts and species/level references at the same numeric ID only. IDs with changed names and CPUE-only IDs are explicitly marked as unsafe for semantic comparison; usage-count differences must never be read as proof that CPUF and CPUE moves have the same identity. The audit validates all 493 standard-species learnset rows in each ROM and records zero invalid move references in the extracted tables.
