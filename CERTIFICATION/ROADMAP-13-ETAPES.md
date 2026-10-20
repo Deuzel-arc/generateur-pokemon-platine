@@ -105,10 +105,10 @@ Créer six Pokémon de niveau 100 pour les combats doubles 2 contre 2, selon les
 
 ## Méthode de progression
 
-- Ne travailler que sur l'étape active.
+- Faire avancer simultanément les lots indépendants ; garder une seule écriture à la fois sur chaque fichier partagé et réconcilier les changements avant validation.
 - Avant de changer de fichier, examiner la version courante et cibler le changement minimal.
-- Après chaque modification de code, lancer les tests automatisés avant tout autre changement. Si les tests échouent, rester dans l'étape active, diagnostiquer, corriger et relancer.
+- Après chaque modification de code, lancer les tests automatisés avant de la déclarer validée. Si les tests échouent, diagnostiquer, corriger et relancer avant de poursuivre l'intégration dépendante ; les travaux indépendants peuvent continuer en parallèle.
 - Ne jamais masquer un échec ni marquer une étape terminée sur la seule base d'un déploiement réussi.
 - À chaque point de contrôle : communiquer les livrables, preuves, résultats des tests, limites et pourcentage calculé. Continuer automatiquement sur les lots suivants ; signaler uniquement les blocages importants ou les questions nécessitant réellement une décision de l'utilisateur.
 - Le pourcentage global sera recalculé à partir des 13 portes d'acceptation : étape non validée = 0 crédit d'étape terminée ; étapes validées = crédit acquis. Un indicateur secondaire de progression interne peut être communiqué, mais séparé du taux d'étapes terminées.
-- Le travail continue jusqu'à la fin de l'étape active ; il s'arrête avant la suivante pour attendre l'accord explicite de l'utilisateur.
+- Le travail continue automatiquement sur les étapes et lots suivants, sans demander d'autorisation à chaque transition. S'arrêter uniquement si un problème important exige une décision de l'utilisateur ou si les outils ne permettent plus d'avancer.
