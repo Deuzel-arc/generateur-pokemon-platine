@@ -15,6 +15,18 @@ function check(name, fn) {
   catch (error) { checks.push({ name, status: "FAIL", message: error.message }); }
 }
 
+check("ROM identity hypotheses preserve unmapped Project PM entries", () => {
+  const identities = JSON.parse(readFileSync(new URL("../data/rom_identity_hypotheses.json", import.meta.url), "utf8"));
+  assert.equal(identities.mappings.length, 15);
+  assert.equal(identities.mappings.find(entry => entry.id === 503).identityCandidate, "ROTOM_HEAT");
+  assert.equal(identities.mappings.find(entry => entry.id === 507).identityCandidate, "ROTOM_MOW");
+  const extraSpecies = identities.mappings.find(entry => entry.id === 508);
+  assert.equal(extraSpecies.status, "unmapped");
+  assert.equal(extraSpecies.identityCandidate, null);
+  assert.equal(identities.extraMoves.length, 4);
+  assert.ok(identities.extraMoves.every(move => move.nameCandidate === null));
+  assert.ok(identities.rules.some(rule => rule.includes("avant utilisation runtime")));
+});
 check("ROM delta triage preserves candidate-only mappings and source hashes", () => {
   const triage = JSON.parse(readFileSync(new URL("../data/rom_delta_triage.json", import.meta.url), "utf8"));
   assert.equal(triage.schemaVersion, "1.0.0");
