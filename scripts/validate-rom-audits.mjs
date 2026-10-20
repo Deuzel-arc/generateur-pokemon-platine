@@ -18,6 +18,7 @@ const extendedNameBankAudit = readJson("data/rom_extended_name_banks_audit.json"
 const itemReference = readJson("data/gen4_item_id_reference.json");
 const romRosterProfiles = readJson("data/rom_roster_profiles.json");
 const rosterCoverageAudit = readJson("data/rom_roster_coverage_audit.json");
+const fairyMoveIdentityGuard = readJson("data/project_pm_fairy_move_identity_guard.json");
 
 assert.equal(rosterCoverageAudit.source.platinumSha256, catalog.profiles.platinum.sha256, "roster coverage audit must match CPUF hash");
 assert.equal(rosterCoverageAudit.source.projectPmSha256, catalog.profiles.project_pm.sha256, "roster coverage audit must match CPUE hash");
@@ -41,6 +42,23 @@ assert.deepEqual(
 );
 assert.equal(rosterCoverageAudit.scope.noRuntimeChanges, true, "coverage audit must not claim runtime expansion");
 assert.equal(rosterCoverageAudit.scope.coverageIsNotSemanticCertification, true, "coverage must not be confused with semantic validation");
+
+
+assert.equal(fairyMoveIdentityGuard.source.projectPmSha256, catalog.profiles.project_pm.sha256, "Fairy move identity guard must match the active CPUE hash");
+assert.equal(fairyMoveIdentityGuard.source.projectPmTypeId, 9, "Fairy move identity guard must retain raw type ID 9");
+assert.equal(fairyMoveIdentityGuard.status, "identity_unresolved_do_not_join_by_index", "Fairy move identities must remain explicitly unresolved");
+assert.equal(fairyMoveIdentityGuard.policy.allowRuntimeNameJoinByIndex, false, "canonical move symbols must not be joined to Project PM moves by index alone");
+assert.equal(fairyMoveIdentityGuard.policy.requireDecodedProjectPmMoveName, true, "Project PM move names must be decoded before identity resolution");
+assert.equal(fairyMoveIdentityGuard.runtimeChanges, false, "identity guard must not claim runtime changes");
+assert.deepEqual(fairyMoveIdentityGuard.entries.map(row => row.id).sort((a,b) => a-b), [66,140,186,204,236,295,296,461], "Fairy move guard must contain the exact eight audited IDs");
+assert.equal(new Set(fairyMoveIdentityGuard.entries.map(row => row.id)).size, 8, "Fairy move guard IDs must be unique");
+assert.equal(fairyMoveIdentityGuard.entries.filter(row => row.changeClass === "multiple_fields_changed").length, 5, "five Fairy-type entries must remain flagged for multi-field changes");
+assert.equal(fairyMoveIdentityGuard.entries.filter(row => row.changeClass === "type_field_only_changed").length, 3, "three Fairy-type entries must remain flagged as type-only changes");
+for (const entry of fairyMoveIdentityGuard.entries) {
+  assert.ok(entry.canonicalSymbolReferenceOnly, `move ${entry.id} must retain only a canonical reference symbol`);
+  assert.equal(Object.hasOwn(entry, "name"), false, `move ${entry.id} must not have an unverified display name`);
+  assert.equal(entry.changedFields.typeId[1], 9, `move ${entry.id} must target Project PM raw type 9`);
+}
 
 const itemArchiveDiff = readJson("data/project_pm_item_archive_diff.json");
 assert.equal(itemArchiveDiff.source.platinum.gameCode, "CPUF", "item archive diff must identify original Platinum");
