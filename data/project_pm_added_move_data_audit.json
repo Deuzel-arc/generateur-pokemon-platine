@@ -78,7 +78,7 @@
       "targetId": 0,
       "priority": 0,
       "flags": 0,
-      "raw": "ba00004b0e641900000000330503000000",
+      "raw": "ba00004b0e6419000000003305030000",
       "interpretation": "Raw values verified; effectId 186 and the displayed name alone do not certify a bite move that removes screens or any other exact runtime effect."
     }
   ],
