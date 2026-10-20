@@ -130,5 +130,17 @@
       "movesWithCanonicalCandidate": 98
     },
     "note": "Les symboles canoniques sont des candidats par ID partagé et ne doivent pas être utilisés comme noms certifiés avant vérification des tables de noms des ROM exactes."
+  },
+  "romIdentityHypotheses": {
+    "path": "data/rom_identity_hypotheses.json",
+    "status": "candidate_mappings_not_runtime",
+    "counts": {
+      "specialSpeciesAndForms": 15,
+      "extraProjectPmMoves": 4,
+      "unmappedProjectPmSpecies": [
+        508
+      ]
+    },
+    "note": "Candidate identities for Gen IV special entries/forms are evidence-based but require confirmation against the exact ROM name tables."
   }
 }
