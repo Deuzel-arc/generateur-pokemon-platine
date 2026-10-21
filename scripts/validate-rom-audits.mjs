@@ -505,4 +505,18 @@ for (const move of hypotheses.extraMoves) {
   assert.match(move.status, /^name_unmapped(?:_|$)/, `extra move ${move.id} must remain semantically unverified`);
 }
 assert.equal(catalog.integration.loadedByGenerator, false, "update audit validator when full runtime integration is implemented");
+
+const addedMoveAudit = readJson("data/project_pm_added_move_data_audit.json");
+assert.equal(addedMoveAudit.status, "direct_rom_move_records_crosschecked_names_only_semantics_pending", "extra Project PM move audit must remain explicitly provisional");
+assert.deepEqual(addedMoveAudit.validation.addedMoveIds, [468, 469, 470, 471], "Project PM-only move IDs must remain explicit");
+assert.equal(addedMoveAudit.validation.projectPmMoveCount, 472, "Project PM move table size must match the audit");
+assert.equal(addedMoveAudit.validation.platinumMoveCount, 471, "Platinum move table size must match the audit");
+assert.equal(addedMoveAudit.validation.runtimeEffectSemanticsVerified, false, "extra move effects must not be described as runtime-certified");
+assert.equal(addedMoveAudit.validation.canonicalGenerationCompatibilityVerified, false, "extra moves must not be described as Gen IV-compatible without battle-handler evidence");
+assert.equal(addedMoveAudit.validation.identityCandidatesAreHypothesesOnly, true, "extra move identity candidates must remain hypotheses");
+assert.deepEqual(addedMoveAudit.records.map((row) => row.id), [468, 469, 470, 471], "extra move records must cover exactly IDs 468–471");
+assert.ok(addedMoveAudit.records.every((row) => row.identityConfidence && row.interpretation && row.raw), "extra move records must preserve raw evidence and uncertainty");
+assert.ok(addedMoveAudit.records.every((row) => row.identityConfidence === "unresolved" || row.identityConfidence.endsWith("_candidate")), "extra move identity status must remain provisional");
+assert.ok(addedMoveAudit.policies.some((policy) => /Do not treat effect IDs as human-readable effects/.test(policy)), "extra move audit must forbid inferring effect semantics from numeric IDs");
+
 console.log(`ROM audits consistent: ${triage.species.length} species deltas, ${triage.moves.length} move deltas; candidate-only IDs remain guarded.`);
