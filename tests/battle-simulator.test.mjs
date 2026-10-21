@@ -11,7 +11,7 @@ assert.equal(calculateGen4BaseDamage({ level: 1, power: 40, attack: 10, defense:
 assert.throws(() => calculateGen4BaseDamage({ level: 101, power: 80, attack: 100, defense: 100 }), /level/);
 assert.throws(() => calculateGen4BaseDamage({ level: 50, power: 0, attack: 100, defense: 100 }), /power/);
 
-const coreOnly = inspectSimulationReadiness({ requiredMechanics: ["baseDamageCore"] });
+const coreOnly = inspectSimulationReadiness({ requiredMechanics: ["baseDamageCore", "battleStats"] });
 assert.equal(coreOnly.ready, true);
 const fullBattle = inspectSimulationReadiness({ requiredMechanics: ["baseDamageCore", "typeEffectiveness", "turnOrder"] });
 assert.equal(fullBattle.ready, false);
