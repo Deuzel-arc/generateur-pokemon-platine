@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 
 const profile = JSON.parse(readFileSync("data/rom_roster_profiles_candidate_493.json", "utf8"));
 const catalog = JSON.parse(readFileSync("data/rom_catalog.json", "utf8"));
+const runtimeProfile = JSON.parse(readFileSync("data/rom_roster_profiles.json", "utf8"));
 const frenchReference = JSON.parse(readFileSync("data/gen4_french_species_name_reference.json", "utf8"));
 const expectedHashes = {
   platinum: "1cfd024519116c1c6285d6af2dbdfcec778e9d74c7c18585e22032e81aaa7eb8",
@@ -15,6 +16,9 @@ assert.equal(profile.source.projectPmSha256, expectedHashes.projectPm);
 assert.equal(catalog.profiles.platinum.sha256, expectedHashes.platinum);
 assert.equal(catalog.profiles.project_pm.sha256, expectedHashes.projectPm);
 assert.equal(profile.policy.runtimeIntegrated, false, "candidate roster must not be mistaken for runtime integration");
+assert.equal(runtimeProfile.base.length, 71, "runtime roster coverage must remain explicit until semantic certification");
+assert.equal(catalog.integration.rosterEntriesIntegrated, 71, "manifest runtime coverage must match the certified partial roster");
+assert.equal(catalog.integration.fullCatalogLoadedByGenerator, false, "candidate roster must not silently promote the full catalog");
 assert.deepEqual(profile.statsOrder, ["hp", "attack", "defense", "speed", "specialAttack", "specialDefense"]);
 assert.equal(profile.base.length, 493);
 assert.equal(profile.counts.canonicalSpecies, 493);
