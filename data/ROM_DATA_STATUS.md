@@ -281,3 +281,19 @@ L'audit sert à circonscrire et contrôler la correction, pas encore à charger 
 - **422 espèces canoniques ne sont pas encore couvertes** par les profils stratégiques intégrés. L'audit liste précisément leurs IDs et symboles de référence pour guider les prochains lots.
 - Ce rapport mesure la couverture, pas la qualité des données ni la compatibilité Project PM. Il n'ajoute pas automatiquement les espèces manquantes au générateur : les noms français, types, statistiques et overrides doivent être validés avant chaque intégration.
 - Le validateur ROM compare les IDs couverts et manquants au complément exact de la référence canonique et vérifie les empreintes CPUF/CPUE. Le contrat d'outillage exige désormais la présence de cet audit.
+
+
+## Reprise d'audit indépendante — 2026-10-21
+
+Le fichier `CERTIFICATION/06-verification-independante-tables-decodees-2026-10-21.md` documente une nouvelle vérification structurelle du JSON extrait `rom_battle_database.json`, relu depuis la bibliothèque. SHA-256 de l'export inspecté : `eba0d4f71b26d3d190d53c0e3da8b11d7c18f08089a712e381d1087261a14e78` (2 718 509 octets).
+
+Résultats confirmés indépendamment sur l'export :
+- IDs internes uniques et continus pour les tables espèces, capacités, objets, apprentissages et évolutions ;
+- 0 ligne de statistiques invalide selon les bornes structurelles contrôlées, 0 ligne de types de forme incorrecte ;
+- 0 terminateur manquant signalé dans les tables d'apprentissage et 0 référence lisible hors de la table des capacités extraite ;
+- pour les espèces standard 1–493 : 6 598 entrées d'apprentissage CPUF et 8 590 CPUE ;
+- 56 références CPUE vers les capacités hors plage canonique 468–471 (38, 10, 5 et 3 références respectivement), contre 0 pour CPUF.
+
+Cette vérification ne certifie pas les noms, l'identité nationale des IDs internes, les effets des capacités, les méthodes d'évolution ou la sémantique des objets. Le rapport explique aussi pourquoi les totaux sur toutes les lignes exportées (6 753 CPUF / 8 760 CPUE) diffèrent des totaux limités aux 493 espèces standard.
+
+**Prochaine étape prioritaire inchangée :** réconcilier les empreintes et la provenance exacte de Project PM, puis traiter les mappings sémantiques bloquants. Le succès CI du commit précédent ne certifie pas la sémantique ROM ; le nouveau rapport documentaire doit encore passer la CI de son propre commit.
