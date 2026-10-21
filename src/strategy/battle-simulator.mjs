@@ -49,23 +49,23 @@ function positiveInteger(value, name) {
 // Canonical Generation IV type chart, expressed as defender IDs by multiplier.
  // IDs follow data/gen4_id_reference.json: 0 Normal, 1 Fighting, ... 17 Dark.
 const GEN4_TYPE_CHART = Object.freeze({
-  0: { weak: [5, 8], immune: [7] },
-  1: { weak: [0, 5, 8, 15, 16, 17], resist: [2, 3, 6, 14], immune: [] },
+  0: { weak: [5, 8], resist: [], immune: [7] },
+  1: { weak: [0, 5, 8, 15, 17], resist: [2, 3, 6, 14], immune: [] },
   2: { weak: [1, 6, 12], resist: [5, 8, 13], immune: [] },
-  3: { weak: [12, 14], resist: [3, 4, 5, 7], immune: [8] },
+  3: { weak: [12], resist: [3, 4, 5, 7], immune: [8] },
   4: { weak: [3, 5, 8, 10, 13], resist: [6, 12], immune: [2] },
   5: { weak: [2, 6, 10, 15], resist: [1, 4, 8], immune: [] },
-  6: { weak: [12, 14, 17], resist: [1, 2, 7, 8, 10], immune: [] },
+  6: { weak: [12, 14, 17], resist: [1, 2, 3, 7, 8, 10], immune: [] },
   7: { weak: [7, 14], resist: [17], immune: [0] },
-  8: { weak: [5, 8], resist: [8, 10, 13], immune: [] },
-  10: { weak: [6, 12, 15], resist: [5, 8, 10, 12], immune: [] },
-  11: { weak: [4, 5, 10], resist: [11, 12, 13], immune: [] },
-  12: { weak: [4, 5, 11], resist: [2, 3, 6, 8, 10, 12, 12], immune: [] },
+  8: { weak: [5, 15], resist: [8, 10, 11, 13], immune: [] },
+  10: { weak: [6, 8, 12, 15], resist: [5, 10, 11, 16], immune: [] },
+  11: { weak: [4, 5, 10], resist: [11, 12, 16], immune: [] },
+  12: { weak: [4, 5, 11], resist: [2, 3, 6, 8, 10, 12, 16], immune: [] },
   13: { weak: [2, 11], resist: [12, 13, 16], immune: [4] },
   14: { weak: [1, 3], resist: [8, 14], immune: [17] },
   15: { weak: [2, 4, 12, 16], resist: [8, 10, 11, 15], immune: [] },
   16: { weak: [16], resist: [8], immune: [] },
-  17: { weak: [7, 14], resist: [1, 17], immune: [] },
+  17: { weak: [7, 14], resist: [1, 6, 17], immune: [] },
 });
 
 /**
