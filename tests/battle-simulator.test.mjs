@@ -89,3 +89,30 @@ assert.deepEqual(calculateGen4TypeEffectiveness({ attackType: 1, defenderTypes: 
 assert.deepEqual(calculateGen4TypeEffectiveness({ attackType: 4, defenderTypes: [2] }), { supported: true, multiplier: 0 });
 assert.deepEqual(calculateGen4TypeEffectiveness({ attackType: 13, defenderTypes: [4, 11] }), { supported: true, multiplier: 0 });
 
+
+// Independent representative anchors for the Generation IV type chart.
+// The exhaustive sweep validates shape/range, while these cases pin
+// selected expected weaknesses, resistances and immunities.
+const canonicalAnchors = [
+  [10, [15], 2],   // Fire -> Ice
+  [10, [11], 0.5], // Fire -> Water
+  [11, [10], 2],   // Water -> Fire
+  [12, [11], 2],   // Grass -> Water
+  [13, [4], 0],    // Electric -> Ground
+  [13, [2], 2],    // Electric -> Flying
+  [14, [1], 2],    // Psychic -> Fighting
+  [14, [17], 0],   // Psychic -> Dark
+  [15, [16], 2],   // Ice -> Dragon
+  [16, [16], 2],   // Dragon -> Dragon
+  [17, [14], 2],   // Dark -> Psychic
+  [4, [13], 2],    // Ground -> Electric
+  [8, [10], 0.5],  // Steel -> Fire
+  [2, [13], 0.5],  // Flying -> Electric
+];
+for (const [attackType, defenderTypes, expected] of canonicalAnchors) {
+  assert.deepEqual(
+    calculateGen4TypeEffectiveness({ attackType, defenderTypes }),
+    { supported: true, multiplier: expected },
+    `canonical Gen IV chart anchor ${attackType} vs ${defenderTypes.join("/")}`,
+  );
+}
