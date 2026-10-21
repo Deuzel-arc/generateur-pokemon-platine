@@ -74,6 +74,16 @@ for (let attackType = 0; attackType <= 17; attackType++) {
     }
   }
 }
+assert.deepEqual(calculateGen4TypeEffectiveness({ attackType: 0, defenderTypes: [5] }), { supported: true, multiplier: 0.5 });
+assert.deepEqual(calculateGen4TypeEffectiveness({ attackType: 0, defenderTypes: [8] }), { supported: true, multiplier: 0.5 });
+assert.deepEqual(calculateGen4TypeEffectiveness({ attackType: 0, defenderTypes: [5, 8] }), { supported: true, multiplier: 0.25 });
+assert.deepEqual(calculateGen4TypeEffectiveness({ attackType: 0, defenderTypes: [7] }), { supported: true, multiplier: 0 });
+// Normal attacks must never be super effective against any canonical Gen IV type.
+for (let defenderType = 0; defenderType <= 17; defenderType++) {
+  if (defenderType === 9) continue;
+  const result = calculateGen4TypeEffectiveness({ attackType: 0, defenderTypes: [defenderType] });
+  assert.ok(result.multiplier <= 1, `Normal must not be super effective against type ID ${defenderType}`);
+}
 assert.deepEqual(calculateGen4TypeEffectiveness({ attackType: 0, defenderTypes: [7] }), { supported: true, multiplier: 0 });
 assert.deepEqual(calculateGen4TypeEffectiveness({ attackType: 1, defenderTypes: [7] }), { supported: true, multiplier: 0 });
 assert.deepEqual(calculateGen4TypeEffectiveness({ attackType: 4, defenderTypes: [2] }), { supported: true, multiplier: 0 });
