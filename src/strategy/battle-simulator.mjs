@@ -49,7 +49,7 @@ function positiveInteger(value, name) {
 // Canonical Generation IV type chart, expressed as defender IDs by multiplier.
  // IDs follow data/gen4_id_reference.json: 0 Normal, 1 Fighting, ... 17 Dark.
 const GEN4_TYPE_CHART = Object.freeze({
-  0: { weak: [5, 8], resist: [], immune: [7] },
+  0: { weak: [], resist: [5, 8], immune: [7] },
   1: { weak: [0, 5, 8, 15, 17], resist: [2, 3, 6, 14], immune: [7] },
   2: { weak: [1, 6, 12], resist: [5, 8, 13], immune: [] },
   3: { weak: [12], resist: [3, 4, 5, 7], immune: [8] },
