@@ -10,7 +10,7 @@
 const GEN4_SUPPORTED_PRIMITIVES = Object.freeze({
   baseDamageCore: true,
   battleStats: true,
-  stab: false,
+  stab: true,
   typeEffectiveness: false,
   weather: false,
   criticalHits: false,
