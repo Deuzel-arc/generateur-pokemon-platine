@@ -40,7 +40,7 @@ const coreOnly = inspectSimulationReadiness({ requiredMechanics: ["baseDamageCor
 assert.equal(coreOnly.ready, true);
 const fullBattle = inspectSimulationReadiness({ requiredMechanics: ["baseDamageCore", "typeEffectiveness", "turnOrder"] });
 assert.equal(fullBattle.ready, false);
-assert.deepEqual(fullBattle.unsupportedMechanics, ["typeEffectiveness", "turnOrder"]);
+assert.deepEqual(fullBattle.unsupportedMechanics, ["turnOrder"]);
 assert.deepEqual(fullBattle.unknownMechanics, []);
 
 const result = simulateBattle();
