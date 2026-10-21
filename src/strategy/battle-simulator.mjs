@@ -42,6 +42,17 @@ function positiveInteger(value, name) {
  * Attack and defense must already be the in-battle stats for the selected
  * physical/special category. This helper intentionally does not choose them.
  */
+/**
+ * Apply one explicit Generation IV random damage roll (85..100 percent).
+ * This is a single modifier only; it does not calculate final move damage.
+ */
+export function applyGen4RandomFactor({ damage, roll }) {
+  positiveInteger(damage, "damage");
+  assert(Number.isInteger(roll) && roll >= 85 && roll <= 100,
+    "roll must be an integer from 85 to 100");
+  return Math.floor((damage * roll) / 100);
+}
+
 export function calculateGen4BaseDamage({ level, power, attack, defense }) {
   positiveInteger(level, "level");
   positiveInteger(power, "power");
