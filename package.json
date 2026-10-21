@@ -6,7 +6,7 @@
     "test:static": "node tests/check-generator.mjs",
     "test:browser": "node tests/browser-generator.test.mjs",
     "test:strategy-schema": "node tests/strategy-experiment-schema.test.mjs",
-    "test": "npm run test:static && npm run test:ci-strategy && npm run test:rom-audits && npm run test:strategy-schema && npm run test:hybrid-engine && npm run test:experience-store && npm run test:battle-simulator && npm run test:gen4-stats && npm run test:rom-roster-candidate && npm run test:browser && npm run test:tooling",
+    "test": "npm run test:static && npm run test:roadmap-step1 && npm run test:ci-strategy && npm run test:rom-audits && npm run test:strategy-schema && npm run test:hybrid-engine && npm run test:experience-store && npm run test:battle-simulator && npm run test:gen4-stats && npm run test:rom-roster-candidate && npm run test:browser && npm run test:tooling",
     "test:rom-audits": "node scripts/validate-rom-audits.mjs",
     "test:tooling": "node scripts/check-tooling.mjs",
     "audit:rom:types": "node scripts/audit-rom-type-bytes.mjs",
@@ -17,7 +17,8 @@
     "test:battle-simulator": "node tests/battle-simulator.test.mjs",
     "test:gen4-stats": "node tests/gen4-stats.test.mjs",
     "test:rom-roster-candidate": "node tests/rom-roster-candidate.test.mjs",
-    "test:ci-strategy": "node tests/ci-strategy-rules.test.mjs"
+    "test:ci-strategy": "node tests/ci-strategy-rules.test.mjs",
+    "test:roadmap-step1": "node tests/roadmap-step1-audit.test.mjs"
   },
   "devDependencies": {
     "playwright": "1.56.1"
