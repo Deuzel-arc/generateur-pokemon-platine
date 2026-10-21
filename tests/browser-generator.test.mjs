@@ -27,7 +27,7 @@ try {
   assert.match(sourceSummary, /"referentielStrategique": "multiplayer"/);
   assert.match(sourceSummary, /Dracaufeu — Feu \/ Vol/);
   console.log("[PASS] le référentiel sélectionné conserve les types non certifiés en repli et figure dans le récapitulatif");
-  // Experimental mode uses the full candidate roster in the same generator and fails closed on unknown legendary status.
+  // Experimental mode exposes candidate data but must fail closed for every team-generation request until semantic metadata is certified.
   await page.locator('#catalogModes [data-value="experimental"]').click();
   await page.locator('#starters [data-value="kanto"]').click();
   await page.locator('#legendaries [data-value="one"]').click();
@@ -35,15 +35,11 @@ try {
   assert.match(await page.locator("#summary").innerText(), /GÉNÉRATION BLOQUÉE — MODE EXPÉRIMENTAL/);
   await page.locator('#legendaries [data-value="none"]').click();
   await page.locator("#validate").click();
-  const experimentalSummary = await page.locator("#summary").innerText();
-  assert.match(experimentalSummary, /"modeCatalogue": "experimental"/);
-  assert.match(experimentalSummary, /MODE EXPÉRIMENTAL : les 493 profils candidats sont utilisés/);
-  assert.match(experimentalSummary, /Florizarre/);
-  assert.match(experimentalSummary, /Dracaufeu/);
-  assert.match(experimentalSummary, /Tortank/);
+  assert.match(await page.locator("#summary").innerText(), /GÉNÉRATION BLOQUÉE — MODE EXPÉRIMENTAL/);
+  assert.match(await page.locator("#summary").innerText(), /la génération est désactivée/);
   await page.locator('#catalogModes [data-value="verified"]').click();
   await page.locator('#starters [data-value="none"]').click();
-  console.log("[PASS] le mode expérimental du générateur final charge 493 candidats et bloque les contraintes légendaires non certifiées");
+  console.log("[PASS] le mode expérimental expose 493 candidats sans autoriser une génération non certifiée");
 
   // Zero imposed items is valid; the algorithm still assigns six distinct items.
   await page.locator("#validate").click();
