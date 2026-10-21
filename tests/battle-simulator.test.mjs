@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import {
   calculateGen4BaseDamage,
+  calculateGen4Damage,
   applyGen4RandomFactor,
   applyGen4Stab,
   calculateGen4TypeEffectiveness,
@@ -15,6 +16,35 @@ assert.equal(applyGen4Stab({ damage: 100, hasStab: true }), 150);
 assert.equal(applyGen4Stab({ damage: 101, hasStab: true }), 151);
 assert.equal(applyGen4Stab({ damage: 100, hasStab: false }), 100);
 assert.throws(() => applyGen4Stab({ damage: 100, hasStab: "yes" }), /hasStab/);
+
+// Limited single-target pipeline: fixed roll, STAB and effectiveness.
+assert.deepEqual(calculateGen4Damage({
+  level: 50, power: 80, attack: 100, defense: 100,
+  attackType: 10, defenderTypes: [15], hasStab: true, roll: 100,
+}), { supported: true, damage: 110, effectiveness: 2 });
+assert.deepEqual(calculateGen4Damage({
+  level: 50, power: 80, attack: 100, defense: 100,
+  attackType: 10, defenderTypes: [11], hasStab: false, roll: 100,
+}), { supported: true, damage: 18, effectiveness: 0.5 });
+assert.deepEqual(calculateGen4Damage({
+  level: 50, power: 80, attack: 100, defense: 100,
+  attackType: 13, defenderTypes: [4], hasStab: true, roll: 100,
+}), { supported: true, damage: 0, effectiveness: 0 });
+assert.deepEqual(calculateGen4Damage({
+  level: 50, power: 80, attack: 100, defense: 100,
+  attackType: 9, defenderTypes: [15], hasStab: false, roll: 100,
+}), {
+  supported: false, damage: null,
+  reason: "TYPE_MYSTERY requires ROM-specific semantics",
+});
+assert.throws(() => calculateGen4Damage({
+  level: 50, power: 80, attack: 100, defense: 100,
+  attackType: 10, defenderTypes: [15], hasStab: 1, roll: 100,
+}), /hasStab/);
+assert.throws(() => calculateGen4Damage({
+  level: 50, power: 80, attack: 100, defense: 100,
+  attackType: 10, defenderTypes: [15], hasStab: true, roll: 101,
+}), /roll/);
 
 assert.deepEqual(calculateGen4TypeEffectiveness({ attackType: 10, defenderTypes: [12] }), { supported: true, multiplier: 2 });
 assert.deepEqual(calculateGen4TypeEffectiveness({ attackType: 10, defenderTypes: [12, 8] }), { supported: true, multiplier: 4 });
@@ -49,7 +79,7 @@ assert.equal(result.result, null);
 assert.equal(result.winner, null);
 assert.ok(result.unsupportedMechanics.includes("doublesTargeting"));
 
-console.log("[PASS] fondation simulateur Gen IV : formule de dégâts de base, limites explicites et refus de simuler sans mécaniques complètes");
+console.log("[PASS] fondation simulateur Gen IV : pipeline dégâts limité, bornes explicites et refus de simuler sans mécaniques complètes");
 
 // Exhaustive domain sweep: every canonical Gen IV attack/defense type pair,
 // plus all dual-type combinations, must return a finite supported multiplier.
@@ -89,10 +119,7 @@ assert.deepEqual(calculateGen4TypeEffectiveness({ attackType: 1, defenderTypes: 
 assert.deepEqual(calculateGen4TypeEffectiveness({ attackType: 4, defenderTypes: [2] }), { supported: true, multiplier: 0 });
 assert.deepEqual(calculateGen4TypeEffectiveness({ attackType: 13, defenderTypes: [4, 11] }), { supported: true, multiplier: 0 });
 
-
 // Independent representative anchors for the Generation IV type chart.
-// The exhaustive sweep validates shape/range, while these cases pin
-// selected expected weaknesses, resistances and immunities.
 const canonicalAnchors = [
   [10, [15], 2],   // Fire -> Ice
   [10, [11], 0.5], // Fire -> Water
