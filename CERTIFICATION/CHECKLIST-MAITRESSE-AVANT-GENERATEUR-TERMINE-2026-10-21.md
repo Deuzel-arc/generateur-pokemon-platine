@@ -25,14 +25,17 @@ Mis à jour le 2026-10-21. Cette checklist est le registre de reprise du projet.
 ## C — Générateur et moteur hybride
 - [ ] Tester contraintes dures : 6 Pokémon, générations I–IV, doubles 2v2, niveau 100, exactement 1 légendaire/fabuleux selon les règles du projet, espèces uniques.
 - [ ] Trio choisi = seulement ses trois évolutions finales imposées ; les trois autres membres restent libres Gen I–IV. « Aucun trio » = six places libres.
-- [ ] Exclure Queulorior.
+- [ ] Remplacer l'interdiction générale de Queulorior par une règle anti-exploitation : ne pas le laisser dominer artificiellement la recherche uniquement parce qu'il peut apprendre un très grand nombre de capacités. Évaluer son inclusion selon les règles compétitives et les options choisies ; si une option utilisateur l'exclut, cette exclusion devient une contrainte dure.
 - [ ] Connecter le moteur hybride à des données certifiées et à l'interface sans utiliser de profils candidats.
-- [ ] Calculer les synergies du plus simple au plus complexe : individu, paires, noyaux, équipe complète, interactions stratégiques.
+- [ ] Traiter toutes les options explicitement sélectionnées dans l'interface comme des contraintes inviolables : aucun mécanisme d'autocorrection, d'optimisation ou d'apprentissage ne peut les ignorer, les modifier ou les contourner. En cas de conflit ou d'impossibilité, expliquer le conflit et demander une décision ou proposer des solutions compatibles.
+- [ ] Autoriser l'algorithme à détecter et corriger ses propres incohérences de code, de données dérivées ou de raisonnement, avec tests de non-régression et journal des changements ; interdire toute auto-correction silencieuse qui altérerait les options utilisateur, les données ROM certifiées ou les règles du profil actif.
+- [ ] Calculer automatiquement les synergies du plus simple au plus complexe : individu, paires, noyaux, équipe complète, interactions stratégiques ; conserver preuves, conditions et limites de confiance.
+- [ ] Découvrir et comparer des stratégies réellement employées en compétition Gen IV à partir de sources vérifiables, puis explorer de nouvelles variantes par recherche et simulation sans confondre stratégies attestées et stratégies découvertes.
 - [ ] Évaluer couverture offensive/défensive, rôles, vitesse, résistances/faiblesses et interactions doubles sur données vérifiées.
 - [ ] Expliquer scores, preuves, incertitudes et raisons d'exclusion.
-- [ ] Varier les sets, éviter Abri systématique et les capacités dupliquées sur un même Pokémon.
+- [ ] Générer des sets crédibles en compétition de quatrième génération à partir de stratégies et sets attestés quand ils sont disponibles ; autoriser Abri aussi souvent que les rôles, les données compétitives et les résultats le justifient. Ne pas le forcer partout ni le pénaliser arbitrairement ; interdire uniquement les doublons de capacités sur un même Pokémon et respecter toutes les options sélectionnées.
 - [ ] Vérifier existence et effets Gen IV des objets ; signaler les incertitudes.
-- [ ] Encadrer les capacités personnalisées PKHeX par les règles choisies et leur cohérence.
+- [ ] Supprimer le terme ambigu « capacités personnalisées » : le générateur peut proposer des capacités illégales au regard de l'apprentissage normal, en nombre et selon les choix de l'utilisateur. Il doit les identifier clairement comme illégales/à attribuer manuellement ; l'utilisateur les attribuera dans PKHeX avant les combats réels. Vérifier cohérence biologique, règles Gen IV/Project PM et options sélectionnées, sans prétendre que ces capacités sont légalement apprises dans le jeu.
 - [ ] Tester qualité, diversité, reproductibilité et performances.
 
 ## D — Simulateur de combat
@@ -53,7 +56,8 @@ Mis à jour le 2026-10-21. Cette checklist est le registre de reprise du projet.
 - [ ] Définir adversaires/styles variés et jeu de validation distinct des données d'optimisation.
 - [ ] Modifier seulement les paramètres autorisés ; garder historique et baseline.
 - [ ] Accepter une amélioration seulement si elle progresse sur validation sans violer les contraintes dures.
-- [ ] L'apprentissage ne change jamais les faits de ROM et ne transforme jamais une hypothèse en fait certifié.
+- [ ] L'apprentissage ne change jamais les faits de ROM, ne transforme jamais une hypothèse en fait certifié et ne peut jamais outrepasser les options sélectionnées par l'utilisateur.
+- [ ] Permettre l'autocorrection contrôlée du code et des incohérences internes : diagnostic, reproduction, correction minimale, tests ciblés, suite complète et retour arrière en cas d'échec. L'algorithme doit signaler les problèmes qu'il ne peut pas corriger avec certitude au lieu d'inventer une correction.
 
 ## F — Interface, tests et livraison
 - [ ] Intégrer moteur, simulateur et mémoire sans casser les fonctions existantes.
@@ -69,3 +73,11 @@ Mis à jour le 2026-10-21. Cette checklist est le registre de reprise du projet.
 
 ## Critères de clôture
 Ne déclarer le générateur terminé que lorsque les tâches bloquantes sont vérifiées, la couverture restante est documentée, tests et déploiement passent, les données candidates ne sont pas présentées comme certifiées et les limites restantes ont été explicitement acceptées.
+
+## Clarifications fonctionnelles prioritaires (2026-10-21)
+
+- **Queulorior :** l'ancienne exclusion était une protection contre l'exploitation artificielle de son vaste movepool, pas une règle compétitive immuable. Le traitement doit être fondé sur les options utilisateur et l'équilibre de recherche. Toute option explicite d'exclusion reste absolue.
+- **Abri :** ne jamais bannir ou pénaliser cette capacité simplement parce qu'elle est fréquente. En doubles Gen IV, son utilisation peut être optimale et doit émerger des sets compétitifs attestés, des rôles et des résultats. Éviter seulement la distribution automatique sans justification.
+- **Capacités illégales :** ce sont des capacités non accessibles par l'apprentissage normal, sélectionnées par le générateur selon les options choisies puis attribuées manuellement par l'utilisateur via PKHeX pour les essais en jeu. Ne pas les appeler « capacités personnalisées » et ne pas prétendre que le générateur modifie directement la ROM ou la sauvegarde.
+- **Autocorrection :** l'algorithme peut diagnostiquer et corriger ses propres incohérences de code, de validation ou de données dérivées. Toute correction doit être traçable, testée et réversible ; elle ne peut jamais changer silencieusement une option choisie, une règle active ou un fait certifié.
+- **Priorité absolue des options :** les choix explicites de l'utilisateur (trio, légendaire, quantité et choix des capacités illégales, règles, objets, contraintes de composition et autres paramètres exposés) sont des contraintes dures. Si aucune solution ne satisfait toutes les options, retourner un conflit explicite plutôt que relâcher une option.
