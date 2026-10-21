@@ -6,7 +6,7 @@ This repository is a static Pokémon team generator with ROM-derived data. The g
 
 ## Automated checks
 
-The `Quality checks` GitHub Actions workflow runs on pull requests targeting `main` and manual dispatch. The GitHub Pages workflow runs the same full suite before deployment on pushes to `main`, avoiding duplicate test runs on every push. It installs Node.js 22 dependencies, installs Chromium for Playwright, then runs the complete `npm test` suite:
+The `Quality checks` GitHub Actions workflow runs on pull requests targeting `main` and manual dispatch. It now separates static/data/strategy tests from Playwright browser regression tests into independent jobs so they can run concurrently. Each job installs from the same lockfile; only the browser job installs Chromium. The GitHub Pages workflow still runs the complete `npm test` suite before deployment on pushes to `main`, preserving a single full pre-deploy gate:
 
 - `test:static`: generator and data invariants.
 - `test:rom-audits`: ROM audit schema and integrity assertions.
