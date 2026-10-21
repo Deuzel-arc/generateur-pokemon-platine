@@ -297,3 +297,18 @@ Résultats confirmés indépendamment sur l'export :
 Cette vérification ne certifie pas les noms, l'identité nationale des IDs internes, les effets des capacités, les méthodes d'évolution ou la sémantique des objets. Le rapport explique aussi pourquoi les totaux sur toutes les lignes exportées (6 753 CPUF / 8 760 CPUE) diffèrent des totaux limités aux 493 espèces standard.
 
 **Prochaine étape prioritaire inchangée :** réconcilier les empreintes et la provenance exacte de Project PM, puis traiter les mappings sémantiques bloquants. Le succès CI du commit précédent ne certifie pas la sémantique ROM ; le nouveau rapport documentaire doit encore passer la CI de son propre commit.
+
+
+## Vérification source → binaire de huit objets témoins CPUF — 2026-10-21
+
+Rapport détaillé : [CERTIFICATION/08-verification-source-binaire-objets-temoins-2026-10-21.md](../CERTIFICATION/08-verification-source-binaire-objets-temoins-2026-10-21.md).
+
+- Référence source : `pret/pokeplatinum` épinglée au commit `06c6e9a0348da283be8d9225d0bec03c349ff5c2`; structure `ItemData` et logique `proc_item` / `proc_params` consultées.
+- Huit témoins couvrant plusieurs zones de l'archive (Master Ball, Ultra Ball, Potion, Adamant Orb, Dragon Fang, Zap Plate, CT23 et Secret Key) ont été reconstruits indépendamment à partir de leurs champs source.
+- Résultat ciblé : **8/8 enregistrements identiques sur 34 octets chacun, 272/272 octets concordants** avec l'export brut CPUF.
+- Cette preuve reste partielle : elle ne constitue pas le comparateur générique source JSON → binaire et ne valide pas les 446 objets. Les cas spéciaux de paramètres, baies, courrier, cannes et CT/CS restent à traiter; CPUE doit rester un audit séparé.
+- Le mapping d'archive reste candidat et aucun effet d'objet n'est certifié par ce lot.
+
+### Blocage de tests observé pendant la reprise
+
+Le workflow GitHub Actions `Quality checks` n° 62 sur le commit `3fc6dc594f581386bfc57d78fb1ffb2a70ec1844` a échoué dans `tests/battle-simulator.test.mjs:78` : le test attendait un multiplicateur de type nul, alors que le calcul a renvoyé 1. Ce test concerne le simulateur de combat (étape 7), pas le décodage ROM de l'étape 1. Conformément au verrouillage, ce défaut n'est pas corrigé dans cette étape; il est consigné comme blocage de la suite globale et devra être traité lorsque l'étape correspondante sera autorisée, sauf dérogation exceptionnelle explicitement reconfirmée par l'utilisateur.
