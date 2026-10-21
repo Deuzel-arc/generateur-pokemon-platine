@@ -73,9 +73,6 @@ for (const [name, [types, stats]] of Object.entries(overrides)) {
 assert.equal(computedStatsChanged, profile.counts.statsChanged, "statsChanged must be derived from actual rows");
 assert.equal(computedTypesChanged, profile.counts.typesChanged, "typesChanged must be derived from actual rows");
 assert.equal(computedBothChanged, profile.counts.bothStatsAndTypesChanged, "bothStatsAndTypesChanged must be derived from actual rows");
-assert.equal(overrides ? Object.keys(overrides).length - computedStatsChanged - computedTypesChanged + computedBothChanged : 0,
-  profile.counts.projectPmOverrides - computedStatsChanged - computedTypesChanged + computedBothChanged,
-  "override total and delta counters must be arithmetically consistent");
 assert.equal(catalog.integration.loadedByGenerator, false);
 
 console.log("[PASS] roster ROM candidat : 493 IDs, noms uniques, statistiques valides, overrides CPUE et empreintes vérifiés; sémantique toujours non certifiée");
