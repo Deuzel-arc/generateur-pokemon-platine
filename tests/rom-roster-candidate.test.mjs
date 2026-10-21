@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 
 const profile = JSON.parse(readFileSync("data/rom_roster_profiles_candidate_493.json", "utf8"));
 const catalog = JSON.parse(readFileSync("data/rom_catalog.json", "utf8"));
+const frenchReference = JSON.parse(readFileSync("data/gen4_french_species_name_reference.json", "utf8"));
 const expectedHashes = {
   platinum: "1cfd024519116c1c6285d6af2dbdfcec778e9d74c7c18585e22032e81aaa7eb8",
   projectPm: "435b0288238f01f21eeeef7b5de6de3e3c9c3a9b70ea3b18d71b31ba282ae4e1",
@@ -22,6 +23,8 @@ assert.equal(profile.counts.uniqueIds, 493);
 
 const ids = new Set();
 const names = new Set();
+const referenceById = new Map(frenchReference.species.map(row => [row.id, row]));
+assert.equal(referenceById.size, 493, "French reference must contain 493 unique IDs");
 for (const row of profile.base) {
   assert.equal(row.length, 9, "candidate row must contain name, ID, two types and six stats");
   const [name, id, types, ...stats] = row;
@@ -30,6 +33,9 @@ for (const row of profile.base) {
   assert.ok(Number.isInteger(id) && id >= 1 && id <= 493);
   assert.ok(!ids.has(id), `duplicate National Dex ID ${id}`);
   assert.ok(!names.has(name), `duplicate French display name ${name}`);
+  const canonical = referenceById.get(id);
+  assert.ok(canonical, `missing canonical French reference for ID ${id}`);
+  assert.equal(name, canonical.nameFr, `French name mismatch for National Dex ID ${id}`);
   ids.add(id); names.add(name);
   assert.ok(Array.isArray(types) && types.length === 2);
   for (const type of types) assert.ok(typeof type === "string" && type.length > 0, `species ${id}: invalid type label`);
