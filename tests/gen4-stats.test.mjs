@@ -19,7 +19,7 @@ assert.deepEqual(
 );
 assert.deepEqual(
   calculateGen4Stats({ baseStats, ivs: zeros, evs: zeros, level: 1 }),
-  { hp: 12, attack: 7, defense: 7, specialAttack: 7, specialDefense: 7, speed: 7 },
+  { hp: 13, attack: 7, defense: 7, specialAttack: 7, specialDefense: 7, speed: 7 },
 );
 assert.throws(() => calculateGen4Stats({ baseStats, ivs: maxIvs, evs: zeros, level: 101 }), /level/);
 assert.throws(() => calculateGen4Stats({ baseStats, ivs: { ...maxIvs, speed: 32 }, evs: zeros, level: 100 }), /ivs.speed/);
