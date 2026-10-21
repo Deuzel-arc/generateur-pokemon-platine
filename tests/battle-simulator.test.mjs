@@ -50,3 +50,32 @@ assert.equal(result.winner, null);
 assert.ok(result.unsupportedMechanics.includes("doublesTargeting"));
 
 console.log("[PASS] fondation simulateur Gen IV : formule de dégâts de base, limites explicites et refus de simuler sans mécaniques complètes");
+
+// Exhaustive domain sweep: every canonical Gen IV attack/defense type pair,
+// plus all dual-type combinations, must return a finite supported multiplier.
+// This checks coverage and API stability; matchup correctness still requires
+// independent comparison against a canonical Gen IV chart.
+const validMultipliers = new Set([0, 0.25, 0.5, 1, 2, 4]);
+for (let attackType = 0; attackType <= 17; attackType++) {
+  if (attackType === 9) continue; // Mystery is intentionally unsupported.
+  for (let defenderType = 0; defenderType <= 17; defenderType++) {
+    if (defenderType === 9) continue;
+    const single = calculateGen4TypeEffectiveness({ attackType, defenderTypes: [defenderType] });
+    assert.equal(single.supported, true, `canonical matchup ${attackType} vs ${defenderType} must be supported`);
+    assert.ok(validMultipliers.has(single.multiplier), `invalid single-type multiplier for ${attackType} vs ${defenderType}`);
+    for (let secondDefenderType = 0; secondDefenderType <= 17; secondDefenderType++) {
+      if (secondDefenderType === 9) continue;
+      const dual = calculateGen4TypeEffectiveness({
+        attackType,
+        defenderTypes: [defenderType, secondDefenderType],
+      });
+      assert.equal(dual.supported, true, `canonical dual matchup ${attackType} vs ${defenderType}/${secondDefenderType} must be supported`);
+      assert.ok(validMultipliers.has(dual.multiplier), `invalid dual-type multiplier for ${attackType} vs ${defenderType}/${secondDefenderType}`);
+    }
+  }
+}
+assert.deepEqual(calculateGen4TypeEffectiveness({ attackType: 0, defenderTypes: [7] }), { supported: true, multiplier: 0 });
+assert.deepEqual(calculateGen4TypeEffectiveness({ attackType: 1, defenderTypes: [7] }), { supported: true, multiplier: 0 });
+assert.deepEqual(calculateGen4TypeEffectiveness({ attackType: 4, defenderTypes: [2] }), { supported: true, multiplier: 0 });
+assert.deepEqual(calculateGen4TypeEffectiveness({ attackType: 13, defenderTypes: [4, 11] }), { supported: true, multiplier: 0 });
+
