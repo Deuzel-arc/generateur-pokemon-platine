@@ -13,10 +13,37 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test:
-    name: Static, ROM audit and browser tests
+  unit-and-data:
+    name: Static, ROM audit and strategy tests
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Run static and data integrity tests
+        run: |
+          npm run test:static
+          npm run test:ci-strategy
+          npm run test:rom-audits
+          npm run test:strategy-schema
+          npm run test:hybrid-engine
+          npm run test:experience-store
+          npm run test:battle-simulator
+          npm run test:gen4-stats
+          npm run test:rom-roster-candidate
+          npm run test:tooling
+
+  browser:
+    name: Browser regression tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -36,5 +63,5 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
-      - name: Run full test suite
-        run: npm test
+      - name: Run browser regression tests
+        run: npm run test:browser
