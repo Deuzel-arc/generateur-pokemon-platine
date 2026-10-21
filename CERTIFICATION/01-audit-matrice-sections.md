@@ -1,12 +1,16 @@
 # Étape 1 — Matrice d'audit de l'interface et critères d'acceptation
 
-**Date :** 2026-10-20  
+**Date :** 2026-10-21  
 **Périmètre :** audit statique du dépôt et résultats CI déjà enregistrés.  
-**Statut :** diagnostic corrigé dans la documentation ; étape non certifiée tant que les tests et la validation du contrat ne sont pas exécutés à nouveau.
+**Statut :** matrice versionnée et contrôlée automatiquement par `tests/roadmap-step1-audit.test.mjs`; étape 1 partiellement avancée, non certifiée tant que le contrôle du contrat n'a pas réussi sur le commit candidat et que les écarts ne sont pas résolus.
 
-## État de preuve
+## État de preuve et baseline reproductible
 
-Le dernier workflow connu sur le commit `a8f53a4aeabff0ccebbe5b6a6ebbb22d34e08742` indique 22/22 assertions statiques et 6/6 scénarios navigateur réussis. Il ne couvre pas les bases complètes ni la viabilité stratégique. Après la modification de la documentation, une nouvelle exécution CI est nécessaire pour certifier le commit actuel.
+- Dernier workflow antérieur confirmé réussi : [GitHub Actions run 39536611662](https://github.com/Deuzel-arc/generateur-pokemon-platine/actions/runs/39536611662), commit `f767172c744a8f97864ec1dc65ceef9df3c8fb8f`; tâches « Browser regression tests » et « Static, ROM audit and strategy tests » réussies.
+- Ce résultat ne certifie pas les commits créés ensuite : le pipeline de dégâts et la matrice d'étape 1 doivent passer la CI sur leur propre commit avant d'être considérés comme validés.
+- Matrice machine : `data/roadmap_step1_section_matrix.json`; test dédié : `tests/roadmap-step1-audit.test.mjs`; commande : `npm run test:roadmap-step1`, incluse dans `npm test`.
+- Couverture runtime mesurée : 71/493 espèces (14,40 %); 422 espèces absentes du roster runtime. Les 493 profils candidats restent non intégrés et non certifiés sémantiquement.
+- CPUF Platine français et CPUE Project PM sont identifiés par empreintes distinctes; les IDs numériques communs ne sont pas traités comme preuve d'identité.
 
 ## Matrice des neuf sections
 
