@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Vérification reproductible des enregistrements témoins CPUF dans l'export extrait",
+  "auditDate": "2026-10-21",
+  "sourceArtifact": {
+    "libraryPath": "/Audit_ROM_Pokemon_Platine/rom_decoded_core_tables.zip",
+    "member": "platinum/itemtool__itemdata__pl_item_data.narc.json",
+    "rawRecordCount": 446,
+    "recordSizeBytes": 34,
+    "concatenatedRecordsSha256": "84d8c3380f0f8963bc6d81e21039e04137fd87fd96fa9cd33d082dfe2a5b5935"
+  },
+  "crossExportConsistency": {
+    "decodedItemsMember": "platinum/items.json",
+    "rawRecordsCompared": 446,
+    "decodedRawMatches": 446,
+    "decodedIdEqualsIndex": 446,
+    "recordSizesObservedBytes": [34],
+    "status": "pass_export_internal_consistency"
+  },
+  "witnesses": [
+    {"archiveIndex": 1, "name": "Master Ball", "bytes": 34, "hexMatchesExport": true},
+    {"archiveIndex": 2, "name": "Ultra Ball", "bytes": 34, "hexMatchesExport": true},
+    {"archiveIndex": 17, "name": "Potion", "bytes": 34, "hexMatchesExport": true},
+    {"archiveIndex": 113, "name": "Adamant Orb", "bytes": 34, "hexMatchesExport": true},
+    {"archiveIndex": 228, "name": "Dragon Fang", "bytes": 34, "hexMatchesExport": true},
+    {"archiveIndex": 278, "name": "Zap Plate", "bytes": 34, "hexMatchesExport": true},
+    {"archiveIndex": 328, "name": "TM23", "bytes": 34, "hexMatchesExport": true},
+    {"archiveIndex": 445, "name": "Secret Key", "bytes": 34, "hexMatchesExport": true}
+  ],
+  "witnessSummary": {
+    "matched": 8,
+    "total": 8,
+    "matchedBytes": 272,
+    "totalBytes": 272,
+    "status": "pass_export_witness_check"
+  },
+  "limitations": [
+    "This verifies consistency between the two JSON members in the saved extracted export and the eight cited witness strings.",
+    "It does not independently reconstruct ItemData from the canonical per-item source JSON.",
+    "It does not recalculate the archive from the original .nds bytes in this run.",
+    "It does not certify item names/effects for Project PM CPUE.",
+    "The logical item ID to archive index mapping remains a candidate until the independent source-to-binary encoder and exhaustive comparison are implemented."
+  ],
+  "nextAction": "Implement a reproducible ItemData encoder from canonical source JSON, proc_item/proc_params rules, enum mappings and bitfield packing; test eight witnesses, then all 446 CPUF records. Audit CPUE separately."
+}
