@@ -44,3 +44,8 @@ Pour chaque témoin, les 34 octets reconstruits ont été comparés à l'enregis
 ## Décision
 
 Conserver le mapping complet des objets comme **candidat**. Ce lot améliore la preuve de cohérence du mapping, mais l'étape 1 reste ouverte. Aucune donnée d'objet ne doit être déclarée exhaustivement certifiée avant le comparateur source → binaire des 446 enregistrements CPUF et l'audit distinct CPUE.
+
+
+> **RECTIFICATIF DE PORTÉE — 21 octobre 2026**
+>
+> Le contrôle reproductible actuellement conservé dans le dépôt compare les champs `raw` des 446 objets exportés dans `items.json` aux 446 enregistrements bruts de l'archive extraite. Il confirme 446/446 égalités entre ces deux représentations de l'export, ainsi que 8/8 témoins (272/272 octets) qui y correspondent. **Cela ne démontre pas une reconstruction indépendante des octets depuis les JSON source canoniques** : le prototype décrit dans la méthode n'est pas intégré ni livré sous une forme reproductible dans le dépôt. Les affirmations ci-dessous présentant les huit témoins comme une reconstruction source→binaire effectivement vérifiée doivent donc être considérées comme non établies par les artefacts versionnés. Le statut fiable est une cohérence d'export brut; la reconstruction canonique source→binaire reste à implémenter et à tester. Le mapping et les effets d'objets demeurent non certifiés.
