@@ -17,7 +17,7 @@ const GEN4_SUPPORTED_PRIMITIVES = Object.freeze({
   heldItems: false,
   abilities: false,
   spreadMoves: false,
-  randomDamageRoll: false,
+  randomDamageRoll: true,
   moveEffects: false,
   statusAndStatStages: false,
   switching: false,
