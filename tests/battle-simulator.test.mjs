@@ -3,6 +3,7 @@ import {
   calculateGen4BaseDamage,
   applyGen4RandomFactor,
   applyGen4Stab,
+  calculateGen4TypeEffectiveness,
   inspectSimulationReadiness,
   simulateBattle,
 } from "../src/strategy/battle-simulator.mjs";
@@ -14,6 +15,19 @@ assert.equal(applyGen4Stab({ damage: 100, hasStab: true }), 150);
 assert.equal(applyGen4Stab({ damage: 101, hasStab: true }), 151);
 assert.equal(applyGen4Stab({ damage: 100, hasStab: false }), 100);
 assert.throws(() => applyGen4Stab({ damage: 100, hasStab: "yes" }), /hasStab/);
+
+assert.deepEqual(calculateGen4TypeEffectiveness({ attackType: 10, defenderTypes: [12] }), { supported: true, multiplier: 2 });
+assert.deepEqual(calculateGen4TypeEffectiveness({ attackType: 10, defenderTypes: [12, 8] }), { supported: true, multiplier: 4 });
+assert.deepEqual(calculateGen4TypeEffectiveness({ attackType: 10, defenderTypes: [11] }), { supported: true, multiplier: 0.5 });
+assert.deepEqual(calculateGen4TypeEffectiveness({ attackType: 13, defenderTypes: [4] }), { supported: true, multiplier: 0 });
+assert.deepEqual(calculateGen4TypeEffectiveness({ attackType: 9, defenderTypes: [12] }), {
+  supported: false, multiplier: null, reason: "TYPE_MYSTERY requires ROM-specific semantics",
+});
+assert.deepEqual(calculateGen4TypeEffectiveness({ attackType: 10, defenderTypes: [9] }), {
+  supported: false, multiplier: null, reason: "TYPE_MYSTERY requires ROM-specific semantics",
+});
+assert.throws(() => calculateGen4TypeEffectiveness({ attackType: 18, defenderTypes: [12] }), /attackType/);
+assert.throws(() => calculateGen4TypeEffectiveness({ attackType: 10, defenderTypes: [] }), /defenderTypes/);
 assert.equal(applyGen4RandomFactor({ damage: 100, roll: 85 }), 85);
 assert.equal(applyGen4RandomFactor({ damage: 100, roll: 100 }), 100);
 assert.equal(applyGen4RandomFactor({ damage: 37, roll: 85 }), 31);
