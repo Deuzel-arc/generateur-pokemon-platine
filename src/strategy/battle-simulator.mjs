@@ -1,11 +1,12 @@
 /**
  * Gen IV battle-simulation foundation.
  *
- * This module deliberately implements only the deterministic pre-modifier
- * base-damage term. It is NOT a full battle simulator and must never decide
- * a battle outcome. STAB, type effectiveness, weather, critical hits, items,
- * abilities, spread-move modifiers and move effects are
- * reported as unsupported until implemented and reference-tested. STAB, type effectiveness and the random factor exist as isolated primitives, not as a combined damage pipeline.
+ * This module deliberately implements a limited, deterministic damage pipeline.
+ * It is NOT a full battle simulator and must never decide a battle outcome.
+ * Weather, critical hits, held items, abilities, spread-move modifiers, move
+ * effects, status/stages, switching, turn order and doubles targeting remain
+ * unsupported. The combined damage helper is valid only when those modifiers
+ * are absent and the supplied battle stats are already correct.
  */
 const GEN4_SUPPORTED_PRIMITIVES = Object.freeze({
   baseDamageCore: true,
@@ -35,19 +36,9 @@ function positiveInteger(value, name) {
 }
 
 /**
- * Core Generation IV damage expression, before STAB, effectiveness and all
- * other modifiers:
- * floor(floor((floor(2*level/5)+2) * power * attack / defense) / 50) + 2
- *
- * Attack and defense must already be the in-battle stats for the selected
- * physical/special category. This helper intentionally does not choose them.
+ * Canonical Generation IV type chart, expressed as defender IDs by multiplier.
+ * IDs follow data/gen4_id_reference.json: 0 Normal, 1 Fighting, ... 17 Dark.
  */
-/**
- * Apply one explicit Generation IV random damage roll (85..100 percent).
- * This is a single modifier only; it does not calculate final move damage.
- */
-// Canonical Generation IV type chart, expressed as defender IDs by multiplier.
- // IDs follow data/gen4_id_reference.json: 0 Normal, 1 Fighting, ... 17 Dark.
 const GEN4_TYPE_CHART = Object.freeze({
   0: { weak: [], resist: [5, 8], immune: [7] },
   1: { weak: [0, 5, 8, 15, 17], resist: [2, 3, 6, 14], immune: [7] },
@@ -105,6 +96,10 @@ export function applyGen4Stab({ damage, hasStab }) {
   return hasStab ? Math.floor((damage * 3) / 2) : damage;
 }
 
+/**
+ * Apply one explicit Generation IV random damage roll (85..100 percent).
+ * This is a single modifier only; it does not calculate final move damage.
+ */
 export function applyGen4RandomFactor({ damage, roll }) {
   positiveInteger(damage, "damage");
   assert(Number.isInteger(roll) && roll >= 85 && roll <= 100,
@@ -112,6 +107,14 @@ export function applyGen4RandomFactor({ damage, roll }) {
   return Math.floor((damage * roll) / 100);
 }
 
+/**
+ * Core Generation IV damage expression, before STAB, effectiveness and all
+ * other modifiers:
+ * floor(floor((floor(2*level/5)+2) * power * attack / defense) / 50) + 2
+ *
+ * Attack and defense must already be the in-battle stats for the selected
+ * physical/special category. This helper intentionally does not choose them.
+ */
 export function calculateGen4BaseDamage({ level, power, attack, defense }) {
   positiveInteger(level, "level");
   positiveInteger(power, "power");
@@ -121,6 +124,38 @@ export function calculateGen4BaseDamage({ level, power, attack, defense }) {
   const levelTerm = Math.floor((2 * level) / 5) + 2;
   const scaled = Math.floor((levelTerm * power * attack) / defense);
   return Math.floor(scaled / 50) + 2;
+}
+
+/**
+ * Limited Generation IV damage pipeline for a single target.
+ *
+ * This combines base damage -> random factor -> STAB -> type effectiveness.
+ * It intentionally refuses Mystery-type matchups and does not model weather,
+ * critical hits, abilities, items, move effects, burn, stages, or doubles.
+ * Caller must supply the correct in-battle attack/defense stats and roll.
+ */
+export function calculateGen4Damage({
+  level, power, attack, defense, attackType, defenderTypes, hasStab, roll,
+}) {
+  assert(typeof hasStab === "boolean", "hasStab must be a boolean");
+  assert(Number.isInteger(roll) && roll >= 85 && roll <= 100,
+    "roll must be an integer from 85 to 100");
+  const effectiveness = calculateGen4TypeEffectiveness({ attackType, defenderTypes });
+  if (!effectiveness.supported) {
+    return Object.freeze({
+      supported: false,
+      damage: null,
+      reason: effectiveness.reason,
+    });
+  }
+  if (effectiveness.multiplier === 0) {
+    return Object.freeze({ supported: true, damage: 0, effectiveness: 0 });
+  }
+  let damage = calculateGen4BaseDamage({ level, power, attack, defense });
+  damage = applyGen4RandomFactor({ damage, roll });
+  damage = applyGen4Stab({ damage, hasStab });
+  damage = Math.floor(damage * effectiveness.multiplier);
+  return Object.freeze({ supported: true, damage: Math.max(1, damage), effectiveness: effectiveness.multiplier });
 }
 
 /**
