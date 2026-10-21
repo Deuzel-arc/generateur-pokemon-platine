@@ -312,3 +312,8 @@ Rapport détaillé : [CERTIFICATION/08-verification-source-binaire-objets-temoin
 ### Blocage de tests observé pendant la reprise
 
 Le workflow GitHub Actions `Quality checks` n° 62 sur le commit `3fc6dc594f581386bfc57d78fb1ffb2a70ec1844` a échoué dans `tests/battle-simulator.test.mjs:78` : le test attendait un multiplicateur de type nul, alors que le calcul a renvoyé 1. Ce test concerne le simulateur de combat (étape 7), pas le décodage ROM de l'étape 1. Conformément au verrouillage, ce défaut n'est pas corrigé dans cette étape; il est consigné comme blocage de la suite globale et devra être traité lorsque l'étape correspondante sera autorisée, sauf dérogation exceptionnelle explicitement reconfirmée par l'utilisateur.
+
+
+## Rectificatif de portée — témoins d'objets CPUF — 2026-10-21
+
+Le contrôle reproductible versionné établit que les 446 champs `raw` de `items.json` correspondent aux 446 enregistrements bruts présents dans l'export d'archive, et que les huit témoins concordent avec cet export (272/272 octets). Il **n'établit pas** une reconstruction indépendante depuis les JSON source de `pret/pokeplatinum` : le prototype évoqué dans le rapport de certification n'est pas intégré au dépôt sous une forme exécutable et reproductible. La formulation antérieure « reconstruits indépendamment à partir de leurs champs source » et le titre source→binaire surestiment donc la preuve apportée par les artefacts vérifiables; ils sont rectifiés par cette note et par le rapport de contrôle versionné `CERTIFICATION/09-reprise-verifiable-objets-temoins-2026-10-21.md`. La reconstruction source→binaire des 446 objets CPUF reste à réaliser; CPUE doit rester distinct; aucun effet d'objet n'est certifié.
