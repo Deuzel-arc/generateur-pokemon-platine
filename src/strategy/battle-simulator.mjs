@@ -4,8 +4,8 @@
  * This module deliberately implements only the deterministic pre-modifier
  * base-damage term. It is NOT a full battle simulator and must never decide
  * a battle outcome. STAB, type effectiveness, weather, critical hits, items,
- * abilities, spread-move modifiers, random damage roll and move effects are
- * reported as unsupported until implemented and reference-tested.
+ * abilities, spread-move modifiers and move effects are
+ * reported as unsupported until implemented and reference-tested. STAB, type effectiveness and the random factor exist as isolated primitives, not as a combined damage pipeline.
  */
 const GEN4_SUPPORTED_PRIMITIVES = Object.freeze({
   baseDamageCore: true,
