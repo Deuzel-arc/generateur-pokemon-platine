@@ -96,7 +96,12 @@ assert.match(quality, /cache: npm/, "quality workflow must use the lockfile-awar
 assert.match(pages, /cache: npm/, "Pages workflow must use the lockfile-aware npm cache");
 assert.match(quality, /npm ci --no-audit --no-fund/, "quality workflow must install from the lockfile");
 assert.match(pages, /npm ci --no-audit --no-fund/, "Pages workflow must install from the lockfile");
-assert.match(quality, /npm test/, "quality workflow must run the full test suite");
+for (const name of ["test:static", "test:ci-strategy", "test:rom-audits", "test:strategy-schema", "test:hybrid-engine", "test:experience-store", "test:battle-simulator", "test:gen4-stats", "test:rom-roster-candidate", "test:tooling"]) {
+  assert.match(quality, new RegExp(`npm run ${name.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\\\assert.match(quality, /npm test/, "quality workflow must run the full test suite");
+assert.match(quality, /playwright install --with-deps chromium/, "quality workflow must install browser dependencies");")}`), `quality workflow must run ${name}`);
+}
+assert.match(quality, /name: Browser regression tests/, "quality workflow must separate browser regression tests");
+assert.match(quality, /npm run test:browser/, "quality workflow must run browser regression tests in its own job");
 assert.match(quality, /playwright install --with-deps chromium/, "quality workflow must install browser dependencies");
 assert.match(quality, /actions\/cache@v\d+[\s\S]*?path: ~\/\.cache\/ms-playwright/, "quality workflow must cache the Playwright browser");
 assert.match(pages, /actions\/cache@v\d+[\s\S]*?path: ~\/\.cache\/ms-playwright/, "Pages workflow must cache the Playwright browser");
