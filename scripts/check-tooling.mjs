@@ -13,6 +13,8 @@ const dependabot = read("../.github/dependabot.yml");
 const lock = JSON.parse(read("../package-lock.json"));
 const required = [
   "../tests/check-generator.mjs",
+  "../tests/ci-strategy-rules.test.mjs",
+  "../src/strategy/ci-strategy-rules.mjs",
   "../tests/browser-generator.test.mjs",
   "../scripts/validate-rom-audits.mjs",
   "../scripts/audit-evolution-roms.mjs",
@@ -83,7 +85,7 @@ try {
   rmSync(invalidRomDir, { recursive: true, force: true });
 }
 
-for (const name of ["test:static", "test:rom-audits", "test:browser", "test:tooling"]) {
+for (const name of ["test:static", "test:ci-strategy", "test:rom-audits", "test:browser", "test:tooling"]) {
   assert.ok(pkg.scripts.test.includes(`npm run ${name}`), `full test suite must include ${name}`);
 }
 assert.ok(!existsSync(new URL("../.github/workflows/generator-checks.yml", import.meta.url)), "duplicate generator-checks workflow must remain removed");
