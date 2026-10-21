@@ -46,6 +46,16 @@ function positiveInteger(value, name) {
  * Apply one explicit Generation IV random damage roll (85..100 percent).
  * This is a single modifier only; it does not calculate final move damage.
  */
+/**
+ * Apply the Generation IV same-type attack bonus to an already-calculated
+ * damage value. This is a modifier primitive, not a full damage calculation.
+ */
+export function applyGen4Stab({ damage, hasStab }) {
+  positiveInteger(damage, "damage");
+  assert(typeof hasStab === "boolean", "hasStab must be a boolean");
+  return hasStab ? Math.floor((damage * 3) / 2) : damage;
+}
+
 export function applyGen4RandomFactor({ damage, roll }) {
   positiveInteger(damage, "damage");
   assert(Number.isInteger(roll) && roll >= 85 && roll <= 100,
