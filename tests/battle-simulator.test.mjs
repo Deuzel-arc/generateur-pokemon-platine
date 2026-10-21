@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import {
   calculateGen4BaseDamage,
   applyGen4RandomFactor,
+  applyGen4Stab,
   inspectSimulationReadiness,
   simulateBattle,
 } from "../src/strategy/battle-simulator.mjs";
@@ -9,6 +10,10 @@ import {
 assert.equal(calculateGen4BaseDamage({ level: 50, power: 80, attack: 100, defense: 100 }), 37);
 assert.equal(calculateGen4BaseDamage({ level: 100, power: 100, attack: 200, defense: 100 }), 170);
 assert.equal(calculateGen4BaseDamage({ level: 1, power: 40, attack: 10, defense: 100 }), 2);
+assert.equal(applyGen4Stab({ damage: 100, hasStab: true }), 150);
+assert.equal(applyGen4Stab({ damage: 101, hasStab: true }), 151);
+assert.equal(applyGen4Stab({ damage: 100, hasStab: false }), 100);
+assert.throws(() => applyGen4Stab({ damage: 100, hasStab: "yes" }), /hasStab/);
 assert.equal(applyGen4RandomFactor({ damage: 100, roll: 85 }), 85);
 assert.equal(applyGen4RandomFactor({ damage: 100, roll: 100 }), 100);
 assert.equal(applyGen4RandomFactor({ damage: 37, roll: 85 }), 31);
