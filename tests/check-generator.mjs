@@ -222,7 +222,7 @@ check("strategic data-source selector offers both game references", () => {
   assert.match(html, /id="dataSources"/);
   assert.match(html, /data-value="platinum"[^>]*data-label="Pokémon Platine original"/);
   assert.match(html, /data-value="multiplayer"[^>]*data-label="Pokémon Platine multijoueur"/);
-  assert.match(html, /const state=\{dataSource:"platinum"/);
+  assert.match(html, /const state=\{catalogMode:"verified",dataSource:"platinum"/);
 });
 check("selected reference drives team candidate roster and scoring", () => {
   assert.match(html, /function getActiveRoster\(\)/);
@@ -240,7 +240,7 @@ check("selected reference drives team candidate roster and scoring", () => {
 
   assert.deepEqual(romRosterProfiles.project_pm_overrides.Dracaufeu[0], ["Feu", "Dragon"]);
   assert.deepEqual(romRosterProfiles.project_pm_overrides.Jungko[0], ["Plante", "Dragon"]);
-  const embeddedRoster = html.match(/const romRosterData = (\{[\s\S]*?\});\s*const roster/);
+  const embeddedRoster = html.match(/const romRosterData = (\{[\s\S]*?\});\s*const experimentalRosterData/);
   assert.ok(embeddedRoster, "embedded ROM roster data block must be extractable");
   assert.deepEqual(JSON.parse(embeddedRoster[1]), romRosterProfiles, "embedded index.html roster must exactly match the auditable JSON source");
   assert.deepEqual(romRosterProfiles.project_pm_overrides.Gardevoir[0], ["Psy", "Fée"]);

@@ -33,8 +33,8 @@ assert.equal(missingSpeciesStaging.counts.currentRuntimeProfiles, 71, "staging b
 assert.equal(missingSpeciesStaging.counts.stagedMissingProfiles, 422, "staging must contain the 422 missing species");
 assert.equal(missingSpeciesStaging.stagedProfiles.length, 422, "staged profile rows must match the reported missing count");
 assert.equal(missingSpeciesStaging.counts.runtimeChanged, false, "staging must not claim runtime changes");
-assert.equal(missingSpeciesStaging.sourceHashes.platinum, catalog.profiles.platinum.sha256, "staging must match the audited Platinum ROM hash");
-assert.equal(missingSpeciesStaging.sourceHashes.project_pm, catalog.profiles.project_pm.sha256, "staging must match the audited Project PM ROM hash");
+assert.equal(missingSpeciesStaging.source.sourceHashes.platinumSha256, catalog.profiles.platinum.sha256, "staging must match the audited Platinum ROM hash");
+assert.equal(missingSpeciesStaging.source.sourceHashes.projectPmSha256, catalog.profiles.project_pm.sha256, "staging must match the audited Project PM ROM hash");
 assert.deepEqual(missingSpeciesStaging.stagedProfiles.map((row) => row.speciesId), Array.from({ length: 493 }, (_, i) => i + 1).filter((id) => !new Set(romRosterProfiles.base.map((row) => row[1])).has(id)), "staged species IDs must exactly equal runtime gaps in ascending order");
 assert.ok(missingSpeciesStaging.stagedProfiles.every((row) => row.integrationStatus === "staged_not_runtime_integrated" && row.strategyMetadata.status === "not_authored"), "staged profiles must not imply strategy metadata or runtime integration");
 assert.ok(missingSpeciesStaging.policy.includes("Ne pas créer automatiquement les tags de stratégie ni la classification légendaire à partir des statistiques."), "staging policy must prohibit guessed strategy tags and legendary labels");
@@ -505,4 +505,18 @@ for (const move of hypotheses.extraMoves) {
   assert.match(move.status, /^name_unmapped(?:_|$)/, `extra move ${move.id} must remain semantically unverified`);
 }
 assert.equal(catalog.integration.loadedByGenerator, false, "update audit validator when full runtime integration is implemented");
+
+const addedMoveAudit = readJson("data/project_pm_added_move_data_audit.json");
+assert.equal(addedMoveAudit.status, "direct_rom_move_records_crosschecked_names_only_semantics_pending", "extra Project PM move audit must remain explicitly provisional");
+assert.deepEqual(addedMoveAudit.validation.addedMoveIds, [468, 469, 470, 471], "Project PM-only move IDs must remain explicit");
+assert.equal(addedMoveAudit.validation.projectPmMoveCount, 472, "Project PM move table size must match the audit");
+assert.equal(addedMoveAudit.validation.platinumMoveCount, 471, "Platinum move table size must match the audit");
+assert.equal(addedMoveAudit.validation.runtimeEffectSemanticsVerified, false, "extra move effects must not be described as runtime-certified");
+assert.equal(addedMoveAudit.validation.canonicalGenerationCompatibilityVerified, false, "extra moves must not be described as Gen IV-compatible without battle-handler evidence");
+assert.equal(addedMoveAudit.validation.identityCandidatesAreHypothesesOnly, true, "extra move identity candidates must remain hypotheses");
+assert.deepEqual(addedMoveAudit.records.map((row) => row.id), [468, 469, 470, 471], "extra move records must cover exactly IDs 468–471");
+assert.ok(addedMoveAudit.records.every((row) => row.identityConfidence && row.interpretation && row.raw), "extra move records must preserve raw evidence and uncertainty");
+assert.ok(addedMoveAudit.records.every((row) => row.identityConfidence === "unresolved" || row.identityConfidence.endsWith("_candidate")), "extra move identity status must remain provisional");
+assert.ok(addedMoveAudit.policies.some((policy) => /Do not treat effect IDs as human-readable effects/.test(policy)), "extra move audit must forbid inferring effect semantics from numeric IDs");
+
 console.log(`ROM audits consistent: ${triage.species.length} species deltas, ${triage.moves.length} move deltas; candidate-only IDs remain guarded.`);

@@ -31,7 +31,7 @@ Pour chaque ROM : système de fichiers NitroFS parcouru, archives NARC reconnues
 
 - Ce n'est **pas** encore un décodage exhaustif de tous les scripts, textes, événements, cartes, graphismes et sons.
 - Les données d'objets, rencontres et dresseurs sont présentes mais ne doivent pas être traitées comme sémantiquement certifiées.
-- Un conflit doit être résolu avant d'intégrer le type secondaire de Dracaufeu de Project PM : l'override vérifié enregistré auparavant indique Ténèbres, tandis que l'extraction directe des octets de l'archive personnelle de la ROM jointe décode l'ID de type 16 en Dragon selon la table de types employée. Les deux empreintes de ROM ne concordent pas non plus avec l'audit précédent. Ne pas remplacer l'override actif avant réconciliation de la version exacte et du mapping des types.
+- L'audit `data/project_pm_type_byte_audit.json` a précisé la portée du conflit historique concernant l'entrée interne candidate 6 (symbole candidat `SPECIES_CHARIZARD`, identité par nom non vérifiée par la table de noms de la ROM exacte). Pour les empreintes actuelles, les octets CPUE indiquent les IDs de types bruts `[10, 16]`, interprétés Feu/Dragon selon la référence Gen IV épinglée. L'ancien override Ténèbres est associé à d'autres empreintes ROM et ne doit pas être transféré au profil actuel. Cette observation reste une conclusion sur l'entrée candidate et ses octets, pas une certification de son identité par nom. Conserver l'override historique inactif et ne pas activer de mapping par nom avant vérification indépendante de la table de noms correspondant exactement à la ROM CPUE.
 - La base extraite n'est pas encore chargée dynamiquement par la page GitHub Pages. Le roster stratégique de `index.html` reste partiel; les données brutes extraites ne signifient pas que l'algorithme les exploite déjà.
 
 ## Prochaines étapes
@@ -281,3 +281,39 @@ L'audit sert à circonscrire et contrôler la correction, pas encore à charger 
 - **422 espèces canoniques ne sont pas encore couvertes** par les profils stratégiques intégrés. L'audit liste précisément leurs IDs et symboles de référence pour guider les prochains lots.
 - Ce rapport mesure la couverture, pas la qualité des données ni la compatibilité Project PM. Il n'ajoute pas automatiquement les espèces manquantes au générateur : les noms français, types, statistiques et overrides doivent être validés avant chaque intégration.
 - Le validateur ROM compare les IDs couverts et manquants au complément exact de la référence canonique et vérifie les empreintes CPUF/CPUE. Le contrat d'outillage exige désormais la présence de cet audit.
+
+
+## Reprise d'audit indépendante — 2026-10-21
+
+Le fichier `CERTIFICATION/06-verification-independante-tables-decodees-2026-10-21.md` documente une nouvelle vérification structurelle du JSON extrait `rom_battle_database.json`, relu depuis la bibliothèque. SHA-256 de l'export inspecté : `eba0d4f71b26d3d190d53c0e3da8b11d7c18f08089a712e381d1087261a14e78` (2 718 509 octets).
+
+Résultats confirmés indépendamment sur l'export :
+- IDs internes uniques et continus pour les tables espèces, capacités, objets, apprentissages et évolutions ;
+- 0 ligne de statistiques invalide selon les bornes structurelles contrôlées, 0 ligne de types de forme incorrecte ;
+- 0 terminateur manquant signalé dans les tables d'apprentissage et 0 référence lisible hors de la table des capacités extraite ;
+- pour les espèces standard 1–493 : 6 598 entrées d'apprentissage CPUF et 8 590 CPUE ;
+- 56 références CPUE vers les capacités hors plage canonique 468–471 (38, 10, 5 et 3 références respectivement), contre 0 pour CPUF.
+
+Cette vérification ne certifie pas les noms, l'identité nationale des IDs internes, les effets des capacités, les méthodes d'évolution ou la sémantique des objets. Le rapport explique aussi pourquoi les totaux sur toutes les lignes exportées (6 753 CPUF / 8 760 CPUE) diffèrent des totaux limités aux 493 espèces standard.
+
+**Prochaine étape prioritaire inchangée :** réconcilier les empreintes et la provenance exacte de Project PM, puis traiter les mappings sémantiques bloquants. Le succès CI du commit précédent ne certifie pas la sémantique ROM ; le nouveau rapport documentaire doit encore passer la CI de son propre commit.
+
+
+## Vérification source → binaire de huit objets témoins CPUF — 2026-10-21
+
+Rapport détaillé : [CERTIFICATION/08-verification-source-binaire-objets-temoins-2026-10-21.md](../CERTIFICATION/08-verification-source-binaire-objets-temoins-2026-10-21.md).
+
+- Référence source : `pret/pokeplatinum` épinglée au commit `06c6e9a0348da283be8d9225d0bec03c349ff5c2`; structure `ItemData` et logique `proc_item` / `proc_params` consultées.
+- Huit témoins couvrant plusieurs zones de l'archive (Master Ball, Ultra Ball, Potion, Adamant Orb, Dragon Fang, Zap Plate, CT23 et Secret Key) ont été reconstruits indépendamment à partir de leurs champs source.
+- Résultat ciblé : **8/8 enregistrements identiques sur 34 octets chacun, 272/272 octets concordants** avec l'export brut CPUF.
+- Cette preuve reste partielle : elle ne constitue pas le comparateur générique source JSON → binaire et ne valide pas les 446 objets. Les cas spéciaux de paramètres, baies, courrier, cannes et CT/CS restent à traiter; CPUE doit rester un audit séparé.
+- Le mapping d'archive reste candidat et aucun effet d'objet n'est certifié par ce lot.
+
+### Blocage de tests observé pendant la reprise
+
+Le workflow GitHub Actions `Quality checks` n° 62 sur le commit `3fc6dc594f581386bfc57d78fb1ffb2a70ec1844` a échoué dans `tests/battle-simulator.test.mjs:78` : le test attendait un multiplicateur de type nul, alors que le calcul a renvoyé 1. Ce test concerne le simulateur de combat (étape 7), pas le décodage ROM de l'étape 1. Conformément au verrouillage, ce défaut n'est pas corrigé dans cette étape; il est consigné comme blocage de la suite globale et devra être traité lorsque l'étape correspondante sera autorisée, sauf dérogation exceptionnelle explicitement reconfirmée par l'utilisateur.
+
+
+## Rectificatif de portée — témoins d'objets CPUF — 2026-10-21
+
+Le contrôle reproductible versionné établit que les 446 champs `raw` de `items.json` correspondent aux 446 enregistrements bruts présents dans l'export d'archive, et que les huit témoins concordent avec cet export (272/272 octets). Il **n'établit pas** une reconstruction indépendante depuis les JSON source de `pret/pokeplatinum` : le prototype évoqué dans le rapport de certification n'est pas intégré au dépôt sous une forme exécutable et reproductible. La formulation antérieure « reconstruits indépendamment à partir de leurs champs source » et le titre source→binaire surestiment donc la preuve apportée par les artefacts vérifiables; ils sont rectifiés par cette note et par le rapport de contrôle versionné `CERTIFICATION/09-reprise-verifiable-objets-temoins-2026-10-21.md`. La reconstruction source→binaire des 446 objets CPUF reste à réaliser; CPUE doit rester distinct; aucun effet d'objet n'est certifié.

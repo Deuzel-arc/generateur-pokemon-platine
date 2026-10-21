@@ -1,0 +1,221 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Matrice exécutable d'audit de l'interface et critères d'acceptation — étape 1",
+  "status": "audit_contract_versioned_gaps_explicit_not_full_generator_certification",
+  "baseline": {
+    "branch": "feature/moteur-hybride-simulation-apprentissage",
+    "lastKnownPassingRomAuditAndBrowserRun": "39536611662",
+    "lastKnownPassingCommit": "f767172c744a8f97864ec1dc65ceef9df3c8fb8f",
+    "note": "Ce snapshot prouve seulement que les tâches CI listées ont réussi sur ce commit; les commits ultérieurs doivent être revalidés séparément.",
+    "runtimeRosterProfiles": 71,
+    "canonicalSpecies": 493,
+    "canonicalSpeciesMissingFromRuntime": 422,
+    "candidateRosterIntegrated": false,
+    "cpuFAndCpueSeparated": true
+  },
+  "globalGuards": [
+    "Les contraintes dures sont appliquées avant tout score.",
+    "CPUF et CPUE restent séparés; les overrides Project PM ne remplacent jamais les données de Platine original.",
+    "Un identifiant numérique partagé ne prouve pas une identité sémantique.",
+    "Une donnée inconnue reste inconnue et bloque toute revendication de certification.",
+    "Les tests référencés prouvent seulement leur périmètre; les lacunes sont déclarées séparément."
+  ],
+  "sections": [
+    {
+      "section": 1,
+      "name": "Compétitivité et évolution maximale",
+      "inputs": [
+        "competitiveness",
+        "maxEvolution"
+      ],
+      "expectedBehavior": "La compétitivité influence mesurablement les choix; l'évolution maximale n'autorise que les espèces finales vérifiées ou sans évolution.",
+      "currentEvidence": [
+        "tests/check-generator.mjs"
+      ],
+      "gaps": [
+        "Métadonnées d'évolution exhaustives et validées",
+        "Test comparatif déterministe des niveaux de compétitivité"
+      ],
+      "acceptanceCases": [
+        "évolution finale",
+        "espèce sans évolution",
+        "forme non finale rejetée",
+        "faible/moyenne/forte compétitivité"
+      ]
+    },
+    {
+      "section": 2,
+      "name": "Trio de starters",
+      "inputs": [
+        "starterTrio"
+      ],
+      "expectedBehavior": "Aucun trio laisse six places libres; un trio choisi impose exactement ses trois évolutions finales et laisse les trois autres places libres parmi les espèces I–IV autorisées.",
+      "currentEvidence": [
+        "tests/check-generator.mjs",
+        "tests/browser-generator.test.mjs"
+      ],
+      "gaps": [
+        "Pool d'espèces runtime incomplet: 71/493"
+      ],
+      "acceptanceCases": [
+        "aucun trio",
+        "Kanto",
+        "Johto",
+        "Hoenn",
+        "Sinnoh",
+        "trois places restantes libres"
+      ]
+    },
+    {
+      "section": 3,
+      "name": "Nombre de légendaires/fabuleux",
+      "inputs": [
+        "legendaryCount"
+      ],
+      "expectedBehavior": "Respecter exactement le nombre demandé avec une classification documentée; aucune classification ne peut être devinée.",
+      "currentEvidence": [
+        "tests/check-generator.mjs"
+      ],
+      "gaps": [
+        "Classification exhaustive des 493 espèces non certifiée"
+      ],
+      "acceptanceCases": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "classification inconnue bloquée"
+      ]
+    },
+    {
+      "section": 4,
+      "name": "Orientation d'équipe",
+      "inputs": [
+        "teamOrientation"
+      ],
+      "expectedBehavior": "Offensive, défensive et équilibrée modifient les rôles ou le score de façon mesurable, sans contourner les contraintes dures.",
+      "currentEvidence": [
+        "tests/hybrid-engine.test.mjs"
+      ],
+      "gaps": [
+        "Évaluation stratégique encore heuristique; comparaison contrôlée insuffisante"
+      ],
+      "acceptanceCases": [
+        "offensive",
+        "défensive",
+        "équilibrée",
+        "contrainte dure prioritaire"
+      ]
+    },
+    {
+      "section": 5,
+      "name": "Stratégies principales",
+      "inputs": [
+        "primaryStrategies"
+      ],
+      "expectedBehavior": "Jusqu'à trois stratégies choisies structurent un plan de victoire, les rôles et les sets; les conflits de partenaires sont détectés.",
+      "currentEvidence": [
+        "tests/hybrid-engine.test.mjs",
+        "CERTIFICATION/ALGORITHME-SYNERGIES-STRATEGIES.md"
+      ],
+      "gaps": [
+        "Catalogue complet des sets et moteur de synergies non certifiés"
+      ],
+      "acceptanceCases": [
+        "0 à 3 stratégies",
+        "stratégies compatibles",
+        "stratégies contradictoires",
+        "explication des choix"
+      ]
+    },
+    {
+      "section": 6,
+      "name": "Capacités illégales (CI)",
+      "inputs": [
+        "ciEnabled",
+        "ciFrequency",
+        "ciIncongruity",
+        "ciStrategicInfluence"
+      ],
+      "expectedBehavior": "La légalité, la fréquence probabiliste, l'incongruité et l'influence stratégique restent distinctes; la preuve couvre toutes les méthodes officielles de Gen IV.",
+      "currentEvidence": [
+        "tests/ci-strategy-rules.test.mjs",
+        "CERTIFICATION/CONTINUITE-ET-DECISIONS.md"
+      ],
+      "gaps": [
+        "Catalogue CI par espèce et preuve complète de légalité non terminés"
+      ],
+      "acceptanceCases": [
+        "seuils 0/24/25/99/100",
+        "24 emplacements",
+        "fréquence 0/100",
+        "CI inconnue rejetée",
+        "remplacement d'une CI rejetée"
+      ]
+    },
+    {
+      "section": 7,
+      "name": "Objets imposés",
+      "inputs": [
+        "forcedItems"
+      ],
+      "expectedBehavior": "De 0 à 2 objets peuvent être imposés; ils sont attribués à des Pokémon distincts et les six objets finaux sont distincts, vérifiés et compatibles.",
+      "currentEvidence": [
+        "tests/check-generator.mjs",
+        "CERTIFICATION/02-items.md",
+        "CERTIFICATION/01-berries.md"
+      ],
+      "gaps": [
+        "Effets et identité des objets non certifiés exhaustivement dans les deux ROM"
+      ],
+      "acceptanceCases": [
+        "0 objet",
+        "1 objet",
+        "2 objets",
+        "doublon interdit",
+        "effet inconnu bloqué",
+        "baies Don Naturel exclues"
+      ]
+    },
+    {
+      "section": 8,
+      "name": "Stratégie secondaire",
+      "inputs": [
+        "secondaryStrategy"
+      ],
+      "expectedBehavior": "Aucune ou une stratégie secondaire est intégrée seulement si elle complète les axes principaux et reste compatible avec l'équipe.",
+      "currentEvidence": [
+        "tests/hybrid-engine.test.mjs"
+      ],
+      "gaps": [
+        "Compatibilité stratégique end-to-end non certifiée"
+      ],
+      "acceptanceCases": [
+        "aucune",
+        "option compatible",
+        "option incompatible rejetée"
+      ]
+    },
+    {
+      "section": 9,
+      "name": "Remarques supplémentaires",
+      "inputs": [
+        "additionalNotes"
+      ],
+      "expectedBehavior": "Les contraintes explicites sont appliquées; les demandes ambiguës, contradictoires ou non prises en charge sont signalées plutôt qu'interprétées arbitrairement.",
+      "currentEvidence": [
+        "tests/check-generator.mjs",
+        "tests/browser-generator.test.mjs"
+      ],
+      "gaps": [
+        "Couverture sémantique des remarques libres à étendre"
+      ],
+      "acceptanceCases": [
+        "contrainte explicite",
+        "ambiguïté",
+        "contradiction",
+        "demande non prise en charge"
+      ]
+    }
+  ]
+}

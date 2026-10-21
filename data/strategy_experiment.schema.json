@@ -1,0 +1,467 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://deuzel-arc.github.io/generateur-pokemon-platine/schemas/strategy-experiment.schema.json",
+  "title": "Expérience stratégique reproductible",
+  "description": "Schéma de mémoire pour résultats de recherche/simulation. Enregistrer succès, échecs et résultats incomplets. Ce schéma ne certifie ni la simulation ni les faits ROM.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "experimentId",
+    "createdAt",
+    "status",
+    "ruleset",
+    "engine",
+    "dataSnapshot",
+    "seed",
+    "team",
+    "opponent",
+    "result",
+    "metrics",
+    "evidence",
+    "conclusions"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "experimentId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "exploratory",
+        "validated",
+        "rejected",
+        "superseded"
+      ]
+    },
+    "ruleset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "gameProfile",
+        "battleFormat",
+        "level"
+      ],
+      "properties": {
+        "gameProfile": {
+          "enum": [
+            "CPUF_PLATINUM",
+            "CPUE_PROJECT_PM",
+            "CUSTOM_PKHEX",
+            "UNKNOWN"
+          ]
+        },
+        "battleFormat": {
+          "const": "double_2v2"
+        },
+        "level": {
+          "const": 100
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "engine": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "searchVersion",
+        "simulatorVersion",
+        "scoringVersion"
+      ],
+      "properties": {
+        "searchVersion": {
+          "type": "string"
+        },
+        "simulatorVersion": {
+          "type": "string"
+        },
+        "scoringVersion": {
+          "type": "string"
+        },
+        "buildCommit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "dataSnapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "snapshotId",
+        "certifiedOnly",
+        "sources"
+      ],
+      "properties": {
+        "snapshotId": {
+          "type": "string"
+        },
+        "certifiedOnly": {
+          "type": "boolean"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "sourceId",
+              "status"
+            ],
+            "properties": {
+              "sourceId": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^[a-fA-F0-9]{64}$"
+              },
+              "status": {
+                "enum": [
+                  "certified",
+                  "corroborated",
+                  "candidate",
+                  "unknown",
+                  "contested"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "seed": {
+      "type": [
+        "integer",
+        "string"
+      ]
+    },
+    "team": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "speciesId",
+          "moves"
+        ],
+        "properties": {
+          "speciesId": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 493
+          },
+          "moves": {
+            "type": "array",
+            "minItems": 0,
+            "maxItems": 4,
+            "items": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "abilityId": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "itemId": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "role": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "opponent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "fixed_reference",
+            "generated",
+            "historical_experiment",
+            "unknown"
+          ]
+        },
+        "referenceId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "teamFingerprint": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "outcome",
+        "termination",
+        "turns"
+      ],
+      "properties": {
+        "outcome": {
+          "enum": [
+            "win",
+            "loss",
+            "draw",
+            "incomplete",
+            "error"
+          ]
+        },
+        "termination": {
+          "enum": [
+            "knockout",
+            "turn_limit",
+            "stalemate",
+            "unsupported_mechanic",
+            "invalid_data",
+            "engine_error",
+            "unknown"
+          ]
+        },
+        "turns": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unsupportedMechanics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "eventLogRef": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scoreBefore",
+        "scoreAfter",
+        "scoreBreakdown"
+      ],
+      "properties": {
+        "scoreBefore": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "scoreAfter": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "scoreBreakdown": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "damageDealt": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "damageReceived": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "survivors": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 6
+        },
+        "hardConstraintViolations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "claim",
+          "status",
+          "sourceIds"
+        ],
+        "properties": {
+          "claim": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "verified",
+              "corroborated",
+              "hypothesis",
+              "unknown",
+              "contradicted"
+            ]
+          },
+          "sourceIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "conclusions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "statement",
+          "status"
+        ],
+        "properties": {
+          "statement": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "supported",
+              "refuted",
+              "inconclusive",
+              "needs_more_trials"
+            ]
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "followUpExperimentIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "deduplication": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "fingerprint": {
+          "type": "string"
+        },
+        "duplicateOf": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "deduplicationMethod": {
+          "enum": [
+            "exact",
+            "semantic_review",
+            "none"
+          ]
+        }
+      }
+    },
+    "weightChanges": {
+      "type": "array",
+      "description": "Paramètres de scoring uniquement; ne jamais enregistrer une modification factuelle ROM ici.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "parameter",
+          "before",
+          "after",
+          "validationSetId",
+          "accepted"
+        ],
+        "properties": {
+          "parameter": {
+            "type": "string"
+          },
+          "before": {
+            "type": "number"
+          },
+          "after": {
+            "type": "number"
+          },
+          "validationSetId": {
+            "type": "string"
+          },
+          "accepted": {
+            "type": "boolean"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

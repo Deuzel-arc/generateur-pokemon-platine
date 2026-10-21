@@ -27,6 +27,19 @@ try {
   assert.match(sourceSummary, /"referentielStrategique": "multiplayer"/);
   assert.match(sourceSummary, /Dracaufeu — Feu \/ Vol/);
   console.log("[PASS] le référentiel sélectionné conserve les types non certifiés en repli et figure dans le récapitulatif");
+  // Experimental mode exposes candidate data but must fail closed for every team-generation request until semantic metadata is certified.
+  await page.locator('#catalogModes [data-value="experimental"]').click();
+  await page.locator('#starters [data-value="kanto"]').click();
+  await page.locator('#legendaries [data-value="one"]').click();
+  await page.locator("#validate").click();
+  assert.match(await page.locator("#summary").innerText(), /GÉNÉRATION BLOQUÉE — MODE EXPÉRIMENTAL/);
+  await page.locator('#legendaries [data-value="none"]').click();
+  await page.locator("#validate").click();
+  assert.match(await page.locator("#summary").innerText(), /GÉNÉRATION BLOQUÉE — MODE EXPÉRIMENTAL/);
+  assert.match(await page.locator("#summary").innerText(), /la génération est désactivée/);
+  await page.locator('#catalogModes [data-value="verified"]').click();
+  await page.locator('#starters [data-value="none"]').click();
+  console.log("[PASS] le mode expérimental expose 493 candidats sans autoriser une génération non certifiée");
 
   // Zero imposed items is valid; the algorithm still assigns six distinct items.
   await page.locator("#validate").click();
@@ -79,6 +92,24 @@ try {
   await page.locator("#inc").fill("5");
   await page.locator("#validate").click();
   assert.doesNotMatch(await page.locator("#summary").innerText(), /réglages de fréquence et d’incongruité.*doivent être explicitement résolus/i);
+
+  // Only the main "Stratégie de surprise" may authorize a central CI.
+  await page.locator('#strategies [data-label="Stratégie de surprise"]').click();
+  await page.locator("#validate").click();
+  summary = await page.locator("#summary").innerText();
+  assert.match(summary, /"noyauCentralCIAutorise": true/);
+  assert.match(summary, /"roleStrategiqueCI": "central_or_supporting"/);
+  await page.locator('#strategies [data-label="Stratégie de surprise"]').click();
+  await page.locator('#strategies [data-label="Combo atypique / inhabituel"]').click();
+  await page.locator("#validate").click();
+  summary = await page.locator("#summary").innerText();
+  assert.match(summary, /"noyauCentralCIAutorise": false/);
+  assert.match(summary, /"roleStrategiqueCI": "supporting_only"/);
+  await page.locator("#comp").fill("100");
+  await page.locator("#validate").click();
+  summary = await page.locator("#summary").innerText();
+  assert.match(summary, /"noyauCentralCIAutorise": false/);
+  assert.match(summary, /"roleStrategiqueCI": "disabled"/);
 
   assert.deepEqual(errors, [], "aucune erreur JavaScript pendant les interactions");
   console.log("[PASS] zéro objet imposé accepté et six objets attribués automatiquement");
