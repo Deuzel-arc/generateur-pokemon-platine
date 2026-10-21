@@ -53,6 +53,29 @@ assert.equal(profile.counts.statsChanged, 197);
 assert.equal(profile.counts.typesChanged, 60);
 assert.equal(profile.counts.bothStatsAndTypesChanged, 42);
 assert.equal(profile.counts.noChangeBetweenProfiles, 278);
+
+// Recompute all ROM-delta counters from the actual candidate rows and overrides.
+// This catches stale hand-maintained counts without asserting that the values
+// or mappings are semantically certified.
+const baseByName = new Map(profile.base.map(row => [row[0], { types: row[2], stats: row.slice(3) }]));
+let computedStatsChanged = 0;
+let computedTypesChanged = 0;
+let computedBothChanged = 0;
+for (const [name, [types, stats]] of Object.entries(overrides)) {
+  const base = baseByName.get(name);
+  assert.ok(base, `override has no base profile: ${name}`);
+  const typeChanged = JSON.stringify(types) !== JSON.stringify(base.types);
+  const statsChanged = JSON.stringify(stats) !== JSON.stringify(base.stats);
+  if (typeChanged) computedTypesChanged++;
+  if (statsChanged) computedStatsChanged++;
+  if (typeChanged && statsChanged) computedBothChanged++;
+}
+assert.equal(computedStatsChanged, profile.counts.statsChanged, "statsChanged must be derived from actual rows");
+assert.equal(computedTypesChanged, profile.counts.typesChanged, "typesChanged must be derived from actual rows");
+assert.equal(computedBothChanged, profile.counts.bothStatsAndTypesChanged, "bothStatsAndTypesChanged must be derived from actual rows");
+assert.equal(overrides ? Object.keys(overrides).length - computedStatsChanged - computedTypesChanged + computedBothChanged : 0,
+  profile.counts.projectPmOverrides - computedStatsChanged - computedTypesChanged + computedBothChanged,
+  "override total and delta counters must be arithmetically consistent");
 assert.equal(catalog.integration.loadedByGenerator, false);
 
 console.log("[PASS] roster ROM candidat : 493 IDs, noms uniques, statistiques valides, overrides CPUE et empreintes vérifiés; sémantique toujours non certifiée");
