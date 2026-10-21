@@ -2,12 +2,12 @@
 
 **Date :** 2026-10-21  
 **Périmètre :** audit statique du dépôt et résultats CI déjà enregistrés.  
-**Statut :** matrice versionnée et contrôlée automatiquement par `tests/roadmap-step1-audit.test.mjs`; étape 1 partiellement avancée, non certifiée tant que le contrôle du contrat n'a pas réussi sur le commit candidat et que les écarts ne sont pas résolus.
+**Statut :** le contrat d'audit est versionné et son test a réussi en CI sur le commit `3750832d6cffbaeb38bd7ab1b6683a9a37aa0f35` (run [39537582059](https://github.com/Deuzel-arc/generateur-pokemon-platine/actions/runs/39537582059)). L'étape 1 a donc franchi une porte de validation reproductible pour la matrice et les contrôles d'interface, mais reste partielle : les critères fonctionnels globaux et les lacunes de données ci-dessous ne sont pas résolus.
 
 ## État de preuve et baseline reproductible
 
-- Dernier workflow antérieur confirmé réussi : [GitHub Actions run 39536611662](https://github.com/Deuzel-arc/generateur-pokemon-platine/actions/runs/39536611662), commit `f767172c744a8f97864ec1dc65ceef9df3c8fb8f`; tâches « Browser regression tests » et « Static, ROM audit and strategy tests » réussies.
-- Ce résultat ne certifie pas les commits créés ensuite : le pipeline de dégâts et la matrice d'étape 1 doivent passer la CI sur leur propre commit avant d'être considérés comme validés.
+- Dernier workflow confirmé réussi pour le contrat d'audit d'étape 1 : [GitHub Actions run 39537582059](https://github.com/Deuzel-arc/generateur-pokemon-platine/actions/runs/39537582059), commit `3750832d6cffbaeb38bd7ab1b6683a9a37aa0f35`; les deux tâches (« Browser regression tests » et « Static, ROM audit and strategy tests ») sont réussies.
+- Cette CI vérifie la matrice des neuf sections et la présence/plage de contrôles HTML réels. Elle ne démontre pas que toutes les options ont le comportement fonctionnel attendu, ni que les données ROM sont exhaustives.
 - Matrice machine : `data/roadmap_step1_section_matrix.json`; test dédié : `tests/roadmap-step1-audit.test.mjs`; commande : `npm run test:roadmap-step1`, incluse dans `npm test`.
 - Couverture runtime mesurée : 71/493 espèces (14,40 %); 422 espèces absentes du roster runtime. Les 493 profils candidats restent non intégrés et non certifiés sémantiquement.
 - CPUF Platine français et CPUE Project PM sont identifiés par empreintes distinctes; les IDs numériques communs ne sont pas traités comme preuve d'identité.
@@ -47,4 +47,4 @@ Une donnée inconnue ne doit pas être transformée en donnée négative ou posi
 
 ## Définition de progression
 
-Une étape est certifiée seulement si ses livrables sont versionnés, les critères d'acceptation sont couverts par des tests reproductibles et les limites restantes sont explicites. La progression globale demeure à 0/13 tant qu'aucune étape n'a satisfait intégralement sa porte de validation.
+Une étape est certifiée seulement si ses livrables sont versionnés, les critères d'acceptation sont couverts par des tests reproductibles et les limites restantes sont explicites. La progression officielle de la feuille de route reste à 0/13 étapes entièrement certifiées : l'étape 1 a maintenant un audit statique exécutable passé en CI, mais ses critères fonctionnels et globaux restent ouverts.
