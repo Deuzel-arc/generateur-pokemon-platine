@@ -107,7 +107,7 @@ const canonicalAnchors = [
   [17, [14], 2],   // Dark -> Psychic
   [4, [13], 2],    // Ground -> Electric
   [8, [10], 0.5],  // Steel -> Fire
-  [2, [13], 0.5],  // Flying -> Electric
+  [2, [1], 2],     // Flying -> Fighting
 ];
 for (const [attackType, defenderTypes, expected] of canonicalAnchors) {
   assert.deepEqual(
