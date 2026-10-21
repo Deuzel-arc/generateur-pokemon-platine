@@ -30,7 +30,7 @@ assert.match(html, /id="freq"[^>]*min="0"[^>]*max="100"/, "illegal-move frequenc
 assert.match(html, /id="inc"[^>]*min="0"[^>]*max="100"[^>]*step="5"/, "incongruity must use 5-point increments");
 assert.match(html, /id="items"/, "forced held-item selector must exist");
 assert.match(html, /id="secondary"/, "secondary strategy selector must exist");
-assert.match(html, /id="additionalNotes"/, "additional notes control must exist");
+assert.match(html, /id="remarks"/, "additional notes control must exist");
 
 for (const section of matrix.sections) {
   assert.ok(section.inputs.length > 0, `section ${section.section}: inputs must be named`);
